@@ -24,10 +24,11 @@ from datetime import datetime
 
 
 class MockBucket(Bucket):
-    def __init__(self, **kwargs):
+    def __init__(self, set_date=True, **kwargs):
         super(MockBucket, self).__init__(**kwargs)
 
-        self.creation_date = datetime.now().isoformat()
+        if set_date:
+            self.creation_date = datetime.now().isoformat()
 
 
 class GetBucketTestCase(AWSBaseActionTestCase):
@@ -62,7 +63,7 @@ class GetBucketTestCase(AWSBaseActionTestCase):
         self.assertEqual(len(result), len(self._MOCK_BUCKETS))
 
     @mock.patch.object(S3Connection, 'get_bucket',
-                       mock.MagicMock(return_value=MockBucket(name='foo')))
+                       mock.MagicMock(return_value=MockBucket(False, name='foo')))
     def test_get_bucket(self):
         self._params['action'] = 'get_bucket'
         self._params['validate'] = True
