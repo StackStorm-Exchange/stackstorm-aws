@@ -244,7 +244,7 @@ class ResultSets(object):
         return status_data
 
     def parseBucket(self, output):
-        bucket_data = {field: getattr(output, field) for field in FieldLists.BUCKET}
+        bucket_data = {field: getattr(output, field, None) for field in FieldLists.BUCKET}
         return bucket_data
 
     def parseTag(self, output):
