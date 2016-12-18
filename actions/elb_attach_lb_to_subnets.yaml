@@ -1,0 +1,24 @@
+description: ''
+enabled: true
+entry_point: run.py
+name: elb_attach_lb_to_subnets
+parameters:
+  action:
+    default: attach_lb_to_subnets
+    immutable: true
+    type: string
+  cls:
+    default: ELBConnection
+    immutable: true
+    type: string
+  name:
+    type: string
+    required: true
+  subnets:
+    type: array
+    required: true
+  module_path:
+    default: boto.ec2.elb
+    immutable: true
+    type: string
+runner_type: run-python
