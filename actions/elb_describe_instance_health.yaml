@@ -1,0 +1,23 @@
+description: ''
+enabled: true
+entry_point: run.py
+name: elb_describe_instance_health
+parameters:
+  action:
+    default: describe_instance_health
+    immutable: true
+    type: string
+  cls:
+    default: ELBConnection
+    immutable: true
+    type: string
+  load_balancer_name:
+    type: string
+    required: true
+  instances:
+    type: array
+  module_path:
+    default: boto.ec2.elb
+    immutable: true
+    type: string
+runner_type: run-python
