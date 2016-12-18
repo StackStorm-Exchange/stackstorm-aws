@@ -4,7 +4,7 @@ from boto import ec2
 from boto import route53
 from boto import cloudformation
 from boto import rds
-from boto import s3
+from boto.s3.bucket import Bucket
 
 
 class FieldLists():
@@ -180,6 +180,10 @@ class ResultSets(object):
             return self.parseTag(output)
         elif isinstance(output, ec2.ec2object.EC2Object):
             return self.parseEC2Object(output)
+        elif isinstance(output, ec2.elb.loadbalancer.LoadBalancer):
+            return self.parseLoadbalancers(output)
+        elif isinstance(output, ec2.elb.instancestate.InstanceState):
+            return self.parseInstanceState(output)        
         elif isinstance(output, route53.record.Record):
             return self.parseRecord(output)
         elif isinstance(output, route53.zone.Zone):
@@ -190,7 +194,7 @@ class ResultSets(object):
             return self.parseStackObject(output)
         elif isinstance(output, rds.dbinstance.DBInstance):
             return self.parseDBInstanceObject(output)
-        elif isinstance(output, s3.bucket.Bucket):
+        elif isinstance(output, Bucket):
             return self.parseBucket(output)
         else:
             return output
@@ -200,6 +204,8 @@ class ResultSets(object):
             return [self.formatter(item) for item in output]
         elif isinstance(output, dict):
             return {key: self.formatter(value) for key, value in six.iteritems(output)}
+        elif isinstance(output, unicode):
+            return output        
         else:
             return self.selector(output)
 
@@ -259,6 +265,12 @@ class ResultSets(object):
         dbinstance_data = {field: getattr(output, field) for field in FieldLists.DBINSTANCE}
         return dbinstance_data
 
+    def parseLoadbalancers(self, output):
+        return output.__str__()
+
+    def parseInstanceState(self, output):
+        return output.__str__()
+    
     def parseEC2Object(self, output):
         # Looks like everything that is an EC2Object pretty much only has these extra
         # 'unparseable' properties so handle region and connection specially.
