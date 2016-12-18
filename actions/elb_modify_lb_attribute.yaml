@@ -1,0 +1,27 @@
+description: ''
+enabled: true
+entry_point: run.py
+name: elb_modify_lb_attribute
+parameters:
+  action:
+    default: modify_lb_attribute
+    immutable: true
+    type: string
+  cls:
+    default: ELBConnection
+    immutable: true
+    type: string
+  load_balancer_name:
+    type: string
+    required: true
+  attribute:
+    type: string
+    required: true
+  value:
+    type: string
+    required: true
+  module_path:
+    default: boto.ec2.elb
+    immutable: true
+    type: string
+runner_type: run-python
