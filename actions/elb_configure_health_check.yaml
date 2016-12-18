@@ -1,0 +1,35 @@
+description: ''
+enabled: true
+entry_point: run.py
+name: elb_configure_health_check
+parameters:
+  action:
+    default: configure_health_check
+    immutable: true
+    type: string
+  cls:
+    default: ELBConnection
+    immutable: true
+    type: string
+  name:
+    type: string
+    required: true
+    description: 'Loadbalancer Name'
+  interval:
+    type: string
+    required: true
+  healthy_threshold:
+    type: string
+    required: true
+  unhealthy_threshold:
+    type: string
+    required: true     
+  target:
+    type: string
+    required: true
+    description: 'TCP:22'
+  module_path:
+    default: boto.ec2.elb
+    immutable: true
+    type: string
+runner_type: run-python
