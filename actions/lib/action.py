@@ -52,7 +52,7 @@ class BaseAction(Action):
         region = self.credentials['region']
         del self.credentials['region']
         return boto.vpc.connect_to_region(region, **self.credentials)
-    
+
     def elb_connect(self):
         region = self.credentials['region']
         del self.credentials['region']
@@ -112,7 +112,7 @@ class BaseAction(Action):
         elif cls == 'VPCConnection':
             obj = self.vpc_connect()
         elif cls == 'ELBConnection':
-            obj = self.elb_connect()            
+            obj = self.elb_connect()
         elif module_path == 'boto.route53.zone' and cls == 'Zone':
             zone = kwargs['zone']
             del kwargs['zone']
