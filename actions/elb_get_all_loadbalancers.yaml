@@ -1,0 +1,22 @@
+description: ''
+enabled: true
+entry_point: run.py
+name: elb_get_all_loadbalancers
+parameters:
+  action:
+    default: get_all_load_balancers
+    immutable: true
+    type: string
+  cls:
+    default: ELBConnection
+    immutable: true
+    type: string
+  load_balancer_names:
+    type: array
+  marker:
+    type: string
+  module_path:
+    default: boto.ec2.elb
+    immutable: true
+    type: string
+runner_type: run-python

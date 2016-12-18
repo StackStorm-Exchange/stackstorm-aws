@@ -1,0 +1,24 @@
+description: ''
+enabled: true
+entry_point: run.py
+name: elb_apply_security_groups_to_lb
+parameters:
+  action:
+    default: apply_security_groups_to_lb
+    immutable: true
+    type: string
+  cls:
+    default: ELBConnection
+    immutable: true
+    type: string
+  name:
+    type: string
+    required: true
+  security_groups:
+    type: array
+    required: true
+  module_path:
+    default: boto.ec2.elb
+    immutable: true
+    type: string
+runner_type: run-python

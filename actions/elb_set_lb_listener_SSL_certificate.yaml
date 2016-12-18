@@ -1,0 +1,27 @@
+description: ''
+enabled: true
+entry_point: run.py
+name: elb_set_lb_listener_SSL_certificate
+parameters:
+  action:
+    default: set_lb_listener_SSL_certificate
+    immutable: true
+    type: string
+  cls:
+    default: ELBConnection
+    immutable: true
+    type: string
+  lb_name:
+    type: string
+    required: true
+  lb_port:
+    type: string
+    required: true
+  ssl_certificate_id:
+    type: string
+    required: true
+  module_path:
+    default: boto.ec2.elb
+    immutable: true
+    type: string
+runner_type: run-python
