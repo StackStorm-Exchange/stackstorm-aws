@@ -17,7 +17,7 @@ class ActionManager(action.BaseAction):
             if kwargs['listeners'] is not None:
                 kwargs['listeners'] = util.get_listners(kwargs['listeners'])
         if action == 'configure_health_check':
-            util.populate_elb_health_check(kwargs)            
+            util.populate_elb_health_check(kwargs)
         if action in ('add_a', 'update_a'):
             kwargs['value'] = kwargs['value'].split(',')
         if 'cls' in kwargs.keys():
