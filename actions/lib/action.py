@@ -2,6 +2,7 @@ import re
 import eventlet
 import importlib
 
+import boto.cloudformation
 import boto.ec2
 import boto.route53
 import boto.vpc
