@@ -25,6 +25,9 @@ If any value exist in datastore it will be taken instead of any value in config.
 import six
 from boto3.session import Session
 from botocore.exceptions import ClientError
+from botocore.exceptions import NoRegionError
+from botocore.exceptions import NoCredentialsError
+from botocore.exceptions import EndpointConnectionError
 
 from st2reactor.sensor.base import PollingSensor
 
@@ -35,30 +38,15 @@ class AWSSQSSensor(PollingSensor):
                                            poll_interval=poll_interval)
 
     def setup(self):
-        queues = self._get_config_entry(key='input_queues', prefix='sqs_sensor')
-
-        # XXX: This is a hack as from datastore we can only receive a string while
-        # from config.yaml we can receive a list
-        if isinstance(queues, six.string_types):
-            self.input_queues = [x.strip() for x in queues.split(',')]
-        else:
-            self.input_queues = queues
-
-        self.aws_access_key = self._get_config_entry('aws_access_key_id')
-        self.aws_secret_key = self._get_config_entry('aws_secret_access_key')
-        self.aws_region = self._get_config_entry('region')
-
-        self.max_number_of_messages = self._get_config_entry('max_number_of_messages',
-                                                             prefix='sqs_other')
-
         self._logger = self._sensor_service.get_logger(name=self.__class__.__name__)
 
         self.session = None
         self.sqs_res = None
 
-        self._setup_sqs()
-
     def poll(self):
+        # setting SQS ServiceResource object from the parameter of datastore or configuration file
+        self._may_setup_sqs()
+
         for queue in self.input_queues:
             msgs = self._receive_messages(queue=self._get_queue_by_name(queue),
                                           num_messages=self.max_number_of_messages)
@@ -95,10 +83,37 @@ class AWSSQSSensor(PollingSensor):
         if not value and config.get('setup', None):
             value = config['setup'].get(key, None)
 
-        if not value:
-            raise ValueError('[AWSSQSSensor]: Configuration for %s key is missing.' % (key))
-
         return value
+
+    def _may_setup_sqs(self):
+        queues = self._get_config_entry(key='input_queues', prefix='sqs_sensor')
+
+        # XXX: This is a hack as from datastore we can only receive a string while
+        # from config.yaml we can receive a list
+        if isinstance(queues, six.string_types):
+            self.input_queues = [x.strip() for x in queues.split(',')]
+        elif isinstance(queues, list):
+            self.input_queues = queues
+        else:
+            self.input_queues = []
+
+        self.aws_access_key = self._get_config_entry('aws_access_key_id')
+        self.aws_secret_key = self._get_config_entry('aws_secret_access_key')
+        self.aws_region = self._get_config_entry('region')
+
+        self.max_number_of_messages = self._get_config_entry('max_number_of_messages',
+                                                             prefix='sqs_other')
+
+        # checker configuration is update, or not
+        def _is_same_credentials():
+            c = self.session.get_credentials()
+            return c is not None and \
+                c.access_key == self.aws_access_key and \
+                c.secret_key == self.aws_secret_key and \
+                self.session.region_name == self.aws_region
+
+        if self.session is None or not _is_same_credentials():
+            self._setup_sqs()
 
     def _setup_sqs(self):
         ''' Setup Boto3 structures '''
@@ -107,23 +122,32 @@ class AWSSQSSensor(PollingSensor):
                                aws_secret_access_key=self.aws_secret_key,
                                region_name=self.aws_region)
 
-        self.sqs_res = self.session.resource('sqs')
+        try:
+            self.sqs_res = self.session.resource('sqs')
+        except NoRegionError:
+            self._logger.warning("The specified region '%s' is invalid", self.aws_region)
 
     def _get_queue_by_name(self, queueName):
         ''' Fetch QUEUE by it's name create new one if queue doesn't exist '''
         try:
-            queue = self.sqs_res.get_queue_by_name(QueueName=queueName)
+            return self.sqs_res.get_queue_by_name(QueueName=queueName)
         except ClientError as e:
-            self._logger.warning("SQS Queue: %s doesn't exist, creating it.", queueName)
             if e.response['Error']['Code'] == 'AWS.SimpleQueueService.NonExistentQueue':
-                queue = self.sqs_res.create_queue(QueueName=queueName)
+                self._logger.warning("SQS Queue: %s doesn't exist, creating it.", queueName)
+                return self.sqs_res.create_queue(QueueName=queueName)
+            elif e.response['Error']['Code'] == 'InvalidClientTokenId':
+                self._logger.warning("Cloudn't operate sqs because of invalid credential config")
             else:
                 raise
-
-        return queue
+        except NoCredentialsError as e:
+            self._logger.warning("Cloudn't operate sqs because of invalid credential config")
+        except EndpointConnectionError as e:
+            self._logger.warning(e)
 
     def _receive_messages(self, queue, num_messages, wait_time=2):
         ''' Receive a message from queue and return it. '''
-        msgs = queue.receive_messages(WaitTimeSeconds=wait_time, MaxNumberOfMessages=num_messages)
-
-        return msgs
+        if queue:
+            return queue.receive_messages(WaitTimeSeconds=wait_time,
+                                          MaxNumberOfMessages=num_messages)
+        else:
+            return []
