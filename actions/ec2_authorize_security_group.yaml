@@ -17,7 +17,7 @@ parameters:
     default: false
     type: boolean
   from_port:
-    type: string
+    type: integer
   group_id:
     type: string
   group_name:
@@ -35,5 +35,5 @@ parameters:
   src_security_group_owner_id:
     type: string
   to_port:
-    type: string
+    type: integer
 runner_type: run-python
