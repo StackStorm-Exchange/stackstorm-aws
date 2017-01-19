@@ -68,9 +68,9 @@ parameters:
   ramdisk_id:
     type: string
   security_group_ids:
-    type: string
+    type: array
   security_groups:
-    type: string
+    type: array
   subnet_id:
     type: string
   tenancy:
