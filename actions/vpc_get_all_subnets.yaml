@@ -15,7 +15,7 @@ parameters:
     default: false
     type: boolean
   filters:
-    type: string
+    type: object
   module_path:
     default: boto.vpc
     immutable: true
