@@ -1,28 +1,45 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: s3_create_bucket
+runner_type: run-python
 parameters:
   action:
     default: create_bucket
     immutable: true
     type: string
-  bucket_name:
-    required: true
-    type: string
   cls:
-    default: S3Connection
-    immutable: true
+    default: s3
     type: string
   headers:
     type: string
-  location:
-    default: ''
-    type: string
   module_path:
-    default: boto.s3.connection
+    default: boto3
     immutable: true
     type: string
-  policy:
+  Bucket:
     type: string
-runner_type: run-python
+    description: ""
+    required: true
+  ACL:
+    type: string
+    description: "The canned ACL to apply to the bucket."
+  CreateBucketConfiguration:
+    type: structure
+    description: ""
+  GrantFullControl:
+    type: string
+    description: "Allows grantee the read, write, read ACP, and write ACP permissions on the bucket."
+  GrantRead:
+    type: string
+    description: "Allows grantee to list the objects in the bucket."
+  GrantReadACP:
+    type: string
+    description: "Allows grantee to read the bucket ACL."
+  GrantWrite:
+    type: string
+    description: "Allows grantee to create, overwrite, and delete any object in the bucket."
+  GrantWriteACP:
+    type: string
+    description: "Allows grantee to write the ACL for the applicable bucket."
