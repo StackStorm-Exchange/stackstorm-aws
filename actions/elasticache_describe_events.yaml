@@ -1,0 +1,41 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: elasticache_describe_events
+runner_type: run-python
+parameters:
+  action:
+    default: describe_events
+    immutable: true
+    type: string
+  cls:
+    default: elasticache
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  SourceIdentifier:
+    type: string
+    description: ""
+  SourceType:
+    type: string
+    description: ""
+  StartTime:
+    type: string
+    description: ""
+  EndTime:
+    type: string
+    description: ""
+  Duration:
+    type: integer
+    description: ""
+  MaxRecords:
+    type: integer
+    description: ""
+  Marker:
+    type: string
+    description: ""
