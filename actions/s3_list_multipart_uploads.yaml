@@ -1,0 +1,42 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: s3_list_multipart_uploads
+runner_type: run-python
+parameters:
+  action:
+    default: list_multipart_uploads
+    immutable: true
+    type: string
+  cls:
+    default: s3
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Bucket:
+    type: string
+    description: ""
+    required: true
+  Delimiter:
+    type: string
+    description: "Character you use to group keys."
+  EncodingType:
+    type: string
+    description: ""
+  KeyMarker:
+    type: string
+    description: "Together with upload-id-marker, this parameter specifies the multipart upload after which listing should begin."
+  MaxUploads:
+    type: integer
+    description: "Sets the maximum number of multipart uploads, from 1 to 1,000, to return in the response body. 1,000 is the maximum number of uploads that can be returned in a response."
+  Prefix:
+    type: string
+    description: "Lists in-progress uploads only for those keys that begin with the specified prefix."
+  UploadIdMarker:
+    type: string
+    description: "Together with key-marker, specifies the multipart upload after which listing should begin. If key-marker is not specified, the upload-id-marker parameter is ignored."

@@ -1,0 +1,42 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: s3_list_objects
+runner_type: run-python
+parameters:
+  action:
+    default: list_objects
+    immutable: true
+    type: string
+  cls:
+    default: s3
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Bucket:
+    type: string
+    description: ""
+    required: true
+  Delimiter:
+    type: string
+    description: "A delimiter is a character you use to group keys."
+  EncodingType:
+    type: string
+    description: ""
+  Marker:
+    type: string
+    description: "Specifies the key to start with when listing objects in a bucket."
+  MaxKeys:
+    type: integer
+    description: "Sets the maximum number of keys returned in the response. The response might contain fewer keys but will never contain more."
+  Prefix:
+    type: string
+    description: "Limits the response to keys that begin with the specified prefix."
+  RequestPayer:
+    type: string
+    description: "Confirms that the requester knows that she or he will be charged for the list objects request. Bucket owners need not specify this parameter in their requests."

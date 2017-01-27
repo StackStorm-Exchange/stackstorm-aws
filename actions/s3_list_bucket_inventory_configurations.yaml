@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: s3_list_bucket_inventory_configurations
+runner_type: run-python
+parameters:
+  action:
+    default: list_bucket_inventory_configurations
+    immutable: true
+    type: string
+  cls:
+    default: s3
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Bucket:
+    type: string
+    description: "The name of the bucket containing the inventory configurations to retrieve."
+    required: true
+  ContinuationToken:
+    type: string
+    description: "The marker used to continue an inventory configuration listing that has been truncated. Use the NextContinuationToken from a previously truncated list response to continue the listing. The continuation token is an opaque value that Amazon S3 understands."
