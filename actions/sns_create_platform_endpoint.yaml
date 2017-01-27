@@ -1,0 +1,34 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: sns_create_platform_endpoint
+runner_type: run-python
+parameters:
+  action:
+    default: create_platform_endpoint
+    immutable: true
+    type: string
+  cls:
+    default: sns
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  PlatformApplicationArn:
+    type: string
+    description: ""
+    required: true
+  Token:
+    type: string
+    description: ""
+    required: true
+  CustomUserData:
+    type: string
+    description: ""
+  Attributes:
+    type: map
+    description: ""
