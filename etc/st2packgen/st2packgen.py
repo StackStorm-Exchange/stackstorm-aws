@@ -76,6 +76,8 @@ for op in mysrv.operation_names:
     # blob defined in boto as bytes or seekable file-like object - not supported here
     if stype == "blob":
       stype = "string"
+    if stype == "long":
+      stype = "integer"
     if stype == "structure":
       stype = "object"
     if stype == "map":
