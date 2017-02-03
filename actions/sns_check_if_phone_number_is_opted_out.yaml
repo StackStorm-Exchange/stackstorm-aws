@@ -20,5 +20,5 @@ parameters:
     type: string
   phoneNumber:
     type: string
-    description: ""
+    description: "The phone number for which you want to check the opt out status."
     required: true

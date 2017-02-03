@@ -20,12 +20,12 @@ parameters:
     type: string
   SubscriptionArn:
     type: string
-    description: ""
+    description: "The ARN of the subscription to modify."
     required: true
   AttributeName:
     type: string
-    description: ""
+    description: "The name of the attribute you want to set. Only a subset of the subscriptions attributes are mutable. Valid values: DeliveryPolicy | RawMessageDelivery "
     required: true
   AttributeValue:
     type: string
-    description: ""
+    description: "The new value for the attribute in JSON format."

@@ -20,13 +20,13 @@ parameters:
     type: string
   Name:
     type: string
-    description: ""
+    description: "Application names must be made up of only uppercase and lowercase ASCII letters, numbers, underscores, hyphens, and periods, and must be between 1 and 256 characters long."
     required: true
   Platform:
     type: string
-    description: ""
+    description: "The following platforms are supported: ADM (Amazon Device Messaging), APNS (Apple Push Notification Service), APNS_SANDBOX, and GCM (Google Cloud Messaging)."
     required: true
   Attributes:
-    type: map
-    description: ""
+    type: object
+    description: "For a list of attributes, see SetPlatformApplicationAttributes "
     required: true

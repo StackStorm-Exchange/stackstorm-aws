@@ -20,5 +20,5 @@ parameters:
     type: string
   phoneNumber:
     type: string
-    description: ""
+    description: "The phone number to opt in."
     required: true
