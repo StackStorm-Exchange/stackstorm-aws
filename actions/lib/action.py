@@ -5,6 +5,7 @@ import importlib
 import boto.ec2
 import boto.route53
 import boto.vpc
+import boto3
 
 from st2actions.runners.pythonrunner import Action
 from ec2parsers import ResultSets
@@ -69,6 +70,11 @@ class BaseAction(Action):
     def st2_user_data(self):
         return self.userdata
 
+    def get_boto3_session(self, resource):
+        region = self.credentials['region']
+        del self.credentials['region']
+        return boto3.client(resource, region_name=region)
+
     def split_tags(self, tags):
         tag_dict = {}
         split_tags = tags.split(',')
@@ -117,6 +123,11 @@ class BaseAction(Action):
             zone = kwargs['zone']
             del kwargs['zone']
             obj = self.get_r53zone(zone)
+        elif "boto3" in module_path:
+            for k, v in kwargs.items():
+                if not v:
+                    del kwargs[k]
+            obj = self.get_boto3_session(cls)
         else:
             del self.credentials['region']
             obj = getattr(module, cls)(**self.credentials)
