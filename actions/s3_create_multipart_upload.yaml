@@ -60,7 +60,7 @@ parameters:
     type: string
     description: "Allows grantee to write the ACL for the applicable object."
   Metadata:
-    type: map
+    type: object
     description: "A map of metadata to store with the object in S3."
   ServerSideEncryption:
     type: string

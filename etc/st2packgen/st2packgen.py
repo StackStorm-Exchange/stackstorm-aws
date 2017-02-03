@@ -75,6 +75,8 @@ for op in mysrv.operation_names:
     stype = smodel._shape_resolver._shape_map[sdata['shape']]['type']
     if stype == "structure":
       stype = "object"
+    if stype == "map":
+      stype = "object"
     if stype == "list":
       stype = "array"
     if stype == "timestamp":
