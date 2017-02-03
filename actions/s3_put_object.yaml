@@ -45,7 +45,7 @@ parameters:
     type: string
     description: "The language the content is in."
   ContentLength:
-    type: long
+    type: integer
     description: "Size of the body in bytes. This parameter is useful when the size of the body cannot be determined automatically."
   ContentMD5:
     type: string
