@@ -35,7 +35,7 @@ parameters:
     description: "Upload ID identifying the multipart upload whose part is being uploaded."
     required: true
   Body:
-    type: blob
+    type: string
     description: "Object data."
   ContentLength:
     type: long

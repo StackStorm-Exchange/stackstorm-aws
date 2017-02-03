@@ -30,7 +30,7 @@ parameters:
     type: string
     description: "The canned ACL to apply to the object."
   Body:
-    type: blob
+    type: string
     description: "Object data."
   CacheControl:
     type: string

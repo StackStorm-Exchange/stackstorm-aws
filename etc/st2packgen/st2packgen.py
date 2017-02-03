@@ -73,6 +73,9 @@ for op in mysrv.operation_names:
   for sname,sdata in smembers.items():
     tmp = {}
     stype = smodel._shape_resolver._shape_map[sdata['shape']]['type']
+    # blob defined in boto as bytes or seekable file-like object - not supported here
+    if stype == "blob":
+      stype = "string"
     if stype == "structure":
       stype = "object"
     if stype == "map":
