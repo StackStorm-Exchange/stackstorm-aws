@@ -45,7 +45,7 @@ try:
 except botocore.exceptions.UnknownServiceError as e:
     print "\n%s\n" % e
     sys.exit(1)
- 
+
 
 for op in mysrv.operation_names:
 
