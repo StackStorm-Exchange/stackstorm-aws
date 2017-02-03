@@ -27,6 +27,6 @@ parameters:
     description: "The identifier used to represent an analytics configuration."
     required: true
   AnalyticsConfiguration:
-    type: structure
+    type: object
     description: "The configuration and any analyses for the analytics filter."
     required: true

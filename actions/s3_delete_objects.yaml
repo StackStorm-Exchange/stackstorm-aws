@@ -23,7 +23,7 @@ parameters:
     description: ""
     required: true
   Delete:
-    type: structure
+    type: object
     description: ""
     required: true
   MFA:

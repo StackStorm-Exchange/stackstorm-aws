@@ -27,7 +27,7 @@ parameters:
     description: ""
     required: true
   Tagging:
-    type: structure
+    type: object
     description: ""
     required: true
   VersionId:

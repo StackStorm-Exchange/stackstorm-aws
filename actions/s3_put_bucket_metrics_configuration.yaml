@@ -27,6 +27,6 @@ parameters:
     description: "The ID used to identify the metrics configuration."
     required: true
   MetricsConfiguration:
-    type: structure
+    type: object
     description: "Specifies the metrics configuration."
     required: true

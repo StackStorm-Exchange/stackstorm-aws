@@ -23,6 +23,6 @@ parameters:
     description: "Name of the bucket for which the accelerate configuration is set."
     required: true
   AccelerateConfiguration:
-    type: structure
+    type: object
     description: "Specifies the Accelerate Configuration you want to set for the bucket."
     required: true

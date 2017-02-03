@@ -23,7 +23,7 @@ parameters:
     description: ""
     required: true
   BucketLoggingStatus:
-    type: structure
+    type: object
     description: ""
     required: true
   ContentMD5:

@@ -23,6 +23,6 @@ parameters:
     description: ""
     required: true
   NotificationConfiguration:
-    type: structure
+    type: object
     description: ""
     required: true

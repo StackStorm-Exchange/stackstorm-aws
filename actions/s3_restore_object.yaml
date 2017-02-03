@@ -30,7 +30,7 @@ parameters:
     type: string
     description: ""
   RestoreRequest:
-    type: structure
+    type: object
     description: ""
   RequestPayer:
     type: string

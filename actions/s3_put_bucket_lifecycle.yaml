@@ -26,5 +26,5 @@ parameters:
     type: string
     description: ""
   LifecycleConfiguration:
-    type: structure
+    type: object
     description: ""

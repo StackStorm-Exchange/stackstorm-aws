@@ -27,6 +27,6 @@ parameters:
     description: "The ID used to identify the inventory configuration."
     required: true
   InventoryConfiguration:
-    type: structure
+    type: object
     description: "Specifies the inventory configuration."
     required: true

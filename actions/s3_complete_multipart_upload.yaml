@@ -31,7 +31,7 @@ parameters:
     description: ""
     required: true
   MultipartUpload:
-    type: structure
+    type: object
     description: ""
   RequestPayer:
     type: string

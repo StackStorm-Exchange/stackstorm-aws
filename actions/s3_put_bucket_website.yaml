@@ -23,7 +23,7 @@ parameters:
     description: ""
     required: true
   WebsiteConfiguration:
-    type: structure
+    type: object
     description: ""
     required: true
   ContentMD5:

@@ -23,5 +23,5 @@ parameters:
     description: ""
     required: true
   LifecycleConfiguration:
-    type: structure
+    type: object
     description: ""
