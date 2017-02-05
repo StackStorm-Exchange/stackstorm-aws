@@ -2,15 +2,15 @@ description:
 pack: aws
 enabled: true
 entry_point: run.py
-name: s3_head_bucket
+name: elasticache_purchase_reserved_cache_nodes_offering
 runner_type: run-python
 parameters:
   action:
-    default: head_bucket
+    default: purchase_reserved_cache_nodes_offering
     immutable: true
     type: string
   cls:
-    default: s3
+    default: elasticache
     type: string
   headers:
     type: string
@@ -18,7 +18,13 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Bucket:
+  ReservedCacheNodesOfferingId:
     type: string
     description: ""
     required: true
+  ReservedCacheNodeId:
+    type: string
+    description: ""
+  CacheNodeCount:
+    type: integer
+    description: ""

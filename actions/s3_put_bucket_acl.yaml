@@ -2,11 +2,11 @@ description:
 pack: aws
 enabled: true
 entry_point: run.py
-name: s3_create_bucket
+name: s3_put_bucket_acl
 runner_type: run-python
 parameters:
   action:
-    default: create_bucket
+    default: put_bucket_acl
     immutable: true
     type: string
   cls:
@@ -25,8 +25,11 @@ parameters:
   ACL:
     type: string
     description: "The canned ACL to apply to the bucket."
-  CreateBucketConfiguration:
+  AccessControlPolicy:
     type: object
+    description: ""
+  ContentMD5:
+    type: string
     description: ""
   GrantFullControl:
     type: string

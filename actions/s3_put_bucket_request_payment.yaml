@@ -2,11 +2,11 @@ description:
 pack: aws
 enabled: true
 entry_point: run.py
-name: s3_head_bucket
+name: s3_put_bucket_request_payment
 runner_type: run-python
 parameters:
   action:
-    default: head_bucket
+    default: put_bucket_request_payment
     immutable: true
     type: string
   cls:
@@ -22,3 +22,10 @@ parameters:
     type: string
     description: ""
     required: true
+  RequestPaymentConfiguration:
+    type: object
+    description: ""
+    required: true
+  ContentMD5:
+    type: string
+    description: ""

@@ -1,0 +1,72 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: elasticache_modify_cache_cluster
+runner_type: run-python
+parameters:
+  action:
+    default: modify_cache_cluster
+    immutable: true
+    type: string
+  cls:
+    default: elasticache
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  CacheClusterId:
+    type: string
+    description: ""
+    required: true
+  NumCacheNodes:
+    type: integer
+    description: ""
+  CacheNodeIdsToRemove:
+    type: array
+    description: ""
+  AZMode:
+    type: string
+    description: ""
+  NewAvailabilityZones:
+    type: array
+    description: ""
+  CacheSecurityGroupNames:
+    type: array
+    description: ""
+  SecurityGroupIds:
+    type: array
+    description: ""
+  PreferredMaintenanceWindow:
+    type: string
+    description: ""
+  NotificationTopicArn:
+    type: string
+    description: ""
+  CacheParameterGroupName:
+    type: string
+    description: ""
+  NotificationTopicStatus:
+    type: string
+    description: ""
+  ApplyImmediately:
+    type: boolean
+    description: ""
+  EngineVersion:
+    type: string
+    description: ""
+  AutoMinorVersionUpgrade:
+    type: boolean
+    description: ""
+  SnapshotRetentionLimit:
+    type: integer
+    description: ""
+  SnapshotWindow:
+    type: string
+    description: ""
+  CacheNodeType:
+    type: string
+    description: ""

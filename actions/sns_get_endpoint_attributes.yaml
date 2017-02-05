@@ -2,15 +2,15 @@ description:
 pack: aws
 enabled: true
 entry_point: run.py
-name: s3_head_bucket
+name: sns_get_endpoint_attributes
 runner_type: run-python
 parameters:
   action:
-    default: head_bucket
+    default: get_endpoint_attributes
     immutable: true
     type: string
   cls:
-    default: s3
+    default: sns
     type: string
   headers:
     type: string
@@ -18,7 +18,7 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Bucket:
+  EndpointArn:
     type: string
-    description: ""
+    description: "EndpointArn for GetEndpointAttributes input."
     required: true

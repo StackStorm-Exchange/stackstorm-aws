@@ -2,15 +2,15 @@ description:
 pack: aws
 enabled: true
 entry_point: run.py
-name: s3_head_bucket
+name: elasticache_copy_snapshot
 runner_type: run-python
 parameters:
   action:
-    default: head_bucket
+    default: copy_snapshot
     immutable: true
     type: string
   cls:
-    default: s3
+    default: elasticache
     type: string
   headers:
     type: string
@@ -18,7 +18,14 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Bucket:
+  SourceSnapshotName:
     type: string
     description: ""
     required: true
+  TargetSnapshotName:
+    type: string
+    description: ""
+    required: true
+  TargetBucket:
+    type: string
+    description: ""

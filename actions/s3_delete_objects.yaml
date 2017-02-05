@@ -1,0 +1,34 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: s3_delete_objects
+runner_type: run-python
+parameters:
+  action:
+    default: delete_objects
+    immutable: true
+    type: string
+  cls:
+    default: s3
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Bucket:
+    type: string
+    description: ""
+    required: true
+  Delete:
+    type: object
+    description: ""
+    required: true
+  MFA:
+    type: string
+    description: "The concatenation of the authentication device's serial number, a space, and the value that is displayed on your authentication device."
+  RequestPayer:
+    type: string
+    description: ""

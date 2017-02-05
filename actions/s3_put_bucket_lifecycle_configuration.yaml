@@ -2,11 +2,11 @@ description:
 pack: aws
 enabled: true
 entry_point: run.py
-name: s3_head_bucket
+name: s3_put_bucket_lifecycle_configuration
 runner_type: run-python
 parameters:
   action:
-    default: head_bucket
+    default: put_bucket_lifecycle_configuration
     immutable: true
     type: string
   cls:
@@ -22,3 +22,6 @@ parameters:
     type: string
     description: ""
     required: true
+  LifecycleConfiguration:
+    type: object
+    description: ""

@@ -1,0 +1,41 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: s3_list_parts
+runner_type: run-python
+parameters:
+  action:
+    default: list_parts
+    immutable: true
+    type: string
+  cls:
+    default: s3
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Bucket:
+    type: string
+    description: ""
+    required: true
+  Key:
+    type: string
+    description: ""
+    required: true
+  UploadId:
+    type: string
+    description: "Upload ID identifying the multipart upload whose parts are being listed."
+    required: true
+  MaxParts:
+    type: integer
+    description: "Sets the maximum number of parts to return."
+  PartNumberMarker:
+    type: integer
+    description: "Specifies the part after which listing should begin. Only parts with higher part numbers will be listed."
+  RequestPayer:
+    type: string
+    description: ""

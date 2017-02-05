@@ -1,0 +1,31 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: sns_set_topic_attributes
+runner_type: run-python
+parameters:
+  action:
+    default: set_topic_attributes
+    immutable: true
+    type: string
+  cls:
+    default: sns
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  TopicArn:
+    type: string
+    description: "The ARN of the topic to modify."
+    required: true
+  AttributeName:
+    type: string
+    description: "The name of the attribute you want to set. Only a subset of the topic's attributes are mutable. Valid values: Policy | DisplayName | DeliveryPolicy "
+    required: true
+  AttributeValue:
+    type: string
+    description: "The new value for the attribute."

@@ -2,11 +2,11 @@ description:
 pack: aws
 enabled: true
 entry_point: run.py
-name: s3_head_bucket
+name: s3_get_bucket_notification
 runner_type: run-python
 parameters:
   action:
-    default: head_bucket
+    default: get_bucket_notification
     immutable: true
     type: string
   cls:
@@ -20,5 +20,5 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ""
+    description: "Name of the bucket to get the notification configuration for."
     required: true

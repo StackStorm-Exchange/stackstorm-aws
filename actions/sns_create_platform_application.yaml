@@ -1,0 +1,32 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: sns_create_platform_application
+runner_type: run-python
+parameters:
+  action:
+    default: create_platform_application
+    immutable: true
+    type: string
+  cls:
+    default: sns
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Name:
+    type: string
+    description: "Application names must be made up of only uppercase and lowercase ASCII letters, numbers, underscores, hyphens, and periods, and must be between 1 and 256 characters long."
+    required: true
+  Platform:
+    type: string
+    description: "The following platforms are supported: ADM (Amazon Device Messaging), APNS (Apple Push Notification Service), APNS_SANDBOX, and GCM (Google Cloud Messaging)."
+    required: true
+  Attributes:
+    type: object
+    description: "For a list of attributes, see SetPlatformApplicationAttributes "
+    required: true

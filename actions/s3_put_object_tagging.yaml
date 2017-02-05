@@ -2,11 +2,11 @@ description:
 pack: aws
 enabled: true
 entry_point: run.py
-name: s3_head_bucket
+name: s3_put_object_tagging
 runner_type: run-python
 parameters:
   action:
-    default: head_bucket
+    default: put_object_tagging
     immutable: true
     type: string
   cls:
@@ -22,3 +22,17 @@ parameters:
     type: string
     description: ""
     required: true
+  Key:
+    type: string
+    description: ""
+    required: true
+  Tagging:
+    type: object
+    description: ""
+    required: true
+  VersionId:
+    type: string
+    description: ""
+  ContentMD5:
+    type: string
+    description: ""

@@ -2,11 +2,11 @@ description:
 pack: aws
 enabled: true
 entry_point: run.py
-name: s3_head_bucket
+name: s3_get_bucket_logging
 runner_type: run-python
 parameters:
   action:
-    default: head_bucket
+    default: get_bucket_logging
     immutable: true
     type: string
   cls:

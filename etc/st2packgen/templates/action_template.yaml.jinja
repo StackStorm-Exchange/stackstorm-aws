@@ -1,0 +1,31 @@
+description: {{ description }}
+pack: aws
+enabled: true
+entry_point: run.py
+name: {{ name }}
+runner_type: run-python
+parameters:
+  action:
+    default: {{ action }}
+    immutable: true
+    type: string
+  cls:
+    default: {{ service }}
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  {%- for parameter in paramsreq %}
+  {{ parameter.name }}:
+    type: {{ parameter.type }}
+    description: "{{ parameter.description }}"
+    required: true
+  {%- endfor %}
+  {%- for parameter in params %}
+  {{ parameter.name }}:
+    type: {{ parameter.type }}
+    description: "{{ parameter.description }}"
+  {%- endfor %}

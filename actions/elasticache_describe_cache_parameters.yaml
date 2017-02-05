@@ -2,15 +2,15 @@ description:
 pack: aws
 enabled: true
 entry_point: run.py
-name: s3_head_bucket
+name: elasticache_describe_cache_parameters
 runner_type: run-python
 parameters:
   action:
-    default: head_bucket
+    default: describe_cache_parameters
     immutable: true
     type: string
   cls:
-    default: s3
+    default: elasticache
     type: string
   headers:
     type: string
@@ -18,7 +18,16 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Bucket:
+  CacheParameterGroupName:
     type: string
     description: ""
     required: true
+  Source:
+    type: string
+    description: ""
+  MaxRecords:
+    type: integer
+    description: ""
+  Marker:
+    type: string
+    description: ""

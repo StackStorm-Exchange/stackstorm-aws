@@ -2,15 +2,15 @@ description:
 pack: aws
 enabled: true
 entry_point: run.py
-name: s3_head_bucket
+name: sns_list_platform_applications
 runner_type: run-python
 parameters:
   action:
-    default: head_bucket
+    default: list_platform_applications
     immutable: true
     type: string
   cls:
-    default: s3
+    default: sns
     type: string
   headers:
     type: string
@@ -18,7 +18,6 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Bucket:
+  NextToken:
     type: string
-    description: ""
-    required: true
+    description: "NextToken string is used when calling ListPlatformApplications action to retrieve additional records that are available after the first page results."

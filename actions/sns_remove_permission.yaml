@@ -2,15 +2,15 @@ description:
 pack: aws
 enabled: true
 entry_point: run.py
-name: s3_head_bucket
+name: sns_remove_permission
 runner_type: run-python
 parameters:
   action:
-    default: head_bucket
+    default: remove_permission
     immutable: true
     type: string
   cls:
-    default: s3
+    default: sns
     type: string
   headers:
     type: string
@@ -18,7 +18,11 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Bucket:
+  TopicArn:
     type: string
-    description: ""
+    description: "The ARN of the topic whose access control policy you wish to modify."
+    required: true
+  Label:
+    type: string
+    description: "The unique label of the statement you want to remove."
     required: true
