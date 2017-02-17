@@ -149,7 +149,9 @@ class BaseAction(Action):
                              'aws_secret_access_key) or region')
 
         resultset = getattr(obj, action)(**kwargs)
-        formatted = json.loads(json.dumps(self.resultsets.formatter(resultset), default=self._json_serial))
+        formatted = json.loads(
+                        json.dumps(
+                            self.resultsets.formatter(resultset), default=self._json_serial))
         return formatted if isinstance(formatted, list) else [formatted]
 
     def do_function(self, module_path, action, **kwargs):
