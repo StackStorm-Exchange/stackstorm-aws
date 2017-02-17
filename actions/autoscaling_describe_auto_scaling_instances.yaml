@@ -1,0 +1,29 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: autoscaling_describe_auto_scaling_instances
+runner_type: run-python
+parameters:
+  action:
+    default: describe_auto_scaling_instances
+    immutable: true
+    type: string
+  cls:
+    default: autoscaling
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  InstanceIds:
+    type: array
+    description: "The instances to describe; up to 50 instance IDs. If you omit this parameter, all Auto Scaling instances are described. If you specify an ID that does not exist, it is ignored with no error."
+  MaxRecords:
+    type: integer
+    description: "The maximum number of items to return with this call."
+  NextToken:
+    type: string
+    description: "The token for the next set of items to return. (You received this token from a previous call.)"
