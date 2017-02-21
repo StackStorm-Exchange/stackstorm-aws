@@ -1,5 +1,4 @@
 import re
-import json
 import eventlet
 import importlib
 
@@ -11,8 +10,6 @@ import boto3
 
 from st2actions.runners.pythonrunner import Action
 from ec2parsers import ResultSets
-
-from datetime import datetime
 
 
 class BaseAction(Action):
@@ -47,14 +44,6 @@ class BaseAction(Action):
             self.credentials = config['setup']
 
         self.resultsets = ResultSets()
-
-    def _json_serial(self, obj):
-        """JSON serializer for objects not serializable by default json code"""
-
-        if isinstance(obj, datetime):
-            serial = obj.isoformat()
-            return serial
-        raise TypeError("Type not serializable")
 
     def ec2_connect(self):
         region = self.credentials['region']
