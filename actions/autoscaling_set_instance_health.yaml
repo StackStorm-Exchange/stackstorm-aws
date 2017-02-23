@@ -1,0 +1,31 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: autoscaling_set_instance_health
+runner_type: run-python
+parameters:
+  action:
+    default: set_instance_health
+    immutable: true
+    type: string
+  cls:
+    default: autoscaling
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  InstanceId:
+    type: string
+    description: "The ID of the instance."
+    required: true
+  HealthStatus:
+    type: string
+    description: "The health status of the instance. Set to Healthy if you want the instance to remain in service. Set to Unhealthy if you want the instance to be out of service. Auto Scaling will terminate and replace the unhealthy instance."
+    required: true
+  ShouldRespectGracePeriod:
+    type: boolean
+    description: "If the Auto Scaling group of the specified instance has a HealthCheckGracePeriod specified for the group, by default, this call will respect the grace period. Set this to False, if you do not want the call to respect the grace period associated with the group. For more information, see the description of the health check grace period for CreateAutoScalingGroup."

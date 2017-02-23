@@ -5,6 +5,7 @@ from boto import route53
 from boto import cloudformation
 from boto import rds
 from boto.s3.bucket import Bucket
+from datetime import datetime
 
 
 class FieldLists():
@@ -192,6 +193,8 @@ class ResultSets(object):
             return self.parseDBInstanceObject(output)
         elif isinstance(output, Bucket):
             return self.parseBucket(output)
+        elif isinstance(output, datetime):
+            return self.parseDatetime(output)
         else:
             return output
 
@@ -202,6 +205,9 @@ class ResultSets(object):
             return {key: self.formatter(value) for key, value in six.iteritems(output)}
         else:
             return self.selector(output)
+
+    def parseDatetime(self, output):
+        return output.isoformat()
 
     def parseReservation(self, output):
         instance_list = []

@@ -1,0 +1,49 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: autoscaling_put_scheduled_update_group_action
+runner_type: run-python
+parameters:
+  action:
+    default: put_scheduled_update_group_action
+    immutable: true
+    type: string
+  cls:
+    default: autoscaling
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  AutoScalingGroupName:
+    type: string
+    description: "The name or Amazon Resource Name (ARN) of the Auto Scaling group."
+    required: true
+  ScheduledActionName:
+    type: string
+    description: "The name of this scaling action."
+    required: true
+  Time:
+    type: string
+    description: "This parameter is deprecated."
+  StartTime:
+    type: string
+    description: "The time for this action to start, in 'YYYY-MM-DDThh:mm:ssZ' format in UTC/GMT only (for example, 2014-06-01T00:00:00Z). If you specify Recurrence and StartTime, Auto Scaling performs the action at this time, and then performs the action based on the specified recurrence. If you try to schedule your action in the past, Auto Scaling returns an error message."
+  EndTime:
+    type: string
+    description: "The time for the recurring schedule to end. Auto Scaling does not perform the action after this time."
+  Recurrence:
+    type: string
+    description: "The recurring schedule for this action, in Unix cron syntax format. For more information, see Cron in Wikipedia."
+  MinSize:
+    type: integer
+    description: "The minimum size for the Auto Scaling group."
+  MaxSize:
+    type: integer
+    description: "The maximum size for the Auto Scaling group."
+  DesiredCapacity:
+    type: integer
+    description: "The number of EC2 instances that should be running in the group."

@@ -1,0 +1,56 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: autoscaling_put_scaling_policy
+runner_type: run-python
+parameters:
+  action:
+    default: put_scaling_policy
+    immutable: true
+    type: string
+  cls:
+    default: autoscaling
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  AutoScalingGroupName:
+    type: string
+    description: "The name or ARN of the group."
+    required: true
+  PolicyName:
+    type: string
+    description: "The name of the policy."
+    required: true
+  AdjustmentType:
+    type: string
+    description: "The adjustment type. Valid values are ChangeInCapacity, ExactCapacity, and PercentChangeInCapacity. For more information, see Dynamic Scaling in the Auto Scaling User Guide."
+    required: true
+  PolicyType:
+    type: string
+    description: "The policy type. Valid values are SimpleScaling and StepScaling. If the policy type is null, the value is treated as SimpleScaling."
+  MinAdjustmentStep:
+    type: integer
+    description: "Available for backward compatibility. Use MinAdjustmentMagnitude instead."
+  MinAdjustmentMagnitude:
+    type: integer
+    description: "The minimum number of instances to scale. If the value of AdjustmentType is PercentChangeInCapacity, the scaling policy changes the DesiredCapacity of the Auto Scaling group by at least this many instances. Otherwise, the error is ValidationError."
+  ScalingAdjustment:
+    type: integer
+    description: "The amount by which to scale, based on the specified adjustment type. A positive value adds to the current capacity while a negative number removes from the current capacity. This parameter is required if the policy type is SimpleScaling and not supported otherwise."
+  Cooldown:
+    type: integer
+    description: "The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies. This parameter is not supported unless the policy type is SimpleScaling. For more information, see Auto Scaling Cooldowns in the Auto Scaling User Guide."
+  MetricAggregationType:
+    type: string
+    description: "The aggregation type for the CloudWatch metrics. Valid values are Minimum, Maximum, and Average. If the aggregation type is null, the value is treated as Average. This parameter is not supported if the policy type is SimpleScaling."
+  StepAdjustments:
+    type: array
+    description: "A set of adjustments that enable you to scale based on the size of the alarm breach. This parameter is required if the policy type is StepScaling and not supported otherwise."
+  EstimatedInstanceWarmup:
+    type: integer
+    description: "The estimated time, in seconds, until a newly launched instance can contribute to the CloudWatch metrics. The default is to use the value specified for the default cooldown period for the group. This parameter is not supported if the policy type is SimpleScaling."
