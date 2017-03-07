@@ -20,7 +20,7 @@ parameters:
     type: string
   resource_ids:
     required: true
-    type: string
+    type: array
   tags:
     required: true
     type: string
