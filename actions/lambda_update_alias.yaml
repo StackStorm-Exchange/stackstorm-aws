@@ -1,0 +1,34 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: lambda_update_alias
+runner_type: run-python
+parameters:
+  action:
+    default: update_alias
+    immutable: true
+    type: string
+  cls:
+    default: lambda
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  FunctionName:
+    type: string
+    description: "The function name for which the alias is created."
+    required: true
+  Name:
+    type: string
+    description: "The alias name."
+    required: true
+  FunctionVersion:
+    type: string
+    description: "Using this parameter you can change the Lambda function version to which the alias points."
+  Description:
+    type: string
+    description: "You can change the description of the alias using this parameter."
