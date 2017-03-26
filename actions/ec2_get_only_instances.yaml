@@ -15,11 +15,11 @@ parameters:
     default: false
     type: boolean
   filters:
-    type: string
+    type: object
   instance_ids:
-    type: string
+    type: array
   max_results:
-    type: string
+    type: integer
   module_path:
     default: boto.ec2.connection
     immutable: true
