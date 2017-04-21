@@ -22,12 +22,14 @@ class BaseAction(Action):
             'aws_access_key_id': None,
             'aws_secret_access_key': None
         }
+        self.userdata = None
 
-        if config['st2_user_data']:
-            with open(config['st2_user_data'], 'r') as fp:
-                self.userdata = fp.read()
-        else:
-            self.userdata = None
+        if 'st2_user_data' in config and config['st2_user_data']:
+            try:
+                with open(config['st2_user_data'], 'r') as fp:
+                    self.userdata = fp.read()
+            except IOError as e:
+                self.logger.error(e)
 
         # Note: In old static config credentials and region are under "setup" key and with a new
         # dynamic config values are top-level
@@ -39,7 +41,7 @@ class BaseAction(Action):
             self.credentials['aws_access_key_id'] = access_key_id
             self.credentials['aws_secret_access_key'] = secret_access_key
             self.credentials['region'] = region
-        else:
+        elif 'setup' in config:
             # Assume old-style config
             self.credentials = config['setup']
 
