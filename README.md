@@ -35,6 +35,8 @@ st2_user_data: ""
 * ``service_notifications_sensor.port`` - Listen path for the HTTP interface.
 * ``service_notifications_sensor.path`` - Path where the events need to be sent.
 
+And `aws.example.file` is an example of this configuration. You can use actions and sensors by copying this file to `config.yaml` and editing the parameters in this file.
+
 ## st2_user_data
 
 Optionally, you can set the user_data to set a default file to be used during new instance creation.  Put your user_data file somewhere accessible by the StackStorm user, and use the st2_user_data config option to set it.
