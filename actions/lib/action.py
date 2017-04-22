@@ -24,7 +24,7 @@ class BaseAction(Action):
         }
         self.userdata = None
 
-        if 'st2_user_data' in config and config['st2_user_data']:
+        if config.get('st2_user_data', None):
             try:
                 with open(config['st2_user_data'], 'r') as fp:
                     self.userdata = fp.read()
