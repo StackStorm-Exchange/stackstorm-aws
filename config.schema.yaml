@@ -14,3 +14,35 @@
     type: "string"
     required: true
     default: 'us-east-1'
+  st2_user_data:
+    description: "The file for all invocations of the 'aws.ec2_run_instances' action"
+    type: "string"
+  service_notifications_sensor:
+    type: object
+    properties:
+      host:
+        description: "Listen host for the HTTP interface from Amazon SNS"
+        type: "string"
+        default: "localhost"
+      port:
+        description: "Listen path for the HTTP interface from Amazon SNS"
+        type: "integer"
+        default: 12345
+      path:
+        description: "Path where the events need to be sent from Amazon SNS"
+        type: "string"
+  sqs_sensor:
+    type: object
+    properties:
+      input_queues:
+        description: "Names of queue to fetch messages from Amazon SQS"
+        type: "array"
+        items:
+          type: "string"
+  sqs_other:
+    type: object
+    properties:
+      max_number_of_messages:
+        description: "The maximum number of messages that Amazon SQS returns"
+        type: "integer"
+        default: 1
