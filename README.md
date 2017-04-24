@@ -12,7 +12,6 @@ setup:
   region: ""
   aws_access_key_id: ""
   aws_secret_access_key: ""
-interval: 20
 st2_user_data: ""
  ```
 
@@ -27,7 +26,6 @@ setup:
   region: "us-east-1"
   aws_access_key_id: null
   aws_secret_access_key: null
-interval: 20
 st2_user_data: ""
  ```
 

@@ -12,7 +12,6 @@ class EC2(object):
         self._region = config['region']
         self._access_key_id = config['access_key_id']
         self._secret_access_key = config['secret_access_key']
-        self._interval = config['interval']
         self.conn = self.connect(self._region)
 
     def connect(self, region):
