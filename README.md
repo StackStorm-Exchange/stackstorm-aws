@@ -32,7 +32,7 @@ st2_user_data: ""
  ```
 
 * ``service_notifications_sensor.host`` - Listen host for the HTTP interface.
-* ``service_notifications_sensor.port`` - Listen path for the HTTP interface.
+* ``service_notifications_sensor.port`` - Listen port for the HTTP interface.
 * ``service_notifications_sensor.path`` - Path where the events need to be sent.
 
 ## st2_user_data
@@ -132,7 +132,7 @@ For configuration in ``config.yaml`` with config like this
         - first_queue
         - second_queue
     sqs_other:
-      max_mumber_of_messages: 1
+      max_number_of_messages: 1
 ```
 
 If any value exist in datastore it will be taken instead of any value in config.yaml
