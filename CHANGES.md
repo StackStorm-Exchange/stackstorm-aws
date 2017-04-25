@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.9.1
+
+* Corrected incomplete error handling and validation of configuration (#22).
+
 ## v0.3.0
 
 * Added CloudFormation, VPC, IAM, RDS, SQS, S3

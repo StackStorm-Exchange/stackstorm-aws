@@ -1,3 +1,7 @@
+## v0.9.1
+
+* Corrected incomplete error handling and validation of configuration (#22).
+
 ## v0.6.0
 
 * Fix the result format of some of the actions such as ``ec2_run_instances``. Previously,
