@@ -1,6 +1,6 @@
 ---
-aws_access_key_id: AKIAJWNYSQSDZRUXGGVA
-aws_secret_access_key: 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
+aws_access_key_id: access_key
+aws_secret_access_key: secret_key
 region: us-east-1
 interval: 20
 st2_user_data: /opt/stackstorm/packs/aws/actions/scripts/bootstrap_user.sh
