@@ -76,7 +76,7 @@ class BaseAction(Action):
     def get_boto3_session(self, resource):
         region = self.credentials['region']
         del self.credentials['region']
-        return boto3.client(resource, region_name=region)
+        return boto3.client(resource, region_name=region, **self.credentials)
 
     def split_tags(self, tags):
         tag_dict = {}
@@ -126,7 +126,7 @@ class BaseAction(Action):
             zone = kwargs['zone']
             del kwargs['zone']
             obj = self.get_r53zone(zone)
-        elif "boto3" in module_path:
+        elif 'boto3' in module_path:
             for k, v in kwargs.items():
                 if not v:
                     del kwargs[k]
