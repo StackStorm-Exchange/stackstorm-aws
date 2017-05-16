@@ -22,12 +22,14 @@ class BaseAction(Action):
             'aws_access_key_id': None,
             'aws_secret_access_key': None
         }
+        self.userdata = None
 
-        if config['st2_user_data']:
-            with open(config['st2_user_data'], 'r') as fp:
-                self.userdata = fp.read()
-        else:
-            self.userdata = None
+        if config.get('st2_user_data', None):
+            try:
+                with open(config['st2_user_data'], 'r') as fp:
+                    self.userdata = fp.read()
+            except IOError as e:
+                self.logger.error(e)
 
         # Note: In old static config credentials and region are under "setup" key and with a new
         # dynamic config values are top-level
@@ -39,7 +41,7 @@ class BaseAction(Action):
             self.credentials['aws_access_key_id'] = access_key_id
             self.credentials['aws_secret_access_key'] = secret_access_key
             self.credentials['region'] = region
-        else:
+        elif 'setup' in config:
             # Assume old-style config
             self.credentials = config['setup']
 
@@ -74,7 +76,7 @@ class BaseAction(Action):
     def get_boto3_session(self, resource):
         region = self.credentials['region']
         del self.credentials['region']
-        return boto3.client(resource, region_name=region)
+        return boto3.client(resource, region_name=region, **self.credentials)
 
     def split_tags(self, tags):
         tag_dict = {}
@@ -124,7 +126,7 @@ class BaseAction(Action):
             zone = kwargs['zone']
             del kwargs['zone']
             obj = self.get_r53zone(zone)
-        elif "boto3" in module_path:
+        elif 'boto3' in module_path:
             for k, v in kwargs.items():
                 if not v:
                     del kwargs[k]

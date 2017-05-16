@@ -1,0 +1,17 @@
+---
+aws_access_key_id: access_key
+aws_secret_access_key: secret_key
+region: us-east-1
+interval: 20
+st2_user_data: /opt/stackstorm/packs/aws/actions/scripts/bootstrap_user.sh
+
+service_notifications_sensor:
+  host: localhost
+  port: 12345
+  path: /my-path
+
+sqs_sensor:
+  input_queues: queuename
+
+sqs_other:
+  max_number_of_messages: 1
