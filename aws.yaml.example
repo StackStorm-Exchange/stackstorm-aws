@@ -2,7 +2,6 @@
 aws_access_key_id: access_key
 aws_secret_access_key: secret_key
 region: us-east-1
-interval: 20
 st2_user_data: /opt/stackstorm/packs/aws/actions/scripts/bootstrap_user.sh
 
 service_notifications_sensor:
@@ -11,7 +10,8 @@ service_notifications_sensor:
   path: /my-path
 
 sqs_sensor:
-  input_queues: queuename
+  input_queues:
+    - queuename
 
 sqs_other:
   max_number_of_messages: 1
