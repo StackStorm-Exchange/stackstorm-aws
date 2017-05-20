@@ -12,7 +12,6 @@ setup:
   region: ""
   aws_access_key_id: ""
   aws_secret_access_key: ""
-interval: 20
 st2_user_data: ""
  ```
 
@@ -27,12 +26,11 @@ setup:
   region: "us-east-1"
   aws_access_key_id: null
   aws_secret_access_key: null
-interval: 20
 st2_user_data: ""
  ```
 
 * ``service_notifications_sensor.host`` - Listen host for the HTTP interface.
-* ``service_notifications_sensor.port`` - Listen path for the HTTP interface.
+* ``service_notifications_sensor.port`` - Listen port for the HTTP interface.
 * ``service_notifications_sensor.path`` - Path where the events need to be sent.
 
 And `aws.example.file` is an example of this configuration. You can use actions and sensors by copying this file to `config.yaml` and editing the parameters in this file.
@@ -134,7 +132,7 @@ For configuration in ``config.yaml`` with config like this
         - first_queue
         - second_queue
     sqs_other:
-      max_mumber_of_messages: 1
+      max_number_of_messages: 1
 ```
 
 If any value exist in datastore it will be taken instead of any value in config.yaml

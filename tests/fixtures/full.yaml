@@ -2,7 +2,6 @@
 aws_access_key_id: "access_key_id"
 aws_secret_access_key: "secret_key"
 region: "us-west-1"
-interval: 20
 st2_user_data: ""
 
 service_notifications_sensor:
