@@ -1,0 +1,20 @@
+---
+name: "ec2_start_instances"
+pack: "gici_global"
+description: "start instance"
+action_ref: "aws.ec2_start_instances"
+formats:
+  - "aws ec2 start {{instance_ids}}"
+ack:
+  enabled: false
+  append_url: false
+result:
+  extra:
+    slack:
+#      Units: "{{execution.result.result.units}}"
+      color: "#00ad52" # aka Slack 'good'
+      footer: "GICI Global"
+  format: |
+       {% for ec2 in execution.result.result -%}
+        • {{ ec2.id }}  - {{ ec2.state }}
+       {%+ endfor %}

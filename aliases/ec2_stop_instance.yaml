@@ -1,0 +1,19 @@
+---
+name: "ec2_stop_instances"
+pack: "gici_global"
+description: "stop instance"
+action_ref: "aws.ec2_stop_instances"
+formats:
+  - "aws ec2 stop {{instance_ids}}"
+ack:
+  enabled: true
+  append_url: true
+result:
+  extra:
+    slack:
+      color: "#00ad52" # aka Slack 'good'
+      footer: "GICI Global"
+  format: |
+       {% for ec2 in execution.result.result -%}
+        • {{ ec2.id }}  - {{ ec2.state }}
+       {%+ endfor %}
