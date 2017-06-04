@@ -1,6 +1,6 @@
 ---
 name: "ec2_start_instances"
-pack: "gici_global"
+pack: "aws"
 description: "start instance"
 action_ref: "aws.ec2_start_instances"
 formats:

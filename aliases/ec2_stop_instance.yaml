@@ -1,6 +1,6 @@
 ---
 name: "ec2_stop_instances"
-pack: "gici_global"
+pack: "aws"
 description: "stop instance"
 action_ref: "aws.ec2_stop_instances"
 formats:

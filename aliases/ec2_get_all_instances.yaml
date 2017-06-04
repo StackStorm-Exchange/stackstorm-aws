@@ -1,6 +1,6 @@
 ---
 name: "ec2_get_all_instances"
-pack: "gici_global"
+pack: "aws"
 description: "get all instances"
 action_ref: "aws.ec2_get_all_instances"
 formats:
