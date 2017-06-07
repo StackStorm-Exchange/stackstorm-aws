@@ -12,7 +12,7 @@ result:
   extra:
     slack:
       color: "#00ad52" # aka Slack 'good'
-      footer: "GICI Global"
+      footer: "AWS Pack"
   format: |
        {% for ec2 in execution.result.result -%}
         • {{ ec2.id }}  - {{ ec2.state }}
