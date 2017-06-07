@@ -13,7 +13,7 @@ result:
     slack:
 #      Units: "{{execution.result.result.units}}"
       color: "#00ad52" # aka Slack 'good'
-      footer: "GICI Global"
+      footer: "AWS Pack"
   format: |
     {% if execution.status == 'succeeded' %}
     {% for line in execution.result.result %}
