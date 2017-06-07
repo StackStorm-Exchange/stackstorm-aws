@@ -1,5 +1,6 @@
 # Changelog
-## Next version
+
+## v0.9.3
 * Adding aliases for ec2 actions (list/start/stop) machines
 
 ## v0.9.2
