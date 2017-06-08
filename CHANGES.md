@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.9.3
+* Adding aliases for ec2 actions (list/start/stop) machines
+
 ## v0.9.2
 
 * Fix all the boto3 actions (autoscaling, etc.) so they work. Previously they didn't work because
