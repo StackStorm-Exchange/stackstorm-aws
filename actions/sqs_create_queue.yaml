@@ -20,4 +20,4 @@ parameters:
     type: string
   visibility_timeout:
     type: string
-runner_type: run-python
+runner_type: python-script

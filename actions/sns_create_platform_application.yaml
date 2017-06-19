@@ -3,7 +3,7 @@ pack: aws
 enabled: true
 entry_point: run.py
 name: sns_create_platform_application
-runner_type: run-python
+runner_type: python-script
 parameters:
   action:
     default: create_platform_application

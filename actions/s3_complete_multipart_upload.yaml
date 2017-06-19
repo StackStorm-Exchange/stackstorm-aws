@@ -3,7 +3,7 @@ pack: aws
 enabled: true
 entry_point: run.py
 name: s3_complete_multipart_upload
-runner_type: run-python
+runner_type: python-script
 parameters:
   action:
     default: complete_multipart_upload

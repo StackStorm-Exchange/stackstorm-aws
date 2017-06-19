@@ -21,4 +21,4 @@ parameters:
     type: string
   template_url:
     type: string
-runner_type: run-python
+runner_type: python-script

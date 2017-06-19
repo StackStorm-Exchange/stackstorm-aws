@@ -3,7 +3,7 @@ pack: aws
 enabled: true
 entry_point: run.py
 name: autoscaling_detach_load_balancers
-runner_type: run-python
+runner_type: python-script
 parameters:
   action:
     default: detach_load_balancers

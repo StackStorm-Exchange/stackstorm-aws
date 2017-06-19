@@ -23,4 +23,4 @@ parameters:
   validate:
     default: true
     type: boolean
-runner_type: run-python
+runner_type: python-script

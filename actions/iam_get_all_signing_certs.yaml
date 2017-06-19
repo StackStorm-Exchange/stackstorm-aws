@@ -21,4 +21,4 @@ parameters:
     type: string
   user_name:
     type: string
-runner_type: run-python
+runner_type: python-script

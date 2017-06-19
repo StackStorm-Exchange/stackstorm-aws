@@ -27,4 +27,4 @@ parameters:
   weekly_backups:
     default: 4
     type: string
-runner_type: run-python
+runner_type: python-script

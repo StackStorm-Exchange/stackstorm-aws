@@ -29,4 +29,4 @@ parameters:
     type: string
   wait_time_seconds:
     type: string
-runner_type: run-python
+runner_type: python-script

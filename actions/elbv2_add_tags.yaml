@@ -3,7 +3,7 @@ pack: aws
 enabled: true
 entry_point: run.py
 name: elbv2_add_tags
-runner_type: run-python
+runner_type: python-script
 parameters:
   action:
     default: add_tags

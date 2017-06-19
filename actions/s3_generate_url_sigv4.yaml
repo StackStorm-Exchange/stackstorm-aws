@@ -38,4 +38,4 @@ parameters:
     type: string
   version_id:
     type: string
-runner_type: run-python
+runner_type: python-script

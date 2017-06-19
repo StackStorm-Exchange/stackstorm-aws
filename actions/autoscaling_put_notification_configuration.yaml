@@ -3,7 +3,7 @@ pack: aws
 enabled: true
 entry_point: run.py
 name: autoscaling_put_notification_configuration
-runner_type: run-python
+runner_type: python-script
 parameters:
   action:
     default: put_notification_configuration

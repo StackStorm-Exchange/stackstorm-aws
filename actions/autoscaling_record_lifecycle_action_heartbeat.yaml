@@ -3,7 +3,7 @@ pack: aws
 enabled: true
 entry_point: run.py
 name: autoscaling_record_lifecycle_action_heartbeat
-runner_type: run-python
+runner_type: python-script
 parameters:
   action:
     default: record_lifecycle_action_heartbeat

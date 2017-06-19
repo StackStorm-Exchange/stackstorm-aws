@@ -77,4 +77,4 @@ parameters:
     type: string
   user_data:
     type: string
-runner_type: run-python
+runner_type: python-script

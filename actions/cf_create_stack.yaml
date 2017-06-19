@@ -40,4 +40,4 @@ parameters:
     type: string
   timeout_in_minutes:
     type: string
-runner_type: run-python
+runner_type: python-script

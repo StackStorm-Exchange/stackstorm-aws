@@ -21,4 +21,4 @@ parameters:
   saml_provider_arn:
     required: true
     type: string
-runner_type: run-python
+runner_type: python-script

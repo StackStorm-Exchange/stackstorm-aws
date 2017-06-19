@@ -27,4 +27,4 @@ parameters:
     type: string
   number_of_lines:
     type: string
-runner_type: run-python
+runner_type: python-script

@@ -43,4 +43,4 @@ parameters:
     type: string
   virtualization_type:
     type: string
-runner_type: run-python
+runner_type: python-script
