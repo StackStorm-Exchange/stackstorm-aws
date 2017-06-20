@@ -1,5 +1,9 @@
 # Changelog
 
+# 0.10.0
+
+- Updated action `runner_type` from `run-python` to `python-script`
+
 ## v0.9.3
 * Adding aliases for ec2 actions (list/start/stop) machines
 

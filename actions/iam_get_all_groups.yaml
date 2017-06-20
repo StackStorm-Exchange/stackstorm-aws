@@ -22,4 +22,4 @@ parameters:
   path_prefix:
     default: /
     type: string
-runner_type: run-python
+runner_type: python-script

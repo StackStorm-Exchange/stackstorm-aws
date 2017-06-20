@@ -3,7 +3,7 @@ pack: aws
 enabled: true
 entry_point: run.py
 name: autoscaling_put_scaling_policy
-runner_type: run-python
+runner_type: python-script
 parameters:
   action:
     default: put_scaling_policy

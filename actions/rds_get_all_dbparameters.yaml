@@ -24,4 +24,4 @@ parameters:
     type: string
   source:
     type: string
-runner_type: run-python
+runner_type: python-script

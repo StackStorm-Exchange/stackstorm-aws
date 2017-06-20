@@ -33,4 +33,4 @@ parameters:
     type: string
   user_ids:
     type: string
-runner_type: run-python
+runner_type: python-script

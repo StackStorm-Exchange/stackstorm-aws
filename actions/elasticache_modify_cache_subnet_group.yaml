@@ -3,7 +3,7 @@ pack: aws
 enabled: true
 entry_point: run.py
 name: elasticache_modify_cache_subnet_group
-runner_type: run-python
+runner_type: python-script
 parameters:
   action:
     default: modify_cache_subnet_group

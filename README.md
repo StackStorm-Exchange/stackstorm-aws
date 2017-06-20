@@ -35,6 +35,10 @@ st2_user_data: ""
 
 And `aws.example.file` is an example of this configuration. You can use actions and sensors by copying this file to `config.yaml` and editing the parameters in this file.
 
+**Note** : When modifying the configuration in `/opt/stackstorm/configs/` please
+           remember to tell StackStorm to load these new values by running
+           `st2ctl reload --register-configs`
+
 ## st2_user_data
 
 Optionally, you can set the user_data to set a default file to be used during new instance creation.  Put your user_data file somewhere accessible by the StackStorm user, and use the st2_user_data config option to set it.

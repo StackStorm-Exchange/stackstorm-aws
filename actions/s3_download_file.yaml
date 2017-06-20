@@ -26,4 +26,4 @@ parameters:
     default: boto3.s3.transfer
     immutable: true
     type: string
-runner_type: run-python
+runner_type: python-script

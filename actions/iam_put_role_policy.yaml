@@ -24,4 +24,4 @@ parameters:
   role_name:
     required: true
     type: string
-runner_type: run-python
+runner_type: python-script

@@ -3,7 +3,7 @@ pack: aws
 enabled: true
 entry_point: run.py
 name: s3_get_bucket_request_payment
-runner_type: run-python
+runner_type: python-script
 parameters:
   action:
     default: get_bucket_request_payment

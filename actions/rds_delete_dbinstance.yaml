@@ -24,4 +24,4 @@ parameters:
   skip_final_snapshot:
     default: false
     type: boolean
-runner_type: run-python
+runner_type: python-script

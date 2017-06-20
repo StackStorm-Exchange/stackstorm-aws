@@ -3,7 +3,7 @@ pack: aws
 enabled: true
 entry_point: run.py
 name: s3_put_bucket_inventory_configuration
-runner_type: run-python
+runner_type: python-script
 parameters:
   action:
     default: put_bucket_inventory_configuration

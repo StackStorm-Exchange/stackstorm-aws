@@ -36,4 +36,4 @@ parameters:
     type: string
   to_port:
     type: integer
-runner_type: run-python
+runner_type: python-script

@@ -27,4 +27,4 @@ parameters:
     type: string
   secondary_private_ip_address_count:
     type: string
-runner_type: run-python
+runner_type: python-script

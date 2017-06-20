@@ -37,4 +37,4 @@ parameters:
     type: string
   sender:
     type: string
-runner_type: run-python
+runner_type: python-script

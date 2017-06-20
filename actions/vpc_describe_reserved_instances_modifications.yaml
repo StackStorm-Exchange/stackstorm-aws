@@ -21,4 +21,4 @@ parameters:
     type: string
   reserved_instances_modification_ids:
     type: string
-runner_type: run-python
+runner_type: python-script
