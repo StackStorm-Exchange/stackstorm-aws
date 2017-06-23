@@ -57,10 +57,10 @@ Prior to installation of the aws pack, you can get the list of available actions
 
   https://github.com/StackStorm-Exchange/stackstorm-aws/tree/master/actions
 
-Once you have installed the aws pack, you can get a list of actions by running:
+Once you have installed the aws pack, you can get a list of actions in the AWS pack using:
 
 ```
-st2 action list | grep aws
+st2 action list -p aws
 ```
 
 To get information on a specific action, please run:
@@ -130,7 +130,8 @@ root@2e1d15fd5d07:/# st2 action get aws.route53_list_hosted_zones
 +-------------+--------------------------------------------------------------+
 ```
 
-Since this action does not take any required parameters, let's run it and see what it returns.
+Since this action does not take any required parameters and won't create any resources that will
+cost us anything, let's run it and see what it returns.
 
 ```
 $ st2 run aws.route53_list_hosted_zones
