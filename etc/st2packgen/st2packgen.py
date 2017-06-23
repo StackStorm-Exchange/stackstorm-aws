@@ -40,73 +40,82 @@ templateEnv = jinja2.Environment(loader=templateLoader)
 
 session = Session()
 
-try:
-    mysrv = session.get_service_model(myservice)
-except botocore.exceptions.UnknownServiceError as e:
-    print "\n%s\n" % e
-    sys.exit(1)
+if myservice is None:
+    myservices = session.get_available_services()
+else:
+    myservices = [ myservice ]
 
+for myservice in myservices:
+    print "%s:" % myservice
 
-for op in mysrv.operation_names:
+    try:
+        mysrv = session.get_service_model(myservice)
+    except botocore.exceptions.UnknownServiceError as e:
+        print "\n%s\n" % e
+        sys.exit(1)
 
-    allvars = {}
-    allvars['paramsreq'] = []
-    allvars['params'] = []
+    for op in mysrv.operation_names:
 
-    model = mysrv.operation_model(op)
+        allvars = {}
+        allvars['paramsreq'] = []
+        allvars['params'] = []
 
-    op = convert(op)
+        model = mysrv.operation_model(op)
 
-    print op
-    allvars['action'] = op
-    allvars['name'] = myservice + "_" + op
-    allvars['service'] = myservice
+        op = convert(op)
 
-    if model.input_shape is None:
-        continue
+        print " " + op
+        allvars['action'] = op
+        allvars['name'] = myservice + "_" + op
+        allvars['service'] = myservice
 
-    members = model.input_shape.members
+        if model.input_shape is None:
+            continue
 
-    smodel = model.service_model
+        members = model.input_shape.members
 
-    # print smodel._shape_resolver
+        smodel = model.service_model
 
-    smembers = model.input_shape._shape_model['members']
-    for sname, sdata in smembers.items():
-        tmp = {}
-        stype = smodel._shape_resolver._shape_map[sdata['shape']]['type']
-        # blob defined in boto as bytes or seekable file-like object - not supported here
-        if stype == "blob":
-            stype = "string"
-        if stype == "double":
-            stype = "number"
-        if stype == "long":
-            stype = "integer"
-        if stype == "structure":
-            stype = "object"
-        if stype == "map":
-            stype = "object"
-        if stype == "list":
-            stype = "array"
-        if stype == "timestamp":
-            stype = "string"
-        tmp['name'] = sname
-        tmp['type'] = stype
-        if 'documentation' in sdata:
-            tmp['description'] = striphtml(sdata['documentation'].rstrip().replace('"', "'"))
-        else:
-            tmp['description'] = ''
+        # print smodel._shape_resolver
 
-        if sname in model.input_shape.required_members:
-            allvars['paramsreq'].append(tmp)
-        else:
-            allvars['params'].append(tmp)
+        smembers = model.input_shape._shape_model['members']
+        for sname, sdata in smembers.items():
+            tmp = {}
+            stype = smodel._shape_resolver._shape_map[sdata['shape']]['type']
+            # blob defined in boto as bytes or seekable file-like object - not supported here
+            if stype == "blob":
+                stype = "string"
+            if stype == "double":
+                stype = "number"
+            if stype == "long":
+                stype = "integer"
+            if stype == "structure":
+                stype = "object"
+            if stype == "map":
+                stype = "object"
+            if stype == "list":
+                stype = "array"
+            if stype == "timestamp":
+                stype = "string"
+            if stype == "float":
+                stype = "number"
+            tmp['name'] = sname
+            tmp['type'] = stype
+            if 'documentation' in sdata:
+                tmp['description'] = striphtml(sdata['documentation'].rstrip().replace("'", '"'))
+            else:
+                tmp['description'] = ''
 
-    actionyaml = outputdir + "/" + allvars['name'] + ".yaml"
-    y = open(actionyaml, 'w')
+            if sname in model.input_shape.required_members:
+                allvars['paramsreq'].append(tmp)
+            else:
+                allvars['params'].append(tmp)
 
-    template = templateEnv.get_template('action_template.yaml.jinja')
-    outputText = template.render(allvars).encode('utf8')  # pylint: disable=no-member
-    y.write(outputText)
+        actionyaml = outputdir + "/" + allvars['name'] + ".yaml"
+        y = open(actionyaml, 'w')
 
-    y.close()
+        template = templateEnv.get_template('action_template.yaml.jinja')
+        outputText = template.render(allvars).encode('utf8')  # pylint: disable=no-member
+        y.write(outputText)
+
+        y.close()
