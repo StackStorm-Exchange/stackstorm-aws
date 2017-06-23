@@ -2,17 +2,30 @@
 
 The StackStorm AWS integration pack supplies action integration for numerous AWS services.
 
-## Configuration
+## Prerequisites
 
-You will need to add the region and your AWS credentials to the aws.yaml file:
+AWS and Stackstorm, up and running.
 
-```yaml
----
-region: ""
-aws_access_key_id: ""
-aws_secret_access_key: ""
-st2_user_data: ""
- ```
+## Setup
+
+### Install AWS pack on StackStorm
+
+1. Install the [AWS pack](https://github.com/stackstorm-exchange/stackstorm-sensu):
+
+    ```
+    # Install AWS
+    st2 pack install aws
+
+    # Check it
+    st2 action list -p aws
+    ```
+
+2. Copy the example configuration in [aws.yaml.example](./aws.yaml.example)
+to `/opt/stackstorm/configs/aws.yaml` and edit as required. It must contain:
+
+* ``region`` - Region where AWS commands will be executed
+* ``aws_access_key_id`` - Access key
+* ``aws_secret_access_key_id`` - Secret Access key
 
 You can generate the access key and secret access key by following these directions:
 
@@ -20,6 +33,7 @@ http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingCredentials.html#Using_C
 
 If you would like to use the IAM role assigned to the instance stackstorm is running set the
 key and secret to null and set the region.
+
 ```yaml
 ---
 region: "us-east-1"
@@ -31,9 +45,6 @@ st2_user_data: ""
 * ``service_notifications_sensor.host`` - Listen host for the HTTP interface.
 * ``service_notifications_sensor.port`` - Listen port for the HTTP interface.
 * ``service_notifications_sensor.path`` - Path where the events need to be sent.
-
-And `aws.example.file` is an example of this configuration. You can use actions and
-sensors by copying this file to `aws.yaml` and editing the parameters in this file.
 
 **Note** : When modifying the configuration in `/opt/stackstorm/configs/` please
            remember to tell StackStorm to load these new values by running
