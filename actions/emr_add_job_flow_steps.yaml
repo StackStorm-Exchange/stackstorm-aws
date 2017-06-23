@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: emr_add_job_flow_steps
+runner_type: python-script
+parameters:
+  action:
+    default: add_job_flow_steps
+    immutable: true
+    type: string
+  cls:
+    default: emr
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  JobFlowId:
+    type: string
+    description: 'A string that uniquely identifies the job flow. This identifier is returned by RunJobFlow and can also be obtained from ListClusters. '
+    required: true
+  Steps:
+    type: array
+    description: ' A list of StepConfig to be executed by the job flow. '
+    required: true

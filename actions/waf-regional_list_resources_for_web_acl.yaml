@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: waf-regional_list_resources_for_web_acl
+runner_type: python-script
+parameters:
+  action:
+    default: list_resources_for_web_acl
+    immutable: true
+    type: string
+  cls:
+    default: waf-regional
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  WebACLId:
+    type: string
+    description: 'The unique identifier (ID) of the web ACL for which to list the associated resources.'
+    required: true

@@ -20,17 +20,17 @@ parameters:
     type: string
   TopicArn:
     type: string
-    description: "The ARN of the topic whose access control policy you wish to modify."
+    description: 'The ARN of the topic whose access control policy you wish to modify.'
     required: true
   Label:
     type: string
-    description: "A unique identifier for the new policy statement."
+    description: 'A unique identifier for the new policy statement.'
     required: true
   AWSAccountId:
     type: array
-    description: "The AWS account IDs of the users (principals) who will be given access to the specified actions. The users must have AWS accounts, but do not need to be signed up for this service."
+    description: 'The AWS account IDs of the users (principals) who will be given access to the specified actions. The users must have AWS accounts, but do not need to be signed up for this service.'
     required: true
   ActionName:
     type: array
-    description: "The action you want to allow for the specified principal(s). Valid values: any Amazon SNS action name."
+    description: 'The action you want to allow for the specified principal(s). Valid values: any Amazon SNS action name.'
     required: true

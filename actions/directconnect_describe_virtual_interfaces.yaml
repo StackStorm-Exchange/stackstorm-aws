@@ -1,0 +1,26 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: directconnect_describe_virtual_interfaces
+runner_type: python-script
+parameters:
+  action:
+    default: describe_virtual_interfaces
+    immutable: true
+    type: string
+  cls:
+    default: directconnect
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  connectionId:
+    type: string
+    description: ''
+  virtualInterfaceId:
+    type: string
+    description: ''

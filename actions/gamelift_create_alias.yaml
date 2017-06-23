@@ -1,0 +1,31 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: gamelift_create_alias
+runner_type: python-script
+parameters:
+  action:
+    default: create_alias
+    immutable: true
+    type: string
+  cls:
+    default: gamelift
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Name:
+    type: string
+    description: 'Descriptive label associated with an alias. Alias names do not need to be unique.'
+    required: true
+  RoutingStrategy:
+    type: object
+    description: 'Object specifying the fleet and routing type to use for the alias.'
+    required: true
+  Description:
+    type: string
+    description: 'Human-readable description of an alias.'

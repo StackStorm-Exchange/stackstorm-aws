@@ -1,27 +1,31 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: ec2_reset_instance_attribute
+runner_type: python-script
 parameters:
   action:
     default: reset_instance_attribute
     immutable: true
     type: string
-  attribute:
-    required: true
-    type: string
   cls:
-    default: EC2Connection
-    immutable: true
+    default: ec2
     type: string
-  dry_run:
-    default: false
-    type: boolean
-  instance_id:
-    required: true
+  headers:
     type: string
   module_path:
-    default: boto.ec2.connection
+    default: boto3
     immutable: true
     type: string
-runner_type: python-script
+  InstanceId:
+    type: string
+    description: 'The ID of the instance.'
+    required: true
+  Attribute:
+    type: string
+    description: 'The attribute to reset.  You can only reset the following attributes: kernel | ramdisk | sourceDestCheck. To change an instance attribute, use ModifyInstanceAttribute. '
+    required: true
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'

@@ -20,17 +20,17 @@ parameters:
     type: string
   PolicyName:
     type: string
-    description: "The name or ARN of the policy."
+    description: 'The name or ARN of the policy.'
     required: true
   AutoScalingGroupName:
     type: string
-    description: "The name or Amazon Resource Name (ARN) of the Auto Scaling group."
+    description: 'The name or Amazon Resource Name (ARN) of the Auto Scaling group.'
   HonorCooldown:
     type: boolean
-    description: "If this parameter is true, Auto Scaling waits for the cooldown period to complete before executing the policy. Otherwise, Auto Scaling executes the policy without waiting for the cooldown period to complete. This parameter is not supported if the policy type is StepScaling. For more information, see Auto Scaling Cooldowns in the Auto Scaling User Guide."
+    description: 'If this parameter is true, Auto Scaling waits for the cooldown period to complete before executing the policy. Otherwise, Auto Scaling executes the policy without waiting for the cooldown period to complete. This parameter is not supported if the policy type is StepScaling. For more information, see Auto Scaling Cooldowns in the Auto Scaling User Guide.'
   MetricValue:
     type: number
-    description: "The metric value to compare to BreachThreshold. This enables you to execute a policy of type StepScaling and determine which step adjustment to use. For example, if the breach threshold is 50 and you want to use a step adjustment with a lower bound of 0 and an upper bound of 10, you can set the metric value to 59. If you specify a metric value that doesn't correspond to a step adjustment for the policy, the call returns an error. This parameter is required if the policy type is StepScaling and not supported otherwise."
+    description: 'The metric value to compare to BreachThreshold. This enables you to execute a policy of type StepScaling and determine which step adjustment to use. For example, if the breach threshold is 50 and you want to use a step adjustment with a lower bound of 0 and an upper bound of 10, you can set the metric value to 59. If you specify a metric value that doesn"t correspond to a step adjustment for the policy, the call returns an error. This parameter is required if the policy type is StepScaling and not supported otherwise.'
   BreachThreshold:
     type: number
-    description: "The breach threshold for the alarm. This parameter is required if the policy type is StepScaling and not supported otherwise."
+    description: 'The breach threshold for the alarm. This parameter is required if the policy type is StepScaling and not supported otherwise.'

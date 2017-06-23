@@ -1,0 +1,36 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ecs_update_service
+runner_type: python-script
+parameters:
+  action:
+    default: update_service
+    immutable: true
+    type: string
+  cls:
+    default: ecs
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  service:
+    type: string
+    description: 'The name of the service to update.'
+    required: true
+  cluster:
+    type: string
+    description: 'The short name or full Amazon Resource Name (ARN) of the cluster that your service is running on. If you do not specify a cluster, the default cluster is assumed.'
+  desiredCount:
+    type: integer
+    description: 'The number of instantiations of the task to place and keep running in your service.'
+  taskDefinition:
+    type: string
+    description: 'The family and revision (family:revision) or full Amazon Resource Name (ARN) of the task definition to run in your service. If a revision is not specified, the latest ACTIVE revision is used. If you modify the task definition with UpdateService, Amazon ECS spawns a task with the new version of the task definition and then stops an old task after the new version is running.'
+  deploymentConfiguration:
+    type: object
+    description: 'Optional deployment parameters that control how many tasks run during the deployment and the ordering of stopping and starting tasks.'

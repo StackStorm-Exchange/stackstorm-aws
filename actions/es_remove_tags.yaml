@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: es_remove_tags
+runner_type: python-script
+parameters:
+  action:
+    default: remove_tags
+    immutable: true
+    type: string
+  cls:
+    default: es
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ARN:
+    type: string
+    description: 'Specifies the ARN for the Elasticsearch domain from which you want to delete the specified tags.'
+    required: true
+  TagKeys:
+    type: array
+    description: 'Specifies the TagKey list which you want to remove from the Elasticsearch domain.'
+    required: true

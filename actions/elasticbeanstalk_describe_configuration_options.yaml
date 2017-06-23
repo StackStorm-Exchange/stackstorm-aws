@@ -1,0 +1,35 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: elasticbeanstalk_describe_configuration_options
+runner_type: python-script
+parameters:
+  action:
+    default: describe_configuration_options
+    immutable: true
+    type: string
+  cls:
+    default: elasticbeanstalk
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ApplicationName:
+    type: string
+    description: 'The name of the application associated with the configuration template or environment. Only needed if you want to describe the configuration options associated with either the configuration template or environment.'
+  TemplateName:
+    type: string
+    description: 'The name of the configuration template whose configuration options you want to describe.'
+  EnvironmentName:
+    type: string
+    description: 'The name of the environment whose configuration options you want to describe.'
+  SolutionStackName:
+    type: string
+    description: 'The name of the solution stack whose configuration options you want to describe.'
+  Options:
+    type: array
+    description: 'If specified, restricts the descriptions to only the specified options.'

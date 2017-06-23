@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: elasticbeanstalk_delete_application
+runner_type: python-script
+parameters:
+  action:
+    default: delete_application
+    immutable: true
+    type: string
+  cls:
+    default: elasticbeanstalk
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ApplicationName:
+    type: string
+    description: 'The name of the application to delete.'
+    required: true
+  TerminateEnvByForce:
+    type: boolean
+    description: 'When set to true, running environments will be terminated before deleting the application.'

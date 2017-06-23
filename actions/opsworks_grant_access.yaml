@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: opsworks_grant_access
+runner_type: python-script
+parameters:
+  action:
+    default: grant_access
+    immutable: true
+    type: string
+  cls:
+    default: opsworks
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  InstanceId:
+    type: string
+    description: 'The instance"s AWS OpsWorks ID.'
+    required: true
+  ValidForInMinutes:
+    type: integer
+    description: 'The length of time (in minutes) that the grant is valid. When the grant expires at the end of this period, the user will no longer be able to use the credentials to log in. If the user is logged in at the time, he or she automatically will be logged out.'

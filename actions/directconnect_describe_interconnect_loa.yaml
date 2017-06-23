@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: directconnect_describe_interconnect_loa
+runner_type: python-script
+parameters:
+  action:
+    default: describe_interconnect_loa
+    immutable: true
+    type: string
+  cls:
+    default: directconnect
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  interconnectId:
+    type: string
+    description: ''
+    required: true
+  providerName:
+    type: string
+    description: 'The name of the service provider who establishes connectivity on your behalf. If you supply this parameter, the LOA-CFA lists the provider name alongside your company name as the requester of the cross connect. Default: None'
+  loaContentType:
+    type: string
+    description: ''

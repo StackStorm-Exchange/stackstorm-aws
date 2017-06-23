@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: apigateway_import_rest_api
+runner_type: python-script
+parameters:
+  action:
+    default: import_rest_api
+    immutable: true
+    type: string
+  cls:
+    default: apigateway
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  body:
+    type: string
+    description: 'The POST request body containing external API definitions. Currently, only Swagger definition JSON files are supported.'
+    required: true
+  failOnWarnings:
+    type: boolean
+    description: 'A query parameter to indicate whether to rollback the API creation (true) or not (false) when a warning is encountered. The default value is false.'
+  parameters:
+    type: object
+    description: 'Custom header parameters as part of the request.'

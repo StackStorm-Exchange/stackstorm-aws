@@ -1,0 +1,40 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: elastictranscoder_create_preset
+runner_type: python-script
+parameters:
+  action:
+    default: create_preset
+    immutable: true
+    type: string
+  cls:
+    default: elastictranscoder
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Name:
+    type: string
+    description: 'The name of the preset. We recommend that the name be unique within the AWS account, but uniqueness is not enforced.'
+    required: true
+  Container:
+    type: string
+    description: 'The container type for the output file. Valid values include flac, flv, fmp4, gif, mp3, mp4, mpg, mxf, oga, ogg, ts, and webm.'
+    required: true
+  Description:
+    type: string
+    description: 'A description of the preset.'
+  Video:
+    type: object
+    description: 'A section of the request body that specifies the video parameters.'
+  Audio:
+    type: object
+    description: 'A section of the request body that specifies the audio parameters.'
+  Thumbnails:
+    type: object
+    description: 'A section of the request body that specifies the thumbnail parameters, if any.'

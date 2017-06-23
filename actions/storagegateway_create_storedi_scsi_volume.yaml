@@ -1,0 +1,43 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: storagegateway_create_storedi_scsi_volume
+runner_type: python-script
+parameters:
+  action:
+    default: create_storedi_scsi_volume
+    immutable: true
+    type: string
+  cls:
+    default: storagegateway
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  GatewayARN:
+    type: string
+    description: ''
+    required: true
+  DiskId:
+    type: string
+    description: 'The unique identifier for the gateway local disk that is configured as a stored volume. Use ListLocalDisks to list disk IDs for a gateway.'
+    required: true
+  PreserveExistingData:
+    type: boolean
+    description: 'Specify this field as true if you want to preserve the data on the local disk. Otherwise, specifying this field as false creates an empty volume.  Valid Values: true, false'
+    required: true
+  TargetName:
+    type: string
+    description: 'The name of the iSCSI target used by initiators to connect to the target and as a suffix for the target ARN. For example, specifying TargetName as myvolume results in the target ARN of arn:aws:storagegateway:us-east-1:111122223333:gateway/sgw-12A3456B/target/iqn.1997-05.com.amazon:myvolume. The target name must be unique across all volumes of a gateway.'
+    required: true
+  NetworkInterfaceId:
+    type: string
+    description: 'The network interface of the gateway on which to expose the iSCSI target. Only IPv4 addresses are accepted. Use DescribeGatewayInformation to get a list of the network interfaces available on a gateway.  Valid Values: A valid IP address.'
+    required: true
+  SnapshotId:
+    type: string
+    description: 'The snapshot ID (e.g. "snap-1122aabb") of the snapshot to restore as the new stored volume. Specify this field if you want to create the iSCSI storage volume from a snapshot otherwise do not include this field. To list snapshots for your account use DescribeSnapshots in the Amazon Elastic Compute Cloud API Reference.'

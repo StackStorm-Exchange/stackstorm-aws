@@ -1,0 +1,53 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: machinelearning_describe_evaluations
+runner_type: python-script
+parameters:
+  action:
+    default: describe_evaluations
+    immutable: true
+    type: string
+  cls:
+    default: machinelearning
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  FilterVariable:
+    type: string
+    description: 'Use one of the following variable to filter a list of Evaluation objects:   CreatedAt - Sets the search criteria to the Evaluation creation date.  Status - Sets the search criteria to the Evaluation status.  Name - Sets the search criteria to the contents of Evaluation   Name.  IAMUser - Sets the search criteria to the user account that invoked an Evaluation.  MLModelId - Sets the search criteria to the MLModel that was evaluated.  DataSourceId - Sets the search criteria to the DataSource used in Evaluation.  DataUri - Sets the search criteria to the data file(s) used in Evaluation. The URL can identify either a file or an Amazon Simple Storage Solution (Amazon S3) bucket or directory. '
+  EQ:
+    type: string
+    description: 'The equal to operator. The Evaluation results will have FilterVariable values that exactly match the value specified with EQ.'
+  GT:
+    type: string
+    description: 'The greater than operator. The Evaluation results will have FilterVariable values that are greater than the value specified with GT.'
+  LT:
+    type: string
+    description: 'The less than operator. The Evaluation results will have FilterVariable values that are less than the value specified with LT.'
+  GE:
+    type: string
+    description: 'The greater than or equal to operator. The Evaluation results will have FilterVariable values that are greater than or equal to the value specified with GE. '
+  LE:
+    type: string
+    description: 'The less than or equal to operator. The Evaluation results will have FilterVariable values that are less than or equal to the value specified with LE.'
+  NE:
+    type: string
+    description: 'The not equal to operator. The Evaluation results will have FilterVariable values not equal to the value specified with NE.'
+  Prefix:
+    type: string
+    description: 'A string that is found at the beginning of a variable, such as Name or Id. For example, an Evaluation could have the Name 2014-09-09-HolidayGiftMailer. To search for this Evaluation, select Name for the FilterVariable and any of the following strings for the Prefix:   2014-09 2014-09-09 2014-09-09-Holiday '
+  SortOrder:
+    type: string
+    description: 'A two-value parameter that determines the sequence of the resulting list of Evaluation.   asc - Arranges the list in ascending order (A-Z, 0-9).  dsc - Arranges the list in descending order (Z-A, 9-0).  Results are sorted by FilterVariable.'
+  NextToken:
+    type: string
+    description: 'The ID of the page in the paginated results.'
+  Limit:
+    type: integer
+    description: ' The maximum number of Evaluation to include in the result.'

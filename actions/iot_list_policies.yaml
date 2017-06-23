@@ -1,0 +1,29 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: iot_list_policies
+runner_type: python-script
+parameters:
+  action:
+    default: list_policies
+    immutable: true
+    type: string
+  cls:
+    default: iot
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  marker:
+    type: string
+    description: 'The marker for the next set of results.'
+  pageSize:
+    type: integer
+    description: 'The result page size.'
+  ascendingOrder:
+    type: boolean
+    description: 'Specifies the order for results. If true, the results are returned in ascending creation order.'

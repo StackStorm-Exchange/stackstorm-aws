@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ssm_deregister_managed_instance
+runner_type: python-script
+parameters:
+  action:
+    default: deregister_managed_instance
+    immutable: true
+    type: string
+  cls:
+    default: ssm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  InstanceId:
+    type: string
+    description: 'The ID assigned to the managed instance when you registered it using the activation process. '
+    required: true

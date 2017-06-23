@@ -20,9 +20,9 @@ parameters:
     type: string
   AutoScalingGroupName:
     type: string
-    description: "The name of the Auto Scaling group."
+    description: 'The name of the Auto Scaling group.'
     required: true
   TargetGroupARNs:
     type: array
-    description: "The Amazon Resource Names (ARN) of the target groups."
+    description: 'The Amazon Resource Names (ARN) of the target groups.'
     required: true

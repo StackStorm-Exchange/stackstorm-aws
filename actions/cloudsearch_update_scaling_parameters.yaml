@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cloudsearch_update_scaling_parameters
+runner_type: python-script
+parameters:
+  action:
+    default: update_scaling_parameters
+    immutable: true
+    type: string
+  cls:
+    default: cloudsearch
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DomainName:
+    type: string
+    description: ''
+    required: true
+  ScalingParameters:
+    type: object
+    description: ''
+    required: true

@@ -1,0 +1,37 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: appstream_describe_sessions
+runner_type: python-script
+parameters:
+  action:
+    default: describe_sessions
+    immutable: true
+    type: string
+  cls:
+    default: appstream
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  StackName:
+    type: string
+    description: 'The name of the stack for which to list sessions.'
+    required: true
+  FleetName:
+    type: string
+    description: 'The name of the fleet for which to list sessions.'
+    required: true
+  UserId:
+    type: string
+    description: 'The user for whom to list sessions. Use null to describe all the sessions for the stack and fleet.'
+  NextToken:
+    type: string
+    description: 'The pagination token to use to retrieve the next page of results for this operation. If this value is null, it retrieves the first page.'
+  Limit:
+    type: integer
+    description: 'The size of each page of results. The default value is 20 and the maximum supported value is 50.'

@@ -20,5 +20,5 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: "Name of the bucket to get the notification configuration for."
+    description: 'Name of the bucket to get the notification configuration for.'
     required: true

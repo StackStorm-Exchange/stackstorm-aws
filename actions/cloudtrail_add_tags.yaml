@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cloudtrail_add_tags
+runner_type: python-script
+parameters:
+  action:
+    default: add_tags
+    immutable: true
+    type: string
+  cls:
+    default: cloudtrail
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ResourceId:
+    type: string
+    description: 'Specifies the ARN of the trail to which one or more tags will be added. The format of a trail ARN is:  arn:aws:cloudtrail:us-east-1:123456789012:trail/MyTrail '
+    required: true
+  TagsList:
+    type: array
+    description: 'Contains a list of CloudTrail tags, up to a limit of 50'

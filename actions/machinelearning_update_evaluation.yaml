@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: machinelearning_update_evaluation
+runner_type: python-script
+parameters:
+  action:
+    default: update_evaluation
+    immutable: true
+    type: string
+  cls:
+    default: machinelearning
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  EvaluationId:
+    type: string
+    description: 'The ID assigned to the Evaluation during creation.'
+    required: true
+  EvaluationName:
+    type: string
+    description: 'A new user-supplied name or description of the Evaluation that will replace the current content. '
+    required: true

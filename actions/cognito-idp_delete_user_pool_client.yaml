@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cognito-idp_delete_user_pool_client
+runner_type: python-script
+parameters:
+  action:
+    default: delete_user_pool_client
+    immutable: true
+    type: string
+  cls:
+    default: cognito-idp
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  UserPoolId:
+    type: string
+    description: 'The user pool ID for the user pool where you want to delete the client.'
+    required: true
+  ClientId:
+    type: string
+    description: 'The ID of the client associated with the user pool.'
+    required: true

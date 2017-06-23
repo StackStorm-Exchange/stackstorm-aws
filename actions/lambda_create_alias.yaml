@@ -20,16 +20,16 @@ parameters:
     type: string
   FunctionName:
     type: string
-    description: "Name of the Lambda function for which you want to create an alias."
+    description: 'Name of the Lambda function for which you want to create an alias.'
     required: true
   Name:
     type: string
-    description: "Name for the alias you are creating."
+    description: 'Name for the alias you are creating.'
     required: true
   FunctionVersion:
     type: string
-    description: "Lambda function version for which you are creating the alias."
+    description: 'Lambda function version for which you are creating the alias.'
     required: true
   Description:
     type: string
-    description: "Description of the alias."
+    description: 'Description of the alias.'

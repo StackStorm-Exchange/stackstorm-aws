@@ -1,0 +1,36 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ds_start_schema_extension
+runner_type: python-script
+parameters:
+  action:
+    default: start_schema_extension
+    immutable: true
+    type: string
+  cls:
+    default: ds
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DirectoryId:
+    type: string
+    description: 'The identifier of the directory for which the schema extension will be applied to.'
+    required: true
+  CreateSnapshotBeforeSchemaExtension:
+    type: boolean
+    description: 'If true, creates a snapshot of the directory before applying the schema extension.'
+    required: true
+  LdifContent:
+    type: string
+    description: 'The LDIF file represented as a string. To construct the LdifContent string, precede each line as it would be formatted in an ldif file with \n. See the example request below for more details. The file size can be no larger than 1MB.'
+    required: true
+  Description:
+    type: string
+    description: 'A description of the schema extension.'
+    required: true

@@ -1,0 +1,40 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ec2_describe_spot_fleet_request_history
+runner_type: python-script
+parameters:
+  action:
+    default: describe_spot_fleet_request_history
+    immutable: true
+    type: string
+  cls:
+    default: ec2
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  SpotFleetRequestId:
+    type: string
+    description: 'The ID of the Spot fleet request.'
+    required: true
+  StartTime:
+    type: string
+    description: 'The starting date and time for the events, in UTC format (for example, YYYY-MM-DDTHH:MM:SSZ).'
+    required: true
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+  EventType:
+    type: string
+    description: 'The type of events to describe. By default, all events are described.'
+  NextToken:
+    type: string
+    description: 'The token for the next set of results.'
+  MaxResults:
+    type: integer
+    description: 'The maximum number of results to return in a single call. Specify a value between 1 and 1000. The default value is 1000. To retrieve the remaining results, make another call with the returned NextToken value.'

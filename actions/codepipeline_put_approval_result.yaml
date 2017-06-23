@@ -1,0 +1,40 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: codepipeline_put_approval_result
+runner_type: python-script
+parameters:
+  action:
+    default: put_approval_result
+    immutable: true
+    type: string
+  cls:
+    default: codepipeline
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  pipelineName:
+    type: string
+    description: 'The name of the pipeline that contains the action. '
+    required: true
+  stageName:
+    type: string
+    description: 'The name of the stage that contains the action.'
+    required: true
+  actionName:
+    type: string
+    description: 'The name of the action for which approval is requested.'
+    required: true
+  result:
+    type: object
+    description: 'Represents information about the result of the approval request.'
+    required: true
+  token:
+    type: string
+    description: 'The system-generated token used to identify a unique approval request. The token for each open approval request can be obtained using the GetPipelineState action and is used to validate that the approval request corresponding to this token is still valid.'
+    required: true

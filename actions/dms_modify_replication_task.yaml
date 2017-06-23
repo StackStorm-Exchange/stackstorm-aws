@@ -1,0 +1,39 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: dms_modify_replication_task
+runner_type: python-script
+parameters:
+  action:
+    default: modify_replication_task
+    immutable: true
+    type: string
+  cls:
+    default: dms
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ReplicationTaskArn:
+    type: string
+    description: 'The Amazon Resource Name (ARN) of the replication task.'
+    required: true
+  ReplicationTaskIdentifier:
+    type: string
+    description: 'The replication task identifier. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.  '
+  MigrationType:
+    type: string
+    description: 'The migration type. Valid values: full-load | cdc | full-load-and-cdc'
+  TableMappings:
+    type: string
+    description: 'The path of the JSON file that contains the table mappings. Preceed the path with "file://". For example, --table-mappings file://mappingfile.json'
+  ReplicationTaskSettings:
+    type: string
+    description: 'JSON file that contains settings for the task, such as target metadata settings.'
+  CdcStartTime:
+    type: string
+    description: 'The start time for the Change Data Capture (CDC) operation.'

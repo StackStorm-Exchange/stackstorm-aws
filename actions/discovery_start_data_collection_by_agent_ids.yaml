@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: discovery_start_data_collection_by_agent_ids
+runner_type: python-script
+parameters:
+  action:
+    default: start_data_collection_by_agent_ids
+    immutable: true
+    type: string
+  cls:
+    default: discovery
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  agentIds:
+    type: array
+    description: 'The IDs of the agents or Connectors that you want to start collecting data. If you send a request to an agent/Connector ID that you do not have permission to contact, according to your AWS account, the service does not throw an exception. Instead, it returns the error in the Description field. If you send a request to multiple agents/Connectors and you do not have permission to contact some of those agents/Connectors, the system does not throw an exception. Instead, the system shows Failed in the Description field.'
+    required: true

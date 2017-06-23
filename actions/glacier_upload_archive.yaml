@@ -1,0 +1,37 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: glacier_upload_archive
+runner_type: python-script
+parameters:
+  action:
+    default: upload_archive
+    immutable: true
+    type: string
+  cls:
+    default: glacier
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  vaultName:
+    type: string
+    description: 'The name of the vault.'
+    required: true
+  accountId:
+    type: string
+    description: 'The AccountId value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single "-" (hyphen), in which case Amazon Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ("-") in the ID. '
+    required: true
+  archiveDescription:
+    type: string
+    description: 'The optional description of the archive you are uploading.'
+  checksum:
+    type: string
+    description: 'The SHA256 tree hash of the data being uploaded.'
+  body:
+    type: string
+    description: 'The data to upload.'

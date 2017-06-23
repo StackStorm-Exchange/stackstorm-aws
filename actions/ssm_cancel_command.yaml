@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ssm_cancel_command
+runner_type: python-script
+parameters:
+  action:
+    default: cancel_command
+    immutable: true
+    type: string
+  cls:
+    default: ssm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  CommandId:
+    type: string
+    description: 'The ID of the command you want to cancel.'
+    required: true
+  InstanceIds:
+    type: array
+    description: '(Optional) A list of instance IDs on which you want to cancel the command. If not provided, the command is canceled on every instance on which it was requested.'

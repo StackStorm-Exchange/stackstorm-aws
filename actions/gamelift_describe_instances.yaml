@@ -1,0 +1,33 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: gamelift_describe_instances
+runner_type: python-script
+parameters:
+  action:
+    default: describe_instances
+    immutable: true
+    type: string
+  cls:
+    default: gamelift
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  FleetId:
+    type: string
+    description: 'Unique identifier for a fleet. Specify the fleet to retrieve instance information for.'
+    required: true
+  InstanceId:
+    type: string
+    description: 'Unique identifier for an instance. Specify an instance to retrieve information for or leave blank to get information on all instances in the fleet.'
+  Limit:
+    type: integer
+    description: 'Maximum number of results to return. Use this parameter with NextToken to get results as a set of sequential pages.'
+  NextToken:
+    type: string
+    description: 'Token indicating the start of the next sequential page of results. Use the token that is returned with a previous call to this action. To specify the start of the result set, do not specify a value.'

@@ -1,24 +1,31 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: iam_create_login_profile
+runner_type: python-script
 parameters:
   action:
     default: create_login_profile
     immutable: true
     type: string
   cls:
-    default: IAMConnection
-    immutable: true
+    default: iam
+    type: string
+  headers:
     type: string
   module_path:
-    default: boto.iam.connection
+    default: boto3
     immutable: true
     type: string
-  password:
-    required: true
+  UserName:
     type: string
-  user_name:
+    description: 'The name of the IAM user to create a password for. The user must already exist. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-'
     required: true
+  Password:
     type: string
-runner_type: python-script
+    description: 'The new password for the user. The regex pattern used to validate this parameter is a string of characters consisting of almost any printable ASCII character from the space (\u0020) through the end of the ASCII character range (\u00FF). You can also include the tab (\u0009), line feed (\u000A), and carriage return (\u000D) characters. Although any of these characters are valid in a password, note that many tools, such as the AWS Management Console, might restrict the ability to enter certain characters because they have special meaning within that tool.'
+    required: true
+  PasswordResetRequired:
+    type: boolean
+    description: 'Specifies whether the user is required to set a new password on next sign-in.'

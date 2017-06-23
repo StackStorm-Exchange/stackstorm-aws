@@ -20,13 +20,13 @@ parameters:
     type: string
   CacheSubnetGroupName:
     type: string
-    description: ""
+    description: 'A name for the cache subnet group. This value is stored as a lowercase string. Constraints: Must contain no more than 255 alphanumeric characters or hyphens. Example: mysubnetgroup '
     required: true
   CacheSubnetGroupDescription:
     type: string
-    description: ""
+    description: 'A description for the cache subnet group.'
     required: true
   SubnetIds:
     type: array
-    description: ""
+    description: 'A list of VPC subnet IDs for the cache subnet group.'
     required: true

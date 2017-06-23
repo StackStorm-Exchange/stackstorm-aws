@@ -1,27 +1,30 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: ec2_detach_network_interface
+runner_type: python-script
 parameters:
   action:
     default: detach_network_interface
     immutable: true
     type: string
-  attachment_id:
-    required: true
-    type: string
   cls:
-    default: EC2Connection
-    immutable: true
+    default: ec2
     type: string
-  dry_run:
-    default: false
-    type: boolean
-  force:
-    default: false
-    type: boolean
+  headers:
+    type: string
   module_path:
-    default: boto.ec2.connection
+    default: boto3
     immutable: true
     type: string
-runner_type: python-script
+  AttachmentId:
+    type: string
+    description: 'The ID of the attachment.'
+    required: true
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+  Force:
+    type: boolean
+    description: 'Specifies whether to force a detachment.'

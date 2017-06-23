@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ecs_put_attributes
+runner_type: python-script
+parameters:
+  action:
+    default: put_attributes
+    immutable: true
+    type: string
+  cls:
+    default: ecs
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  attributes:
+    type: array
+    description: 'The attributes to apply to your resource. You can specify up to 10 custom attributes per resource. You can specify up to 10 attributes in a single call.'
+    required: true
+  cluster:
+    type: string
+    description: 'The short name or full Amazon Resource Name (ARN) of the cluster that contains the resource to apply attributes. If you do not specify a cluster, the default cluster is assumed.'

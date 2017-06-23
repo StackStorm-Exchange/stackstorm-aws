@@ -1,0 +1,34 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: apigateway_import_documentation_parts
+runner_type: python-script
+parameters:
+  action:
+    default: import_documentation_parts
+    immutable: true
+    type: string
+  cls:
+    default: apigateway
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  restApiId:
+    type: string
+    description: '[Required] The identifier of an API of the to-be-imported documentation parts.'
+    required: true
+  body:
+    type: string
+    description: '[Required] Raw byte array representing the to-be-imported documentation parts. To import from a Swagger file, this is a JSON object.'
+    required: true
+  mode:
+    type: string
+    description: 'A query parameter to indicate whether to overwrite (OVERWRITE) any existing DocumentationParts definition or to merge (MERGE) the new definition into the existing one. The default value is MERGE.'
+  failOnWarnings:
+    type: boolean
+    description: 'A query parameter to specify whether to rollback the documentation importation (true) or not (false) when a warning is encountered. The default value is false.'

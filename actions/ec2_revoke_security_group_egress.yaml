@@ -1,35 +1,48 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: ec2_revoke_security_group_egress
+runner_type: python-script
 parameters:
   action:
     default: revoke_security_group_egress
     immutable: true
     type: string
-  cidr_ip:
-    type: string
   cls:
-    default: EC2Connection
-    immutable: true
+    default: ec2
     type: string
-  dry_run:
-    default: false
-    type: boolean
-  from_port:
-    type: string
-  group_id:
-    required: true
-    type: string
-  ip_protocol:
-    required: true
+  headers:
     type: string
   module_path:
-    default: boto.ec2.connection
+    default: boto3
     immutable: true
     type: string
-  src_group_id:
+  GroupId:
     type: string
-  to_port:
+    description: 'The ID of the security group.'
+    required: true
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+  SourceSecurityGroupName:
     type: string
-runner_type: python-script
+    description: 'The name of a destination security group. To revoke outbound access to a destination security group, we recommend that you use a set of IP permissions instead.'
+  SourceSecurityGroupOwnerId:
+    type: string
+    description: 'The AWS account number for a destination security group. To revoke outbound access to a destination security group, we recommend that you use a set of IP permissions instead.'
+  IpProtocol:
+    type: string
+    description: 'The IP protocol name or number. We recommend that you specify the protocol in a set of IP permissions instead.'
+  FromPort:
+    type: integer
+    description: 'The start of port range for the TCP and UDP protocols, or an ICMP type number. We recommend that you specify the port range in a set of IP permissions instead.'
+  ToPort:
+    type: integer
+    description: 'The end of port range for the TCP and UDP protocols, or an ICMP type number. We recommend that you specify the port range in a set of IP permissions instead.'
+  CidrIp:
+    type: string
+    description: 'The CIDR IP address range. We recommend that you specify the CIDR range in a set of IP permissions instead.'
+  IpPermissions:
+    type: array
+    description: 'A set of IP permissions. You can"t specify a destination security group and a CIDR IP address range.'

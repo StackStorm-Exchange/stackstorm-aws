@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cognito-idp_list_user_pool_clients
+runner_type: python-script
+parameters:
+  action:
+    default: list_user_pool_clients
+    immutable: true
+    type: string
+  cls:
+    default: cognito-idp
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  UserPoolId:
+    type: string
+    description: 'The user pool ID for the user pool where you want to list user pool clients.'
+    required: true
+  MaxResults:
+    type: integer
+    description: 'The maximum number of results you want the request to return when listing the user pool clients.'
+  NextToken:
+    type: string
+    description: 'An identifier that was returned from the previous call to this operation, which can be used to return the next set of items in the list.'

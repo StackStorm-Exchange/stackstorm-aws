@@ -20,16 +20,16 @@ parameters:
     type: string
   AutoScalingGroupName:
     type: string
-    description: "The name of the group."
+    description: 'The name of the group.'
   PolicyNames:
     type: array
-    description: "One or more policy names or policy ARNs to be described. If you omit this parameter, all policy names are described. If an group name is provided, the results are limited to that group. This list is limited to 50 items. If you specify an unknown policy name, it is ignored with no error."
+    description: 'One or more policy names or policy ARNs to be described. If you omit this parameter, all policy names are described. If an group name is provided, the results are limited to that group. This list is limited to 50 items. If you specify an unknown policy name, it is ignored with no error.'
   PolicyTypes:
     type: array
-    description: "One or more policy types. Valid values are SimpleScaling and StepScaling."
+    description: 'One or more policy types. Valid values are SimpleScaling and StepScaling.'
   NextToken:
     type: string
-    description: "The token for the next set of items to return. (You received this token from a previous call.)"
+    description: 'The token for the next set of items to return. (You received this token from a previous call.)'
   MaxRecords:
     type: integer
-    description: "The maximum number of items to be returned with each call."
+    description: 'The maximum number of items to be returned with each call.'

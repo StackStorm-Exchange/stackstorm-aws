@@ -20,5 +20,5 @@ parameters:
     type: string
   RulePriorities:
     type: array
-    description: "The rule priorities."
+    description: 'The rule priorities.'
     required: true

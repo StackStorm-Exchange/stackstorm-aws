@@ -1,0 +1,35 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: machinelearning_create_evaluation
+runner_type: python-script
+parameters:
+  action:
+    default: create_evaluation
+    immutable: true
+    type: string
+  cls:
+    default: machinelearning
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  EvaluationId:
+    type: string
+    description: 'A user-supplied ID that uniquely identifies the Evaluation.'
+    required: true
+  MLModelId:
+    type: string
+    description: 'The ID of the MLModel to evaluate. The schema used in creating the MLModel must match the schema of the DataSource used in the Evaluation.'
+    required: true
+  EvaluationDataSourceId:
+    type: string
+    description: 'The ID of the DataSource for the evaluation. The schema of the DataSource must match the schema used to create the MLModel.'
+    required: true
+  EvaluationName:
+    type: string
+    description: 'A user-supplied name or description of the Evaluation.'

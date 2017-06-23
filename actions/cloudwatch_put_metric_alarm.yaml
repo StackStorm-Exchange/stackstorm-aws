@@ -1,0 +1,75 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cloudwatch_put_metric_alarm
+runner_type: python-script
+parameters:
+  action:
+    default: put_metric_alarm
+    immutable: true
+    type: string
+  cls:
+    default: cloudwatch
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  AlarmName:
+    type: string
+    description: 'The name for the alarm. This name must be unique within the AWS account.'
+    required: true
+  MetricName:
+    type: string
+    description: 'The name for the metric associated with the alarm.'
+    required: true
+  Namespace:
+    type: string
+    description: 'The namespace for the metric associated with the alarm.'
+    required: true
+  Period:
+    type: integer
+    description: 'The period, in seconds, over which the specified statistic is applied.'
+    required: true
+  EvaluationPeriods:
+    type: integer
+    description: 'The number of periods over which data is compared to the specified threshold.'
+    required: true
+  Threshold:
+    type: number
+    description: 'The value against which the specified statistic is compared.'
+    required: true
+  ComparisonOperator:
+    type: string
+    description: ' The arithmetic operation to use when comparing the specified statistic and threshold. The specified statistic value is used as the first operand.'
+    required: true
+  AlarmDescription:
+    type: string
+    description: 'The description for the alarm.'
+  ActionsEnabled:
+    type: boolean
+    description: 'Indicates whether actions should be executed during any changes to the alarm state.'
+  OKActions:
+    type: array
+    description: 'The actions to execute when this alarm transitions to an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN). Valid Values: arn:aws:automate:region:ec2:stop | arn:aws:automate:region:ec2:terminate | arn:aws:automate:region:ec2:recover Valid Values (for use with IAM roles): arn:aws:swf:us-east-1:{customer-account}:action/actions/AWS_EC2.InstanceId.Stop/1.0 | arn:aws:swf:us-east-1:{customer-account}:action/actions/AWS_EC2.InstanceId.Terminate/1.0 | arn:aws:swf:us-east-1:{customer-account}:action/actions/AWS_EC2.InstanceId.Reboot/1.0'
+  AlarmActions:
+    type: array
+    description: 'The actions to execute when this alarm transitions to the ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN). Valid Values: arn:aws:automate:region:ec2:stop | arn:aws:automate:region:ec2:terminate | arn:aws:automate:region:ec2:recover Valid Values (for use with IAM roles): arn:aws:swf:us-east-1:{customer-account}:action/actions/AWS_EC2.InstanceId.Stop/1.0 | arn:aws:swf:us-east-1:{customer-account}:action/actions/AWS_EC2.InstanceId.Terminate/1.0 | arn:aws:swf:us-east-1:{customer-account}:action/actions/AWS_EC2.InstanceId.Reboot/1.0'
+  InsufficientDataActions:
+    type: array
+    description: 'The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN). Valid Values: arn:aws:automate:region:ec2:stop | arn:aws:automate:region:ec2:terminate | arn:aws:automate:region:ec2:recover Valid Values (for use with IAM roles): arn:aws:swf:us-east-1:{customer-account}:action/actions/AWS_EC2.InstanceId.Stop/1.0 | arn:aws:swf:us-east-1:{customer-account}:action/actions/AWS_EC2.InstanceId.Terminate/1.0 | arn:aws:swf:us-east-1:{customer-account}:action/actions/AWS_EC2.InstanceId.Reboot/1.0'
+  Statistic:
+    type: string
+    description: 'The statistic for the metric associated with the alarm, other than percentile. For percentile statistics, use ExtendedStatistic.'
+  ExtendedStatistic:
+    type: string
+    description: 'The percentile statistic for the metric associated with the alarm. Specify a value between p0.0 and p100.'
+  Dimensions:
+    type: array
+    description: 'The dimensions for the metric associated with the alarm.'
+  Unit:
+    type: string
+    description: 'The unit of measure for the statistic. For example, the units for the Amazon EC2 NetworkIn metric are Bytes because NetworkIn tracks the number of bytes that an instance receives on all network interfaces. You can also specify a unit when you create a custom metric. Units help provide conceptual meaning to your data. Metric data points that specify a unit of measure, such as Percent, are aggregated separately. If you specify a unit, you must use a unit that is appropriate for the metric. Otherwise, the Amazon CloudWatch alarm can get stuck in the INSUFFICIENT DATA state. '

@@ -1,0 +1,38 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: batch_create_compute_environment
+runner_type: python-script
+parameters:
+  action:
+    default: create_compute_environment
+    immutable: true
+    type: string
+  cls:
+    default: batch
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  computeEnvironmentName:
+    type: string
+    description: 'The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed.'
+    required: true
+  type:
+    type: string
+    description: 'The type of the compute environment. '
+    required: true
+  serviceRole:
+    type: string
+    description: 'The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf. '
+    required: true
+  state:
+    type: string
+    description: 'The state of the compute environment. If the state is ENABLED, then the compute environment accepts jobs from a queue and can scale out automatically based on queues.'
+  computeResources:
+    type: object
+    description: 'Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments.'

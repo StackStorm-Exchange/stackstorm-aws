@@ -1,0 +1,32 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ec2_create_vpc_peering_connection
+runner_type: python-script
+parameters:
+  action:
+    default: create_vpc_peering_connection
+    immutable: true
+    type: string
+  cls:
+    default: ec2
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+  VpcId:
+    type: string
+    description: 'The ID of the requester VPC.'
+  PeerVpcId:
+    type: string
+    description: 'The ID of the VPC with which you are creating the VPC peering connection.'
+  PeerOwnerId:
+    type: string
+    description: 'The AWS account ID of the owner of the peer VPC. Default: Your AWS account ID'

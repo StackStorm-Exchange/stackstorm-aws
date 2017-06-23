@@ -20,103 +20,103 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ""
+    description: ''
     required: true
   CopySource:
     type: string
-    description: "The name of the source bucket and key name of the source object, separated by a slash (/). Must be URL-encoded."
+    description: 'The name of the source bucket and key name of the source object, separated by a slash (/). Must be URL-encoded.'
     required: true
   Key:
     type: string
-    description: ""
+    description: ''
     required: true
   ACL:
     type: string
-    description: "The canned ACL to apply to the object."
+    description: 'The canned ACL to apply to the object.'
   CacheControl:
     type: string
-    description: "Specifies caching behavior along the request/reply chain."
+    description: 'Specifies caching behavior along the request/reply chain.'
   ContentDisposition:
     type: string
-    description: "Specifies presentational information for the object."
+    description: 'Specifies presentational information for the object.'
   ContentEncoding:
     type: string
-    description: "Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field."
+    description: 'Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field.'
   ContentLanguage:
     type: string
-    description: "The language the content is in."
+    description: 'The language the content is in.'
   ContentType:
     type: string
-    description: "A standard MIME type describing the format of the object data."
+    description: 'A standard MIME type describing the format of the object data.'
   CopySourceIfMatch:
     type: string
-    description: "Copies the object if its entity tag (ETag) matches the specified tag."
+    description: 'Copies the object if its entity tag (ETag) matches the specified tag.'
   CopySourceIfModifiedSince:
     type: string
-    description: "Copies the object if it has been modified since the specified time."
+    description: 'Copies the object if it has been modified since the specified time.'
   CopySourceIfNoneMatch:
     type: string
-    description: "Copies the object if its entity tag (ETag) is different than the specified ETag."
+    description: 'Copies the object if its entity tag (ETag) is different than the specified ETag.'
   CopySourceIfUnmodifiedSince:
     type: string
-    description: "Copies the object if it hasn't been modified since the specified time."
+    description: 'Copies the object if it hasn"t been modified since the specified time.'
   Expires:
     type: string
-    description: "The date and time at which the object is no longer cacheable."
+    description: 'The date and time at which the object is no longer cacheable.'
   GrantFullControl:
     type: string
-    description: "Gives the grantee READ, READ_ACP, and WRITE_ACP permissions on the object."
+    description: 'Gives the grantee READ, READ_ACP, and WRITE_ACP permissions on the object.'
   GrantRead:
     type: string
-    description: "Allows grantee to read the object data and its metadata."
+    description: 'Allows grantee to read the object data and its metadata.'
   GrantReadACP:
     type: string
-    description: "Allows grantee to read the object ACL."
+    description: 'Allows grantee to read the object ACL.'
   GrantWriteACP:
     type: string
-    description: "Allows grantee to write the ACL for the applicable object."
+    description: 'Allows grantee to write the ACL for the applicable object.'
   Metadata:
     type: object
-    description: "A map of metadata to store with the object in S3."
+    description: 'A map of metadata to store with the object in S3.'
   MetadataDirective:
     type: string
-    description: "Specifies whether the metadata is copied from the source object or replaced with metadata provided in the request."
+    description: 'Specifies whether the metadata is copied from the source object or replaced with metadata provided in the request.'
   TaggingDirective:
     type: string
-    description: "Specifies whether the object tag-set are copied from the source object or replaced with tag-set provided in the request."
+    description: 'Specifies whether the object tag-set are copied from the source object or replaced with tag-set provided in the request.'
   ServerSideEncryption:
     type: string
-    description: "The Server-side encryption algorithm used when storing this object in S3 (e.g., AES256, aws:kms)."
+    description: 'The Server-side encryption algorithm used when storing this object in S3 (e.g., AES256, aws:kms).'
   StorageClass:
     type: string
-    description: "The type of storage to use for the object. Defaults to 'STANDARD'."
+    description: 'The type of storage to use for the object. Defaults to "STANDARD".'
   WebsiteRedirectLocation:
     type: string
-    description: "If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata."
+    description: 'If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.'
   SSECustomerAlgorithm:
     type: string
-    description: "Specifies the algorithm to use to when encrypting the object (e.g., AES256)."
+    description: 'Specifies the algorithm to use to when encrypting the object (e.g., AES256).'
   SSECustomerKey:
     type: string
-    description: "Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon does not store the encryption key. The key must be appropriate for use with the algorithm specified in the x-amz-server-side​-encryption​-customer-algorithm header."
+    description: 'Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon does not store the encryption key. The key must be appropriate for use with the algorithm specified in the x-amz-server-side​-encryption​-customer-algorithm header.'
   SSECustomerKeyMD5:
     type: string
-    description: "Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure the encryption key was transmitted without error."
+    description: 'Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure the encryption key was transmitted without error.'
   SSEKMSKeyId:
     type: string
-    description: "Specifies the AWS KMS key ID to use for object encryption. All GET and PUT requests for an object protected by AWS KMS will fail if not made via SSL or using SigV4. Documentation on configuring any of the officially supported AWS SDKs and CLI can be found at http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingAWSSDK.html#specify-signature-version"
+    description: 'Specifies the AWS KMS key ID to use for object encryption. All GET and PUT requests for an object protected by AWS KMS will fail if not made via SSL or using SigV4. Documentation on configuring any of the officially supported AWS SDKs and CLI can be found at http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingAWSSDK.html#specify-signature-version'
   CopySourceSSECustomerAlgorithm:
     type: string
-    description: "Specifies the algorithm to use when decrypting the source object (e.g., AES256)."
+    description: 'Specifies the algorithm to use when decrypting the source object (e.g., AES256).'
   CopySourceSSECustomerKey:
     type: string
-    description: "Specifies the customer-provided encryption key for Amazon S3 to use to decrypt the source object. The encryption key provided in this header must be one that was used when the source object was created."
+    description: 'Specifies the customer-provided encryption key for Amazon S3 to use to decrypt the source object. The encryption key provided in this header must be one that was used when the source object was created.'
   CopySourceSSECustomerKeyMD5:
     type: string
-    description: "Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure the encryption key was transmitted without error."
+    description: 'Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure the encryption key was transmitted without error.'
   RequestPayer:
     type: string
-    description: ""
+    description: ''
   Tagging:
     type: string
-    description: "The tag-set for the object destination object this value must be used in conjunction with the TaggingDirective. The tag-set must be encoded as URL Query parameters"
+    description: 'The tag-set for the object destination object this value must be used in conjunction with the TaggingDirective. The tag-set must be encoded as URL Query parameters'

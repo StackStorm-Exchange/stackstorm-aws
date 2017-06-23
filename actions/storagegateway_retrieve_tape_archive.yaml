@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: storagegateway_retrieve_tape_archive
+runner_type: python-script
+parameters:
+  action:
+    default: retrieve_tape_archive
+    immutable: true
+    type: string
+  cls:
+    default: storagegateway
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  TapeARN:
+    type: string
+    description: 'The Amazon Resource Name (ARN) of the virtual tape you want to retrieve from the virtual tape shelf (VTS).'
+    required: true
+  GatewayARN:
+    type: string
+    description: 'The Amazon Resource Name (ARN) of the gateway you want to retrieve the virtual tape to. Use the ListGateways operation to return a list of gateways for your account and region. You retrieve archived virtual tapes to only one gateway and the gateway must be a gateway-VTL.'
+    required: true

@@ -1,32 +1,39 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: ec2_modify_network_interface_attribute
+runner_type: python-script
 parameters:
   action:
     default: modify_network_interface_attribute
     immutable: true
     type: string
-  attachment_id:
-    type: string
-  attr:
-    required: true
-    type: string
   cls:
-    default: EC2Connection
-    immutable: true
+    default: ec2
     type: string
-  dry_run:
-    default: false
-    type: boolean
-  interface_id:
-    required: true
+  headers:
     type: string
   module_path:
-    default: boto.ec2.connection
+    default: boto3
     immutable: true
     type: string
-  value:
-    required: true
+  NetworkInterfaceId:
     type: string
-runner_type: python-script
+    description: 'The ID of the network interface.'
+    required: true
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+  Description:
+    type: object
+    description: 'A description for the network interface.'
+  SourceDestCheck:
+    type: object
+    description: 'Indicates whether source/destination checking is enabled. A value of true means checking is enabled, and false means checking is disabled. This value must be false for a NAT instance to perform NAT. For more information, see NAT Instances in the Amazon Virtual Private Cloud User Guide.'
+  Groups:
+    type: array
+    description: 'Changes the security groups for the network interface. The new set of groups you specify replaces the current set. You must specify at least one group, even if it"s just the default security group in the VPC. You must specify the ID of the security group, not the name.'
+  Attachment:
+    type: object
+    description: 'Information about the interface attachment. If modifying the "delete on termination" attribute, you must specify the ID of the interface attachment.'

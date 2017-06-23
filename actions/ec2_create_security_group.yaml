@@ -1,29 +1,34 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: ec2_create_security_group
+runner_type: python-script
 parameters:
   action:
     default: create_security_group
     immutable: true
     type: string
   cls:
-    default: EC2Connection
-    immutable: true
+    default: ec2
     type: string
-  description:
-    required: true
+  headers:
     type: string
-  dry_run:
-    default: false
-    type: boolean
   module_path:
-    default: boto.ec2.connection
+    default: boto3
     immutable: true
     type: string
-  name:
+  GroupName:
+    type: string
+    description: 'The name of the security group. Constraints: Up to 255 characters in length Constraints for EC2-Classic: ASCII characters Constraints for EC2-VPC: a-z, A-Z, 0-9, spaces, and ._-:/()#,@[]+=&amp;;{}!$*'
     required: true
+  Description:
     type: string
-  vpc_id:
+    description: 'A description for the security group. This is informational only. Constraints: Up to 255 characters in length Constraints for EC2-Classic: ASCII characters Constraints for EC2-VPC: a-z, A-Z, 0-9, spaces, and ._-:/()#,@[]+=&amp;;{}!$*'
+    required: true
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+  VpcId:
     type: string
-runner_type: python-script
+    description: '[EC2-VPC] The ID of the VPC. Required for EC2-VPC.'

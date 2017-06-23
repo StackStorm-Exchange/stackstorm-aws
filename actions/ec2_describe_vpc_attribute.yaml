@@ -1,26 +1,31 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: ec2_describe_vpc_attribute
+runner_type: python-script
 parameters:
   action:
     default: describe_vpc_attribute
     immutable: true
     type: string
-  attribute:
-    type: string
   cls:
-    default: EC2Connection
-    immutable: true
+    default: ec2
     type: string
-  dry_run:
-    default: false
-    type: boolean
+  headers:
+    type: string
   module_path:
-    default: boto.ec2.connection
+    default: boto3
     immutable: true
     type: string
-  vpc_id:
-    required: true
+  VpcId:
     type: string
-runner_type: python-script
+    description: 'The ID of the VPC.'
+    required: true
+  Attribute:
+    type: string
+    description: 'The VPC attribute.'
+    required: true
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'

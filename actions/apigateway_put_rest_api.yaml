@@ -1,0 +1,37 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: apigateway_put_rest_api
+runner_type: python-script
+parameters:
+  action:
+    default: put_rest_api
+    immutable: true
+    type: string
+  cls:
+    default: apigateway
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  restApiId:
+    type: string
+    description: 'The identifier of the RestApi to be updated. '
+    required: true
+  body:
+    type: string
+    description: 'The PUT request body containing external API definitions. Currently, only Swagger definition JSON files are supported.'
+    required: true
+  mode:
+    type: string
+    description: 'The mode query parameter to specify the update mode. Valid values are "merge" and "overwrite". By default, the update mode is "merge".'
+  failOnWarnings:
+    type: boolean
+    description: 'A query parameter to indicate whether to rollback the API update (true) or not (false) when a warning is encountered. The default value is false.'
+  parameters:
+    type: object
+    description: 'Custom headers supplied as part of the request. '

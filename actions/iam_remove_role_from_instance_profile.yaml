@@ -1,24 +1,28 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: iam_remove_role_from_instance_profile
+runner_type: python-script
 parameters:
   action:
     default: remove_role_from_instance_profile
     immutable: true
     type: string
   cls:
-    default: IAMConnection
-    immutable: true
+    default: iam
     type: string
-  instance_profile_name:
-    required: true
+  headers:
     type: string
   module_path:
-    default: boto.iam.connection
+    default: boto3
     immutable: true
     type: string
-  role_name:
-    required: true
+  InstanceProfileName:
     type: string
-runner_type: python-script
+    description: 'The name of the instance profile to update. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-'
+    required: true
+  RoleName:
+    type: string
+    description: 'The name of the role to remove. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-'
+    required: true

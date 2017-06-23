@@ -1,0 +1,38 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: logs_describe_metric_filters
+runner_type: python-script
+parameters:
+  action:
+    default: describe_metric_filters
+    immutable: true
+    type: string
+  cls:
+    default: logs
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  logGroupName:
+    type: string
+    description: 'The name of the log group.'
+  filterNamePrefix:
+    type: string
+    description: 'The prefix to match.'
+  nextToken:
+    type: string
+    description: 'The token for the next set of items to return. (You received this token from a previous call.)'
+  limit:
+    type: integer
+    description: 'The maximum number of items returned. If you don"t specify a value, the default is up to 50 items.'
+  metricName:
+    type: string
+    description: 'The name of the CloudWatch metric.'
+  metricNamespace:
+    type: string
+    description: 'The namespace of the CloudWatch metric.'

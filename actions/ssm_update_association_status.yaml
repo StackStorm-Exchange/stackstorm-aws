@@ -1,0 +1,32 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ssm_update_association_status
+runner_type: python-script
+parameters:
+  action:
+    default: update_association_status
+    immutable: true
+    type: string
+  cls:
+    default: ssm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Name:
+    type: string
+    description: 'The name of the SSM document.'
+    required: true
+  InstanceId:
+    type: string
+    description: 'The ID of the instance.'
+    required: true
+  AssociationStatus:
+    type: object
+    description: 'The association status.'
+    required: true

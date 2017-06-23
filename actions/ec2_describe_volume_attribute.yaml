@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ec2_describe_volume_attribute
+runner_type: python-script
+parameters:
+  action:
+    default: describe_volume_attribute
+    immutable: true
+    type: string
+  cls:
+    default: ec2
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  VolumeId:
+    type: string
+    description: 'The ID of the volume.'
+    required: true
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+  Attribute:
+    type: string
+    description: 'The instance attribute.'

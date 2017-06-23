@@ -20,13 +20,13 @@ parameters:
     type: string
   AutoScalingGroupName:
     type: string
-    description: "The name of the Auto Scaling group."
+    description: 'The name of the Auto Scaling group.'
     required: true
   TopicARN:
     type: string
-    description: "The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic."
+    description: 'The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic.'
     required: true
   NotificationTypes:
     type: array
-    description: "The type of event that will cause the notification to be sent. For details about notification types supported by Auto Scaling, see DescribeAutoScalingNotificationTypes."
+    description: 'The type of event that will cause the notification to be sent. For details about notification types supported by Auto Scaling, see DescribeAutoScalingNotificationTypes.'
     required: true

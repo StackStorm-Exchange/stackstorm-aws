@@ -1,30 +1,36 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: sqs_add_permission
+runner_type: python-script
 parameters:
   action:
     default: add_permission
     immutable: true
     type: string
-  action_name:
-    required: true
-    type: string
-  aws_account_id:
-    required: true
-    type: string
   cls:
-    default: SQSConnection
-    immutable: true
+    default: sqs
     type: string
-  label:
-    required: true
+  headers:
     type: string
   module_path:
-    default: boto.sqs.connection
+    default: boto3
     immutable: true
     type: string
-  queue:
-    required: true
+  QueueUrl:
     type: string
-runner_type: python-script
+    description: 'The URL of the Amazon SQS queue to which permissions are added. Queue URLs are case-sensitive.'
+    required: true
+  Label:
+    type: string
+    description: 'The unique identification of the permission you"re setting (for example, AliceSendMessage). Maximum 80 characters. Allowed characters include alphanumeric characters, hyphens (-), and underscores (_).'
+    required: true
+  AWSAccountIds:
+    type: array
+    description: 'The AWS account number of the principal who is given permission. The principal must have an AWS account, but does not need to be signed up for Amazon SQS. For information about locating the AWS account identification, see Your AWS Identifiers in the Amazon SQS Developer Guide.'
+    required: true
+  Actions:
+    type: array
+    description: 'The action the client wants to allow for the specified principal. The following values are valid:    *     ChangeMessageVisibility     DeleteMessage     GetQueueAttributes     GetQueueUrl     ReceiveMessage     SendMessage    For more information about these actions, see Understanding Permissions in the Amazon SQS Developer Guide. Specifying SendMessage, DeleteMessage, or ChangeMessageVisibility for ActionName.n also grants permissions for the corresponding batch versions of those actions: SendMessageBatch, DeleteMessageBatch, and ChangeMessageVisibilityBatch.'
+    required: true

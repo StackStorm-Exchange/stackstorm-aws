@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: rds_add_source_identifier_to_subscription
+runner_type: python-script
+parameters:
+  action:
+    default: add_source_identifier_to_subscription
+    immutable: true
+    type: string
+  cls:
+    default: rds
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  SubscriptionName:
+    type: string
+    description: 'The name of the RDS event notification subscription you want to add a source identifier to.'
+    required: true
+  SourceIdentifier:
+    type: string
+    description: 'The identifier of the event source to be added. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens; it cannot end with a hyphen or contain two consecutive hyphens. Constraints:   If the source type is a DB instance, then a DBInstanceIdentifier must be supplied.   If the source type is a DB security group, a DBSecurityGroupName must be supplied.   If the source type is a DB parameter group, a DBParameterGroupName must be supplied.   If the source type is a DB snapshot, a DBSnapshotIdentifier must be supplied.  '
+    required: true

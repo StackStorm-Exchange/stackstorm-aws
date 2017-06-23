@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cognito-idp_describe_user_import_job
+runner_type: python-script
+parameters:
+  action:
+    default: describe_user_import_job
+    immutable: true
+    type: string
+  cls:
+    default: cognito-idp
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  UserPoolId:
+    type: string
+    description: 'The user pool ID for the user pool that the users are being imported into.'
+    required: true
+  JobId:
+    type: string
+    description: 'The job ID for the user import job.'
+    required: true

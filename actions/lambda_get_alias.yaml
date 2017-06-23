@@ -20,9 +20,9 @@ parameters:
     type: string
   FunctionName:
     type: string
-    description: "Function name for which the alias is created. An alias is a subresource that exists only in the context of an existing Lambda function so you must specify the function name."
+    description: 'Function name for which the alias is created. An alias is a subresource that exists only in the context of an existing Lambda function so you must specify the function name.'
     required: true
   Name:
     type: string
-    description: "Name of the alias for which you want to retrieve information."
+    description: 'Name of the alias for which you want to retrieve information.'
     required: true

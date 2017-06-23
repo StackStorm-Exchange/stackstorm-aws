@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: kinesisanalytics_start_application
+runner_type: python-script
+parameters:
+  action:
+    default: start_application
+    immutable: true
+    type: string
+  cls:
+    default: kinesisanalytics
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ApplicationName:
+    type: string
+    description: 'Name of the application.'
+    required: true
+  InputConfigurations:
+    type: array
+    description: 'Identifies the specific input, by ID, that the application starts consuming. Amazon Kinesis Analytics starts reading the streaming source associated with the input. You can also specify where in the streaming source you want Amazon Kinesis Analytics to start reading.'
+    required: true

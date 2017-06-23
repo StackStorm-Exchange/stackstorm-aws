@@ -1,0 +1,34 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: elasticbeanstalk_validate_configuration_settings
+runner_type: python-script
+parameters:
+  action:
+    default: validate_configuration_settings
+    immutable: true
+    type: string
+  cls:
+    default: elasticbeanstalk
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ApplicationName:
+    type: string
+    description: 'The name of the application that the configuration template or environment belongs to.'
+    required: true
+  OptionSettings:
+    type: array
+    description: 'A list of the options and desired values to evaluate.'
+    required: true
+  TemplateName:
+    type: string
+    description: 'The name of the configuration template to validate the settings against. Condition: You cannot specify both this and an environment name.'
+  EnvironmentName:
+    type: string
+    description: 'The name of the environment to validate the settings against. Condition: You cannot specify both this and a configuration template name.'

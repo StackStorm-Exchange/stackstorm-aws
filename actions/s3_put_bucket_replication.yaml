@@ -20,12 +20,12 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ""
+    description: ''
     required: true
   ReplicationConfiguration:
     type: object
-    description: ""
+    description: ''
     required: true
   ContentMD5:
     type: string
-    description: ""
+    description: ''

@@ -20,19 +20,19 @@ parameters:
     type: string
   LifecycleHookName:
     type: string
-    description: "The name of the lifecycle hook."
+    description: 'The name of the lifecycle hook.'
     required: true
   AutoScalingGroupName:
     type: string
-    description: "The name of the group for the lifecycle hook."
+    description: 'The name of the group for the lifecycle hook.'
     required: true
   LifecycleActionResult:
     type: string
-    description: "The action for the group to take. This parameter can be either CONTINUE or ABANDON."
+    description: 'The action for the group to take. This parameter can be either CONTINUE or ABANDON.'
     required: true
   LifecycleActionToken:
     type: string
-    description: "A universally unique identifier (UUID) that identifies a specific lifecycle action associated with an instance. Auto Scaling sends this token to the notification target you specified when you created the lifecycle hook."
+    description: 'A universally unique identifier (UUID) that identifies a specific lifecycle action associated with an instance. Auto Scaling sends this token to the notification target you specified when you created the lifecycle hook.'
   InstanceId:
     type: string
-    description: "The ID of the instance."
+    description: 'The ID of the instance.'

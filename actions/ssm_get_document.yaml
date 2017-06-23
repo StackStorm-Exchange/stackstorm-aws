@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ssm_get_document
+runner_type: python-script
+parameters:
+  action:
+    default: get_document
+    immutable: true
+    type: string
+  cls:
+    default: ssm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Name:
+    type: string
+    description: 'The name of the SSM document.'
+    required: true
+  DocumentVersion:
+    type: string
+    description: 'The document version for which you want information.'

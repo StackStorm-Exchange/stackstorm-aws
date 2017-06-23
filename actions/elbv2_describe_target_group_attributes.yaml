@@ -20,5 +20,5 @@ parameters:
     type: string
   TargetGroupArn:
     type: string
-    description: "The Amazon Resource Name (ARN) of the target group."
+    description: 'The Amazon Resource Name (ARN) of the target group.'
     required: true

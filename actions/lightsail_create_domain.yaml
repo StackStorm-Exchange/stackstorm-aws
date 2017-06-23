@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: lightsail_create_domain
+runner_type: python-script
+parameters:
+  action:
+    default: create_domain
+    immutable: true
+    type: string
+  cls:
+    default: lightsail
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  domainName:
+    type: string
+    description: 'The domain name to manage (e.g., example.com).  You cannot register a new domain name using Lightsail. You must register a domain name using Amazon Route 53 or another domain name registrar. If you have already registered your domain, you can enter its name in this parameter to manage the DNS records for that domain. '
+    required: true

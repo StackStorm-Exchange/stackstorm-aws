@@ -1,0 +1,38 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ds_create_microsoft_ad
+runner_type: python-script
+parameters:
+  action:
+    default: create_microsoft_ad
+    immutable: true
+    type: string
+  cls:
+    default: ds
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Name:
+    type: string
+    description: 'The fully qualified domain name for the directory, such as corp.example.com. This name will resolve inside your VPC only. It does not need to be publicly resolvable.'
+    required: true
+  Password:
+    type: string
+    description: 'The password for the default administrative user named Admin.'
+    required: true
+  VpcSettings:
+    type: object
+    description: ''
+    required: true
+  ShortName:
+    type: string
+    description: 'The NetBIOS name for your domain. A short identifier for your domain, such as CORP. If you don"t specify a NetBIOS name, it will default to the first part of your directory DNS. For example, CORP for the directory DNS corp.example.com. '
+  Description:
+    type: string
+    description: 'A textual description for the directory. This label will appear on the AWS console Directory Details page after the directory is created.'

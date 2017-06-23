@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: kms_disable_key
+runner_type: python-script
+parameters:
+  action:
+    default: disable_key
+    immutable: true
+    type: string
+  cls:
+    default: kms
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  KeyId:
+    type: string
+    description: 'A unique identifier for the CMK. Use the CMK"s unique identifier or its Amazon Resource Name (ARN). For example:   Unique ID: 1234abcd-12ab-34cd-56ef-1234567890ab   ARN: arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab  '
+    required: true

@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: swf_describe_workflow_type
+runner_type: python-script
+parameters:
+  action:
+    default: describe_workflow_type
+    immutable: true
+    type: string
+  cls:
+    default: swf
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  domain:
+    type: string
+    description: 'The name of the domain in which this workflow type is registered.'
+    required: true
+  workflowType:
+    type: object
+    description: 'The workflow type to describe.'
+    required: true

@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: sqs_get_queue_url
+runner_type: python-script
+parameters:
+  action:
+    default: get_queue_url
+    immutable: true
+    type: string
+  cls:
+    default: sqs
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  QueueName:
+    type: string
+    description: 'The name of the queue whose URL must be fetched. Maximum 80 characters. Valid values: alphanumeric characters, hyphens (-), and underscores (_). Queue names are case-sensitive.'
+    required: true
+  QueueOwnerAWSAccountId:
+    type: string
+    description: 'The AWS account ID of the account that created the queue.'

@@ -1,0 +1,23 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: lightsail_get_instance_snapshots
+runner_type: python-script
+parameters:
+  action:
+    default: get_instance_snapshots
+    immutable: true
+    type: string
+  cls:
+    default: lightsail
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  pageToken:
+    type: string
+    description: 'A token used for advancing to the next page of results from your get instance snapshots request.'

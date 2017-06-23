@@ -1,0 +1,37 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: datapipeline_query_objects
+runner_type: python-script
+parameters:
+  action:
+    default: query_objects
+    immutable: true
+    type: string
+  cls:
+    default: datapipeline
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  pipelineId:
+    type: string
+    description: 'The ID of the pipeline.'
+    required: true
+  sphere:
+    type: string
+    description: 'Indicates whether the query applies to components or instances. The possible values are: COMPONENT, INSTANCE, and ATTEMPT.'
+    required: true
+  query:
+    type: object
+    description: 'The query that defines the objects to be returned. The Query object can contain a maximum of ten selectors. The conditions in the query are limited to top-level String fields in the object. These filters can be applied to components, instances, and attempts.'
+  marker:
+    type: string
+    description: 'The starting point for the results to be returned. For the first call, this value should be empty. As long as there are more results, continue to call QueryObjects with the marker value from the previous call to retrieve the next set of results.'
+  limit:
+    type: integer
+    description: 'The maximum number of object names that QueryObjects will return in a single call. The default value is 100. '

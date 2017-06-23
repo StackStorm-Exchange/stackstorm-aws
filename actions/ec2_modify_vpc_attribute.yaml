@@ -1,28 +1,30 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: ec2_modify_vpc_attribute
+runner_type: python-script
 parameters:
   action:
     default: modify_vpc_attribute
     immutable: true
     type: string
   cls:
-    default: EC2Connection
-    immutable: true
+    default: ec2
     type: string
-  dry_run:
-    default: false
-    type: boolean
-  enable_dns_hostnames:
-    type: string
-  enable_dns_support:
+  headers:
     type: string
   module_path:
-    default: boto.ec2.connection
+    default: boto3
     immutable: true
     type: string
-  vpc_id:
-    required: true
+  VpcId:
     type: string
-runner_type: python-script
+    description: 'The ID of the VPC.'
+    required: true
+  EnableDnsSupport:
+    type: object
+    description: 'Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" will succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. You cannot modify the DNS resolution and DNS hostnames attributes in the same request. Use separate requests for each attribute.'
+  EnableDnsHostnames:
+    type: object
+    description: 'Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not. You cannot modify the DNS resolution and DNS hostnames attributes in the same request. Use separate requests for each attribute. You can only enable DNS hostnames if you"ve enabled DNS support.'

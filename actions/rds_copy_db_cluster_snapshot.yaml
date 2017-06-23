@@ -1,0 +1,31 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: rds_copy_db_cluster_snapshot
+runner_type: python-script
+parameters:
+  action:
+    default: copy_db_cluster_snapshot
+    immutable: true
+    type: string
+  cls:
+    default: rds
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  SourceDBClusterSnapshotIdentifier:
+    type: string
+    description: 'The identifier of the DB cluster snapshot to copy. This parameter is not case-sensitive. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.   Example: my-cluster-snapshot1 '
+    required: true
+  TargetDBClusterSnapshotIdentifier:
+    type: string
+    description: 'The identifier of the new DB cluster snapshot to create from the source DB cluster snapshot. This parameter is not case-sensitive. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.   Example: my-cluster-snapshot2 '
+    required: true
+  Tags:
+    type: array
+    description: ''

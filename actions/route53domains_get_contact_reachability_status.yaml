@@ -1,0 +1,23 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: route53domains_get_contact_reachability_status
+runner_type: python-script
+parameters:
+  action:
+    default: get_contact_reachability_status
+    immutable: true
+    type: string
+  cls:
+    default: route53domains
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  domainName:
+    type: string
+    description: 'The name of the domain for which you want to know whether the registrant contact has confirmed that the email address is valid. Type: String Default: None Required: Yes'

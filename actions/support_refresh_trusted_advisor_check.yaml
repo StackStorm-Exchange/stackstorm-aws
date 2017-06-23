@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: support_refresh_trusted_advisor_check
+runner_type: python-script
+parameters:
+  action:
+    default: refresh_trusted_advisor_check
+    immutable: true
+    type: string
+  cls:
+    default: support
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  checkId:
+    type: string
+    description: 'The unique identifier for the Trusted Advisor check to refresh. Note: Specifying the check ID of a check that is automatically refreshed causes an InvalidParameterValue error.'
+    required: true

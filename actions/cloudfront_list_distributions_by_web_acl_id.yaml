@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cloudfront_list_distributions_by_web_acl_id
+runner_type: python-script
+parameters:
+  action:
+    default: list_distributions_by_web_acl_id
+    immutable: true
+    type: string
+  cls:
+    default: cloudfront
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  WebACLId:
+    type: string
+    description: 'The ID of the AWS WAF web ACL that you want to list the associated distributions. If you specify "null" for the ID, the request returns a list of the distributions that aren"t associated with a web ACL. '
+    required: true
+  Marker:
+    type: string
+    description: 'Use Marker and MaxItems to control pagination of results. If you have more than MaxItems distributions that satisfy the request, the response includes a NextMarker element. To get the next page of results, submit another request. For the value of Marker, specify the value of NextMarker from the last response. (For the first request, omit Marker.) '
+  MaxItems:
+    type: string
+    description: 'The maximum number of distributions that you want CloudFront to return in the response body. The maximum and default values are both 100.'

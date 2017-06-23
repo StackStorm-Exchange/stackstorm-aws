@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: elastictranscoder_update_pipeline_status
+runner_type: python-script
+parameters:
+  action:
+    default: update_pipeline_status
+    immutable: true
+    type: string
+  cls:
+    default: elastictranscoder
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Id:
+    type: string
+    description: 'The identifier of the pipeline to update.'
+    required: true
+  Status:
+    type: string
+    description: 'The desired status of the pipeline:    Active: The pipeline is processing jobs.    Paused: The pipeline is not currently processing jobs.  '
+    required: true

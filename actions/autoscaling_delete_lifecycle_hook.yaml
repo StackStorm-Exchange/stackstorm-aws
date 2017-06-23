@@ -20,9 +20,9 @@ parameters:
     type: string
   LifecycleHookName:
     type: string
-    description: "The name of the lifecycle hook."
+    description: 'The name of the lifecycle hook.'
     required: true
   AutoScalingGroupName:
     type: string
-    description: "The name of the Auto Scaling group for the lifecycle hook."
+    description: 'The name of the Auto Scaling group for the lifecycle hook.'
     required: true

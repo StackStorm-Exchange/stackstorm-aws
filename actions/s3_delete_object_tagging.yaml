@@ -20,12 +20,12 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ""
+    description: ''
     required: true
   Key:
     type: string
-    description: ""
+    description: ''
     required: true
   VersionId:
     type: string
-    description: "The versionId of the object that the tag-set will be removed from."
+    description: 'The versionId of the object that the tag-set will be removed from.'

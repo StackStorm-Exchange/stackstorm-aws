@@ -1,27 +1,35 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: rds_create_db_subnet_group
+runner_type: python-script
 parameters:
   action:
     default: create_db_subnet_group
     immutable: true
     type: string
   cls:
-    default: RDSConnection
-    immutable: true
+    default: rds
     type: string
-  desc:
-    required: true
+  headers:
     type: string
   module_path:
-    default: boto.rds
+    default: boto3
     immutable: true
     type: string
-  name:
-    required: true
+  DBSubnetGroupName:
     type: string
-  subnet_ids:
+    description: 'The name for the DB subnet group. This value is stored as a lowercase string. Constraints: Must contain no more than 255 alphanumeric characters, periods, underscores, spaces, or hyphens. Must not be default. Example: mySubnetgroup '
     required: true
+  DBSubnetGroupDescription:
     type: string
-runner_type: python-script
+    description: 'The description for the DB subnet group.'
+    required: true
+  SubnetIds:
+    type: array
+    description: 'The EC2 Subnet IDs for the DB subnet group.'
+    required: true
+  Tags:
+    type: array
+    description: ''

@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: kinesis_get_records
+runner_type: python-script
+parameters:
+  action:
+    default: get_records
+    immutable: true
+    type: string
+  cls:
+    default: kinesis
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ShardIterator:
+    type: string
+    description: 'The position in the shard from which you want to start sequentially reading data records. A shard iterator specifies this position using the sequence number of a data record in the shard.'
+    required: true
+  Limit:
+    type: integer
+    description: 'The maximum number of records to return. Specify a value of up to 10,000. If you specify a value that is greater than 10,000, GetRecords throws InvalidArgumentException.'

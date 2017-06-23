@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: kinesis_disable_enhanced_monitoring
+runner_type: python-script
+parameters:
+  action:
+    default: disable_enhanced_monitoring
+    immutable: true
+    type: string
+  cls:
+    default: kinesis
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  StreamName:
+    type: string
+    description: 'The name of the Amazon Kinesis stream for which to disable enhanced monitoring.'
+    required: true
+  ShardLevelMetrics:
+    type: array
+    description: 'List of shard-level metrics to disable. The following are the valid shard-level metrics. The value "ALL" disables every metric.    IncomingBytes     IncomingRecords     OutgoingBytes     OutgoingRecords     WriteProvisionedThroughputExceeded     ReadProvisionedThroughputExceeded     IteratorAgeMilliseconds     ALL    For more information, see Monitoring the Amazon Kinesis Streams Service with Amazon CloudWatch in the Amazon Kinesis Streams Developer Guide.'
+    required: true

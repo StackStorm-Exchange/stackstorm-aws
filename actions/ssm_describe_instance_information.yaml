@@ -1,0 +1,32 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ssm_describe_instance_information
+runner_type: python-script
+parameters:
+  action:
+    default: describe_instance_information
+    immutable: true
+    type: string
+  cls:
+    default: ssm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  InstanceInformationFilterList:
+    type: array
+    description: 'One or more filters. Use a filter to return a more specific list of instances.'
+  Filters:
+    type: array
+    description: 'One or more filters. Use a filter to return a more specific list of instances.'
+  MaxResults:
+    type: integer
+    description: 'The maximum number of items to return for this call. The call also returns a token that you can specify in a subsequent call to get the next set of results. '
+  NextToken:
+    type: string
+    description: 'The token for the next set of items to return. (You received this token from a previous call.)'

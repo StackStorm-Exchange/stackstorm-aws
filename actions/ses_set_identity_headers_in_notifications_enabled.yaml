@@ -1,0 +1,32 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ses_set_identity_headers_in_notifications_enabled
+runner_type: python-script
+parameters:
+  action:
+    default: set_identity_headers_in_notifications_enabled
+    immutable: true
+    type: string
+  cls:
+    default: ses
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Identity:
+    type: string
+    description: 'The identity for which to enable or disable headers in notifications. Examples: user@example.com, example.com.'
+    required: true
+  NotificationType:
+    type: string
+    description: 'The notification type for which to enable or disable headers in notifications. '
+    required: true
+  Enabled:
+    type: boolean
+    description: 'Sets whether Amazon SES includes the original email headers in Amazon SNS notifications of the specified notification type. A value of true specifies that Amazon SES will include headers in notifications, and a value of false specifies that Amazon SES will not include headers in notifications. This value can only be set when NotificationType is already set to use a particular Amazon SNS topic.'
+    required: true

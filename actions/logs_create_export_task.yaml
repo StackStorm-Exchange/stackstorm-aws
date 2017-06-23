@@ -1,0 +1,45 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: logs_create_export_task
+runner_type: python-script
+parameters:
+  action:
+    default: create_export_task
+    immutable: true
+    type: string
+  cls:
+    default: logs
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  logGroupName:
+    type: string
+    description: 'The name of the log group.'
+    required: true
+  from:
+    type: integer
+    description: 'The start time of the range for the request, expressed as the number of milliseconds since Jan 1, 1970 00:00:00 UTC. Events with a timestamp earlier than this time are not exported.'
+    required: true
+  to:
+    type: integer
+    description: 'The end time of the range for the request, expressed as the number of milliseconds since Jan 1, 1970 00:00:00 UTC. Events with a timestamp later than this time are not exported.'
+    required: true
+  destination:
+    type: string
+    description: 'The name of S3 bucket for the exported log data. The bucket must be in the same AWS region.'
+    required: true
+  taskName:
+    type: string
+    description: 'The name of the export task.'
+  logStreamNamePrefix:
+    type: string
+    description: 'Export only log streams that match the provided prefix. If you don"t specify a value, no prefix filter is applied.'
+  destinationPrefix:
+    type: string
+    description: 'The prefix used as the start of the key for every object exported. If you don"t specify a value, the default is exportedlogs.'

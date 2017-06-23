@@ -1,0 +1,26 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: codecommit_get_branch
+runner_type: python-script
+parameters:
+  action:
+    default: get_branch
+    immutable: true
+    type: string
+  cls:
+    default: codecommit
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  repositoryName:
+    type: string
+    description: 'The name of the repository that contains the branch for which you want to retrieve information.'
+  branchName:
+    type: string
+    description: 'The name of the branch for which you want to retrieve information.'

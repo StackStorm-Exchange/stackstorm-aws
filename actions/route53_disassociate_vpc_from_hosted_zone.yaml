@@ -1,0 +1,31 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: route53_disassociate_vpc_from_hosted_zone
+runner_type: python-script
+parameters:
+  action:
+    default: disassociate_vpc_from_hosted_zone
+    immutable: true
+    type: string
+  cls:
+    default: route53
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  HostedZoneId:
+    type: string
+    description: 'The ID of the private hosted zone that you want to disassociate a VPC from.'
+    required: true
+  VPC:
+    type: object
+    description: 'A complex type that contains information about the VPC that you"re disassociating from the specified hosted zone.'
+    required: true
+  Comment:
+    type: string
+    description: ' Optional: A comment about the disassociation request.'

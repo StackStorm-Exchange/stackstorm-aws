@@ -1,0 +1,69 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: opsworks_update_layer
+runner_type: python-script
+parameters:
+  action:
+    default: update_layer
+    immutable: true
+    type: string
+  cls:
+    default: opsworks
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  LayerId:
+    type: string
+    description: 'The layer ID.'
+    required: true
+  Name:
+    type: string
+    description: 'The layer name, which is used by the console.'
+  Shortname:
+    type: string
+    description: 'For custom layers only, use this parameter to specify the layer"s short name, which is used internally by AWS OpsWorksand by Chef. The short name is also used as the name for the directory where your app files are installed. It can have a maximum of 200 characters and must be in the following format: /\A[a-z0-9\-\_\.]+\Z/. The built-in layers" short names are defined by AWS OpsWorks. For more information, see the Layer Reference '
+  Attributes:
+    type: object
+    description: 'One or more user-defined key/value pairs to be added to the stack attributes.'
+  CustomInstanceProfileArn:
+    type: string
+    description: 'The ARN of an IAM profile to be used for all of the layer"s EC2 instances. For more information about IAM ARNs, see Using Identifiers.'
+  CustomJson:
+    type: string
+    description: 'A JSON-formatted string containing custom stack configuration and deployment attributes to be installed on the layer"s instances. For more information, see  Using Custom JSON. '
+  CustomSecurityGroupIds:
+    type: array
+    description: 'An array containing the layer"s custom security group IDs.'
+  Packages:
+    type: array
+    description: 'An array of Package objects that describe the layer"s packages.'
+  VolumeConfigurations:
+    type: array
+    description: 'A VolumeConfigurations object that describes the layer"s Amazon EBS volumes.'
+  EnableAutoHealing:
+    type: boolean
+    description: 'Whether to disable auto healing for the layer.'
+  AutoAssignElasticIps:
+    type: boolean
+    description: 'Whether to automatically assign an Elastic IP address to the layer"s instances. For more information, see How to Edit a Layer.'
+  AutoAssignPublicIps:
+    type: boolean
+    description: 'For stacks that are running in a VPC, whether to automatically assign a public IP address to the layer"s instances. For more information, see How to Edit a Layer.'
+  CustomRecipes:
+    type: object
+    description: 'A LayerCustomRecipes object that specifies the layer"s custom recipes.'
+  InstallUpdatesOnBoot:
+    type: boolean
+    description: 'Whether to install operating system and package updates when the instance boots. The default value is true. To control when updates are installed, set this value to false. You must then update your instances manually by using CreateDeployment to run the update_dependencies stack command or manually running yum (Amazon Linux) or apt-get (Ubuntu) on the instances.   We strongly recommend using the default value of true, to ensure that your instances have the latest security updates. '
+  UseEbsOptimizedInstances:
+    type: boolean
+    description: 'Whether to use Amazon EBS-optimized instances.'
+  LifecycleEventConfiguration:
+    type: object
+    description: ''

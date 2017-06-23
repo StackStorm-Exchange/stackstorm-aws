@@ -1,24 +1,28 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: iam_deactivate_mfa_device
+runner_type: python-script
 parameters:
   action:
     default: deactivate_mfa_device
     immutable: true
     type: string
   cls:
-    default: IAMConnection
-    immutable: true
+    default: iam
+    type: string
+  headers:
     type: string
   module_path:
-    default: boto.iam.connection
+    default: boto3
     immutable: true
     type: string
-  serial_number:
-    required: true
+  UserName:
     type: string
-  user_name:
+    description: 'The name of the user whose MFA device you want to deactivate. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-'
     required: true
+  SerialNumber:
     type: string
-runner_type: python-script
+    description: 'The serial number that uniquely identifies the MFA device. For virtual MFA devices, the serial number is the device ARN. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =/:,.@-'
+    required: true

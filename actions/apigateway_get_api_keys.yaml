@@ -1,0 +1,35 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: apigateway_get_api_keys
+runner_type: python-script
+parameters:
+  action:
+    default: get_api_keys
+    immutable: true
+    type: string
+  cls:
+    default: apigateway
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  position:
+    type: string
+    description: 'The position of the current ApiKeys resource to get information about.'
+  limit:
+    type: integer
+    description: 'The maximum number of ApiKeys to get information about.'
+  nameQuery:
+    type: string
+    description: 'The name of queried API keys.'
+  customerId:
+    type: string
+    description: 'The identifier of a customer in AWS Marketplace or an external system, such as a developer portal.'
+  includeValues:
+    type: boolean
+    description: 'A boolean flag to specify whether (true) or not (false) the result contains key values.'

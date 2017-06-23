@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: iot_list_principal_things
+runner_type: python-script
+parameters:
+  action:
+    default: list_principal_things
+    immutable: true
+    type: string
+  cls:
+    default: iot
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  principal:
+    type: string
+    description: 'The principal.'
+    required: true
+  nextToken:
+    type: string
+    description: 'The token for the next set of results, or null if there are no additional results.'
+  maxResults:
+    type: integer
+    description: 'The maximum number of results to return in this operation.'

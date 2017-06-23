@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: inspector_describe_assessment_templates
+runner_type: python-script
+parameters:
+  action:
+    default: describe_assessment_templates
+    immutable: true
+    type: string
+  cls:
+    default: inspector
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  assessmentTemplateArns:
+    type: array
+    description: ''
+    required: true

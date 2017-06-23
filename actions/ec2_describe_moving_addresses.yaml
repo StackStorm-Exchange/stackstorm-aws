@@ -1,0 +1,35 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ec2_describe_moving_addresses
+runner_type: python-script
+parameters:
+  action:
+    default: describe_moving_addresses
+    immutable: true
+    type: string
+  cls:
+    default: ec2
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+  PublicIps:
+    type: array
+    description: 'One or more Elastic IP addresses.'
+  NextToken:
+    type: string
+    description: 'The token to use to retrieve the next page of results.'
+  Filters:
+    type: array
+    description: 'One or more filters.    moving-status - The status of the Elastic IP address (MovingToVpc | RestoringToClassic).  '
+  MaxResults:
+    type: integer
+    description: 'The maximum number of results to return for the request in a single page. The remaining results of the initial request can be seen by sending another request with the returned NextToken value. This value can be between 5 and 1000; if MaxResults is given a value outside of this range, an error is returned. Default: If no value is provided, the default is 1000.'

@@ -1,0 +1,42 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: es_create_elasticsearch_domain
+runner_type: python-script
+parameters:
+  action:
+    default: create_elasticsearch_domain
+    immutable: true
+    type: string
+  cls:
+    default: es
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DomainName:
+    type: string
+    description: 'The name of the Elasticsearch domain that you are creating. Domain names are unique across the domains owned by an account within an AWS region. Domain names must start with a letter or number and can contain the following characters: a-z (lowercase), 0-9, and - (hyphen).'
+    required: true
+  ElasticsearchVersion:
+    type: string
+    description: 'String of format X.Y to specify version for the Elasticsearch domain eg. "1.5" or "2.3". For more information, see Creating Elasticsearch Domains in the Amazon Elasticsearch Service Developer Guide.'
+  ElasticsearchClusterConfig:
+    type: object
+    description: 'Configuration options for an Elasticsearch domain. Specifies the instance type and number of instances in the domain cluster. '
+  EBSOptions:
+    type: object
+    description: 'Options to enable, disable and specify the type and size of EBS storage volumes. '
+  AccessPolicies:
+    type: string
+    description: ' IAM access policy as a JSON-formatted string.'
+  SnapshotOptions:
+    type: object
+    description: 'Option to set time, in UTC format, of the daily automated snapshot. Default value is 0 hours. '
+  AdvancedOptions:
+    type: object
+    description: ' Option to allow references to indices in an HTTP request body. Must be false when configuring access to individual sub-resources. By default, the value is true. See Configuration Advanced Options for more information.'

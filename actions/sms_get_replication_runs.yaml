@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: sms_get_replication_runs
+runner_type: python-script
+parameters:
+  action:
+    default: get_replication_runs
+    immutable: true
+    type: string
+  cls:
+    default: sms
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  replicationJobId:
+    type: string
+    description: ''
+    required: true
+  nextToken:
+    type: string
+    description: ''
+  maxResults:
+    type: integer
+    description: ''

@@ -1,24 +1,28 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: iam_remove_user_from_group
+runner_type: python-script
 parameters:
   action:
     default: remove_user_from_group
     immutable: true
     type: string
   cls:
-    default: IAMConnection
-    immutable: true
+    default: iam
     type: string
-  group_name:
-    required: true
+  headers:
     type: string
   module_path:
-    default: boto.iam.connection
+    default: boto3
     immutable: true
     type: string
-  user_name:
-    required: true
+  GroupName:
     type: string
-runner_type: python-script
+    description: 'The name of the group to update. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-'
+    required: true
+  UserName:
+    type: string
+    description: 'The name of the user to remove. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-'
+    required: true

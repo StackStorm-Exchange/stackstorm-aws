@@ -1,24 +1,28 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: sqs_send_message_batch
+runner_type: python-script
 parameters:
   action:
     default: send_message_batch
     immutable: true
     type: string
   cls:
-    default: SQSConnection
-    immutable: true
+    default: sqs
     type: string
-  messages:
-    required: true
+  headers:
     type: string
   module_path:
-    default: boto.sqs.connection
+    default: boto3
     immutable: true
     type: string
-  queue:
-    required: true
+  QueueUrl:
     type: string
-runner_type: python-script
+    description: 'The URL of the Amazon SQS queue to which batched messages are sent. Queue URLs are case-sensitive.'
+    required: true
+  Entries:
+    type: array
+    description: 'A list of  SendMessageBatchRequestEntry  items.'
+    required: true

@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: meteringmarketplace_resolve_customer
+runner_type: python-script
+parameters:
+  action:
+    default: resolve_customer
+    immutable: true
+    type: string
+  cls:
+    default: meteringmarketplace
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  RegistrationToken:
+    type: string
+    description: 'When a buyer visits your website during the registration process, the buyer submits a registration token through the browser. The registration token is resolved to obtain a CustomerIdentifier and product code.'
+    required: true

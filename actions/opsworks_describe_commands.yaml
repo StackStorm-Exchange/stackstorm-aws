@@ -1,0 +1,29 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: opsworks_describe_commands
+runner_type: python-script
+parameters:
+  action:
+    default: describe_commands
+    immutable: true
+    type: string
+  cls:
+    default: opsworks
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DeploymentId:
+    type: string
+    description: 'The deployment ID. If you include this parameter, DescribeCommands returns a description of the commands associated with the specified deployment.'
+  InstanceId:
+    type: string
+    description: 'The instance ID. If you include this parameter, DescribeCommands returns a description of the commands associated with the specified instance.'
+  CommandIds:
+    type: array
+    description: 'An array of command IDs. If you include this parameter, DescribeCommands returns a description of the specified commands. Otherwise, it returns a description of every command.'

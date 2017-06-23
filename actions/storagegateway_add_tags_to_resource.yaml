@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: storagegateway_add_tags_to_resource
+runner_type: python-script
+parameters:
+  action:
+    default: add_tags_to_resource
+    immutable: true
+    type: string
+  cls:
+    default: storagegateway
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ResourceARN:
+    type: string
+    description: 'The Amazon Resource Name (ARN) of the resource you want to add tags to.'
+    required: true
+  Tags:
+    type: array
+    description: 'The key-value pair that represents the tag you want to add to the resource. The value can be an empty string.  Valid characters for key and value are letters, spaces, and numbers representable in UTF-8 format, and the following special characters: + - = . _ : / @. '
+    required: true

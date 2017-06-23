@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: config_delete_evaluation_results
+runner_type: python-script
+parameters:
+  action:
+    default: delete_evaluation_results
+    immutable: true
+    type: string
+  cls:
+    default: config
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ConfigRuleName:
+    type: string
+    description: 'The name of the Config rule for which you want to delete the evaluation results.'
+    required: true

@@ -1,0 +1,55 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: codedeploy_update_deployment_group
+runner_type: python-script
+parameters:
+  action:
+    default: update_deployment_group
+    immutable: true
+    type: string
+  cls:
+    default: codedeploy
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  applicationName:
+    type: string
+    description: 'The application name corresponding to the deployment group to update.'
+    required: true
+  currentDeploymentGroupName:
+    type: string
+    description: 'The current name of the deployment group.'
+    required: true
+  newDeploymentGroupName:
+    type: string
+    description: 'The new name of the deployment group, if you want to change it.'
+  deploymentConfigName:
+    type: string
+    description: 'The replacement deployment configuration name to use, if you want to change it.'
+  ec2TagFilters:
+    type: array
+    description: 'The replacement set of Amazon EC2 tags on which to filter, if you want to change them. To keep the existing tags, enter their names. To remove tags, do not enter any tag names.'
+  onPremisesInstanceTagFilters:
+    type: array
+    description: 'The replacement set of on-premises instance tags on which to filter, if you want to change them. To keep the existing tags, enter their names. To remove tags, do not enter any tag names.'
+  autoScalingGroups:
+    type: array
+    description: 'The replacement list of Auto Scaling groups to be included in the deployment group, if you want to change them. To keep the Auto Scaling groups, enter their names. To remove Auto Scaling groups, do not enter any Auto Scaling group names.'
+  serviceRoleArn:
+    type: string
+    description: 'A replacement ARN for the service role, if you want to change it.'
+  triggerConfigurations:
+    type: array
+    description: 'Information about triggers to change when the deployment group is updated. For examples, see Modify Triggers in an AWS CodeDeploy Deployment Group in the AWS CodeDeploy User Guide.'
+  alarmConfiguration:
+    type: object
+    description: 'Information to add or change about Amazon CloudWatch alarms when the deployment group is updated. '
+  autoRollbackConfiguration:
+    type: object
+    description: 'Information for an automatic rollback configuration that is added or changed when a deployment group is updated.'

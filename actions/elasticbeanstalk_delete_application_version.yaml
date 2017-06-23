@@ -1,0 +1,31 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: elasticbeanstalk_delete_application_version
+runner_type: python-script
+parameters:
+  action:
+    default: delete_application_version
+    immutable: true
+    type: string
+  cls:
+    default: elasticbeanstalk
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ApplicationName:
+    type: string
+    description: 'The name of the application to which the version belongs.'
+    required: true
+  VersionLabel:
+    type: string
+    description: 'The label of the version to delete.'
+    required: true
+  DeleteSourceBundle:
+    type: boolean
+    description: 'Set to true to delete the source bundle from your storage bucket. Otherwise, the application version is deleted only from Elastic Beanstalk and the source bundle remains in Amazon S3.'

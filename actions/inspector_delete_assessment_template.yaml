@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: inspector_delete_assessment_template
+runner_type: python-script
+parameters:
+  action:
+    default: delete_assessment_template
+    immutable: true
+    type: string
+  cls:
+    default: inspector
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  assessmentTemplateArn:
+    type: string
+    description: 'The ARN that specifies the assessment template that you want to delete.'
+    required: true

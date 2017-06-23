@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: shield_describe_protection
+runner_type: python-script
+parameters:
+  action:
+    default: describe_protection
+    immutable: true
+    type: string
+  cls:
+    default: shield
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ProtectionId:
+    type: string
+    description: 'The unique identifier (ID) for the Protection object that is described.'
+    required: true

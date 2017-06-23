@@ -1,0 +1,29 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: acm_list_certificates
+runner_type: python-script
+parameters:
+  action:
+    default: list_certificates
+    immutable: true
+    type: string
+  cls:
+    default: acm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  CertificateStatuses:
+    type: array
+    description: 'The status or statuses on which to filter the list of ACM Certificates.'
+  NextToken:
+    type: string
+    description: 'Use this parameter only when paginating results and only in a subsequent request after you receive a response with truncated results. Set it to the value of NextToken from the response you just received.'
+  MaxItems:
+    type: integer
+    description: 'Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the NextToken element is sent in the response. Use this NextToken value in a subsequent request to retrieve additional items.'

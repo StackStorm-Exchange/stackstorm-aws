@@ -1,27 +1,32 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: sqs_change_message_visibility
+runner_type: python-script
 parameters:
   action:
     default: change_message_visibility
     immutable: true
     type: string
   cls:
-    default: SQSConnection
-    immutable: true
+    default: sqs
+    type: string
+  headers:
     type: string
   module_path:
-    default: boto.sqs.connection
+    default: boto3
     immutable: true
     type: string
-  queue:
-    required: true
+  QueueUrl:
     type: string
-  receipt_handle:
+    description: 'The URL of the Amazon SQS queue whose message"s visibility is changed. Queue URLs are case-sensitive.'
     required: true
+  ReceiptHandle:
     type: string
-  visibility_timeout:
+    description: 'The receipt handle associated with the message whose visibility timeout is changed. This parameter is returned by the  ReceiveMessage  action.'
     required: true
-    type: string
-runner_type: python-script
+  VisibilityTimeout:
+    type: integer
+    description: 'The new value for the message"s visibility timeout (in seconds). Values values: 0 to 43200. Maximum: 12 hours.'
+    required: true

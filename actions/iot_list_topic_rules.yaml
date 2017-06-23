@@ -1,0 +1,32 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: iot_list_topic_rules
+runner_type: python-script
+parameters:
+  action:
+    default: list_topic_rules
+    immutable: true
+    type: string
+  cls:
+    default: iot
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  topic:
+    type: string
+    description: 'The topic.'
+  maxResults:
+    type: integer
+    description: 'The maximum number of results to return.'
+  nextToken:
+    type: string
+    description: 'A token used to retrieve the next value.'
+  ruleDisabled:
+    type: boolean
+    description: 'Specifies whether the rule is disabled.'

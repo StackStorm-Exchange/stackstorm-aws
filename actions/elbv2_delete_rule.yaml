@@ -20,5 +20,5 @@ parameters:
     type: string
   RuleArn:
     type: string
-    description: "The Amazon Resource Name (ARN) of the rule."
+    description: 'The Amazon Resource Name (ARN) of the rule.'
     required: true

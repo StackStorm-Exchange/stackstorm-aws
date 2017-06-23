@@ -1,0 +1,44 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cognito-sync_list_records
+runner_type: python-script
+parameters:
+  action:
+    default: list_records
+    immutable: true
+    type: string
+  cls:
+    default: cognito-sync
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  IdentityPoolId:
+    type: string
+    description: 'A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.'
+    required: true
+  IdentityId:
+    type: string
+    description: 'A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.'
+    required: true
+  DatasetName:
+    type: string
+    description: 'A string of up to 128 characters. Allowed characters are a-z, A-Z, 0-9, "_" (underscore), "-" (dash), and "." (dot).'
+    required: true
+  LastSyncCount:
+    type: integer
+    description: 'The last server sync count for this record.'
+  NextToken:
+    type: string
+    description: 'A pagination token for obtaining the next page of results.'
+  MaxResults:
+    type: integer
+    description: 'The maximum number of results to be returned.'
+  SyncSessionToken:
+    type: string
+    description: 'A token containing a session ID, identity ID, and expiration.'
