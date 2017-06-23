@@ -43,7 +43,7 @@ session = Session()
 if myservice is None:
     myservices = session.get_available_services()
 else:
-    myservices = [ myservice ]
+    myservices = [myservice]
 
 for myservice in myservices:
     print "%s:" % myservice
