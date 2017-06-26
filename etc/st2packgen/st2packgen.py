@@ -112,10 +112,8 @@ for myservice in myservices:
                 allvars['params'].append(tmp)
 
         actionyaml = outputdir + "/" + allvars['name'] + ".yaml"
-        y = open(actionyaml, 'w')
+        with open(actionyaml, 'w') as y:
 
-        template = templateEnv.get_template('action_template.yaml.jinja')
-        outputText = template.render(allvars).encode('utf8')  # pylint: disable=no-member
-        y.write(outputText)
-
-        y.close()
+            template = templateEnv.get_template('action_template.yaml.jinja')
+            outputText = template.render(allvars).encode('utf8')  # pylint: disable=no-member
+            y.write(outputText)
