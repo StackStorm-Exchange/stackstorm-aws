@@ -102,7 +102,7 @@ for myservice in myservices:
             tmp['name'] = sname
             tmp['type'] = stype
             if 'documentation' in sdata:
-                tmp['description'] = striphtml(sdata['documentation'].rstrip().replace("'", '"'))
+                tmp['description'] = striphtml(sdata['documentation'].rstrip().replace('"', "'"))
             else:
                 tmp['description'] = ''
 
