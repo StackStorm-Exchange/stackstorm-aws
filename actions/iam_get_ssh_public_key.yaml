@@ -1,0 +1,32 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: iam_get_ssh_public_key
+runner_type: python-script
+parameters:
+  action:
+    default: get_ssh_public_key
+    immutable: true
+    type: string
+  cls:
+    default: iam
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  UserName:
+    type: string
+    description: 'The name of the IAM user associated with the SSH public key. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-'
+    required: true
+  SSHPublicKeyId:
+    type: string
+    description: 'The unique identifier for the SSH public key. This parameter allows (per its regex pattern) a string of characters that can consist of any upper or lowercased letter or digit.'
+    required: true
+  Encoding:
+    type: string
+    description: 'Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use SSH. To retrieve the public key in PEM format, use PEM.'
+    required: true

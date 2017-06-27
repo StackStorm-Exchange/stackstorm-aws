@@ -1,0 +1,29 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: route53_get_geo_location
+runner_type: python-script
+parameters:
+  action:
+    default: get_geo_location
+    immutable: true
+    type: string
+  cls:
+    default: route53
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ContinentCode:
+    type: string
+    description: 'Amazon Route 53 supports the following continent codes:    AF: Africa    AN: Antarctica    AS: Asia    EU: Europe    OC: Oceania    NA: North America    SA: South America  '
+  CountryCode:
+    type: string
+    description: 'Amazon Route 53 uses the two-letter country codes that are specified in ISO standard 3166-1 alpha-2.'
+  SubdivisionCode:
+    type: string
+    description: 'Amazon Route 53 uses the one- to three-letter subdivision codes that are specified in ISO standard 3166-1 alpha-2. Amazon Route 53 doesn"t support subdivision codes for all countries. If you specify SubdivisionCode, you must also specify CountryCode. '

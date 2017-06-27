@@ -20,8 +20,8 @@ parameters:
     type: string
   TopicArn:
     type: string
-    description: "The ARN of the topic for which you wish to find subscriptions."
+    description: 'The ARN of the topic for which you wish to find subscriptions.'
     required: true
   NextToken:
     type: string
-    description: "Token returned by the previous ListSubscriptionsByTopic request."
+    description: 'Token returned by the previous ListSubscriptionsByTopic request.'

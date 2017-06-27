@@ -1,0 +1,29 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ssm_describe_association
+runner_type: python-script
+parameters:
+  action:
+    default: describe_association
+    immutable: true
+    type: string
+  cls:
+    default: ssm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Name:
+    type: string
+    description: 'The name of the SSM document.'
+  InstanceId:
+    type: string
+    description: 'The instance ID.'
+  AssociationId:
+    type: string
+    description: 'The association ID for which you want information.'

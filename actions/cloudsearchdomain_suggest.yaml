@@ -1,0 +1,31 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cloudsearchdomain_suggest
+runner_type: python-script
+parameters:
+  action:
+    default: suggest
+    immutable: true
+    type: string
+  cls:
+    default: cloudsearchdomain
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  query:
+    type: string
+    description: 'Specifies the string for which you want to get suggestions.'
+    required: true
+  suggester:
+    type: string
+    description: 'Specifies the name of the suggester to use to find suggested matches.'
+    required: true
+  size:
+    type: integer
+    description: 'Specifies the maximum number of suggestions to return. '

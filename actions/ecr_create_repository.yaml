@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ecr_create_repository
+runner_type: python-script
+parameters:
+  action:
+    default: create_repository
+    immutable: true
+    type: string
+  cls:
+    default: ecr
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  repositoryName:
+    type: string
+    description: 'The name to use for the repository. The repository name may be specified on its own (such as nginx-web-app) or it can be prepended with a namespace to group the repository into a category (such as project-a/nginx-web-app).'
+    required: true

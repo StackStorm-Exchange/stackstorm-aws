@@ -20,5 +20,5 @@ parameters:
     type: string
   SubscriptionArn:
     type: string
-    description: "The ARN of the subscription whose properties you want to get."
+    description: 'The ARN of the subscription whose properties you want to get.'
     required: true

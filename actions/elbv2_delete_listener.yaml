@@ -20,5 +20,5 @@ parameters:
     type: string
   ListenerArn:
     type: string
-    description: "The Amazon Resource Name (ARN) of the listener."
+    description: 'The Amazon Resource Name (ARN) of the listener.'
     required: true

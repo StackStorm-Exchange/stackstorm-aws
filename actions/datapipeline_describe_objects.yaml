@@ -1,0 +1,34 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: datapipeline_describe_objects
+runner_type: python-script
+parameters:
+  action:
+    default: describe_objects
+    immutable: true
+    type: string
+  cls:
+    default: datapipeline
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  pipelineId:
+    type: string
+    description: 'The ID of the pipeline that contains the object definitions.'
+    required: true
+  objectIds:
+    type: array
+    description: 'The IDs of the pipeline objects that contain the definitions to be described. You can pass as many as 25 identifiers in a single call to DescribeObjects.'
+    required: true
+  evaluateExpressions:
+    type: boolean
+    description: 'Indicates whether any expressions in the object should be evaluated when the object descriptions are returned.'
+  marker:
+    type: string
+    description: 'The starting point for the results to be returned. For the first call, this value should be empty. As long as there are more results, continue to call DescribeObjects with the marker value from the previous call to retrieve the next set of results.'

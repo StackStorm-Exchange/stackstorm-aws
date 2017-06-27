@@ -1,0 +1,42 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: logs_put_subscription_filter
+runner_type: python-script
+parameters:
+  action:
+    default: put_subscription_filter
+    immutable: true
+    type: string
+  cls:
+    default: logs
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  logGroupName:
+    type: string
+    description: 'The name of the log group.'
+    required: true
+  filterName:
+    type: string
+    description: 'A name for the subscription filter.'
+    required: true
+  filterPattern:
+    type: string
+    description: 'A filter pattern for subscribing to a filtered stream of log events.'
+    required: true
+  destinationArn:
+    type: string
+    description: 'The ARN of the destination to deliver matching log events to. Currently, the supported destinations are:   An Amazon Kinesis stream belonging to the same account as the subscription filter, for same-account delivery.   A logical destination (specified using an ARN) belonging to a different account, for cross-account delivery.   An Amazon Kinesis Firehose stream belonging to the same account as the subscription filter, for same-account delivery.   An AWS Lambda function belonging to the same account as the subscription filter, for same-account delivery.  '
+    required: true
+  roleArn:
+    type: string
+    description: 'The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingested log events to the destination stream. You don"t need to provide the ARN when you are working with a logical destination for cross-account delivery.'
+  distribution:
+    type: string
+    description: 'The method used to distribute log data to the destination, when the destination is an Amazon Kinesis stream. By default, log data is grouped by log stream. For a more even distribution, you can group log data randomly.'

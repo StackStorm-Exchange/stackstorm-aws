@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: rds_remove_source_identifier_from_subscription
+runner_type: python-script
+parameters:
+  action:
+    default: remove_source_identifier_from_subscription
+    immutable: true
+    type: string
+  cls:
+    default: rds
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  SubscriptionName:
+    type: string
+    description: 'The name of the RDS event notification subscription you want to remove a source identifier from.'
+    required: true
+  SourceIdentifier:
+    type: string
+    description: ' The source identifier to be removed from the subscription, such as the DB instance identifier for a DB instance or the name of a security group. '
+    required: true

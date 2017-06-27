@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: redshift_describe_resize
+runner_type: python-script
+parameters:
+  action:
+    default: describe_resize
+    immutable: true
+    type: string
+  cls:
+    default: redshift
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ClusterIdentifier:
+    type: string
+    description: 'The unique identifier of a cluster whose resize progress you are requesting. This parameter is case-sensitive. By default, resize operations for all clusters defined for an AWS account are returned.'
+    required: true

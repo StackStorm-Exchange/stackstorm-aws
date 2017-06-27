@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: elasticbeanstalk_update_application_resource_lifecycle
+runner_type: python-script
+parameters:
+  action:
+    default: update_application_resource_lifecycle
+    immutable: true
+    type: string
+  cls:
+    default: elasticbeanstalk
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ApplicationName:
+    type: string
+    description: 'The name of the application.'
+    required: true
+  ResourceLifecycleConfig:
+    type: object
+    description: 'The lifecycle configuration.'
+    required: true

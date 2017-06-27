@@ -1,0 +1,31 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ses_create_receipt_rule
+runner_type: python-script
+parameters:
+  action:
+    default: create_receipt_rule
+    immutable: true
+    type: string
+  cls:
+    default: ses
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  RuleSetName:
+    type: string
+    description: 'The name of the rule set to which to add the rule.'
+    required: true
+  Rule:
+    type: object
+    description: 'A data structure that contains the specified rule"s name, actions, recipients, domains, enabled status, scan status, and TLS policy.'
+    required: true
+  After:
+    type: string
+    description: 'The name of an existing rule after which the new rule will be placed. If this parameter is null, the new rule will be inserted at the beginning of the rule list.'

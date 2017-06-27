@@ -1,25 +1,30 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: rds_promote_read_replica
+runner_type: python-script
 parameters:
   action:
     default: promote_read_replica
     immutable: true
     type: string
-  backup_retention_period:
-    type: string
   cls:
-    default: RDSConnection
-    immutable: true
+    default: rds
     type: string
-  id:
-    required: true
+  headers:
     type: string
   module_path:
-    default: boto.rds
+    default: boto3
     immutable: true
     type: string
-  preferred_backup_window:
+  DBInstanceIdentifier:
     type: string
-runner_type: python-script
+    description: 'The DB instance identifier. This value is stored as a lowercase string. Constraints:   Must be the identifier for an existing Read Replica DB instance   Must contain from 1 to 63 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens   Example: mydbinstance '
+    required: true
+  BackupRetentionPeriod:
+    type: integer
+    description: 'The number of days to retain automated backups. Setting this parameter to a positive number enables backups. Setting this parameter to 0 disables automated backups. Default: 1 Constraints:   Must be a value from 0 to 8  '
+  PreferredBackupWindow:
+    type: string
+    description: ' The daily time range during which automated backups are created if automated backups are enabled, using the BackupRetentionPeriod parameter.   Default: A 30-minute window selected at random from an 8-hour block of time per region. To see the time blocks available, see  Adjusting the Preferred Maintenance Window in the Amazon RDS User Guide.  Constraints:   Must be in the format hh24:mi-hh24:mi.   Times should be in Universal Coordinated Time (UTC).   Must not conflict with the preferred maintenance window.   Must be at least 30 minutes.  '

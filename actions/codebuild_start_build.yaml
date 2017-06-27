@@ -1,0 +1,39 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: codebuild_start_build
+runner_type: python-script
+parameters:
+  action:
+    default: start_build
+    immutable: true
+    type: string
+  cls:
+    default: codebuild
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  projectName:
+    type: string
+    description: 'The name of the build project to start running a build.'
+    required: true
+  sourceVersion:
+    type: string
+    description: 'A version of the build input to be built, for this build only. If not specified, the latest version will be used. If specified, must be one of:   For AWS CodeCommit or GitHub: the commit ID to use.   For Amazon Simple Storage Service (Amazon S3): the version ID of the object representing the build input ZIP file to use.  '
+  artifactsOverride:
+    type: object
+    description: 'Build output artifact settings that override, for this build only, the latest ones already defined in the corresponding build project.'
+  environmentVariablesOverride:
+    type: array
+    description: 'A set of environment variables that overrides, for this build only, the latest ones already defined in the corresponding build project.'
+  buildspecOverride:
+    type: string
+    description: 'A build spec declaration that overrides, for this build only, the latest one already defined in the corresponding build project.'
+  timeoutInMinutesOverride:
+    type: integer
+    description: 'The number of build timeout minutes, from 5 to 480 (8 hours) that overrides, for this build only, the latest setting already defined in the corresponding build project.'

@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: elb_apply_security_groups_to_load_balancer
+runner_type: python-script
+parameters:
+  action:
+    default: apply_security_groups_to_load_balancer
+    immutable: true
+    type: string
+  cls:
+    default: elb
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  LoadBalancerName:
+    type: string
+    description: 'The name of the load balancer.'
+    required: true
+  SecurityGroups:
+    type: array
+    description: 'The IDs of the security groups to associate with the load balancer. Note that you cannot specify the name of the security group.'
+    required: true

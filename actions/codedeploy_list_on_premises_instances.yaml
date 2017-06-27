@@ -1,0 +1,29 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: codedeploy_list_on_premises_instances
+runner_type: python-script
+parameters:
+  action:
+    default: list_on_premises_instances
+    immutable: true
+    type: string
+  cls:
+    default: codedeploy
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  registrationStatus:
+    type: string
+    description: 'The registration status of the on-premises instances:   Deregistered: Include deregistered on-premises instances in the resulting list.   Registered: Include registered on-premises instances in the resulting list.  '
+  tagFilters:
+    type: array
+    description: 'The on-premises instance tags that will be used to restrict the corresponding on-premises instance names returned.'
+  nextToken:
+    type: string
+    description: 'An identifier returned from the previous list on-premises instances call. It can be used to return the next set of on-premises instances in the list.'

@@ -20,5 +20,5 @@ parameters:
     type: string
   CacheSubnetGroupName:
     type: string
-    description: ""
+    description: 'The name of the cache subnet group to delete. Constraints: Must contain no more than 255 alphanumeric characters or hyphens.'
     required: true

@@ -1,29 +1,38 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: rds_describe_option_groups
+runner_type: python-script
 parameters:
   action:
     default: describe_option_groups
     immutable: true
     type: string
   cls:
-    default: RDSConnection
-    immutable: true
+    default: rds
     type: string
-  engine_name:
-    type: string
-  major_engine_version:
-    type: string
-  marker:
-    type: string
-  max_records:
-    default: 100
+  headers:
     type: string
   module_path:
-    default: boto.rds
+    default: boto3
     immutable: true
     type: string
-  name:
+  OptionGroupName:
     type: string
-runner_type: python-script
+    description: 'The name of the option group to describe. Cannot be supplied together with EngineName or MajorEngineVersion.'
+  Filters:
+    type: array
+    description: 'This parameter is not currently supported.'
+  Marker:
+    type: string
+    description: ' An optional pagination token provided by a previous DescribeOptionGroups request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords. '
+  MaxRecords:
+    type: integer
+    description: ' The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a pagination token called a marker is included in the response so that the remaining results can be retrieved.  Default: 100 Constraints: Minimum 20, maximum 100.'
+  EngineName:
+    type: string
+    description: 'Filters the list of option groups to only include groups associated with a specific database engine.'
+  MajorEngineVersion:
+    type: string
+    description: 'Filters the list of option groups to only include groups associated with a specific database engine version. If specified, then EngineName must also be specified.'

@@ -1,0 +1,31 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ecr_batch_delete_image
+runner_type: python-script
+parameters:
+  action:
+    default: batch_delete_image
+    immutable: true
+    type: string
+  cls:
+    default: ecr
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  repositoryName:
+    type: string
+    description: 'The repository that contains the image to delete.'
+    required: true
+  imageIds:
+    type: array
+    description: 'A list of image ID references that correspond to images to delete. The format of the imageIds reference is imageTag=tag or imageDigest=digest.'
+    required: true
+  registryId:
+    type: string
+    description: 'The AWS account ID associated with the registry that contains the image to delete. If you do not specify a registry, the default registry is assumed.'

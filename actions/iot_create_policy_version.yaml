@@ -1,0 +1,31 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: iot_create_policy_version
+runner_type: python-script
+parameters:
+  action:
+    default: create_policy_version
+    immutable: true
+    type: string
+  cls:
+    default: iot
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  policyName:
+    type: string
+    description: 'The policy name.'
+    required: true
+  policyDocument:
+    type: string
+    description: 'The JSON document that describes the policy. Minimum length of 1. Maximum length of 2048, excluding whitespaces'
+    required: true
+  setAsDefault:
+    type: boolean
+    description: 'Specifies whether the policy version is set as the default. When this parameter is true, the new policy version becomes the operative version (that is, the version that is in effect for the certificates to which the policy is attached).'

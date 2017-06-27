@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: iot_create_thing
+runner_type: python-script
+parameters:
+  action:
+    default: create_thing
+    immutable: true
+    type: string
+  cls:
+    default: iot
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  thingName:
+    type: string
+    description: 'The name of the thing to create.'
+    required: true
+  thingTypeName:
+    type: string
+    description: 'The name of the thing type associated with the new thing.'
+  attributePayload:
+    type: object
+    description: 'The attribute payload, which consists of up to three name/value pairs in a JSON document. For example: {\"attributes\":{\"string1\":\"string2\"}})'

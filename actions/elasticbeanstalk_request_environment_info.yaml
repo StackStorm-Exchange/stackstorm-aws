@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: elasticbeanstalk_request_environment_info
+runner_type: python-script
+parameters:
+  action:
+    default: request_environment_info
+    immutable: true
+    type: string
+  cls:
+    default: elasticbeanstalk
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  InfoType:
+    type: string
+    description: 'The type of information to request.'
+    required: true
+  EnvironmentId:
+    type: string
+    description: 'The ID of the environment of the requested data. If no such environment is found, RequestEnvironmentInfo returns an InvalidParameterValue error.  Condition: You must specify either this or an EnvironmentName, or both. If you do not specify either, AWS Elastic Beanstalk returns MissingRequiredParameter error. '
+  EnvironmentName:
+    type: string
+    description: 'The name of the environment of the requested data. If no such environment is found, RequestEnvironmentInfo returns an InvalidParameterValue error.  Condition: You must specify either this or an EnvironmentId, or both. If you do not specify either, AWS Elastic Beanstalk returns MissingRequiredParameter error. '

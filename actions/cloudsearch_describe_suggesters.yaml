@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cloudsearch_describe_suggesters
+runner_type: python-script
+parameters:
+  action:
+    default: describe_suggesters
+    immutable: true
+    type: string
+  cls:
+    default: cloudsearch
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DomainName:
+    type: string
+    description: 'The name of the domain you want to describe.'
+    required: true
+  SuggesterNames:
+    type: array
+    description: 'The suggesters you want to describe.'
+  Deployed:
+    type: boolean
+    description: 'Whether to display the deployed configuration (true) or include any pending changes (false). Defaults to false.'

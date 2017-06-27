@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: lightsail_create_domain_entry
+runner_type: python-script
+parameters:
+  action:
+    default: create_domain_entry
+    immutable: true
+    type: string
+  cls:
+    default: lightsail
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  domainName:
+    type: string
+    description: 'The domain name (e.g., example.com) for which you want to create the domain entry.'
+    required: true
+  domainEntry:
+    type: object
+    description: 'An array of key-value pairs containing information about the domain entry request.'
+    required: true

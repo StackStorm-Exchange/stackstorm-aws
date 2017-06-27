@@ -1,27 +1,31 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: ec2_create_placement_group
+runner_type: python-script
 parameters:
   action:
     default: create_placement_group
     immutable: true
     type: string
   cls:
-    default: EC2Connection
-    immutable: true
+    default: ec2
     type: string
-  dry_run:
-    default: false
-    type: boolean
+  headers:
+    type: string
   module_path:
-    default: boto.ec2.connection
+    default: boto3
     immutable: true
     type: string
-  name:
+  GroupName:
+    type: string
+    description: 'A name for the placement group. Constraints: Up to 255 ASCII characters'
     required: true
+  Strategy:
     type: string
-  strategy:
-    default: cluster
-    type: string
-runner_type: python-script
+    description: 'The placement strategy.'
+    required: true
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'

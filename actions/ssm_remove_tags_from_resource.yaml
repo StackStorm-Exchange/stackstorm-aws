@@ -1,0 +1,32 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ssm_remove_tags_from_resource
+runner_type: python-script
+parameters:
+  action:
+    default: remove_tags_from_resource
+    immutable: true
+    type: string
+  cls:
+    default: ssm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ResourceType:
+    type: string
+    description: 'The type of resource of which you want to remove a tag.'
+    required: true
+  ResourceId:
+    type: string
+    description: 'The resource ID for which you want to remove tags.'
+    required: true
+  TagKeys:
+    type: array
+    description: 'Tag keys that you want to remove from the specified resource.'
+    required: true

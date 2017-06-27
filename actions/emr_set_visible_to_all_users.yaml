@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: emr_set_visible_to_all_users
+runner_type: python-script
+parameters:
+  action:
+    default: set_visible_to_all_users
+    immutable: true
+    type: string
+  cls:
+    default: emr
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  JobFlowIds:
+    type: array
+    description: 'Identifiers of the job flows to receive the new visibility setting.'
+    required: true
+  VisibleToAllUsers:
+    type: boolean
+    description: 'Whether the specified job flows are visible to all IAM users of the AWS account associated with the job flow. If this value is set to True, all IAM users of that AWS account can view and, if they have the proper IAM policy permissions set, manage the job flows. If it is set to False, only the IAM user that created a job flow can view and manage it.'
+    required: true

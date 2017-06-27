@@ -1,0 +1,29 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: storagegateway_list_file_shares
+runner_type: python-script
+parameters:
+  action:
+    default: list_file_shares
+    immutable: true
+    type: string
+  cls:
+    default: storagegateway
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  GatewayARN:
+    type: string
+    description: 'The Amazon resource Name (ARN) of the gateway whose file shares you want to list. If this field is not present, all file shares under your account are listed.'
+  Limit:
+    type: integer
+    description: 'The maximum number of file shares to return in the response. The value must be an integer with a value greater than zero. Optional.'
+  Marker:
+    type: string
+    description: 'Opaque pagination token returned from a previous ListFileShares operation. If present, Marker specifies where to continue the list from after a previous call to ListFileShares. Optional.'

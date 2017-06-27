@@ -20,18 +20,18 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ""
+    description: ''
     required: true
   Key:
     type: string
-    description: ""
+    description: ''
     required: true
   MFA:
     type: string
-    description: "The concatenation of the authentication device's serial number, a space, and the value that is displayed on your authentication device."
+    description: 'The concatenation of the authentication device"s serial number, a space, and the value that is displayed on your authentication device.'
   VersionId:
     type: string
-    description: "VersionId used to reference a specific version of the object."
+    description: 'VersionId used to reference a specific version of the object.'
   RequestPayer:
     type: string
-    description: ""
+    description: ''

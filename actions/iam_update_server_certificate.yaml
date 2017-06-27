@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: iam_update_server_certificate
+runner_type: python-script
+parameters:
+  action:
+    default: update_server_certificate
+    immutable: true
+    type: string
+  cls:
+    default: iam
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ServerCertificateName:
+    type: string
+    description: 'The name of the server certificate that you want to update. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-'
+    required: true
+  NewPath:
+    type: string
+    description: 'The new path for the server certificate. Include this only if you are updating the server certificate"s path. This paramater allows (per its regex pattern) a string of characters consisting of either a forward slash (/) by itself or a string that must begin and end with forward slashes, containing any ASCII character from the ! (\u0021) thru the DEL character (\u007F), including most punctuation characters, digits, and upper and lowercased letters.'
+  NewServerCertificateName:
+    type: string
+    description: 'The new name for the server certificate. Include this only if you are updating the server certificate"s name. The name of the certificate cannot contain any spaces. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-'

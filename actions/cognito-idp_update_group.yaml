@@ -1,0 +1,37 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cognito-idp_update_group
+runner_type: python-script
+parameters:
+  action:
+    default: update_group
+    immutable: true
+    type: string
+  cls:
+    default: cognito-idp
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  GroupName:
+    type: string
+    description: 'The name of the group.'
+    required: true
+  UserPoolId:
+    type: string
+    description: 'The user pool ID for the user pool.'
+    required: true
+  Description:
+    type: string
+    description: 'A string containing the new description of the group.'
+  RoleArn:
+    type: string
+    description: 'The new role ARN for the group. This is used for setting the cognito:roles and cognito:preferred_role claims in the token.'
+  Precedence:
+    type: integer
+    description: 'The new precedence value for the group. For more information about this parameter, see CreateGroupRequest.'

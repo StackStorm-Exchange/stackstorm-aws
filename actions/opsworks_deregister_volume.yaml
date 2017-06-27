@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: opsworks_deregister_volume
+runner_type: python-script
+parameters:
+  action:
+    default: deregister_volume
+    immutable: true
+    type: string
+  cls:
+    default: opsworks
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  VolumeId:
+    type: string
+    description: 'The AWS OpsWorks volume ID, which is the GUID that AWS OpsWorks assigned to the instance when you registered the volume with the stack, not the Amazon EC2 volume ID.'
+    required: true

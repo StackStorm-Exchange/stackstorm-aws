@@ -1,0 +1,26 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: elastictranscoder_list_pipelines
+runner_type: python-script
+parameters:
+  action:
+    default: list_pipelines
+    immutable: true
+    type: string
+  cls:
+    default: elastictranscoder
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Ascending:
+    type: string
+    description: 'To list pipelines in chronological order by the date and time that they were created, enter true. To list pipelines in reverse chronological order, enter false.'
+  PageToken:
+    type: string
+    description: 'When Elastic Transcoder returns more than one page of results, use pageToken in subsequent GET requests to get each successive page of results. '

@@ -20,12 +20,12 @@ parameters:
     type: string
   AutoScalingGroupName:
     type: string
-    description: "The name of the Auto Scaling group."
+    description: 'The name of the Auto Scaling group.'
     required: true
   DesiredCapacity:
     type: integer
-    description: "The number of EC2 instances that should be running in the Auto Scaling group."
+    description: 'The number of EC2 instances that should be running in the Auto Scaling group.'
     required: true
   HonorCooldown:
     type: boolean
-    description: "By default, SetDesiredCapacity overrides any cooldown period associated with the Auto Scaling group. Specify True to make Auto Scaling to wait for the cool-down period associated with the Auto Scaling group to complete before initiating a scaling activity to set your Auto Scaling group to its new capacity."
+    description: 'By default, SetDesiredCapacity overrides any cooldown period associated with the Auto Scaling group. Specify True to make Auto Scaling to wait for the cool-down period associated with the Auto Scaling group to complete before initiating a scaling activity to set your Auto Scaling group to its new capacity.'

@@ -1,0 +1,45 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: codedeploy_create_deployment
+runner_type: python-script
+parameters:
+  action:
+    default: create_deployment
+    immutable: true
+    type: string
+  cls:
+    default: codedeploy
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  applicationName:
+    type: string
+    description: 'The name of an AWS CodeDeploy application associated with the applicable IAM user or AWS account.'
+    required: true
+  deploymentGroupName:
+    type: string
+    description: 'The name of the deployment group.'
+  revision:
+    type: object
+    description: 'The type and location of the revision to deploy.'
+  deploymentConfigName:
+    type: string
+    description: 'The name of a deployment configuration associated with the applicable IAM user or AWS account. If not specified, the value configured in the deployment group will be used as the default. If the deployment group does not have a deployment configuration associated with it, then CodeDeployDefault.OneAtATime will be used by default.'
+  description:
+    type: string
+    description: 'A comment about the deployment.'
+  ignoreApplicationStopFailures:
+    type: boolean
+    description: 'If set to true, then if the deployment causes the ApplicationStop deployment lifecycle event to an instance to fail, the deployment to that instance will not be considered to have failed at that point and will continue on to the BeforeInstall deployment lifecycle event. If set to false or not specified, then if the deployment causes the ApplicationStop deployment lifecycle event to fail to an instance, the deployment to that instance will stop, and the deployment to that instance will be considered to have failed.'
+  autoRollbackConfiguration:
+    type: object
+    description: 'Configuration information for an automatic rollback that is added when a deployment is created.'
+  updateOutdatedInstancesOnly:
+    type: boolean
+    description: 'Indicates whether to deploy to all instances or only to instances that are not running the latest application revision.'

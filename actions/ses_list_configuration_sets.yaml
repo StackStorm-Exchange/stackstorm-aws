@@ -1,0 +1,26 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ses_list_configuration_sets
+runner_type: python-script
+parameters:
+  action:
+    default: list_configuration_sets
+    immutable: true
+    type: string
+  cls:
+    default: ses
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  NextToken:
+    type: string
+    description: 'A token returned from a previous call to ListConfigurationSets to indicate the position of the configuration set in the configuration set list.'
+  MaxItems:
+    type: integer
+    description: 'The number of configuration sets to return.'

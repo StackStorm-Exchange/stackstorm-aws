@@ -1,0 +1,47 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: apigateway_create_stage
+runner_type: python-script
+parameters:
+  action:
+    default: create_stage
+    immutable: true
+    type: string
+  cls:
+    default: apigateway
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  restApiId:
+    type: string
+    description: 'The identifier of the RestApi resource for the Stage resource to create.'
+    required: true
+  stageName:
+    type: string
+    description: 'The name for the Stage resource.'
+    required: true
+  deploymentId:
+    type: string
+    description: 'The identifier of the Deployment resource for the Stage resource.'
+    required: true
+  description:
+    type: string
+    description: 'The description of the Stage resource.'
+  cacheClusterEnabled:
+    type: boolean
+    description: 'Whether cache clustering is enabled for the stage.'
+  cacheClusterSize:
+    type: string
+    description: 'The stage"s cache cluster size.'
+  variables:
+    type: object
+    description: 'A map that defines the stage variables for the new Stage resource. Variable names can have alphanumeric and underscore characters, and the values must match [A-Za-z0-9-._~:/?#&amp;=,]+.'
+  documentationVersion:
+    type: string
+    description: 'The version of the associated API documentation.'

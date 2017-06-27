@@ -1,0 +1,47 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: apigateway_test_invoke_method
+runner_type: python-script
+parameters:
+  action:
+    default: test_invoke_method
+    immutable: true
+    type: string
+  cls:
+    default: apigateway
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  restApiId:
+    type: string
+    description: 'Specifies a test invoke method request"s API identifier.'
+    required: true
+  resourceId:
+    type: string
+    description: 'Specifies a test invoke method request"s resource ID.'
+    required: true
+  httpMethod:
+    type: string
+    description: 'Specifies a test invoke method request"s HTTP method.'
+    required: true
+  pathWithQueryString:
+    type: string
+    description: 'The URI path, including query string, of the simulated invocation request. Use this to specify path parameters and query string parameters.'
+  body:
+    type: string
+    description: 'The simulated request body of an incoming invocation request.'
+  headers:
+    type: object
+    description: 'A key-value map of headers to simulate an incoming invocation request.'
+  clientCertificateId:
+    type: string
+    description: 'A ClientCertificate identifier to use in the test invocation. API Gateway will use the certificate when making the HTTPS request to the defined back-end endpoint.'
+  stageVariables:
+    type: object
+    description: 'A key-value map of stage variables to simulate an invocation on a deployed Stage.'

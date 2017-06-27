@@ -1,36 +1,51 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: ec2_modify_image_attribute
+runner_type: python-script
 parameters:
   action:
     default: modify_image_attribute
     immutable: true
     type: string
-  attribute:
-    default: launchPermission
-    type: string
   cls:
-    default: EC2Connection
-    immutable: true
+    default: ec2
     type: string
-  dry_run:
-    default: false
-    type: boolean
-  groups:
-    type: string
-  image_id:
-    required: true
+  headers:
     type: string
   module_path:
-    default: boto.ec2.connection
+    default: boto3
     immutable: true
     type: string
-  operation:
-    default: add
+  ImageId:
     type: string
-  product_codes:
+    description: 'The ID of the AMI.'
+    required: true
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+  Attribute:
     type: string
-  user_ids:
+    description: 'The name of the attribute to modify.'
+  OperationType:
     type: string
-runner_type: python-script
+    description: 'The operation type.'
+  UserIds:
+    type: array
+    description: 'One or more AWS account IDs. This is only valid when modifying the launchPermission attribute.'
+  UserGroups:
+    type: array
+    description: 'One or more user groups. This is only valid when modifying the launchPermission attribute.'
+  ProductCodes:
+    type: array
+    description: 'One or more product codes. After you add a product code to an AMI, it can"t be removed. This is only valid when modifying the productCodes attribute.'
+  Value:
+    type: string
+    description: 'The value of the attribute being modified. This is only valid when modifying the description attribute.'
+  LaunchPermission:
+    type: object
+    description: 'A launch permission modification.'
+  Description:
+    type: object
+    description: 'A description for the AMI.'

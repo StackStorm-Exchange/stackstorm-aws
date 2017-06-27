@@ -1,0 +1,34 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cognito-idp_list_users_in_group
+runner_type: python-script
+parameters:
+  action:
+    default: list_users_in_group
+    immutable: true
+    type: string
+  cls:
+    default: cognito-idp
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  UserPoolId:
+    type: string
+    description: 'The user pool ID for the user pool.'
+    required: true
+  GroupName:
+    type: string
+    description: 'The name of the group.'
+    required: true
+  Limit:
+    type: integer
+    description: 'The limit of the request to list users.'
+  NextToken:
+    type: string
+    description: 'An identifier that was returned from the previous call to this operation, which can be used to return the next set of items in the list.'

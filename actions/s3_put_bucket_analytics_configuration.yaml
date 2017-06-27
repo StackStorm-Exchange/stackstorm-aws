@@ -20,13 +20,13 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: "The name of the bucket to which an analytics configuration is stored."
+    description: 'The name of the bucket to which an analytics configuration is stored.'
     required: true
   Id:
     type: string
-    description: "The identifier used to represent an analytics configuration."
+    description: 'The identifier used to represent an analytics configuration.'
     required: true
   AnalyticsConfiguration:
     type: object
-    description: "The configuration and any analyses for the analytics filter."
+    description: 'The configuration and any analyses for the analytics filter.'
     required: true

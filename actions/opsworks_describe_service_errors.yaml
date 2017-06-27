@@ -1,0 +1,29 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: opsworks_describe_service_errors
+runner_type: python-script
+parameters:
+  action:
+    default: describe_service_errors
+    immutable: true
+    type: string
+  cls:
+    default: opsworks
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  StackId:
+    type: string
+    description: 'The stack ID. If you use this parameter, DescribeServiceErrors returns descriptions of the errors associated with the specified stack.'
+  InstanceId:
+    type: string
+    description: 'The instance ID. If you use this parameter, DescribeServiceErrors returns descriptions of the errors associated with the specified instance.'
+  ServiceErrorIds:
+    type: array
+    description: 'An array of service error IDs. If you use this parameter, DescribeServiceErrors returns descriptions of the specified errors. Otherwise, it returns a description of every error.'

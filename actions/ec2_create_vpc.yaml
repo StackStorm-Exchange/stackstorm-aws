@@ -1,0 +1,33 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ec2_create_vpc
+runner_type: python-script
+parameters:
+  action:
+    default: create_vpc
+    immutable: true
+    type: string
+  cls:
+    default: ec2
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  CidrBlock:
+    type: string
+    description: 'The IPv4 network range for the VPC, in CIDR notation. For example, 10.0.0.0/16.'
+    required: true
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+  InstanceTenancy:
+    type: string
+    description: 'The tenancy options for instances launched into the VPC. For default, instances are launched with shared tenancy by default. You can launch instances with any tenancy into a shared tenancy VPC. For dedicated, instances are launched as dedicated tenancy instances by default. You can only launch instances with a tenancy of dedicated or host into a dedicated tenancy VPC.   Important: The host value cannot be used with this parameter. Use the default or dedicated values only. Default: default '
+  AmazonProvidedIpv6CidrBlock:
+    type: boolean
+    description: 'Requests an Amazon-provided IPv6 CIDR block with a /56 prefix length for the VPC. You cannot specify the range of IP addresses, or the size of the CIDR block.'

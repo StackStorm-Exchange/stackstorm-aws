@@ -1,0 +1,32 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: application-autoscaling_deregister_scalable_target
+runner_type: python-script
+parameters:
+  action:
+    default: deregister_scalable_target
+    immutable: true
+    type: string
+  cls:
+    default: application-autoscaling
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ServiceNamespace:
+    type: string
+    description: 'The namespace of the AWS service. For more information, see AWS Service Namespaces in the Amazon Web Services General Reference.'
+    required: true
+  ResourceId:
+    type: string
+    description: 'The identifier of the resource associated with the scalable target. This string consists of the resource type and unique identifier.   ECS service - The resource type is service and the unique identifier is the cluster name and service name. Example: service/default/sample-webapp.   Spot fleet request - The resource type is spot-fleet-request and the unique identifier is the Spot fleet request ID. Example: spot-fleet-request/sfr-73fbd2ce-aa30-494c-8788-1cee4EXAMPLE.   EMR cluster - The resource type is instancegroup and the unique identifier is the cluster ID and instance group ID. Example: instancegroup/j-2EEZNYKUA1NTV/ig-1791Y4E1L8YI0.  '
+    required: true
+  ScalableDimension:
+    type: string
+    description: 'The scalable dimension associated with the scalable target. This string consists of the service namespace, resource type, and scaling property.    ecs:service:DesiredCount - The desired task count of an ECS service.    ec2:spot-fleet-request:TargetCapacity - The target capacity of a Spot fleet request.    elasticmapreduce:instancegroup:InstanceCount - The instance count of an EMR Instance Group.  '
+    required: true

@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: codedeploy_delete_application
+runner_type: python-script
+parameters:
+  action:
+    default: delete_application
+    immutable: true
+    type: string
+  cls:
+    default: codedeploy
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  applicationName:
+    type: string
+    description: 'The name of an AWS CodeDeploy application associated with the applicable IAM user or AWS account.'
+    required: true

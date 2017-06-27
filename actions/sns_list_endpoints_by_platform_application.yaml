@@ -20,8 +20,8 @@ parameters:
     type: string
   PlatformApplicationArn:
     type: string
-    description: "PlatformApplicationArn for ListEndpointsByPlatformApplicationInput action."
+    description: 'PlatformApplicationArn for ListEndpointsByPlatformApplicationInput action.'
     required: true
   NextToken:
     type: string
-    description: "NextToken string is used when calling ListEndpointsByPlatformApplication action to retrieve additional records that are available after the first page results."
+    description: 'NextToken string is used when calling ListEndpointsByPlatformApplication action to retrieve additional records that are available after the first page results.'

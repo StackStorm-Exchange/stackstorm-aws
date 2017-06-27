@@ -1,0 +1,35 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cognito-idp_admin_update_device_status
+runner_type: python-script
+parameters:
+  action:
+    default: admin_update_device_status
+    immutable: true
+    type: string
+  cls:
+    default: cognito-idp
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  UserPoolId:
+    type: string
+    description: 'The user pool ID&gt;'
+    required: true
+  Username:
+    type: string
+    description: 'The user name.'
+    required: true
+  DeviceKey:
+    type: string
+    description: 'The device key.'
+    required: true
+  DeviceRememberedStatus:
+    type: string
+    description: 'The status indicating whether a device has been remembered or not.'

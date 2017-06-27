@@ -1,24 +1,28 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: iam_delete_user_policy
+runner_type: python-script
 parameters:
   action:
     default: delete_user_policy
     immutable: true
     type: string
   cls:
-    default: IAMConnection
-    immutable: true
+    default: iam
+    type: string
+  headers:
     type: string
   module_path:
-    default: boto.iam.connection
+    default: boto3
     immutable: true
     type: string
-  policy_name:
-    required: true
+  UserName:
     type: string
-  user_name:
+    description: 'The name (friendly name, not ARN) identifying the user that the policy is embedded in. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-'
     required: true
+  PolicyName:
     type: string
-runner_type: python-script
+    description: 'The name identifying the policy document to delete. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-'
+    required: true

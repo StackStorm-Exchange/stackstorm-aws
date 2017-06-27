@@ -1,0 +1,35 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: config_describe_compliance_by_resource
+runner_type: python-script
+parameters:
+  action:
+    default: describe_compliance_by_resource
+    immutable: true
+    type: string
+  cls:
+    default: config
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ResourceType:
+    type: string
+    description: 'The types of AWS resources for which you want compliance information; for example, AWS::EC2::Instance. For this action, you can specify that the resource type is an AWS account by specifying AWS::::Account.'
+  ResourceId:
+    type: string
+    description: 'The ID of the AWS resource for which you want compliance information. You can specify only one resource ID. If you specify a resource ID, you must also specify a type for ResourceType.'
+  ComplianceTypes:
+    type: array
+    description: 'Filters the results by compliance. The allowed values are COMPLIANT, NON_COMPLIANT, and INSUFFICIENT_DATA.'
+  Limit:
+    type: integer
+    description: 'The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a limit greater than 100. If you specify 0, AWS Config uses the default.'
+  NextToken:
+    type: string
+    description: 'The nextToken string returned on a previous page that you use to get the next page of results in a paginated response.'

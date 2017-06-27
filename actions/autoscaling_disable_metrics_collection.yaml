@@ -20,8 +20,8 @@ parameters:
     type: string
   AutoScalingGroupName:
     type: string
-    description: "The name or Amazon Resource Name (ARN) of the group."
+    description: 'The name or Amazon Resource Name (ARN) of the group.'
     required: true
   Metrics:
     type: array
-    description: "One or more of the following metrics. If you omit this parameter, all metrics are disabled.    GroupMinSize     GroupMaxSize     GroupDesiredCapacity     GroupInServiceInstances     GroupPendingInstances     GroupStandbyInstances     GroupTerminatingInstances     GroupTotalInstances   "
+    description: 'One or more of the following metrics. If you omit this parameter, all metrics are disabled.    GroupMinSize     GroupMaxSize     GroupDesiredCapacity     GroupInServiceInstances     GroupPendingInstances     GroupStandbyInstances     GroupTerminatingInstances     GroupTotalInstances   '

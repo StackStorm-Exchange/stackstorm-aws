@@ -1,30 +1,35 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: ec2_attach_network_interface
+runner_type: python-script
 parameters:
   action:
     default: attach_network_interface
     immutable: true
     type: string
   cls:
-    default: EC2Connection
-    immutable: true
+    default: ec2
     type: string
-  device_index:
-    required: true
-    type: string
-  dry_run:
-    default: false
-    type: boolean
-  instance_id:
-    required: true
+  headers:
     type: string
   module_path:
-    default: boto.ec2.connection
+    default: boto3
     immutable: true
     type: string
-  network_interface_id:
-    required: true
+  NetworkInterfaceId:
     type: string
-runner_type: python-script
+    description: 'The ID of the network interface.'
+    required: true
+  InstanceId:
+    type: string
+    description: 'The ID of the instance.'
+    required: true
+  DeviceIndex:
+    type: integer
+    description: 'The index of the device for the network interface attachment.'
+    required: true
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'

@@ -1,0 +1,35 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cloudwatch_set_alarm_state
+runner_type: python-script
+parameters:
+  action:
+    default: set_alarm_state
+    immutable: true
+    type: string
+  cls:
+    default: cloudwatch
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  AlarmName:
+    type: string
+    description: 'The name for the alarm. This name must be unique within the AWS account. The maximum length is 255 characters.'
+    required: true
+  StateValue:
+    type: string
+    description: 'The value of the state.'
+    required: true
+  StateReason:
+    type: string
+    description: 'The reason that this alarm is set to this specific state, in text format.'
+    required: true
+  StateReasonData:
+    type: string
+    description: 'The reason that this alarm is set to this specific state, in JSON format.'

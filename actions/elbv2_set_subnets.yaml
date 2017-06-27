@@ -20,9 +20,9 @@ parameters:
     type: string
   LoadBalancerArn:
     type: string
-    description: "The Amazon Resource Name (ARN) of the load balancer."
+    description: 'The Amazon Resource Name (ARN) of the load balancer.'
     required: true
   Subnets:
     type: array
-    description: "The IDs of the subnets. You must specify at least two subnets. You can add only one subnet per Availability Zone."
+    description: 'The IDs of the subnets. You must specify at least two subnets. You can add only one subnet per Availability Zone.'
     required: true

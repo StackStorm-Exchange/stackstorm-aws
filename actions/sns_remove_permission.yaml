@@ -20,9 +20,9 @@ parameters:
     type: string
   TopicArn:
     type: string
-    description: "The ARN of the topic whose access control policy you wish to modify."
+    description: 'The ARN of the topic whose access control policy you wish to modify.'
     required: true
   Label:
     type: string
-    description: "The unique label of the statement you want to remove."
+    description: 'The unique label of the statement you want to remove.'
     required: true

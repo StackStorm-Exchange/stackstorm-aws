@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ecr_initiate_layer_upload
+runner_type: python-script
+parameters:
+  action:
+    default: initiate_layer_upload
+    immutable: true
+    type: string
+  cls:
+    default: ecr
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  repositoryName:
+    type: string
+    description: 'The name of the repository that you intend to upload layers to.'
+    required: true
+  registryId:
+    type: string
+    description: 'The AWS account ID associated with the registry that you intend to upload layers to. If you do not specify a registry, the default registry is assumed.'

@@ -1,0 +1,40 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: meteringmarketplace_meter_usage
+runner_type: python-script
+parameters:
+  action:
+    default: meter_usage
+    immutable: true
+    type: string
+  cls:
+    default: meteringmarketplace
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ProductCode:
+    type: string
+    description: 'Product code is used to uniquely identify a product in AWS Marketplace. The product code should be the same as the one used during the publishing of a new product.'
+    required: true
+  Timestamp:
+    type: string
+    description: 'Timestamp of the hour, recorded in UTC. The seconds and milliseconds portions of the timestamp will be ignored.'
+    required: true
+  UsageDimension:
+    type: string
+    description: 'It will be one of the fcp dimension name provided during the publishing of the product.'
+    required: true
+  UsageQuantity:
+    type: integer
+    description: 'Consumption value for the hour.'
+    required: true
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the permissions required for the action, but does not make the request. If you have the permissions, the request returns DryRunOperation; otherwise, it returns UnauthorizedException.'
+    required: true

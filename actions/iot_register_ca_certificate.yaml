@@ -1,0 +1,34 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: iot_register_ca_certificate
+runner_type: python-script
+parameters:
+  action:
+    default: register_ca_certificate
+    immutable: true
+    type: string
+  cls:
+    default: iot
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  caCertificate:
+    type: string
+    description: 'The CA certificate.'
+    required: true
+  verificationCertificate:
+    type: string
+    description: 'The private key verification certificate.'
+    required: true
+  setAsActive:
+    type: boolean
+    description: 'A boolean value that specifies if the CA certificate is set to active.'
+  allowAutoRegistration:
+    type: boolean
+    description: 'Allows this CA certificate to be used for auto registration of device certificates.'

@@ -1,0 +1,23 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cognito-idp_delete_user
+runner_type: python-script
+parameters:
+  action:
+    default: delete_user
+    immutable: true
+    type: string
+  cls:
+    default: cognito-idp
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  AccessToken:
+    type: string
+    description: 'The access token from a request to delete a user.'

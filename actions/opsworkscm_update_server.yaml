@@ -1,0 +1,36 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: opsworkscm_update_server
+runner_type: python-script
+parameters:
+  action:
+    default: update_server
+    immutable: true
+    type: string
+  cls:
+    default: opsworkscm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ServerName:
+    type: string
+    description: 'The name of the server to update. '
+    required: true
+  DisableAutomatedBackup:
+    type: boolean
+    description: 'Setting DisableAutomatedBackup to true disables automated or scheduled backups. Automated backups are enabled by default. '
+  BackupRetentionCount:
+    type: integer
+    description: 'Sets the number of automated backups that you want to keep. '
+  PreferredMaintenanceWindow:
+    type: string
+    description: ''
+  PreferredBackupWindow:
+    type: string
+    description: ''

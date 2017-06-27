@@ -20,7 +20,7 @@ parameters:
     type: string
   Marker:
     type: string
-    description: "Optional string. An opaque pagination token returned from a previous ListFunctions operation. If present, indicates where to continue the listing. "
+    description: 'Optional string. An opaque pagination token returned from a previous ListFunctions operation. If present, indicates where to continue the listing. '
   MaxItems:
     type: integer
-    description: "Optional integer. Specifies the maximum number of AWS Lambda functions to return in response. This parameter value must be greater than 0."
+    description: 'Optional integer. Specifies the maximum number of AWS Lambda functions to return in response. This parameter value must be greater than 0.'

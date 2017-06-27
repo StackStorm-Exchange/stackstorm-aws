@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: kms_update_alias
+runner_type: python-script
+parameters:
+  action:
+    default: update_alias
+    immutable: true
+    type: string
+  cls:
+    default: kms
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  AliasName:
+    type: string
+    description: 'String that contains the name of the alias to be modified. The name must start with the word "alias" followed by a forward slash (alias/). Aliases that begin with "alias/aws" are reserved.'
+    required: true
+  TargetKeyId:
+    type: string
+    description: 'Unique identifier of the customer master key to be mapped to the alias. This value can be a globally unique identifier or the fully specified ARN of a key.   Key ARN Example - arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012   Globally Unique Key ID Example - 12345678-1234-1234-1234-123456789012   You can call ListAliases to verify that the alias is mapped to the correct TargetKeyId.'
+    required: true

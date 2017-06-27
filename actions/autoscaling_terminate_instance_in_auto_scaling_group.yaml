@@ -20,9 +20,9 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: "The ID of the instance."
+    description: 'The ID of the instance.'
     required: true
   ShouldDecrementDesiredCapacity:
     type: boolean
-    description: "If true, terminating the instance also decrements the size of the Auto Scaling group."
+    description: 'If true, terminating the instance also decrements the size of the Auto Scaling group.'
     required: true

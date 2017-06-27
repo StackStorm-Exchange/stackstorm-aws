@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: redshift_delete_cluster_security_group
+runner_type: python-script
+parameters:
+  action:
+    default: delete_cluster_security_group
+    immutable: true
+    type: string
+  cls:
+    default: redshift
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ClusterSecurityGroupName:
+    type: string
+    description: 'The name of the cluster security group to be deleted.'
+    required: true

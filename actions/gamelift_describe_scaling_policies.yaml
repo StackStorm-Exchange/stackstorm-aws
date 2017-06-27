@@ -1,0 +1,33 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: gamelift_describe_scaling_policies
+runner_type: python-script
+parameters:
+  action:
+    default: describe_scaling_policies
+    immutable: true
+    type: string
+  cls:
+    default: gamelift
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  FleetId:
+    type: string
+    description: 'Unique identifier for a fleet. Specify the fleet to retrieve scaling policies for.'
+    required: true
+  StatusFilter:
+    type: string
+    description: 'Scaling policy status to filter results on. A scaling policy is only in force when in an ACTIVE status.    ACTIVE – The scaling policy is currently in force.    UPDATEREQUESTED – A request to update the scaling policy has been received.    UPDATING – A change is being made to the scaling policy.    DELETEREQUESTED – A request to delete the scaling policy has been received.    DELETING – The scaling policy is being deleted.    DELETED – The scaling policy has been deleted.    ERROR – An error occurred in creating the policy. It should be removed and recreated.  '
+  Limit:
+    type: integer
+    description: 'Maximum number of results to return. Use this parameter with NextToken to get results as a set of sequential pages.'
+  NextToken:
+    type: string
+    description: 'Token indicating the start of the next sequential page of results. Use the token that is returned with a previous call to this action. To specify the start of the result set, do not specify a value.'

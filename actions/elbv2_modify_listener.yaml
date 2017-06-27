@@ -20,20 +20,20 @@ parameters:
     type: string
   ListenerArn:
     type: string
-    description: "The Amazon Resource Name (ARN) of the listener."
+    description: 'The Amazon Resource Name (ARN) of the listener.'
     required: true
   Port:
     type: integer
-    description: "The port for connections from clients to the load balancer."
+    description: 'The port for connections from clients to the load balancer.'
   Protocol:
     type: string
-    description: "The protocol for connections from clients to the load balancer."
+    description: 'The protocol for connections from clients to the load balancer.'
   SslPolicy:
     type: string
-    description: "The security policy that defines which ciphers and protocols are supported."
+    description: 'The security policy that defines which ciphers and protocols are supported.'
   Certificates:
     type: array
-    description: "The SSL server certificate."
+    description: 'The SSL server certificate.'
   DefaultActions:
     type: array
-    description: "The default actions."
+    description: 'The default actions.'

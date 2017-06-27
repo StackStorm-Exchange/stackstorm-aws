@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: support_describe_attachment
+runner_type: python-script
+parameters:
+  action:
+    default: describe_attachment
+    immutable: true
+    type: string
+  cls:
+    default: support
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  attachmentId:
+    type: string
+    description: 'The ID of the attachment to return. Attachment IDs are returned by the DescribeCommunications operation.'
+    required: true

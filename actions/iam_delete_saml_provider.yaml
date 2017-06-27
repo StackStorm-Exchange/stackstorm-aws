@@ -1,21 +1,24 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: iam_delete_saml_provider
+runner_type: python-script
 parameters:
   action:
     default: delete_saml_provider
     immutable: true
     type: string
   cls:
-    default: IAMConnection
-    immutable: true
+    default: iam
+    type: string
+  headers:
     type: string
   module_path:
-    default: boto.iam.connection
+    default: boto3
     immutable: true
     type: string
-  saml_provider_arn:
-    required: true
+  SAMLProviderArn:
     type: string
-runner_type: python-script
+    description: 'The Amazon Resource Name (ARN) of the SAML provider to delete.'
+    required: true

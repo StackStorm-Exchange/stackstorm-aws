@@ -1,0 +1,39 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ec2_modify_vpc_endpoint
+runner_type: python-script
+parameters:
+  action:
+    default: modify_vpc_endpoint
+    immutable: true
+    type: string
+  cls:
+    default: ec2
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  VpcEndpointId:
+    type: string
+    description: 'The ID of the endpoint.'
+    required: true
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+  ResetPolicy:
+    type: boolean
+    description: 'Specify true to reset the policy document to the default policy. The default policy allows access to the service.'
+  PolicyDocument:
+    type: string
+    description: 'A policy document to attach to the endpoint. The policy must be in valid JSON format.'
+  AddRouteTableIds:
+    type: array
+    description: 'One or more route tables IDs to associate with the endpoint.'
+  RemoveRouteTableIds:
+    type: array
+    description: 'One or more route table IDs to disassociate from the endpoint.'

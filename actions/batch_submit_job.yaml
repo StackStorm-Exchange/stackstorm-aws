@@ -1,0 +1,41 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: batch_submit_job
+runner_type: python-script
+parameters:
+  action:
+    default: submit_job
+    immutable: true
+    type: string
+  cls:
+    default: batch
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  jobName:
+    type: string
+    description: 'The name of the job.'
+    required: true
+  jobQueue:
+    type: string
+    description: 'The job queue into which the job will be submitted. You can specify either the name or the Amazon Resource Name (ARN) of the queue. '
+    required: true
+  jobDefinition:
+    type: string
+    description: 'The job definition used by this job. This value can be either a name:revision or the Amazon Resource Name (ARN) for the job definition.'
+    required: true
+  dependsOn:
+    type: array
+    description: 'A list of job names or IDs on which this job depends. A job can depend upon a maximum of 100 jobs. '
+  parameters:
+    type: object
+    description: 'Additional parameters passed to the job that replace parameter substitution placeholders that are set in the job definition. Parameters are specified as a key and value pair mapping. Parameters in a SubmitJob request override any corresponding parameter defaults from the job definition.'
+  containerOverrides:
+    type: object
+    description: 'A list of container overrides in JSON format that specify the name of a container in the specified job definition and the overrides it should receive. You can override the default command for a container (that is specified in the job definition or the Docker image) with a command override. You can also override existing environment variables (that are specified in the job definition or Docker image) on a container or add new environment variables to it with an environment override.'

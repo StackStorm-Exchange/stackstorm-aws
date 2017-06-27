@@ -1,25 +1,31 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: rds_modify_db_subnet_group
+runner_type: python-script
 parameters:
   action:
     default: modify_db_subnet_group
     immutable: true
     type: string
   cls:
-    default: RDSConnection
-    immutable: true
+    default: rds
     type: string
-  description:
+  headers:
     type: string
   module_path:
-    default: boto.rds
+    default: boto3
     immutable: true
     type: string
-  name:
+  DBSubnetGroupName:
+    type: string
+    description: 'The name for the DB subnet group. This value is stored as a lowercase string. Constraints: Must contain no more than 255 alphanumeric characters, periods, underscores, spaces, or hyphens. Must not be default. Example: mySubnetgroup '
     required: true
+  SubnetIds:
+    type: array
+    description: 'The EC2 subnet IDs for the DB subnet group.'
+    required: true
+  DBSubnetGroupDescription:
     type: string
-  subnet_ids:
-    type: string
-runner_type: python-script
+    description: 'The description for the DB subnet group.'

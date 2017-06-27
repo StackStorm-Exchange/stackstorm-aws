@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cloudsearch_update_service_access_policies
+runner_type: python-script
+parameters:
+  action:
+    default: update_service_access_policies
+    immutable: true
+    type: string
+  cls:
+    default: cloudsearch
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DomainName:
+    type: string
+    description: ''
+    required: true
+  AccessPolicies:
+    type: string
+    description: 'The access rules you want to configure. These rules replace any existing rules. '
+    required: true

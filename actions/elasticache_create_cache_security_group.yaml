@@ -20,9 +20,9 @@ parameters:
     type: string
   CacheSecurityGroupName:
     type: string
-    description: ""
+    description: 'A name for the cache security group. This value is stored as a lowercase string. Constraints: Must contain no more than 255 alphanumeric characters. Cannot be the word "Default". Example: mysecuritygroup '
     required: true
   Description:
     type: string
-    description: ""
+    description: 'A description for the cache security group.'
     required: true

@@ -20,9 +20,9 @@ parameters:
     type: string
   ResourceArns:
     type: array
-    description: "The Amazon Resource Name (ARN) of the resource."
+    description: 'The Amazon Resource Name (ARN) of the resource.'
     required: true
   TagKeys:
     type: array
-    description: "The tag keys for the tags to remove."
+    description: 'The tag keys for the tags to remove.'
     required: true

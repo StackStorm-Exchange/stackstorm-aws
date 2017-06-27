@@ -1,0 +1,42 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ssm_create_association
+runner_type: python-script
+parameters:
+  action:
+    default: create_association
+    immutable: true
+    type: string
+  cls:
+    default: ssm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Name:
+    type: string
+    description: 'The name of the SSM document.'
+    required: true
+  DocumentVersion:
+    type: string
+    description: 'The document version you want to associate with the target(s). Can be a specific version or the default version.'
+  InstanceId:
+    type: string
+    description: 'The instance ID.'
+  Parameters:
+    type: object
+    description: 'The parameters for the documents runtime configuration. '
+  Targets:
+    type: array
+    description: 'The targets (either instances or tags) for the association. Instances are specified using Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;. Tags are specified using Key=&lt;tag name&gt;,Values=&lt;tag value&gt;.'
+  ScheduleExpression:
+    type: string
+    description: 'A cron expression when the association will be applied to the target(s). Supported expressions are every half, 1, 2, 4, 8 or 12 hour(s); every specified day and time of the week. For example: cron(0 0/30 * 1/1 * ? *) to run every thirty minutes; cron(0 0 0/4 1/1 * ? *) to run every four hours; and cron(0 0 10 ? * SUN *) to run every Sunday at 10 a.m.'
+  OutputLocation:
+    type: object
+    description: 'An Amazon S3 bucket where you want to store the output details of the request. For example:  "{ \"S3Location\": { \"OutputS3Region\": \"&lt;region&gt;\", \"OutputS3BucketName\": \"bucket name\", \"OutputS3KeyPrefix\": \"folder name\" } }" '

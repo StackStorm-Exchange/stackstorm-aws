@@ -20,9 +20,9 @@ parameters:
     type: string
   ResourceArns:
     type: array
-    description: "The Amazon Resource Name (ARN) of the resource."
+    description: 'The Amazon Resource Name (ARN) of the resource.'
     required: true
   Tags:
     type: array
-    description: "The tags. Each resource can have a maximum of 10 tags."
+    description: 'The tags. Each resource can have a maximum of 10 tags.'
     required: true

@@ -1,0 +1,29 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ec2_describe_key_pairs
+runner_type: python-script
+parameters:
+  action:
+    default: describe_key_pairs
+    immutable: true
+    type: string
+  cls:
+    default: ec2
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+  KeyNames:
+    type: array
+    description: 'One or more key pair names. Default: Describes all your key pairs.'
+  Filters:
+    type: array
+    description: 'One or more filters.    fingerprint - The fingerprint of the key pair.    key-name - The name of the key pair.  '

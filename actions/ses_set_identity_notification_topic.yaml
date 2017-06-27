@@ -1,0 +1,31 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ses_set_identity_notification_topic
+runner_type: python-script
+parameters:
+  action:
+    default: set_identity_notification_topic
+    immutable: true
+    type: string
+  cls:
+    default: ses
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Identity:
+    type: string
+    description: 'The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN). Examples: user@example.com, example.com, arn:aws:ses:us-east-1:123456789012:identity/example.com.'
+    required: true
+  NotificationType:
+    type: string
+    description: 'The type of notifications that will be published to the specified Amazon SNS topic.'
+    required: true
+  SnsTopic:
+    type: string
+    description: 'The Amazon Resource Name (ARN) of the Amazon SNS topic. If the parameter is omitted from the request or a null value is passed, SnsTopic is cleared and publishing is disabled.'

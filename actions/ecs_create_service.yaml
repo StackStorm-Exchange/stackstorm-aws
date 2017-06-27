@@ -1,0 +1,53 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ecs_create_service
+runner_type: python-script
+parameters:
+  action:
+    default: create_service
+    immutable: true
+    type: string
+  cls:
+    default: ecs
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  serviceName:
+    type: string
+    description: 'The name of your service. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed. Service names must be unique within a cluster, but you can have similarly named services in multiple clusters within a region or across multiple regions.'
+    required: true
+  taskDefinition:
+    type: string
+    description: 'The family and revision (family:revision) or full Amazon Resource Name (ARN) of the task definition to run in your service. If a revision is not specified, the latest ACTIVE revision is used.'
+    required: true
+  desiredCount:
+    type: integer
+    description: 'The number of instantiations of the specified task definition to place and keep running on your cluster.'
+    required: true
+  cluster:
+    type: string
+    description: 'The short name or full Amazon Resource Name (ARN) of the cluster on which to run your service. If you do not specify a cluster, the default cluster is assumed.'
+  loadBalancers:
+    type: array
+    description: 'A load balancer object representing the load balancer to use with your service. Currently, you are limited to one load balancer or target group per service. After you create a service, the load balancer name or target group ARN, container name, and container port specified in the service definition are immutable. For Elastic Load Balancing Classic load balancers, this object must contain the load balancer name, the container name (as it appears in a container definition), and the container port to access from the load balancer. When a task from this service is placed on a container instance, the container instance is registered with the load balancer specified here. For Elastic Load Balancing Application load balancers, this object must contain the load balancer target group ARN, the container name (as it appears in a container definition), and the container port to access from the load balancer. When a task from this service is placed on a container instance, the container instance and port combination is registered as a target in the target group specified here.'
+  clientToken:
+    type: string
+    description: 'Unique, case-sensitive identifier you provide to ensure the idempotency of the request. Up to 32 ASCII characters are allowed.'
+  role:
+    type: string
+    description: 'The name or full Amazon Resource Name (ARN) of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service. If you specify the role parameter, you must also specify a load balancer object with the loadBalancers parameter. If your specified role has a path other than /, then you must either specify the full role ARN (this is recommended) or prefix the role name with the path. For example, if a role with the name bar has a path of /foo/ then you would specify /foo/bar as the role name. For more information, see Friendly Names and Paths in the IAM User Guide.'
+  deploymentConfiguration:
+    type: object
+    description: 'Optional deployment parameters that control how many tasks run during the deployment and the ordering of stopping and starting tasks.'
+  placementConstraints:
+    type: array
+    description: 'An array of placement constraint objects to use for tasks in your service. You can specify a maximum of 10 constraints per task (this limit includes constraints in the task definition and those specified at run time). '
+  placementStrategy:
+    type: array
+    description: 'The placement strategy objects to use for tasks in your service. You can specify a maximum of 5 strategy rules per service.'

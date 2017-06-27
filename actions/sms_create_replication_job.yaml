@@ -1,0 +1,41 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: sms_create_replication_job
+runner_type: python-script
+parameters:
+  action:
+    default: create_replication_job
+    immutable: true
+    type: string
+  cls:
+    default: sms
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  serverId:
+    type: string
+    description: ''
+    required: true
+  seedReplicationTime:
+    type: string
+    description: ''
+    required: true
+  frequency:
+    type: integer
+    description: ''
+    required: true
+  licenseType:
+    type: string
+    description: ''
+  roleName:
+    type: string
+    description: ''
+  description:
+    type: string
+    description: ''

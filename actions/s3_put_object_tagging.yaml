@@ -20,19 +20,19 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ""
+    description: ''
     required: true
   Key:
     type: string
-    description: ""
+    description: ''
     required: true
   Tagging:
     type: object
-    description: ""
+    description: ''
     required: true
   VersionId:
     type: string
-    description: ""
+    description: ''
   ContentMD5:
     type: string
-    description: ""
+    description: ''

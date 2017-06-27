@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: kinesisanalytics_delete_application
+runner_type: python-script
+parameters:
+  action:
+    default: delete_application
+    immutable: true
+    type: string
+  cls:
+    default: kinesisanalytics
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ApplicationName:
+    type: string
+    description: 'Name of the Amazon Kinesis Analytics application to delete.'
+    required: true
+  CreateTimestamp:
+    type: string
+    description: ' You can use the DescribeApplication operation to get this value. '
+    required: true

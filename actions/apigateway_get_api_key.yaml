@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: apigateway_get_api_key
+runner_type: python-script
+parameters:
+  action:
+    default: get_api_key
+    immutable: true
+    type: string
+  cls:
+    default: apigateway
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  apiKey:
+    type: string
+    description: 'The identifier of the ApiKey resource.'
+    required: true
+  includeValue:
+    type: boolean
+    description: 'A boolean flag to specify whether (true) or not (false) the result contains the key value.'

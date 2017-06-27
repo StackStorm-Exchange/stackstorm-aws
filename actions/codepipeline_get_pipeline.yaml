@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: codepipeline_get_pipeline
+runner_type: python-script
+parameters:
+  action:
+    default: get_pipeline
+    immutable: true
+    type: string
+  cls:
+    default: codepipeline
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  name:
+    type: string
+    description: 'The name of the pipeline for which you want to get information. Pipeline names must be unique under an Amazon Web Services (AWS) user account.'
+    required: true
+  version:
+    type: integer
+    description: 'The version number of the pipeline. If you do not specify a version, defaults to the most current version.'

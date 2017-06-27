@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ec2_modify_id_format
+runner_type: python-script
+parameters:
+  action:
+    default: modify_id_format
+    immutable: true
+    type: string
+  cls:
+    default: ec2
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Resource:
+    type: string
+    description: 'The type of resource: instance | reservation | snapshot | volume '
+    required: true
+  UseLongIds:
+    type: boolean
+    description: 'Indicate whether the resource should use longer IDs (17-character IDs).'
+    required: true

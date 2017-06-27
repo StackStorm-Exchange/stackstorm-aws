@@ -1,0 +1,33 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ssm_describe_maintenance_window_targets
+runner_type: python-script
+parameters:
+  action:
+    default: describe_maintenance_window_targets
+    immutable: true
+    type: string
+  cls:
+    default: ssm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  WindowId:
+    type: string
+    description: 'The ID of the Maintenance Window whose targets should be retrieved.'
+    required: true
+  Filters:
+    type: array
+    description: 'Optional filters that can be used to narrow down the scope of the returned window targets. The supported filter keys are Type, WindowTargetId and OwnerInformation.'
+  MaxResults:
+    type: integer
+    description: 'The maximum number of items to return for this call. The call also returns a token that you can specify in a subsequent call to get the next set of results.'
+  NextToken:
+    type: string
+    description: 'The token for the next set of items to return. (You received this token from a previous call.)'

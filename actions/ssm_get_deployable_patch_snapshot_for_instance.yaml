@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ssm_get_deployable_patch_snapshot_for_instance
+runner_type: python-script
+parameters:
+  action:
+    default: get_deployable_patch_snapshot_for_instance
+    immutable: true
+    type: string
+  cls:
+    default: ssm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  InstanceId:
+    type: string
+    description: 'The ID of the instance for which the appropriate patch snapshot should be retrieved.'
+    required: true
+  SnapshotId:
+    type: string
+    description: 'The user-defined snapshot ID.'
+    required: true

@@ -1,0 +1,36 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cognito-sync_unsubscribe_from_dataset
+runner_type: python-script
+parameters:
+  action:
+    default: unsubscribe_from_dataset
+    immutable: true
+    type: string
+  cls:
+    default: cognito-sync
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  IdentityPoolId:
+    type: string
+    description: 'A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. The ID of the pool to which this identity belongs.'
+    required: true
+  IdentityId:
+    type: string
+    description: 'Unique ID for this identity.'
+    required: true
+  DatasetName:
+    type: string
+    description: 'The name of the dataset from which to unsubcribe.'
+    required: true
+  DeviceId:
+    type: string
+    description: 'The unique ID generated for this device by Cognito.'
+    required: true

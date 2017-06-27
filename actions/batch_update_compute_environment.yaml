@@ -1,0 +1,33 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: batch_update_compute_environment
+runner_type: python-script
+parameters:
+  action:
+    default: update_compute_environment
+    immutable: true
+    type: string
+  cls:
+    default: batch
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  computeEnvironment:
+    type: string
+    description: 'The name or full Amazon Resource Name (ARN) of the compute environment to update.'
+    required: true
+  state:
+    type: string
+    description: 'The state of the compute environment. Compute environments in the ENABLED state can accept jobs from a queue and scale in or out automatically based on the workload demand of its associated queues.'
+  computeResources:
+    type: object
+    description: 'Details of the compute resources managed by the compute environment. Required for a managed compute environment.'
+  serviceRole:
+    type: string
+    description: 'The name or full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to ECS, Auto Scaling, and EC2 on your behalf.'

@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: support_add_attachments_to_set
+runner_type: python-script
+parameters:
+  action:
+    default: add_attachments_to_set
+    immutable: true
+    type: string
+  cls:
+    default: support
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  attachments:
+    type: array
+    description: 'One or more attachments to add to the set. The limit is 3 attachments per set, and the size limit is 5 MB per attachment.'
+    required: true
+  attachmentSetId:
+    type: string
+    description: 'The ID of the attachment set. If an attachmentSetId is not specified, a new attachment set is created, and the ID of the set is returned in the response. If an attachmentSetId is specified, the attachments are added to the specified set, if it exists.'

@@ -1,0 +1,32 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: logs_put_destination
+runner_type: python-script
+parameters:
+  action:
+    default: put_destination
+    immutable: true
+    type: string
+  cls:
+    default: logs
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  destinationName:
+    type: string
+    description: 'A name for the destination.'
+    required: true
+  targetArn:
+    type: string
+    description: 'The ARN of an Amazon Kinesis stream to deliver matching log events to.'
+    required: true
+  roleArn:
+    type: string
+    description: 'The ARN of an IAM role that grants CloudWatch Logs permissions to call Amazon Kinesis PutRecord on the destination stream.'
+    required: true

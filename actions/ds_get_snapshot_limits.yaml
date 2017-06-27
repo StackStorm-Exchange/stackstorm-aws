@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ds_get_snapshot_limits
+runner_type: python-script
+parameters:
+  action:
+    default: get_snapshot_limits
+    immutable: true
+    type: string
+  cls:
+    default: ds
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DirectoryId:
+    type: string
+    description: 'Contains the identifier of the directory to obtain the limits for.'
+    required: true

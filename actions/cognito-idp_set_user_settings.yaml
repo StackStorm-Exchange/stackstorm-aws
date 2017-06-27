@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cognito-idp_set_user_settings
+runner_type: python-script
+parameters:
+  action:
+    default: set_user_settings
+    immutable: true
+    type: string
+  cls:
+    default: cognito-idp
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  AccessToken:
+    type: string
+    description: 'The access token for the set user settings request.'
+    required: true
+  MFAOptions:
+    type: array
+    description: 'Specifies the options for MFA (e.g., email or phone number).'
+    required: true

@@ -1,0 +1,31 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: budgets_create_budget
+runner_type: python-script
+parameters:
+  action:
+    default: create_budget
+    immutable: true
+    type: string
+  cls:
+    default: budgets
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  AccountId:
+    type: string
+    description: ''
+    required: true
+  Budget:
+    type: object
+    description: ''
+    required: true
+  NotificationsWithSubscribers:
+    type: array
+    description: ''

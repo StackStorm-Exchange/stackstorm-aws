@@ -1,0 +1,47 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: redshift_create_hsm_configuration
+runner_type: python-script
+parameters:
+  action:
+    default: create_hsm_configuration
+    immutable: true
+    type: string
+  cls:
+    default: redshift
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  HsmConfigurationIdentifier:
+    type: string
+    description: 'The identifier to be assigned to the new Amazon Redshift HSM configuration.'
+    required: true
+  Description:
+    type: string
+    description: 'A text description of the HSM configuration to be created.'
+    required: true
+  HsmIpAddress:
+    type: string
+    description: 'The IP address that the Amazon Redshift cluster must use to access the HSM.'
+    required: true
+  HsmPartitionName:
+    type: string
+    description: 'The name of the partition in the HSM where the Amazon Redshift clusters will store their database encryption keys.'
+    required: true
+  HsmPartitionPassword:
+    type: string
+    description: 'The password required to access the HSM partition.'
+    required: true
+  HsmServerPublicCertificate:
+    type: string
+    description: 'The HSMs public certificate file. When using Cloud HSM, the file name is server.pem.'
+    required: true
+  Tags:
+    type: array
+    description: 'A list of tag instances.'

@@ -1,0 +1,35 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ssm_list_commands
+runner_type: python-script
+parameters:
+  action:
+    default: list_commands
+    immutable: true
+    type: string
+  cls:
+    default: ssm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  CommandId:
+    type: string
+    description: '(Optional) If provided, lists only the specified command.'
+  InstanceId:
+    type: string
+    description: '(Optional) Lists commands issued against this instance ID.'
+  MaxResults:
+    type: integer
+    description: '(Optional) The maximum number of items to return for this call. The call also returns a token that you can specify in a subsequent call to get the next set of results.'
+  NextToken:
+    type: string
+    description: '(Optional) The token for the next set of items to return. (You received this token from a previous call.)'
+  Filters:
+    type: array
+    description: '(Optional) One or more filters. Use a filter to return a more specific list of results. '

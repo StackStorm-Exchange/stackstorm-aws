@@ -1,0 +1,46 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: storagegateway_create_cachedi_scsi_volume
+runner_type: python-script
+parameters:
+  action:
+    default: create_cachedi_scsi_volume
+    immutable: true
+    type: string
+  cls:
+    default: storagegateway
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  GatewayARN:
+    type: string
+    description: ''
+    required: true
+  VolumeSizeInBytes:
+    type: integer
+    description: ''
+    required: true
+  TargetName:
+    type: string
+    description: ''
+    required: true
+  NetworkInterfaceId:
+    type: string
+    description: ''
+    required: true
+  ClientToken:
+    type: string
+    description: ''
+    required: true
+  SnapshotId:
+    type: string
+    description: ''
+  SourceVolumeARN:
+    type: string
+    description: 'The ARN for an existing volume. Specifying this ARN makes the new volume into an exact copy of the specified existing volume"s latest recovery point. The VolumeSizeInBytes value for this new volume must be equal to or larger than the size of the existing volume, in bytes.'

@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: lightsail_import_key_pair
+runner_type: python-script
+parameters:
+  action:
+    default: import_key_pair
+    immutable: true
+    type: string
+  cls:
+    default: lightsail
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  keyPairName:
+    type: string
+    description: 'The name of the key pair for which you want to import the public key.'
+    required: true
+  publicKeyBase64:
+    type: string
+    description: 'A base64-encoded public key of the ssh-rsa type.'
+    required: true

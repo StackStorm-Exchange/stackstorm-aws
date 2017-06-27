@@ -1,0 +1,29 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cloudformation_get_template_summary
+runner_type: python-script
+parameters:
+  action:
+    default: get_template_summary
+    immutable: true
+    type: string
+  cls:
+    default: cloudformation
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  TemplateBody:
+    type: string
+    description: 'Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. For more information about templates, see Template Anatomy in the AWS CloudFormation User Guide. Conditional: You must specify only one of the following parameters: StackName, TemplateBody, or TemplateURL.'
+  TemplateURL:
+    type: string
+    description: 'Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is located in an Amazon S3 bucket. For more information about templates, see Template Anatomy in the AWS CloudFormation User Guide. Conditional: You must specify only one of the following parameters: StackName, TemplateBody, or TemplateURL.'
+  StackName:
+    type: string
+    description: 'The name or the stack ID that is associated with the stack, which are not always interchangeable. For running stacks, you can specify either the stack"s name or its unique stack ID. For deleted stack, you must specify the unique stack ID. Conditional: You must specify only one of the following parameters: StackName, TemplateBody, or TemplateURL.'

@@ -1,0 +1,36 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: gamelift_update_fleet_attributes
+runner_type: python-script
+parameters:
+  action:
+    default: update_fleet_attributes
+    immutable: true
+    type: string
+  cls:
+    default: gamelift
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  FleetId:
+    type: string
+    description: 'Unique identifier for the fleet you want to update attribute metadata for.'
+    required: true
+  Name:
+    type: string
+    description: 'Descriptive label associated with a fleet. Fleet names do not need to be unique.'
+  Description:
+    type: string
+    description: 'Human-readable description of a fleet.'
+  NewGameSessionProtectionPolicy:
+    type: string
+    description: 'Game session protection policy to apply to all new instances created in this fleet. Instances that already exist are not affected. You can set protection for individual instances using UpdateGameSession.    NoProtection – The game session can be terminated during a scale-down event.    FullProtection – If the game session is in an ACTIVE status, it cannot be terminated during a scale-down event.  '
+  ResourceCreationLimitPolicy:
+    type: object
+    description: 'Policy that limits the number of game sessions an individual player can create over a span of time. '

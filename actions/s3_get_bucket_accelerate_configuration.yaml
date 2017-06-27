@@ -20,5 +20,5 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: "Name of the bucket for which the accelerate configuration is retrieved."
+    description: 'Name of the bucket for which the accelerate configuration is retrieved.'
     required: true

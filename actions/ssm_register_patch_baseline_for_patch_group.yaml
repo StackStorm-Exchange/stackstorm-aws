@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ssm_register_patch_baseline_for_patch_group
+runner_type: python-script
+parameters:
+  action:
+    default: register_patch_baseline_for_patch_group
+    immutable: true
+    type: string
+  cls:
+    default: ssm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  BaselineId:
+    type: string
+    description: 'The ID of the patch baseline to register the patch group with.'
+    required: true
+  PatchGroup:
+    type: string
+    description: 'The name of the patch group that should be registered with the patch baseline.'
+    required: true

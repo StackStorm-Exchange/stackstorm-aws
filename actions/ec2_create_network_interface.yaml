@@ -1,30 +1,48 @@
-description: ''
+description: 
+pack: aws
 enabled: true
 entry_point: run.py
 name: ec2_create_network_interface
+runner_type: python-script
 parameters:
   action:
     default: create_network_interface
     immutable: true
     type: string
   cls:
-    default: EC2Connection
-    immutable: true
+    default: ec2
     type: string
-  description:
-    type: string
-  dry_run:
-    default: false
-    type: boolean
-  groups:
+  headers:
     type: string
   module_path:
-    default: boto.ec2.connection
+    default: boto3
     immutable: true
     type: string
-  private_ip_address:
+  SubnetId:
     type: string
-  subnet_id:
+    description: 'The ID of the subnet to associate with the network interface.'
     required: true
+  Description:
     type: string
-runner_type: python-script
+    description: 'A description for the network interface.'
+  PrivateIpAddress:
+    type: string
+    description: 'The primary private IPv4 address of the network interface. If you don"t specify an IPv4 address, Amazon EC2 selects one for you from the subnet"s IPv4 CIDR range. If you specify an IP address, you cannot indicate any IP addresses specified in privateIpAddresses as primary (only one IP address can be designated as primary).'
+  Groups:
+    type: array
+    description: 'The IDs of one or more security groups.'
+  PrivateIpAddresses:
+    type: array
+    description: 'One or more private IPv4 addresses.'
+  SecondaryPrivateIpAddressCount:
+    type: integer
+    description: 'The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet"s IPv4 CIDR range. You can"t specify this option and specify more than one private IP address using privateIpAddresses. The number of IP addresses you can assign to a network interface varies by instance type. For more information, see IP Addresses Per ENI Per Instance Type in the Amazon Virtual Private Cloud User Guide.'
+  Ipv6Addresses:
+    type: array
+    description: 'One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. You can"t use this option if you"re specifying a number of IPv6 addresses.'
+  Ipv6AddressCount:
+    type: integer
+    description: 'The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. You can"t use this option if specifying specific IPv6 addresses. If your subnet has the AssignIpv6AddressOnCreation attribute set to true, you can specify 0 to override this setting.'
+  DryRun:
+    type: boolean
+    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'

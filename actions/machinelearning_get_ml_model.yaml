@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: machinelearning_get_ml_model
+runner_type: python-script
+parameters:
+  action:
+    default: get_ml_model
+    immutable: true
+    type: string
+  cls:
+    default: machinelearning
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  MLModelId:
+    type: string
+    description: 'The ID assigned to the MLModel at creation.'
+    required: true
+  Verbose:
+    type: boolean
+    description: 'Specifies whether the GetMLModel operation should return Recipe. If true, Recipe is returned. If false, Recipe is not returned.'

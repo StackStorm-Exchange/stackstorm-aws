@@ -1,0 +1,26 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: rds_failover_db_cluster
+runner_type: python-script
+parameters:
+  action:
+    default: failover_db_cluster
+    immutable: true
+    type: string
+  cls:
+    default: rds
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DBClusterIdentifier:
+    type: string
+    description: 'A DB cluster identifier to force a failover for. This parameter is not case-sensitive. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens  '
+  TargetDBInstanceIdentifier:
+    type: string
+    description: 'The name of the instance to promote to the primary instance. You must specify the instance identifier for an Aurora Replica in the DB cluster. For example, mydbcluster-replica1.'

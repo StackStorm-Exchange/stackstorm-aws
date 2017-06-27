@@ -18,11 +18,13 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  CacheClusterId:
-    type: string
-    description: ""
-    required: true
   SnapshotName:
     type: string
-    description: ""
+    description: 'A name for the snapshot being created.'
     required: true
+  ReplicationGroupId:
+    type: string
+    description: 'The identifier of an existing replication group. The snapshot is created from this replication group.'
+  CacheClusterId:
+    type: string
+    description: 'The identifier of an existing cache cluster. The snapshot is created from this cache cluster.'
