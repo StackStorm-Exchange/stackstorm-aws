@@ -1,31 +1,44 @@
 # AWS Integration Pack
 
-The StackStorm AWS integration pack supplies action integration for EC2 and Route53.
+The StackStorm AWS integration pack supplies action integration for numerous AWS services.
 
-## Configuration
+## Prerequisites
 
-You will need to add a set of AWS credentials, and default zone to the config.yaml file:
+AWS and Stackstorm, up and running.
 
-```yaml
----
-setup:
-  region: ""
-  aws_access_key_id: ""
-  aws_secret_access_key: ""
-st2_user_data: ""
- ```
+## Setup
+
+### Install AWS pack on StackStorm
+
+1. Install the [AWS pack](https://github.com/stackstorm-exchange/stackstorm-sensu):
+
+    ```
+    # Install AWS
+    st2 pack install aws
+
+    # Check it
+    st2 action list -p aws
+    ```
+
+2. Copy the example configuration in [aws.yaml.example](./aws.yaml.example)
+to `/opt/stackstorm/configs/aws.yaml` and edit as required. It must contain:
+
+* ``region`` - Region where AWS commands will be executed
+* ``aws_access_key_id`` - Access key
+* ``aws_secret_access_key_id`` - Secret Access key
 
 You can generate the access key and secret access key by following these directions:
 
 http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingCredentials.html#Using_CreateAccessKey
 
-If you would like to use the IAM role assigned to the instance stackstorm is running set the key and secret to null and set the region.
+If you would like to use the IAM role assigned to the instance stackstorm is running set the
+key and secret to null and set the region.
+
 ```yaml
 ---
-setup:
-  region: "us-east-1"
-  aws_access_key_id: null
-  aws_secret_access_key: null
+region: "us-east-1"
+aws_access_key_id: null
+aws_secret_access_key: null
 st2_user_data: ""
  ```
 
@@ -33,21 +46,145 @@ st2_user_data: ""
 * ``service_notifications_sensor.port`` - Listen port for the HTTP interface.
 * ``service_notifications_sensor.path`` - Path where the events need to be sent.
 
-And `aws.example.file` is an example of this configuration. You can use actions and sensors by copying this file to `config.yaml` and editing the parameters in this file.
-
 **Note** : When modifying the configuration in `/opt/stackstorm/configs/` please
            remember to tell StackStorm to load these new values by running
            `st2ctl reload --register-configs`
 
 ## st2_user_data
 
-Optionally, you can set the user_data to set a default file to be used during new instance creation.  Put your user_data file somewhere accessible by the StackStorm user, and use the st2_user_data config option to set it.
+Optionally, you can set the user_data to set a default file to be used during new instance
+creation.  Put your user_data file somewhere accessible by the StackStorm user, and use
+the st2_user_data config option to set it.
 
 ```yaml
 st2_user_data: "/full/path/to/file"
  ```
 
 This file/script will be used for all invocations of the ec2_run_instances action
+
+## Actions
+
+Prior to installation of the aws pack, you can get the list of available actions here:
+
+  https://github.com/StackStorm-Exchange/stackstorm-aws/tree/master/actions
+
+Once you have installed the aws pack, you can get a list of actions in the AWS pack using:
+
+```
+st2 action list -p aws
+```
+
+To get information on a specific action, please run:
+
+```
+root@2e1d15fd5d07:/# st2 action get aws.route53_list_hosted_zones
++-------------+--------------------------------------------------------------+
+| Property    | Value                                                        |
++-------------+--------------------------------------------------------------+
+| id          | 594bfa4ed5d05c0b7e504803                                     |
+| uid         | action:aws:route53_list_hosted_zones                         |
+| ref         | aws.route53_list_hosted_zones                                |
+| pack        | aws                                                          |
+| name        | route53_list_hosted_zones                                    |
+| enabled     | True                                                         |
+| entry_point | run.py                                                       |
+| runner_type | run-python                                                   |
+| parameters  | {                                                            |
+|             |     "DelegationSetId": {                                     |
+|             |         "type": "string",                                    |
+|             |         "description": "If you"re using reusable delegation  |
+|             | sets and you want to list all of the hosted zones that are   |
+|             | associated with a reusable delegation set, specify the ID of |
+|             | that reusable delegation set. "                              |
+|             |     },                                                       |
+|             |     "headers": {                                             |
+|             |         "type": "string"                                     |
+|             |     },                                                       |
+|             |     "MaxItems": {                                            |
+|             |         "type": "string",                                    |
+|             |         "description": "(Optional) The maximum number of     |
+|             | hosted zones to be included in the response body for this    |
+|             | request. If you have more than maxitems hosted zones, the    |
+|             | value of the IsTruncated element in the response is true,    |
+|             | and the value of the NextMarker element is the hosted zone   |
+|             | ID of the first hosted zone in the next group of maxitems    |
+|             | hosted zones."                                               |
+|             |     },                                                       |
+|             |     "Marker": {                                              |
+|             |         "type": "string",                                    |
+|             |         "description": "(Optional) If you have more hosted   |
+|             | zones than the value of maxitems, ListHostedZones returns    |
+|             | only the first maxitems hosted zones. To get the next group  |
+|             | of maxitems hosted zones, submit another request to          |
+|             | ListHostedZones. For the value of marker, specify the value  |
+|             | of the NextMarker element that was returned in the previous  |
+|             | response. Hosted zones are listed in the order in which they |
+|             | were created."                                               |
+|             |     },                                                       |
+|             |     "module_path": {                                         |
+|             |         "default": "boto3",                                  |
+|             |         "type": "string",                                    |
+|             |         "immutable": true                                    |
+|             |     },                                                       |
+|             |     "action": {                                              |
+|             |         "default": "list_hosted_zones",                      |
+|             |         "type": "string",                                    |
+|             |         "immutable": true                                    |
+|             |     },                                                       |
+|             |     "cls": {                                                 |
+|             |         "default": "route53",                                |
+|             |         "type": "string"                                     |
+|             |     }                                                        |
+|             | }                                                            |
+| notify      |                                                              |
+| tags        |                                                              |
++-------------+--------------------------------------------------------------+
+```
+
+Since this action does not take any required parameters and won't create any resources that will
+cost us anything, let's run it and see what it returns.
+
+```
+$ st2 run aws.route53_list_hosted_zones
+.
+id: 594cc1c2d5d05c1185bd51e5
+status: succeeded
+parameters: None
+result:
+  exit_code: 0
+  result:
+  - HostedZones:
+    - CallerReference: 63FC852C-8B5F-12F9-8945-BC8FF413430A
+      Config:
+        PrivateZone: false
+      Id: /hostedzone/Z2MDOUVGZHYDZ7
+      Name: example.com.
+      ResourceRecordSetCount: 8
+    IsTruncated: false
+    MaxItems: '100'
+    ResponseMetadata:
+      HTTPHeaders:
+        content-length: '464'
+        content-type: text/xml
+        date: Fri, 23 Jun 2017 07:22:42 GMT
+        x-amzn-requestid: cf583b3d-57f4-11e7-a217-4b0c7596d765
+      HTTPStatusCode: 200
+      RequestId: cf583b3d-57f4-11e7-a217-4b0c7596d765
+      RetryAttempts: 0
+  stderr: ''
+  stdout: ''
+```
+
+To regenerate the actions used by this pack, run the following:
+
+```
+source /opt/stackstorm/virtualenvs/aws/bin/activate
+cd /opt/stackstorm/packs/aws/etc/st2packgen
+python st2packgen.py -d /opt/stackstorm/packs/aws/actions
+st2ctl reload --register-actions
+```
+
+`st2packgen.py` will overwrite any existing actions at `/opt/stackstorm/packs/aws/actions`.
 
 ## Sensors
 
@@ -124,19 +261,18 @@ following values in datastore:
 - aws.region
 - aws.max_number_of_messages (must be between 1 - 10)
 
-For configuration in ``config.yaml`` with config like this
+For configuration in ``aws.yaml`` with config like this
 
 ```yaml
-    setup:
-      aws_access_key_id:
-      aws_access_key_id:
-      region:
-    sqs_sensor:
-      input_queues:
-        - first_queue
-        - second_queue
-    sqs_other:
-      max_number_of_messages: 1
+aws_access_key_id:
+aws_access_key_id:
+region:
+sqs_sensor:
+  input_queues:
+    - first_queue
+    - second_queue
+sqs_other:
+  max_number_of_messages: 1
 ```
 
 If any value exist in datastore it will be taken instead of any value in config.yaml
@@ -152,234 +288,3 @@ This trigger is emitted when a single message is received from a queue.
 }
 ```
 
-## Actions
-
-### Route53 Actions
-
-* r53\_build\_base\_http\_request
-* r53\_change\_rrsets
-* r53\_close
-* r53\_create\_health\_check
-* r53\_create\_hosted\_zone
-* r53\_create\_zone
-* r53\_delete\_health\_check
-* r53\_delete\_hosted\_zone
-* r53\_get\_all\_hosted\_zones
-* r53\_get\_all\_rrsets
-* r53\_get\_change
-* r53\_get\_hosted\_zone
-* r53\_get\_hosted\_zone\_by\_name
-* r53\_get\_http\_connection
-* r53\_get\_list\_health\_checks
-* r53\_get\_path
-* r53\_get\_proxy\_auth\_header
-* r53\_get\_proxy\_url\_with\_auth
-* r53\_get\_zone
-* r53\_get\_zones
-* r53\_handle\_proxy
-* r53\_make\_request
-* r53\_new\_http\_connection
-* r53\_prefix\_proxy\_to\_path
-* r53\_proxy\_ssl
-* r53\_put\_http\_connection
-* r53\_server\_name
-* r53\_set\_host\_header
-* r53\_set\_request\_hook
-* r53\_skip\_proxy
-* r53\_zone\_add\_a
-* r53\_zone\_add\_cname
-* r53\_zone\_add\_mx
-* r53\_zone\_add\_record
-* r53\_zone\_delete
-* r53\_zone\_delete\_a
-* r53\_zone\_delete\_cname
-* r53\_zone\_delete\_mx
-* r53\_zone\_delete\_record
-* r53\_zone\_find\_records
-* r53\_zone\_get\_a
-* r53\_zone\_get\_cname
-* r53\_zone\_get\_mx
-* r53\_zone\_get\_nameservers
-* r53\_zone\_get\_records
-* r53\_zone\_update\_a
-* r53\_zone\_update\_cname
-* r53\_zone\_update\_mx
-* r53\_zone\_update\_record
-
-### EC2 Actions
-
-* ec2\_allocate\_address
-* ec2\_assign\_private\_ip\_addresses
-* ec2\_associate\_address
-* ec2\_associate\_address\_object
-* ec2\_attach\_network\_interface
-* ec2\_attach\_volume
-* ec2\_authorize\_security\_group
-* ec2\_authorize\_security\_group\_deprecated
-* ec2\_authorize\_security\_group\_egress
-* ec2\_build\_base\_http\_request
-* ec2\_build\_complex\_list\_params
-* ec2\_build\_configurations\_param\_list
-* ec2\_build\_filter\_params
-* ec2\_build\_list\_params
-* ec2\_build\_tag\_param\_list
-* ec2\_bundle\_instance
-* ec2\_cancel\_bundle\_task
-* ec2\_cancel\_reserved\_instances\_listing
-* ec2\_cancel\_spot\_instance\_requests
-* ec2\_close
-* ec2\_confirm\_product\_instance
-* ec2\_copy\_image
-* ec2\_copy\_snapshot
-* ec2\_create\_image
-* ec2\_create\_key\_pair
-* ec2\_create\_network\_interface
-* ec2\_create\_placement\_group
-* ec2\_create\_reserved\_instances\_listing
-* ec2\_create\_security\_group
-* ec2\_create\_snapshot
-* ec2\_create\_spot\_datafeed\_subscription
-* ec2\_create\_tags
-* ec2\_create\_volume
-* ec2\_delete\_key\_pair
-* ec2\_delete\_network\_interface
-* ec2\_delete\_placement\_group
-* ec2\_delete\_security\_group
-* ec2\_delete\_snapshot
-* ec2\_delete\_spot\_datafeed\_subscription
-* ec2\_delete\_tags
-* ec2\_delete\_volume
-* ec2\_deregister\_image
-* ec2\_describe\_account\_attributes
-* ec2\_describe\_reserved\_instances\_modifications
-* ec2\_describe\_vpc\_attribute
-* ec2\_detach\_network\_interface
-* ec2\_detach\_volume
-* ec2\_disassociate\_address
-* ec2\_enable\_volume\_io
-* ec2\_get\_all\_addresses
-* ec2\_get\_all\_bundle\_tasks
-* ec2\_get\_all\_images
-* ec2\_get\_all\_instance\_status
-* ec2\_get\_all\_instance\_types
-* ec2\_get\_all\_instances
-* ec2\_get\_all\_kernels
-* ec2\_get\_all\_key\_pairs
-* ec2\_get\_all\_network\_interfaces
-* ec2\_get\_all\_placement\_groups
-* ec2\_get\_all\_ramdisks
-* ec2\_get\_all\_regions
-* ec2\_get\_all\_reservations
-* ec2\_get\_all\_reserved\_instances
-* ec2\_get\_all\_reserved\_instances\_offerings
-* ec2\_get\_all\_security\_groups
-* ec2\_get\_all\_snapshots
-* ec2\_get\_all\_spot\_instance\_requests
-* ec2\_get\_all\_tags
-* ec2\_get\_all\_volume\_status
-* ec2\_get\_all\_volumes
-* ec2\_get\_all\_zones
-* ec2\_get\_console\_output
-* ec2\_get\_http\_connection
-* ec2\_get\_image
-* ec2\_get\_image\_attribute
-* ec2\_get\_instance\_attribute
-* ec2\_get\_key\_pair
-* ec2\_get\_list
-* ec2\_get\_object
-* ec2\_get\_only\_instances
-* ec2\_get\_params
-* ec2\_get\_password\_data
-* ec2\_get\_path
-* ec2\_get\_proxy\_auth\_header
-* ec2\_get\_proxy\_url\_with\_auth
-* ec2\_get\_snapshot\_attribute
-* ec2\_get\_spot\_datafeed\_subscription
-* ec2\_get\_spot\_price\_history
-* ec2\_get\_status
-* ec2\_get\_utf8\_value
-* ec2\_get\_volume\_attribute
-* ec2\_handle\_proxy
-* ec2\_import\_key\_pair
-* ec2\_make\_request
-* ec2\_modify\_image\_attribute
-* ec2\_modify\_instance\_attribute
-* ec2\_modify\_network\_interface\_attribute
-* ec2\_modify\_reserved\_instances
-* ec2\_modify\_snapshot\_attribute
-* ec2\_modify\_volume\_attribute
-* ec2\_modify\_vpc\_attribute
-* ec2\_monitor\_instance
-* ec2\_monitor\_instances
-* ec2\_new\_http\_connection
-* ec2\_prefix\_proxy\_to\_path
-* ec2\_proxy\_ssl
-* ec2\_purchase\_reserved\_instance\_offering
-* ec2\_put\_http\_connection
-* ec2\_reboot\_instances
-* ec2\_register\_image
-* ec2\_release\_address
-* ec2\_request\_spot\_instances
-* ec2\_reset\_image\_attribute
-* ec2\_reset\_instance\_attribute
-* ec2\_reset\_snapshot\_attribute
-* ec2\_revoke\_security\_group
-* ec2\_revoke\_security\_group\_deprecated
-* ec2\_revoke\_security\_group\_egress
-* ec2\_run\_instances
-* ec2\_server\_name
-* ec2\_set\_host\_header
-* ec2\_set\_request\_hook
-* ec2\_skip\_proxy
-* ec2\_start\_instances
-* ec2\_stop\_instances
-* ec2\_terminate\_instances
-* ec2\_trim\_snapshots
-* ec2\_unassign\_private\_ip\_addresses
-* ec2\_unmonitor\_instance
-* ec2\_unmonitor\_instances
-* ec2\_wait\_for\_state
-
-### SQS Actions
-
-* sqs\_add\_permission.yaml
-* sqs\_build\_base\_http\_request.yaml
-* sqs\_build\_complex\_list\_params.yaml
-* sqs\_build\_list\_params.yaml
-* sqs\_change\_message\_visibility.yaml
-* sqs\_change\_message\_visibility\_batch.yaml
-* sqs\_close.yaml
-* sqs\_create\_queue.yaml
-* sqs\_delete\_message.yaml
-* sqs\_delete\_message\_batch.yaml
-* sqs\_delete\_message\_from\_handle.yaml
-* sqs\_delete\_queue.yaml
-* sqs\_get\_all\_queues.yaml
-* sqs\_get\_dead\_letter\_source\_queues.yaml
-* sqs\_get\_http\_connection.yaml
-* sqs\_get\_list.yaml
-* sqs\_get\_object.yaml
-* sqs\_get\_path.yaml
-* sqs\_get\_proxy\_auth\_header.yaml
-* sqs\_get\_proxy\_url\_with\_auth.yaml
-* sqs\_get\_queue.yaml
-* sqs\_get\_queue\_attributes.yaml
-* sqs\_get\_status.yaml
-* sqs\_get\_utf8\_value.yaml
-* sqs\_handle\_proxy.yaml
-* sqs\_lookup.yaml
-* sqs\_make\_request.yaml
-* sqs\_new\_http\_connection.yaml
-* sqs\_prefix\_proxy\_to\_path.yaml
-* sqs\_proxy\_ssl.yaml
-* sqs\_purge\_queue.yaml
-* sqs\_put\_http\_connection.yaml
-* sqs\_receive\_message.yaml
-* sqs\_remove\_permission.yaml
-* sqs\_send\_message.yaml
-* sqs\_send\_message\_batch.yaml
-* sqs\_server\_name.yaml
-* sqs\_set\_host\_header.yaml
-* sqs\_set\_queue\_attribute.yaml
-* sqs\_set\_request\_hook.yaml
-* sqs\_skip\_proxy.yaml
