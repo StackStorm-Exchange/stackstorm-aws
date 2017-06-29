@@ -20,5 +20,5 @@ parameters:
     type: string
   pipeline:
     type: object
-    description: 'The name of the pipeline to be updated.'
+    description: "The name of the pipeline to be updated."
     required: true

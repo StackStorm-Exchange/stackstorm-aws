@@ -20,5 +20,5 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the fleet to be deleted.'
+    description: "The name of the fleet to be deleted."
     required: true

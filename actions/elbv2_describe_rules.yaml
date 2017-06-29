@@ -20,7 +20,13 @@ parameters:
     type: string
   ListenerArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the listener.'
+    description: "The Amazon Resource Name (ARN) of the listener."
   RuleArns:
     type: array
-    description: 'The Amazon Resource Names (ARN) of the rules.'
+    description: "The Amazon Resource Names (ARN) of the rules."
+  Marker:
+    type: string
+    description: "The marker for the next set of results. (You received this marker from a previous call.)"
+  PageSize:
+    type: integer
+    description: "The maximum number of results to return with this call."

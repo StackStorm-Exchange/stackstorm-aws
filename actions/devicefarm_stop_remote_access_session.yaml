@@ -20,5 +20,5 @@ parameters:
     type: string
   arn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the remote access session you wish to stop.'
+    description: "The Amazon Resource Name (ARN) of the remote access session you wish to stop."
     required: true

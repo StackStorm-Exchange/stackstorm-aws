@@ -20,16 +20,16 @@ parameters:
     type: string
   SourceDBParameterGroupIdentifier:
     type: string
-    description: ' The identifier or ARN for the source DB parameter group. For information about creating an ARN, see  Constructing an RDS Amazon Resource Name (ARN).  Constraints:   Must specify a valid DB parameter group.    Must specify a valid DB parameter group identifier, for example my-db-param-group, or a valid ARN.  '
+    description: " The identifier or ARN for the source DB parameter group. For information about creating an ARN, see  Constructing an RDS Amazon Resource Name (ARN).  Constraints:   Must specify a valid DB parameter group.    Must specify a valid DB parameter group identifier, for example my-db-param-group, or a valid ARN.  "
     required: true
   TargetDBParameterGroupIdentifier:
     type: string
-    description: 'The identifier for the copied DB parameter group. Constraints:   Cannot be null, empty, or blank   Must contain from 1 to 255 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens   Example: my-db-parameter-group '
+    description: "The identifier for the copied DB parameter group. Constraints:   Cannot be null, empty, or blank   Must contain from 1 to 255 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens   Example: my-db-parameter-group "
     required: true
   TargetDBParameterGroupDescription:
     type: string
-    description: 'A description for the copied DB parameter group.'
+    description: "A description for the copied DB parameter group."
     required: true
   Tags:
     type: array
-    description: ''
+    description: ""

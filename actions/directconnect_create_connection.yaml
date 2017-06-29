@@ -20,13 +20,16 @@ parameters:
     type: string
   location:
     type: string
-    description: ''
+    description: ""
     required: true
   bandwidth:
     type: string
-    description: ''
+    description: ""
     required: true
   connectionName:
     type: string
-    description: ''
+    description: ""
     required: true
+  lagId:
+    type: string
+    description: ""

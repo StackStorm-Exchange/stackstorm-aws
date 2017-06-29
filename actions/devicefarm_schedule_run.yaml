@@ -20,22 +20,25 @@ parameters:
     type: string
   projectArn:
     type: string
-    description: 'The ARN of the project for the run to be scheduled.'
+    description: "The ARN of the project for the run to be scheduled."
     required: true
   devicePoolArn:
     type: string
-    description: 'The ARN of the device pool for the run to be scheduled.'
+    description: "The ARN of the device pool for the run to be scheduled."
     required: true
   test:
     type: object
-    description: 'Information about the test for the run to be scheduled.'
+    description: "Information about the test for the run to be scheduled."
     required: true
   appArn:
     type: string
-    description: 'The ARN of the app to schedule a run.'
+    description: "The ARN of the app to schedule a run."
   name:
     type: string
-    description: 'The name for the run to be scheduled.'
+    description: "The name for the run to be scheduled."
   configuration:
     type: object
-    description: 'Information about the settings for the run to be scheduled.'
+    description: "Information about the settings for the run to be scheduled."
+  executionConfiguration:
+    type: object
+    description: "Specifies configuration information about a test run, such as the execution timeout (in minutes)."

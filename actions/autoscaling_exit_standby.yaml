@@ -20,8 +20,8 @@ parameters:
     type: string
   AutoScalingGroupName:
     type: string
-    description: 'The name of the Auto Scaling group.'
+    description: "The name of the Auto Scaling group."
     required: true
   InstanceIds:
     type: array
-    description: 'One or more instance IDs. You must specify at least one instance ID.'
+    description: "One or more instance IDs. You must specify at least one instance ID."

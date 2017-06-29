@@ -20,5 +20,8 @@ parameters:
     type: string
   name:
     type: string
-    description: 'The project"s name.'
+    description: "The project's name."
     required: true
+  defaultJobTimeoutMinutes:
+    type: integer
+    description: "Sets the execution timeout value (in minutes) for a project. All test runs in this project will use the specified execution timeout value unless overridden when scheduling a run."

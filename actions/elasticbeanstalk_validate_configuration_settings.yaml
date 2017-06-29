@@ -20,15 +20,15 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'The name of the application that the configuration template or environment belongs to.'
+    description: "The name of the application that the configuration template or environment belongs to."
     required: true
   OptionSettings:
     type: array
-    description: 'A list of the options and desired values to evaluate.'
+    description: "A list of the options and desired values to evaluate."
     required: true
   TemplateName:
     type: string
-    description: 'The name of the configuration template to validate the settings against. Condition: You cannot specify both this and an environment name.'
+    description: "The name of the configuration template to validate the settings against. Condition: You cannot specify both this and an environment name."
   EnvironmentName:
     type: string
-    description: 'The name of the environment to validate the settings against. Condition: You cannot specify both this and a configuration template name.'
+    description: "The name of the environment to validate the settings against. Condition: You cannot specify both this and a configuration template name."

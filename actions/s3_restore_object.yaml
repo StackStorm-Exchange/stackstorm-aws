@@ -20,18 +20,18 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ''
+    description: ""
     required: true
   Key:
     type: string
-    description: ''
+    description: ""
     required: true
   VersionId:
     type: string
-    description: ''
+    description: ""
   RestoreRequest:
     type: object
-    description: ''
+    description: ""
   RequestPayer:
     type: string
-    description: ''
+    description: ""

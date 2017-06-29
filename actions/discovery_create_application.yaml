@@ -20,8 +20,8 @@ parameters:
     type: string
   name:
     type: string
-    description: 'Name of the application to be created.'
+    description: "Name of the application to be created."
     required: true
   description:
     type: string
-    description: 'Description of the application to be created.'
+    description: "Description of the application to be created."

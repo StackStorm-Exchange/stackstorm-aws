@@ -20,11 +20,11 @@ parameters:
     type: string
   FileSystemId:
     type: string
-    description: 'ID of the file system whose tag set you want to retrieve.'
+    description: "ID of the file system whose tag set you want to retrieve."
     required: true
   MaxItems:
     type: integer
-    description: '(Optional) Maximum number of file system tags to return in the response. It must be an integer with a value greater than zero.'
+    description: "(Optional) Maximum number of file system tags to return in the response. It must be an integer with a value greater than zero."
   Marker:
     type: string
-    description: '(Optional) Opaque pagination token returned from a previous DescribeTags operation (String). If present, it specifies to continue the list from where the previous call left off.'
+    description: "(Optional) Opaque pagination token returned from a previous DescribeTags operation (String). If present, it specifies to continue the list from where the previous call left off."

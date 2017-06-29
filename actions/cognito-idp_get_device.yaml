@@ -20,8 +20,8 @@ parameters:
     type: string
   DeviceKey:
     type: string
-    description: 'The device key.'
+    description: "The device key."
     required: true
   AccessToken:
     type: string
-    description: 'The access token.'
+    description: "The access token."

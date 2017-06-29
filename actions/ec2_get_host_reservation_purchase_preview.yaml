@@ -18,11 +18,11 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  OfferingId:
-    type: string
-    description: 'The offering ID of the reservation.'
-    required: true
   HostIdSet:
     type: array
-    description: 'The ID/s of the Dedicated Host/s that the reservation will be associated with.'
+    description: "The ID/s of the Dedicated Host/s that the reservation will be associated with."
+    required: true
+  OfferingId:
+    type: string
+    description: "The offering ID of the reservation."
     required: true

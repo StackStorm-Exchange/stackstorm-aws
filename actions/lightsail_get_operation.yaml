@@ -20,5 +20,5 @@ parameters:
     type: string
   operationId:
     type: string
-    description: 'A GUID used to identify the operation.'
+    description: "A GUID used to identify the operation."
     required: true

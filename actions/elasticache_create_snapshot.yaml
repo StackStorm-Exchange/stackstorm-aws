@@ -20,11 +20,11 @@ parameters:
     type: string
   SnapshotName:
     type: string
-    description: 'A name for the snapshot being created.'
+    description: "A name for the snapshot being created."
     required: true
   ReplicationGroupId:
     type: string
-    description: 'The identifier of an existing replication group. The snapshot is created from this replication group.'
+    description: "The identifier of an existing replication group. The snapshot is created from this replication group."
   CacheClusterId:
     type: string
-    description: 'The identifier of an existing cache cluster. The snapshot is created from this cache cluster.'
+    description: "The identifier of an existing cache cluster. The snapshot is created from this cache cluster."

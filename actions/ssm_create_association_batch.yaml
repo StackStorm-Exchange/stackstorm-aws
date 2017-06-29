@@ -20,5 +20,5 @@ parameters:
     type: string
   Entries:
     type: array
-    description: 'One or more associations.'
+    description: "One or more associations."
     required: true

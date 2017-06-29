@@ -20,5 +20,5 @@ parameters:
     type: string
   DomainName:
     type: string
-    description: 'The Elasticsearch domain that you want to get information about.'
+    description: "The Elasticsearch domain that you want to get information about."
     required: true

@@ -20,14 +20,14 @@ parameters:
     type: string
   usagePlanId:
     type: string
-    description: 'The Id of the UsagePlan resource representing the usage plan containing the to-be-retrieved UsagePlanKey resource representing a plan customer.'
+    description: "The Id of the UsagePlan resource representing the usage plan containing the to-be-retrieved UsagePlanKey resource representing a plan customer."
     required: true
   position:
     type: string
-    description: 'A query parameter specifying the zero-based index specifying the position of a usage plan key.'
+    description: "The current pagination position in the paged result set."
   limit:
     type: integer
-    description: 'A query parameter specifying the maximum number usage plan keys returned by the GET request.'
+    description: "The maximum number of returned results per page."
   nameQuery:
     type: string
-    description: 'A query parameter specifying the name of the to-be-returned usage plan keys.'
+    description: "A query parameter specifying the name of the to-be-returned usage plan keys."

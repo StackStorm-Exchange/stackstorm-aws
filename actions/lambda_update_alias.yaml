@@ -20,15 +20,15 @@ parameters:
     type: string
   FunctionName:
     type: string
-    description: 'The function name for which the alias is created.'
+    description: "The function name for which the alias is created. Note that the length constraint applies only to the ARN. If you specify only the function name, it is limited to 64 characters in length."
     required: true
   Name:
     type: string
-    description: 'The alias name.'
+    description: "The alias name."
     required: true
   FunctionVersion:
     type: string
-    description: 'Using this parameter you can change the Lambda function version to which the alias points.'
+    description: "Using this parameter you can change the Lambda function version to which the alias points."
   Description:
     type: string
-    description: 'You can change the description of the alias using this parameter.'
+    description: "You can change the description of the alias using this parameter."

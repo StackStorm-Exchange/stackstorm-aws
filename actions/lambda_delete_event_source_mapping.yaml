@@ -20,5 +20,5 @@ parameters:
     type: string
   UUID:
     type: string
-    description: 'The event source mapping ID.'
+    description: "The event source mapping ID."
     required: true

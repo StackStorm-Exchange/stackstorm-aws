@@ -20,8 +20,8 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The distribution ID. '
+    description: "The distribution ID. "
     required: true
   IfMatch:
     type: string
-    description: 'The value of the ETag header that you received when you disabled the streaming distribution. For example: E2QWRUHAPOMQZL.'
+    description: "The value of the ETag header that you received when you disabled the streaming distribution. For example: E2QWRUHAPOMQZL."

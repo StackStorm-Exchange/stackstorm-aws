@@ -20,9 +20,9 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: 'The instance ID.'
+    description: "The instance ID."
     required: true
   LayerIds:
     type: array
-    description: 'The layer ID, which must correspond to a custom layer. You cannot assign a registered instance to a built-in layer.'
+    description: "The layer ID, which must correspond to a custom layer. You cannot assign a registered instance to a built-in layer."
     required: true

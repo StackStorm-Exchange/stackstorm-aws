@@ -20,5 +20,5 @@ parameters:
     type: string
   RebootWorkspaceRequests:
     type: array
-    description: 'An array of structures that specify the WorkSpaces to reboot.'
+    description: "An array of structures that specify the WorkSpaces to reboot."
     required: true

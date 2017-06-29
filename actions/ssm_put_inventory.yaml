@@ -20,9 +20,9 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: 'One or more instance IDs where you want to add or update inventory items.'
+    description: "One or more instance IDs where you want to add or update inventory items."
     required: true
   Items:
     type: array
-    description: 'The inventory items that you want to add or update on instances.'
+    description: "The inventory items that you want to add or update on instances."
     required: true

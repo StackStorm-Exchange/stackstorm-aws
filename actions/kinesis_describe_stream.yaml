@@ -20,11 +20,11 @@ parameters:
     type: string
   StreamName:
     type: string
-    description: 'The name of the stream to describe.'
+    description: "The name of the stream to describe."
     required: true
   Limit:
     type: integer
-    description: 'The maximum number of shards to return in a single call. The default value is 100. If you specify a value greater than 100, at most 100 shards are returned.'
+    description: "The maximum number of shards to return in a single call. The default value is 100. If you specify a value greater than 100, at most 100 shards are returned."
   ExclusiveStartShardId:
     type: string
-    description: 'The shard ID of the shard to start with.'
+    description: "The shard ID of the shard to start with."

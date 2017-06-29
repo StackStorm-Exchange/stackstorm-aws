@@ -20,5 +20,5 @@ parameters:
     type: string
   SnapshotId:
     type: string
-    description: 'The identifier of the snapshot to restore from.'
+    description: "The identifier of the snapshot to restore from."
     required: true

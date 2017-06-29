@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: codestar_list_team_members
+runner_type: python-script
+parameters:
+  action:
+    default: list_team_members
+    immutable: true
+    type: string
+  cls:
+    default: codestar
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  projectId:
+    type: string
+    description: "The ID of the project for which you want to list team members."
+    required: true
+  nextToken:
+    type: string
+    description: "The continuation token for the next set of results, if the results cannot be returned in one response."
+  maxResults:
+    type: integer
+    description: "The maximum number of team members you want returned in a response."

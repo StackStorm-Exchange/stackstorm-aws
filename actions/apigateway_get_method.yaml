@@ -20,13 +20,13 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The RestApi identifier for the Method resource.'
+    description: "The RestApi identifier for the Method resource."
     required: true
   resourceId:
     type: string
-    description: 'The Resource identifier for the Method resource.'
+    description: "The Resource identifier for the Method resource."
     required: true
   httpMethod:
     type: string
-    description: 'Specifies the method request"s HTTP method type.'
+    description: "Specifies the method request's HTTP method type."
     required: true

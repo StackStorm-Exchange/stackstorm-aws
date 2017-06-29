@@ -20,5 +20,5 @@ parameters:
     type: string
   configurationIds:
     type: array
-    description: 'One or more configuration IDs.'
+    description: "One or more configuration IDs."
     required: true

@@ -20,10 +20,10 @@ parameters:
     type: string
   ContinentCode:
     type: string
-    description: 'Amazon Route 53 supports the following continent codes:    AF: Africa    AN: Antarctica    AS: Asia    EU: Europe    OC: Oceania    NA: North America    SA: South America  '
+    description: "Amazon Route 53 supports the following continent codes:    AF: Africa    AN: Antarctica    AS: Asia    EU: Europe    OC: Oceania    NA: North America    SA: South America  "
   CountryCode:
     type: string
-    description: 'Amazon Route 53 uses the two-letter country codes that are specified in ISO standard 3166-1 alpha-2.'
+    description: "Amazon Route 53 uses the two-letter country codes that are specified in ISO standard 3166-1 alpha-2."
   SubdivisionCode:
     type: string
-    description: 'Amazon Route 53 uses the one- to three-letter subdivision codes that are specified in ISO standard 3166-1 alpha-2. Amazon Route 53 doesn"t support subdivision codes for all countries. If you specify SubdivisionCode, you must also specify CountryCode. '
+    description: "Amazon Route 53 uses the one- to three-letter subdivision codes that are specified in ISO standard 3166-1 alpha-2. Amazon Route 53 doesn't support subdivision codes for all countries. If you specify SubdivisionCode, you must also specify CountryCode. "

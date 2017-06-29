@@ -20,14 +20,14 @@ parameters:
     type: string
   ClusterSecurityGroupName:
     type: string
-    description: 'The name of the security group to which the ingress rule is added.'
+    description: "The name of the security group to which the ingress rule is added."
     required: true
   CIDRIP:
     type: string
-    description: 'The IP range to be added the Amazon Redshift security group.'
+    description: "The IP range to be added the Amazon Redshift security group."
   EC2SecurityGroupName:
     type: string
-    description: 'The EC2 security group to be added the Amazon Redshift security group.'
+    description: "The EC2 security group to be added the Amazon Redshift security group."
   EC2SecurityGroupOwnerId:
     type: string
-    description: 'The AWS account number of the owner of the security group specified by the EC2SecurityGroupName parameter. The AWS Access Key ID is not an acceptable value.  Example: 111122223333 '
+    description: "The AWS account number of the owner of the security group specified by the EC2SecurityGroupName parameter. The AWS Access Key ID is not an acceptable value.  Example: 111122223333 "

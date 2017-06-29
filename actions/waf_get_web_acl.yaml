@@ -20,5 +20,5 @@ parameters:
     type: string
   WebACLId:
     type: string
-    description: 'The WebACLId of the WebACL that you want to get. WebACLId is returned by CreateWebACL and by ListWebACLs.'
+    description: "The WebACLId of the WebACL that you want to get. WebACLId is returned by CreateWebACL and by ListWebACLs."
     required: true

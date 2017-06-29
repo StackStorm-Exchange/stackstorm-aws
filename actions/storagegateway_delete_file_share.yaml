@@ -20,5 +20,5 @@ parameters:
     type: string
   FileShareARN:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the file share to be deleted. '
+    description: "The Amazon Resource Name (ARN) of the file share to be deleted. "
     required: true

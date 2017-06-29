@@ -20,9 +20,9 @@ parameters:
     type: string
   ApplicationId:
     type: string
-    description: ''
+    description: ""
     required: true
   JobId:
     type: string
-    description: ''
+    description: ""
     required: true

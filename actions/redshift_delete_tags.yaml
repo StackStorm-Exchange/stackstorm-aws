@@ -20,9 +20,9 @@ parameters:
     type: string
   ResourceName:
     type: string
-    description: 'The Amazon Resource Name (ARN) from which you want to remove the tag or tags. For example, arn:aws:redshift:us-east-1:123456789:cluster:t1. '
+    description: "The Amazon Resource Name (ARN) from which you want to remove the tag or tags. For example, arn:aws:redshift:us-east-1:123456789:cluster:t1. "
     required: true
   TagKeys:
     type: array
-    description: 'The tag key that you want to delete.'
+    description: "The tag key that you want to delete."
     required: true

@@ -20,13 +20,13 @@ parameters:
     type: string
   usagePlanId:
     type: string
-    description: 'The Id of the UsagePlan resource representing the usage plan containing the to-be-created UsagePlanKey resource representing a plan customer.'
+    description: "The Id of the UsagePlan resource representing the usage plan containing the to-be-created UsagePlanKey resource representing a plan customer."
     required: true
   keyId:
     type: string
-    description: 'The identifier of a UsagePlanKey resource for a plan customer.'
+    description: "The identifier of a UsagePlanKey resource for a plan customer."
     required: true
   keyType:
     type: string
-    description: 'The type of a UsagePlanKey resource for a plan customer.'
+    description: "The type of a UsagePlanKey resource for a plan customer."
     required: true

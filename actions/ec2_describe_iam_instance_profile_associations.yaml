@@ -1,0 +1,32 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ec2_describe_iam_instance_profile_associations
+runner_type: python-script
+parameters:
+  action:
+    default: describe_iam_instance_profile_associations
+    immutable: true
+    type: string
+  cls:
+    default: ec2
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  AssociationIds:
+    type: array
+    description: "One or more IAM instance profile associations."
+  Filters:
+    type: array
+    description: "One or more filters.    instance-id - The ID of the instance.    state - The state of the association (associating | associated | disassociating | disassociated).  "
+  MaxResults:
+    type: integer
+    description: "The maximum number of results to return in a single call. To retrieve the remaining results, make another call with the returned NextToken value."
+  NextToken:
+    type: string
+    description: "The token to request the next page of results."

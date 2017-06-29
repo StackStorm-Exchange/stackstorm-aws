@@ -20,5 +20,5 @@ parameters:
     type: string
   DomainName:
     type: string
-    description: ''
+    description: ""
     required: true

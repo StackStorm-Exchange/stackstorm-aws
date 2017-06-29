@@ -20,11 +20,11 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: 'The instance ID.'
+    description: "The instance ID."
     required: true
   DeleteElasticIp:
     type: boolean
-    description: 'Whether to delete the instance Elastic IP address.'
+    description: "Whether to delete the instance Elastic IP address."
   DeleteVolumes:
     type: boolean
-    description: 'Whether to delete the instance"s Amazon EBS volumes.'
+    description: "Whether to delete the instance's Amazon EBS volumes."

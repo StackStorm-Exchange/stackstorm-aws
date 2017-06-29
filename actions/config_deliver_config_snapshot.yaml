@@ -20,5 +20,5 @@ parameters:
     type: string
   deliveryChannelName:
     type: string
-    description: 'The name of the delivery channel through which the snapshot is delivered.'
+    description: "The name of the delivery channel through which the snapshot is delivered."
     required: true

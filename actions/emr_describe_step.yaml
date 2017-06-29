@@ -20,9 +20,9 @@ parameters:
     type: string
   ClusterId:
     type: string
-    description: 'The identifier of the cluster with steps to describe.'
+    description: "The identifier of the cluster with steps to describe."
     required: true
   StepId:
     type: string
-    description: 'The identifier of the step to describe.'
+    description: "The identifier of the step to describe."
     required: true

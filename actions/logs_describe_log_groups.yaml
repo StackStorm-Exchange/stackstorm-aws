@@ -20,10 +20,10 @@ parameters:
     type: string
   logGroupNamePrefix:
     type: string
-    description: 'The prefix to match.'
+    description: "The prefix to match."
   nextToken:
     type: string
-    description: 'The token for the next set of items to return. (You received this token from a previous call.)'
+    description: "The token for the next set of items to return. (You received this token from a previous call.)"
   limit:
     type: integer
-    description: 'The maximum number of items returned. If you don"t specify a value, the default is up to 50 items.'
+    description: "The maximum number of items returned. If you don't specify a value, the default is up to 50 items."

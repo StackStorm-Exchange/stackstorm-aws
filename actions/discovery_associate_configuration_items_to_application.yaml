@@ -20,9 +20,9 @@ parameters:
     type: string
   applicationConfigurationId:
     type: string
-    description: 'The configuration ID of an application with which items are to be associated.'
+    description: "The configuration ID of an application with which items are to be associated."
     required: true
   configurationIds:
     type: array
-    description: 'The ID of each configuration item to be associated with an application.'
+    description: "The ID of each configuration item to be associated with an application."
     required: true

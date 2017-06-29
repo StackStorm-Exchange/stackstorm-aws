@@ -20,9 +20,9 @@ parameters:
     type: string
   StreamName:
     type: string
-    description: 'The name of the stream.'
+    description: "The name of the stream."
     required: true
   TagKeys:
     type: array
-    description: 'A list of tag keys. Each corresponding tag is removed from the stream.'
+    description: "A list of tag keys. Each corresponding tag is removed from the stream."
     required: true

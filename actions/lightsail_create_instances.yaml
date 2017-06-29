@@ -20,26 +20,26 @@ parameters:
     type: string
   instanceNames:
     type: array
-    description: 'The names to use for your new Lightsail instances. Separate multiple values using quotation marks and commas, for example: ["MyFirstInstance","MySecondInstance"] '
+    description: "The names to use for your new Lightsail instances. Separate multiple values using quotation marks and commas, for example: ['MyFirstInstance','MySecondInstance'] "
     required: true
   availabilityZone:
     type: string
-    description: 'The Availability Zone in which to create your instance. Use the following format: us-east-1a (case sensitive).'
+    description: "The Availability Zone in which to create your instance. Use the following format: us-east-1a (case sensitive). You can get a list of availability zones by using the get regions operation. Be sure to add the include availability zones parameter to your request."
     required: true
   blueprintId:
     type: string
-    description: 'The ID for a virtual private server image (e.g., app_wordpress_4_4 or app_lamp_7_0). Use the get blueprints operation to return a list of available images (or blueprints).'
+    description: "The ID for a virtual private server image (e.g., app_wordpress_4_4 or app_lamp_7_0). Use the get blueprints operation to return a list of available images (or blueprints)."
     required: true
   bundleId:
     type: string
-    description: 'The bundle of specification information for your virtual private server (or instance), including the pricing plan (e.g., micro_1_0).'
+    description: "The bundle of specification information for your virtual private server (or instance), including the pricing plan (e.g., micro_1_0)."
     required: true
   customImageName:
     type: string
-    description: 'The name for your custom image.'
+    description: "(Deprecated) The name for your custom image.  In releases prior to June 12, 2017, this parameter was ignored by the API. It is now deprecated. "
   userData:
     type: string
-    description: 'A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get –y update.  Depending on the machine image you choose, the command to get software on your instance varies. Amazon Linux and CentOS use yum, Debian and Ubuntu use apt-get, and FreeBSD uses pkg. For a complete list, see the Dev Guide. '
+    description: "A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get –y update.  Depending on the machine image you choose, the command to get software on your instance varies. Amazon Linux and CentOS use yum, Debian and Ubuntu use apt-get, and FreeBSD uses pkg. For a complete list, see the Dev Guide. "
   keyPairName:
     type: string
-    description: 'The name of your key pair.'
+    description: "The name of your key pair."

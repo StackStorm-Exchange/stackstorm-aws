@@ -20,13 +20,13 @@ parameters:
     type: string
   CreatedAfter:
     type: string
-    description: 'Return only job flows created after this date and time.'
+    description: "Return only job flows created after this date and time."
   CreatedBefore:
     type: string
-    description: 'Return only job flows created before this date and time.'
+    description: "Return only job flows created before this date and time."
   JobFlowIds:
     type: array
-    description: 'Return only job flows whose job flow ID is contained in this list.'
+    description: "Return only job flows whose job flow ID is contained in this list."
   JobFlowStates:
     type: array
-    description: 'Return only job flows whose state is contained in this list.'
+    description: "Return only job flows whose state is contained in this list."

@@ -20,5 +20,5 @@ parameters:
     type: string
   ByteMatchSetId:
     type: string
-    description: 'The ByteMatchSetId of the ByteMatchSet that you want to get. ByteMatchSetId is returned by CreateByteMatchSet and by ListByteMatchSets.'
+    description: "The ByteMatchSetId of the ByteMatchSet that you want to get. ByteMatchSetId is returned by CreateByteMatchSet and by ListByteMatchSets."
     required: true

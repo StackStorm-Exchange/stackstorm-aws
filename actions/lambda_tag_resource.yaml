@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: lambda_tag_resource
+runner_type: python-script
+parameters:
+  action:
+    default: tag_resource
+    immutable: true
+    type: string
+  cls:
+    default: lambda
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Resource:
+    type: string
+    description: "The ARN (Amazon Resource Name) of the Lambda function."
+    required: true
+  Tags:
+    type: object
+    description: "The list of tags (key-value pairs) you are assigning to the Lambda function."
+    required: true

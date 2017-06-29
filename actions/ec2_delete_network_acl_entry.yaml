@@ -18,18 +18,18 @@ parameters:
     default: boto3
     immutable: true
     type: string
+  Egress:
+    type: boolean
+    description: "Indicates whether the rule is an egress rule."
+    required: true
   NetworkAclId:
     type: string
-    description: 'The ID of the network ACL.'
+    description: "The ID of the network ACL."
     required: true
   RuleNumber:
     type: integer
-    description: 'The rule number of the entry to delete.'
-    required: true
-  Egress:
-    type: boolean
-    description: 'Indicates whether the rule is an egress rule.'
+    description: "The rule number of the entry to delete."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."

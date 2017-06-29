@@ -20,5 +20,5 @@ parameters:
     type: string
   computeEnvironment:
     type: string
-    description: 'The name or Amazon Resource Name (ARN) of the compute environment to delete. '
+    description: "The name or Amazon Resource Name (ARN) of the compute environment to delete. "
     required: true

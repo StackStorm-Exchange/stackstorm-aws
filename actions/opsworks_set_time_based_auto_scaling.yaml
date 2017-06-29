@@ -20,8 +20,8 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: 'The instance ID.'
+    description: "The instance ID."
     required: true
   AutoScalingSchedule:
     type: object
-    description: 'An AutoScalingSchedule with the instance schedule.'
+    description: "An AutoScalingSchedule with the instance schedule."

@@ -20,9 +20,9 @@ parameters:
     type: string
   portInfo:
     type: object
-    description: 'Information about the public port you are trying to close.'
+    description: "Information about the public port you are trying to close."
     required: true
   instanceName:
     type: string
-    description: 'The name of the instance on which you"re attempting to close the public ports.'
+    description: "The name of the instance on which you're attempting to close the public ports."
     required: true

@@ -20,5 +20,5 @@ parameters:
     type: string
   FleetId:
     type: string
-    description: 'Unique identifier for the fleet you want to delete.'
+    description: "Unique identifier for a fleet to be deleted."
     required: true

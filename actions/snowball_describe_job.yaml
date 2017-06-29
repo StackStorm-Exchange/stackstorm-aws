@@ -20,5 +20,5 @@ parameters:
     type: string
   JobId:
     type: string
-    description: 'The automatically generated ID for a job, for example JID123e4567-e89b-12d3-a456-426655440000.'
+    description: "The automatically generated ID for a job, for example JID123e4567-e89b-12d3-a456-426655440000."
     required: true

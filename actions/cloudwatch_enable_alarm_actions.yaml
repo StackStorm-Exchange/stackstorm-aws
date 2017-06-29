@@ -20,5 +20,5 @@ parameters:
     type: string
   AlarmNames:
     type: array
-    description: 'The names of the alarms.'
+    description: "The names of the alarms."
     required: true

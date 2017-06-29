@@ -20,5 +20,5 @@ parameters:
     type: string
   connectorId:
     type: string
-    description: ''
+    description: ""
     required: true

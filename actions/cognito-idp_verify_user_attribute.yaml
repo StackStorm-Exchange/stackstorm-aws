@@ -18,14 +18,15 @@ parameters:
     default: boto3
     immutable: true
     type: string
+  AccessToken:
+    type: string
+    description: "Represents the access token of the request to verify user attributes."
+    required: true
   AttributeName:
     type: string
-    description: 'The attribute name in the request to verify user attributes.'
+    description: "The attribute name in the request to verify user attributes."
     required: true
   Code:
     type: string
-    description: 'The verification code in the request to verify user attributes.'
+    description: "The verification code in the request to verify user attributes."
     required: true
-  AccessToken:
-    type: string
-    description: 'Represents the access token of the request to verify user attributes.'

@@ -20,5 +20,5 @@ parameters:
     type: string
   id:
     type: string
-    description: 'The ID of the build to attempt to stop running.'
+    description: "The ID of the build."
     required: true

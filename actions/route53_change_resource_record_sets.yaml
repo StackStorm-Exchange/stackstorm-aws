@@ -20,9 +20,9 @@ parameters:
     type: string
   HostedZoneId:
     type: string
-    description: 'The ID of the hosted zone that contains the resource record sets that you want to change.'
+    description: "The ID of the hosted zone that contains the resource record sets that you want to change."
     required: true
   ChangeBatch:
     type: object
-    description: 'A complex type that contains an optional comment and the Changes element.'
+    description: "A complex type that contains an optional comment and the Changes element."
     required: true

@@ -20,7 +20,7 @@ parameters:
     type: string
   position:
     type: string
-    description: 'The position of the last fetched element in the SdkTypes collection.'
+    description: "The current pagination position in the paged result set."
   limit:
     type: integer
-    description: 'The maximum number of SdkType instances to be returned. '
+    description: "The maximum number of returned results per page."

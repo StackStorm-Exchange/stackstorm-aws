@@ -20,32 +20,32 @@ parameters:
     type: string
   RouteTableId:
     type: string
-    description: 'The ID of the route table for the route.'
+    description: "The ID of the route table for the route."
     required: true
-  DryRun:
-    type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
   DestinationCidrBlock:
     type: string
-    description: 'The IPv4 CIDR address block used for the destination match. Routing decisions are based on the most specific match.'
-  GatewayId:
-    type: string
-    description: 'The ID of an Internet gateway or virtual private gateway attached to your VPC.'
+    description: "The IPv4 CIDR address block used for the destination match. Routing decisions are based on the most specific match."
   DestinationIpv6CidrBlock:
     type: string
-    description: 'The IPv6 CIDR block used for the destination match. Routing decisions are based on the most specific match.'
+    description: "The IPv6 CIDR block used for the destination match. Routing decisions are based on the most specific match."
+  DryRun:
+    type: boolean
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   EgressOnlyInternetGatewayId:
     type: string
-    description: '[IPv6 traffic only] The ID of an egress-only Internet gateway.'
+    description: "[IPv6 traffic only] The ID of an egress-only Internet gateway."
+  GatewayId:
+    type: string
+    description: "The ID of an Internet gateway or virtual private gateway attached to your VPC."
   InstanceId:
     type: string
-    description: 'The ID of a NAT instance in your VPC. The operation fails if you specify an instance ID unless exactly one network interface is attached.'
-  NetworkInterfaceId:
-    type: string
-    description: 'The ID of a network interface.'
-  VpcPeeringConnectionId:
-    type: string
-    description: 'The ID of a VPC peering connection.'
+    description: "The ID of a NAT instance in your VPC. The operation fails if you specify an instance ID unless exactly one network interface is attached."
   NatGatewayId:
     type: string
-    description: '[IPv4 traffic only] The ID of a NAT gateway.'
+    description: "[IPv4 traffic only] The ID of a NAT gateway."
+  NetworkInterfaceId:
+    type: string
+    description: "The ID of a network interface."
+  VpcPeeringConnectionId:
+    type: string
+    description: "The ID of a VPC peering connection."

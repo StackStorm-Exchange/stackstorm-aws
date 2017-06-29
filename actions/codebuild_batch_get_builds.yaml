@@ -20,5 +20,5 @@ parameters:
     type: string
   ids:
     type: array
-    description: 'The IDs of the builds to get information about.'
+    description: "The IDs of the builds."
     required: true

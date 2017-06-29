@@ -20,4 +20,4 @@ parameters:
     type: string
   NextToken:
     type: string
-    description: 'The NextToken value from a previous call to ListLunaClients. Pass null if this is the first call.'
+    description: "The NextToken value from a previous call to ListLunaClients. Pass null if this is the first call."

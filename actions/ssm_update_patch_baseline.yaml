@@ -20,23 +20,23 @@ parameters:
     type: string
   BaselineId:
     type: string
-    description: 'The ID of the patch baseline to update.'
+    description: "The ID of the patch baseline to update."
     required: true
   Name:
     type: string
-    description: 'The name of the patch baseline.'
+    description: "The name of the patch baseline."
   GlobalFilters:
     type: object
-    description: 'A set of global filters used to exclude patches from the baseline.'
+    description: "A set of global filters used to exclude patches from the baseline."
   ApprovalRules:
     type: object
-    description: 'A set of rules used to include patches in the baseline.'
+    description: "A set of rules used to include patches in the baseline."
   ApprovedPatches:
     type: array
-    description: 'A list of explicitly approved patches for the baseline.'
+    description: "A list of explicitly approved patches for the baseline."
   RejectedPatches:
     type: array
-    description: 'A list of explicitly rejected patches for the baseline.'
+    description: "A list of explicitly rejected patches for the baseline."
   Description:
     type: string
-    description: 'A description of the patch baseline.'
+    description: "A description of the patch baseline."

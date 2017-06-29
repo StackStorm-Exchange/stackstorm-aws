@@ -20,5 +20,5 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The identifier of the job for which you want to get detailed information.'
+    description: "The identifier of the job for which you want to get detailed information."
     required: true

@@ -20,14 +20,14 @@ parameters:
     type: string
   principal:
     type: string
-    description: 'The principal.'
+    description: "The principal."
     required: true
   marker:
     type: string
-    description: 'The marker for the next set of results.'
+    description: "The marker for the next set of results."
   pageSize:
     type: integer
-    description: 'The result page size.'
+    description: "The result page size."
   ascendingOrder:
     type: boolean
-    description: 'Specifies the order for results. If true, results are returned in ascending creation order.'
+    description: "Specifies the order for results. If true, results are returned in ascending creation order."

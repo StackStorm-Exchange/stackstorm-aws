@@ -20,5 +20,5 @@ parameters:
     type: string
   AliasId:
     type: string
-    description: 'Unique identifier for a fleet alias. Specify the alias you want to retrieve.'
+    description: "Unique identifier for a fleet alias. Specify the alias you want to retrieve."
     required: true

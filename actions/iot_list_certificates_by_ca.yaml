@@ -20,14 +20,14 @@ parameters:
     type: string
   caCertificateId:
     type: string
-    description: 'The ID of the CA certificate. This operation will list all registered device certificate that were signed by this CA certificate. '
+    description: "The ID of the CA certificate. This operation will list all registered device certificate that were signed by this CA certificate."
     required: true
   pageSize:
     type: integer
-    description: 'The result page size.'
+    description: "The result page size."
   marker:
     type: string
-    description: 'The marker for the next set of results.'
+    description: "The marker for the next set of results."
   ascendingOrder:
     type: boolean
-    description: 'Specifies the order for results. If True, the results are returned in ascending order, based on the creation date.'
+    description: "Specifies the order for results. If True, the results are returned in ascending order, based on the creation date."

@@ -20,5 +20,5 @@ parameters:
     type: string
   BuildId:
     type: string
-    description: 'Unique identifier of the build that you want to retrieve properties for.'
+    description: "Unique identifier for a build to retrieve properties for."
     required: true

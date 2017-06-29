@@ -20,5 +20,5 @@ parameters:
     type: string
   stateMachineArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the state machine to describe.'
+    description: "The Amazon Resource Name (ARN) of the state machine to describe."
     required: true

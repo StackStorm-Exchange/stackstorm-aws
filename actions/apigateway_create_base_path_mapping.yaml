@@ -20,15 +20,15 @@ parameters:
     type: string
   domainName:
     type: string
-    description: 'The domain name of the BasePathMapping resource to create.'
+    description: "The domain name of the BasePathMapping resource to create."
     required: true
   restApiId:
     type: string
-    description: 'The name of the API that you want to apply this mapping to.'
+    description: "The name of the API that you want to apply this mapping to."
     required: true
   basePath:
     type: string
-    description: 'The base path name that callers of the API must provide as part of the URL after the domain name. This value must be unique for all of the mappings across a single API. Leave this blank if you do not want callers to specify a base path name after the domain name.'
+    description: "The base path name that callers of the API must provide as part of the URL after the domain name. This value must be unique for all of the mappings across a single API. Leave this blank if you do not want callers to specify a base path name after the domain name."
   stage:
     type: string
-    description: 'The name of the API"s stage that you want to use for this mapping. Leave this blank if you do not want callers to explicitly specify the stage name after any base path name.'
+    description: "The name of the API's stage that you want to use for this mapping. Leave this blank if you do not want callers to explicitly specify the stage name after any base path name."

@@ -20,11 +20,14 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The RestApi identifier for the Resource.'
+    description: "The RestApi identifier for the Resource."
     required: true
   position:
     type: string
-    description: 'The position of the next set of results in the current Resources resource to get information about.'
+    description: "The current pagination position in the paged result set."
   limit:
     type: integer
-    description: 'The maximum number of Resource resources in the collection to get information about. The default limit is 25. It should be an integer between 1 - 500.'
+    description: "The maximum number of returned results per page. The value is 25 by default and could be between 1 - 500."
+  embed:
+    type: array
+    description: "A query parameter used to retrieve the specified resources embedded in the returned Resources resource in the response. This embed parameter value is a list of comma-separated strings. Currently, the request supports only retrieval of the embedded Method resources this way. The query parameter value must be a single-valued list and contain the 'methods' string. For example, GET /restapis/{restapi_id}/resources?embed=methods."

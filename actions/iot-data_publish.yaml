@@ -20,11 +20,11 @@ parameters:
     type: string
   topic:
     type: string
-    description: 'The name of the MQTT topic.'
+    description: "The name of the MQTT topic."
     required: true
   qos:
     type: integer
-    description: 'The Quality of Service (QoS) level.'
+    description: "The Quality of Service (QoS) level."
   payload:
     type: string
-    description: 'The state information, in JSON format.'
+    description: "The state information, in JSON format."

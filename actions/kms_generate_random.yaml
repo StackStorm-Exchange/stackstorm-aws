@@ -20,4 +20,4 @@ parameters:
     type: string
   NumberOfBytes:
     type: integer
-    description: 'The length of the byte string.'
+    description: "The length of the byte string."

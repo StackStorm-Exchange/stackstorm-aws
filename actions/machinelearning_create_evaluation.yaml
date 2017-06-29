@@ -20,16 +20,16 @@ parameters:
     type: string
   EvaluationId:
     type: string
-    description: 'A user-supplied ID that uniquely identifies the Evaluation.'
+    description: "A user-supplied ID that uniquely identifies the Evaluation."
     required: true
   MLModelId:
     type: string
-    description: 'The ID of the MLModel to evaluate. The schema used in creating the MLModel must match the schema of the DataSource used in the Evaluation.'
+    description: "The ID of the MLModel to evaluate. The schema used in creating the MLModel must match the schema of the DataSource used in the Evaluation."
     required: true
   EvaluationDataSourceId:
     type: string
-    description: 'The ID of the DataSource for the evaluation. The schema of the DataSource must match the schema used to create the MLModel.'
+    description: "The ID of the DataSource for the evaluation. The schema of the DataSource must match the schema used to create the MLModel."
     required: true
   EvaluationName:
     type: string
-    description: 'A user-supplied name or description of the Evaluation.'
+    description: "A user-supplied name or description of the Evaluation."

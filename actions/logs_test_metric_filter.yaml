@@ -20,9 +20,9 @@ parameters:
     type: string
   filterPattern:
     type: string
-    description: ''
+    description: ""
     required: true
   logEventMessages:
     type: array
-    description: 'The log event messages to test.'
+    description: "The log event messages to test."
     required: true

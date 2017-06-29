@@ -20,4 +20,4 @@ parameters:
     type: string
   nextToken:
     type: string
-    description: 'An identifier returned from the previous list deployment configurations call. It can be used to return the next set of deployment configurations in the list. '
+    description: "An identifier returned from the previous list deployment configurations call. It can be used to return the next set of deployment configurations in the list. "

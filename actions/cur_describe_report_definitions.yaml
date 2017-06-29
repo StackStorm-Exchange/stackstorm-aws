@@ -1,0 +1,26 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: cur_describe_report_definitions
+runner_type: python-script
+parameters:
+  action:
+    default: describe_report_definitions
+    immutable: true
+    type: string
+  cls:
+    default: cur
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  MaxResults:
+    type: integer
+    description: ""
+  NextToken:
+    type: string
+    description: ""

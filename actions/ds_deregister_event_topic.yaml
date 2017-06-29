@@ -20,9 +20,9 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'The Directory ID to remove as a publisher. This directory will no longer send messages to the specified SNS topic.'
+    description: "The Directory ID to remove as a publisher. This directory will no longer send messages to the specified SNS topic."
     required: true
   TopicName:
     type: string
-    description: 'The name of the SNS topic from which to remove the directory as a publisher.'
+    description: "The name of the SNS topic from which to remove the directory as a publisher."
     required: true

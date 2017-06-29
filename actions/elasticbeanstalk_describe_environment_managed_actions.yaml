@@ -20,10 +20,10 @@ parameters:
     type: string
   EnvironmentName:
     type: string
-    description: 'The name of the target environment.'
+    description: "The name of the target environment."
   EnvironmentId:
     type: string
-    description: 'The environment ID of the target environment.'
+    description: "The environment ID of the target environment."
   Status:
     type: string
-    description: 'To show only actions with a particular status, specify a status.'
+    description: "To show only actions with a particular status, specify a status."

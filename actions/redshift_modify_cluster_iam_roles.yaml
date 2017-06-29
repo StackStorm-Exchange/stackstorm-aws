@@ -20,11 +20,11 @@ parameters:
     type: string
   ClusterIdentifier:
     type: string
-    description: 'The unique identifier of the cluster for which you want to associate or disassociate IAM roles.'
+    description: "The unique identifier of the cluster for which you want to associate or disassociate IAM roles."
     required: true
   AddIamRoles:
     type: array
-    description: 'Zero or more IAM roles to associate with the cluster. The roles must be in their Amazon Resource Name (ARN) format. You can associate up to 10 IAM roles with a single cluster in a single request.'
+    description: "Zero or more IAM roles to associate with the cluster. The roles must be in their Amazon Resource Name (ARN) format. You can associate up to 10 IAM roles with a single cluster in a single request."
   RemoveIamRoles:
     type: array
-    description: 'Zero or more IAM roles in ARN format to disassociate from the cluster. You can disassociate up to 10 IAM roles from a single cluster in a single request.'
+    description: "Zero or more IAM roles in ARN format to disassociate from the cluster. You can disassociate up to 10 IAM roles from a single cluster in a single request."

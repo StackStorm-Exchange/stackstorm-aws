@@ -20,50 +20,50 @@ parameters:
     type: string
   PoolName:
     type: string
-    description: 'A string used to name the user pool.'
+    description: "A string used to name the user pool."
     required: true
   Policies:
     type: object
-    description: 'The policies associated with the new user pool.'
+    description: "The policies associated with the new user pool."
   LambdaConfig:
     type: object
-    description: 'The Lambda trigger configuration information for the new user pool.'
+    description: "The Lambda trigger configuration information for the new user pool."
   AutoVerifiedAttributes:
     type: array
-    description: 'The attributes to be auto-verified. Possible values: email, phone_number.'
+    description: "The attributes to be auto-verified. Possible values: email, phone_number."
   AliasAttributes:
     type: array
-    description: 'Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username.'
+    description: "Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username."
   SmsVerificationMessage:
     type: string
-    description: 'A string representing the SMS verification message.'
+    description: "A string representing the SMS verification message."
   EmailVerificationMessage:
     type: string
-    description: 'A string representing the email verification message.'
+    description: "A string representing the email verification message."
   EmailVerificationSubject:
     type: string
-    description: 'A string representing the email verification subject.'
+    description: "A string representing the email verification subject."
   SmsAuthenticationMessage:
     type: string
-    description: 'A string representing the SMS authentication message.'
+    description: "A string representing the SMS authentication message."
   MfaConfiguration:
     type: string
-    description: 'Specifies MFA configuration details.'
+    description: "Specifies MFA configuration details."
   DeviceConfiguration:
     type: object
-    description: 'The device configuration.'
+    description: "The device configuration."
   EmailConfiguration:
     type: object
-    description: 'The email configuration.'
+    description: "The email configuration."
   SmsConfiguration:
     type: object
-    description: 'The SMS configuration.'
+    description: "The SMS configuration."
   UserPoolTags:
     type: object
-    description: 'The cost allocation tags for the user pool. For more information, see Adding Cost Allocation Tags to Your User Pool '
+    description: "The cost allocation tags for the user pool. For more information, see Adding Cost Allocation Tags to Your User Pool "
   AdminCreateUserConfig:
     type: object
-    description: 'The configuration for AdminCreateUser requests.'
+    description: "The configuration for AdminCreateUser requests."
   Schema:
     type: array
-    description: 'An array of schema attributes for the new user pool. These attributes can be standard or custom attributes.'
+    description: "An array of schema attributes for the new user pool. These attributes can be standard or custom attributes."

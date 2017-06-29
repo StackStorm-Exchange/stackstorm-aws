@@ -20,9 +20,9 @@ parameters:
     type: string
   LoadBalancerName:
     type: string
-    description: 'The name of the load balancer.'
+    description: "The name of the load balancer."
     required: true
   AvailabilityZones:
     type: array
-    description: 'The Availability Zones. These must be in the same region as the load balancer.'
+    description: "The Availability Zones. These must be in the same region as the load balancer."
     required: true

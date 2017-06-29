@@ -20,9 +20,9 @@ parameters:
     type: string
   ResourceId:
     type: string
-    description: 'The resource ID of the request.'
+    description: "The resource ID of the request."
     required: true
   TagKeys:
     type: array
-    description: 'The tag keys of the request.'
+    description: "The tag keys of the request."
     required: true

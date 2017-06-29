@@ -20,13 +20,13 @@ parameters:
     type: string
   jobId:
     type: string
-    description: 'The unique system-generated ID of the job.'
+    description: "The unique system-generated ID of the job."
     required: true
   nonce:
     type: string
-    description: 'A system-generated random number that AWS CodePipeline uses to ensure that the job is being worked on by only one job worker. Get this number from the response to a GetThirdPartyJobDetails request.'
+    description: "A system-generated random number that AWS CodePipeline uses to ensure that the job is being worked on by only one job worker. Get this number from the response to a GetThirdPartyJobDetails request."
     required: true
   clientToken:
     type: string
-    description: 'The clientToken portion of the clientId and clientToken pair used to verify that the calling entity is allowed access to the job and its details.'
+    description: "The clientToken portion of the clientId and clientToken pair used to verify that the calling entity is allowed access to the job and its details."
     required: true

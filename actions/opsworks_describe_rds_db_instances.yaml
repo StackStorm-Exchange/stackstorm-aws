@@ -20,8 +20,8 @@ parameters:
     type: string
   StackId:
     type: string
-    description: 'The stack ID that the instances are registered with. The operation returns descriptions of all registered Amazon RDS instances.'
+    description: "The stack ID that the instances are registered with. The operation returns descriptions of all registered Amazon RDS instances."
     required: true
   RdsDbInstanceArns:
     type: array
-    description: 'An array containing the ARNs of the instances to be described.'
+    description: "An array containing the ARNs of the instances to be described."

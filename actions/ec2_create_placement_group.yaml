@@ -20,12 +20,12 @@ parameters:
     type: string
   GroupName:
     type: string
-    description: 'A name for the placement group. Constraints: Up to 255 ASCII characters'
+    description: "A name for the placement group. Constraints: Up to 255 ASCII characters"
     required: true
   Strategy:
     type: string
-    description: 'The placement strategy.'
+    description: "The placement strategy."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."

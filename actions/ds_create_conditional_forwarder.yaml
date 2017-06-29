@@ -20,13 +20,13 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'The directory ID of the AWS directory for which you are creating the conditional forwarder.'
+    description: "The directory ID of the AWS directory for which you are creating the conditional forwarder."
     required: true
   RemoteDomainName:
     type: string
-    description: 'The fully qualified domain name (FQDN) of the remote domain with which you will set up a trust relationship.'
+    description: "The fully qualified domain name (FQDN) of the remote domain with which you will set up a trust relationship."
     required: true
   DnsIpAddrs:
     type: array
-    description: 'The IP addresses of the remote DNS server associated with RemoteDomainName.'
+    description: "The IP addresses of the remote DNS server associated with RemoteDomainName."
     required: true

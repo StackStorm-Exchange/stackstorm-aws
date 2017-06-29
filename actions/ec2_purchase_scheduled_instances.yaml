@@ -20,11 +20,11 @@ parameters:
     type: string
   PurchaseRequests:
     type: array
-    description: 'One or more purchase requests.'
+    description: "One or more purchase requests."
     required: true
-  DryRun:
-    type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
   ClientToken:
     type: string
-    description: 'Unique, case-sensitive identifier that ensures the idempotency of the request. For more information, see Ensuring Idempotency.'
+    description: "Unique, case-sensitive identifier that ensures the idempotency of the request. For more information, see Ensuring Idempotency."
+  DryRun:
+    type: boolean
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."

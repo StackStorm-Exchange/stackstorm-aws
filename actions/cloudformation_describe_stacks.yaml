@@ -20,7 +20,7 @@ parameters:
     type: string
   StackName:
     type: string
-    description: 'The name or the unique stack ID that is associated with the stack, which are not always interchangeable:   Running stacks: You can specify either the stack"s name or its unique stack ID.   Deleted stacks: You must specify the unique stack ID.   Default: There is no default value.'
+    description: "The name or the unique stack ID that is associated with the stack, which are not always interchangeable:   Running stacks: You can specify either the stack's name or its unique stack ID.   Deleted stacks: You must specify the unique stack ID.   Default: There is no default value."
   NextToken:
     type: string
-    description: 'A string that identifies the next page of stacks that you want to retrieve.'
+    description: "A string that identifies the next page of stacks that you want to retrieve."

@@ -20,7 +20,7 @@ parameters:
     type: string
   actionOwnerFilter:
     type: string
-    description: 'Filters the list of action types to those created by a specified entity.'
+    description: "Filters the list of action types to those created by a specified entity."
   nextToken:
     type: string
-    description: 'An identifier that was returned from the previous list action types call, which can be used to return the next set of action types in the list.'
+    description: "An identifier that was returned from the previous list action types call, which can be used to return the next set of action types in the list."

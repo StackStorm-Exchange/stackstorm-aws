@@ -20,20 +20,20 @@ parameters:
     type: string
   JobId:
     type: string
-    description: ''
+    description: ""
     required: true
   Manifest:
     type: string
-    description: ''
+    description: ""
     required: true
   JobType:
     type: string
-    description: ''
+    description: ""
     required: true
   ValidateOnly:
     type: boolean
-    description: ''
+    description: ""
     required: true
   APIVersion:
     type: string
-    description: ''
+    description: ""

@@ -20,5 +20,5 @@ parameters:
     type: string
   ProtectionId:
     type: string
-    description: 'The unique identifier (ID) for the Protection object to be deleted.'
+    description: "The unique identifier (ID) for the Protection object to be deleted."
     required: true

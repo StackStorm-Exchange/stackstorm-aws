@@ -20,8 +20,8 @@ parameters:
     type: string
   resourceName:
     type: string
-    description: 'The name of the resource for which you are requesting information.'
+    description: "The name of the resource for which you are requesting information."
     required: true
   pageToken:
     type: string
-    description: 'A token used for advancing to the next page of results from your get operations for resource request.'
+    description: "A token used for advancing to the next page of results from your get operations for resource request."

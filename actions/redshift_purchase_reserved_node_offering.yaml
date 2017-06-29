@@ -20,8 +20,8 @@ parameters:
     type: string
   ReservedNodeOfferingId:
     type: string
-    description: 'The unique identifier of the reserved node offering you want to purchase.'
+    description: "The unique identifier of the reserved node offering you want to purchase."
     required: true
   NodeCount:
     type: integer
-    description: 'The number of reserved nodes that you want to purchase. Default: 1 '
+    description: "The number of reserved nodes that you want to purchase. Default: 1 "

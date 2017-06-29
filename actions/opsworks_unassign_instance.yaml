@@ -20,5 +20,5 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: 'The instance ID.'
+    description: "The instance ID."
     required: true

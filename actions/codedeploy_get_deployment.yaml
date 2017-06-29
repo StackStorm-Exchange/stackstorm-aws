@@ -20,5 +20,5 @@ parameters:
     type: string
   deploymentId:
     type: string
-    description: 'A deployment ID associated with the applicable IAM user or AWS account.'
+    description: "A deployment ID associated with the applicable IAM user or AWS account."
     required: true

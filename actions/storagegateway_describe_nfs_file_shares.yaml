@@ -20,5 +20,5 @@ parameters:
     type: string
   FileShareARNList:
     type: array
-    description: 'An array containing the Amazon Resource Name (ARN) of each file share to be described. '
+    description: "An array containing the Amazon Resource Name (ARN) of each file share to be described. "
     required: true

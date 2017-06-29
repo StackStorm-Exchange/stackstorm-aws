@@ -20,12 +20,12 @@ parameters:
     type: string
   AccountId:
     type: string
-    description: ''
+    description: ""
     required: true
   Budget:
     type: object
-    description: ''
+    description: ""
     required: true
   NotificationsWithSubscribers:
     type: array
-    description: ''
+    description: ""

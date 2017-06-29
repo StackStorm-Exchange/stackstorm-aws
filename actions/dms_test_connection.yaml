@@ -20,9 +20,9 @@ parameters:
     type: string
   ReplicationInstanceArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the replication instance.'
+    description: "The Amazon Resource Name (ARN) of the replication instance."
     required: true
   EndpointArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) string that uniquely identifies the endpoint.'
+    description: "The Amazon Resource Name (ARN) string that uniquely identifies the endpoint."
     required: true

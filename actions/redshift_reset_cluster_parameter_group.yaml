@@ -20,11 +20,11 @@ parameters:
     type: string
   ParameterGroupName:
     type: string
-    description: 'The name of the cluster parameter group to be reset.'
+    description: "The name of the cluster parameter group to be reset."
     required: true
   ResetAllParameters:
     type: boolean
-    description: 'If true, all parameters in the specified parameter group will be reset to their default values.  Default: true '
+    description: "If true, all parameters in the specified parameter group will be reset to their default values.  Default: true "
   Parameters:
     type: array
-    description: 'An array of names of parameters to be reset. If ResetAllParameters option is not used, then at least one parameter name must be supplied.  Constraints: A maximum of 20 parameters can be reset in a single request.'
+    description: "An array of names of parameters to be reset. If ResetAllParameters option is not used, then at least one parameter name must be supplied.  Constraints: A maximum of 20 parameters can be reset in a single request."

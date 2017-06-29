@@ -20,5 +20,5 @@ parameters:
     type: string
   AlarmNames:
     type: array
-    description: 'The alarms to be deleted.'
+    description: "The alarms to be deleted."
     required: true

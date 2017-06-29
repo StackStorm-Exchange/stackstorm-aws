@@ -20,11 +20,17 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the stack to update.'
+    description: "The name of the stack to update."
     required: true
   DisplayName:
     type: string
-    description: 'The name displayed to end users on the AppStream 2.0 portal.'
+    description: "The name displayed to end users on the AppStream 2.0 portal."
   Description:
     type: string
-    description: 'The description displayed to end users on the AppStream 2.0 portal.'
+    description: "The description displayed to end users on the AppStream 2.0 portal."
+  StorageConnectors:
+    type: array
+    description: "The storage connectors to be enabled for the stack."
+  DeleteStorageConnectors:
+    type: boolean
+    description: "Remove all the storage connectors currently enabled for the stack."

@@ -20,5 +20,5 @@ parameters:
     type: string
   EvaluationId:
     type: string
-    description: 'A user-supplied ID that uniquely identifies the Evaluation to delete.'
+    description: "A user-supplied ID that uniquely identifies the Evaluation to delete."
     required: true

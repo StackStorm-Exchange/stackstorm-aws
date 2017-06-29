@@ -20,5 +20,5 @@ parameters:
     type: string
   MountTargetId:
     type: string
-    description: 'ID of the mount target to delete (String).'
+    description: "ID of the mount target to delete (String)."
     required: true

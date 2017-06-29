@@ -20,4 +20,4 @@ parameters:
     type: string
   NextToken:
     type: string
-    description: 'An opaque pagination token returned from previous ListLexicons operation. If present, indicates where to continue the list of lexicons.'
+    description: "An opaque pagination token returned from previous ListLexicons operation. If present, indicates where to continue the list of lexicons."

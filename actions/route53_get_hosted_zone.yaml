@@ -20,5 +20,5 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The ID of the hosted zone for which you want to get a list of the name servers in the delegation set.'
+    description: "The ID of the hosted zone that you want to get information about."
     required: true

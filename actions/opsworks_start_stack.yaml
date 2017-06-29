@@ -20,5 +20,5 @@ parameters:
     type: string
   StackId:
     type: string
-    description: 'The stack ID.'
+    description: "The stack ID."
     required: true

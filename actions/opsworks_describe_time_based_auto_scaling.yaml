@@ -20,5 +20,5 @@ parameters:
     type: string
   InstanceIds:
     type: array
-    description: 'An array of instance IDs.'
+    description: "An array of instance IDs."
     required: true

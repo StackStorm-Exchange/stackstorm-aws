@@ -20,13 +20,13 @@ parameters:
     type: string
   StreamName:
     type: string
-    description: 'The name of the stream for the merge.'
+    description: "The name of the stream for the merge."
     required: true
   ShardToMerge:
     type: string
-    description: 'The shard ID of the shard to combine with the adjacent shard for the merge.'
+    description: "The shard ID of the shard to combine with the adjacent shard for the merge."
     required: true
   AdjacentShardToMerge:
     type: string
-    description: 'The shard ID of the adjacent shard for the merge.'
+    description: "The shard ID of the adjacent shard for the merge."
     required: true

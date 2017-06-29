@@ -20,12 +20,12 @@ parameters:
     type: string
   DBSecurityGroupName:
     type: string
-    description: 'The name for the DB security group. This value is stored as a lowercase string. Constraints:   Must be 1 to 255 alphanumeric characters   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens   Must not be "Default"   Example: mysecuritygroup '
+    description: "The name for the DB security group. This value is stored as a lowercase string. Constraints:   Must be 1 to 255 alphanumeric characters   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens   Must not be 'Default'   Example: mysecuritygroup "
     required: true
   DBSecurityGroupDescription:
     type: string
-    description: 'The description for the DB security group.'
+    description: "The description for the DB security group."
     required: true
   Tags:
     type: array
-    description: ''
+    description: ""

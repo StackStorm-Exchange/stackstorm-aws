@@ -20,10 +20,10 @@ parameters:
     type: string
   position:
     type: string
-    description: 'The zero-based array index specifying the position of the to-be-retrieved UsagePlan resource.'
+    description: "The current pagination position in the paged result set."
   keyId:
     type: string
-    description: 'The identifier of the API key associated with the usage plans.'
+    description: "The identifier of the API key associated with the usage plans."
   limit:
     type: integer
-    description: 'The number of UsagePlan resources to be returned as the result.'
+    description: "The maximum number of returned results per page."

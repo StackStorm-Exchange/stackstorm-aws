@@ -20,7 +20,7 @@ parameters:
     type: string
   Limit:
     type: integer
-    description: 'The maximum number of delivery streams to list.'
+    description: "The maximum number of delivery streams to list."
   ExclusiveStartDeliveryStreamName:
     type: string
-    description: 'The name of the delivery stream to start the list with.'
+    description: "The name of the delivery stream to start the list with."

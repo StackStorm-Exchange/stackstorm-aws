@@ -20,11 +20,11 @@ parameters:
     type: string
   StreamName:
     type: string
-    description: 'The name of the stream.'
+    description: "The name of the stream."
     required: true
   ExclusiveStartTagKey:
     type: string
-    description: 'The key to use as the starting point for the list of tags. If this parameter is set, ListTagsForStream gets all tags that occur after ExclusiveStartTagKey. '
+    description: "The key to use as the starting point for the list of tags. If this parameter is set, ListTagsForStream gets all tags that occur after ExclusiveStartTagKey. "
   Limit:
     type: integer
-    description: 'The number of tags to return. If this number is less than the total number of tags associated with the stream, HasMoreTags is set to true. To list additional tags, set ExclusiveStartTagKey to the last key in the response.'
+    description: "The number of tags to return. If this number is less than the total number of tags associated with the stream, HasMoreTags is set to true. To list additional tags, set ExclusiveStartTagKey to the last key in the response."

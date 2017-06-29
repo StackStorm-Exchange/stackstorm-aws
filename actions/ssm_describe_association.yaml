@@ -20,10 +20,10 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the SSM document.'
+    description: "The name of the SSM document."
   InstanceId:
     type: string
-    description: 'The instance ID.'
+    description: "The instance ID."
   AssociationId:
     type: string
-    description: 'The association ID for which you want information.'
+    description: "The association ID for which you want information."

@@ -20,10 +20,10 @@ parameters:
     type: string
   NamePrefix:
     type: string
-    description: 'The prefix matching the rule name.'
+    description: "The prefix matching the rule name."
   NextToken:
     type: string
-    description: 'The token returned by a previous call to indicate that there is more data available.'
+    description: "The token returned by a previous call to retrieve the next set of results."
   Limit:
     type: integer
-    description: 'The maximum number of results to return.'
+    description: "The maximum number of results to return."

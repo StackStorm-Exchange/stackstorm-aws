@@ -20,5 +20,5 @@ parameters:
     type: string
   AppId:
     type: string
-    description: 'The app ID.'
+    description: "The app ID."
     required: true

@@ -20,4 +20,4 @@ parameters:
     type: string
   DomainNames:
     type: array
-    description: 'The names of the domains you want to include in the response.'
+    description: "The names of the domains you want to include in the response."

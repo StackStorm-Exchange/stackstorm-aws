@@ -20,4 +20,4 @@ parameters:
     type: string
   NextToken:
     type: string
-    description: 'A token returned from a previous call to ListReceiptRuleSets to indicate the position in the receipt rule set list.'
+    description: "A token returned from a previous call to ListReceiptRuleSets to indicate the position in the receipt rule set list."

@@ -20,14 +20,14 @@ parameters:
     type: string
   certificatePem:
     type: string
-    description: 'The certificate data, in PEM format.'
+    description: "The certificate data, in PEM format."
     required: true
   caCertificatePem:
     type: string
-    description: 'The CA certificate used to sign the device certificate being registered.'
+    description: "The CA certificate used to sign the device certificate being registered."
   setAsActive:
     type: boolean
-    description: 'A boolean value that specifies if the CA certificate is set to active.'
+    description: "A boolean value that specifies if the CA certificate is set to active."
   status:
     type: string
-    description: ''
+    description: "The status of the register certificate request."

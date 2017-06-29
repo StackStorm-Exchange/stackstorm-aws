@@ -20,34 +20,37 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'If specified, AWS Elastic Beanstalk restricts the returned descriptions to include only those associated with this application.'
+    description: "If specified, AWS Elastic Beanstalk restricts the returned descriptions to include only those associated with this application."
   VersionLabel:
     type: string
-    description: 'If specified, AWS Elastic Beanstalk restricts the returned descriptions to those associated with this application version.'
+    description: "If specified, AWS Elastic Beanstalk restricts the returned descriptions to those associated with this application version."
   TemplateName:
     type: string
-    description: 'If specified, AWS Elastic Beanstalk restricts the returned descriptions to those that are associated with this environment configuration.'
+    description: "If specified, AWS Elastic Beanstalk restricts the returned descriptions to those that are associated with this environment configuration."
   EnvironmentId:
     type: string
-    description: 'If specified, AWS Elastic Beanstalk restricts the returned descriptions to those associated with this environment.'
+    description: "If specified, AWS Elastic Beanstalk restricts the returned descriptions to those associated with this environment."
   EnvironmentName:
     type: string
-    description: 'If specified, AWS Elastic Beanstalk restricts the returned descriptions to those associated with this environment.'
+    description: "If specified, AWS Elastic Beanstalk restricts the returned descriptions to those associated with this environment."
+  PlatformArn:
+    type: string
+    description: "The ARN of the version of the custom platform."
   RequestId:
     type: string
-    description: 'If specified, AWS Elastic Beanstalk restricts the described events to include only those associated with this request ID.'
+    description: "If specified, AWS Elastic Beanstalk restricts the described events to include only those associated with this request ID."
   Severity:
     type: string
-    description: 'If specified, limits the events returned from this call to include only those with the specified severity or higher.'
+    description: "If specified, limits the events returned from this call to include only those with the specified severity or higher."
   StartTime:
     type: string
-    description: 'If specified, AWS Elastic Beanstalk restricts the returned descriptions to those that occur on or after this time.'
+    description: "If specified, AWS Elastic Beanstalk restricts the returned descriptions to those that occur on or after this time."
   EndTime:
     type: string
-    description: ' If specified, AWS Elastic Beanstalk restricts the returned descriptions to those that occur up to, but not including, the EndTime. '
+    description: " If specified, AWS Elastic Beanstalk restricts the returned descriptions to those that occur up to, but not including, the EndTime. "
   MaxRecords:
     type: integer
-    description: 'Specifies the maximum number of events that can be returned, beginning with the most recent event.'
+    description: "Specifies the maximum number of events that can be returned, beginning with the most recent event."
   NextToken:
     type: string
-    description: 'Pagination token. If specified, the events return the next batch of results.'
+    description: "Pagination token. If specified, the events return the next batch of results."

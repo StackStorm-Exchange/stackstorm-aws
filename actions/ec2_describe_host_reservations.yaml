@@ -18,15 +18,15 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  HostReservationIdSet:
-    type: array
-    description: 'One or more host reservation IDs.'
   Filter:
     type: array
-    description: 'One or more filters.    instance-family - The instance family (e.g., m4).    payment-option - The payment option (No Upfront | Partial Upfront | All Upfront).    state - The state of the reservation (payment-pending | payment-failed | active | retired).  '
+    description: "One or more filters.    instance-family - The instance family (e.g., m4).    payment-option - The payment option (NoUpfront | PartialUpfront | AllUpfront).    state - The state of the reservation (payment-pending | payment-failed | active | retired).  "
+  HostReservationIdSet:
+    type: array
+    description: "One or more host reservation IDs."
   MaxResults:
     type: integer
-    description: 'The maximum number of results to return for the request in a single page. The remaining results can be seen by sending another request with the returned nextToken value. This value can be between 5 and 500; if maxResults is given a larger value than 500, you will receive an error.'
+    description: "The maximum number of results to return for the request in a single page. The remaining results can be seen by sending another request with the returned nextToken value. This value can be between 5 and 500; if maxResults is given a larger value than 500, you will receive an error."
   NextToken:
     type: string
-    description: 'The token to use to retrieve the next page of results.'
+    description: "The token to use to retrieve the next page of results."

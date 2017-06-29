@@ -20,13 +20,13 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the SSM document.'
+    description: "The name of the SSM document."
     required: true
   InstanceId:
     type: string
-    description: 'The ID of the instance.'
+    description: "The ID of the instance."
     required: true
   AssociationStatus:
     type: object
-    description: 'The association status.'
+    description: "The association status."
     required: true

@@ -20,8 +20,8 @@ parameters:
     type: string
   thingTypeName:
     type: string
-    description: 'The name of the thing type.'
+    description: "The name of the thing type."
     required: true
   thingTypeProperties:
     type: object
-    description: 'The ThingTypeProperties for the thing type to create. It contains information about the new thing type including a description, and a list of searchable thing attribute names.'
+    description: "The ThingTypeProperties for the thing type to create. It contains information about the new thing type including a description, and a list of searchable thing attribute names."

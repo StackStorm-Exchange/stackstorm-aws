@@ -20,20 +20,20 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: '[Required] The identifier of the API of the to-be-retrieved documentation parts.'
+    description: "[Required] The identifier of the API of the to-be-retrieved documentation parts."
     required: true
   type:
     type: string
-    description: 'The type of API entities of the to-be-retrieved documentation parts. '
+    description: "The type of API entities of the to-be-retrieved documentation parts. "
   nameQuery:
     type: string
-    description: 'The name of API entities of the to-be-retrieved documentation parts.'
+    description: "The name of API entities of the to-be-retrieved documentation parts."
   path:
     type: string
-    description: 'The path of API entities of the to-be-retrieved documentation parts.'
+    description: "The path of API entities of the to-be-retrieved documentation parts."
   position:
     type: string
-    description: 'The position of the to-be-retrieved documentation part in the DocumentationParts collection.'
+    description: "The current pagination position in the paged result set."
   limit:
     type: integer
-    description: 'The size of the paged results.'
+    description: "The maximum number of returned results per page."

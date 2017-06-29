@@ -20,5 +20,5 @@ parameters:
     type: string
   jobId:
     type: string
-    description: 'The unique system-generated ID for the job.'
+    description: "The unique system-generated ID for the job."
     required: true

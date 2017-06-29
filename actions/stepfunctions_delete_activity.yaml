@@ -20,5 +20,5 @@ parameters:
     type: string
   activityArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the activity to delete.'
+    description: "The Amazon Resource Name (ARN) of the activity to delete."
     required: true

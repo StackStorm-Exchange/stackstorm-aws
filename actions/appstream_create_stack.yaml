@@ -20,11 +20,14 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The unique identifier for this stack.'
+    description: "The unique identifier for this stack."
     required: true
   Description:
     type: string
-    description: 'The description displayed to end users on the AppStream 2.0 portal.'
+    description: "The description displayed to end users on the AppStream 2.0 portal."
   DisplayName:
     type: string
-    description: 'The name displayed to end users on the AppStream 2.0 portal.'
+    description: "The name displayed to end users on the AppStream 2.0 portal."
+  StorageConnectors:
+    type: array
+    description: "The storage connectors to be enabled for the stack."

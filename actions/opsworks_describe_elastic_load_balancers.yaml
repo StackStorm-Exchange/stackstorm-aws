@@ -20,7 +20,7 @@ parameters:
     type: string
   StackId:
     type: string
-    description: 'A stack ID. The action describes the stack"s Elastic Load Balancing instances.'
+    description: "A stack ID. The action describes the stack's Elastic Load Balancing instances."
   LayerIds:
     type: array
-    description: 'A list of layer IDs. The action describes the Elastic Load Balancing instances for the specified layers.'
+    description: "A list of layer IDs. The action describes the Elastic Load Balancing instances for the specified layers."

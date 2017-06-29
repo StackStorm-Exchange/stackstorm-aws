@@ -20,5 +20,5 @@ parameters:
     type: string
   FlowLogIds:
     type: array
-    description: 'One or more flow log IDs.'
+    description: "One or more flow log IDs."
     required: true

@@ -20,5 +20,5 @@ parameters:
     type: string
   CacheSecurityGroupName:
     type: string
-    description: 'The name of the cache security group to delete.  You cannot delete the default security group. '
+    description: "The name of the cache security group to delete.  You cannot delete the default security group. "
     required: true

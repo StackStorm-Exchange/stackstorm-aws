@@ -20,9 +20,9 @@ parameters:
     type: string
   ConfigurationSetName:
     type: string
-    description: 'The name of the configuration set that you want to update.'
+    description: "The name of the configuration set that you want to update."
     required: true
   EventDestination:
     type: object
-    description: 'The event destination object that you want to apply to the specified configuration set.'
+    description: "The event destination object that you want to apply to the specified configuration set."
     required: true

@@ -20,12 +20,12 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: '[Required] The identifier of an API of the to-be-updated documentation part.'
+    description: "[Required] The identifier of an API of the to-be-updated documentation part."
     required: true
   documentationPartId:
     type: string
-    description: '[Required] The identifier of the to-be-updated documentation part.'
+    description: "[Required] The identifier of the to-be-updated documentation part."
     required: true
   patchOperations:
     type: array
-    description: 'A list of update operations to be applied to the specified resource and in the order specified in this list.'
+    description: "A list of update operations to be applied to the specified resource and in the order specified in this list."

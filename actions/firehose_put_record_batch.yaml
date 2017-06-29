@@ -20,9 +20,9 @@ parameters:
     type: string
   DeliveryStreamName:
     type: string
-    description: 'The name of the delivery stream.'
+    description: "The name of the delivery stream."
     required: true
   Records:
     type: array
-    description: 'One or more records.'
+    description: "One or more records."
     required: true

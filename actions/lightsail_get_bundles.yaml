@@ -20,7 +20,7 @@ parameters:
     type: string
   includeInactive:
     type: boolean
-    description: 'A Boolean value that indicates whether to include inactive bundle results in your request.'
+    description: "A Boolean value that indicates whether to include inactive bundle results in your request."
   pageToken:
     type: string
-    description: 'A token used for advancing to the next page of results from your get bundles request.'
+    description: "A token used for advancing to the next page of results from your get bundles request."

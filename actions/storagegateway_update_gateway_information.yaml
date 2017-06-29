@@ -20,11 +20,11 @@ parameters:
     type: string
   GatewayARN:
     type: string
-    description: ''
+    description: ""
     required: true
   GatewayName:
     type: string
-    description: ''
+    description: ""
   GatewayTimezone:
     type: string
-    description: ''
+    description: ""

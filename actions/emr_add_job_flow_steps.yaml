@@ -20,9 +20,9 @@ parameters:
     type: string
   JobFlowId:
     type: string
-    description: 'A string that uniquely identifies the job flow. This identifier is returned by RunJobFlow and can also be obtained from ListClusters. '
+    description: "A string that uniquely identifies the job flow. This identifier is returned by RunJobFlow and can also be obtained from ListClusters. "
     required: true
   Steps:
     type: array
-    description: ' A list of StepConfig to be executed by the job flow. '
+    description: " A list of StepConfig to be executed by the job flow. "
     required: true

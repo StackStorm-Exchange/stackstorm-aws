@@ -20,5 +20,5 @@ parameters:
     type: string
   pipeline:
     type: object
-    description: ''
+    description: "Represents the structure of actions and stages to be performed in the pipeline. "
     required: true

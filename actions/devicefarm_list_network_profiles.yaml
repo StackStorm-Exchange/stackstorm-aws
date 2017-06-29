@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: devicefarm_list_network_profiles
+runner_type: python-script
+parameters:
+  action:
+    default: list_network_profiles
+    immutable: true
+    type: string
+  cls:
+    default: devicefarm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  arn:
+    type: string
+    description: "The Amazon Resource Name (ARN) of the project for which you want to list network profiles."
+    required: true
+  type:
+    type: string
+    description: "The type of network profile you wish to return information about. Valid values are listed below."
+  nextToken:
+    type: string
+    description: "An identifier that was returned from the previous call to this operation, which can be used to return the next set of items in the list."

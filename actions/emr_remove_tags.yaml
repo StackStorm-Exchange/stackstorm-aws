@@ -20,9 +20,9 @@ parameters:
     type: string
   ResourceId:
     type: string
-    description: 'The Amazon EMR resource identifier from which tags will be removed. This value must be a cluster identifier.'
+    description: "The Amazon EMR resource identifier from which tags will be removed. This value must be a cluster identifier."
     required: true
   TagKeys:
     type: array
-    description: 'A list of tag keys to remove from a resource.'
+    description: "A list of tag keys to remove from a resource."
     required: true

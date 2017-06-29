@@ -18,23 +18,23 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  VpcId:
-    type: string
-    description: 'The ID of the VPC in which the endpoint will be used.'
-    required: true
   ServiceName:
     type: string
-    description: 'The AWS service name, in the form com.amazonaws.region.service . To get a list of available services, use the DescribeVpcEndpointServices request.'
+    description: "The AWS service name, in the form com.amazonaws.region.service . To get a list of available services, use the DescribeVpcEndpointServices request."
     required: true
-  DryRun:
-    type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
-  PolicyDocument:
+  VpcId:
     type: string
-    description: 'A policy to attach to the endpoint that controls access to the service. The policy must be in valid JSON format. If this parameter is not specified, we attach a default policy that allows full access to the service.'
-  RouteTableIds:
-    type: array
-    description: 'One or more route table IDs.'
+    description: "The ID of the VPC in which the endpoint will be used."
+    required: true
   ClientToken:
     type: string
-    description: 'Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more information, see How to Ensure Idempotency.'
+    description: "Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more information, see How to Ensure Idempotency."
+  DryRun:
+    type: boolean
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
+  PolicyDocument:
+    type: string
+    description: "A policy to attach to the endpoint that controls access to the service. The policy must be in valid JSON format. If this parameter is not specified, we attach a default policy that allows full access to the service."
+  RouteTableIds:
+    type: array
+    description: "One or more route table IDs."

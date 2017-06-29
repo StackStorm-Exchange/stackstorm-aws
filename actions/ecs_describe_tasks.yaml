@@ -20,8 +20,8 @@ parameters:
     type: string
   tasks:
     type: array
-    description: 'A space-separated list of task IDs or full Amazon Resource Name (ARN) entries.'
+    description: "A list of up to 100 task IDs or full Amazon Resource Name (ARN) entries."
     required: true
   cluster:
     type: string
-    description: 'The short name or full Amazon Resource Name (ARN) of the cluster that hosts the task to describe. If you do not specify a cluster, the default cluster is assumed.'
+    description: "The short name or full Amazon Resource Name (ARN) of the cluster that hosts the task to describe. If you do not specify a cluster, the default cluster is assumed."

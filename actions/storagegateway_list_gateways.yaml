@@ -20,7 +20,7 @@ parameters:
     type: string
   Marker:
     type: string
-    description: 'An opaque string that indicates the position at which to begin the returned list of gateways.'
+    description: "An opaque string that indicates the position at which to begin the returned list of gateways."
   Limit:
     type: integer
-    description: 'Specifies that the list of gateways returned be limited to the specified number of items.'
+    description: "Specifies that the list of gateways returned be limited to the specified number of items."

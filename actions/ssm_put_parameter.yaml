@@ -20,22 +20,25 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the parameter that you want to add to the system.'
+    description: "The name of the parameter that you want to add to the system."
     required: true
   Value:
     type: string
-    description: 'The parameter value that you want to add to the system.'
+    description: "The parameter value that you want to add to the system."
     required: true
   Type:
     type: string
-    description: 'The type of parameter that you want to add to the system.'
+    description: "The type of parameter that you want to add to the system."
     required: true
   Description:
     type: string
-    description: 'Information about the parameter that you want to add to the system'
+    description: "Information about the parameter that you want to add to the system"
   KeyId:
     type: string
-    description: 'The parameter key ID that you want to add to the system.'
+    description: "The KMS Key ID that you want to use to encrypt a parameter when you choose the SecureString data type. If you don't specify a key ID, the system uses the default key associated with your AWS account."
   Overwrite:
     type: boolean
-    description: 'Overwrite an existing parameter.'
+    description: "Overwrite an existing parameter. If not specified, will default to 'false'."
+  AllowedPattern:
+    type: string
+    description: "A regular expression used to validate the parameter value. For example, for String types with values restricted to numbers, you can specify the following: AllowedPattern=^\d+$ "

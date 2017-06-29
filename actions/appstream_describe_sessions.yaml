@@ -20,18 +20,21 @@ parameters:
     type: string
   StackName:
     type: string
-    description: 'The name of the stack for which to list sessions.'
+    description: "The name of the stack for which to list sessions."
     required: true
   FleetName:
     type: string
-    description: 'The name of the fleet for which to list sessions.'
+    description: "The name of the fleet for which to list sessions."
     required: true
   UserId:
     type: string
-    description: 'The user for whom to list sessions. Use null to describe all the sessions for the stack and fleet.'
+    description: "The user for whom to list sessions. Use null to describe all the sessions for the stack and fleet."
   NextToken:
     type: string
-    description: 'The pagination token to use to retrieve the next page of results for this operation. If this value is null, it retrieves the first page.'
+    description: "The pagination token to use to retrieve the next page of results for this operation. If this value is null, it retrieves the first page."
   Limit:
     type: integer
-    description: 'The size of each page of results. The default value is 20 and the maximum supported value is 50.'
+    description: "The size of each page of results. The default value is 20 and the maximum supported value is 50."
+  AuthenticationType:
+    type: string
+    description: "The authentication method of the user. It can be API for a user authenticated using a streaming URL, or SAML for a SAML federated user. If an authentication type is not provided, the operation defaults to users authenticated using a streaming URL."

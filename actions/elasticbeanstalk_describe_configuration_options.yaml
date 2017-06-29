@@ -20,16 +20,19 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'The name of the application associated with the configuration template or environment. Only needed if you want to describe the configuration options associated with either the configuration template or environment.'
+    description: "The name of the application associated with the configuration template or environment. Only needed if you want to describe the configuration options associated with either the configuration template or environment."
   TemplateName:
     type: string
-    description: 'The name of the configuration template whose configuration options you want to describe.'
+    description: "The name of the configuration template whose configuration options you want to describe."
   EnvironmentName:
     type: string
-    description: 'The name of the environment whose configuration options you want to describe.'
+    description: "The name of the environment whose configuration options you want to describe."
   SolutionStackName:
     type: string
-    description: 'The name of the solution stack whose configuration options you want to describe.'
+    description: "The name of the solution stack whose configuration options you want to describe."
+  PlatformArn:
+    type: string
+    description: "The ARN of the custom platform."
   Options:
     type: array
-    description: 'If specified, restricts the descriptions to only the specified options.'
+    description: "If specified, restricts the descriptions to only the specified options."

@@ -20,4 +20,4 @@ parameters:
     type: string
   DeliveryChannelNames:
     type: array
-    description: 'A list of delivery channel names.'
+    description: "A list of delivery channel names."

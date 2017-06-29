@@ -20,15 +20,15 @@ parameters:
     type: string
   DomainName:
     type: string
-    description: 'The name of the domain in which to perform the operation.'
+    description: "The name of the domain in which to perform the operation."
     required: true
   ItemName:
     type: string
-    description: 'The name of the item. Similar to rows on a spreadsheet, items represent individual objects that contain one or more value-attribute pairs.'
+    description: "The name of the item. Similar to rows on a spreadsheet, items represent individual objects that contain one or more value-attribute pairs."
     required: true
   Attributes:
     type: array
-    description: 'A list of Attributes. Similar to columns on a spreadsheet, attributes represent categories of data that can be assigned to items.'
+    description: "A list of Attributes. Similar to columns on a spreadsheet, attributes represent categories of data that can be assigned to items."
   Expected:
     type: object
-    description: 'The update condition which, if specified, determines whether the specified attributes will be deleted or not. The update condition must be satisfied in order for this request to be processed and the attributes to be deleted.'
+    description: "The update condition which, if specified, determines whether the specified attributes will be deleted or not. The update condition must be satisfied in order for this request to be processed and the attributes to be deleted."

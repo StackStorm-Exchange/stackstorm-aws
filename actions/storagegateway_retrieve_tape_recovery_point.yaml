@@ -20,9 +20,9 @@ parameters:
     type: string
   TapeARN:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the virtual tape for which you want to retrieve the recovery point.'
+    description: "The Amazon Resource Name (ARN) of the virtual tape for which you want to retrieve the recovery point."
     required: true
   GatewayARN:
     type: string
-    description: ''
+    description: ""
     required: true

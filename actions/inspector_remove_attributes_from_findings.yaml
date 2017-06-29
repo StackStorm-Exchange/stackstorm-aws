@@ -20,9 +20,9 @@ parameters:
     type: string
   findingArns:
     type: array
-    description: 'The ARNs that specify the findings that you want to remove attributes from.'
+    description: "The ARNs that specify the findings that you want to remove attributes from."
     required: true
   attributeKeys:
     type: array
-    description: 'The array of attribute keys that you want to remove from specified findings.'
+    description: "The array of attribute keys that you want to remove from specified findings."
     required: true

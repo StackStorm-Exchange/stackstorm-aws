@@ -20,9 +20,9 @@ parameters:
     type: string
   pipelineId:
     type: string
-    description: 'The ID of the pipeline.'
+    description: "The ID of the pipeline."
     required: true
   tagKeys:
     type: array
-    description: 'The keys of the tags to remove.'
+    description: "The keys of the tags to remove."
     required: true

@@ -20,9 +20,9 @@ parameters:
     type: string
   ConfigurationSetName:
     type: string
-    description: 'The name of the configuration set to which to apply the event destination.'
+    description: "The name of the configuration set to which to apply the event destination."
     required: true
   EventDestination:
     type: object
-    description: 'An object that describes the AWS service to which Amazon SES will publish the email sending events associated with the specified configuration set.'
+    description: "An object that describes the AWS service to which Amazon SES will publish the email sending events associated with the specified configuration set."
     required: true

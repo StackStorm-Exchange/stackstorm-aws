@@ -20,9 +20,9 @@ parameters:
     type: string
   policyName:
     type: string
-    description: 'The policy name.'
+    description: "The policy name."
     required: true
   policyVersionId:
     type: string
-    description: 'The policy version ID.'
+    description: "The policy version ID."
     required: true

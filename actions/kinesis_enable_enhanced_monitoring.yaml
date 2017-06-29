@@ -20,9 +20,9 @@ parameters:
     type: string
   StreamName:
     type: string
-    description: 'The name of the stream for which to enable enhanced monitoring.'
+    description: "The name of the stream for which to enable enhanced monitoring."
     required: true
   ShardLevelMetrics:
     type: array
-    description: 'List of shard-level metrics to enable. The following are the valid shard-level metrics. The value "ALL" enables every metric.    IncomingBytes     IncomingRecords     OutgoingBytes     OutgoingRecords     WriteProvisionedThroughputExceeded     ReadProvisionedThroughputExceeded     IteratorAgeMilliseconds     ALL    For more information, see Monitoring the Amazon Kinesis Streams Service with Amazon CloudWatch in the Amazon Kinesis Streams Developer Guide.'
+    description: "List of shard-level metrics to enable. The following are the valid shard-level metrics. The value 'ALL' enables every metric.    IncomingBytes     IncomingRecords     OutgoingBytes     OutgoingRecords     WriteProvisionedThroughputExceeded     ReadProvisionedThroughputExceeded     IteratorAgeMilliseconds     ALL    For more information, see Monitoring the Amazon Kinesis Streams Service with Amazon CloudWatch in the Amazon Kinesis Streams Developer Guide."
     required: true

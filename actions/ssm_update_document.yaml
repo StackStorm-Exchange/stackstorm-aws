@@ -20,12 +20,12 @@ parameters:
     type: string
   Content:
     type: string
-    description: 'The content in a document that you want to update.'
+    description: "The content in a document that you want to update."
     required: true
   Name:
     type: string
-    description: 'The name of the document that you want to update.'
+    description: "The name of the document that you want to update."
     required: true
   DocumentVersion:
     type: string
-    description: 'The version of the document that you want to update.'
+    description: "The version of the document that you want to update."

@@ -20,5 +20,5 @@ parameters:
     type: string
   DBClusterParameterGroupName:
     type: string
-    description: 'The name of the DB cluster parameter group. Constraints:   Must be the name of an existing DB cluster parameter group.   You cannot delete a default DB cluster parameter group.   Cannot be associated with any DB clusters.  '
+    description: "The name of the DB cluster parameter group. Constraints:   Must be the name of an existing DB cluster parameter group.   You cannot delete a default DB cluster parameter group.   Cannot be associated with any DB clusters.  "
     required: true

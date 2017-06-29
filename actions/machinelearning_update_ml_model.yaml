@@ -20,11 +20,11 @@ parameters:
     type: string
   MLModelId:
     type: string
-    description: 'The ID assigned to the MLModel during creation.'
+    description: "The ID assigned to the MLModel during creation."
     required: true
   MLModelName:
     type: string
-    description: 'A user-supplied name or description of the MLModel.'
+    description: "A user-supplied name or description of the MLModel."
   ScoreThreshold:
     type: number
-    description: 'The ScoreThreshold used in binary classification MLModel that marks the boundary between a positive prediction and a negative prediction. Output values greater than or equal to the ScoreThreshold receive a positive result from the MLModel, such as true. Output values less than the ScoreThreshold receive a negative response from the MLModel, such as false.'
+    description: "The ScoreThreshold used in binary classification MLModel that marks the boundary between a positive prediction and a negative prediction. Output values greater than or equal to the ScoreThreshold receive a positive result from the MLModel, such as true. Output values less than the ScoreThreshold receive a negative response from the MLModel, such as false."

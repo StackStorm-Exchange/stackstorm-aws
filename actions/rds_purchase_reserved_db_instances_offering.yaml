@@ -20,14 +20,14 @@ parameters:
     type: string
   ReservedDBInstancesOfferingId:
     type: string
-    description: 'The ID of the Reserved DB instance offering to purchase. Example: 438012d3-4052-4cc7-b2e3-8d3372e0e706'
+    description: "The ID of the Reserved DB instance offering to purchase. Example: 438012d3-4052-4cc7-b2e3-8d3372e0e706"
     required: true
   ReservedDBInstanceId:
     type: string
-    description: 'Customer-specified identifier to track this reservation. Example: myreservationID'
+    description: "Customer-specified identifier to track this reservation. Example: myreservationID"
   DBInstanceCount:
     type: integer
-    description: 'The number of instances to reserve. Default: 1 '
+    description: "The number of instances to reserve. Default: 1 "
   Tags:
     type: array
-    description: ''
+    description: ""

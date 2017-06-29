@@ -20,11 +20,11 @@ parameters:
     type: string
   NetworkInterfaceId:
     type: string
-    description: 'The ID of the network interface.'
+    description: "The ID of the network interface."
     required: true
-  DryRun:
-    type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
   Attribute:
     type: string
-    description: 'The attribute of the network interface.'
+    description: "The attribute of the network interface. This parameter is required."
+  DryRun:
+    type: boolean
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."

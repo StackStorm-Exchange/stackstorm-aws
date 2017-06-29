@@ -18,11 +18,11 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  NetworkInterfaceId:
-    type: string
-    description: 'The ID of the network interface.'
-    required: true
   Ipv6Addresses:
     type: array
-    description: 'The IPv6 addresses to unassign from the network interface.'
+    description: "The IPv6 addresses to unassign from the network interface."
+    required: true
+  NetworkInterfaceId:
+    type: string
+    description: "The ID of the network interface."
     required: true

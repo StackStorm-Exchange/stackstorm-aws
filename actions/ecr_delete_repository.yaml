@@ -20,11 +20,11 @@ parameters:
     type: string
   repositoryName:
     type: string
-    description: 'The name of the repository to delete.'
+    description: "The name of the repository to delete."
     required: true
   registryId:
     type: string
-    description: 'The AWS account ID associated with the registry that contains the repository to delete. If you do not specify a registry, the default registry is assumed.'
+    description: "The AWS account ID associated with the registry that contains the repository to delete. If you do not specify a registry, the default registry is assumed."
   force:
     type: boolean
-    description: 'Force the deletion of the repository if it contains images.'
+    description: "Force the deletion of the repository if it contains images."

@@ -20,9 +20,9 @@ parameters:
     type: string
   IPSetId:
     type: string
-    description: 'The IPSetId of the IPSet that you want to delete. IPSetId is returned by CreateIPSet and by ListIPSets.'
+    description: "The IPSetId of the IPSet that you want to delete. IPSetId is returned by CreateIPSet and by ListIPSets."
     required: true
   ChangeToken:
     type: string
-    description: 'The value returned by the most recent call to GetChangeToken.'
+    description: "The value returned by the most recent call to GetChangeToken."
     required: true

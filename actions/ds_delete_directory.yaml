@@ -20,5 +20,5 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'The identifier of the directory to delete.'
+    description: "The identifier of the directory to delete."
     required: true

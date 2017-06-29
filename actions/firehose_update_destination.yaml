@@ -20,25 +20,25 @@ parameters:
     type: string
   DeliveryStreamName:
     type: string
-    description: 'The name of the delivery stream.'
+    description: "The name of the delivery stream."
     required: true
   CurrentDeliveryStreamVersionId:
     type: string
-    description: 'Obtain this value from the VersionId result of DeliveryStreamDescription. This value is required, and helps the service to perform conditional operations. For example, if there is a interleaving update and this value is null, then the update destination fails. After the update is successful, the VersionId value is updated. The service then performs a merge of the old configuration with the new configuration.'
+    description: "Obtain this value from the VersionId result of DeliveryStreamDescription. This value is required, and helps the service to perform conditional operations. For example, if there is a interleaving update and this value is null, then the update destination fails. After the update is successful, the VersionId value is updated. The service then performs a merge of the old configuration with the new configuration."
     required: true
   DestinationId:
     type: string
-    description: 'The ID of the destination.'
+    description: "The ID of the destination."
     required: true
   S3DestinationUpdate:
     type: object
-    description: '[Deprecated] Describes an update for a destination in Amazon S3.'
+    description: "[Deprecated] Describes an update for a destination in Amazon S3."
   ExtendedS3DestinationUpdate:
     type: object
-    description: 'Describes an update for a destination in Amazon S3.'
+    description: "Describes an update for a destination in Amazon S3."
   RedshiftDestinationUpdate:
     type: object
-    description: 'Describes an update for a destination in Amazon Redshift.'
+    description: "Describes an update for a destination in Amazon Redshift."
   ElasticsearchDestinationUpdate:
     type: object
-    description: 'Describes an update for a destination in Amazon ES.'
+    description: "Describes an update for a destination in Amazon ES."

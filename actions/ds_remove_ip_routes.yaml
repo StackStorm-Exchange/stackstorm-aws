@@ -20,9 +20,9 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'Identifier (ID) of the directory from which you want to remove the IP addresses.'
+    description: "Identifier (ID) of the directory from which you want to remove the IP addresses."
     required: true
   CidrIps:
     type: array
-    description: 'IP address blocks that you want to remove.'
+    description: "IP address blocks that you want to remove."
     required: true

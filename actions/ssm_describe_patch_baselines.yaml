@@ -20,10 +20,10 @@ parameters:
     type: string
   Filters:
     type: array
-    description: 'Each element in the array is a structure containing:  Key: (string, “NAME_PREFIX” or “OWNER”) Value: (array of strings, exactly 1 entry, 1 ≤ length ≤ 255)'
+    description: "Each element in the array is a structure containing:  Key: (string, 'NAME_PREFIX' or 'OWNER') Value: (array of strings, exactly 1 entry, between 1 and 255 characters)"
   MaxResults:
     type: integer
-    description: 'The maximum number of patch baselines to return (per page).'
+    description: "The maximum number of patch baselines to return (per page)."
   NextToken:
     type: string
-    description: 'The token for the next set of items to return. (You received this token from a previous call.)'
+    description: "The token for the next set of items to return. (You received this token from a previous call.)"

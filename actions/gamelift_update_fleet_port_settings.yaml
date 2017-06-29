@@ -20,11 +20,11 @@ parameters:
     type: string
   FleetId:
     type: string
-    description: 'Unique identifier for the fleet you want to update port settings for.'
+    description: "Unique identifier for a fleet to update port settings for."
     required: true
   InboundPermissionAuthorizations:
     type: array
-    description: 'Collection of port settings to be added to the fleet record.'
+    description: "Collection of port settings to be added to the fleet record."
   InboundPermissionRevocations:
     type: array
-    description: 'Collection of port settings to be removed from the fleet record.'
+    description: "Collection of port settings to be removed from the fleet record."

@@ -20,14 +20,14 @@ parameters:
     type: string
   AliasId:
     type: string
-    description: 'Unique identifier for a fleet alias. Specify the alias you want to update.'
+    description: "Unique identifier for a fleet alias. Specify the alias you want to update."
     required: true
   Name:
     type: string
-    description: 'Descriptive label associated with an alias. Alias names do not need to be unique.'
+    description: "Descriptive label that is associated with an alias. Alias names do not need to be unique."
   Description:
     type: string
-    description: 'Human-readable description of an alias.'
+    description: "Human-readable description of an alias."
   RoutingStrategy:
     type: object
-    description: 'Object specifying the fleet and routing type to use for the alias.'
+    description: "Object that specifies the fleet and routing type to use for the alias."

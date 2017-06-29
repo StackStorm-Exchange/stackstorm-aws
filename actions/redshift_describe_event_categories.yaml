@@ -20,4 +20,4 @@ parameters:
     type: string
   SourceType:
     type: string
-    description: 'The source type, such as cluster or parameter group, to which the described event categories apply. Valid values: cluster, cluster-snapshot, cluster-parameter-group, and cluster-security-group.'
+    description: "The source type, such as cluster or parameter group, to which the described event categories apply. Valid values: cluster, cluster-snapshot, cluster-parameter-group, and cluster-security-group."

@@ -20,10 +20,10 @@ parameters:
     type: string
   StackId:
     type: string
-    description: 'A stack ID. If you use this parameter, DescribeInstances returns descriptions of the instances associated with the specified stack.'
+    description: "A stack ID. If you use this parameter, DescribeInstances returns descriptions of the instances associated with the specified stack."
   LayerId:
     type: string
-    description: 'A layer ID. If you use this parameter, DescribeInstances returns descriptions of the instances associated with the specified layer.'
+    description: "A layer ID. If you use this parameter, DescribeInstances returns descriptions of the instances associated with the specified layer."
   InstanceIds:
     type: array
-    description: 'An array of instance IDs to be described. If you use this parameter, DescribeInstances returns a description of the specified instances. Otherwise, it returns a description of every instance.'
+    description: "An array of instance IDs to be described. If you use this parameter, DescribeInstances returns a description of the specified instances. Otherwise, it returns a description of every instance."

@@ -20,5 +20,5 @@ parameters:
     type: string
   ruleName:
     type: string
-    description: 'The name of the rule.'
+    description: "The name of the rule."
     required: true

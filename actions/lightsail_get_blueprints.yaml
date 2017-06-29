@@ -20,7 +20,7 @@ parameters:
     type: string
   includeInactive:
     type: boolean
-    description: 'A Boolean value indicating whether to include inactive results in your request.'
+    description: "A Boolean value indicating whether to include inactive results in your request."
   pageToken:
     type: string
-    description: 'A token used for advancing to the next page of results from your get blueprints request.'
+    description: "A token used for advancing to the next page of results from your get blueprints request."

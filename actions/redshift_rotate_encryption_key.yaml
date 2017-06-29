@@ -20,5 +20,5 @@ parameters:
     type: string
   ClusterIdentifier:
     type: string
-    description: 'The unique identifier of the cluster that you want to rotate the encryption keys for. Constraints: Must be the name of valid cluster that has encryption enabled.'
+    description: "The unique identifier of the cluster that you want to rotate the encryption keys for. Constraints: Must be the name of valid cluster that has encryption enabled."
     required: true

@@ -20,24 +20,24 @@ parameters:
     type: string
   StackId:
     type: string
-    description: 'The stack ID.'
+    description: "The stack ID."
     required: true
   Command:
     type: object
-    description: 'A DeploymentCommand object that specifies the deployment command and any associated arguments.'
+    description: "A DeploymentCommand object that specifies the deployment command and any associated arguments."
     required: true
   AppId:
     type: string
-    description: 'The app ID. This parameter is required for app deployments, but not for other deployment commands.'
+    description: "The app ID. This parameter is required for app deployments, but not for other deployment commands."
   InstanceIds:
     type: array
-    description: 'The instance IDs for the deployment targets.'
+    description: "The instance IDs for the deployment targets."
   LayerIds:
     type: array
-    description: 'The layer IDs for the deployment targets.'
+    description: "The layer IDs for the deployment targets."
   Comment:
     type: string
-    description: 'A user-defined comment.'
+    description: "A user-defined comment."
   CustomJson:
     type: string
-    description: 'A string that contains user-defined, custom JSON. It is used to override the corresponding default stack configuration JSON values. The string should be in the following format:  "{\"key1\": \"value1\", \"key2\": \"value2\",...}"  For more information on custom JSON, see Use Custom JSON to Modify the Stack Configuration Attributes.'
+    description: "A string that contains user-defined, custom JSON. It is used to override the corresponding default stack configuration JSON values. The string should be in the following format:  '{\'key1\': \'value1\', \'key2\': \'value2\',...}'  For more information on custom JSON, see Use Custom JSON to Modify the Stack Configuration Attributes."

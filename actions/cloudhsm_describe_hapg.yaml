@@ -20,5 +20,5 @@ parameters:
     type: string
   HapgArn:
     type: string
-    description: 'The ARN of the high-availability partition group to describe.'
+    description: "The ARN of the high-availability partition group to describe."
     required: true

@@ -20,38 +20,41 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'The name of the application that contains the version to be deployed.  If no application is found with this name, CreateEnvironment returns an InvalidParameterValue error. '
+    description: "The name of the application that contains the version to be deployed.  If no application is found with this name, CreateEnvironment returns an InvalidParameterValue error. "
     required: true
   EnvironmentName:
     type: string
-    description: 'A unique name for the deployment environment. Used in the application URL. Constraint: Must be from 4 to 40 characters in length. The name can contain only letters, numbers, and hyphens. It cannot start or end with a hyphen. This name must be unique in your account. If the specified name already exists, AWS Elastic Beanstalk returns an InvalidParameterValue error.  Default: If the CNAME parameter is not specified, the environment name becomes part of the CNAME, and therefore part of the visible URL for your application.'
+    description: "A unique name for the deployment environment. Used in the application URL. Constraint: Must be from 4 to 40 characters in length. The name can contain only letters, numbers, and hyphens. It cannot start or end with a hyphen. This name must be unique in your account. If the specified name already exists, AWS Elastic Beanstalk returns an InvalidParameterValue error.  Default: If the CNAME parameter is not specified, the environment name becomes part of the CNAME, and therefore part of the visible URL for your application."
   GroupName:
     type: string
-    description: 'The name of the group to which the target environment belongs. Specify a group name only if the environment"s name is specified in an environment manifest and not with the environment name parameter. See Environment Manifest (env.yaml) for details.'
+    description: "The name of the group to which the target environment belongs. Specify a group name only if the environment's name is specified in an environment manifest and not with the environment name parameter. See Environment Manifest (env.yaml) for details."
   Description:
     type: string
-    description: 'Describes this environment.'
+    description: "Describes this environment."
   CNAMEPrefix:
     type: string
-    description: 'If specified, the environment attempts to use this value as the prefix for the CNAME. If not specified, the CNAME is generated automatically by appending a random alphanumeric string to the environment name.'
+    description: "If specified, the environment attempts to use this value as the prefix for the CNAME. If not specified, the CNAME is generated automatically by appending a random alphanumeric string to the environment name."
   Tier:
     type: object
-    description: 'This specifies the tier to use for creating this environment.'
+    description: "This specifies the tier to use for creating this environment."
   Tags:
     type: array
-    description: 'This specifies the tags applied to resources in the environment.'
+    description: "This specifies the tags applied to resources in the environment."
   VersionLabel:
     type: string
-    description: 'The name of the application version to deploy.  If the specified application has no associated application versions, AWS Elastic Beanstalk UpdateEnvironment returns an InvalidParameterValue error.  Default: If not specified, AWS Elastic Beanstalk attempts to launch the sample application in the container.'
+    description: "The name of the application version to deploy.  If the specified application has no associated application versions, AWS Elastic Beanstalk UpdateEnvironment returns an InvalidParameterValue error.  Default: If not specified, AWS Elastic Beanstalk attempts to launch the sample application in the container."
   TemplateName:
     type: string
-    description: ' The name of the configuration template to use in deployment. If no configuration template is found with this name, AWS Elastic Beanstalk returns an InvalidParameterValue error.   Condition: You must specify either this parameter or a SolutionStackName, but not both. If you specify both, AWS Elastic Beanstalk returns an InvalidParameterCombination error. If you do not specify either, AWS Elastic Beanstalk returns a MissingRequiredParameter error. '
+    description: " The name of the configuration template to use in deployment. If no configuration template is found with this name, AWS Elastic Beanstalk returns an InvalidParameterValue error. "
   SolutionStackName:
     type: string
-    description: 'This is an alternative to specifying a template name. If specified, AWS Elastic Beanstalk sets the configuration values to the default values associated with the specified solution stack.  Condition: You must specify either this or a TemplateName, but not both. If you specify both, AWS Elastic Beanstalk returns an InvalidParameterCombination error. If you do not specify either, AWS Elastic Beanstalk returns a MissingRequiredParameter error. '
+    description: "This is an alternative to specifying a template name. If specified, AWS Elastic Beanstalk sets the configuration values to the default values associated with the specified solution stack."
+  PlatformArn:
+    type: string
+    description: "The ARN of the custom platform."
   OptionSettings:
     type: array
-    description: 'If specified, AWS Elastic Beanstalk sets the specified configuration options to the requested value in the configuration set for the new environment. These override the values obtained from the solution stack or the configuration template.'
+    description: "If specified, AWS Elastic Beanstalk sets the specified configuration options to the requested value in the configuration set for the new environment. These override the values obtained from the solution stack or the configuration template."
   OptionsToRemove:
     type: array
-    description: 'A list of custom user-defined configuration options to remove from the configuration set for this new environment.'
+    description: "A list of custom user-defined configuration options to remove from the configuration set for this new environment."

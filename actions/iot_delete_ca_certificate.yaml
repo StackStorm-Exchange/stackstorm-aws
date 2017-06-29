@@ -20,5 +20,5 @@ parameters:
     type: string
   certificateId:
     type: string
-    description: 'The ID of the certificate to delete.'
+    description: "The ID of the certificate to delete."
     required: true

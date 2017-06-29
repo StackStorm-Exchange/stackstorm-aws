@@ -20,15 +20,15 @@ parameters:
     type: string
   ResourceType:
     type: string
-    description: 'The type of the resource.   The resource type for health checks is healthcheck.   The resource type for hosted zones is hostedzone.  '
+    description: "The type of the resource.   The resource type for health checks is healthcheck.   The resource type for hosted zones is hostedzone.  "
     required: true
   ResourceId:
     type: string
-    description: 'The ID of the resource for which you want to add, change, or delete tags.'
+    description: "The ID of the resource for which you want to add, change, or delete tags."
     required: true
   AddTags:
     type: array
-    description: 'A complex type that contains a list of the tags that you want to add to the specified health check or hosted zone and/or the tags for which you want to edit the Value element. You can add a maximum of 10 tags to a health check or a hosted zone.'
+    description: "A complex type that contains a list of the tags that you want to add to the specified health check or hosted zone and/or the tags that you want to edit Value for. You can add a maximum of 10 tags to a health check or a hosted zone."
   RemoveTagKeys:
     type: array
-    description: 'A complex type that contains a list of the tags that you want to delete from the specified health check or hosted zone. You can specify up to 10 keys.'
+    description: "A complex type that contains a list of the tags that you want to delete from the specified health check or hosted zone. You can specify up to 10 keys."

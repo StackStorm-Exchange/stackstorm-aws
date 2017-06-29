@@ -20,5 +20,5 @@ parameters:
     type: string
   checkIds:
     type: array
-    description: 'The IDs of the Trusted Advisor checks.'
+    description: "The IDs of the Trusted Advisor checks."
     required: true

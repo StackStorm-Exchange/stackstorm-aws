@@ -20,4 +20,4 @@ parameters:
     type: string
   ExportTaskIds:
     type: array
-    description: 'One or more export task IDs.'
+    description: "One or more export task IDs."

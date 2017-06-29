@@ -20,11 +20,11 @@ parameters:
     type: string
   BaselineId:
     type: string
-    description: 'The ID of the patch baseline to retrieve the effective patches for.'
+    description: "The ID of the patch baseline to retrieve the effective patches for."
     required: true
   MaxResults:
     type: integer
-    description: 'The maximum number of patches to return (per page).'
+    description: "The maximum number of patches to return (per page)."
   NextToken:
     type: string
-    description: 'The token for the next set of items to return. (You received this token from a previous call.)'
+    description: "The token for the next set of items to return. (You received this token from a previous call.)"

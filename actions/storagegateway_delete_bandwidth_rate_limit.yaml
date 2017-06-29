@@ -20,9 +20,9 @@ parameters:
     type: string
   GatewayARN:
     type: string
-    description: ''
+    description: ""
     required: true
   BandwidthType:
     type: string
-    description: 'One of the BandwidthType values that indicates the gateway bandwidth rate limit to delete. Valid Values: Upload, Download, All.'
+    description: "One of the BandwidthType values that indicates the gateway bandwidth rate limit to delete. Valid Values: Upload, Download, All."
     required: true

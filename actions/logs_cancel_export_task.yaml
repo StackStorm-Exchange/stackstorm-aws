@@ -20,5 +20,5 @@ parameters:
     type: string
   taskId:
     type: string
-    description: 'The ID of the export task.'
+    description: "The ID of the export task."
     required: true

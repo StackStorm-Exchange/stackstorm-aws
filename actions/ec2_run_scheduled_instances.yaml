@@ -18,20 +18,20 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  ScheduledInstanceId:
-    type: string
-    description: 'The Scheduled Instance ID.'
-    required: true
   LaunchSpecification:
     type: object
-    description: 'The launch specification. You must match the instance type, Availability Zone, network, and platform of the schedule that you purchased.'
+    description: "The launch specification. You must match the instance type, Availability Zone, network, and platform of the schedule that you purchased."
     required: true
-  DryRun:
-    type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+  ScheduledInstanceId:
+    type: string
+    description: "The Scheduled Instance ID."
+    required: true
   ClientToken:
     type: string
-    description: 'Unique, case-sensitive identifier that ensures the idempotency of the request. For more information, see Ensuring Idempotency.'
+    description: "Unique, case-sensitive identifier that ensures the idempotency of the request. For more information, see Ensuring Idempotency."
+  DryRun:
+    type: boolean
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   InstanceCount:
     type: integer
-    description: 'The number of instances. Default: 1'
+    description: "The number of instances. Default: 1"

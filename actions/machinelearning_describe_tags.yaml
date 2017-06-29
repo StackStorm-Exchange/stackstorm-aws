@@ -20,9 +20,9 @@ parameters:
     type: string
   ResourceId:
     type: string
-    description: 'The ID of the ML object. For example, exampleModelId. '
+    description: "The ID of the ML object. For example, exampleModelId. "
     required: true
   ResourceType:
     type: string
-    description: 'The type of the ML object.'
+    description: "The type of the ML object."
     required: true

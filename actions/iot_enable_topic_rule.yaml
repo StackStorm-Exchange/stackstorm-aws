@@ -20,5 +20,5 @@ parameters:
     type: string
   ruleName:
     type: string
-    description: 'The name of the topic rule to enable.'
+    description: "The name of the topic rule to enable."
     required: true

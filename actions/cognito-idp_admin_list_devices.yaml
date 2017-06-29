@@ -20,15 +20,15 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID.'
+    description: "The user pool ID."
     required: true
   Username:
     type: string
-    description: 'The user name.'
+    description: "The user name."
     required: true
   Limit:
     type: integer
-    description: 'The limit of the devices request.'
+    description: "The limit of the devices request."
   PaginationToken:
     type: string
-    description: 'The pagination token.'
+    description: "The pagination token."

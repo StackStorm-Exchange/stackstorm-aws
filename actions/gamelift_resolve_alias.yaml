@@ -20,5 +20,5 @@ parameters:
     type: string
   AliasId:
     type: string
-    description: 'Unique identifier for the alias you want to resolve.'
+    description: "Unique identifier for the alias you want to resolve."
     required: true

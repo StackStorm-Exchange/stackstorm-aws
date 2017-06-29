@@ -20,9 +20,9 @@ parameters:
     type: string
   DomainName:
     type: string
-    description: ''
+    description: ""
     required: true
   IndexFieldName:
     type: string
-    description: 'The name of the index field your want to remove from the domain"s indexing options.'
+    description: "The name of the index field your want to remove from the domain's indexing options."
     required: true

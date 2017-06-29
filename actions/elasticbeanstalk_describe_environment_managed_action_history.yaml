@@ -20,13 +20,13 @@ parameters:
     type: string
   EnvironmentId:
     type: string
-    description: 'The environment ID of the target environment.'
+    description: "The environment ID of the target environment."
   EnvironmentName:
     type: string
-    description: 'The name of the target environment.'
+    description: "The name of the target environment."
   NextToken:
     type: string
-    description: 'The pagination token returned by a previous request.'
+    description: "The pagination token returned by a previous request."
   MaxItems:
     type: integer
-    description: 'The maximum number of items to return for a single request.'
+    description: "The maximum number of items to return for a single request."

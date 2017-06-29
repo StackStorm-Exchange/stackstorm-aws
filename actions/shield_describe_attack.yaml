@@ -20,5 +20,5 @@ parameters:
     type: string
   AttackId:
     type: string
-    description: 'The unique identifier (ID) for the attack that to be described.'
+    description: "The unique identifier (ID) for the attack that to be described."
     required: true

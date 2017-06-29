@@ -20,5 +20,5 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the fleet to start.'
+    description: "The name of the fleet to start."
     required: true

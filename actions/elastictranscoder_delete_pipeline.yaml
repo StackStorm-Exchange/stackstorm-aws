@@ -20,5 +20,5 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The identifier of the pipeline that you want to delete.'
+    description: "The identifier of the pipeline that you want to delete."
     required: true

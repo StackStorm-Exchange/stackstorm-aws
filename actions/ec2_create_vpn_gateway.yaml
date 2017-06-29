@@ -20,11 +20,11 @@ parameters:
     type: string
   Type:
     type: string
-    description: 'The type of VPN connection this virtual private gateway supports.'
+    description: "The type of VPN connection this virtual private gateway supports."
     required: true
-  DryRun:
-    type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
   AvailabilityZone:
     type: string
-    description: 'The Availability Zone for the virtual private gateway.'
+    description: "The Availability Zone for the virtual private gateway."
+  DryRun:
+    type: boolean
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."

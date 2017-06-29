@@ -20,11 +20,11 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The RestApi identifier for the Authorizers resource.'
+    description: "The RestApi identifier for the Authorizers resource."
     required: true
   position:
     type: string
-    description: 'If not all Authorizer resources in the response were present, the position will specify where to start the next page of results.'
+    description: "The current pagination position in the paged result set."
   limit:
     type: integer
-    description: 'Limit the number of Authorizer resources in the response.'
+    description: "The maximum number of returned results per page."

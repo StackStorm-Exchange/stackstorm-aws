@@ -20,9 +20,9 @@ parameters:
     type: string
   policyName:
     type: string
-    description: 'The policy name.'
+    description: "The policy name."
     required: true
   principal:
     type: string
-    description: 'The principal, which can be a certificate ARN (as returned from the CreateCertificate operation) or an Amazon Cognito ID.'
+    description: "The principal, which can be a certificate ARN (as returned from the CreateCertificate operation) or an Amazon Cognito ID."
     required: true

@@ -20,5 +20,5 @@ parameters:
     type: string
   AssociationId:
     type: string
-    description: 'The association ID for the CIDR block.'
+    description: "The association ID for the CIDR block."
     required: true

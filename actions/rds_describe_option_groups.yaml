@@ -20,19 +20,19 @@ parameters:
     type: string
   OptionGroupName:
     type: string
-    description: 'The name of the option group to describe. Cannot be supplied together with EngineName or MajorEngineVersion.'
+    description: "The name of the option group to describe. Cannot be supplied together with EngineName or MajorEngineVersion."
   Filters:
     type: array
-    description: 'This parameter is not currently supported.'
+    description: "This parameter is not currently supported."
   Marker:
     type: string
-    description: ' An optional pagination token provided by a previous DescribeOptionGroups request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords. '
+    description: " An optional pagination token provided by a previous DescribeOptionGroups request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords. "
   MaxRecords:
     type: integer
-    description: ' The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a pagination token called a marker is included in the response so that the remaining results can be retrieved.  Default: 100 Constraints: Minimum 20, maximum 100.'
+    description: " The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a pagination token called a marker is included in the response so that the remaining results can be retrieved.  Default: 100 Constraints: Minimum 20, maximum 100."
   EngineName:
     type: string
-    description: 'Filters the list of option groups to only include groups associated with a specific database engine.'
+    description: "Filters the list of option groups to only include groups associated with a specific database engine."
   MajorEngineVersion:
     type: string
-    description: 'Filters the list of option groups to only include groups associated with a specific database engine version. If specified, then EngineName must also be specified.'
+    description: "Filters the list of option groups to only include groups associated with a specific database engine version. If specified, then EngineName must also be specified."

@@ -20,10 +20,10 @@ parameters:
     type: string
   TableName:
     type: string
-    description: 'If this parameter is provided, then only the streams associated with this table name are returned.'
+    description: "If this parameter is provided, then only the streams associated with this table name are returned."
   Limit:
     type: integer
-    description: 'The maximum number of streams to return. The upper limit is 100.'
+    description: "The maximum number of streams to return. The upper limit is 100."
   ExclusiveStartStreamArn:
     type: string
-    description: 'The ARN (Amazon Resource Name) of the first item that this operation will evaluate. Use the value that was returned for LastEvaluatedStreamArn in the previous operation. '
+    description: "The ARN (Amazon Resource Name) of the first item that this operation will evaluate. Use the value that was returned for LastEvaluatedStreamArn in the previous operation. "

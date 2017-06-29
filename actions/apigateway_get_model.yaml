@@ -20,12 +20,12 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The RestApi identifier under which the Model exists.'
+    description: "The RestApi identifier under which the Model exists."
     required: true
   modelName:
     type: string
-    description: 'The name of the model as an identifier.'
+    description: "The name of the model as an identifier."
     required: true
   flatten:
     type: boolean
-    description: 'A query parameter of a Boolean value to resolve (true) all external model references and returns a flattened model schema or not (false) The default is false.'
+    description: "A query parameter of a Boolean value to resolve (true) all external model references and returns a flattened model schema or not (false) The default is false."

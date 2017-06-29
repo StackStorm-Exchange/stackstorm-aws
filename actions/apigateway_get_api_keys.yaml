@@ -20,16 +20,16 @@ parameters:
     type: string
   position:
     type: string
-    description: 'The position of the current ApiKeys resource to get information about.'
+    description: "The current pagination position in the paged result set."
   limit:
     type: integer
-    description: 'The maximum number of ApiKeys to get information about.'
+    description: "The maximum number of ApiKeys to get information about."
   nameQuery:
     type: string
-    description: 'The name of queried API keys.'
+    description: "The name of queried API keys."
   customerId:
     type: string
-    description: 'The identifier of a customer in AWS Marketplace or an external system, such as a developer portal.'
+    description: "The identifier of a customer in AWS Marketplace or an external system, such as a developer portal."
   includeValues:
     type: boolean
-    description: 'A boolean flag to specify whether (true) or not (false) the result contains key values.'
+    description: "A boolean flag to specify whether (true) or not (false) the result contains key values."

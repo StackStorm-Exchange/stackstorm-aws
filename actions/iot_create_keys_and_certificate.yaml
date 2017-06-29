@@ -20,4 +20,4 @@ parameters:
     type: string
   setAsActive:
     type: boolean
-    description: 'Specifies whether the certificate is active.'
+    description: "Specifies whether the certificate is active."

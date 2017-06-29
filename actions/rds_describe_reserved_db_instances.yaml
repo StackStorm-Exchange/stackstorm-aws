@@ -20,31 +20,31 @@ parameters:
     type: string
   ReservedDBInstanceId:
     type: string
-    description: 'The reserved DB instance identifier filter value. Specify this parameter to show only the reservation that matches the specified reservation ID.'
+    description: "The reserved DB instance identifier filter value. Specify this parameter to show only the reservation that matches the specified reservation ID."
   ReservedDBInstancesOfferingId:
     type: string
-    description: 'The offering identifier filter value. Specify this parameter to show only purchased reservations matching the specified offering identifier.'
+    description: "The offering identifier filter value. Specify this parameter to show only purchased reservations matching the specified offering identifier."
   DBInstanceClass:
     type: string
-    description: 'The DB instance class filter value. Specify this parameter to show only those reservations matching the specified DB instances class.'
+    description: "The DB instance class filter value. Specify this parameter to show only those reservations matching the specified DB instances class."
   Duration:
     type: string
-    description: 'The duration filter value, specified in years or seconds. Specify this parameter to show only reservations for this duration. Valid Values: 1 | 3 | 31536000 | 94608000 '
+    description: "The duration filter value, specified in years or seconds. Specify this parameter to show only reservations for this duration. Valid Values: 1 | 3 | 31536000 | 94608000 "
   ProductDescription:
     type: string
-    description: 'The product description filter value. Specify this parameter to show only those reservations matching the specified product description.'
+    description: "The product description filter value. Specify this parameter to show only those reservations matching the specified product description."
   OfferingType:
     type: string
-    description: 'The offering type filter value. Specify this parameter to show only the available offerings matching the specified offering type. Valid Values: "Partial Upfront" | "All Upfront" | "No Upfront"  '
+    description: "The offering type filter value. Specify this parameter to show only the available offerings matching the specified offering type. Valid Values: 'Partial Upfront' | 'All Upfront' | 'No Upfront'  "
   MultiAZ:
     type: boolean
-    description: 'The Multi-AZ filter value. Specify this parameter to show only those reservations matching the specified Multi-AZ parameter.'
+    description: "The Multi-AZ filter value. Specify this parameter to show only those reservations matching the specified Multi-AZ parameter."
   Filters:
     type: array
-    description: 'This parameter is not currently supported.'
+    description: "This parameter is not currently supported."
   MaxRecords:
     type: integer
-    description: ' The maximum number of records to include in the response. If more than the MaxRecords value is available, a pagination token called a marker is included in the response so that the following results can be retrieved.  Default: 100 Constraints: Minimum 20, maximum 100.'
+    description: " The maximum number of records to include in the response. If more than the MaxRecords value is available, a pagination token called a marker is included in the response so that the following results can be retrieved.  Default: 100 Constraints: Minimum 20, maximum 100."
   Marker:
     type: string
-    description: ' An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords. '
+    description: " An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords. "

@@ -20,8 +20,8 @@ parameters:
     type: string
   TargetGroupArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the target group.'
+    description: "The Amazon Resource Name (ARN) of the target group."
     required: true
   Targets:
     type: array
-    description: 'The targets.'
+    description: "The targets."

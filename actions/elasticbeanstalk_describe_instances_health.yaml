@@ -20,13 +20,13 @@ parameters:
     type: string
   EnvironmentName:
     type: string
-    description: 'Specify the AWS Elastic Beanstalk environment by name.'
+    description: "Specify the AWS Elastic Beanstalk environment by name."
   EnvironmentId:
     type: string
-    description: 'Specify the AWS Elastic Beanstalk environment by ID.'
+    description: "Specify the AWS Elastic Beanstalk environment by ID."
   AttributeNames:
     type: array
-    description: 'Specifies the response elements you wish to receive. To retrieve all attributes, set to All. If no attribute names are specified, returns a list of instances.'
+    description: "Specifies the response elements you wish to receive. To retrieve all attributes, set to All. If no attribute names are specified, returns a list of instances."
   NextToken:
     type: string
-    description: 'Specify the pagination token returned by a previous call.'
+    description: "Specify the pagination token returned by a previous call."

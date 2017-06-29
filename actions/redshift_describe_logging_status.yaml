@@ -20,5 +20,5 @@ parameters:
     type: string
   ClusterIdentifier:
     type: string
-    description: 'The identifier of the cluster from which to get the logging status. Example: examplecluster '
+    description: "The identifier of the cluster from which to get the logging status. Example: examplecluster "
     required: true

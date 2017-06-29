@@ -20,18 +20,18 @@ parameters:
     type: string
   WindowExecutionId:
     type: string
-    description: 'The ID of the Maintenance Window execution the task is part of.'
+    description: "The ID of the Maintenance Window execution the task is part of."
     required: true
   TaskId:
     type: string
-    description: 'The ID of the specific task in the Maintenance Window task that should be retrieved.'
+    description: "The ID of the specific task in the Maintenance Window task that should be retrieved."
     required: true
   Filters:
     type: array
-    description: 'Optional filters used to scope down the returned task invocations. The supported filter key is STATUS with the corresponding values PENDING, IN_PROGRESS, SUCCESS, FAILED, TIMED_OUT, CANCELLING, and CANCELLED.'
+    description: "Optional filters used to scope down the returned task invocations. The supported filter key is STATUS with the corresponding values PENDING, IN_PROGRESS, SUCCESS, FAILED, TIMED_OUT, CANCELLING, and CANCELLED."
   MaxResults:
     type: integer
-    description: 'The maximum number of items to return for this call. The call also returns a token that you can specify in a subsequent call to get the next set of results.'
+    description: "The maximum number of items to return for this call. The call also returns a token that you can specify in a subsequent call to get the next set of results."
   NextToken:
     type: string
-    description: 'The token for the next set of items to return. (You received this token from a previous call.)'
+    description: "The token for the next set of items to return. (You received this token from a previous call.)"

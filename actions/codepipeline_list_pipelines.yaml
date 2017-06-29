@@ -20,4 +20,4 @@ parameters:
     type: string
   nextToken:
     type: string
-    description: 'An identifier that was returned from the previous list pipelines call, which can be used to return the next set of pipelines in the list.'
+    description: "An identifier that was returned from the previous list pipelines call, which can be used to return the next set of pipelines in the list."

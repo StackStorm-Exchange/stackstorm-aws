@@ -20,9 +20,9 @@ parameters:
     type: string
   Rule:
     type: string
-    description: 'The name of the rule you want to remove targets from.'
+    description: "The name of the rule."
     required: true
   Ids:
     type: array
-    description: 'The list of target IDs to remove from the rule.'
+    description: "The IDs of the targets to remove from the rule."
     required: true

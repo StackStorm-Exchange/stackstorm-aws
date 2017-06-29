@@ -20,5 +20,5 @@ parameters:
     type: string
   taskDefinition:
     type: string
-    description: 'The family and revision (family:revision) or full Amazon Resource Name (ARN) of the task definition to deregister. You must specify a revision.'
+    description: "The family and revision (family:revision) or full Amazon Resource Name (ARN) of the task definition to deregister. You must specify a revision."
     required: true

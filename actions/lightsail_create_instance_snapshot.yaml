@@ -20,9 +20,9 @@ parameters:
     type: string
   instanceSnapshotName:
     type: string
-    description: 'The name for your new snapshot.'
+    description: "The name for your new snapshot."
     required: true
   instanceName:
     type: string
-    description: 'The Lightsail instance on which to base your snapshot.'
+    description: "The Lightsail instance on which to base your snapshot."
     required: true

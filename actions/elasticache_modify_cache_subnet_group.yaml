@@ -20,11 +20,11 @@ parameters:
     type: string
   CacheSubnetGroupName:
     type: string
-    description: 'The name for the cache subnet group. This value is stored as a lowercase string. Constraints: Must contain no more than 255 alphanumeric characters or hyphens. Example: mysubnetgroup '
+    description: "The name for the cache subnet group. This value is stored as a lowercase string. Constraints: Must contain no more than 255 alphanumeric characters or hyphens. Example: mysubnetgroup "
     required: true
   CacheSubnetGroupDescription:
     type: string
-    description: 'A description of the cache subnet group.'
+    description: "A description of the cache subnet group."
   SubnetIds:
     type: array
-    description: 'The EC2 subnet IDs for the cache subnet group.'
+    description: "The EC2 subnet IDs for the cache subnet group."

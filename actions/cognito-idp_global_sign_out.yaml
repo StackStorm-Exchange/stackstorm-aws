@@ -20,4 +20,5 @@ parameters:
     type: string
   AccessToken:
     type: string
-    description: 'The access token.'
+    description: "The access token."
+    required: true

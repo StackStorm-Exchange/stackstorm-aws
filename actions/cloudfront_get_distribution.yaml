@@ -20,5 +20,5 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The distribution"s ID.'
+    description: "The distribution's ID."
     required: true

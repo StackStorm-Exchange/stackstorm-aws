@@ -20,12 +20,12 @@ parameters:
     type: string
   usagePlanId:
     type: string
-    description: 'The Id of the usage plan associated with the usage data.'
+    description: "The Id of the usage plan associated with the usage data."
     required: true
   keyId:
     type: string
-    description: 'The identifier of the API key associated with the usage plan in which a temporary extension is granted to the remaining quota.'
+    description: "The identifier of the API key associated with the usage plan in which a temporary extension is granted to the remaining quota."
     required: true
   patchOperations:
     type: array
-    description: 'A list of update operations to be applied to the specified resource and in the order specified in this list.'
+    description: "A list of update operations to be applied to the specified resource and in the order specified in this list."

@@ -20,5 +20,5 @@ parameters:
     type: string
   Workspaces:
     type: array
-    description: 'An array of structures that specify the WorkSpaces to create.'
+    description: "An array of structures that specify the WorkSpaces to create."
     required: true

@@ -20,5 +20,5 @@ parameters:
     type: string
   arn:
     type: string
-    description: 'The suite"s ARN.'
+    description: "The suite's ARN."
     required: true

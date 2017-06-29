@@ -20,11 +20,11 @@ parameters:
     type: string
   HapgArn:
     type: string
-    description: 'The ARN of the high-availability partition group to modify.'
+    description: "The ARN of the high-availability partition group to modify."
     required: true
   Label:
     type: string
-    description: 'The new label for the high-availability partition group.'
+    description: "The new label for the high-availability partition group."
   PartitionSerialList:
     type: array
-    description: 'The list of partition serial numbers to make members of the high-availability partition group.'
+    description: "The list of partition serial numbers to make members of the high-availability partition group."

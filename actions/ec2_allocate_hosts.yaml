@@ -18,21 +18,21 @@ parameters:
     default: boto3
     immutable: true
     type: string
+  AvailabilityZone:
+    type: string
+    description: "The Availability Zone for the Dedicated Hosts."
+    required: true
   InstanceType:
     type: string
-    description: 'Specify the instance type that you want your Dedicated Hosts to be configured for. When you specify the instance type, that is the only instance type that you can launch onto that host.'
+    description: "Specify the instance type that you want your Dedicated Hosts to be configured for. When you specify the instance type, that is the only instance type that you can launch onto that host."
     required: true
   Quantity:
     type: integer
-    description: 'The number of Dedicated Hosts you want to allocate to your account with these parameters.'
-    required: true
-  AvailabilityZone:
-    type: string
-    description: 'The Availability Zone for the Dedicated Hosts.'
+    description: "The number of Dedicated Hosts you want to allocate to your account with these parameters."
     required: true
   AutoPlacement:
     type: string
-    description: 'This is enabled by default. This property allows instances to be automatically placed onto available Dedicated Hosts, when you are launching instances without specifying a host ID. Default: Enabled'
+    description: "This is enabled by default. This property allows instances to be automatically placed onto available Dedicated Hosts, when you are launching instances without specifying a host ID. Default: Enabled"
   ClientToken:
     type: string
-    description: 'Unique, case-sensitive identifier you provide to ensure idempotency of the request. For more information, see How to Ensure Idempotency in the Amazon Elastic Compute Cloud User Guide. '
+    description: "Unique, case-sensitive identifier you provide to ensure idempotency of the request. For more information, see How to Ensure Idempotency in the Amazon Elastic Compute Cloud User Guide. "

@@ -20,4 +20,4 @@ parameters:
     type: string
   description:
     type: string
-    description: 'The description of the ClientCertificate.'
+    description: "The description of the ClientCertificate."

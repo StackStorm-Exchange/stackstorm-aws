@@ -20,5 +20,5 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The streaming distribution"s ID.'
+    description: "The streaming distribution's ID."
     required: true

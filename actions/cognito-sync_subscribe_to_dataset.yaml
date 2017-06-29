@@ -20,17 +20,17 @@ parameters:
     type: string
   IdentityPoolId:
     type: string
-    description: 'A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. The ID of the pool to which the identity belongs.'
+    description: "A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. The ID of the pool to which the identity belongs."
     required: true
   IdentityId:
     type: string
-    description: 'Unique ID for this identity.'
+    description: "Unique ID for this identity."
     required: true
   DatasetName:
     type: string
-    description: 'The name of the dataset to subcribe to.'
+    description: "The name of the dataset to subcribe to."
     required: true
   DeviceId:
     type: string
-    description: 'The unique ID generated for this device by Cognito.'
+    description: "The unique ID generated for this device by Cognito."
     required: true

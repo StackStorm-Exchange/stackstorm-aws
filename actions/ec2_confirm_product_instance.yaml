@@ -18,14 +18,14 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  ProductCode:
-    type: string
-    description: 'The product code. This must be a product code that you own.'
-    required: true
   InstanceId:
     type: string
-    description: 'The ID of the instance.'
+    description: "The ID of the instance."
+    required: true
+  ProductCode:
+    type: string
+    description: "The product code. This must be a product code that you own."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."

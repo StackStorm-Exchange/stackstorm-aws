@@ -20,5 +20,5 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The identity"s ID.'
+    description: "The identity's ID."
     required: true

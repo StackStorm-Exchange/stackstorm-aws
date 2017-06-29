@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: iam_create_service_linked_role
+runner_type: python-script
+parameters:
+  action:
+    default: create_service_linked_role
+    immutable: true
+    type: string
+  cls:
+    default: iam
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  AWSServiceName:
+    type: string
+    description: "The AWS service to which this role is attached. You use a string similar to a URL but without the http:// in front. For example: elasticbeanstalk.amazonaws.com "
+    required: true
+  Description:
+    type: string
+    description: "The description of the role."
+  CustomSuffix:
+    type: string
+    description: "A string that you provide, which is combined with the service name to form the complete role name. If you make multiple requests for the same service, then you must supply a different CustomSuffix for each request. Otherwise the request fails with a duplicate role name error. For example, you could add -1 or -debug to the suffix."

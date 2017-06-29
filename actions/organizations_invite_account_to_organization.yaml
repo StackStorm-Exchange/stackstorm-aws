@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: organizations_invite_account_to_organization
+runner_type: python-script
+parameters:
+  action:
+    default: invite_account_to_organization
+    immutable: true
+    type: string
+  cls:
+    default: organizations
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Target:
+    type: object
+    description: "The identifier (ID) of the AWS account that you want to invite to join your organization. This is a JSON object that contains the following elements:   { 'Type': 'ACCOUNT', 'Id': '&lt; account id number &gt;' }  If you use the AWS CLI, you can submit this as a single string, similar to the following example:  --target id=123456789012,type=ACCOUNT  If you specify 'Type': 'ACCOUNT', then you must provide the AWS account ID number as the Id. If you specify 'Type': 'EMAIL', then you must specify the email address that is associated with the account.  --target id=bill@example.com,type=EMAIL "
+    required: true
+  Notes:
+    type: string
+    description: "Additional information that you want to include in the generated email to the recipient account owner."

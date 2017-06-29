@@ -20,5 +20,5 @@ parameters:
     type: string
   arn:
     type: string
-    description: 'The test"s ARN.'
+    description: "The test's ARN."
     required: true

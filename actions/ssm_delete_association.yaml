@@ -20,10 +20,10 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the SSM document.'
+    description: "The name of the Systems Manager document."
   InstanceId:
     type: string
-    description: 'The ID of the instance.'
+    description: "The ID of the instance."
   AssociationId:
     type: string
-    description: 'The association ID that you want to delete.'
+    description: "The association ID that you want to delete."

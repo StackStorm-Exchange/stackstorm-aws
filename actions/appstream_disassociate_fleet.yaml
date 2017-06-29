@@ -20,9 +20,9 @@ parameters:
     type: string
   FleetName:
     type: string
-    description: 'The name of the fleet to disassociate.'
+    description: "The name of the fleet to disassociate."
     required: true
   StackName:
     type: string
-    description: 'The name of the stack with which the fleet is associated.'
+    description: "The name of the stack with which the fleet is associated."
     required: true

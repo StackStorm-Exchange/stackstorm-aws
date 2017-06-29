@@ -20,5 +20,5 @@ parameters:
     type: string
   LayerId:
     type: string
-    description: 'The layer ID.'
+    description: "The layer ID."
     required: true

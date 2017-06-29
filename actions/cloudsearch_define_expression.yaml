@@ -20,9 +20,9 @@ parameters:
     type: string
   DomainName:
     type: string
-    description: ''
+    description: ""
     required: true
   Expression:
     type: object
-    description: ''
+    description: ""
     required: true

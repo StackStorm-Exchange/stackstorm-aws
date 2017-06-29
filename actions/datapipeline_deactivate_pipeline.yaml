@@ -20,8 +20,8 @@ parameters:
     type: string
   pipelineId:
     type: string
-    description: 'The ID of the pipeline.'
+    description: "The ID of the pipeline."
     required: true
   cancelActive:
     type: boolean
-    description: 'Indicates whether to cancel any running objects. The default is true, which sets the state of any running objects to CANCELED. If this value is false, the pipeline is deactivated after all running objects finish.'
+    description: "Indicates whether to cancel any running objects. The default is true, which sets the state of any running objects to CANCELED. If this value is false, the pipeline is deactivated after all running objects finish."

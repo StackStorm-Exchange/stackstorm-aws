@@ -20,5 +20,5 @@ parameters:
     type: string
   AutomationExecutionId:
     type: string
-    description: 'The unique identifier for an existing automation execution to examine. The execution ID is returned by StartAutomationExecution when the execution of an Automation document is initiated.'
+    description: "The unique identifier for an existing automation execution to examine. The execution ID is returned by StartAutomationExecution when the execution of an Automation document is initiated."
     required: true

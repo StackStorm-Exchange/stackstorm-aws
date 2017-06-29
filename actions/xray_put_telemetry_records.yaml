@@ -20,14 +20,14 @@ parameters:
     type: string
   TelemetryRecords:
     type: array
-    description: ''
+    description: ""
     required: true
   EC2InstanceId:
     type: string
-    description: ''
+    description: ""
   Hostname:
     type: string
-    description: ''
+    description: ""
   ResourceARN:
     type: string
-    description: ''
+    description: ""

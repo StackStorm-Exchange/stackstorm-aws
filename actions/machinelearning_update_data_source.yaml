@@ -20,9 +20,9 @@ parameters:
     type: string
   DataSourceId:
     type: string
-    description: 'The ID assigned to the DataSource during creation.'
+    description: "The ID assigned to the DataSource during creation."
     required: true
   DataSourceName:
     type: string
-    description: 'A new user-supplied name or description of the DataSource that will replace the current description. '
+    description: "A new user-supplied name or description of the DataSource that will replace the current description. "
     required: true

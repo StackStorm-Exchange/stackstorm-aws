@@ -20,5 +20,5 @@ parameters:
     type: string
   DistributionConfigWithTags:
     type: object
-    description: 'The distribution"s configuration information. '
+    description: "The distribution's configuration information. "
     required: true

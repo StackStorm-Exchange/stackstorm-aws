@@ -20,5 +20,5 @@ parameters:
     type: string
   ClusterIdentifier:
     type: string
-    description: 'The cluster identifier.'
+    description: "The cluster identifier."
     required: true

@@ -20,7 +20,7 @@ parameters:
     type: string
   DirectoryIds:
     type: array
-    description: 'An array of strings that contains the directory identifiers to retrieve information for. If this member is null, all directories are retrieved.'
+    description: "An array of strings that contains the directory identifiers to retrieve information for. If this member is null, all directories are retrieved."
   NextToken:
     type: string
-    description: 'The NextToken value from a previous call to this operation. Pass null if this is the first call.'
+    description: "The NextToken value from a previous call to this operation. Pass null if this is the first call."

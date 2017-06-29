@@ -20,5 +20,5 @@ parameters:
     type: string
   SnapshotName:
     type: string
-    description: 'The name of the snapshot to be deleted.'
+    description: "The name of the snapshot to be deleted."
     required: true

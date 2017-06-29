@@ -1,0 +1,32 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: mturk_list_reviewable_hi_ts
+runner_type: python-script
+parameters:
+  action:
+    default: list_reviewable_hi_ts
+    immutable: true
+    type: string
+  cls:
+    default: mturk
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  HITTypeId:
+    type: string
+    description: " The ID of the HIT type of the HITs to consider for the query. If not specified, all HITs for the Reviewer are considered "
+  Status:
+    type: string
+    description: " Can be either Reviewable or Reviewing. Reviewable is the default value. "
+  NextToken:
+    type: string
+    description: "Pagination Token"
+  MaxResults:
+    type: integer
+    description: " Limit the number of results returned. "

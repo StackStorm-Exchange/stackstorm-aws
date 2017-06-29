@@ -20,17 +20,17 @@ parameters:
     type: string
   PortfolioId:
     type: string
-    description: 'The portfolio identifier.'
+    description: "The portfolio identifier."
     required: true
   AcceptLanguage:
     type: string
-    description: 'The language code to use for this operation. Supported language codes are as follows: "en" (English) "jp" (Japanese) "zh" (Chinese) If no code is specified, "en" is used as the default.'
+    description: "The language code to use for this operation. Supported language codes are as follows: 'en' (English) 'jp' (Japanese) 'zh' (Chinese) If no code is specified, 'en' is used as the default."
   ProductId:
     type: string
-    description: 'The product identifier.'
+    description: "The product identifier."
   PageSize:
     type: integer
-    description: 'The maximum number of items to return in the results. If more results exist than fit in the specified PageSize, the value of NextPageToken in the response is non-null.'
+    description: "The maximum number of items to return in the results. If more results exist than fit in the specified PageSize, the value of NextPageToken in the response is non-null."
   PageToken:
     type: string
-    description: 'The page token of the first page retrieved. If null, this retrieves the first page of size PageSize.'
+    description: "The page token of the first page retrieved. If null, this retrieves the first page of size PageSize."

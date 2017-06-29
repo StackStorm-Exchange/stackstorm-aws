@@ -20,5 +20,5 @@ parameters:
     type: string
   arn:
     type: string
-    description: 'The job"s ARN.'
+    description: "The job's ARN."
     required: true

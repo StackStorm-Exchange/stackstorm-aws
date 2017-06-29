@@ -20,10 +20,10 @@ parameters:
     type: string
   LoadBalancerNames:
     type: array
-    description: 'The names of the load balancers.'
+    description: "The names of the load balancers."
   Marker:
     type: string
-    description: 'The marker for the next set of results. (You received this marker from a previous call.)'
+    description: "The marker for the next set of results. (You received this marker from a previous call.)"
   PageSize:
     type: integer
-    description: 'The maximum number of results to return with this call (a number from 1 to 400). The default is 400.'
+    description: "The maximum number of results to return with this call (a number from 1 to 400). The default is 400."

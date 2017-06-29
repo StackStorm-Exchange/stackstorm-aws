@@ -20,9 +20,9 @@ parameters:
     type: string
   DistributionId:
     type: string
-    description: 'The distribution"s id.'
+    description: "The distribution's id."
     required: true
   InvalidationBatch:
     type: object
-    description: 'The batch information for the invalidation.'
+    description: "The batch information for the invalidation."
     required: true

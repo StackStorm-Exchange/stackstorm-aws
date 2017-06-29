@@ -20,16 +20,16 @@ parameters:
     type: string
   LoadBalancerName:
     type: string
-    description: 'The name of the load balancer.'
+    description: "The name of the load balancer."
     required: true
   PolicyName:
     type: string
-    description: 'The name of the load balancer policy to be created. This name must be unique within the set of policies for this load balancer.'
+    description: "The name of the load balancer policy to be created. This name must be unique within the set of policies for this load balancer."
     required: true
   PolicyTypeName:
     type: string
-    description: 'The name of the base policy type. To get the list of policy types, use DescribeLoadBalancerPolicyTypes.'
+    description: "The name of the base policy type. To get the list of policy types, use DescribeLoadBalancerPolicyTypes."
     required: true
   PolicyAttributes:
     type: array
-    description: 'The policy attributes.'
+    description: "The policy attributes."

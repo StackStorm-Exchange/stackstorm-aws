@@ -20,29 +20,29 @@ parameters:
     type: string
   instanceName:
     type: string
-    description: 'The name of the instance for which you want to get metrics data.'
+    description: "The name of the instance for which you want to get metrics data."
     required: true
   metricName:
     type: string
-    description: 'The metric name to get data about. '
+    description: "The metric name to get data about. "
     required: true
   period:
     type: integer
-    description: 'The time period for which you are requesting data.'
+    description: "The time period for which you are requesting data."
     required: true
   startTime:
     type: string
-    description: 'The start time of the time period.'
+    description: "The start time of the time period."
     required: true
   endTime:
     type: string
-    description: 'The end time of the time period.'
+    description: "The end time of the time period."
     required: true
   unit:
     type: string
-    description: 'The unit. The list of valid values is below.'
+    description: "The unit. The list of valid values is below."
     required: true
   statistics:
     type: array
-    description: 'The instance statistics. '
+    description: "The instance statistics. "
     required: true

@@ -20,5 +20,5 @@ parameters:
     type: string
   EmailAddress:
     type: string
-    description: 'An email address to be removed from the list of verified addresses.'
+    description: "An email address to be removed from the list of verified addresses."
     required: true

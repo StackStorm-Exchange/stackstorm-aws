@@ -20,5 +20,5 @@ parameters:
     type: string
   LoadBalancerArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the load balancer.'
+    description: "The Amazon Resource Name (ARN) of the load balancer."
     required: true

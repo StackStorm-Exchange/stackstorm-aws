@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: mturk_list_hi_ts_for_qualification_type
+runner_type: python-script
+parameters:
+  action:
+    default: list_hi_ts_for_qualification_type
+    immutable: true
+    type: string
+  cls:
+    default: mturk
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  QualificationTypeId:
+    type: string
+    description: " The ID of the Qualification type to use when querying HITs. "
+    required: true
+  NextToken:
+    type: string
+    description: "Pagination Token"
+  MaxResults:
+    type: integer
+    description: " Limit the number of results returned. "

@@ -20,11 +20,11 @@ parameters:
     type: string
   executionArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the execution to stop.'
+    description: "The Amazon Resource Name (ARN) of the execution to stop."
     required: true
   error:
     type: string
-    description: 'An arbitrary error code that identifies the cause of the termination.'
+    description: "An arbitrary error code that identifies the cause of the termination."
   cause:
     type: string
-    description: 'A more detailed explanation of the cause of the termination.'
+    description: "A more detailed explanation of the cause of the termination."

@@ -20,8 +20,8 @@ parameters:
     type: string
   ElasticIp:
     type: string
-    description: 'The Elastic IP address.'
+    description: "The Elastic IP address."
     required: true
   InstanceId:
     type: string
-    description: 'The instance ID.'
+    description: "The instance ID."

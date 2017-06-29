@@ -20,5 +20,5 @@ parameters:
     type: string
   BuildId:
     type: string
-    description: 'Unique identifier for the build you want to delete.'
+    description: "Unique identifier for a build to delete."
     required: true

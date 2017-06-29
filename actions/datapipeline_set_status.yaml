@@ -20,13 +20,13 @@ parameters:
     type: string
   pipelineId:
     type: string
-    description: 'The ID of the pipeline that contains the objects.'
+    description: "The ID of the pipeline that contains the objects."
     required: true
   objectIds:
     type: array
-    description: 'The IDs of the objects. The corresponding objects can be either physical or components, but not a mix of both types.'
+    description: "The IDs of the objects. The corresponding objects can be either physical or components, but not a mix of both types."
     required: true
   status:
     type: string
-    description: 'The status to be set on all the objects specified in objectIds. For components, use PAUSE or RESUME. For instances, use TRY_CANCEL, RERUN, or MARK_FINISHED.'
+    description: "The status to be set on all the objects specified in objectIds. For components, use PAUSE or RESUME. For instances, use TRY_CANCEL, RERUN, or MARK_FINISHED."
     required: true

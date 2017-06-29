@@ -20,9 +20,9 @@ parameters:
     type: string
   Records:
     type: array
-    description: 'The records associated with the request.'
+    description: "The records associated with the request."
     required: true
   StreamName:
     type: string
-    description: 'The stream name associated with the request.'
+    description: "The stream name associated with the request."
     required: true

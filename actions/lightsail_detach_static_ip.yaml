@@ -20,5 +20,5 @@ parameters:
     type: string
   staticIpName:
     type: string
-    description: 'The name of the static IP to detach from the instance.'
+    description: "The name of the static IP to detach from the instance."
     required: true

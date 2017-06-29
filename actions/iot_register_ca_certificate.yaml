@@ -20,15 +20,15 @@ parameters:
     type: string
   caCertificate:
     type: string
-    description: 'The CA certificate.'
+    description: "The CA certificate."
     required: true
   verificationCertificate:
     type: string
-    description: 'The private key verification certificate.'
+    description: "The private key verification certificate."
     required: true
   setAsActive:
     type: boolean
-    description: 'A boolean value that specifies if the CA certificate is set to active.'
+    description: "A boolean value that specifies if the CA certificate is set to active."
   allowAutoRegistration:
     type: boolean
-    description: 'Allows this CA certificate to be used for auto registration of device certificates.'
+    description: "Allows this CA certificate to be used for auto registration of device certificates."

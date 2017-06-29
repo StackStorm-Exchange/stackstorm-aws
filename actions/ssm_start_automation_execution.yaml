@@ -20,11 +20,11 @@ parameters:
     type: string
   DocumentName:
     type: string
-    description: 'The name of the Automation document to use for this execution.'
+    description: "The name of the Automation document to use for this execution."
     required: true
   DocumentVersion:
     type: string
-    description: 'The version of the Automation document to use for this execution.'
+    description: "The version of the Automation document to use for this execution."
   Parameters:
     type: object
-    description: 'A key-value map of execution parameters, which match the declared parameters in the Automation document.'
+    description: "A key-value map of execution parameters, which match the declared parameters in the Automation document."

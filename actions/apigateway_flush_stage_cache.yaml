@@ -20,9 +20,9 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The API identifier of the stage to flush its cache.'
+    description: "The API identifier of the stage to flush its cache."
     required: true
   stageName:
     type: string
-    description: 'The name of the stage to flush its cache.'
+    description: "The name of the stage to flush its cache."
     required: true

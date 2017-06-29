@@ -20,5 +20,5 @@ parameters:
     type: string
   clientCertificateId:
     type: string
-    description: 'The identifier of the ClientCertificate resource to be described.'
+    description: "The identifier of the ClientCertificate resource to be described."
     required: true

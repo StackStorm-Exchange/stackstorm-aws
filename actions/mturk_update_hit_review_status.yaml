@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: mturk_update_hit_review_status
+runner_type: python-script
+parameters:
+  action:
+    default: update_hit_review_status
+    immutable: true
+    type: string
+  cls:
+    default: mturk
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  HITId:
+    type: string
+    description: " The ID of the HIT to update. "
+    required: true
+  Revert:
+    type: boolean
+    description: " Specifies how to update the HIT status. Default is False.     Setting this to false will only transition a HIT from Reviewable to Reviewing     Setting this to true will only transition a HIT from Reviewing to Reviewable   "

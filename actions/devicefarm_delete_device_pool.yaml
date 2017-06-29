@@ -20,5 +20,5 @@ parameters:
     type: string
   arn:
     type: string
-    description: 'Represents the Amazon Resource Name (ARN) of the Device Farm device pool you wish to delete.'
+    description: "Represents the Amazon Resource Name (ARN) of the Device Farm device pool you wish to delete."
     required: true

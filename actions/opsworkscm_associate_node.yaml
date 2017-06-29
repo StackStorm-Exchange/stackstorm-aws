@@ -20,12 +20,13 @@ parameters:
     type: string
   ServerName:
     type: string
-    description: ''
+    description: "The name of the server with which to associate the node. "
     required: true
   NodeName:
     type: string
-    description: ''
+    description: "The name of the Chef client node. "
     required: true
   EngineAttributes:
     type: array
-    description: ''
+    description: "Engine attributes used for associating the node.   Attributes accepted in a AssociateNode request:     CHEF_ORGANIZATION: The Chef organization with which the node is associated. By default only one organization named default can exist.     CHEF_NODE_PUBLIC_KEY: A PEM-formatted public key. This key is required for the chef-client agent to access the Chef API.   "
+    required: true

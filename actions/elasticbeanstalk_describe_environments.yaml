@@ -20,19 +20,19 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'If specified, AWS Elastic Beanstalk restricts the returned descriptions to include only those that are associated with this application.'
+    description: "If specified, AWS Elastic Beanstalk restricts the returned descriptions to include only those that are associated with this application."
   VersionLabel:
     type: string
-    description: 'If specified, AWS Elastic Beanstalk restricts the returned descriptions to include only those that are associated with this application version.'
+    description: "If specified, AWS Elastic Beanstalk restricts the returned descriptions to include only those that are associated with this application version."
   EnvironmentIds:
     type: array
-    description: 'If specified, AWS Elastic Beanstalk restricts the returned descriptions to include only those that have the specified IDs.'
+    description: "If specified, AWS Elastic Beanstalk restricts the returned descriptions to include only those that have the specified IDs."
   EnvironmentNames:
     type: array
-    description: 'If specified, AWS Elastic Beanstalk restricts the returned descriptions to include only those that have the specified names.'
+    description: "If specified, AWS Elastic Beanstalk restricts the returned descriptions to include only those that have the specified names."
   IncludeDeleted:
     type: boolean
-    description: 'Indicates whether to include deleted environments:  true: Environments that have been deleted after IncludedDeletedBackTo are displayed.  false: Do not include deleted environments.'
+    description: "Indicates whether to include deleted environments:  true: Environments that have been deleted after IncludedDeletedBackTo are displayed.  false: Do not include deleted environments."
   IncludedDeletedBackTo:
     type: string
-    description: ' If specified when IncludeDeleted is set to true, then environments deleted after this date are displayed. '
+    description: " If specified when IncludeDeleted is set to true, then environments deleted after this date are displayed. "

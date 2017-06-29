@@ -20,7 +20,7 @@ parameters:
     type: string
   MaxNumberOfDomains:
     type: integer
-    description: 'The maximum number of domain names you want returned. The range is 1 to 100. The default setting is 100.'
+    description: "The maximum number of domain names you want returned. The range is 1 to 100. The default setting is 100."
   NextToken:
     type: string
-    description: 'A string informing Amazon SimpleDB where to start the next list of domain names.'
+    description: "A string informing Amazon SimpleDB where to start the next list of domain names."

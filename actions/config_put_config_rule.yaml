@@ -20,5 +20,5 @@ parameters:
     type: string
   ConfigRule:
     type: object
-    description: ''
+    description: "The rule that you want to add to your account."
     required: true

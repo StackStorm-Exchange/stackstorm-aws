@@ -20,5 +20,5 @@ parameters:
     type: string
   replicationJobId:
     type: string
-    description: ''
+    description: ""
     required: true

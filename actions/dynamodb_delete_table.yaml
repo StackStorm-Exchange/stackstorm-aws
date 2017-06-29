@@ -20,5 +20,5 @@ parameters:
     type: string
   TableName:
     type: string
-    description: 'The name of the table to delete.'
+    description: "The name of the table to delete."
     required: true

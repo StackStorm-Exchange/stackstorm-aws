@@ -20,5 +20,5 @@ parameters:
     type: string
   applicationName:
     type: string
-    description: 'The name of the application. This name must be unique with the applicable IAM user or AWS account.'
+    description: "The name of the application. This name must be unique with the applicable IAM user or AWS account."
     required: true

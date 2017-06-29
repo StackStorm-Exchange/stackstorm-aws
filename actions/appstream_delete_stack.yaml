@@ -20,5 +20,5 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the stack to delete.'
+    description: "The name of the stack to delete."
     required: true

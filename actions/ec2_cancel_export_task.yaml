@@ -20,5 +20,5 @@ parameters:
     type: string
   ExportTaskId:
     type: string
-    description: 'The ID of the export task. This is the ID returned by CreateInstanceExportTask.'
+    description: "The ID of the export task. This is the ID returned by CreateInstanceExportTask."
     required: true

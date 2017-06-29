@@ -20,11 +20,11 @@ parameters:
     type: string
   DeliveryStreamName:
     type: string
-    description: 'The name of the delivery stream.'
+    description: "The name of the delivery stream."
     required: true
   Limit:
     type: integer
-    description: 'The limit on the number of destinations to return. Currently, you can have one destination per delivery stream.'
+    description: "The limit on the number of destinations to return. Currently, you can have one destination per delivery stream."
   ExclusiveStartDestinationId:
     type: string
-    description: 'The ID of the destination to start returning the destination information. Currently Firehose supports one destination per delivery stream.'
+    description: "The ID of the destination to start returning the destination information. Currently Firehose supports one destination per delivery stream."

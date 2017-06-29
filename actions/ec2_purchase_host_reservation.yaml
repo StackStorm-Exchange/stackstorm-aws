@@ -18,20 +18,20 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  OfferingId:
-    type: string
-    description: 'The ID of the offering.'
-    required: true
   HostIdSet:
     type: array
-    description: 'The ID/s of the Dedicated Host/s that the reservation will be associated with.'
+    description: "The ID/s of the Dedicated Host/s that the reservation will be associated with."
     required: true
-  LimitPrice:
+  OfferingId:
     type: string
-    description: 'The specified limit is checked against the total upfront cost of the reservation (calculated as the offering"s upfront cost multiplied by the host count). If the total upfront cost is greater than the specified price limit, the request will fail. This is used to ensure that the purchase does not exceed the expected upfront cost of the purchase. At this time, the only supported currency is USD. For example, to indicate a limit price of USD 100, specify 100.00.'
-  CurrencyCode:
-    type: string
-    description: 'The currency in which the totalUpfrontPrice, LimitPrice, and totalHourlyPrice amounts are specified. At this time, the only supported currency is USD.'
+    description: "The ID of the offering."
+    required: true
   ClientToken:
     type: string
-    description: 'Unique, case-sensitive identifier you provide to ensure idempotency of the request. For more information, see How to Ensure Idempotency in the Amazon Elastic Compute Cloud User Guide.'
+    description: "Unique, case-sensitive identifier you provide to ensure idempotency of the request. For more information, see How to Ensure Idempotency in the Amazon Elastic Compute Cloud User Guide."
+  CurrencyCode:
+    type: string
+    description: "The currency in which the totalUpfrontPrice, LimitPrice, and totalHourlyPrice amounts are specified. At this time, the only supported currency is USD."
+  LimitPrice:
+    type: string
+    description: "The specified limit is checked against the total upfront cost of the reservation (calculated as the offering's upfront cost multiplied by the host count). If the total upfront cost is greater than the specified price limit, the request will fail. This is used to ensure that the purchase does not exceed the expected upfront cost of the purchase. At this time, the only supported currency is USD. For example, to indicate a limit price of USD 100, specify 100.00."

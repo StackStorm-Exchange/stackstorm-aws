@@ -20,10 +20,10 @@ parameters:
     type: string
   virtualInterfaceId:
     type: string
-    description: 'The ID of the virtual interface from which the BGP peer will be deleted. Example: dxvif-456abc78 Default: None'
+    description: "The ID of the virtual interface from which the BGP peer will be deleted. Example: dxvif-456abc78 Default: None"
   asn:
     type: integer
-    description: ''
+    description: ""
   customerAddress:
     type: string
-    description: ''
+    description: ""

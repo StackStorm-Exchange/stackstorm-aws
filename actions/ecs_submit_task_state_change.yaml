@@ -20,13 +20,13 @@ parameters:
     type: string
   cluster:
     type: string
-    description: 'The short name or full Amazon Resource Name (ARN) of the cluster that hosts the task.'
+    description: "The short name or full Amazon Resource Name (ARN) of the cluster that hosts the task."
   task:
     type: string
-    description: 'The task ID or full Amazon Resource Name (ARN) of the task in the state change request.'
+    description: "The task ID or full Amazon Resource Name (ARN) of the task in the state change request."
   status:
     type: string
-    description: 'The status of the state change request.'
+    description: "The status of the state change request."
   reason:
     type: string
-    description: 'The reason for the state change request.'
+    description: "The reason for the state change request."

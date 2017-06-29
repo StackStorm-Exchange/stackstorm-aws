@@ -20,11 +20,11 @@ parameters:
     type: string
   VolumeId:
     type: string
-    description: 'The volume ID.'
+    description: "The volume ID."
     required: true
   Name:
     type: string
-    description: 'The new name.'
+    description: "The new name."
   MountPoint:
     type: string
-    description: 'The new mount point.'
+    description: "The new mount point."

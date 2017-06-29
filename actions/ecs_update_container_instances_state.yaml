@@ -1,0 +1,31 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: ecs_update_container_instances_state
+runner_type: python-script
+parameters:
+  action:
+    default: update_container_instances_state
+    immutable: true
+    type: string
+  cls:
+    default: ecs
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  containerInstances:
+    type: array
+    description: "A list of container instance IDs or full Amazon Resource Name (ARN) entries."
+    required: true
+  status:
+    type: string
+    description: "The container instance state with which to update the container instance."
+    required: true
+  cluster:
+    type: string
+    description: "The short name or full Amazon Resource Name (ARN) of the cluster that hosts the container instance to update. If you do not specify a cluster, the default cluster is assumed."

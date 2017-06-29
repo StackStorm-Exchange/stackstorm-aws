@@ -1,0 +1,29 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: dax_describe_subnet_groups
+runner_type: python-script
+parameters:
+  action:
+    default: describe_subnet_groups
+    immutable: true
+    type: string
+  cls:
+    default: dax
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  SubnetGroupNames:
+    type: array
+    description: "The name of the subnet group."
+  MaxResults:
+    type: integer
+    description: "The maximum number of results to include in the response. If more results exist than the specified MaxResults value, a token is included in the response so that the remaining results can be retrieved. The value for MaxResults must be between 20 and 100."
+  NextToken:
+    type: string
+    description: "An optional token returned from a prior request. Use this token for pagination of results from this action. If this parameter is specified, the response includes only results beyond the token, up to the value specified by MaxResults."

@@ -20,5 +20,5 @@ parameters:
     type: string
   CloudFrontOriginAccessIdentityConfig:
     type: object
-    description: 'The current configuration information for the identity.'
+    description: "The current configuration information for the identity."
     required: true

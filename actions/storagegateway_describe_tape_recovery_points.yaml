@@ -20,11 +20,11 @@ parameters:
     type: string
   GatewayARN:
     type: string
-    description: ''
+    description: ""
     required: true
   Marker:
     type: string
-    description: 'An opaque string that indicates the position at which to begin describing the virtual tape recovery points.'
+    description: "An opaque string that indicates the position at which to begin describing the virtual tape recovery points."
   Limit:
     type: integer
-    description: 'Specifies that the number of virtual tape recovery points that are described be limited to the specified number.'
+    description: "Specifies that the number of virtual tape recovery points that are described be limited to the specified number."

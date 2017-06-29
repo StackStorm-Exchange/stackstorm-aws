@@ -20,5 +20,5 @@ parameters:
     type: string
   deploymentConfigName:
     type: string
-    description: 'The name of a deployment configuration associated with the applicable IAM user or AWS account.'
+    description: "The name of a deployment configuration associated with the applicable IAM user or AWS account."
     required: true

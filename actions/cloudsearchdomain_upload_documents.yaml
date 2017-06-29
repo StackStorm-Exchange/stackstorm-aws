@@ -20,9 +20,9 @@ parameters:
     type: string
   documents:
     type: string
-    description: 'A batch of documents formatted in JSON or HTML.'
+    description: "A batch of documents formatted in JSON or HTML."
     required: true
   contentType:
     type: string
-    description: 'The format of the batch you are uploading. Amazon CloudSearch supports two document batch formats:  application/json application/xml '
+    description: "The format of the batch you are uploading. Amazon CloudSearch supports two document batch formats:  application/json application/xml "
     required: true

@@ -20,5 +20,5 @@ parameters:
     type: string
   BackupId:
     type: string
-    description: 'The ID of the backup to delete. Run the DescribeBackups command to get a list of backup IDs. Backup IDs are in the format ServerName-yyyyMMddHHmmssSSS. '
+    description: "The ID of the backup to delete. Run the DescribeBackups command to get a list of backup IDs. Backup IDs are in the format ServerName-yyyyMMddHHmmssSSS. "
     required: true

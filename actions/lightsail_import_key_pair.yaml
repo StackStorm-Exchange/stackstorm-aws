@@ -20,9 +20,9 @@ parameters:
     type: string
   keyPairName:
     type: string
-    description: 'The name of the key pair for which you want to import the public key.'
+    description: "The name of the key pair for which you want to import the public key."
     required: true
   publicKeyBase64:
     type: string
-    description: 'A base64-encoded public key of the ssh-rsa type.'
+    description: "A base64-encoded public key of the ssh-rsa type."
     required: true

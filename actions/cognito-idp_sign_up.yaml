@@ -20,22 +20,22 @@ parameters:
     type: string
   ClientId:
     type: string
-    description: 'The ID of the client associated with the user pool.'
+    description: "The ID of the client associated with the user pool."
     required: true
   Username:
     type: string
-    description: 'The user name of the user you wish to register.'
+    description: "The user name of the user you wish to register."
     required: true
   Password:
     type: string
-    description: 'The password of the user you wish to register.'
+    description: "The password of the user you wish to register."
     required: true
   SecretHash:
     type: string
-    description: 'A keyed-hash message authentication code (HMAC) calculated using the secret key of a user pool client and username plus the client ID in the message.'
+    description: "A keyed-hash message authentication code (HMAC) calculated using the secret key of a user pool client and username plus the client ID in the message."
   UserAttributes:
     type: array
-    description: 'An array of name-value pairs representing user attributes.'
+    description: "An array of name-value pairs representing user attributes. For custom attributes, you must prepend the custom: prefix to the attribute name."
   ValidationData:
     type: array
-    description: 'The validation data in the request to register a user.'
+    description: "The validation data in the request to register a user."

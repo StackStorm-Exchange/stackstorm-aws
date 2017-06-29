@@ -20,5 +20,5 @@ parameters:
     type: string
   QueueUrl:
     type: string
-    description: 'The URL of a dead letter queue. Queue URLs are case-sensitive.'
+    description: "The URL of a dead letter queue. Queue URLs are case-sensitive."
     required: true

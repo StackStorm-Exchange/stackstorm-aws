@@ -20,5 +20,5 @@ parameters:
     type: string
   NatGatewayId:
     type: string
-    description: 'The ID of the NAT gateway.'
+    description: "The ID of the NAT gateway."
     required: true

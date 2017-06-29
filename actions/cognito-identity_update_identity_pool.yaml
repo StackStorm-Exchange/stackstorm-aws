@@ -20,28 +20,28 @@ parameters:
     type: string
   IdentityPoolId:
     type: string
-    description: 'An identity pool ID in the format REGION:GUID.'
+    description: "An identity pool ID in the format REGION:GUID."
     required: true
   IdentityPoolName:
     type: string
-    description: 'A string that you provide.'
+    description: "A string that you provide."
     required: true
   AllowUnauthenticatedIdentities:
     type: boolean
-    description: 'TRUE if the identity pool supports unauthenticated logins.'
+    description: "TRUE if the identity pool supports unauthenticated logins."
     required: true
   SupportedLoginProviders:
     type: object
-    description: 'Optional key:value pairs mapping provider names to provider app IDs.'
+    description: "Optional key:value pairs mapping provider names to provider app IDs."
   DeveloperProviderName:
     type: string
-    description: 'The "domain" by which Cognito will refer to your users.'
+    description: "The 'domain' by which Cognito will refer to your users."
   OpenIdConnectProviderARNs:
     type: array
-    description: 'A list of OpendID Connect provider ARNs.'
+    description: "A list of OpendID Connect provider ARNs."
   CognitoIdentityProviders:
     type: array
-    description: 'A list representing an Amazon Cognito Identity User Pool and its client ID.'
+    description: "A list representing an Amazon Cognito Identity User Pool and its client ID."
   SamlProviderARNs:
     type: array
-    description: 'An array of Amazon Resource Names (ARNs) of the SAML provider for your identity pool.'
+    description: "An array of Amazon Resource Names (ARNs) of the SAML provider for your identity pool."

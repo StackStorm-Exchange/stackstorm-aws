@@ -20,5 +20,5 @@ parameters:
     type: string
   LayerIds:
     type: array
-    description: 'An array of layer IDs.'
+    description: "An array of layer IDs."
     required: true

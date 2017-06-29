@@ -20,23 +20,23 @@ parameters:
     type: string
   DBInstanceIdentifier:
     type: string
-    description: 'The customer-assigned name of the DB instance that contains the log files you want to list. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens  '
+    description: "The customer-assigned name of the DB instance that contains the log files you want to list. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens  "
     required: true
   FilenameContains:
     type: string
-    description: 'Filters the available log files for log file names that contain the specified string.'
+    description: "Filters the available log files for log file names that contain the specified string."
   FileLastWritten:
     type: integer
-    description: 'Filters the available log files for files written since the specified date, in POSIX timestamp format with milliseconds.'
+    description: "Filters the available log files for files written since the specified date, in POSIX timestamp format with milliseconds."
   FileSize:
     type: integer
-    description: 'Filters the available log files for files larger than the specified size.'
+    description: "Filters the available log files for files larger than the specified size."
   Filters:
     type: array
-    description: 'This parameter is not currently supported.'
+    description: "This parameter is not currently supported."
   MaxRecords:
     type: integer
-    description: 'The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a pagination token called a marker is included in the response so that the remaining results can be retrieved.'
+    description: "The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a pagination token called a marker is included in the response so that the remaining results can be retrieved."
   Marker:
     type: string
-    description: 'The pagination token provided in the previous request. If this parameter is specified the response includes only records beyond the marker, up to MaxRecords.'
+    description: "The pagination token provided in the previous request. If this parameter is specified the response includes only records beyond the marker, up to MaxRecords."

@@ -20,9 +20,9 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'Descriptive label associated with a scaling policy. Policy names do not need to be unique.'
+    description: "Descriptive label that is associated with a scaling policy. Policy names do not need to be unique."
     required: true
   FleetId:
     type: string
-    description: 'Unique identifier for a fleet.'
+    description: "Unique identifier for a fleet to be deleted."
     required: true

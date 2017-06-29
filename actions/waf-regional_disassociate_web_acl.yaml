@@ -20,5 +20,5 @@ parameters:
     type: string
   ResourceArn:
     type: string
-    description: 'The ARN (Amazon Resource Name) of the resource from which the web ACL is being removed.'
+    description: "The ARN (Amazon Resource Name) of the resource from which the web ACL is being removed."
     required: true

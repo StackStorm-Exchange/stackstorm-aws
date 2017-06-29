@@ -20,13 +20,13 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'Name of the Kinesis Analytics application to update.'
+    description: "Name of the Amazon Kinesis Analytics application to update."
     required: true
   CurrentApplicationVersionId:
     type: integer
-    description: 'The current application version ID. You can use the DescribeApplication operation to get this value.'
+    description: "The current application version ID. You can use the DescribeApplication operation to get this value."
     required: true
   ApplicationUpdate:
     type: object
-    description: 'Describes application updates.'
+    description: "Describes application updates."
     required: true

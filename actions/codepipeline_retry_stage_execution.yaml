@@ -20,17 +20,17 @@ parameters:
     type: string
   pipelineName:
     type: string
-    description: 'The name of the pipeline that contains the failed stage.'
+    description: "The name of the pipeline that contains the failed stage."
     required: true
   stageName:
     type: string
-    description: 'The name of the failed stage to be retried.'
+    description: "The name of the failed stage to be retried."
     required: true
   pipelineExecutionId:
     type: string
-    description: 'The ID of the pipeline execution in the failed stage to be retried. Use the GetPipelineState action to retrieve the current pipelineExecutionId of the failed stage'
+    description: "The ID of the pipeline execution in the failed stage to be retried. Use the GetPipelineState action to retrieve the current pipelineExecutionId of the failed stage"
     required: true
   retryMode:
     type: string
-    description: 'The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS.'
+    description: "The scope of the retry attempt. Currently, the only supported value is FAILED_ACTIONS."
     required: true

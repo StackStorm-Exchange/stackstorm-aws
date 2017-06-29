@@ -20,35 +20,35 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The identifier of the product for the update request.'
+    description: "The identifier of the product for the update request."
     required: true
   AcceptLanguage:
     type: string
-    description: 'The language code to use for this operation. Supported language codes are as follows: "en" (English) "jp" (Japanese) "zh" (Chinese) If no code is specified, "en" is used as the default.'
+    description: "The language code to use for this operation. Supported language codes are as follows: 'en' (English) 'jp' (Japanese) 'zh' (Chinese) If no code is specified, 'en' is used as the default."
   Name:
     type: string
-    description: 'The updated product name.'
+    description: "The updated product name."
   Owner:
     type: string
-    description: 'The updated owner of the product.'
+    description: "The updated owner of the product."
   Description:
     type: string
-    description: 'The updated text description of the product.'
+    description: "The updated text description of the product."
   Distributor:
     type: string
-    description: 'The updated distributor of the product.'
+    description: "The updated distributor of the product."
   SupportDescription:
     type: string
-    description: 'The updated support description for the product.'
+    description: "The updated support description for the product."
   SupportEmail:
     type: string
-    description: 'The updated support email for the product.'
+    description: "The updated support email for the product."
   SupportUrl:
     type: string
-    description: 'The updated support URL for the product.'
+    description: "The updated support URL for the product."
   AddTags:
     type: array
-    description: 'Tags to add to the existing list of tags associated with the product.'
+    description: "Tags to add to the existing list of tags associated with the product."
   RemoveTags:
     type: array
-    description: 'Tags to remove from the existing list of tags associated with the product.'
+    description: "Tags to remove from the existing list of tags associated with the product."

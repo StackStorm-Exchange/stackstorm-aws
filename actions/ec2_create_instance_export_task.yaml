@@ -20,14 +20,14 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: 'The ID of the instance.'
+    description: "The ID of the instance."
     required: true
   Description:
     type: string
-    description: 'A description for the conversion task or the resource being exported. The maximum length is 255 bytes.'
-  TargetEnvironment:
-    type: string
-    description: 'The target virtualization environment.'
+    description: "A description for the conversion task or the resource being exported. The maximum length is 255 bytes."
   ExportToS3Task:
     type: object
-    description: 'The format and location for an instance export task.'
+    description: "The format and location for an instance export task."
+  TargetEnvironment:
+    type: string
+    description: "The target virtualization environment."

@@ -20,5 +20,5 @@ parameters:
     type: string
   arn:
     type: string
-    description: 'Represents the Amazon Resource Name (ARN) of the Device Farm run you wish to stop.'
+    description: "Represents the Amazon Resource Name (ARN) of the Device Farm run you wish to stop."
     required: true

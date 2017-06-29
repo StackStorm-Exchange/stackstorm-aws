@@ -20,5 +20,5 @@ parameters:
     type: string
   jobDefinition:
     type: string
-    description: 'The name and revision (name:revision) or full Amazon Resource Name (ARN) of the job definition to deregister. '
+    description: "The name and revision (name:revision) or full Amazon Resource Name (ARN) of the job definition to deregister. "
     required: true

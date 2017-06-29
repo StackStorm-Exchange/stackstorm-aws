@@ -20,4 +20,4 @@ parameters:
     type: string
   connectionId:
     type: string
-    description: ''
+    description: ""

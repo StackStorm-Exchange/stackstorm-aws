@@ -20,32 +20,32 @@ parameters:
     type: string
   name:
     type: string
-    description: 'The build project"s name.'
+    description: "The name of the build project."
     required: true
   source:
     type: object
-    description: 'Information about the build project"s build input source code.'
+    description: "Information about the build input source code for the build project."
     required: true
   artifacts:
     type: object
-    description: 'Information about the build project"s build output artifacts.'
+    description: "Information about the build output artifacts for the build project."
     required: true
   environment:
     type: object
-    description: 'Information about the build project"s build environment.'
+    description: "Information about the build environment for the build project."
     required: true
   description:
     type: string
-    description: 'A meaningful description of the build project.'
+    description: "A description that makes the build project easy to identify."
   serviceRole:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.'
+    description: "The ARN of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account."
   timeoutInMinutes:
     type: integer
-    description: 'How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.'
+    description: "How long, in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any build that has not been marked as completed. The default is 60 minutes."
   encryptionKey:
     type: string
-    description: 'The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project"s build output artifacts. You can specify either the CMK"s Amazon Resource Name (ARN) or, if available, the CMK"s alias (using the format alias/alias-name ).'
+    description: "The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build output artifacts. You can specify either the CMK's Amazon Resource Name (ARN) or, if available, the CMK's alias (using the format alias/alias-name )."
   tags:
     type: array
-    description: 'A set of tags for this build project. These tags are available for use by AWS services that support AWS CodeBuild build project tags.'
+    description: "A set of tags for this build project. These tags are available for use by AWS services that support AWS CodeBuild build project tags."

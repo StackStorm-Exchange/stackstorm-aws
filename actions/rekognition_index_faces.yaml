@@ -20,15 +20,15 @@ parameters:
     type: string
   CollectionId:
     type: string
-    description: 'ID of an existing collection to which you want to add the faces that are detected in the input images.'
+    description: "The ID of an existing collection to which you want to add the faces that are detected in the input images."
     required: true
   Image:
     type: object
-    description: ''
+    description: "The input image as bytes or an S3 object."
     required: true
   ExternalImageId:
     type: string
-    description: 'ID you want to assign to all the faces detected in the image.'
+    description: "ID you want to assign to all the faces detected in the image."
   DetectionAttributes:
     type: array
-    description: '(Optional) Returns detailed attributes of indexed faces. By default, the operation returns a subset of the facial attributes.  For example, you can specify the value as, ["ALL"] or ["DEFAULT"]. If you provide both, ["ALL", "DEFAULT"], Amazon Rekognition uses the logical AND operator to determine which attributes to return (in this case, it is all attributes). If you specify all attributes, the service performs additional detection, in addition to the default. '
+    description: "An array of facial attributes that you want to be returned. This can be the default list of attributes or all attributes. If you don't specify a value for Attributes or if you specify ['DEFAULT'], the API returns the following subset of facial attributes: BoundingBox, Confidence, Pose, Quality and Landmarks. If you provide ['ALL'], all facial attributes are returned but the operation will take longer to complete. If you provide both, ['ALL', 'DEFAULT'], the service uses a logical AND operator to determine which attributes to return (in this case, all attributes). "

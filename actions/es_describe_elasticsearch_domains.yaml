@@ -20,5 +20,5 @@ parameters:
     type: string
   DomainNames:
     type: array
-    description: 'The Elasticsearch domains for which you want information.'
+    description: "The Elasticsearch domains for which you want information."
     required: true

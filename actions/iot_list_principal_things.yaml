@@ -20,11 +20,11 @@ parameters:
     type: string
   principal:
     type: string
-    description: 'The principal.'
+    description: "The principal."
     required: true
   nextToken:
     type: string
-    description: 'The token for the next set of results, or null if there are no additional results.'
+    description: "The token for the next set of results, or null if there are no additional results."
   maxResults:
     type: integer
-    description: 'The maximum number of results to return in this operation.'
+    description: "The maximum number of results to return in this operation."

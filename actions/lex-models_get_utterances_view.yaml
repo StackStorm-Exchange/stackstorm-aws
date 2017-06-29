@@ -1,0 +1,32 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: lex-models_get_utterances_view
+runner_type: python-script
+parameters:
+  action:
+    default: get_utterances_view
+    immutable: true
+    type: string
+  cls:
+    default: lex-models
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  botName:
+    type: string
+    description: "The name of the bot for which utterance information should be returned."
+    required: true
+  botVersions:
+    type: array
+    description: "An array of bot versions for which utterance information should be returned. The limit is 5 versions per request."
+    required: true
+  statusType:
+    type: string
+    description: "To return utterances that were recognized and handled, useDetected. To return utterances that were not recognized, use Missed."
+    required: true

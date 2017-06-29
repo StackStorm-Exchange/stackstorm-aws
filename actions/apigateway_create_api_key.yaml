@@ -20,22 +20,22 @@ parameters:
     type: string
   name:
     type: string
-    description: 'The name of the ApiKey.'
+    description: "The name of the ApiKey."
   description:
     type: string
-    description: 'The description of the ApiKey.'
+    description: "The description of the ApiKey."
   enabled:
     type: boolean
-    description: 'Specifies whether the ApiKey can be used by callers.'
+    description: "Specifies whether the ApiKey can be used by callers."
   generateDistinctId:
     type: boolean
-    description: 'Specifies whether (true) or not (false) the key identifier is distinct from the created API key value.'
+    description: "Specifies whether (true) or not (false) the key identifier is distinct from the created API key value."
   value:
     type: string
-    description: 'Specifies a value of the API key.'
+    description: "Specifies a value of the API key."
   stageKeys:
     type: array
-    description: 'DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key.'
+    description: "DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key."
   customerId:
     type: string
-    description: 'An AWS Marketplace customer identifier , when integrating with the AWS SaaS Marketplace.'
+    description: "An AWS Marketplace customer identifier , when integrating with the AWS SaaS Marketplace."

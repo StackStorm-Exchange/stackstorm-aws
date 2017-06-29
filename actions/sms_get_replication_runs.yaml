@@ -20,11 +20,11 @@ parameters:
     type: string
   replicationJobId:
     type: string
-    description: ''
+    description: ""
     required: true
   nextToken:
     type: string
-    description: ''
+    description: ""
   maxResults:
     type: integer
-    description: ''
+    description: ""

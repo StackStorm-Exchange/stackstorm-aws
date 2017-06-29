@@ -20,12 +20,12 @@ parameters:
     type: string
   applicationName:
     type: string
-    description: 'The name of an AWS CodeDeploy application associated with the applicable IAM user or AWS account.'
+    description: "The name of an AWS CodeDeploy application associated with the applicable IAM user or AWS account."
     required: true
   revision:
     type: object
-    description: 'Information about the application revision to register, including type and location.'
+    description: "Information about the application revision to register, including type and location."
     required: true
   description:
     type: string
-    description: 'A comment about the revision.'
+    description: "A comment about the revision."

@@ -20,28 +20,28 @@ parameters:
     type: string
   caseIdList:
     type: array
-    description: 'A list of ID numbers of the support cases you want returned. The maximum number of cases is 100.'
+    description: "A list of ID numbers of the support cases you want returned. The maximum number of cases is 100."
   displayId:
     type: string
-    description: 'The ID displayed for a case in the AWS Support Center user interface.'
+    description: "The ID displayed for a case in the AWS Support Center user interface."
   afterTime:
     type: string
-    description: 'The start date for a filtered date search on support case communications. Case communications are available for 12 months after creation.'
+    description: "The start date for a filtered date search on support case communications. Case communications are available for 12 months after creation."
   beforeTime:
     type: string
-    description: 'The end date for a filtered date search on support case communications. Case communications are available for 12 months after creation.'
+    description: "The end date for a filtered date search on support case communications. Case communications are available for 12 months after creation."
   includeResolvedCases:
     type: boolean
-    description: 'Specifies whether resolved support cases should be included in the DescribeCases results. The default is false.'
+    description: "Specifies whether resolved support cases should be included in the DescribeCases results. The default is false."
   nextToken:
     type: string
-    description: 'A resumption point for pagination.'
+    description: "A resumption point for pagination."
   maxResults:
     type: integer
-    description: 'The maximum number of results to return before paginating.'
+    description: "The maximum number of results to return before paginating."
   language:
     type: string
-    description: 'The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English ("en") and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.'
+    description: "The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English ('en') and Japanese ('ja'). Language parameters must be passed explicitly for operations that take them."
   includeCommunications:
     type: boolean
-    description: 'Specifies whether communications should be included in the DescribeCases results. The default is true.'
+    description: "Specifies whether communications should be included in the DescribeCases results. The default is true."

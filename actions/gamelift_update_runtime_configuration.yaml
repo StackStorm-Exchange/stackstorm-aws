@@ -20,9 +20,9 @@ parameters:
     type: string
   FleetId:
     type: string
-    description: 'Unique identifier of the fleet to update runtime configuration for.'
+    description: "Unique identifier for a fleet to update runtime configuration for."
     required: true
   RuntimeConfiguration:
     type: object
-    description: 'Instructions for launching server processes on each instance in the fleet. The runtime configuration for a fleet has a collection of server process configurations, one for each type of server process to run on an instance. A server process configuration specifies the location of the server executable, launch parameters, and the number of concurrent processes with that configuration to maintain on each instance.'
+    description: "Instructions for launching server processes on each instance in the fleet. The runtime configuration for a fleet has a collection of server process configurations, one for each type of server process to run on an instance. A server process configuration specifies the location of the server executable, launch parameters, and the number of concurrent processes with that configuration to maintain on each instance."
     required: true

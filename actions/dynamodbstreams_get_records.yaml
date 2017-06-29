@@ -20,8 +20,8 @@ parameters:
     type: string
   ShardIterator:
     type: string
-    description: 'A shard iterator that was retrieved from a previous GetShardIterator operation. This iterator can be used to access the stream records in this shard.'
+    description: "A shard iterator that was retrieved from a previous GetShardIterator operation. This iterator can be used to access the stream records in this shard."
     required: true
   Limit:
     type: integer
-    description: 'The maximum number of records to return from the shard. The upper limit is 1000.'
+    description: "The maximum number of records to return from the shard. The upper limit is 1000."

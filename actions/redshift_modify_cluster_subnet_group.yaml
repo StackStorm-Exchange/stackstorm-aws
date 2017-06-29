@@ -20,12 +20,12 @@ parameters:
     type: string
   ClusterSubnetGroupName:
     type: string
-    description: 'The name of the subnet group to be modified.'
+    description: "The name of the subnet group to be modified."
     required: true
   SubnetIds:
     type: array
-    description: 'An array of VPC subnet IDs. A maximum of 20 subnets can be modified in a single request.'
+    description: "An array of VPC subnet IDs. A maximum of 20 subnets can be modified in a single request."
     required: true
   Description:
     type: string
-    description: 'A text description of the subnet group to be modified.'
+    description: "A text description of the subnet group to be modified."

@@ -1,0 +1,36 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: dms_modify_event_subscription
+runner_type: python-script
+parameters:
+  action:
+    default: modify_event_subscription
+    immutable: true
+    type: string
+  cls:
+    default: dms
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  SubscriptionName:
+    type: string
+    description: "The name of the AWS DMS event notification subscription to be modified."
+    required: true
+  SnsTopicArn:
+    type: string
+    description: " The Amazon Resource Name (ARN) of the Amazon SNS topic created for event notification. The ARN is created by Amazon SNS when you create a topic and subscribe to it."
+  SourceType:
+    type: string
+    description: " The type of AWS DMS resource that generates the events you want to subscribe to.  Valid values: replication-instance | migration-task"
+  EventCategories:
+    type: array
+    description: " A list of event categories for a source type that you want to subscribe to. Use the DescribeEventCategories action to see a list of event categories. "
+  Enabled:
+    type: boolean
+    description: " A Boolean value; set to true to activate the subscription. "

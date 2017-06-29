@@ -20,21 +20,21 @@ parameters:
     type: string
   family:
     type: string
-    description: 'You must specify a family for a task definition, which allows you to track multiple versions of the same task definition. The family is used as a name for your task definition. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed.'
+    description: "You must specify a family for a task definition, which allows you to track multiple versions of the same task definition. The family is used as a name for your task definition. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed."
     required: true
   containerDefinitions:
     type: array
-    description: 'A list of container definitions in JSON format that describe the different containers that make up your task.'
+    description: "A list of container definitions in JSON format that describe the different containers that make up your task."
     required: true
   taskRoleArn:
     type: string
-    description: 'The short name or full Amazon Resource Name (ARN) of the IAM role that containers in this task can assume. All containers in this task are granted the permissions that are specified in this role. For more information, see IAM Roles for Tasks in the Amazon EC2 Container Service Developer Guide.'
+    description: "The short name or full Amazon Resource Name (ARN) of the IAM role that containers in this task can assume. All containers in this task are granted the permissions that are specified in this role. For more information, see IAM Roles for Tasks in the Amazon EC2 Container Service Developer Guide."
   networkMode:
     type: string
-    description: 'The Docker networking mode to use for the containers in the task. The valid values are none, bridge, and host.  The default Docker network mode is bridge. If the network mode is set to none, you cannot specify port mappings in your container definitions, and the task"s containers do not have external connectivity. The host network mode offers the highest networking performance for containers because they use the host network stack instead of the virtualized network stack provided by the bridge mode; however, exposed container ports are mapped directly to the corresponding host port, so you cannot take advantage of dynamic host port mappings or run multiple instantiations of the same task on a single container instance if port mappings are used. For more information, see Network settings in the Docker run reference.'
+    description: "The Docker networking mode to use for the containers in the task. The valid values are none, bridge, and host.  The default Docker network mode is bridge. If the network mode is set to none, you cannot specify port mappings in your container definitions, and the task's containers do not have external connectivity. The host network mode offers the highest networking performance for containers because they use the host network stack instead of the virtualized network stack provided by the bridge mode; however, exposed container ports are mapped directly to the corresponding host port, so you cannot take advantage of dynamic host port mappings or run multiple instantiations of the same task on a single container instance if port mappings are used. For more information, see Network settings in the Docker run reference."
   volumes:
     type: array
-    description: 'A list of volume definitions in JSON format that containers in your task may use.'
+    description: "A list of volume definitions in JSON format that containers in your task may use."
   placementConstraints:
     type: array
-    description: 'An array of placement constraint objects to use for the task. You can specify a maximum of 10 constraints per task (this limit includes constraints in the task definition and those specified at run time).'
+    description: "An array of placement constraint objects to use for the task. You can specify a maximum of 10 constraints per task (this limit includes constraints in the task definition and those specified at run time)."

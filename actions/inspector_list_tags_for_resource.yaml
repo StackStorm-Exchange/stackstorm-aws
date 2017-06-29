@@ -20,5 +20,5 @@ parameters:
     type: string
   resourceArn:
     type: string
-    description: 'The ARN that specifies the assessment template whose tags you want to list.'
+    description: "The ARN that specifies the assessment template whose tags you want to list."
     required: true

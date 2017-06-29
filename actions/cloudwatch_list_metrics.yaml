@@ -20,13 +20,13 @@ parameters:
     type: string
   Namespace:
     type: string
-    description: 'The namespace to filter against.'
+    description: "The namespace to filter against."
   MetricName:
     type: string
-    description: 'The name of the metric to filter against.'
+    description: "The name of the metric to filter against."
   Dimensions:
     type: array
-    description: 'The dimensions to filter against.'
+    description: "The dimensions to filter against."
   NextToken:
     type: string
-    description: 'The token returned by a previous call to indicate that there is more data available.'
+    description: "The token returned by a previous call to indicate that there is more data available."

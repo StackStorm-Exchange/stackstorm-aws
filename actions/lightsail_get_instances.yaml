@@ -20,4 +20,4 @@ parameters:
     type: string
   pageToken:
     type: string
-    description: 'A token used for advancing to the next page of results from your get instances request.'
+    description: "A token used for advancing to the next page of results from your get instances request."

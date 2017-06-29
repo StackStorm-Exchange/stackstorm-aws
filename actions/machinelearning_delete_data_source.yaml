@@ -20,5 +20,5 @@ parameters:
     type: string
   DataSourceId:
     type: string
-    description: 'A user-supplied ID that uniquely identifies the DataSource.'
+    description: "A user-supplied ID that uniquely identifies the DataSource."
     required: true

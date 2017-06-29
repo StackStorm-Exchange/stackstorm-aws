@@ -20,5 +20,5 @@ parameters:
     type: string
   CertificateArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the deleted certificate.'
+    description: "The Amazon Resource Name (ARN) of the deleted certificate."
     required: true

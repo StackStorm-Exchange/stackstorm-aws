@@ -20,9 +20,9 @@ parameters:
     type: string
   RuleSetName:
     type: string
-    description: 'The name of the receipt rule set to which the receipt rule belongs.'
+    description: "The name of the receipt rule set to which the receipt rule belongs."
     required: true
   Rule:
     type: object
-    description: 'A data structure that contains the updated receipt rule information.'
+    description: "A data structure that contains the updated receipt rule information."
     required: true

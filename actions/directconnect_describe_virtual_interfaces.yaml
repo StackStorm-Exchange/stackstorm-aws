@@ -20,7 +20,7 @@ parameters:
     type: string
   connectionId:
     type: string
-    description: ''
+    description: ""
   virtualInterfaceId:
     type: string
-    description: ''
+    description: ""

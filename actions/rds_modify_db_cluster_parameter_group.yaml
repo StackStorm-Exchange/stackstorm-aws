@@ -20,9 +20,9 @@ parameters:
     type: string
   DBClusterParameterGroupName:
     type: string
-    description: 'The name of the DB cluster parameter group to modify.'
+    description: "The name of the DB cluster parameter group to modify."
     required: true
   Parameters:
     type: array
-    description: 'A list of parameters in the DB cluster parameter group to modify.'
+    description: "A list of parameters in the DB cluster parameter group to modify."
     required: true

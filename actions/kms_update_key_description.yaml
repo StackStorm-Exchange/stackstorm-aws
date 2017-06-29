@@ -20,9 +20,9 @@ parameters:
     type: string
   KeyId:
     type: string
-    description: 'A unique identifier for the CMK. This value can be a globally unique identifier or the fully specified ARN to a key.   Key ARN Example - arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012   Globally Unique Key ID Example - 12345678-1234-1234-1234-123456789012  '
+    description: "A unique identifier for the CMK. This value can be a globally unique identifier or the fully specified ARN to a key.   Key ARN Example - arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012   Globally Unique Key ID Example - 12345678-1234-1234-1234-123456789012  "
     required: true
   Description:
     type: string
-    description: 'New description for the CMK.'
+    description: "New description for the CMK."
     required: true

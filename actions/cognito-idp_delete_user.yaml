@@ -20,4 +20,5 @@ parameters:
     type: string
   AccessToken:
     type: string
-    description: 'The access token from a request to delete a user.'
+    description: "The access token from a request to delete a user."
+    required: true

@@ -20,5 +20,5 @@ parameters:
     type: string
   TerminateWorkspaceRequests:
     type: array
-    description: 'An array of structures that specify the WorkSpaces to terminate.'
+    description: "An array of structures that specify the WorkSpaces to terminate."
     required: true

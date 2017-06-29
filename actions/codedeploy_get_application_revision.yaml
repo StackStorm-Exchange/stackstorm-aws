@@ -20,9 +20,9 @@ parameters:
     type: string
   applicationName:
     type: string
-    description: 'The name of the application that corresponds to the revision.'
+    description: "The name of the application that corresponds to the revision."
     required: true
   revision:
     type: object
-    description: 'Information about the application revision to get, including type and location.'
+    description: "Information about the application revision to get, including type and location."
     required: true

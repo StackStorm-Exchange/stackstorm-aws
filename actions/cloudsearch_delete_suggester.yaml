@@ -20,9 +20,9 @@ parameters:
     type: string
   DomainName:
     type: string
-    description: ''
+    description: ""
     required: true
   SuggesterName:
     type: string
-    description: 'Specifies the name of the suggester you want to delete.'
+    description: "Specifies the name of the suggester you want to delete."
     required: true

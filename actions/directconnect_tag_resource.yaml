@@ -20,9 +20,9 @@ parameters:
     type: string
   resourceArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the Direct Connect resource. Example: arn:aws:directconnect:us-east-1:123456789012:dxcon/dxcon-fg5678gh'
+    description: "The Amazon Resource Name (ARN) of the Direct Connect resource. Example: arn:aws:directconnect:us-east-1:123456789012:dxcon/dxcon-fg5678gh"
     required: true
   tags:
     type: array
-    description: 'The list of tags to add.'
+    description: "The list of tags to add."
     required: true

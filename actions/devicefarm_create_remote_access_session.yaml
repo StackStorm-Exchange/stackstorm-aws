@@ -20,15 +20,15 @@ parameters:
     type: string
   projectArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the project for which you want to create a remote access session.'
+    description: "The Amazon Resource Name (ARN) of the project for which you want to create a remote access session."
     required: true
   deviceArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the device for which you want to create a remote access session.'
+    description: "The Amazon Resource Name (ARN) of the device for which you want to create a remote access session."
     required: true
   name:
     type: string
-    description: 'The name of the remote access session that you wish to create.'
+    description: "The name of the remote access session that you wish to create."
   configuration:
     type: object
-    description: 'The configuration information for the remote access session request.'
+    description: "The configuration information for the remote access session request."

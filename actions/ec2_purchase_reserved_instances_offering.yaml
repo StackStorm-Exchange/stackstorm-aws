@@ -18,17 +18,17 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  ReservedInstancesOfferingId:
-    type: string
-    description: 'The ID of the Reserved Instance offering to purchase.'
-    required: true
   InstanceCount:
     type: integer
-    description: 'The number of Reserved Instances to purchase.'
+    description: "The number of Reserved Instances to purchase."
+    required: true
+  ReservedInstancesOfferingId:
+    type: string
+    description: "The ID of the Reserved Instance offering to purchase."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   LimitPrice:
     type: object
-    description: 'Specified for Reserved Instance Marketplace offerings to limit the total order and ensure that the Reserved Instances are not purchased at unexpected prices.'
+    description: "Specified for Reserved Instance Marketplace offerings to limit the total order and ensure that the Reserved Instances are not purchased at unexpected prices."

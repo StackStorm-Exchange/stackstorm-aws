@@ -20,8 +20,8 @@ parameters:
     type: string
   taskId:
     type: string
-    description: 'The ID of the task assigned to the task runner. This value is provided in the response for PollForTask.'
+    description: "The ID of the task assigned to the task runner. This value is provided in the response for PollForTask."
     required: true
   fields:
     type: array
-    description: 'Key-value pairs that define the properties of the ReportTaskProgressInput object.'
+    description: "Key-value pairs that define the properties of the ReportTaskProgressInput object."

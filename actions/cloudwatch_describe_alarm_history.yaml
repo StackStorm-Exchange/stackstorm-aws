@@ -20,19 +20,19 @@ parameters:
     type: string
   AlarmName:
     type: string
-    description: 'The name of the alarm.'
+    description: "The name of the alarm."
   HistoryItemType:
     type: string
-    description: 'The type of alarm histories to retrieve.'
+    description: "The type of alarm histories to retrieve."
   StartDate:
     type: string
-    description: 'The starting date to retrieve alarm history.'
+    description: "The starting date to retrieve alarm history."
   EndDate:
     type: string
-    description: 'The ending date to retrieve alarm history.'
+    description: "The ending date to retrieve alarm history."
   MaxRecords:
     type: integer
-    description: 'The maximum number of alarm history records to retrieve.'
+    description: "The maximum number of alarm history records to retrieve."
   NextToken:
     type: string
-    description: 'The token returned by a previous call to indicate that there is more data available.'
+    description: "The token returned by a previous call to indicate that there is more data available."

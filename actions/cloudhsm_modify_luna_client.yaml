@@ -20,9 +20,9 @@ parameters:
     type: string
   ClientArn:
     type: string
-    description: 'The ARN of the client.'
+    description: "The ARN of the client."
     required: true
   Certificate:
     type: string
-    description: 'The new certificate for the client.'
+    description: "The new certificate for the client."
     required: true

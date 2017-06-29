@@ -20,4 +20,4 @@ parameters:
     type: string
   Names:
     type: array
-    description: 'A specific list of images to describe.'
+    description: "A specific list of images to describe."

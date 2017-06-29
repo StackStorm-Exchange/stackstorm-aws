@@ -20,5 +20,5 @@ parameters:
     type: string
   ProtectionId:
     type: string
-    description: 'The unique identifier (ID) for the Protection object that is described.'
+    description: "The unique identifier (ID) for the Protection object that is described."
     required: true

@@ -20,19 +20,19 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'The identifier of the directory in which to create the computer account.'
+    description: "The identifier of the directory in which to create the computer account."
     required: true
   ComputerName:
     type: string
-    description: 'The name of the computer account.'
+    description: "The name of the computer account."
     required: true
   Password:
     type: string
-    description: 'A one-time password that is used to join the computer to the directory. You should generate a random, strong password to use for this parameter.'
+    description: "A one-time password that is used to join the computer to the directory. You should generate a random, strong password to use for this parameter."
     required: true
   OrganizationalUnitDistinguishedName:
     type: string
-    description: 'The fully-qualified distinguished name of the organizational unit to place the computer account in.'
+    description: "The fully-qualified distinguished name of the organizational unit to place the computer account in."
   ComputerAttributes:
     type: array
-    description: 'An array of Attribute objects that contain any LDAP attributes to apply to the computer account.'
+    description: "An array of Attribute objects that contain any LDAP attributes to apply to the computer account."

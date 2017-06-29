@@ -20,24 +20,45 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID for the user pool where you want to update the user pool client.'
+    description: "The user pool ID for the user pool where you want to update the user pool client."
     required: true
   ClientId:
     type: string
-    description: 'The ID of the client associated with the user pool.'
+    description: "The ID of the client associated with the user pool."
     required: true
   ClientName:
     type: string
-    description: 'The client name from the update user pool client request.'
+    description: "The client name from the update user pool client request."
   RefreshTokenValidity:
     type: integer
-    description: 'The validity of the refresh token, in days.'
+    description: "The time limit, in days, after which the refresh token is no longer valid and cannot be used."
   ReadAttributes:
     type: array
-    description: 'The read-only attributes of the user pool.'
+    description: "The read-only attributes of the user pool."
   WriteAttributes:
     type: array
-    description: 'The writeable attributes of the user pool.'
+    description: "The writeable attributes of the user pool."
   ExplicitAuthFlows:
     type: array
-    description: 'Explicit authentication flows.'
+    description: "Explicit authentication flows."
+  SupportedIdentityProviders:
+    type: array
+    description: "A list of provider names for the identity providers that are supported on this client."
+  CallbackURLs:
+    type: array
+    description: "A list of allowed callback URLs for the identity providers."
+  LogoutURLs:
+    type: array
+    description: "A list ofallowed logout URLs for the identity providers."
+  DefaultRedirectURI:
+    type: string
+    description: "The default redirect URI. Must be in the CallbackURLs list."
+  AllowedOAuthFlows:
+    type: array
+    description: "Set to code to initiate a code grant flow, which provides an authorization code as the response. This code can be exchanged for access tokens with the token endpoint. Set to token to specify that the client should get the access token (and, optionally, ID token, based on scopes) directly."
+  AllowedOAuthScopes:
+    type: array
+    description: "A list of allowed OAuth scopes. Currently supported values are 'phone', 'email', 'openid', and 'Cognito'."
+  AllowedOAuthFlowsUserPoolClient:
+    type: boolean
+    description: "Set to TRUE if the client is allowed to follow the OAuth protocol when interacting with Cognito user pools."

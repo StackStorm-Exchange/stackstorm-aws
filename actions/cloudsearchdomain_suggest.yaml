@@ -20,12 +20,12 @@ parameters:
     type: string
   query:
     type: string
-    description: 'Specifies the string for which you want to get suggestions.'
+    description: "Specifies the string for which you want to get suggestions."
     required: true
   suggester:
     type: string
-    description: 'Specifies the name of the suggester to use to find suggested matches.'
+    description: "Specifies the name of the suggester to use to find suggested matches."
     required: true
   size:
     type: integer
-    description: 'Specifies the maximum number of suggestions to return. '
+    description: "Specifies the maximum number of suggestions to return. "

@@ -20,5 +20,5 @@ parameters:
     type: string
   LoadBalancerNames:
     type: array
-    description: 'The names of the load balancers.'
+    description: "The names of the load balancers."
     required: true

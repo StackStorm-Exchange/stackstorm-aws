@@ -20,9 +20,9 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: 'The ID of the managed instance where you want to update the role.'
+    description: "The ID of the managed instance where you want to update the role."
     required: true
   IamRole:
     type: string
-    description: 'The IAM role you want to assign or change.'
+    description: "The IAM role you want to assign or change."
     required: true

@@ -20,33 +20,36 @@ parameters:
     type: string
   JobType:
     type: string
-    description: 'The type of job for this cluster. Currently, the only job type supported for clusters is LOCAL_USE.'
+    description: "The type of job for this cluster. Currently, the only job type supported for clusters is LOCAL_USE."
     required: true
   Resources:
     type: object
-    description: 'The resources associated with the cluster job. These resources include Amazon S3 buckets and optional AWS Lambda functions written in the Python language. '
+    description: "The resources associated with the cluster job. These resources include Amazon S3 buckets and optional AWS Lambda functions written in the Python language. "
     required: true
   AddressId:
     type: string
-    description: 'The ID for the address that you want the cluster shipped to.&gt;'
+    description: "The ID for the address that you want the cluster shipped to.&gt;"
     required: true
   RoleARN:
     type: string
-    description: 'The RoleARN that you want to associate with this cluster. RoleArn values are created by using the CreateRole API action in AWS Identity and Access Management (IAM).'
+    description: "The RoleARN that you want to associate with this cluster. RoleArn values are created by using the CreateRole API action in AWS Identity and Access Management (IAM)."
     required: true
   ShippingOption:
     type: string
-    description: 'The shipping speed for each node in this cluster. This speed doesn"t dictate how soon you"ll get each Snowball Edge appliance, rather it represents how quickly each appliance moves to its destination while in transit. Regional shipping speeds are as follows:   In Australia, you have access to express shipping. Typically, appliances shipped express are delivered in about a day.   In the European Union (EU), you have access to express shipping. Typically, Snowball Edges shipped express are delivered in about a day. In addition, most countries in the EU have access to standard shipping, which typically takes less than a week, one way.   In India, Snowball Edges are delivered in one to seven days.   In the US, you have access to one-day shipping and two-day shipping.  '
+    description: "The shipping speed for each node in this cluster. This speed doesn't dictate how soon you'll get each Snowball Edge appliance, rather it represents how quickly each appliance moves to its destination while in transit. Regional shipping speeds are as follows:   In Australia, you have access to express shipping. Typically, appliances shipped express are delivered in about a day.   In the European Union (EU), you have access to express shipping. Typically, Snowball Edges shipped express are delivered in about a day. In addition, most countries in the EU have access to standard shipping, which typically takes less than a week, one way.   In India, Snowball Edges are delivered in one to seven days.   In the US, you have access to one-day shipping and two-day shipping.  "
     required: true
   Description:
     type: string
-    description: 'An optional description of this specific cluster, for example Environmental Data Cluster-01.'
+    description: "An optional description of this specific cluster, for example Environmental Data Cluster-01."
   KmsKeyARN:
     type: string
-    description: 'The KmsKeyARN value that you want to associate with this cluster. KmsKeyARN values are created by using the CreateKey API action in AWS Key Management Service (AWS KMS). '
+    description: "The KmsKeyARN value that you want to associate with this cluster. KmsKeyARN values are created by using the CreateKey API action in AWS Key Management Service (AWS KMS). "
   SnowballType:
     type: string
-    description: 'The type of AWS Snowball appliance to use for this cluster. Currently, the only supported appliance type for cluster jobs is EDGE.'
+    description: "The type of AWS Snowball appliance to use for this cluster. Currently, the only supported appliance type for cluster jobs is EDGE."
   Notification:
     type: object
-    description: 'The Amazon Simple Notification Service (Amazon SNS) notification settings for this cluster.'
+    description: "The Amazon Simple Notification Service (Amazon SNS) notification settings for this cluster."
+  ForwardingAddressId:
+    type: string
+    description: "The forwarding address ID for a cluster. This field is not supported in most regions."

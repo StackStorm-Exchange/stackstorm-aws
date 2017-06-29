@@ -20,11 +20,11 @@ parameters:
     type: string
   InstanceIds:
     type: array
-    description: 'The ID of the instance whose patch state information should be retrieved.'
+    description: "The ID of the instance whose patch state information should be retrieved."
     required: true
   NextToken:
     type: string
-    description: 'The token for the next set of items to return. (You received this token from a previous call.)'
+    description: "The token for the next set of items to return. (You received this token from a previous call.)"
   MaxResults:
     type: integer
-    description: 'The maximum number of instances to return (per page).'
+    description: "The maximum number of instances to return (per page)."

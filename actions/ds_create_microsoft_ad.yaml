@@ -20,19 +20,19 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The fully qualified domain name for the directory, such as corp.example.com. This name will resolve inside your VPC only. It does not need to be publicly resolvable.'
+    description: "The fully qualified domain name for the directory, such as corp.example.com. This name will resolve inside your VPC only. It does not need to be publicly resolvable."
     required: true
   Password:
     type: string
-    description: 'The password for the default administrative user named Admin.'
+    description: "The password for the default administrative user named Admin."
     required: true
   VpcSettings:
     type: object
-    description: ''
+    description: ""
     required: true
   ShortName:
     type: string
-    description: 'The NetBIOS name for your domain. A short identifier for your domain, such as CORP. If you don"t specify a NetBIOS name, it will default to the first part of your directory DNS. For example, CORP for the directory DNS corp.example.com. '
+    description: "The NetBIOS name for your domain. A short identifier for your domain, such as CORP. If you don't specify a NetBIOS name, it will default to the first part of your directory DNS. For example, CORP for the directory DNS corp.example.com. "
   Description:
     type: string
-    description: 'A textual description for the directory. This label will appear on the AWS console Directory Details page after the directory is created.'
+    description: "A textual description for the directory. This label will appear on the AWS console Directory Details page after the directory is created."

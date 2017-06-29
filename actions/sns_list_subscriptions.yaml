@@ -20,4 +20,4 @@ parameters:
     type: string
   NextToken:
     type: string
-    description: 'Token returned by the previous ListSubscriptions request.'
+    description: "Token returned by the previous ListSubscriptions request."

@@ -20,5 +20,5 @@ parameters:
     type: string
   WebACLId:
     type: string
-    description: 'The unique identifier (ID) of the web ACL for which to list the associated resources.'
+    description: "The unique identifier (ID) of the web ACL for which to list the associated resources."
     required: true

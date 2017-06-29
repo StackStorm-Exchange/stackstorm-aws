@@ -20,5 +20,5 @@ parameters:
     type: string
   FileSystemId:
     type: string
-    description: 'ID of the file system you want to delete.'
+    description: "ID of the file system you want to delete."
     required: true

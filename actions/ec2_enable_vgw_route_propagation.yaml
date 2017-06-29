@@ -18,11 +18,11 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  RouteTableId:
-    type: string
-    description: 'The ID of the route table.'
-    required: true
   GatewayId:
     type: string
-    description: 'The ID of the virtual private gateway.'
+    description: "The ID of the virtual private gateway."
+    required: true
+  RouteTableId:
+    type: string
+    description: "The ID of the route table."
     required: true

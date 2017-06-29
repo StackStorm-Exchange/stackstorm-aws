@@ -20,5 +20,5 @@ parameters:
     type: string
   BatchPredictionId:
     type: string
-    description: 'An ID assigned to the BatchPrediction at creation.'
+    description: "An ID assigned to the BatchPrediction at creation."
     required: true

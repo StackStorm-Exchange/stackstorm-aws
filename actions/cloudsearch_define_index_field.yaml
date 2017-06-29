@@ -20,9 +20,9 @@ parameters:
     type: string
   DomainName:
     type: string
-    description: ''
+    description: ""
     required: true
   IndexField:
     type: object
-    description: 'The index field and field options you want to configure. '
+    description: "The index field and field options you want to configure. "
     required: true

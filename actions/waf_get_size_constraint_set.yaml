@@ -20,5 +20,5 @@ parameters:
     type: string
   SizeConstraintSetId:
     type: string
-    description: 'The SizeConstraintSetId of the SizeConstraintSet that you want to get. SizeConstraintSetId is returned by CreateSizeConstraintSet and by ListSizeConstraintSets.'
+    description: "The SizeConstraintSetId of the SizeConstraintSet that you want to get. SizeConstraintSetId is returned by CreateSizeConstraintSet and by ListSizeConstraintSets."
     required: true

@@ -20,5 +20,5 @@ parameters:
     type: string
   HealthCheckId:
     type: string
-    description: 'The ID for the health check for which you want the last failure reason. When you created the health check, CreateHealthCheck returned the ID in the response, in the HealthCheckId element.'
+    description: "The ID for the health check for which you want the last failure reason. When you created the health check, CreateHealthCheck returned the ID in the response, in the HealthCheckId element."
     required: true

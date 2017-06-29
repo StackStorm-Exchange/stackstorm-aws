@@ -20,12 +20,12 @@ parameters:
     type: string
   AutoScalingGroupName:
     type: string
-    description: 'The name of the group.'
+    description: "The name of the group."
     required: true
   ShouldDecrementDesiredCapacity:
     type: boolean
-    description: 'If True, the Auto Scaling group decrements the desired capacity value by the number of instances detached.'
+    description: "If True, the Auto Scaling group decrements the desired capacity value by the number of instances detached."
     required: true
   InstanceIds:
     type: array
-    description: 'One or more instance IDs.'
+    description: "One or more instance IDs."

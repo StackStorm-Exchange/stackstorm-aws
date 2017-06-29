@@ -20,5 +20,5 @@ parameters:
     type: string
   clientCertificateId:
     type: string
-    description: 'The identifier of the ClientCertificate resource to be deleted.'
+    description: "The identifier of the ClientCertificate resource to be deleted."
     required: true

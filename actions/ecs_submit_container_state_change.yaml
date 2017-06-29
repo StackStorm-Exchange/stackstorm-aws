@@ -20,22 +20,22 @@ parameters:
     type: string
   cluster:
     type: string
-    description: 'The short name or full Amazon Resource Name (ARN) of the cluster that hosts the container.'
+    description: "The short name or full Amazon Resource Name (ARN) of the cluster that hosts the container."
   task:
     type: string
-    description: 'The task ID or full Amazon Resource Name (ARN) of the task that hosts the container.'
+    description: "The task ID or full Amazon Resource Name (ARN) of the task that hosts the container."
   containerName:
     type: string
-    description: 'The name of the container.'
+    description: "The name of the container."
   status:
     type: string
-    description: 'The status of the state change request.'
+    description: "The status of the state change request."
   exitCode:
     type: integer
-    description: 'The exit code returned for the state change request.'
+    description: "The exit code returned for the state change request."
   reason:
     type: string
-    description: 'The reason for the state change request.'
+    description: "The reason for the state change request."
   networkBindings:
     type: array
-    description: 'The network bindings of the container.'
+    description: "The network bindings of the container."

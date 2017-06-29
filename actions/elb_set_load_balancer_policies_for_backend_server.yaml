@@ -20,13 +20,13 @@ parameters:
     type: string
   LoadBalancerName:
     type: string
-    description: 'The name of the load balancer.'
+    description: "The name of the load balancer."
     required: true
   InstancePort:
     type: integer
-    description: 'The port number associated with the EC2 instance.'
+    description: "The port number associated with the EC2 instance."
     required: true
   PolicyNames:
     type: array
-    description: 'The names of the policies. If the list is empty, then all current polices are removed from the EC2 instance.'
+    description: "The names of the policies. If the list is empty, then all current polices are removed from the EC2 instance."
     required: true

@@ -20,5 +20,5 @@ parameters:
     type: string
   cluster:
     type: string
-    description: 'The short name or full Amazon Resource Name (ARN) of the cluster to delete.'
+    description: "The short name or full Amazon Resource Name (ARN) of the cluster to delete."
     required: true

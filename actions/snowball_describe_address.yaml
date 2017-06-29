@@ -20,5 +20,5 @@ parameters:
     type: string
   AddressId:
     type: string
-    description: 'The automatically generated ID for a specific address.'
+    description: "The automatically generated ID for a specific address."
     required: true

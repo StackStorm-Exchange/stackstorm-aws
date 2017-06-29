@@ -20,9 +20,9 @@ parameters:
     type: string
   LoadBalancerArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the load balancer.'
+    description: "The Amazon Resource Name (ARN) of the load balancer."
     required: true
   SecurityGroups:
     type: array
-    description: 'The IDs of the security groups.'
+    description: "The IDs of the security groups."
     required: true

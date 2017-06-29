@@ -20,5 +20,5 @@ parameters:
     type: string
   TapeARN:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the virtual tape to delete from the virtual tape shelf (VTS).'
+    description: "The Amazon Resource Name (ARN) of the virtual tape to delete from the virtual tape shelf (VTS)."
     required: true

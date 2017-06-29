@@ -20,5 +20,5 @@ parameters:
     type: string
   EmailAddress:
     type: string
-    description: 'The email address to be verified.'
+    description: "The email address to be verified."
     required: true

@@ -20,9 +20,9 @@ parameters:
     type: string
   APNSChannelRequest:
     type: object
-    description: ''
+    description: ""
     required: true
   ApplicationId:
     type: string
-    description: ''
+    description: ""
     required: true

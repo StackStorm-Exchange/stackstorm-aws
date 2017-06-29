@@ -20,20 +20,20 @@ parameters:
     type: string
   repositoryName:
     type: string
-    description: 'A list of repositories to describe. If this parameter is omitted, then all repositories in a registry are described.'
+    description: "A list of repositories to describe. If this parameter is omitted, then all repositories in a registry are described."
     required: true
   registryId:
     type: string
-    description: 'The AWS account ID associated with the registry that contains the repository in which to describe images. If you do not specify a registry, the default registry is assumed.'
+    description: "The AWS account ID associated with the registry that contains the repository in which to describe images. If you do not specify a registry, the default registry is assumed."
   imageIds:
     type: array
-    description: 'The list of image IDs for the requested repository.'
+    description: "The list of image IDs for the requested repository."
   nextToken:
     type: string
-    description: 'The nextToken value returned from a previous paginated DescribeImages request where maxResults was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the nextToken value. This value is null when there are no more results to return.'
+    description: "The nextToken value returned from a previous paginated DescribeImages request where maxResults was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the nextToken value. This value is null when there are no more results to return."
   maxResults:
     type: integer
-    description: 'The maximum number of repository results returned by DescribeImages in paginated output. When this parameter is used, DescribeImages only returns maxResults results in a single page along with a nextToken response element. The remaining results of the initial request can be seen by sending another DescribeImages request with the returned nextToken value. This value can be between 1 and 100. If this parameter is not used, then DescribeImages returns up to 100 results and a nextToken value, if applicable.'
+    description: "The maximum number of repository results returned by DescribeImages in paginated output. When this parameter is used, DescribeImages only returns maxResults results in a single page along with a nextToken response element. The remaining results of the initial request can be seen by sending another DescribeImages request with the returned nextToken value. This value can be between 1 and 100. If this parameter is not used, then DescribeImages returns up to 100 results and a nextToken value, if applicable."
   filter:
     type: object
-    description: 'The filter key and value with which to filter your DescribeImages results.'
+    description: "The filter key and value with which to filter your DescribeImages results."

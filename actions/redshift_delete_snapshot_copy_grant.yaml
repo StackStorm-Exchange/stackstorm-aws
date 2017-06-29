@@ -20,5 +20,5 @@ parameters:
     type: string
   SnapshotCopyGrantName:
     type: string
-    description: 'The name of the snapshot copy grant to delete.'
+    description: "The name of the snapshot copy grant to delete."
     required: true

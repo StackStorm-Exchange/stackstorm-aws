@@ -20,18 +20,18 @@ parameters:
     type: string
   vaultName:
     type: string
-    description: 'The name of the vault.'
+    description: "The name of the vault."
     required: true
   accountId:
     type: string
-    description: 'The AccountId value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single "-" (hyphen), in which case Amazon Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ("-") in the ID. '
+    description: "The AccountId value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '-' (hyphen), in which case Amazon Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID. "
     required: true
   archiveDescription:
     type: string
-    description: 'The optional description of the archive you are uploading.'
+    description: "The optional description of the archive you are uploading."
   checksum:
     type: string
-    description: 'The SHA256 tree hash of the data being uploaded.'
+    description: "The SHA256 tree hash of the data being uploaded."
   body:
     type: string
-    description: 'The data to upload.'
+    description: "The data to upload."

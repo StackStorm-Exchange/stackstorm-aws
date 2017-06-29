@@ -20,13 +20,13 @@ parameters:
     type: string
   RoutingStrategyType:
     type: string
-    description: 'Type of routing to filter results on. Use this parameter to retrieve only aliases of a certain type. To retrieve all aliases, leave this parameter empty. Possible routing types include the following:    SIMPLE – The alias resolves to one specific fleet. Use this type when routing to active fleets.    TERMINAL – The alias does not resolve to a fleet but instead can be used to display a message to the user. A terminal alias throws a TerminalRoutingStrategyException with the RoutingStrategy message embedded.  '
+    description: "Type of routing to filter results on. Use this parameter to retrieve only aliases of a certain type. To retrieve all aliases, leave this parameter empty. Possible routing types include the following:    SIMPLE – The alias resolves to one specific fleet. Use this type when routing to active fleets.    TERMINAL – The alias does not resolve to a fleet but instead can be used to display a message to the user. A terminal alias throws a TerminalRoutingStrategyException with the RoutingStrategy message embedded.  "
   Name:
     type: string
-    description: 'Descriptive label associated with an alias. Alias names do not need to be unique.'
+    description: "Descriptive label that is associated with an alias. Alias names do not need to be unique."
   Limit:
     type: integer
-    description: 'Maximum number of results to return. Use this parameter with NextToken to get results as a set of sequential pages.'
+    description: "Maximum number of results to return. Use this parameter with NextToken to get results as a set of sequential pages."
   NextToken:
     type: string
-    description: 'Token indicating the start of the next sequential page of results. Use the token that is returned with a previous call to this action. To specify the start of the result set, do not specify a value.'
+    description: "Token that indicates the start of the next sequential page of results. Use the token that is returned with a previous call to this action. To specify the start of the result set, do not specify a value."

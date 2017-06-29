@@ -20,14 +20,14 @@ parameters:
     type: string
   VpcPeeringConnectionId:
     type: string
-    description: 'The ID of the VPC peering connection.'
+    description: "The ID of the VPC peering connection."
     required: true
-  DryRun:
-    type: boolean
-    description: 'Checks whether you have the required permissions for the operation, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
-  RequesterPeeringConnectionOptions:
-    type: object
-    description: 'The VPC peering connection options for the requester VPC.'
   AccepterPeeringConnectionOptions:
     type: object
-    description: 'The VPC peering connection options for the accepter VPC.'
+    description: "The VPC peering connection options for the accepter VPC."
+  DryRun:
+    type: boolean
+    description: "Checks whether you have the required permissions for the operation, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
+  RequesterPeeringConnectionOptions:
+    type: object
+    description: "The VPC peering connection options for the requester VPC."

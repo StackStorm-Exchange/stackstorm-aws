@@ -20,5 +20,5 @@ parameters:
     type: string
   assessmentTemplateArns:
     type: array
-    description: ''
+    description: ""
     required: true

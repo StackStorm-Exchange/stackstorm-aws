@@ -20,5 +20,5 @@ parameters:
     type: string
   HsmClientCertificateIdentifier:
     type: string
-    description: 'The identifier of the HSM client certificate to be deleted.'
+    description: "The identifier of the HSM client certificate to be deleted."
     required: true

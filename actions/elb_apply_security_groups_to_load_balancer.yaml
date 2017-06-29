@@ -20,9 +20,9 @@ parameters:
     type: string
   LoadBalancerName:
     type: string
-    description: 'The name of the load balancer.'
+    description: "The name of the load balancer."
     required: true
   SecurityGroups:
     type: array
-    description: 'The IDs of the security groups to associate with the load balancer. Note that you cannot specify the name of the security group.'
+    description: "The IDs of the security groups to associate with the load balancer. Note that you cannot specify the name of the security group."
     required: true

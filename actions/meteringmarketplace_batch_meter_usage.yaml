@@ -20,9 +20,9 @@ parameters:
     type: string
   UsageRecords:
     type: array
-    description: 'The set of UsageRecords to submit. BatchMeterUsage accepts up to 25 UsageRecords at a time.'
+    description: "The set of UsageRecords to submit. BatchMeterUsage accepts up to 25 UsageRecords at a time."
     required: true
   ProductCode:
     type: string
-    description: 'Product code is used to uniquely identify a product in AWS Marketplace. The product code should be the same as the one used during the publishing of a new product.'
+    description: "Product code is used to uniquely identify a product in AWS Marketplace. The product code should be the same as the one used during the publishing of a new product."
     required: true

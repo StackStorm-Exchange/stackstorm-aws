@@ -20,35 +20,35 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The RestApi identifier under which the Authorizer will be created.'
+    description: "The RestApi identifier under which the Authorizer will be created."
     required: true
   name:
     type: string
-    description: '[Required] The name of the authorizer.'
+    description: "[Required] The name of the authorizer."
     required: true
   type:
     type: string
-    description: '[Required] The type of the authorizer.'
+    description: "[Required] The type of the authorizer."
     required: true
   identitySource:
     type: string
-    description: '[Required] The source of the identity in an incoming request.'
+    description: "[Required] The source of the identity in an incoming request."
     required: true
   providerARNs:
     type: array
-    description: 'A list of the Cognito Your User Pool authorizer"s provider ARNs.'
+    description: "A list of the Cognito Your User Pool authorizer's provider ARNs."
   authType:
     type: string
-    description: 'Optional customer-defined field, used in Swagger imports/exports. Has no functional impact.'
+    description: "Optional customer-defined field, used in Swagger imports/exports. Has no functional impact."
   authorizerUri:
     type: string
-    description: '[Required] Specifies the authorizer"s Uniform Resource Identifier (URI).'
+    description: "[Required] Specifies the authorizer's Uniform Resource Identifier (URI)."
   authorizerCredentials:
     type: string
-    description: 'Specifies the credentials required for the authorizer, if any.'
+    description: "Specifies the credentials required for the authorizer, if any."
   identityValidationExpression:
     type: string
-    description: 'A validation expression for the incoming identity.'
+    description: "A validation expression for the incoming identity."
   authorizerResultTtlInSeconds:
     type: integer
-    description: 'The TTL of cached authorizer results.'
+    description: "The TTL of cached authorizer results."

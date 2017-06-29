@@ -1,0 +1,40 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: directconnect_allocate_hosted_connection
+runner_type: python-script
+parameters:
+  action:
+    default: allocate_hosted_connection
+    immutable: true
+    type: string
+  cls:
+    default: directconnect
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  connectionId:
+    type: string
+    description: "The ID of the interconnect or LAG on which the connection will be provisioned. Example: dxcon-456abc78 or dxlag-abc123 Default: None"
+    required: true
+  ownerAccount:
+    type: string
+    description: "The numeric account ID of the customer for whom the connection will be provisioned. Example: 123443215678 Default: None"
+    required: true
+  bandwidth:
+    type: string
+    description: "The bandwidth of the connection. Example: 500Mbps  Default: None Values: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, or 500Mbps"
+    required: true
+  connectionName:
+    type: string
+    description: "The name of the provisioned connection. Example: '500M Connection to AWS' Default: None"
+    required: true
+  vlan:
+    type: integer
+    description: "The dedicated VLAN provisioned to the hosted connection. Example: 101 Default: None"
+    required: true

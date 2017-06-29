@@ -20,5 +20,5 @@ parameters:
     type: string
   arn:
     type: string
-    description: 'The Amazon Resource Name (ARN) for the run you wish to delete.'
+    description: "The Amazon Resource Name (ARN) for the run you wish to delete."
     required: true

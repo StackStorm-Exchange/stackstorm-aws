@@ -20,17 +20,17 @@ parameters:
     type: string
   UserName:
     type: string
-    description: 'The name of the user whose MFA device you want to resynchronize. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-'
+    description: "The name of the user whose MFA device you want to resynchronize. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-"
     required: true
   SerialNumber:
     type: string
-    description: 'Serial number that uniquely identifies the MFA device. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-'
+    description: "Serial number that uniquely identifies the MFA device. This parameter allows (per its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@-"
     required: true
   AuthenticationCode1:
     type: string
-    description: 'An authentication code emitted by the device. The format for this parameter is a sequence of six digits.'
+    description: "An authentication code emitted by the device. The format for this parameter is a sequence of six digits."
     required: true
   AuthenticationCode2:
     type: string
-    description: 'A subsequent authentication code emitted by the device. The format for this parameter is a sequence of six digits.'
+    description: "A subsequent authentication code emitted by the device. The format for this parameter is a sequence of six digits."
     required: true

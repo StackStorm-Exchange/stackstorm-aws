@@ -18,15 +18,15 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  NatGatewayIds:
-    type: array
-    description: 'One or more NAT gateway IDs.'
   Filter:
     type: array
-    description: 'One or more filters.    nat-gateway-id - The ID of the NAT gateway.    state - The state of the NAT gateway (pending | failed | available | deleting | deleted).    subnet-id - The ID of the subnet in which the NAT gateway resides.    vpc-id - The ID of the VPC in which the NAT gateway resides.  '
+    description: "One or more filters.    nat-gateway-id - The ID of the NAT gateway.    state - The state of the NAT gateway (pending | failed | available | deleting | deleted).    subnet-id - The ID of the subnet in which the NAT gateway resides.    vpc-id - The ID of the VPC in which the NAT gateway resides.  "
   MaxResults:
     type: integer
-    description: 'The maximum number of items to return for this request. The request returns a token that you can specify in a subsequent call to get the next set of results. Constraint: If the value specified is greater than 1000, we return only 1000 items.'
+    description: "The maximum number of items to return for this request. The request returns a token that you can specify in a subsequent call to get the next set of results. Constraint: If the value specified is greater than 1000, we return only 1000 items."
+  NatGatewayIds:
+    type: array
+    description: "One or more NAT gateway IDs."
   NextToken:
     type: string
-    description: 'The token to retrieve the next page of results.'
+    description: "The token to retrieve the next page of results."

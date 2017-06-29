@@ -20,8 +20,8 @@ parameters:
     type: string
   ExportName:
     type: string
-    description: 'The name of the exported output value. AWS CloudFormation returns the stack names that are importing this value. '
+    description: "The name of the exported output value. AWS CloudFormation returns the stack names that are importing this value. "
     required: true
   NextToken:
     type: string
-    description: 'A string (provided by the ListImports response output) that identifies the next page of stacks that are importing the specified exported output value. '
+    description: "A string (provided by the ListImports response output) that identifies the next page of stacks that are importing the specified exported output value. "

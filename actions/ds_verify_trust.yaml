@@ -20,5 +20,5 @@ parameters:
     type: string
   TrustId:
     type: string
-    description: 'The unique Trust ID of the trust relationship to verify.'
+    description: "The unique Trust ID of the trust relationship to verify."
     required: true

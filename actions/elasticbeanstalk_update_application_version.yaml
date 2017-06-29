@@ -20,12 +20,12 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'The name of the application associated with this version.  If no application is found with this name, UpdateApplication returns an InvalidParameterValue error.'
+    description: "The name of the application associated with this version.  If no application is found with this name, UpdateApplication returns an InvalidParameterValue error."
     required: true
   VersionLabel:
     type: string
-    description: 'The name of the version to update. If no application version is found with this label, UpdateApplication returns an InvalidParameterValue error. '
+    description: "The name of the version to update. If no application version is found with this label, UpdateApplication returns an InvalidParameterValue error. "
     required: true
   Description:
     type: string
-    description: 'A new description for this version.'
+    description: "A new description for this version."

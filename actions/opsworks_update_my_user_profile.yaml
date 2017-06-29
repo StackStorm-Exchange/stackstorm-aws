@@ -20,4 +20,4 @@ parameters:
     type: string
   SshPublicKey:
     type: string
-    description: 'The user"s SSH public key.'
+    description: "The user's SSH public key."

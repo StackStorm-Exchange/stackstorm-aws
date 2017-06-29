@@ -1,0 +1,33 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: mturk_list_workers_with_qualification_type
+runner_type: python-script
+parameters:
+  action:
+    default: list_workers_with_qualification_type
+    immutable: true
+    type: string
+  cls:
+    default: mturk
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  QualificationTypeId:
+    type: string
+    description: "The ID of the Qualification type of the Qualifications to return."
+    required: true
+  Status:
+    type: string
+    description: " The status of the Qualifications to return. Can be Granted | Revoked. "
+  NextToken:
+    type: string
+    description: "Pagination Token"
+  MaxResults:
+    type: integer
+    description: " Limit the number of results returned. "

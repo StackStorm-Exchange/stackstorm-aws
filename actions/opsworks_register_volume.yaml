@@ -20,8 +20,8 @@ parameters:
     type: string
   StackId:
     type: string
-    description: 'The stack ID.'
+    description: "The stack ID."
     required: true
   Ec2VolumeId:
     type: string
-    description: 'The Amazon EBS volume ID.'
+    description: "The Amazon EBS volume ID."

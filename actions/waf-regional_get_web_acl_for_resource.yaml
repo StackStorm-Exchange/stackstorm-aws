@@ -20,5 +20,5 @@ parameters:
     type: string
   ResourceArn:
     type: string
-    description: 'The ARN (Amazon Resource Name) of the resource for which to get the web ACL.'
+    description: "The ARN (Amazon Resource Name) of the resource for which to get the web ACL."
     required: true

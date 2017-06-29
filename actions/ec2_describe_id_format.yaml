@@ -20,4 +20,4 @@ parameters:
     type: string
   Resource:
     type: string
-    description: 'The type of resource: instance | reservation | snapshot | volume '
+    description: "The type of resource: instance | reservation | snapshot | volume "

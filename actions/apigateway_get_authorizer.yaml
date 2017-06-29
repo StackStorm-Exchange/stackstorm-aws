@@ -20,9 +20,9 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The RestApi identifier for the Authorizer resource.'
+    description: "The RestApi identifier for the Authorizer resource."
     required: true
   authorizerId:
     type: string
-    description: 'The identifier of the Authorizer resource.'
+    description: "The identifier of the Authorizer resource."
     required: true

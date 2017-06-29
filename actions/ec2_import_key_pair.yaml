@@ -20,12 +20,12 @@ parameters:
     type: string
   KeyName:
     type: string
-    description: 'A unique name for the key pair.'
+    description: "A unique name for the key pair."
     required: true
   PublicKeyMaterial:
     type: string
-    description: 'The public key. For API calls, the text must be base64-encoded. For command line tools, base64 encoding is performed for you.'
+    description: "The public key. For API calls, the text must be base64-encoded. For command line tools, base64 encoding is performed for you."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."

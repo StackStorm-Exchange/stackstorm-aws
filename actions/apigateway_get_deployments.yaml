@@ -20,11 +20,11 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The identifier of the RestApi resource for the collection of Deployment resources to get information about.'
+    description: "The identifier of the RestApi resource for the collection of Deployment resources to get information about."
     required: true
   position:
     type: string
-    description: 'The position of the current Deployment resource in the collection to get information about.'
+    description: "The current pagination position in the paged result set."
   limit:
     type: integer
-    description: 'The maximum number of Deployment resources in the collection to get information about. The default limit is 25. It should be an integer between 1 - 500.'
+    description: "The maximum number of returned results per page. The value is 25 by default and could be between 1 - 500."

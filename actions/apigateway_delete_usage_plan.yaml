@@ -20,5 +20,5 @@ parameters:
     type: string
   usagePlanId:
     type: string
-    description: 'The Id of the to-be-deleted usage plan.'
+    description: "The Id of the to-be-deleted usage plan."
     required: true

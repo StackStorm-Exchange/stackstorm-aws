@@ -1,0 +1,58 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: devicefarm_create_network_profile
+runner_type: python-script
+parameters:
+  action:
+    default: create_network_profile
+    immutable: true
+    type: string
+  cls:
+    default: devicefarm
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  projectArn:
+    type: string
+    description: "The Amazon Resource Name (ARN) of the project for which you want to create a network profile."
+    required: true
+  name:
+    type: string
+    description: "The name you wish to specify for the new network profile."
+    required: true
+  description:
+    type: string
+    description: "The description of the network profile."
+  type:
+    type: string
+    description: "The type of network profile you wish to create. Valid values are listed below."
+  uplinkBandwidthBits:
+    type: integer
+    description: "The data throughput rate in bits per second, as an integer from 0 to 104857600."
+  downlinkBandwidthBits:
+    type: integer
+    description: "The data throughput rate in bits per second, as an integer from 0 to 104857600."
+  uplinkDelayMs:
+    type: integer
+    description: "Delay time for all packets to destination in milliseconds as an integer from 0 to 2000."
+  downlinkDelayMs:
+    type: integer
+    description: "Delay time for all packets to destination in milliseconds as an integer from 0 to 2000."
+  uplinkJitterMs:
+    type: integer
+    description: "Time variation in the delay of received packets in milliseconds as an integer from 0 to 2000."
+  downlinkJitterMs:
+    type: integer
+    description: "Time variation in the delay of received packets in milliseconds as an integer from 0 to 2000."
+  uplinkLossPercent:
+    type: integer
+    description: "Proportion of transmitted packets that fail to arrive from 0 to 100 percent."
+  downlinkLossPercent:
+    type: integer
+    description: "Proportion of received packets that fail to arrive from 0 to 100 percent."

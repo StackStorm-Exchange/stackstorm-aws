@@ -20,18 +20,18 @@ parameters:
     type: string
   domain:
     type: string
-    description: 'The name of the domain containing the workflow executions to count.'
+    description: "The name of the domain containing the workflow executions to count."
     required: true
   startTimeFilter:
     type: object
-    description: 'Specifies the start time criteria that workflow executions must meet in order to be counted.'
+    description: "Specifies the start time criteria that workflow executions must meet in order to be counted."
     required: true
   typeFilter:
     type: object
-    description: 'Specifies the type of the workflow executions to be counted. executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request.'
+    description: "Specifies the type of the workflow executions to be counted. executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request."
   tagFilter:
     type: object
-    description: 'If specified, only executions that have a tag that matches the filter are counted. executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request.'
+    description: "If specified, only executions that have a tag that matches the filter are counted. executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request."
   executionFilter:
     type: object
-    description: 'If specified, only workflow executions matching the WorkflowId in the filter are counted. executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request.'
+    description: "If specified, only workflow executions matching the WorkflowId in the filter are counted. executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request."

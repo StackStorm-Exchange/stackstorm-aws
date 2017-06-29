@@ -20,9 +20,9 @@ parameters:
     type: string
   repositoryName:
     type: string
-    description: 'The name of the repository to set or change the default branch for.'
+    description: "The name of the repository to set or change the default branch for."
     required: true
   defaultBranchName:
     type: string
-    description: 'The name of the branch to set as the default.'
+    description: "The name of the branch to set as the default."
     required: true

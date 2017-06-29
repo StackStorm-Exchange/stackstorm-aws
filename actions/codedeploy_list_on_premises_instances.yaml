@@ -20,10 +20,10 @@ parameters:
     type: string
   registrationStatus:
     type: string
-    description: 'The registration status of the on-premises instances:   Deregistered: Include deregistered on-premises instances in the resulting list.   Registered: Include registered on-premises instances in the resulting list.  '
+    description: "The registration status of the on-premises instances:   Deregistered: Include deregistered on-premises instances in the resulting list.   Registered: Include registered on-premises instances in the resulting list.  "
   tagFilters:
     type: array
-    description: 'The on-premises instance tags that will be used to restrict the corresponding on-premises instance names returned.'
+    description: "The on-premises instance tags that will be used to restrict the corresponding on-premises instance names returned."
   nextToken:
     type: string
-    description: 'An identifier returned from the previous list on-premises instances call. It can be used to return the next set of on-premises instances in the list.'
+    description: "An identifier returned from the previous list on-premises instances call. It can be used to return the next set of on-premises instances in the list."

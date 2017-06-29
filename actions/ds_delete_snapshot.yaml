@@ -20,5 +20,5 @@ parameters:
     type: string
   SnapshotId:
     type: string
-    description: 'The identifier of the directory snapshot to be deleted.'
+    description: "The identifier of the directory snapshot to be deleted."
     required: true

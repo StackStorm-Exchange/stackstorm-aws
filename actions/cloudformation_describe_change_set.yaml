@@ -20,11 +20,11 @@ parameters:
     type: string
   ChangeSetName:
     type: string
-    description: 'The name or Amazon Resource Name (ARN) of the change set that you want to describe.'
+    description: "The name or Amazon Resource Name (ARN) of the change set that you want to describe."
     required: true
   StackName:
     type: string
-    description: 'If you specified the name of a change set, specify the stack name or ID (ARN) of the change set you want to describe.'
+    description: "If you specified the name of a change set, specify the stack name or ID (ARN) of the change set you want to describe."
   NextToken:
     type: string
-    description: 'A string (provided by the DescribeChangeSet response output) that identifies the next page of information that you want to retrieve.'
+    description: "A string (provided by the DescribeChangeSet response output) that identifies the next page of information that you want to retrieve."

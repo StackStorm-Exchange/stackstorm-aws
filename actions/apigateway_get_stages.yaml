@@ -20,8 +20,8 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The stages" API identifiers.'
+    description: "The stages' API identifiers."
     required: true
   deploymentId:
     type: string
-    description: 'The stages" deployment identifiers.'
+    description: "The stages' deployment identifiers."

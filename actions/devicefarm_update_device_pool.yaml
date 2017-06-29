@@ -20,14 +20,14 @@ parameters:
     type: string
   arn:
     type: string
-    description: 'The Amazon Resourc Name (ARN) of the Device Farm device pool you wish to update.'
+    description: "The Amazon Resourc Name (ARN) of the Device Farm device pool you wish to update."
     required: true
   name:
     type: string
-    description: 'A string representing the name of the device pool you wish to update.'
+    description: "A string representing the name of the device pool you wish to update."
   description:
     type: string
-    description: 'A description of the device pool you wish to update.'
+    description: "A description of the device pool you wish to update."
   rules:
     type: array
-    description: 'Represents the rules you wish to modify for the device pool. Updating rules is optional; however, if you choose to update rules for your request, the update will replace the existing rules.'
+    description: "Represents the rules you wish to modify for the device pool. Updating rules is optional; however, if you choose to update rules for your request, the update will replace the existing rules."

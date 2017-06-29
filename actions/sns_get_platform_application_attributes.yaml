@@ -20,5 +20,5 @@ parameters:
     type: string
   PlatformApplicationArn:
     type: string
-    description: 'PlatformApplicationArn for GetPlatformApplicationAttributesInput.'
+    description: "PlatformApplicationArn for GetPlatformApplicationAttributesInput."
     required: true

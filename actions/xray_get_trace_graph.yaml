@@ -20,8 +20,8 @@ parameters:
     type: string
   TraceIds:
     type: array
-    description: 'Trace IDs of requests for which to generate a service graph.'
+    description: "Trace IDs of requests for which to generate a service graph."
     required: true
   NextToken:
     type: string
-    description: 'Pagination token. Not used.'
+    description: "Pagination token. Not used."

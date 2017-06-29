@@ -20,5 +20,5 @@ parameters:
     type: string
   Identities:
     type: array
-    description: 'A list of one or more verified identities - email addresses, domains, or both.'
+    description: "A list of one or more verified identities - email addresses, domains, or both."
     required: true

@@ -20,9 +20,9 @@ parameters:
     type: string
   RuleSetName:
     type: string
-    description: 'The name of the receipt rule set to reorder.'
+    description: "The name of the receipt rule set to reorder."
     required: true
   RuleNames:
     type: array
-    description: 'A list of the specified receipt rule set"s receipt rules in the order that you want to put them.'
+    description: "A list of the specified receipt rule set's receipt rules in the order that you want to put them."
     required: true

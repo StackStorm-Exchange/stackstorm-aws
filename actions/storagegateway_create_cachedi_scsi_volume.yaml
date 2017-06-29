@@ -20,27 +20,27 @@ parameters:
     type: string
   GatewayARN:
     type: string
-    description: ''
+    description: ""
     required: true
   VolumeSizeInBytes:
     type: integer
-    description: ''
+    description: ""
     required: true
   TargetName:
     type: string
-    description: ''
+    description: ""
     required: true
   NetworkInterfaceId:
     type: string
-    description: ''
+    description: ""
     required: true
   ClientToken:
     type: string
-    description: ''
+    description: ""
     required: true
   SnapshotId:
     type: string
-    description: ''
+    description: ""
   SourceVolumeARN:
     type: string
-    description: 'The ARN for an existing volume. Specifying this ARN makes the new volume into an exact copy of the specified existing volume"s latest recovery point. The VolumeSizeInBytes value for this new volume must be equal to or larger than the size of the existing volume, in bytes.'
+    description: "The ARN for an existing volume. Specifying this ARN makes the new volume into an exact copy of the specified existing volume's latest recovery point. The VolumeSizeInBytes value for this new volume must be equal to or larger than the size of the existing volume, in bytes."

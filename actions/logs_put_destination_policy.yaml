@@ -20,9 +20,9 @@ parameters:
     type: string
   destinationName:
     type: string
-    description: 'A name for an existing destination.'
+    description: "A name for an existing destination."
     required: true
   accessPolicy:
     type: string
-    description: 'An IAM policy document that authorizes cross-account users to deliver their log events to the associated destination.'
+    description: "An IAM policy document that authorizes cross-account users to deliver their log events to the associated destination."
     required: true

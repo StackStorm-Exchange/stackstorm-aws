@@ -20,11 +20,11 @@ parameters:
     type: string
   AutoScalingGroupName:
     type: string
-    description: 'The name of the Auto Scaling group.'
+    description: "The name of the Auto Scaling group."
     required: true
   NextToken:
     type: string
-    description: 'The token for the next set of items to return. (You received this token from a previous call.)'
+    description: "The token for the next set of items to return. (You received this token from a previous call.)"
   MaxRecords:
     type: integer
-    description: 'The maximum number of items to return with this call.'
+    description: "The maximum number of items to return with this call. The default value is 50 and the maximum value is 100."

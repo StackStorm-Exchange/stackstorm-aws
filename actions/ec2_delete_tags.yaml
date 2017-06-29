@@ -20,11 +20,11 @@ parameters:
     type: string
   Resources:
     type: array
-    description: 'The ID of the resource. For example, ami-1a2b3c4d. You can specify more than one resource ID.'
+    description: "The ID of the resource. For example, ami-1a2b3c4d. You can specify more than one resource ID."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   Tags:
     type: array
-    description: 'One or more tags to delete. If you omit the value parameter, we delete the tag regardless of its value. If you specify this parameter with an empty string as the value, we delete the key only if its value is an empty string.'
+    description: "One or more tags to delete. If you omit the value parameter, we delete the tag regardless of its value. If you specify this parameter with an empty string as the value, we delete the key only if its value is an empty string."

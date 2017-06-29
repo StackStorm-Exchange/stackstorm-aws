@@ -20,5 +20,5 @@ parameters:
     type: string
   WindowId:
     type: string
-    description: 'The ID of the desired Maintenance Window.'
+    description: "The ID of the desired Maintenance Window."
     required: true

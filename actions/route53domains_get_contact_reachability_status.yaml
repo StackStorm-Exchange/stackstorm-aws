@@ -20,4 +20,4 @@ parameters:
     type: string
   domainName:
     type: string
-    description: 'The name of the domain for which you want to know whether the registrant contact has confirmed that the email address is valid. Type: String Default: None Required: Yes'
+    description: "The name of the domain for which you want to know whether the registrant contact has confirmed that the email address is valid."

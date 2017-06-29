@@ -20,9 +20,9 @@ parameters:
     type: string
   ElasticIp:
     type: string
-    description: 'The Elastic IP address.'
+    description: "The Elastic IP address."
     required: true
   StackId:
     type: string
-    description: 'The stack ID.'
+    description: "The stack ID."
     required: true

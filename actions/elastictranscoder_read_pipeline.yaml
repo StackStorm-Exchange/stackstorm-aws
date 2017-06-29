@@ -20,5 +20,5 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The identifier of the pipeline to read.'
+    description: "The identifier of the pipeline to read."
     required: true

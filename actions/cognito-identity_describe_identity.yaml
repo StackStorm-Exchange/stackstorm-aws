@@ -20,5 +20,5 @@ parameters:
     type: string
   IdentityId:
     type: string
-    description: 'A unique identifier in the format REGION:GUID.'
+    description: "A unique identifier in the format REGION:GUID."
     required: true

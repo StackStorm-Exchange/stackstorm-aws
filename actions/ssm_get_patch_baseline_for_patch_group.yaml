@@ -20,5 +20,5 @@ parameters:
     type: string
   PatchGroup:
     type: string
-    description: 'The name of the patch group whose patch baseline should be retrieved.'
+    description: "The name of the patch group whose patch baseline should be retrieved."
     required: true

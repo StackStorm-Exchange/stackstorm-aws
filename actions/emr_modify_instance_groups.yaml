@@ -20,7 +20,7 @@ parameters:
     type: string
   ClusterId:
     type: string
-    description: 'The ID of the cluster to which the instance group belongs.'
+    description: "The ID of the cluster to which the instance group belongs."
   InstanceGroups:
     type: array
-    description: 'Instance groups to change.'
+    description: "Instance groups to change."

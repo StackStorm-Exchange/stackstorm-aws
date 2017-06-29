@@ -20,5 +20,5 @@ parameters:
     type: string
   name:
     type: string
-    description: 'The name of the activity to create. This name must be unique for your AWS account and region.'
+    description: "The name of the activity to create. This name must be unique for your AWS account and region."
     required: true

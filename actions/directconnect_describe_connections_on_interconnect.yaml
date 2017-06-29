@@ -20,5 +20,5 @@ parameters:
     type: string
   interconnectId:
     type: string
-    description: 'ID of the interconnect on which a list of connection is provisioned. Example: dxcon-abc123 Default: None'
+    description: "ID of the interconnect on which a list of connection is provisioned. Example: dxcon-abc123 Default: None"
     required: true

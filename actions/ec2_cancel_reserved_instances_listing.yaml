@@ -20,5 +20,5 @@ parameters:
     type: string
   ReservedInstancesListingId:
     type: string
-    description: 'The ID of the Reserved Instance listing.'
+    description: "The ID of the Reserved Instance listing."
     required: true

@@ -20,13 +20,13 @@ parameters:
     type: string
   agentIds:
     type: array
-    description: 'The agent or the Connector IDs for which you want information. If you specify no IDs, the system returns information about all agents/Connectors associated with your AWS user account.'
+    description: "The agent or the Connector IDs for which you want information. If you specify no IDs, the system returns information about all agents/Connectors associated with your AWS user account."
   filters:
     type: array
-    description: 'You can filter the request using various logical operators and a key-value format. For example:   {"key": "collectionStatus", "value": "STARTED"}  For a complete list of filter options and guidance about using them with this action, see Managing AWS Application Discovery Service Agents and the AWS Application Discovery Connector .'
+    description: "You can filter the request using various logical operators and a key-value format. For example:   {'key': 'collectionStatus', 'value': 'STARTED'} "
   maxResults:
     type: integer
-    description: 'The total number of agents/Connectors to return in a single page of output. The maximum value is 100.'
+    description: "The total number of agents/Connectors to return in a single page of output. The maximum value is 100."
   nextToken:
     type: string
-    description: 'Token to retrieve the next set of results. For example, if you previously specified 100 IDs for DescribeAgentsRequest$agentIds but set DescribeAgentsRequest$maxResults to 10, you received a set of 10 results along with a token. Use that token in this query to get the next set of 10.'
+    description: "Token to retrieve the next set of results. For example, if you previously specified 100 IDs for DescribeAgentsRequest$agentIds but set DescribeAgentsRequest$maxResults to 10, you received a set of 10 results along with a token. Use that token in this query to get the next set of 10."

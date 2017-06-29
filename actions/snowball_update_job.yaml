@@ -20,26 +20,29 @@ parameters:
     type: string
   JobId:
     type: string
-    description: 'The job ID of the job that you want to update, for example JID123e4567-e89b-12d3-a456-426655440000.'
+    description: "The job ID of the job that you want to update, for example JID123e4567-e89b-12d3-a456-426655440000."
     required: true
   RoleARN:
     type: string
-    description: 'The new role Amazon Resource Name (ARN) that you want to associate with this job. To create a role ARN, use the CreateRole AWS Identity and Access Management (IAM) API action.'
+    description: "The new role Amazon Resource Name (ARN) that you want to associate with this job. To create a role ARN, use the CreateRoleAWS Identity and Access Management (IAM) API action."
   Notification:
     type: object
-    description: 'The new or updated Notification object.'
+    description: "The new or updated Notification object."
   Resources:
     type: object
-    description: 'The updated S3Resource object (for a single Amazon S3 bucket or key range), or the updated JobResource object (for multiple buckets or key ranges). '
+    description: "The updated S3Resource object (for a single Amazon S3 bucket or key range), or the updated JobResource object (for multiple buckets or key ranges). "
   AddressId:
     type: string
-    description: 'The ID of the updated Address object.'
+    description: "The ID of the updated Address object."
   ShippingOption:
     type: string
-    description: 'The updated shipping option value of this job"s ShippingDetails object.'
+    description: "The updated shipping option value of this job's ShippingDetails object."
   Description:
     type: string
-    description: 'The updated description of this job"s JobMetadata object.'
+    description: "The updated description of this job's JobMetadata object."
   SnowballCapacityPreference:
     type: string
-    description: 'The updated SnowballCapacityPreference of this job"s JobMetadata object. The 50 TB Snowballs are only available in the US regions.'
+    description: "The updated SnowballCapacityPreference of this job's JobMetadata object. The 50 TB Snowballs are only available in the US regions."
+  ForwardingAddressId:
+    type: string
+    description: "The updated ID for the forwarding address for a job. This field is not supported in most regions."

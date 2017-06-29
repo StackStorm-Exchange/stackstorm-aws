@@ -20,8 +20,8 @@ parameters:
     type: string
   certificateId:
     type: string
-    description: 'The ID of the certificate.'
+    description: "The ID of the certificate."
     required: true
   rejectReason:
     type: string
-    description: 'The reason the certificate transfer was rejected.'
+    description: "The reason the certificate transfer was rejected."

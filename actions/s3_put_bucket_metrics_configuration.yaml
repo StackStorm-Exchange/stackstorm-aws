@@ -20,13 +20,13 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: 'The name of the bucket for which the metrics configuration is set.'
+    description: "The name of the bucket for which the metrics configuration is set."
     required: true
   Id:
     type: string
-    description: 'The ID used to identify the metrics configuration.'
+    description: "The ID used to identify the metrics configuration."
     required: true
   MetricsConfiguration:
     type: object
-    description: 'Specifies the metrics configuration.'
+    description: "Specifies the metrics configuration."
     required: true

@@ -20,10 +20,10 @@ parameters:
     type: string
   TapeARNs:
     type: array
-    description: ''
+    description: ""
   Marker:
     type: string
-    description: 'A string that indicates the position at which to begin the returned list of tapes.'
+    description: "A string that indicates the position at which to begin the returned list of tapes."
   Limit:
     type: integer
-    description: 'An optional number limit for the tapes in the list returned by this call.'
+    description: "An optional number limit for the tapes in the list returned by this call."

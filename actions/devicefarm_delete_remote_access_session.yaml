@@ -20,5 +20,5 @@ parameters:
     type: string
   arn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the sesssion for which you want to delete remote access.'
+    description: "The Amazon Resource Name (ARN) of the sesssion for which you want to delete remote access."
     required: true

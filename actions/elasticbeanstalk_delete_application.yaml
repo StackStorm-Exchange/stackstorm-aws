@@ -20,8 +20,8 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'The name of the application to delete.'
+    description: "The name of the application to delete."
     required: true
   TerminateEnvByForce:
     type: boolean
-    description: 'When set to true, running environments will be terminated before deleting the application.'
+    description: "When set to true, running environments will be terminated before deleting the application."

@@ -20,5 +20,5 @@ parameters:
     type: string
   IdentityPoolId:
     type: string
-    description: 'An identity pool ID in the format REGION:GUID.'
+    description: "An identity pool ID in the format REGION:GUID."
     required: true

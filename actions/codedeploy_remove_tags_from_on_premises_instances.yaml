@@ -20,9 +20,9 @@ parameters:
     type: string
   tags:
     type: array
-    description: 'The tag key-value pairs to remove from the on-premises instances.'
+    description: "The tag key-value pairs to remove from the on-premises instances."
     required: true
   instanceNames:
     type: array
-    description: 'The names of the on-premises instances from which to remove tags.'
+    description: "The names of the on-premises instances from which to remove tags."
     required: true

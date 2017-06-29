@@ -20,5 +20,5 @@ parameters:
     type: string
   taskDefinition:
     type: string
-    description: 'The family for the latest ACTIVE revision, family and revision (family:revision) for a specific revision in the family, or full Amazon Resource Name (ARN) of the task definition to describe.'
+    description: "The family for the latest ACTIVE revision, family and revision (family:revision) for a specific revision in the family, or full Amazon Resource Name (ARN) of the task definition to describe."
     required: true

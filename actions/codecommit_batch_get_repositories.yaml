@@ -20,5 +20,5 @@ parameters:
     type: string
   repositoryNames:
     type: array
-    description: 'The names of the repositories to get information about.'
+    description: "The names of the repositories to get information about."
     required: true

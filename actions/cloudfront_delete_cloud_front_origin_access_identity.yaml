@@ -20,8 +20,8 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The origin access identity"s ID.'
+    description: "The origin access identity's ID."
     required: true
   IfMatch:
     type: string
-    description: 'The value of the ETag header you received from a previous GET or PUT request. For example: E2QWRUHAPOMQZL.'
+    description: "The value of the ETag header you received from a previous GET or PUT request. For example: E2QWRUHAPOMQZL."

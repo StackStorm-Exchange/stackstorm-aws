@@ -20,8 +20,8 @@ parameters:
     type: string
   ResourceName:
     type: string
-    description: 'The Amazon RDS resource with tags to be listed. This value is an Amazon Resource Name (ARN). For information about creating an ARN, see  Constructing an RDS Amazon Resource Name (ARN).'
+    description: "The Amazon RDS resource with tags to be listed. This value is an Amazon Resource Name (ARN). For information about creating an ARN, see  Constructing an RDS Amazon Resource Name (ARN)."
     required: true
   Filters:
     type: array
-    description: 'This parameter is not currently supported.'
+    description: "This parameter is not currently supported."

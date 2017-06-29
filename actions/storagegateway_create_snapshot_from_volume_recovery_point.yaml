@@ -20,9 +20,9 @@ parameters:
     type: string
   VolumeARN:
     type: string
-    description: ''
+    description: ""
     required: true
   SnapshotDescription:
     type: string
-    description: ''
+    description: ""
     required: true

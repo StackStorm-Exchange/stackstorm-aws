@@ -20,9 +20,9 @@ parameters:
     type: string
   domain:
     type: string
-    description: 'The name of the domain in which this workflow type is registered.'
+    description: "The name of the domain in which this workflow type is registered."
     required: true
   workflowType:
     type: object
-    description: 'The workflow type to describe.'
+    description: "The workflow type to describe."
     required: true

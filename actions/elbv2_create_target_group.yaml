@@ -20,41 +20,41 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the target group.'
+    description: "The name of the target group. This name must be unique per region per account, can have a maximum of 32 characters, must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen."
     required: true
   Protocol:
     type: string
-    description: 'The protocol to use for routing traffic to the targets.'
+    description: "The protocol to use for routing traffic to the targets."
     required: true
   Port:
     type: integer
-    description: 'The port on which the targets receive traffic. This port is used unless you specify a port override when registering the target.'
+    description: "The port on which the targets receive traffic. This port is used unless you specify a port override when registering the target."
     required: true
   VpcId:
     type: string
-    description: 'The identifier of the virtual private cloud (VPC).'
+    description: "The identifier of the virtual private cloud (VPC)."
     required: true
   HealthCheckProtocol:
     type: string
-    description: 'The protocol the load balancer uses when performing health checks on targets. The default is the HTTP protocol.'
+    description: "The protocol the load balancer uses when performing health checks on targets. The default is the HTTP protocol."
   HealthCheckPort:
     type: string
-    description: 'The port the load balancer uses when performing health checks on targets. The default is traffic-port, which indicates the port on which each target receives traffic from the load balancer.'
+    description: "The port the load balancer uses when performing health checks on targets. The default is traffic-port, which indicates the port on which each target receives traffic from the load balancer."
   HealthCheckPath:
     type: string
-    description: 'The ping path that is the destination on the targets for health checks. The default is /.'
+    description: "The ping path that is the destination on the targets for health checks. The default is /."
   HealthCheckIntervalSeconds:
     type: integer
-    description: 'The approximate amount of time, in seconds, between health checks of an individual target. The default is 30 seconds.'
+    description: "The approximate amount of time, in seconds, between health checks of an individual target. The default is 30 seconds."
   HealthCheckTimeoutSeconds:
     type: integer
-    description: 'The amount of time, in seconds, during which no response from a target means a failed health check. The default is 5 seconds.'
+    description: "The amount of time, in seconds, during which no response from a target means a failed health check. The default is 5 seconds."
   HealthyThresholdCount:
     type: integer
-    description: 'The number of consecutive health checks successes required before considering an unhealthy target healthy. The default is 5.'
+    description: "The number of consecutive health checks successes required before considering an unhealthy target healthy. The default is 5."
   UnhealthyThresholdCount:
     type: integer
-    description: 'The number of consecutive health check failures required before considering a target unhealthy. The default is 2.'
+    description: "The number of consecutive health check failures required before considering a target unhealthy. The default is 2."
   Matcher:
     type: object
-    description: 'The HTTP codes to use when checking for a successful response from a target. The default is 200.'
+    description: "The HTTP codes to use when checking for a successful response from a target. The default is 200."

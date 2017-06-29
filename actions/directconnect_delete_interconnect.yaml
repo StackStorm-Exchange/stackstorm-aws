@@ -20,5 +20,5 @@ parameters:
     type: string
   interconnectId:
     type: string
-    description: ''
+    description: ""
     required: true

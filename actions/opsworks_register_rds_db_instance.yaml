@@ -20,17 +20,17 @@ parameters:
     type: string
   StackId:
     type: string
-    description: 'The stack ID.'
+    description: "The stack ID."
     required: true
   RdsDbInstanceArn:
     type: string
-    description: 'The Amazon RDS instance"s ARN.'
+    description: "The Amazon RDS instance's ARN."
     required: true
   DbUser:
     type: string
-    description: 'The database"s master user name.'
+    description: "The database's master user name."
     required: true
   DbPassword:
     type: string
-    description: 'The database password.'
+    description: "The database password."
     required: true

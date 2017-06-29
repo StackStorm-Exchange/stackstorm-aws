@@ -20,4 +20,4 @@ parameters:
     type: string
   Marker:
     type: string
-    description: 'The pagination token that indicates the set of results to retrieve.'
+    description: "The pagination token that indicates the set of results to retrieve."

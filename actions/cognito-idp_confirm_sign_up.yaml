@@ -20,19 +20,19 @@ parameters:
     type: string
   ClientId:
     type: string
-    description: 'The ID of the client associated with the user pool.'
+    description: "The ID of the client associated with the user pool."
     required: true
   Username:
     type: string
-    description: 'The user name of the user whose registration you wish to confirm.'
+    description: "The user name of the user whose registration you wish to confirm."
     required: true
   ConfirmationCode:
     type: string
-    description: 'The confirmation code sent by a user"s request to confirm registration.'
+    description: "The confirmation code sent by a user's request to confirm registration."
     required: true
   SecretHash:
     type: string
-    description: 'A keyed-hash message authentication code (HMAC) calculated using the secret key of a user pool client and username plus the client ID in the message.'
+    description: "A keyed-hash message authentication code (HMAC) calculated using the secret key of a user pool client and username plus the client ID in the message."
   ForceAliasCreation:
     type: boolean
-    description: 'Boolean to be specified to force user confirmation irrespective of existing alias. By default set to False. If this parameter is set to True and the phone number/email used for sign up confirmation already exists as an alias with a different user, the API call will migrate the alias from the previous user to the newly created user being confirmed. If set to False, the API will throw an AliasExistsException error.'
+    description: "Boolean to be specified to force user confirmation irrespective of existing alias. By default set to False. If this parameter is set to True and the phone number/email used for sign up confirmation already exists as an alias with a different user, the API call will migrate the alias from the previous user to the newly created user being confirmed. If set to False, the API will throw an AliasExistsException error."

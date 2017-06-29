@@ -20,17 +20,17 @@ parameters:
     type: string
   DeliveryStreamName:
     type: string
-    description: 'The name of the delivery stream. This name must be unique per AWS account in the same region. You can have multiple delivery streams with the same name if they are in different accounts or different regions.'
+    description: "The name of the delivery stream. This name must be unique per AWS account in the same region. You can have multiple delivery streams with the same name if they are in different accounts or different regions."
     required: true
   S3DestinationConfiguration:
     type: object
-    description: '[Deprecated] The destination in Amazon S3. You can specify only one destination.'
+    description: "[Deprecated] The destination in Amazon S3. You can specify only one destination."
   ExtendedS3DestinationConfiguration:
     type: object
-    description: 'The destination in Amazon S3. You can specify only one destination.'
+    description: "The destination in Amazon S3. You can specify only one destination."
   RedshiftDestinationConfiguration:
     type: object
-    description: 'The destination in Amazon Redshift. You can specify only one destination.'
+    description: "The destination in Amazon Redshift. You can specify only one destination."
   ElasticsearchDestinationConfiguration:
     type: object
-    description: 'The destination in Amazon ES. You can specify only one destination.'
+    description: "The destination in Amazon ES. You can specify only one destination."

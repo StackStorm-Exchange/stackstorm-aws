@@ -20,7 +20,7 @@ parameters:
     type: string
   IamUserArn:
     type: string
-    description: 'The user"s IAM ARN. This can also be a federated user"s ARN. For more information about IAM ARNs, see Using Identifiers.'
+    description: "The user's IAM ARN. This can also be a federated user's ARN. For more information about IAM ARNs, see Using Identifiers."
   StackId:
     type: string
-    description: 'The stack ID.'
+    description: "The stack ID."

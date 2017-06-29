@@ -20,9 +20,9 @@ parameters:
     type: string
   GatewayARN:
     type: string
-    description: 'The unique Amazon Resource Name (ARN) of the gateway that the virtual tape to delete is associated with. Use the ListGateways operation to return a list of gateways for your account and region.'
+    description: "The unique Amazon Resource Name (ARN) of the gateway that the virtual tape to delete is associated with. Use the ListGateways operation to return a list of gateways for your account and region."
     required: true
   TapeARN:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the virtual tape to delete.'
+    description: "The Amazon Resource Name (ARN) of the virtual tape to delete."
     required: true

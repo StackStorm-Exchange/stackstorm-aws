@@ -20,9 +20,9 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ''
+    description: ""
     required: true
   NotificationConfiguration:
     type: object
-    description: ''
+    description: ""
     required: true

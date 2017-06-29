@@ -1,0 +1,28 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: lex-models_delete_utterances
+runner_type: python-script
+parameters:
+  action:
+    default: delete_utterances
+    immutable: true
+    type: string
+  cls:
+    default: lex-models
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  botName:
+    type: string
+    description: "The name of the bot that stored the utterances."
+    required: true
+  userId:
+    type: string
+    description: " The unique identifier for the user that made the utterances. This is the user ID that was sent in the or operation request that contained the utterance."
+    required: true

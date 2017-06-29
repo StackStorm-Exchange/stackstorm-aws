@@ -20,15 +20,15 @@ parameters:
     type: string
   IdentityPoolId:
     type: string
-    description: 'A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.'
+    description: "A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region."
     required: true
   IdentityId:
     type: string
-    description: 'A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.'
+    description: "A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region."
     required: true
   NextToken:
     type: string
-    description: 'A pagination token for obtaining the next page of results.'
+    description: "A pagination token for obtaining the next page of results."
   MaxResults:
     type: integer
-    description: 'The maximum number of results to be returned.'
+    description: "The maximum number of results to be returned."

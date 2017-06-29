@@ -20,5 +20,5 @@ parameters:
     type: string
   ARN:
     type: string
-    description: ' Specify the ARN for the Elasticsearch domain to which the tags are attached that you want to view.'
+    description: " Specify the ARN for the Elasticsearch domain to which the tags are attached that you want to view."
     required: true

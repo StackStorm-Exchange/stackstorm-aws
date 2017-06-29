@@ -20,5 +20,5 @@ parameters:
     type: string
   ClusterId:
     type: string
-    description: 'The automatically generated ID for a cluster.'
+    description: "The automatically generated ID for a cluster."
     required: true

@@ -20,5 +20,5 @@ parameters:
     type: string
   executionArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the execution to describe.'
+    description: "The Amazon Resource Name (ARN) of the execution to describe."
     required: true

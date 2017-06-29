@@ -20,5 +20,5 @@ parameters:
     type: string
   SubscriptionArn:
     type: string
-    description: 'The ARN of the subscription to be deleted.'
+    description: "The ARN of the subscription to be deleted."
     required: true

@@ -20,4 +20,5 @@ parameters:
     type: string
   repositoryName:
     type: string
-    description: 'The name of the repository for which the trigger is configured.'
+    description: "The name of the repository for which the trigger is configured."
+    required: true

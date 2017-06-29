@@ -20,9 +20,9 @@ parameters:
     type: string
   findingArns:
     type: array
-    description: 'The ARNs that specify the findings that you want to assign attributes to.'
+    description: "The ARNs that specify the findings that you want to assign attributes to."
     required: true
   attributes:
     type: array
-    description: 'The array of attributes that you want to assign to specified findings.'
+    description: "The array of attributes that you want to assign to specified findings."
     required: true

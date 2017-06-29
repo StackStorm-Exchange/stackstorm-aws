@@ -20,8 +20,8 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: 'The instance"s AWS OpsWorks ID.'
+    description: "The instance's AWS OpsWorks Stacks ID."
     required: true
   ValidForInMinutes:
     type: integer
-    description: 'The length of time (in minutes) that the grant is valid. When the grant expires at the end of this period, the user will no longer be able to use the credentials to log in. If the user is logged in at the time, he or she automatically will be logged out.'
+    description: "The length of time (in minutes) that the grant is valid. When the grant expires at the end of this period, the user will no longer be able to use the credentials to log in. If the user is logged in at the time, he or she automatically will be logged out."

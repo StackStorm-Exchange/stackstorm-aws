@@ -20,5 +20,5 @@ parameters:
     type: string
   arn:
     type: string
-    description: 'The device type"s ARN.'
+    description: "The device type's ARN."
     required: true

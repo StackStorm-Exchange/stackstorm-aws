@@ -20,5 +20,5 @@ parameters:
     type: string
   domainName:
     type: string
-    description: 'The domain name for which your want to return information about.'
+    description: "The domain name for which your want to return information about."
     required: true

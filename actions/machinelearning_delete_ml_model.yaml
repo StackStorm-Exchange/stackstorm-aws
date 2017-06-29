@@ -20,5 +20,5 @@ parameters:
     type: string
   MLModelId:
     type: string
-    description: 'A user-supplied ID that uniquely identifies the MLModel.'
+    description: "A user-supplied ID that uniquely identifies the MLModel."
     required: true

@@ -20,9 +20,9 @@ parameters:
     type: string
   InstanceGroups:
     type: array
-    description: 'Instance groups to add.'
+    description: "Instance groups to add."
     required: true
   JobFlowId:
     type: string
-    description: 'Job flow in which to add the instance groups.'
+    description: "Job flow in which to add the instance groups."
     required: true

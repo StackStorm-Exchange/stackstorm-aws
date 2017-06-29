@@ -1,0 +1,24 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: clouddirectory_create_schema
+runner_type: python-script
+parameters:
+  action:
+    default: create_schema
+    immutable: true
+    type: string
+  cls:
+    default: clouddirectory
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Name:
+    type: string
+    description: "The name that is associated with the schema. This is unique to each account and in each region."
+    required: true

@@ -20,15 +20,15 @@ parameters:
     type: string
   ApplicationId:
     type: string
-    description: ''
+    description: ""
     required: true
   SegmentId:
     type: string
-    description: ''
+    description: ""
     required: true
   PageSize:
     type: string
-    description: ''
+    description: ""
   Token:
     type: string
-    description: ''
+    description: ""

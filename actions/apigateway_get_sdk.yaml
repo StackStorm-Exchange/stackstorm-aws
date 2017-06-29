@@ -20,16 +20,16 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The identifier of the RestApi that the SDK will use.'
+    description: "The identifier of the RestApi that the SDK will use."
     required: true
   stageName:
     type: string
-    description: 'The name of the Stage that the SDK will use.'
+    description: "The name of the Stage that the SDK will use."
     required: true
   sdkType:
     type: string
-    description: 'The language for the generated SDK. Currently javascript, android, and objectivec (for iOS) are supported.'
+    description: "The language for the generated SDK. Currently javascript, android, and objectivec (for iOS) are supported."
     required: true
   parameters:
     type: object
-    description: 'A key-value map of query string parameters that specify properties of the SDK, depending on the requested sdkType. For sdkType of objectivec, a parameter named classPrefix is required. For sdkType of android, parameters named groupId, artifactId, artifactVersion, and invokerPackage are required.'
+    description: "A key-value map of query string parameters that specify properties of the SDK, depending on the requested sdkType. For sdkType of objectivec, a parameter named classPrefix is required. For sdkType of android, parameters named groupId, artifactId, artifactVersion, and invokerPackage are required."

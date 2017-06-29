@@ -20,9 +20,9 @@ parameters:
     type: string
   configurationIds:
     type: array
-    description: 'A list of configuration items that you want to tag.'
+    description: "A list of configuration items that you want to tag."
     required: true
   tags:
     type: array
-    description: 'Tags that you want to associate with one or more configuration items. Specify the tags that you want to create in a key-value format. For example:  {"key": "serverType", "value": "webServer"} '
+    description: "Tags that you want to associate with one or more configuration items. Specify the tags that you want to create in a key-value format. For example:  {'key': 'serverType', 'value': 'webServer'} "
     required: true

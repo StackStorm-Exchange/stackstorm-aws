@@ -20,5 +20,5 @@ parameters:
     type: string
   resourceGroupArns:
     type: array
-    description: 'The ARN that specifies the resource group that you want to describe.'
+    description: "The ARN that specifies the resource group that you want to describe."
     required: true

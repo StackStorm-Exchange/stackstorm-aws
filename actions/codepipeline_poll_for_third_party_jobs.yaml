@@ -20,8 +20,8 @@ parameters:
     type: string
   actionTypeId:
     type: object
-    description: ''
+    description: "Represents information about an action type."
     required: true
   maxBatchSize:
     type: integer
-    description: 'The maximum number of jobs to return in a poll for jobs call.'
+    description: "The maximum number of jobs to return in a poll for jobs call."

@@ -20,4 +20,4 @@ parameters:
     type: string
   nextToken:
     type: string
-    description: 'A NextToken string is used when you call the ListPhoneNumbersOptedOut action to retrieve additional records that are available after the first page of results.'
+    description: "A NextToken string is used when you call the ListPhoneNumbersOptedOut action to retrieve additional records that are available after the first page of results."

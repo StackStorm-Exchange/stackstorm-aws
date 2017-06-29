@@ -20,33 +20,33 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'Descriptive label associated with a scaling policy. Policy names do not need to be unique. A fleet can have only one scaling policy with the same name.'
+    description: "Descriptive label that is associated with a scaling policy. Policy names do not need to be unique. A fleet can have only one scaling policy with the same name."
     required: true
   FleetId:
     type: string
-    description: 'Unique identity for the fleet to scale with this policy.'
+    description: "Unique identifier for a fleet to apply this policy to."
     required: true
   ScalingAdjustment:
     type: integer
-    description: 'Amount of adjustment to make, based on the scaling adjustment type.'
+    description: "Amount of adjustment to make, based on the scaling adjustment type."
     required: true
   ScalingAdjustmentType:
     type: string
-    description: 'Type of adjustment to make to a fleet"s instance count (see FleetCapacity):    ChangeInCapacity – add (or subtract) the scaling adjustment value from the current instance count. Positive values scale up while negative values scale down.    ExactCapacity – set the instance count to the scaling adjustment value.    PercentChangeInCapacity – increase or reduce the current instance count by the scaling adjustment, read as a percentage. Positive values scale up while negative values scale down; for example, a value of "-10" scales the fleet down by 10%.  '
+    description: "Type of adjustment to make to a fleet's instance count (see FleetCapacity):    ChangeInCapacity – add (or subtract) the scaling adjustment value from the current instance count. Positive values scale up while negative values scale down.    ExactCapacity – set the instance count to the scaling adjustment value.    PercentChangeInCapacity – increase or reduce the current instance count by the scaling adjustment, read as a percentage. Positive values scale up while negative values scale down; for example, a value of '-10' scales the fleet down by 10%.  "
     required: true
   Threshold:
     type: number
-    description: 'Metric value used to trigger a scaling event.'
+    description: "Metric value used to trigger a scaling event."
     required: true
   ComparisonOperator:
     type: string
-    description: 'Comparison operator to use when measuring the metric against the threshold value.'
+    description: "Comparison operator to use when measuring the metric against the threshold value."
     required: true
   EvaluationPeriods:
     type: integer
-    description: 'Length of time (in minutes) the metric must be at or beyond the threshold before a scaling event is triggered.'
+    description: "Length of time (in minutes) the metric must be at or beyond the threshold before a scaling event is triggered."
     required: true
   MetricName:
     type: string
-    description: 'Name of the Amazon GameLift-defined metric that is used to trigger an adjustment.    ActivatingGameSessions – number of game sessions in the process of being created (game session status = ACTIVATING).    ActiveGameSessions – number of game sessions currently running (game session status = ACTIVE).    CurrentPlayerSessions – number of active or reserved player sessions (player session status = ACTIVE or RESERVED).     AvailablePlayerSessions – number of player session slots currently available in active game sessions across the fleet, calculated by subtracting a game session"s current player session count from its maximum player session count. This number includes game sessions that are not currently accepting players (game session PlayerSessionCreationPolicy = DENY_ALL).    ActiveInstances – number of instances currently running a game session.    IdleInstances – number of instances not currently running a game session.  '
+    description: "Name of the Amazon GameLift-defined metric that is used to trigger an adjustment.    ActivatingGameSessions – number of game sessions in the process of being created (game session status = ACTIVATING).    ActiveGameSessions – number of game sessions currently running (game session status = ACTIVE).    CurrentPlayerSessions – number of active or reserved player sessions (player session status = ACTIVE or RESERVED).     AvailablePlayerSessions – number of player session slots currently available in active game sessions across the fleet, calculated by subtracting a game session's current player session count from its maximum player session count. This number includes game sessions that are not currently accepting players (game session PlayerSessionCreationPolicy = DENY_ALL).    ActiveInstances – number of instances currently running a game session.    IdleInstances – number of instances not currently running a game session.  "
     required: true

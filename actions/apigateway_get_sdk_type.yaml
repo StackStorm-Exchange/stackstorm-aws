@@ -20,5 +20,5 @@ parameters:
     type: string
   id:
     type: string
-    description: 'The identifier of the queried SdkType instance.'
+    description: "The identifier of the queried SdkType instance."
     required: true

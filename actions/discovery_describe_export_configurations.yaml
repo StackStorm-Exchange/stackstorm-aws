@@ -20,10 +20,10 @@ parameters:
     type: string
   exportIds:
     type: array
-    description: 'A unique identifier that you can use to query the export status.'
+    description: "A unique identifier that you can use to query the export status."
   maxResults:
     type: integer
-    description: 'The maximum number of results that you want to display as a part of the query.'
+    description: "The maximum number of results that you want to display as a part of the query."
   nextToken:
     type: string
-    description: 'A token to get the next set of results. For example, if you specified 100 IDs for DescribeExportConfigurationsRequest$exportIds but set DescribeExportConfigurationsRequest$maxResults to 10, you will get results in a set of 10. Use the token in the query to get the next set of 10.'
+    description: "A token to get the next set of results. For example, if you specify 100 IDs for DescribeExportConfigurationsRequest$exportIds but set DescribeExportConfigurationsRequest$maxResults to 10, you get results in a set of 10. Use the token in the query to get the next set of 10."

@@ -20,5 +20,5 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'Name of the lexicon.'
+    description: "Name of the lexicon."
     required: true

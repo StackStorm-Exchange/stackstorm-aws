@@ -1,0 +1,30 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: greengrass_create_device_definition_version
+runner_type: python-script
+parameters:
+  action:
+    default: create_device_definition_version
+    immutable: true
+    type: string
+  cls:
+    default: greengrass
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DeviceDefinitionId:
+    type: string
+    description: "device definition Id"
+    required: true
+  AmznClientToken:
+    type: string
+    description: "The client token used to request idempotent operations."
+  Devices:
+    type: array
+    description: "Devices in the definition version."

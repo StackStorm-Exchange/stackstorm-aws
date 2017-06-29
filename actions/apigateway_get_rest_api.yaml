@@ -20,5 +20,5 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The identifier of the RestApi resource.'
+    description: "The identifier of the RestApi resource."
     required: true

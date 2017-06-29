@@ -20,18 +20,18 @@ parameters:
     type: string
   StartTime:
     type: string
-    description: 'The start of the time frame for which to retrieve traces.'
+    description: "The start of the time frame for which to retrieve traces."
     required: true
   EndTime:
     type: string
-    description: 'The end of the time frame for which to retrieve traces.'
+    description: "The end of the time frame for which to retrieve traces."
     required: true
   Sampling:
     type: boolean
-    description: 'Set to true to get summaries for only a subset of available traces.'
+    description: "Set to true to get summaries for only a subset of available traces."
   FilterExpression:
     type: string
-    description: 'Specify a filter expression to retrieve trace summaries for services or requests that meet certain requirements.'
+    description: "Specify a filter expression to retrieve trace summaries for services or requests that meet certain requirements."
   NextToken:
     type: string
-    description: 'Specify the pagination token returned by a previous request to retrieve the next page of results.'
+    description: "Specify the pagination token returned by a previous request to retrieve the next page of results."

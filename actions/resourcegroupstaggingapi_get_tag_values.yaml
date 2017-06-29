@@ -1,0 +1,27 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: resourcegroupstaggingapi_get_tag_values
+runner_type: python-script
+parameters:
+  action:
+    default: get_tag_values
+    immutable: true
+    type: string
+  cls:
+    default: resourcegroupstaggingapi
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Key:
+    type: string
+    description: "The key for which you want to list all existing values in the specified region for the AWS account."
+    required: true
+  PaginationToken:
+    type: string
+    description: "A string that indicates that additional data is available. Leave this value empty for your initial request. If the response includes a PaginationToken, use that string for this value to request an additional page of data."

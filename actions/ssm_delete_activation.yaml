@@ -20,5 +20,5 @@ parameters:
     type: string
   ActivationId:
     type: string
-    description: 'The ID of the activation that you want to delete.'
+    description: "The ID of the activation that you want to delete."
     required: true

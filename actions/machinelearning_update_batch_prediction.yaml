@@ -20,9 +20,9 @@ parameters:
     type: string
   BatchPredictionId:
     type: string
-    description: 'The ID assigned to the BatchPrediction during creation.'
+    description: "The ID assigned to the BatchPrediction during creation."
     required: true
   BatchPredictionName:
     type: string
-    description: 'A new user-supplied name or description of the BatchPrediction.'
+    description: "A new user-supplied name or description of the BatchPrediction."
     required: true

@@ -20,5 +20,5 @@ parameters:
     type: string
   CNAMEPrefix:
     type: string
-    description: 'The prefix used when this CNAME is reserved.'
+    description: "The prefix used when this CNAME is reserved."
     required: true

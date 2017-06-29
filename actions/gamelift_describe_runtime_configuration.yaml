@@ -20,5 +20,5 @@ parameters:
     type: string
   FleetId:
     type: string
-    description: 'Unique identifier of the fleet to get the runtime configuration for.'
+    description: "Unique identifier for a fleet to get the runtime configuration for."
     required: true

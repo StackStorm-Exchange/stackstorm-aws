@@ -20,10 +20,10 @@ parameters:
     type: string
   MaxJobs:
     type: integer
-    description: ''
+    description: ""
   Marker:
     type: string
-    description: ''
+    description: ""
   APIVersion:
     type: string
-    description: ''
+    description: ""

@@ -20,13 +20,13 @@ parameters:
     type: string
   LoadBalancerName:
     type: string
-    description: 'The name of the load balancer.'
+    description: "The name of the load balancer."
     required: true
   PolicyName:
     type: string
-    description: 'The name of the policy being created. Policy names must consist of alphanumeric characters and dashes (-). This name must be unique within the set of policies for this load balancer.'
+    description: "The name of the policy being created. Policy names must consist of alphanumeric characters and dashes (-). This name must be unique within the set of policies for this load balancer."
     required: true
   CookieName:
     type: string
-    description: 'The name of the application cookie used for stickiness.'
+    description: "The name of the application cookie used for stickiness."
     required: true

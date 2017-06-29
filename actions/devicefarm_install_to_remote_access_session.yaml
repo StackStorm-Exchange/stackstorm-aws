@@ -20,9 +20,9 @@ parameters:
     type: string
   remoteAccessSessionArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the remote access session about which you are requesting information.'
+    description: "The Amazon Resource Name (ARN) of the remote access session about which you are requesting information."
     required: true
   appArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the app about which you are requesting information.'
+    description: "The Amazon Resource Name (ARN) of the app about which you are requesting information."
     required: true

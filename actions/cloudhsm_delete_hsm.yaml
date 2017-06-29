@@ -20,5 +20,5 @@ parameters:
     type: string
   HsmArn:
     type: string
-    description: 'The ARN of the HSM to delete.'
+    description: "The ARN of the HSM to delete."
     required: true

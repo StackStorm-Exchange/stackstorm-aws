@@ -20,5 +20,5 @@ parameters:
     type: string
   arn:
     type: string
-    description: 'The run"s ARN.'
+    description: "The run's ARN."
     required: true

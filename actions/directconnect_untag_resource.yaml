@@ -20,9 +20,9 @@ parameters:
     type: string
   resourceArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the Direct Connect resource.'
+    description: "The Amazon Resource Name (ARN) of the Direct Connect resource."
     required: true
   tagKeys:
     type: array
-    description: 'The list of tag keys to remove.'
+    description: "The list of tag keys to remove."
     required: true

@@ -20,15 +20,18 @@ parameters:
     type: string
   jobDefinitionName:
     type: string
-    description: 'The name of the job definition to register. '
+    description: "The name of the job definition to register. "
     required: true
   type:
     type: string
-    description: 'The type of job definition.'
+    description: "The type of job definition."
     required: true
   parameters:
     type: object
-    description: 'Default parameter substitution placeholders to set in the job definition. Parameters are specified as a key-value pair mapping. Parameters in a SubmitJob request override any corresponding parameter defaults from the job definition.'
+    description: "Default parameter substitution placeholders to set in the job definition. Parameters are specified as a key-value pair mapping. Parameters in a SubmitJob request override any corresponding parameter defaults from the job definition."
   containerProperties:
     type: object
-    description: 'An object with various properties specific for container-based jobs. This parameter is required if the type parameter is container.'
+    description: "An object with various properties specific for container-based jobs. This parameter is required if the type parameter is container."
+  retryStrategy:
+    type: object
+    description: "The retry strategy to use for failed jobs that are submitted with this job definition. Any retry strategy that is specified during a SubmitJob operation overrides the retry strategy defined here."

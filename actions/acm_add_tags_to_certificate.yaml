@@ -20,9 +20,9 @@ parameters:
     type: string
   CertificateArn:
     type: string
-    description: 'String that contains the ARN of the ACM Certificate to which the tag is to be applied. This must be of the form:  arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-123456789012  For more information about ARNs, see Amazon Resource Names (ARNs) and AWS Service Namespaces.'
+    description: "String that contains the ARN of the ACM Certificate to which the tag is to be applied. This must be of the form:  arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-123456789012  For more information about ARNs, see Amazon Resource Names (ARNs) and AWS Service Namespaces."
     required: true
   Tags:
     type: array
-    description: 'The key-value pair that defines the tag. The tag value is optional.'
+    description: "The key-value pair that defines the tag. The tag value is optional."
     required: true

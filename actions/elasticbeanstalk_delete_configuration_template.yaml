@@ -20,9 +20,9 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'The name of the application to delete the configuration template from.'
+    description: "The name of the application to delete the configuration template from."
     required: true
   TemplateName:
     type: string
-    description: 'The name of the configuration template to delete.'
+    description: "The name of the configuration template to delete."
     required: true

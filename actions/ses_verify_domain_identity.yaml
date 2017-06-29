@@ -20,5 +20,5 @@ parameters:
     type: string
   Domain:
     type: string
-    description: 'The domain to be verified.'
+    description: "The domain to be verified."
     required: true

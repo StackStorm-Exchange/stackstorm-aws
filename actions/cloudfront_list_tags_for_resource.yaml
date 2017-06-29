@@ -20,5 +20,5 @@ parameters:
     type: string
   Resource:
     type: string
-    description: ' An ARN of a CloudFront resource.'
+    description: " An ARN of a CloudFront resource."
     required: true

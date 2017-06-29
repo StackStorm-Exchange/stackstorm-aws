@@ -20,7 +20,7 @@ parameters:
     type: string
   Marker:
     type: string
-    description: 'For an initial request for a list of operations, omit this element. If the number of operations that are not yet complete is greater than the value that you specified for MaxItems, you can use Marker to return additional operations. Get the value of NextPageMarker from the previous response, and submit another request that includes the value of NextPageMarker in the Marker element. Type: String Default: None Required: No'
+    description: "For an initial request for a list of operations, omit this element. If the number of operations that are not yet complete is greater than the value that you specified for MaxItems, you can use Marker to return additional operations. Get the value of NextPageMarker from the previous response, and submit another request that includes the value of NextPageMarker in the Marker element."
   MaxItems:
     type: integer
-    description: 'Number of domains to be returned. Type: Integer Default: 20 Constraints: A value between 1 and 100. Required: No'
+    description: "Number of domains to be returned. Default: 20"

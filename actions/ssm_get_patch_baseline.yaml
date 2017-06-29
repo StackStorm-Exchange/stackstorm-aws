@@ -20,5 +20,5 @@ parameters:
     type: string
   BaselineId:
     type: string
-    description: 'The ID of the patch baseline to retrieve.'
+    description: "The ID of the patch baseline to retrieve."
     required: true

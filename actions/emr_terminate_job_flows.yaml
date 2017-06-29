@@ -20,5 +20,5 @@ parameters:
     type: string
   JobFlowIds:
     type: array
-    description: 'A list of job flows to be shutdown.'
+    description: "A list of job flows to be shutdown."
     required: true

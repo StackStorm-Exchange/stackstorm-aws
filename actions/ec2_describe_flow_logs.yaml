@@ -18,15 +18,15 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  FlowLogIds:
-    type: array
-    description: 'One or more flow log IDs.'
   Filter:
     type: array
-    description: 'One or more filters.    deliver-log-status - The status of the logs delivery (SUCCESS | FAILED).    flow-log-id - The ID of the flow log.    log-group-name - The name of the log group.    resource-id - The ID of the VPC, subnet, or network interface.    traffic-type - The type of traffic (ACCEPT | REJECT | ALL)  '
-  NextToken:
-    type: string
-    description: 'The token to retrieve the next page of results.'
+    description: "One or more filters.    deliver-log-status - The status of the logs delivery (SUCCESS | FAILED).    flow-log-id - The ID of the flow log.    log-group-name - The name of the log group.    resource-id - The ID of the VPC, subnet, or network interface.    traffic-type - The type of traffic (ACCEPT | REJECT | ALL)  "
+  FlowLogIds:
+    type: array
+    description: "One or more flow log IDs."
   MaxResults:
     type: integer
-    description: 'The maximum number of results to return for the request in a single page. The remaining results can be seen by sending another request with the returned NextToken value. This value can be between 5 and 1000; if MaxResults is given a value larger than 1000, only 1000 results are returned. You cannot specify this parameter and the flow log IDs parameter in the same request.'
+    description: "The maximum number of results to return for the request in a single page. The remaining results can be seen by sending another request with the returned NextToken value. This value can be between 5 and 1000; if MaxResults is given a value larger than 1000, only 1000 results are returned. You cannot specify this parameter and the flow log IDs parameter in the same request."
+  NextToken:
+    type: string
+    description: "The token to retrieve the next page of results."

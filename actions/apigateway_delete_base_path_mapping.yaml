@@ -20,9 +20,9 @@ parameters:
     type: string
   domainName:
     type: string
-    description: 'The domain name of the BasePathMapping resource to delete.'
+    description: "The domain name of the BasePathMapping resource to delete."
     required: true
   basePath:
     type: string
-    description: 'The base path name of the BasePathMapping resource to delete.'
+    description: "The base path name of the BasePathMapping resource to delete."
     required: true

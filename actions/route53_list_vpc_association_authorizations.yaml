@@ -20,11 +20,11 @@ parameters:
     type: string
   HostedZoneId:
     type: string
-    description: 'The ID of the hosted zone for which you want a list of VPCs that can be associated with the hosted zone.'
+    description: "The ID of the hosted zone for which you want a list of VPCs that can be associated with the hosted zone."
     required: true
   NextToken:
     type: string
-    description: ' Optional: If a response includes a NextToken element, there are more VPCs that can be associated with the specified hosted zone. To get the next page of results, submit another request, and include the value of the NextToken element in from the response in the NextToken parameter in another ListVPCAssociationAuthorizations request.'
+    description: " Optional: If a response includes a NextToken element, there are more VPCs that can be associated with the specified hosted zone. To get the next page of results, submit another request, and include the value of NextToken from the response in the nexttoken parameter in another ListVPCAssociationAuthorizations request."
   MaxResults:
     type: string
-    description: ' Optional: An integer that specifies the maximum number of VPCs that you want Amazon Route 53 to return.'
+    description: " Optional: An integer that specifies the maximum number of VPCs that you want Amazon Route 53 to return. If you don't specify a value for MaxResults, Amazon Route 53 returns up to 50 VPCs per page."

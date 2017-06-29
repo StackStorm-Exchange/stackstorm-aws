@@ -20,5 +20,5 @@ parameters:
     type: string
   Label:
     type: string
-    description: 'The label of the new high-availability partition group.'
+    description: "The label of the new high-availability partition group."
     required: true

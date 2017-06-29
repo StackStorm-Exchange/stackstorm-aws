@@ -20,5 +20,5 @@ parameters:
     type: string
   domainName:
     type: string
-    description: 'The specific domain name to delete.'
+    description: "The specific domain name to delete."
     required: true

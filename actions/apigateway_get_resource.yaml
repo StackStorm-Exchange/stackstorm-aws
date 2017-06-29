@@ -20,9 +20,12 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The RestApi identifier for the resource.'
+    description: "The RestApi identifier for the resource."
     required: true
   resourceId:
     type: string
-    description: 'The identifier for the Resource resource.'
+    description: "The identifier for the Resource resource."
     required: true
+  embed:
+    type: array
+    description: "A query parameter to retrieve the specified resources embedded in the returned Resource representation in the response. This embed parameter value is a list of comma-separated strings. Currently, the request supports only retrieval of the embedded Method resources this way. The query parameter value must be a single-valued list and contain the 'methods' string. For example, GET /restapis/{restapi_id}/resources/{resource_id}?embed=methods."

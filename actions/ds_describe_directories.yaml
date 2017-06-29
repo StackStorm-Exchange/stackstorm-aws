@@ -20,10 +20,10 @@ parameters:
     type: string
   DirectoryIds:
     type: array
-    description: 'A list of identifiers of the directories for which to obtain the information. If this member is null, all directories that belong to the current account are returned. An empty list results in an InvalidParameterException being thrown.'
+    description: "A list of identifiers of the directories for which to obtain the information. If this member is null, all directories that belong to the current account are returned. An empty list results in an InvalidParameterException being thrown."
   NextToken:
     type: string
-    description: 'The DescribeDirectoriesResult.NextToken value from a previous call to DescribeDirectories. Pass null if this is the first call.'
+    description: "The DescribeDirectoriesResult.NextToken value from a previous call to DescribeDirectories. Pass null if this is the first call."
   Limit:
     type: integer
-    description: 'The maximum number of items to return. If this value is zero, the maximum number of items is specified by the limitations of the operation.'
+    description: "The maximum number of items to return. If this value is zero, the maximum number of items is specified by the limitations of the operation."

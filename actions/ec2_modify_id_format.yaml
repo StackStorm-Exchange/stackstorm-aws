@@ -20,9 +20,9 @@ parameters:
     type: string
   Resource:
     type: string
-    description: 'The type of resource: instance | reservation | snapshot | volume '
+    description: "The type of resource: instance | reservation | snapshot | volume "
     required: true
   UseLongIds:
     type: boolean
-    description: 'Indicate whether the resource should use longer IDs (17-character IDs).'
+    description: "Indicate whether the resource should use longer IDs (17-character IDs)."
     required: true

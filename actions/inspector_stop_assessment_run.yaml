@@ -20,5 +20,5 @@ parameters:
     type: string
   assessmentRunArn:
     type: string
-    description: 'The ARN of the assessment run that you want to stop.'
+    description: "The ARN of the assessment run that you want to stop."
     required: true

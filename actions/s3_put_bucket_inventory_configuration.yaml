@@ -20,13 +20,13 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: 'The name of the bucket where the inventory configuration will be stored.'
+    description: "The name of the bucket where the inventory configuration will be stored."
     required: true
   Id:
     type: string
-    description: 'The ID used to identify the inventory configuration.'
+    description: "The ID used to identify the inventory configuration."
     required: true
   InventoryConfiguration:
     type: object
-    description: 'Specifies the inventory configuration.'
+    description: "Specifies the inventory configuration."
     required: true

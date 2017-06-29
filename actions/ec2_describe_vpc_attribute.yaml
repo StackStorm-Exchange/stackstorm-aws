@@ -18,14 +18,14 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  VpcId:
-    type: string
-    description: 'The ID of the VPC.'
-    required: true
   Attribute:
     type: string
-    description: 'The VPC attribute.'
+    description: "The VPC attribute."
+    required: true
+  VpcId:
+    type: string
+    description: "The ID of the VPC."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."

@@ -20,17 +20,17 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The RestApi identifier for the MethodResponse resource.'
+    description: "The RestApi identifier for the MethodResponse resource."
     required: true
   resourceId:
     type: string
-    description: 'The Resource identifier for the MethodResponse resource.'
+    description: "The Resource identifier for the MethodResponse resource."
     required: true
   httpMethod:
     type: string
-    description: 'The HTTP verb of the Method resource.'
+    description: "The HTTP verb of the Method resource."
     required: true
   statusCode:
     type: string
-    description: 'The status code identifier for the MethodResponse resource.'
+    description: "The status code identifier for the MethodResponse resource."
     required: true

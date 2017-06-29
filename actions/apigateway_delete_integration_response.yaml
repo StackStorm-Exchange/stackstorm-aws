@@ -20,17 +20,17 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'Specifies a delete integration response request"s API identifier.'
+    description: "Specifies a delete integration response request's API identifier."
     required: true
   resourceId:
     type: string
-    description: 'Specifies a delete integration response request"s resource identifier.'
+    description: "Specifies a delete integration response request's resource identifier."
     required: true
   httpMethod:
     type: string
-    description: 'Specifies a delete integration response request"s HTTP method.'
+    description: "Specifies a delete integration response request's HTTP method."
     required: true
   statusCode:
     type: string
-    description: 'Specifies a delete integration response request"s status code.'
+    description: "Specifies a delete integration response request's status code."
     required: true

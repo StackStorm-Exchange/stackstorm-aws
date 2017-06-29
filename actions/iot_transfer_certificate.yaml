@@ -20,12 +20,12 @@ parameters:
     type: string
   certificateId:
     type: string
-    description: 'The ID of the certificate.'
+    description: "The ID of the certificate."
     required: true
   targetAwsAccount:
     type: string
-    description: 'The AWS account.'
+    description: "The AWS account."
     required: true
   transferMessage:
     type: string
-    description: 'The transfer message.'
+    description: "The transfer message."

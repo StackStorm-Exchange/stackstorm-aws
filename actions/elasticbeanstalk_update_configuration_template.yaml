@@ -20,18 +20,18 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'The name of the application associated with the configuration template to update.  If no application is found with this name, UpdateConfigurationTemplate returns an InvalidParameterValue error. '
+    description: "The name of the application associated with the configuration template to update.  If no application is found with this name, UpdateConfigurationTemplate returns an InvalidParameterValue error. "
     required: true
   TemplateName:
     type: string
-    description: 'The name of the configuration template to update.  If no configuration template is found with this name, UpdateConfigurationTemplate returns an InvalidParameterValue error. '
+    description: "The name of the configuration template to update.  If no configuration template is found with this name, UpdateConfigurationTemplate returns an InvalidParameterValue error. "
     required: true
   Description:
     type: string
-    description: 'A new description for the configuration.'
+    description: "A new description for the configuration."
   OptionSettings:
     type: array
-    description: 'A list of configuration option settings to update with the new specified option value.'
+    description: "A list of configuration option settings to update with the new specified option value."
   OptionsToRemove:
     type: array
-    description: 'A list of configuration options to remove from the configuration set.  Constraint: You can remove only UserDefined configuration options. '
+    description: "A list of configuration options to remove from the configuration set.  Constraint: You can remove only UserDefined configuration options. "

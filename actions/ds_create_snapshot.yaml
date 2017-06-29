@@ -20,8 +20,8 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'The identifier of the directory of which to take a snapshot.'
+    description: "The identifier of the directory of which to take a snapshot."
     required: true
   Name:
     type: string
-    description: 'The descriptive name to apply to the snapshot.'
+    description: "The descriptive name to apply to the snapshot."

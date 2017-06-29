@@ -20,15 +20,15 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ''
+    description: ""
     required: true
   VersioningConfiguration:
     type: object
-    description: ''
+    description: ""
     required: true
   ContentMD5:
     type: string
-    description: ''
+    description: ""
   MFA:
     type: string
-    description: 'The concatenation of the authentication device"s serial number, a space, and the value that is displayed on your authentication device.'
+    description: "The concatenation of the authentication device's serial number, a space, and the value that is displayed on your authentication device."

@@ -20,13 +20,13 @@ parameters:
     type: string
   DomainName:
     type: string
-    description: ''
+    description: "A domain name that you want to use as the basis for a list of possible domain names. The domain name must contain a top-level domain (TLD), such as .com, that Amazon Route 53 supports. For a list of TLDs, see Domains that You Can Register with Amazon Route 53 in the Amazon Route 53 Developer Guide."
     required: true
   SuggestionCount:
     type: integer
-    description: ''
+    description: "The number of suggested domain names that you want Amazon Route 53 to return."
     required: true
   OnlyAvailable:
     type: boolean
-    description: ''
+    description: "If OnlyAvailable is true, Amazon Route 53 returns only domain names that are available. If OnlyAvailable is false, Amazon Route 53 returns domain names without checking whether they're available to be registered. To determine whether the domain is available, you can call checkDomainAvailability for each suggestion."
     required: true

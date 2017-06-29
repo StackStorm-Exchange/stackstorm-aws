@@ -20,5 +20,5 @@ parameters:
     type: string
   BaselineId:
     type: string
-    description: 'The ID of the patch baseline that should be the default patch baseline.'
+    description: "The ID of the patch baseline that should be the default patch baseline."
     required: true

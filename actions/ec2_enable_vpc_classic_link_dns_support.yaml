@@ -20,4 +20,4 @@ parameters:
     type: string
   VpcId:
     type: string
-    description: 'The ID of the VPC.'
+    description: "The ID of the VPC."

@@ -20,9 +20,9 @@ parameters:
     type: string
   QueueUrl:
     type: string
-    description: 'The URL of the Amazon SQS queue from which messages are deleted. Queue URLs are case-sensitive.'
+    description: "The URL of the Amazon SQS queue from which messages are deleted. Queue URLs are case-sensitive."
     required: true
   Entries:
     type: array
-    description: 'A list of receipt handles for the messages to be deleted.'
+    description: "A list of receipt handles for the messages to be deleted."
     required: true

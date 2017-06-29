@@ -20,9 +20,9 @@ parameters:
     type: string
   FileSystemId:
     type: string
-    description: 'ID of the file system whose tags you want to modify (String). This operation modifies the tags only, not the file system.'
+    description: "ID of the file system whose tags you want to modify (String). This operation modifies the tags only, not the file system."
     required: true
   Tags:
     type: array
-    description: 'Array of Tag objects to add. Each Tag object is a key-value pair. '
+    description: "Array of Tag objects to add. Each Tag object is a key-value pair. "
     required: true

@@ -20,15 +20,15 @@ parameters:
     type: string
   AccessToken:
     type: string
-    description: 'The access token.'
+    description: "The access token."
     required: true
   DeviceKey:
     type: string
-    description: 'The device key.'
+    description: "The device key."
     required: true
   DeviceSecretVerifierConfig:
     type: object
-    description: 'The configuration of the device secret verifier.'
+    description: "The configuration of the device secret verifier."
   DeviceName:
     type: string
-    description: 'The device name.'
+    description: "The device name."

@@ -20,5 +20,5 @@ parameters:
     type: string
   assessmentRunArn:
     type: string
-    description: 'The ARN that specifies the assessment run that has the telemetry data that you want to obtain.'
+    description: "The ARN that specifies the assessment run that has the telemetry data that you want to obtain."
     required: true

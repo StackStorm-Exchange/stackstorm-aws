@@ -20,11 +20,11 @@ parameters:
     type: string
   thingName:
     type: string
-    description: 'The name of the thing to create.'
+    description: "The name of the thing to create."
     required: true
   thingTypeName:
     type: string
-    description: 'The name of the thing type associated with the new thing.'
+    description: "The name of the thing type associated with the new thing."
   attributePayload:
     type: object
-    description: 'The attribute payload, which consists of up to three name/value pairs in a JSON document. For example: {\"attributes\":{\"string1\":\"string2\"}})'
+    description: "The attribute payload, which consists of up to three name/value pairs in a JSON document. For example:  {\'attributes\':{\'string1\':\'string2\'}} "

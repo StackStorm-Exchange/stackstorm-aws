@@ -20,5 +20,5 @@ parameters:
     type: string
   DBSnapshotIdentifier:
     type: string
-    description: 'The DBSnapshot identifier. Constraints: Must be the name of an existing DB snapshot in the available state.'
+    description: "The DBSnapshot identifier. Constraints: Must be the name of an existing DB snapshot in the available state."
     required: true

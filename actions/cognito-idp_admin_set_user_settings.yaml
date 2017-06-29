@@ -20,13 +20,13 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID for the user pool where you want to set the user"s settings, such as MFA options.'
+    description: "The user pool ID for the user pool where you want to set the user's settings, such as MFA options."
     required: true
   Username:
     type: string
-    description: 'The user name of the user for whom you wish to set user settings.'
+    description: "The user name of the user for whom you wish to set user settings."
     required: true
   MFAOptions:
     type: array
-    description: 'Specifies the options for MFA (e.g., email or phone number).'
+    description: "Specifies the options for MFA (e.g., email or phone number)."
     required: true

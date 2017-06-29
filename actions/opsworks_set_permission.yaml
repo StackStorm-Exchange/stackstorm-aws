@@ -20,18 +20,18 @@ parameters:
     type: string
   StackId:
     type: string
-    description: 'The stack ID.'
+    description: "The stack ID."
     required: true
   IamUserArn:
     type: string
-    description: 'The user"s IAM ARN. This can also be a federated user"s ARN.'
+    description: "The user's IAM ARN. This can also be a federated user's ARN."
     required: true
   AllowSsh:
     type: boolean
-    description: 'The user is allowed to use SSH to communicate with the instance.'
+    description: "The user is allowed to use SSH to communicate with the instance."
   AllowSudo:
     type: boolean
-    description: 'The user is allowed to use sudo to elevate privileges.'
+    description: "The user is allowed to use sudo to elevate privileges."
   Level:
     type: string
-    description: 'The user"s permission level, which must be set to one of the following strings. You cannot set your own permissions level.    deny     show     deploy     manage     iam_only    For more information on the permissions associated with these levels, see Managing User Permissions.'
+    description: "The user's permission level, which must be set to one of the following strings. You cannot set your own permissions level.    deny     show     deploy     manage     iam_only    For more information on the permissions associated with these levels, see Managing User Permissions."

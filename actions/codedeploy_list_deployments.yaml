@@ -20,16 +20,16 @@ parameters:
     type: string
   applicationName:
     type: string
-    description: 'The name of an AWS CodeDeploy application associated with the applicable IAM user or AWS account.'
+    description: "The name of an AWS CodeDeploy application associated with the applicable IAM user or AWS account."
   deploymentGroupName:
     type: string
-    description: 'The name of an existing deployment group for the specified application.'
+    description: "The name of an existing deployment group for the specified application."
   includeOnlyStatuses:
     type: array
-    description: 'A subset of deployments to list by status:   Created: Include created deployments in the resulting list.   Queued: Include queued deployments in the resulting list.   In Progress: Include in-progress deployments in the resulting list.   Succeeded: Include successful deployments in the resulting list.   Failed: Include failed deployments in the resulting list.   Stopped: Include stopped deployments in the resulting list.  '
+    description: "A subset of deployments to list by status:   Created: Include created deployments in the resulting list.   Queued: Include queued deployments in the resulting list.   In Progress: Include in-progress deployments in the resulting list.   Succeeded: Include successful deployments in the resulting list.   Failed: Include failed deployments in the resulting list.   Stopped: Include stopped deployments in the resulting list.  "
   createTimeRange:
     type: object
-    description: 'A time range (start and end) for returning a subset of the list of deployments.'
+    description: "A time range (start and end) for returning a subset of the list of deployments."
   nextToken:
     type: string
-    description: 'An identifier returned from the previous list deployments call. It can be used to return the next set of deployments in the list.'
+    description: "An identifier returned from the previous list deployments call. It can be used to return the next set of deployments in the list."

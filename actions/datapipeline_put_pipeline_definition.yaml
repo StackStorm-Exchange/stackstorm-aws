@@ -20,15 +20,15 @@ parameters:
     type: string
   pipelineId:
     type: string
-    description: 'The ID of the pipeline.'
+    description: "The ID of the pipeline."
     required: true
   pipelineObjects:
     type: array
-    description: 'The objects that define the pipeline. These objects overwrite the existing pipeline definition.'
+    description: "The objects that define the pipeline. These objects overwrite the existing pipeline definition."
     required: true
   parameterObjects:
     type: array
-    description: 'The parameter objects used with the pipeline.'
+    description: "The parameter objects used with the pipeline."
   parameterValues:
     type: array
-    description: 'The parameter values used with the pipeline.'
+    description: "The parameter values used with the pipeline."

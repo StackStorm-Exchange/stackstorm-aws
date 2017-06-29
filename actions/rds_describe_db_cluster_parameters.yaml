@@ -20,17 +20,17 @@ parameters:
     type: string
   DBClusterParameterGroupName:
     type: string
-    description: 'The name of a specific DB cluster parameter group to return parameter details for. Constraints:   Must be 1 to 255 alphanumeric characters   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens  '
+    description: "The name of a specific DB cluster parameter group to return parameter details for. Constraints:   Must be 1 to 255 alphanumeric characters   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens  "
     required: true
   Source:
     type: string
-    description: ' A value that indicates to return only parameters for a specific source. Parameter sources can be engine, service, or customer. '
+    description: " A value that indicates to return only parameters for a specific source. Parameter sources can be engine, service, or customer. "
   Filters:
     type: array
-    description: 'This parameter is not currently supported.'
+    description: "This parameter is not currently supported."
   MaxRecords:
     type: integer
-    description: ' The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a pagination token called a marker is included in the response so that the remaining results can be retrieved.  Default: 100 Constraints: Minimum 20, maximum 100.'
+    description: " The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a pagination token called a marker is included in the response so that the remaining results can be retrieved.  Default: 100 Constraints: Minimum 20, maximum 100."
   Marker:
     type: string
-    description: ' An optional pagination token provided by a previous DescribeDBClusterParameters request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords. '
+    description: " An optional pagination token provided by a previous DescribeDBClusterParameters request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords. "

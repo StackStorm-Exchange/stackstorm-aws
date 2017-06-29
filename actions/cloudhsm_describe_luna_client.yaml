@@ -20,7 +20,7 @@ parameters:
     type: string
   ClientArn:
     type: string
-    description: 'The ARN of the client.'
+    description: "The ARN of the client."
   CertificateFingerprint:
     type: string
-    description: 'The certificate fingerprint.'
+    description: "The certificate fingerprint."

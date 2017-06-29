@@ -20,4 +20,4 @@ parameters:
     type: string
   PolicyTypeNames:
     type: array
-    description: 'The names of the policy types. If no names are specified, describes all policy types defined by Elastic Load Balancing.'
+    description: "The names of the policy types. If no names are specified, describes all policy types defined by Elastic Load Balancing."

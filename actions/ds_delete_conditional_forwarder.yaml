@@ -20,9 +20,9 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'The directory ID for which you are deleting the conditional forwarder.'
+    description: "The directory ID for which you are deleting the conditional forwarder."
     required: true
   RemoteDomainName:
     type: string
-    description: 'The fully qualified domain name (FQDN) of the remote domain with which you are deleting the conditional forwarder.'
+    description: "The fully qualified domain name (FQDN) of the remote domain with which you are deleting the conditional forwarder."
     required: true

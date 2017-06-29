@@ -1,0 +1,36 @@
+description: 
+pack: aws
+enabled: true
+entry_point: run.py
+name: clouddirectory_attach_object
+runner_type: python-script
+parameters:
+  action:
+    default: attach_object
+    immutable: true
+    type: string
+  cls:
+    default: clouddirectory
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DirectoryArn:
+    type: string
+    description: "Amazon Resource Name (ARN) that is associated with the Directory where both objects reside. For more information, see arns."
+    required: true
+  ParentReference:
+    type: object
+    description: "The parent object reference."
+    required: true
+  ChildReference:
+    type: object
+    description: "The child object reference to be attached to the object."
+    required: true
+  LinkName:
+    type: string
+    description: "The link name with which the child object is attached to the parent."
+    required: true

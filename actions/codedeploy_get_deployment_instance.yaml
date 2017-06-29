@@ -20,9 +20,9 @@ parameters:
     type: string
   deploymentId:
     type: string
-    description: 'The unique ID of a deployment.'
+    description: "The unique ID of a deployment."
     required: true
   instanceId:
     type: string
-    description: 'The unique ID of an instance in the deployment group.'
+    description: "The unique ID of an instance in the deployment group."
     required: true

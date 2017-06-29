@@ -20,8 +20,8 @@ parameters:
     type: string
   AutoScalingGroupName:
     type: string
-    description: 'The name or Amazon Resource Name (ARN) of the Auto Scaling group.'
+    description: "The name or Amazon Resource Name (ARN) of the Auto Scaling group."
     required: true
   ScalingProcesses:
     type: array
-    description: 'One or more of the following processes. If you omit this parameter, all processes are specified.    Launch     Terminate     HealthCheck     ReplaceUnhealthy     AZRebalance     AlarmNotification     ScheduledActions     AddToLoadBalancer   '
+    description: "One or more of the following processes. If you omit this parameter, all processes are specified.    Launch     Terminate     HealthCheck     ReplaceUnhealthy     AZRebalance     AlarmNotification     ScheduledActions     AddToLoadBalancer   "

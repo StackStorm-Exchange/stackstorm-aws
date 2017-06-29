@@ -20,8 +20,8 @@ parameters:
     type: string
   deploymentId:
     type: string
-    description: 'The unique ID of a deployment.'
+    description: "The unique ID of a deployment."
     required: true
   autoRollbackEnabled:
     type: boolean
-    description: 'Indicates, when a deployment is stopped, whether instances that have been updated should be rolled back to the previous version of the application revision.'
+    description: "Indicates, when a deployment is stopped, whether instances that have been updated should be rolled back to the previous version of the application revision."

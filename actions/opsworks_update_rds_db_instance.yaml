@@ -20,11 +20,11 @@ parameters:
     type: string
   RdsDbInstanceArn:
     type: string
-    description: 'The Amazon RDS instance"s ARN.'
+    description: "The Amazon RDS instance's ARN."
     required: true
   DbUser:
     type: string
-    description: 'The master user name.'
+    description: "The master user name."
   DbPassword:
     type: string
-    description: 'The database password.'
+    description: "The database password."

@@ -20,8 +20,8 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: 'The name of the bucket from which analytics configurations are retrieved.'
+    description: "The name of the bucket from which analytics configurations are retrieved."
     required: true
   ContinuationToken:
     type: string
-    description: 'The ContinuationToken that represents a placeholder from where this request should begin.'
+    description: "The ContinuationToken that represents a placeholder from where this request should begin."

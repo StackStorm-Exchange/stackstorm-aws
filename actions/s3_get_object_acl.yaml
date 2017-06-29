@@ -20,15 +20,15 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ''
+    description: ""
     required: true
   Key:
     type: string
-    description: ''
+    description: ""
     required: true
   VersionId:
     type: string
-    description: 'VersionId used to reference a specific version of the object.'
+    description: "VersionId used to reference a specific version of the object."
   RequestPayer:
     type: string
-    description: ''
+    description: ""

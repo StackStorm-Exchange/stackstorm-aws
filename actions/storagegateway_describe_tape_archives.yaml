@@ -20,10 +20,10 @@ parameters:
     type: string
   TapeARNs:
     type: array
-    description: 'Specifies one or more unique Amazon Resource Names (ARNs) that represent the virtual tapes you want to describe.'
+    description: "Specifies one or more unique Amazon Resource Names (ARNs) that represent the virtual tapes you want to describe."
   Marker:
     type: string
-    description: 'An opaque string that indicates the position at which to begin describing virtual tapes.'
+    description: "An opaque string that indicates the position at which to begin describing virtual tapes."
   Limit:
     type: integer
-    description: 'Specifies that the number of virtual tapes descried be limited to the specified number.'
+    description: "Specifies that the number of virtual tapes descried be limited to the specified number."

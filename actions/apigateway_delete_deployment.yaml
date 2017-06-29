@@ -20,9 +20,9 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The identifier of the RestApi resource for the Deployment resource to delete.'
+    description: "The identifier of the RestApi resource for the Deployment resource to delete."
     required: true
   deploymentId:
     type: string
-    description: 'The identifier of the Deployment resource to delete.'
+    description: "The identifier of the Deployment resource to delete."
     required: true

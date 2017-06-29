@@ -20,5 +20,5 @@ parameters:
     type: string
   HostIds:
     type: array
-    description: 'The IDs of the Dedicated Hosts you want to release.'
+    description: "The IDs of the Dedicated Hosts you want to release."
     required: true

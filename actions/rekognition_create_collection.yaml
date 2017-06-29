@@ -20,5 +20,5 @@ parameters:
     type: string
   CollectionId:
     type: string
-    description: 'ID for the collection that you are creating.'
+    description: "ID for the collection that you are creating."
     required: true

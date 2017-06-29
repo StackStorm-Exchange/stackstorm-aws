@@ -20,5 +20,5 @@ parameters:
     type: string
   RdsDbInstanceArn:
     type: string
-    description: 'The Amazon RDS instance"s ARN.'
+    description: "The Amazon RDS instance's ARN."
     required: true

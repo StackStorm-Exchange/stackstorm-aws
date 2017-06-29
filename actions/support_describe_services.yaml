@@ -20,7 +20,7 @@ parameters:
     type: string
   serviceCodeList:
     type: array
-    description: 'A JSON-formatted list of service codes available for AWS services.'
+    description: "A JSON-formatted list of service codes available for AWS services."
   language:
     type: string
-    description: 'The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English ("en") and Japanese ("ja"). Language parameters must be passed explicitly for operations that take them.'
+    description: "The ISO 639-1 code for the language in which AWS provides support. AWS Support currently supports English ('en') and Japanese ('ja'). Language parameters must be passed explicitly for operations that take them."

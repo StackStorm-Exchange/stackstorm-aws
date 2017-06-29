@@ -20,9 +20,9 @@ parameters:
     type: string
   LoadBalancerName:
     type: string
-    description: 'The name of the load balancer.'
+    description: "The name of the load balancer."
     required: true
   Listeners:
     type: array
-    description: 'The listeners.'
+    description: "The listeners."
     required: true

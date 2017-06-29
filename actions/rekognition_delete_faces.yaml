@@ -20,9 +20,9 @@ parameters:
     type: string
   CollectionId:
     type: string
-    description: 'Collection from which to remove the specific faces.'
+    description: "Collection from which to remove the specific faces."
     required: true
   FaceIds:
     type: array
-    description: 'An array of face IDs to delete.'
+    description: "An array of face IDs to delete."
     required: true

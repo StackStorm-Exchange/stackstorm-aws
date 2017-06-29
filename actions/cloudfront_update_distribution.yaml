@@ -20,12 +20,12 @@ parameters:
     type: string
   DistributionConfig:
     type: object
-    description: 'The distribution"s configuration information.'
+    description: "The distribution's configuration information."
     required: true
   Id:
     type: string
-    description: 'The distribution"s id.'
+    description: "The distribution's id."
     required: true
   IfMatch:
     type: string
-    description: 'The value of the ETag header that you received when retrieving the distribution"s configuration. For example: E2QWRUHAPOMQZL.'
+    description: "The value of the ETag header that you received when retrieving the distribution's configuration. For example: E2QWRUHAPOMQZL."

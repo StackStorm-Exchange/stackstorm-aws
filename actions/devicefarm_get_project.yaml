@@ -20,5 +20,5 @@ parameters:
     type: string
   arn:
     type: string
-    description: 'The project"s ARN.'
+    description: "The project's ARN."
     required: true

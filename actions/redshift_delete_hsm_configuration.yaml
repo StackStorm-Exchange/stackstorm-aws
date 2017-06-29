@@ -20,5 +20,5 @@ parameters:
     type: string
   HsmConfigurationIdentifier:
     type: string
-    description: 'The identifier of the Amazon Redshift HSM configuration to be deleted.'
+    description: "The identifier of the Amazon Redshift HSM configuration to be deleted."
     required: true

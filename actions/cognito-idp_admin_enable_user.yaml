@@ -20,9 +20,9 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID for the user pool where you want to enable the user.'
+    description: "The user pool ID for the user pool where you want to enable the user."
     required: true
   Username:
     type: string
-    description: 'The user name of the user you wish to ebable.'
+    description: "The user name of the user you wish to enable."
     required: true

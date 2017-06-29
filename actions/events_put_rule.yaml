@@ -20,20 +20,20 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the rule that you are creating or updating.'
+    description: "The name of the rule that you are creating or updating."
     required: true
   ScheduleExpression:
     type: string
-    description: 'The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)".'
+    description: "The scheduling expression. For example, 'cron(0 20 * * ? *)', 'rate(5 minutes)'."
   EventPattern:
     type: string
-    description: 'The event pattern.'
+    description: "The event pattern. For more information, see Events and Event Patterns in the Amazon CloudWatch Events User Guide."
   State:
     type: string
-    description: 'Indicates whether the rule is enabled or disabled.'
+    description: "Indicates whether the rule is enabled or disabled."
   Description:
     type: string
-    description: 'A description of the rule.'
+    description: "A description of the rule."
   RoleArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the IAM role associated with the rule.'
+    description: "The Amazon Resource Name (ARN) of the IAM role associated with the rule."

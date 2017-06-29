@@ -20,23 +20,23 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The identifier of the portfolio for the update request.'
+    description: "The identifier of the portfolio for the update request."
     required: true
   AcceptLanguage:
     type: string
-    description: 'The language code to use for this operation. Supported language codes are as follows: "en" (English) "jp" (Japanese) "zh" (Chinese) If no code is specified, "en" is used as the default.'
+    description: "The language code to use for this operation. Supported language codes are as follows: 'en' (English) 'jp' (Japanese) 'zh' (Chinese) If no code is specified, 'en' is used as the default."
   DisplayName:
     type: string
-    description: 'The name to use for display purposes.'
+    description: "The name to use for display purposes."
   Description:
     type: string
-    description: 'The updated text description of the portfolio.'
+    description: "The updated text description of the portfolio."
   ProviderName:
     type: string
-    description: 'The updated name of the portfolio provider.'
+    description: "The updated name of the portfolio provider."
   AddTags:
     type: array
-    description: 'Tags to add to the existing list of tags associated with the portfolio.'
+    description: "Tags to add to the existing list of tags associated with the portfolio."
   RemoveTags:
     type: array
-    description: 'Tags to remove from the existing list of tags associated with the portfolio.'
+    description: "Tags to remove from the existing list of tags associated with the portfolio."

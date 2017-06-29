@@ -20,5 +20,5 @@ parameters:
     type: string
   VolumeARNs:
     type: array
-    description: ''
+    description: ""
     required: true

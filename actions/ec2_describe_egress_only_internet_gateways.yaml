@@ -20,13 +20,13 @@ parameters:
     type: string
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   EgressOnlyInternetGatewayIds:
     type: array
-    description: 'One or more egress-only Internet gateway IDs.'
+    description: "One or more egress-only Internet gateway IDs."
   MaxResults:
     type: integer
-    description: 'The maximum number of results to return for the request in a single page. The remaining results can be seen by sending another request with the returned NextToken value. This value can be between 5 and 1000; if MaxResults is given a value larger than 1000, only 1000 results are returned.'
+    description: "The maximum number of results to return for the request in a single page. The remaining results can be seen by sending another request with the returned NextToken value. This value can be between 5 and 1000; if MaxResults is given a value larger than 1000, only 1000 results are returned."
   NextToken:
     type: string
-    description: 'The token to retrieve the next page of results.'
+    description: "The token to retrieve the next page of results."

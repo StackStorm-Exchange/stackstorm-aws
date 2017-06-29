@@ -20,60 +20,60 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the job flow.'
+    description: "The name of the job flow."
     required: true
   Instances:
     type: object
-    description: 'A specification of the number and type of Amazon EC2 instances on which to run the job flow.'
+    description: "A specification of the number and type of Amazon EC2 instances."
     required: true
   LogUri:
     type: string
-    description: 'The location in Amazon S3 to write the log files of the job flow. If a value is not provided, logs are not created.'
+    description: "The location in Amazon S3 to write the log files of the job flow. If a value is not provided, logs are not created."
   AdditionalInfo:
     type: string
-    description: 'A JSON string for selecting additional features.'
+    description: "A JSON string for selecting additional features."
   AmiVersion:
     type: string
-    description: ' For Amazon EMR releases 3.x and 2.x. For Amazon EMR releases 4.x and greater, use ReleaseLabel.  The version of the Amazon Machine Image (AMI) to use when launching Amazon EC2 instances in the job flow. The following values are valid:   The version number of the AMI to use, for example, "2.0."   If the AMI supports multiple versions of Hadoop (for example, AMI 1.0 supports both Hadoop 0.18 and 0.20) you can use the JobFlowInstancesConfig HadoopVersion parameter to modify the version of Hadoop from the defaults shown above. For details about the AMI versions currently supported by Amazon Elastic MapReduce, see AMI Versions Supported in Elastic MapReduce in the Amazon Elastic MapReduce Developer Guide.   Previously, the EMR AMI version API parameter options allowed you to use latest for the latest AMI version rather than specify a numerical value. Some regions no longer support this deprecated option as they only have a newer release label version of EMR, which requires you to specify an EMR release label release (EMR 4.x or later). '
+    description: " For Amazon EMR releases 3.x and 2.x. For Amazon EMR releases 4.x and greater, use ReleaseLabel.  The version of the Amazon Machine Image (AMI) to use when launching Amazon EC2 instances in the job flow. The following values are valid:   The version number of the AMI to use, for example, '2.0.'   If the AMI supports multiple versions of Hadoop (for example, AMI 1.0 supports both Hadoop 0.18 and 0.20) you can use the JobFlowInstancesConfig HadoopVersion parameter to modify the version of Hadoop from the defaults shown above. For details about the AMI versions currently supported by Amazon Elastic MapReduce, see AMI Versions Supported in Elastic MapReduce in the Amazon Elastic MapReduce Developer Guide.   Previously, the EMR AMI version API parameter options allowed you to use latest for the latest AMI version rather than specify a numerical value. Some regions no longer support this deprecated option as they only have a newer release label version of EMR, which requires you to specify an EMR release label release (EMR 4.x or later). "
   ReleaseLabel:
     type: string
-    description: ' Amazon EMR releases 4.x or later.  The release label for the Amazon EMR release. For Amazon EMR 3.x and 2.x AMIs, use amiVersion instead instead of ReleaseLabel.'
+    description: " Amazon EMR releases 4.x or later.  The release label for the Amazon EMR release. For Amazon EMR 3.x and 2.x AMIs, use amiVersion instead instead of ReleaseLabel."
   Steps:
     type: array
-    description: 'A list of steps to be executed by the job flow.'
+    description: "A list of steps to run."
   BootstrapActions:
     type: array
-    description: 'A list of bootstrap actions that will be run before Hadoop is started on the cluster nodes.'
+    description: "A list of bootstrap actions to run before Hadoop starts on the cluster nodes."
   SupportedProducts:
     type: array
-    description: ' For Amazon EMR releases 3.x and 2.x. For Amazon EMR releases 4.x and greater, use Applications.  A list of strings that indicates third-party software to use with the job flow. For more information, see Use Third Party Applications with Amazon EMR. Currently supported values are:   "mapr-m3" - launch the job flow using MapR M3 Edition.   "mapr-m5" - launch the job flow using MapR M5 Edition.  '
+    description: " For Amazon EMR releases 3.x and 2.x. For Amazon EMR releases 4.x and greater, use Applications.  A list of strings that indicates third-party software to use. For more information, see Use Third Party Applications with Amazon EMR. Currently supported values are:   'mapr-m3' - launch the job flow using MapR M3 Edition.   'mapr-m5' - launch the job flow using MapR M5 Edition.  "
   NewSupportedProducts:
     type: array
-    description: ' For Amazon EMR releases 3.x and 2.x. For Amazon EMR releases 4.x and greater, use Applications.  A list of strings that indicates third-party software to use with the job flow that accepts a user argument list. EMR accepts and forwards the argument list to the corresponding installation script as bootstrap action arguments. For more information, see Launch a Job Flow on the MapR Distribution for Hadoop. Currently supported values are:   "mapr-m3" - launch the cluster using MapR M3 Edition.   "mapr-m5" - launch the cluster using MapR M5 Edition.   "mapr" with the user arguments specifying "--edition,m3" or "--edition,m5" - launch the job flow using MapR M3 or M5 Edition respectively.   "mapr-m7" - launch the cluster using MapR M7 Edition.   "hunk" - launch the cluster with the Hunk Big Data Analtics Platform.   "hue"- launch the cluster with Hue installed.   "spark" - launch the cluster with Apache Spark installed.   "ganglia" - launch the cluster with the Ganglia Monitoring System installed.  '
+    description: " For Amazon EMR releases 3.x and 2.x. For Amazon EMR releases 4.x and greater, use Applications.  A list of strings that indicates third-party software to use with the job flow that accepts a user argument list. EMR accepts and forwards the argument list to the corresponding installation script as bootstrap action arguments. For more information, see 'Launch a Job Flow on the MapR Distribution for Hadoop' in the Amazon EMR Developer Guide. Supported values are:   'mapr-m3' - launch the cluster using MapR M3 Edition.   'mapr-m5' - launch the cluster using MapR M5 Edition.   'mapr' with the user arguments specifying '--edition,m3' or '--edition,m5' - launch the job flow using MapR M3 or M5 Edition respectively.   'mapr-m7' - launch the cluster using MapR M7 Edition.   'hunk' - launch the cluster with the Hunk Big Data Analtics Platform.   'hue'- launch the cluster with Hue installed.   'spark' - launch the cluster with Apache Spark installed.   'ganglia' - launch the cluster with the Ganglia Monitoring System installed.  "
   Applications:
     type: array
-    description: ' Amazon EMR releases 4.x or later.  A list of applications for the cluster. Valid values are: "Hadoop", "Hive", "Mahout", "Pig", and "Spark." They are case insensitive.'
+    description: " Amazon EMR releases 4.x or later.  A list of applications for the cluster. Valid values are: 'Hadoop', 'Hive', 'Mahout', 'Pig', and 'Spark.' They are case insensitive."
   Configurations:
     type: array
-    description: ' Amazon EMR releases 4.x or later.  The list of configurations supplied for the EMR cluster you are creating.'
+    description: " Amazon EMR releases 4.x or later.  The list of configurations supplied for the EMR cluster you are creating."
   VisibleToAllUsers:
     type: boolean
-    description: 'Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. If this value is set to true, all IAM users of that AWS account can view and (if they have the proper policy permissions set) manage the job flow. If it is set to false, only the IAM user that created the job flow can view and manage it.'
+    description: "Whether the cluster is visible to all IAM users of the AWS account associated with the cluster. If this value is set to true, all IAM users of that AWS account can view and (if they have the proper policy permissions set) manage the cluster. If it is set to false, only the IAM user that created the cluster can view and manage it."
   JobFlowRole:
     type: string
-    description: 'Also called instance profile and EC2 role. An IAM role for an EMR cluster. The EC2 instances of the cluster assume this role. The default role is EMR_EC2_DefaultRole. In order to use the default role, you must have already created it using the CLI or console.'
+    description: "Also called instance profile and EC2 role. An IAM role for an EMR cluster. The EC2 instances of the cluster assume this role. The default role is EMR_EC2_DefaultRole. In order to use the default role, you must have already created it using the CLI or console."
   ServiceRole:
     type: string
-    description: 'The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.'
+    description: "The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf."
   Tags:
     type: array
-    description: 'A list of tags to associate with a cluster and propagate to Amazon EC2 instances.'
+    description: "A list of tags to associate with a cluster and propagate to Amazon EC2 instances."
   SecurityConfiguration:
     type: string
-    description: 'The name of a security configuration to apply to the cluster.'
+    description: "The name of a security configuration to apply to the cluster."
   AutoScalingRole:
     type: string
-    description: 'An IAM role for automatic scaling policies. The default role is EMR_AutoScaling_DefaultRole. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.'
+    description: "An IAM role for automatic scaling policies. The default role is EMR_AutoScaling_DefaultRole. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group."
   ScaleDownBehavior:
     type: string
-    description: 'Specifies the way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an instance group is resized. TERMINATE_AT_INSTANCE_HOUR indicates that Amazon EMR terminates nodes at the instance-hour boundary, regardless of when the request to terminate the instance was submitted. This option is only available with Amazon EMR 5.1.0 and later and is the default for clusters created using that version. TERMINATE_AT_TASK_COMPLETION indicates that Amazon EMR blacklists and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the instance-hour boundary. With either behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to HDFS corruption. TERMINATE_AT_TASK_COMPLETION available only in Amazon EMR version 4.1.0 and later, and is the default for versions of Amazon EMR earlier than 5.1.0.'
+    description: "Specifies the way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an instance group is resized. TERMINATE_AT_INSTANCE_HOUR indicates that Amazon EMR terminates nodes at the instance-hour boundary, regardless of when the request to terminate the instance was submitted. This option is only available with Amazon EMR 5.1.0 and later and is the default for clusters created using that version. TERMINATE_AT_TASK_COMPLETION indicates that Amazon EMR blacklists and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the instance-hour boundary. With either behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to HDFS corruption. TERMINATE_AT_TASK_COMPLETION available only in Amazon EMR version 4.1.0 and later, and is the default for versions of Amazon EMR earlier than 5.1.0."

@@ -20,9 +20,9 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: '[Required] The identifier of an API of a to-be-deleted documentation snapshot.'
+    description: "[Required] The identifier of an API of a to-be-deleted documentation snapshot."
     required: true
   documentationVersion:
     type: string
-    description: '[Required] The version identifier of a to-be-deleted documentation snapshot.'
+    description: "[Required] The version identifier of a to-be-deleted documentation snapshot."
     required: true

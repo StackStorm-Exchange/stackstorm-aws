@@ -20,9 +20,9 @@ parameters:
     type: string
   LoadBalancerNames:
     type: array
-    description: 'The name of the load balancer. You can specify a maximum of one load balancer name.'
+    description: "The name of the load balancer. You can specify a maximum of one load balancer name."
     required: true
   Tags:
     type: array
-    description: 'The list of tag keys to remove.'
+    description: "The list of tag keys to remove."
     required: true

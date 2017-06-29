@@ -20,17 +20,23 @@ parameters:
     type: string
   ClusterId:
     type: string
-    description: 'The identifier of the cluster for which to list the instances.'
+    description: "The identifier of the cluster for which to list the instances."
     required: true
   InstanceGroupId:
     type: string
-    description: 'The identifier of the instance group for which to list the instances.'
+    description: "The identifier of the instance group for which to list the instances."
   InstanceGroupTypes:
     type: array
-    description: 'The type of instance group for which to list the instances.'
+    description: "The type of instance group for which to list the instances."
+  InstanceFleetId:
+    type: string
+    description: "The unique identifier of the instance fleet."
+  InstanceFleetType:
+    type: string
+    description: "The node type of the instance fleet. For example MASTER, CORE, or TASK."
   InstanceStates:
     type: array
-    description: 'A list of instance states that will filter the instances returned with this request.'
+    description: "A list of instance states that will filter the instances returned with this request."
   Marker:
     type: string
-    description: 'The pagination token that indicates the next set of results to retrieve.'
+    description: "The pagination token that indicates the next set of results to retrieve."

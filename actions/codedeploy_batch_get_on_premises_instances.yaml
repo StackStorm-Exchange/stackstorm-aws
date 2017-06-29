@@ -20,4 +20,4 @@ parameters:
     type: string
   instanceNames:
     type: array
-    description: 'The names of the on-premises instances about which to get information.'
+    description: "The names of the on-premises instances about which to get information."

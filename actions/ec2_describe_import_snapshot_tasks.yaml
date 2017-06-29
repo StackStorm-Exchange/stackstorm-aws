@@ -20,16 +20,16 @@ parameters:
     type: string
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
-  ImportTaskIds:
-    type: array
-    description: 'A list of import snapshot task IDs.'
-  NextToken:
-    type: string
-    description: 'A token that indicates the next page of results.'
-  MaxResults:
-    type: integer
-    description: 'The maximum number of results to return in a single call. To retrieve the remaining results, make another call with the returned NextToken value.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   Filters:
     type: array
-    description: 'One or more filters.'
+    description: "One or more filters."
+  ImportTaskIds:
+    type: array
+    description: "A list of import snapshot task IDs."
+  MaxResults:
+    type: integer
+    description: "The maximum number of results to return in a single call. To retrieve the remaining results, make another call with the returned NextToken value."
+  NextToken:
+    type: string
+    description: "A token that indicates the next page of results."

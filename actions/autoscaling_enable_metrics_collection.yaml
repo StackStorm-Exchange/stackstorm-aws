@@ -20,12 +20,12 @@ parameters:
     type: string
   AutoScalingGroupName:
     type: string
-    description: 'The name or ARN of the Auto Scaling group.'
+    description: "The name or ARN of the Auto Scaling group."
     required: true
   Granularity:
     type: string
-    description: 'The granularity to associate with the metrics to collect. The only valid value is 1Minute.'
+    description: "The granularity to associate with the metrics to collect. The only valid value is 1Minute."
     required: true
   Metrics:
     type: array
-    description: 'One or more of the following metrics. If you omit this parameter, all metrics are enabled.    GroupMinSize     GroupMaxSize     GroupDesiredCapacity     GroupInServiceInstances     GroupPendingInstances     GroupStandbyInstances     GroupTerminatingInstances     GroupTotalInstances   '
+    description: "One or more of the following metrics. If you omit this parameter, all metrics are enabled.    GroupMinSize     GroupMaxSize     GroupDesiredCapacity     GroupInServiceInstances     GroupPendingInstances     GroupStandbyInstances     GroupTerminatingInstances     GroupTotalInstances   "

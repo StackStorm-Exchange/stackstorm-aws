@@ -20,5 +20,5 @@ parameters:
     type: string
   StopWorkspaceRequests:
     type: array
-    description: 'The requests.'
+    description: "The requests."
     required: true

@@ -20,9 +20,9 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'The identifier of the directory for which to update the RADIUS server information.'
+    description: "The identifier of the directory for which to update the RADIUS server information."
     required: true
   RadiusSettings:
     type: object
-    description: 'A RadiusSettings object that contains information about the RADIUS server.'
+    description: "A RadiusSettings object that contains information about the RADIUS server."
     required: true

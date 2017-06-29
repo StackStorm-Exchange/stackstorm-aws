@@ -20,15 +20,15 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the document that you want to share.'
+    description: "The name of the document that you want to share."
     required: true
   PermissionType:
     type: string
-    description: 'The permission type for the document. The permission type can be Share.'
+    description: "The permission type for the document. The permission type can be Share."
     required: true
   AccountIdsToAdd:
     type: array
-    description: 'The AWS user accounts that should have access to the document. The account IDs can either be a group of account IDs or All.'
+    description: "The AWS user accounts that should have access to the document. The account IDs can either be a group of account IDs or All."
   AccountIdsToRemove:
     type: array
-    description: 'The AWS user accounts that should no longer have access to the document. The AWS user account can either be a group of account IDs or All. This action has a higher priority than AccountIdsToAdd. If you specify an account ID to add and the same ID to remove, the system removes access to the document.'
+    description: "The AWS user accounts that should no longer have access to the document. The AWS user account can either be a group of account IDs or All. This action has a higher priority than AccountIdsToAdd. If you specify an account ID to add and the same ID to remove, the system removes access to the document."

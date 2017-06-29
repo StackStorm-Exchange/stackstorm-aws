@@ -20,12 +20,12 @@ parameters:
     type: string
   AccessToken:
     type: string
-    description: 'The access token.'
+    description: "The access token."
     required: true
   DeviceKey:
     type: string
-    description: 'The device key.'
+    description: "The device key."
     required: true
   DeviceRememberedStatus:
     type: string
-    description: 'The status of whether a device is remembered.'
+    description: "The status of whether a device is remembered."

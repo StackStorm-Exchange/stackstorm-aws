@@ -20,5 +20,5 @@ parameters:
     type: string
   StreamingDistributionConfigWithTags:
     type: object
-    description: ' The streaming distribution"s configuration information. '
+    description: " The streaming distribution's configuration information. "
     required: true

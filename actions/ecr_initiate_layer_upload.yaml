@@ -20,8 +20,8 @@ parameters:
     type: string
   repositoryName:
     type: string
-    description: 'The name of the repository that you intend to upload layers to.'
+    description: "The name of the repository that you intend to upload layers to."
     required: true
   registryId:
     type: string
-    description: 'The AWS account ID associated with the registry that you intend to upload layers to. If you do not specify a registry, the default registry is assumed.'
+    description: "The AWS account ID associated with the registry that you intend to upload layers to. If you do not specify a registry, the default registry is assumed."

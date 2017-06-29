@@ -20,9 +20,9 @@ parameters:
     type: string
   usagePlanId:
     type: string
-    description: 'The Id of the UsagePlan resource representing the usage plan containing the to-be-retrieved UsagePlanKey resource representing a plan customer.'
+    description: "The Id of the UsagePlan resource representing the usage plan containing the to-be-retrieved UsagePlanKey resource representing a plan customer."
     required: true
   keyId:
     type: string
-    description: 'The key Id of the to-be-retrieved UsagePlanKey resource representing a plan customer.'
+    description: "The key Id of the to-be-retrieved UsagePlanKey resource representing a plan customer."
     required: true

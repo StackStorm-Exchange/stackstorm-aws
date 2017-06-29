@@ -20,5 +20,5 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID for the user pool you want to describe.'
+    description: "The user pool ID for the user pool you want to describe."
     required: true

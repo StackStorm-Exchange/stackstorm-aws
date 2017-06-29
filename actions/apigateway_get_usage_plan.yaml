@@ -20,5 +20,5 @@ parameters:
     type: string
   usagePlanId:
     type: string
-    description: 'The identifier of the UsagePlan resource to be retrieved.'
+    description: "The identifier of the UsagePlan resource to be retrieved."
     required: true

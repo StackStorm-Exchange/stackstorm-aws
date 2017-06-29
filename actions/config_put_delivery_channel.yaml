@@ -20,5 +20,5 @@ parameters:
     type: string
   DeliveryChannel:
     type: object
-    description: 'The configuration delivery channel object that delivers the configuration information to an Amazon S3 bucket, and to an Amazon SNS topic.'
+    description: "The configuration delivery channel object that delivers the configuration information to an Amazon S3 bucket, and to an Amazon SNS topic."
     required: true

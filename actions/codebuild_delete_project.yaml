@@ -20,5 +20,5 @@ parameters:
     type: string
   name:
     type: string
-    description: 'The name of the build project to delete.'
+    description: "The name of the build project."
     required: true

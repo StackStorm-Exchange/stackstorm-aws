@@ -20,5 +20,5 @@ parameters:
     type: string
   ReplicationInstanceArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the replication instance to be deleted.'
+    description: "The Amazon Resource Name (ARN) of the replication instance to be deleted."
     required: true

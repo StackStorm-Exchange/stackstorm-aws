@@ -20,5 +20,5 @@ parameters:
     type: string
   virtualInterfaceId:
     type: string
-    description: ''
+    description: ""
     required: true

@@ -20,13 +20,13 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'Specify an application name to show only application versions for that application.'
+    description: "Specify an application name to show only application versions for that application."
   VersionLabels:
     type: array
-    description: 'Specify a version label to show a specific application version.'
+    description: "Specify a version label to show a specific application version."
   MaxRecords:
     type: integer
-    description: 'Specify a maximum number of application versions to paginate in the request.'
+    description: "Specify a maximum number of application versions to paginate in the request."
   NextToken:
     type: string
-    description: 'Specify a next token to retrieve the next page in a paginated request.'
+    description: "Specify a next token to retrieve the next page in a paginated request."

@@ -20,4 +20,4 @@ parameters:
     type: string
   applicationNames:
     type: array
-    description: 'A list of application names separated by spaces.'
+    description: "A list of application names separated by spaces."

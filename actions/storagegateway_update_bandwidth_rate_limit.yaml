@@ -20,11 +20,11 @@ parameters:
     type: string
   GatewayARN:
     type: string
-    description: ''
+    description: ""
     required: true
   AverageUploadRateLimitInBitsPerSec:
     type: integer
-    description: 'The average upload bandwidth rate limit in bits per second.'
+    description: "The average upload bandwidth rate limit in bits per second."
   AverageDownloadRateLimitInBitsPerSec:
     type: integer
-    description: 'The average download bandwidth rate limit in bits per second.'
+    description: "The average download bandwidth rate limit in bits per second."
