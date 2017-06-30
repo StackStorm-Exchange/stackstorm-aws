@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,4 +25,4 @@ parameters:
     required: true
   nextToken:
     type: string
-    description: "An enumeration token that allows the operation to batch the results."
+    description: "An enumeration token that allows the operation to batch the results. "

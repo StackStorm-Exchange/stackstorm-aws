@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,9 +19,9 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  AttributeNames:
-    type: array
-    description: "One or more account attribute names."
   DryRun:
     type: boolean
     description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
+  AttributeNames:
+    type: array
+    description: "One or more account attribute names."

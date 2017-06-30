@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,17 +19,17 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  DeviceIndex:
-    type: integer
-    description: "The index of the device for the network interface attachment."
+  NetworkInterfaceId:
+    type: string
+    description: "The ID of the network interface."
     required: true
   InstanceId:
     type: string
     description: "The ID of the instance."
     required: true
-  NetworkInterfaceId:
-    type: string
-    description: "The ID of the network interface."
+  DeviceIndex:
+    type: integer
+    description: "The index of the device for the network interface attachment."
     required: true
   DryRun:
     type: boolean

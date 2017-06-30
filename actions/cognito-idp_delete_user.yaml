@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -21,4 +22,3 @@ parameters:
   AccessToken:
     type: string
     description: "The access token from a request to delete a user."
-    required: true

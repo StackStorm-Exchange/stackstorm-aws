@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -32,7 +33,7 @@ parameters:
     required: true
   ProvisionedThroughput:
     type: object
-    description: "Represents the provisioned throughput settings for a specified table or index. The settings can be modified using the UpdateTable operation. For current minimum and maximum provisioned throughput values, see Limits in the Amazon DynamoDB Developer Guide."
+    description: ""
     required: true
   LocalSecondaryIndexes:
     type: array

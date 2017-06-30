@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,13 +19,13 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Attribute:
-    type: string
-    description: "The instance attribute. Note: The enaSupport attribute is not supported at this time."
-    required: true
   InstanceId:
     type: string
     description: "The ID of the instance."
+    required: true
+  Attribute:
+    type: string
+    description: "The instance attribute. Note: The enaSupport attribute is not supported at this time."
     required: true
   DryRun:
     type: boolean

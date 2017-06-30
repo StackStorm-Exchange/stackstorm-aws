@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -32,5 +33,5 @@ parameters:
     required: true
   actionRevision:
     type: object
-    description: "Represents information about the version (or revision) of an action."
+    description: ""
     required: true

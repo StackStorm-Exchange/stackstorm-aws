@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -30,7 +31,7 @@ parameters:
     description: "The protocol for connections from clients to the load balancer."
   SslPolicy:
     type: string
-    description: "The security policy that defines which protocols and ciphers are supported. For more information, see Security Policies in the Application Load Balancers Guide."
+    description: "The security policy that defines which ciphers and protocols are supported."
   Certificates:
     type: array
     description: "The SSL server certificate."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,13 +19,13 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  InstanceId:
-    type: string
-    description: "The ID of the instance."
-    required: true
   ProductCode:
     type: string
     description: "The product code. This must be a product code that you own."
+    required: true
+  InstanceId:
+    type: string
+    description: "The ID of the instance."
     required: true
   DryRun:
     type: boolean

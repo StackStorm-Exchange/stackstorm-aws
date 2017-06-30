@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,13 +19,13 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Attribute:
-    type: string
-    description: "The attribute to reset (currently you can only reset the launch permission attribute)."
-    required: true
   ImageId:
     type: string
     description: "The ID of the AMI."
+    required: true
+  Attribute:
+    type: string
+    description: "The attribute to reset (currently you can only reset the launch permission attribute)."
     required: true
   DryRun:
     type: boolean

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -22,9 +23,9 @@ parameters:
     type: string
     description: "The ID of the network interface."
     required: true
-  Ipv6AddressCount:
-    type: integer
-    description: "The number of IPv6 addresses to assign to the network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. You can't use this option if specifying specific IPv6 addresses."
   Ipv6Addresses:
     type: array
     description: "One or more specific IPv6 addresses to be assigned to the network interface. You can't use this option if you're specifying a number of IPv6 addresses."
+  Ipv6AddressCount:
+    type: integer
+    description: "The number of IPv6 addresses to assign to the network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. You can't use this option if specifying specific IPv6 addresses."

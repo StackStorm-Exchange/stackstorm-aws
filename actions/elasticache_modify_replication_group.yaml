@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -70,6 +71,3 @@ parameters:
   CacheNodeType:
     type: string
     description: "A valid cache node type that you want to scale this replication group to."
-  NodeGroupId:
-    type: string
-    description: "The name of the Node Group (called shard in the console)."

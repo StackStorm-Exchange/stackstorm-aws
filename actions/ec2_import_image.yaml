@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,33 +19,33 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Architecture:
-    type: string
-    description: "The architecture of the virtual machine. Valid values: i386 | x86_64 "
-  ClientData:
-    type: object
-    description: "The client-specific data."
-  ClientToken:
-    type: string
-    description: "The token to enable idempotency for VM import requests."
+  DryRun:
+    type: boolean
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   Description:
     type: string
     description: "A description string for the import image task."
   DiskContainers:
     type: array
     description: "Information about the disk containers."
-  DryRun:
-    type: boolean
-    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
-  Hypervisor:
-    type: string
-    description: "The target hypervisor platform. Valid values: xen "
   LicenseType:
     type: string
     description: "The license type to be used for the Amazon Machine Image (AMI) after importing.  Note: You may only use BYOL if you have existing licenses with rights to use these licenses in a third party cloud like AWS. For more information, see Prerequisites in the VM Import/Export User Guide. Valid values: AWS | BYOL "
+  Hypervisor:
+    type: string
+    description: "The target hypervisor platform. Valid values: xen "
+  Architecture:
+    type: string
+    description: "The architecture of the virtual machine. Valid values: i386 | x86_64 "
   Platform:
     type: string
     description: "The operating system of the virtual machine. Valid values: Windows | Linux "
+  ClientData:
+    type: object
+    description: "The client-specific data."
+  ClientToken:
+    type: string
+    description: "The token to enable idempotency for VM import requests."
   RoleName:
     type: string
     description: "The name of the role to use when not using the default role, 'vmimport'."

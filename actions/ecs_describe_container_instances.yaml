@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   containerInstances:
     type: array
-    description: "A list of container instance IDs or full Amazon Resource Name (ARN) entries."
+    description: "A space-separated list of container instance IDs or full Amazon Resource Name (ARN) entries."
     required: true
   cluster:
     type: string

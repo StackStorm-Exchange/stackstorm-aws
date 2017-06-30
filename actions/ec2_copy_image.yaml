@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,30 +19,30 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Name:
+  SourceRegion:
     type: string
-    description: "The name of the new AMI in the destination region."
+    description: "The name of the region that contains the AMI to copy."
     required: true
   SourceImageId:
     type: string
     description: "The ID of the AMI to copy."
     required: true
-  SourceRegion:
+  Name:
     type: string
-    description: "The name of the region that contains the AMI to copy."
+    description: "The name of the new AMI in the destination region."
     required: true
-  ClientToken:
-    type: string
-    description: "Unique, case-sensitive identifier you provide to ensure idempotency of the request. For more information, see How to Ensure Idempotency in the Amazon Elastic Compute Cloud User Guide."
+  DryRun:
+    type: boolean
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   Description:
     type: string
     description: "A description for the new AMI in the destination region."
+  ClientToken:
+    type: string
+    description: "Unique, case-sensitive identifier you provide to ensure idempotency of the request. For more information, see How to Ensure Idempotency in the Amazon Elastic Compute Cloud User Guide."
   Encrypted:
     type: boolean
     description: "Specifies whether the destination snapshots of the copied image should be encrypted. The default CMK for EBS is used unless a non-default AWS Key Management Service (AWS KMS) CMK is specified with KmsKeyId. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide."
   KmsKeyId:
     type: string
     description: "The full ARN of the AWS Key Management Service (AWS KMS) CMK to use when encrypting the snapshots of an image during a copy operation. This parameter is only required if you want to use a non-default CMK; if this parameter is not specified, the default CMK for EBS is used. The ARN contains the arn:aws:kms namespace, followed by the region of the CMK, the AWS account ID of the CMK owner, the key namespace, and then the CMK ID. For example, arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef. The specified CMK must exist in the region that the snapshot is being copied to. If a KmsKeyId is specified, the Encrypted flag must also be set."
-  DryRun:
-    type: boolean
-    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."

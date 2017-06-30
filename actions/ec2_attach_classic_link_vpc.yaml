@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,10 +19,6 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Groups:
-    type: array
-    description: "The ID of one or more of the VPC's security groups. You cannot specify security groups from a different VPC."
-    required: true
   InstanceId:
     type: string
     description: "The ID of an EC2-Classic instance to link to the ClassicLink-enabled VPC."
@@ -29,6 +26,10 @@ parameters:
   VpcId:
     type: string
     description: "The ID of a ClassicLink-enabled VPC."
+    required: true
+  Groups:
+    type: array
+    description: "The ID of one or more of the VPC's security groups. You cannot specify security groups from a different VPC."
     required: true
   DryRun:
     type: boolean

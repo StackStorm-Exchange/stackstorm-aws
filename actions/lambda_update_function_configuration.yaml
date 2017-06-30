@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -45,13 +46,10 @@ parameters:
     description: "The parent object that contains your environment's configuration settings."
   Runtime:
     type: string
-    description: "The runtime environment for the Lambda function. To use the Python runtime v3.6, set the value to 'python3.6'. To use the Python runtime v2.7, set the value to 'python2.7'. To use the Node.js runtime v6.10, set the value to 'nodejs6.10'. To use the Node.js runtime v4.3, set the value to 'nodejs4.3'. To use the Python runtime v3.6, set the value to 'python3.6'. To use the Python runtime v2.7, set the value to 'python2.7'.  You can no longer downgrade to the v0.10.42 runtime version. This version will no longer be supported as of early 2017. "
+    description: "The runtime environment for the Lambda function. To use the Node.js runtime v4.3, set the value to 'nodejs4.3'. To use earlier runtime (v0.10.42), set the value to 'nodejs'.  You can no longer downgrade to the v0.10.42 runtime version. This version will no longer be supported as of early 2017. "
   DeadLetterConfig:
     type: object
-    description: "The parent object that contains the target ARN (Amazon Resource Name) of an Amazon SQS queue or Amazon SNS topic."
+    description: "The parent object that contains the target Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic."
   KMSKeyArn:
     type: string
     description: "The Amazon Resource Name (ARN) of the KMS key used to encrypt your function's environment variables. If you elect to use the AWS Lambda default service key, pass in an empty string ('') for this parameter."
-  TracingConfig:
-    type: object
-    description: "The parent object that contains your function's tracing settings."

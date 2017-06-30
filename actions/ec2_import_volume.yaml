@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -30,9 +31,9 @@ parameters:
     type: object
     description: "The volume size."
     required: true
-  Description:
-    type: string
-    description: "A description of the volume."
   DryRun:
     type: boolean
     description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
+  Description:
+    type: string
+    description: "A description of the volume."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   actionTypeId:
     type: object
-    description: "Represents information about an action type."
+    description: ""
     required: true
   maxBatchSize:
     type: integer

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,23 +21,16 @@ parameters:
     type: string
   ServerName:
     type: string
-    description: " The name of the server. The server name must be unique within your AWS account, within each region. Server names must start with a letter; then letters, numbers, or hyphens (-) are allowed, up to a maximum of 40 characters. "
+    description: " The name of the server. The server name must be unique within your AWS account, within each region. Server names must start with a letter; then letters, numbers, or hyphens (-) are allowed, up to a maximum of 32 characters. "
     required: true
   InstanceProfileArn:
     type: string
-    description: " The ARN of the instance profile that your Amazon EC2 instances use. Although the AWS OpsWorks console typically creates the instance profile for you, if you are using API commands instead, run the service-role-creation.yaml AWS CloudFormation template, located at https://s3.amazonaws.com/opsworks-cm-us-east-1-prod-default-assets/misc/opsworks-cm-roles.yaml. This template creates a CloudFormation stack that includes the instance profile you need. "
-    required: true
-  InstanceType:
-    type: string
-    description: " The Amazon EC2 instance type to use. Valid values must be specified in the following format: ^([cm][34]|t2).* For example, m4.large. Valid values are t2.medium, m4.large, or m4.2xlarge. "
+    description: " The ARN of the instance profile that your Amazon EC2 instances use. Although the AWS OpsWorks console typically creates the instance profile for you, in this release of AWS OpsWorks for Chef Automate, run the service-role-creation.yaml AWS CloudFormation template, located at https://s3.amazonaws.com/opsworks-stuff/latest/service-role-creation.yaml. This template creates a stack that includes the instance profile you need. "
     required: true
   ServiceRoleArn:
     type: string
-    description: " The service role that the AWS OpsWorks for Chef Automate service backend uses to work with your account. Although the AWS OpsWorks management console typically creates the service role for you, if you are using the AWS CLI or API commands, run the service-role-creation.yaml AWS CloudFormation template, located at https://s3.amazonaws.com/opsworks-stuff/latest/service-role-creation.yaml. This template creates a CloudFormation stack that includes the service role that you need. "
+    description: " The service role that the AWS OpsWorks for Chef Automate service backend uses to work with your account. Although the AWS OpsWorks console typically creates the service role for you, in this release of AWS OpsWorks for Chef Automate, run the service-role-creation.yaml AWS CloudFormation template, located at https://s3.amazonaws.com/opsworks-stuff/latest/service-role-creation.yaml. This template creates a stack that includes the service role that you need. "
     required: true
-  AssociatePublicIpAddress:
-    type: boolean
-    description: " Associate a public IP address with a server that you are launching. Valid values are true or false. The default value is true. "
   DisableAutomatedBackup:
     type: boolean
     description: " Enable or disable scheduled backups. Valid values are true or false. The default value is true. "
@@ -51,19 +45,22 @@ parameters:
     description: " The major release version of the engine that you want to use. Values depend on the engine that you choose. "
   EngineAttributes:
     type: array
-    description: "Optional engine attributes on a specified server.   Attributes accepted in a createServer request:     CHEF_PIVOTAL_KEY: A base64-encoded RSA private key that is not stored by AWS OpsWorks for Chef. This private key is required to access the Chef API. When no CHEF_PIVOTAL_KEY is set, one is generated and returned in the response.     CHEF_DELIVERY_ADMIN_PASSWORD: The password for the administrative user in the Chef Automate GUI. The password length is a minimum of eight characters, and a maximum of 32. The password can contain letters, numbers, and special characters (!/@#$%^&amp;+=_). The password must contain at least one lower case letter, one upper case letter, one number, and one special character. When no CHEF_DELIVERY_ADMIN_PASSWORD is set, one is generated and returned in the response.  "
+    description: "Engine attributes on a specified server.   Attributes accepted in a createServer request:     CHEF_PIVOTAL_KEY: A base64-encoded RSA private key that is not stored by AWS OpsWorks for Chef Automate. This private key is required to access the Chef API.  "
   BackupRetentionCount:
     type: integer
     description: " The number of automated backups that you want to keep. Whenever a new backup is created, AWS OpsWorks for Chef Automate deletes the oldest backups if this number is exceeded. The default value is 1. "
+  InstanceType:
+    type: string
+    description: " The Amazon EC2 instance type to use. Valid values must be specified in the following format: ^([cm][34]|t2).* For example, c3.large. "
   KeyPair:
     type: string
-    description: " The Amazon EC2 key pair to set for the instance. This parameter is optional; if desired, you may specify this parameter to connect to your instances by using SSH. "
+    description: " The Amazon EC2 key pair to set for the instance. You may specify this parameter to connect to your instances by using SSH. "
   PreferredMaintenanceWindow:
     type: string
     description: " The start time for a one-hour period each week during which AWS OpsWorks for Chef Automate performs maintenance on the instance. Valid values must be specified in the following format: DDD:HH:MM. The specified time is in coordinated universal time (UTC). The default value is a random one-hour period on Tuesday, Wednesday, or Friday. See TimeWindowDefinition for more information.   Example: Mon:08:00, which represents a start time of every Monday at 08:00 UTC. (8:00 a.m.) "
   PreferredBackupWindow:
     type: string
-    description: " The start time for a one-hour period during which AWS OpsWorks for Chef Automate backs up application-level data on your server if automated backups are enabled. Valid values must be specified in one of the following formats:     HH:MM for daily backups    DDD:HH:MM for weekly backups   The specified time is in coordinated universal time (UTC). The default value is a random, daily start time.  Example: 08:00, which represents a daily start time of 08:00 UTC.  Example: Mon:08:00, which represents a start time of every Monday at 08:00 UTC. (8:00 a.m.)"
+    description: " The start time for a one-hour period during which AWS OpsWorks for Chef Automate backs up application-level data on your server if backups are enabled. Valid values must be specified in one of the following formats:     HH:MM for daily backups    DDD:HH:MM for weekly backups   The specified time is in coordinated universal time (UTC). The default value is a random, daily start time.  Example: 08:00, which represents a daily start time of 08:00 UTC.  Example: Mon:08:00, which represents a start time of every Monday at 08:00 UTC. (8:00 a.m.)"
   SecurityGroupIds:
     type: array
     description: " A list of security group IDs to attach to the Amazon EC2 instance. If you add this parameter, the specified security groups must be within the VPC that is specified by SubnetIds.   If you do not specify this parameter, AWS OpsWorks for Chef Automate creates one new security group that uses TCP ports 22 and 443, open to 0.0.0.0/0 (everyone). "

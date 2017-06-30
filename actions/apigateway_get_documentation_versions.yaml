@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,7 +25,7 @@ parameters:
     required: true
   position:
     type: string
-    description: "The current pagination position in the paged result set."
+    description: "The position of the returned DocumentationVersion in the DocumentationVersions collection."
   limit:
     type: integer
-    description: "The maximum number of returned results per page."
+    description: "The page size of the returned documentation versions."

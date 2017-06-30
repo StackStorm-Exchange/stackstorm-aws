@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,7 +25,7 @@ parameters:
     required: true
   filterName:
     type: string
-    description: "A name for the subscription filter. If you are updating an existing filter, you must specify the correct name in filterName. Otherwise, the call will fail because you cannot associate a second filter with a log group. To find the name of the filter currently associated with a log group, use DescribeSubscriptionFilters."
+    description: "A name for the subscription filter."
     required: true
   filterPattern:
     type: string

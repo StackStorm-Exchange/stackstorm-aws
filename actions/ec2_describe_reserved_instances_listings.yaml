@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,12 +19,12 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Filters:
-    type: array
-    description: "One or more filters.    reserved-instances-id - The ID of the Reserved Instances.    reserved-instances-listing-id - The ID of the Reserved Instances listing.    status - The status of the Reserved Instance listing (pending | active | cancelled | closed).    status-message - The reason for the status.  "
   ReservedInstancesId:
     type: string
     description: "One or more Reserved Instance IDs."
   ReservedInstancesListingId:
     type: string
     description: "One or more Reserved Instance listing IDs."
+  Filters:
+    type: array
+    description: "One or more filters.    reserved-instances-id - The ID of the Reserved Instances.    reserved-instances-listing-id - The ID of the Reserved Instances listing.    status - The status of the Reserved Instance listing (pending | active | cancelled | closed).    status-message - The reason for the status.  "

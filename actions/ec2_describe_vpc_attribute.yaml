@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,13 +19,13 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Attribute:
-    type: string
-    description: "The VPC attribute."
-    required: true
   VpcId:
     type: string
     description: "The ID of the VPC."
+    required: true
+  Attribute:
+    type: string
+    description: "The VPC attribute."
     required: true
   DryRun:
     type: boolean

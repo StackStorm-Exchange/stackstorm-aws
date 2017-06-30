@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   HostedZoneId:
     type: string
-    description: "The ID of the hosted zone that contains the resource record sets that you want to list."
+    description: "The ID of the hosted zone that contains the resource record sets that you want to get."
     required: true
   StartRecordName:
     type: string
-    description: "The first name in the lexicographic ordering of resource record sets that you want to list."
+    description: "The first name in the lexicographic ordering of domain names that you want the ListResourceRecordSets request to list."
   StartRecordType:
     type: string
     description: "The type of resource record set to begin the record listing from. Valid values for basic resource record sets: A | AAAA | CNAME | MX | NAPTR | NS | PTR | SOA | SPF | SRV | TXT  Values for weighted, latency, geo, and failover resource record sets: A | AAAA | CNAME | MX | NAPTR | PTR | SPF | SRV | TXT  Values for alias resource record sets:     CloudFront distribution: A or AAAA    Elastic Beanstalk environment that has a regionalized subdomain: A    ELB load balancer: A | AAAA    Amazon S3 bucket: A   Constraint: Specifying type without specifying name returns an InvalidInput error."

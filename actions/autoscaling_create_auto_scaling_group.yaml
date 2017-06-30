@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -38,7 +39,7 @@ parameters:
     description: "The ID of the instance used to create a launch configuration for the group. Alternatively, specify a launch configuration instead of an EC2 instance. When you specify an ID of an instance, Auto Scaling creates a new launch configuration and associates it with the group. This launch configuration derives its attributes from the specified instance, with the exception of the block device mapping. For more information, see Create an Auto Scaling Group Using an EC2 Instance in the Auto Scaling User Guide."
   DesiredCapacity:
     type: integer
-    description: "The number of EC2 instances that should be running in the group. This number must be greater than or equal to the minimum size of the group and less than or equal to the maximum size of the group. If you do not specify a desired capacity, the default is the minimum size of the group."
+    description: "The number of EC2 instances that should be running in the group. This number must be greater than or equal to the minimum size of the group and less than or equal to the maximum size of the group."
   DefaultCooldown:
     type: integer
     description: "The amount of time, in seconds, after a scaling activity completes before another scaling activity can start. The default is 300. For more information, see Auto Scaling Cooldowns in the Auto Scaling User Guide."
@@ -47,7 +48,7 @@ parameters:
     description: "One or more Availability Zones for the group. This parameter is optional if you specify one or more subnets."
   LoadBalancerNames:
     type: array
-    description: "One or more Classic Load Balancers. To specify an Application Load Balancer, use TargetGroupARNs instead. For more information, see Using a Load Balancer With an Auto Scaling Group in the Auto Scaling User Guide."
+    description: "One or more Classic load balancers. To specify an Application load balancer, use TargetGroupARNs instead. For more information, see Using a Load Balancer With an Auto Scaling Group in the Auto Scaling User Guide."
   TargetGroupARNs:
     type: array
     description: "The Amazon Resource Names (ARN) of the target groups."

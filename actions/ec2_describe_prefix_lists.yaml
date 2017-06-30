@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -21,6 +22,9 @@ parameters:
   DryRun:
     type: boolean
     description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
+  PrefixListIds:
+    type: array
+    description: "One or more prefix list IDs."
   Filters:
     type: array
     description: "One or more filters.    prefix-list-id: The ID of a prefix list.    prefix-list-name: The name of a prefix list.  "
@@ -30,6 +34,3 @@ parameters:
   NextToken:
     type: string
     description: "The token for the next set of items to return. (You received this token from a prior call.)"
-  PrefixListIds:
-    type: array
-    description: "One or more prefix list IDs."

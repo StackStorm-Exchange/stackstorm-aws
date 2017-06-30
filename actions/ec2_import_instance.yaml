@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -22,15 +23,15 @@ parameters:
     type: string
     description: "The instance operating system."
     required: true
-  Description:
-    type: string
-    description: "A description for the instance being imported."
-  DiskImages:
-    type: array
-    description: "The disk image."
   DryRun:
     type: boolean
     description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
+  Description:
+    type: string
+    description: "A description for the instance being imported."
   LaunchSpecification:
     type: object
     description: "The launch specification."
+  DiskImages:
+    type: array
+    description: "The disk image."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -37,15 +38,9 @@ parameters:
   ignoreApplicationStopFailures:
     type: boolean
     description: "If set to true, then if the deployment causes the ApplicationStop deployment lifecycle event to an instance to fail, the deployment to that instance will not be considered to have failed at that point and will continue on to the BeforeInstall deployment lifecycle event. If set to false or not specified, then if the deployment causes the ApplicationStop deployment lifecycle event to fail to an instance, the deployment to that instance will stop, and the deployment to that instance will be considered to have failed."
-  targetInstances:
-    type: object
-    description: "Information about the instances that will belong to the replacement environment in a blue/green deployment."
   autoRollbackConfiguration:
     type: object
     description: "Configuration information for an automatic rollback that is added when a deployment is created."
   updateOutdatedInstancesOnly:
     type: boolean
     description: "Indicates whether to deploy to all instances or only to instances that are not running the latest application revision."
-  fileExistsBehavior:
-    type: string
-    description: "Information about how AWS CodeDeploy handles files that already exist in a deployment target location but weren't part of the previous successful deployment. The fileExistsBehavior parameter takes any of the following values:   DISALLOW: The deployment fails. This is also the default behavior if no option is specified.   OVERWRITE: The version of the file from the application revision currently being deployed replaces the version already on the instance.   RETAIN: The version of the file already on the instance is kept and used as part of the new deployment.  "

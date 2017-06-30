@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -39,7 +40,7 @@ parameters:
     description: "The contents of the email verification message."
   EmailVerificationSubject:
     type: string
-    description: "The subject of the email verification message."
+    description: "The subject of the email verfication message."
   SmsAuthenticationMessage:
     type: string
     description: "The contents of the SMS authentication message."

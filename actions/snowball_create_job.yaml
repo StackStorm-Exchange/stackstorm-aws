@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -51,6 +52,3 @@ parameters:
   SnowballType:
     type: string
     description: "The type of AWS Snowball appliance to use for this job. Currently, the only supported appliance type for cluster jobs is EDGE."
-  ForwardingAddressId:
-    type: string
-    description: "The forwarding address ID for a job. This field is not supported in most regions."

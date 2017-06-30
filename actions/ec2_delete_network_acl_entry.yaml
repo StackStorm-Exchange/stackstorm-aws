@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,10 +19,6 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Egress:
-    type: boolean
-    description: "Indicates whether the rule is an egress rule."
-    required: true
   NetworkAclId:
     type: string
     description: "The ID of the network ACL."
@@ -29,6 +26,10 @@ parameters:
   RuleNumber:
     type: integer
     description: "The rule number of the entry to delete."
+    required: true
+  Egress:
+    type: boolean
+    description: "Indicates whether the rule is an egress rule."
     required: true
   DryRun:
     type: boolean

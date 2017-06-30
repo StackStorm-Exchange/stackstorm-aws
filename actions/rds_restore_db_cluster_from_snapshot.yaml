@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -57,6 +58,3 @@ parameters:
   KmsKeyId:
     type: string
     description: "The KMS key identifier to use when restoring an encrypted DB cluster from a DB cluster snapshot. The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are restoring a DB cluster with the same AWS account that owns the KMS encryption key used to encrypt the new DB cluster, then you can use the KMS key alias instead of the ARN for the KMS encryption key. If you do not specify a value for the KmsKeyId parameter, then the following will occur:   If the DB cluster snapshot is encrypted, then the restored DB cluster is encrypted using the KMS key that was used to encrypt the DB cluster snapshot.   If the DB cluster snapshot is not encrypted, then the restored DB cluster is encrypted using the specified encryption key.  "
-  EnableIAMDatabaseAuthentication:
-    type: boolean
-    description: "A Boolean value that is true to enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts, and otherwise false. Default: false "

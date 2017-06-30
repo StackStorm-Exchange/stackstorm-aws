@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,10 +25,10 @@ parameters:
     required: true
   Name:
     type: string
-    description: "Descriptive label that is associated with an alias. Alias names do not need to be unique."
+    description: "Descriptive label associated with an alias. Alias names do not need to be unique."
   Description:
     type: string
     description: "Human-readable description of an alias."
   RoutingStrategy:
     type: object
-    description: "Object that specifies the fleet and routing type to use for the alias."
+    description: "Object specifying the fleet and routing type to use for the alias."

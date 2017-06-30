@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   FleetId:
     type: string
-    description: "Unique identifier for a fleet to update port settings for."
+    description: "Unique identifier for the fleet you want to update port settings for."
     required: true
   InboundPermissionAuthorizations:
     type: array

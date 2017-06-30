@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   filters:
     type: array
-    description: "You can filter the list using a key-value format. You can separate these items by using logical operators. Allowed filters include tagKey, tagValue, and configurationId. "
+    description: "You can filter the list using a key-value format. You can separate these items by using logical operators. Allowed filters include tagKey, tagValue, and configurationId.  For a complete list of filter options and guidance about using them with this action, see Managing AWS Application Discovery Service Agents and the AWS Application Discovery Connector ."
   maxResults:
     type: integer
     description: "The total number of items to return in a single page of output. The maximum value is 100."

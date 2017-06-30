@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,7 +25,7 @@ parameters:
     required: true
   availabilityZone:
     type: string
-    description: "The Availability Zone in which to create your instance. Use the following format: us-east-1a (case sensitive). You can get a list of availability zones by using the get regions operation. Be sure to add the include availability zones parameter to your request."
+    description: "The Availability Zone in which to create your instance. Use the following format: us-east-1a (case sensitive)."
     required: true
   blueprintId:
     type: string
@@ -36,7 +37,7 @@ parameters:
     required: true
   customImageName:
     type: string
-    description: "(Deprecated) The name for your custom image.  In releases prior to June 12, 2017, this parameter was ignored by the API. It is now deprecated. "
+    description: "The name for your custom image."
   userData:
     type: string
     description: "A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get –y update.  Depending on the machine image you choose, the command to get software on your instance varies. Amazon Linux and CentOS use yum, Debian and Ubuntu use apt-get, and FreeBSD uses pkg. For a complete list, see the Dev Guide. "

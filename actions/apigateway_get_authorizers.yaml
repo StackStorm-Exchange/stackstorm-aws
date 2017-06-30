@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,7 +25,7 @@ parameters:
     required: true
   position:
     type: string
-    description: "The current pagination position in the paged result set."
+    description: "If not all Authorizer resources in the response were present, the position will specify where to start the next page of results."
   limit:
     type: integer
-    description: "The maximum number of returned results per page."
+    description: "Limit the number of Authorizer resources in the response."

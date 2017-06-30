@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -27,4 +28,4 @@ parameters:
     description: "The name of the thing type associated with the new thing."
   attributePayload:
     type: object
-    description: "The attribute payload, which consists of up to three name/value pairs in a JSON document. For example:  {\'attributes\':{\'string1\':\'string2\'}} "
+    description: "The attribute payload, which consists of up to three name/value pairs in a JSON document. For example: {\\'attributes\\':{\\'string1\\':\\'string2\\'}})"

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -36,10 +37,10 @@ parameters:
     description: "The VPC configuration for the fleet."
   MaxUserDurationInSeconds:
     type: integer
-    description: "The maximum time for which a streaming session can run. The input can be any numeric value in seconds between 600 and 57600."
+    description: "The maximum time during which a streaming session can run."
   DisconnectTimeoutInSeconds:
     type: integer
-    description: "The time after disconnection when a session is considered to have ended. If a user who got disconnected reconnects within this timeout interval, the user is connected back to their previous session. The input can be any numeric value in seconds between 60 and 57600."
+    description: "The time after disconnection when a session is considered to have ended. When the user reconnects after a disconnection, the user is connected to the same instance within this time interval."
   DeleteVpcConfig:
     type: boolean
     description: "Delete the VPC association for the specified fleet."
@@ -49,9 +50,3 @@ parameters:
   DisplayName:
     type: string
     description: "The name displayed to end users on the AppStream 2.0 portal."
-  EnableDefaultInternetAccess:
-    type: boolean
-    description: "Enables or disables default Internet access for the fleet."
-  AttributesToDelete:
-    type: array
-    description: "Fleet attributes to be deleted."

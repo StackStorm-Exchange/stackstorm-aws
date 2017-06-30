@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   FunctionName:
     type: string
-    description: "Lambda function name for which the alias is created. Note that the length constraint applies only to the ARN. If you specify only the function name, it is limited to 64 characters in length."
+    description: "Lambda function name for which the alias is created."
     required: true
   FunctionVersion:
     type: string

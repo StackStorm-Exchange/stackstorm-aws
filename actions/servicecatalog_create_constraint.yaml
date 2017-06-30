@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -28,11 +29,11 @@ parameters:
     required: true
   Parameters:
     type: string
-    description: "The constraint parameters. Expected values vary depending on which Type is specified. For examples, see the bottom of this topic. For Type LAUNCH, the RoleArn property is required.  For Type NOTIFICATION, the NotificationArns property is required. For Type TEMPLATE, the Rules property is required."
+    description: "The constraint parameters."
     required: true
   Type:
     type: string
-    description: "The type of the constraint. Case-sensitive valid values are: LAUNCH, NOTIFICATION, or TEMPLATE. "
+    description: "The type of the constraint."
     required: true
   IdempotencyToken:
     type: string

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -28,5 +29,5 @@ parameters:
     required: true
   UserAttributeNames:
     type: array
-    description: "An array of strings representing the user attribute names you wish to delete. For custom attributes, you must prepend the custom: prefix to the attribute name."
+    description: "An array of strings representing the user attribute names you wish to delete."
     required: true

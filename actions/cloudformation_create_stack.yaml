@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -61,6 +62,3 @@ parameters:
   Tags:
     type: array
     description: "Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to the resources created in the stack. A maximum number of 10 tags can be specified."
-  ClientRequestToken:
-    type: string
-    description: "A unique identifier for this CreateStack request. Specify this token if you plan to retry requests so that AWS CloudFormation knows that you're not attempting to create a stack with the same name. You might retry CreateStack requests to ensure that AWS CloudFormation successfully received them."

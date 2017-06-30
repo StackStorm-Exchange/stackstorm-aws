@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -22,12 +23,12 @@ parameters:
     type: string
     description: "The ID of the network interface."
     required: true
-  AllowReassignment:
-    type: boolean
-    description: "Indicates whether to allow an IP address that is already assigned to another network interface or instance to be reassigned to the specified network interface."
   PrivateIpAddresses:
     type: array
     description: "One or more IP addresses to be assigned as a secondary private IP address to the network interface. You can't specify this parameter when also specifying a number of secondary IP addresses. If you don't specify an IP address, Amazon EC2 automatically selects an IP address within the subnet range."
   SecondaryPrivateIpAddressCount:
     type: integer
     description: "The number of secondary IP addresses to assign to the network interface. You can't specify this parameter when also specifying private IP addresses."
+  AllowReassignment:
+    type: boolean
+    description: "Indicates whether to allow an IP address that is already assigned to another network interface or instance to be reassigned to the specified network interface."

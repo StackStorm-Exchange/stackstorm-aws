@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,7 +25,7 @@ parameters:
     required: true
   Filters:
     type: array
-    description: "Each entry in the array is a structure containing: Key (string, between 1 and 128 characters) Values (array of strings, each string between 1 and 256 characters)"
+    description: "Each entry in the array is a structure containing: Key (string, 1 ≤ length ≤ 128) Values (array of strings 1 ≤ length ≤ 256)"
   NextToken:
     type: string
     description: "The token for the next set of items to return. (You received this token from a previous call.)"

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,4 +25,4 @@ parameters:
     required: true
   locale:
     type: string
-    description: "The locale (language) to return information in. English (en) is the default and the only supported value at this time."
+    description: "The locale (language) to return information in. The default is English."

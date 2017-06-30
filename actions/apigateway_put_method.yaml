@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -32,7 +33,7 @@ parameters:
     required: true
   authorizationType:
     type: string
-    description: "The method's authorization type. Valid values are NONE for open access, AWS_IAM for using AWS IAM permissions, CUSTOM for using a custom authorizer, or COGNITO_USER_POOLS for using a Cognito user pool."
+    description: "Specifies the type of authorization used for the method."
     required: true
   authorizerId:
     type: string
@@ -49,6 +50,3 @@ parameters:
   requestModels:
     type: object
     description: "Specifies the Model resources used for the request's content type. Request models are represented as a key/value map, with a content type as the key and a Model name as the value."
-  requestValidatorId:
-    type: string
-    description: "The identifier of a RequestValidator for validating the method request."

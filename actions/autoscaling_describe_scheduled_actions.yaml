@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -35,4 +36,4 @@ parameters:
     description: "The token for the next set of items to return. (You received this token from a previous call.)"
   MaxRecords:
     type: integer
-    description: "The maximum number of items to return with this call. The default value is 50 and the maximum value is 100."
+    description: "The maximum number of items to return with this call."

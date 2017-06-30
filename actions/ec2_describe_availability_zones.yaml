@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,12 +19,12 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Filters:
-    type: array
-    description: "One or more filters.    message - Information about the Availability Zone.    region-name - The name of the region for the Availability Zone (for example, us-east-1).    state - The state of the Availability Zone (available | information | impaired | unavailable).    zone-name - The name of the Availability Zone (for example, us-east-1a).  "
-  ZoneNames:
-    type: array
-    description: "The names of one or more Availability Zones."
   DryRun:
     type: boolean
     description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
+  ZoneNames:
+    type: array
+    description: "The names of one or more Availability Zones."
+  Filters:
+    type: array
+    description: "One or more filters.    message - Information about the Availability Zone.    region-name - The name of the region for the Availability Zone (for example, us-east-1).    state - The state of the Availability Zone (available | information | impaired | unavailable).    zone-name - The name of the Availability Zone (for example, us-east-1a).  "

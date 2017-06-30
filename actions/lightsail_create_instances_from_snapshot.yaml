@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,7 +25,7 @@ parameters:
     required: true
   availabilityZone:
     type: string
-    description: "The Availability Zone where you want to create your instances. Use the following formatting: us-east-1a (case sensitive). You can get a list of availability zones by using the get regions operation. Be sure to add the include availability zones parameter to your request."
+    description: "The Availability Zone where you want to create your instances. Use the following formatting: us-east-1a (case sensitive)."
     required: true
   instanceSnapshotName:
     type: string

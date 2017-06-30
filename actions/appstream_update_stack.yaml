@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -28,9 +29,3 @@ parameters:
   Description:
     type: string
     description: "The description displayed to end users on the AppStream 2.0 portal."
-  StorageConnectors:
-    type: array
-    description: "The storage connectors to be enabled for the stack."
-  DeleteStorageConnectors:
-    type: boolean
-    description: "Remove all the storage connectors currently enabled for the stack."

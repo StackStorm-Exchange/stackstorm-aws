@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,20 +21,21 @@ parameters:
     type: string
   domainName:
     type: string
-    description: "(Required) The name of the DomainName resource."
+    description: "The name of the DomainName resource."
     required: true
   certificateName:
     type: string
-    description: "The user-friendly name of the certificate."
+    description: "The name of the certificate."
+    required: true
   certificateBody:
     type: string
-    description: "[Deprecated] The body of the server certificate provided by your certificate authority."
+    description: "The body of the server certificate provided by your certificate authority."
+    required: true
   certificatePrivateKey:
     type: string
-    description: "[Deprecated] Your certificate's private key."
+    description: "Your certificate's private key."
+    required: true
   certificateChain:
     type: string
-    description: "[Deprecated] The intermediate certificates and optionally the root certificate, one after the other without any blank lines. If you include the root certificate, your certificate chain must start with intermediate certificates and end with the root certificate. Use the intermediate certificates that were provided by your certificate authority. Do not include any intermediaries that are not in the chain of trust path."
-  certificateArn:
-    type: string
-    description: "The reference to an AWS-managed certificate. AWS Certificate Manager is the only supported source."
+    description: "The intermediate certificates and optionally the root certificate, one after the other without any blank lines. If you include the root certificate, your certificate chain must start with intermediate certificates and end with the root certificate. Use the intermediate certificates that were provided by your certificate authority. Do not include any intermediaries that are not in the chain of trust path."
+    required: true

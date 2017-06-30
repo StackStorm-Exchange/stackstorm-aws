@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,9 +19,9 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  ClientToken:
+  ReservedInstancesId:
     type: string
-    description: "Unique, case-sensitive identifier you provide to ensure idempotency of your listings. This helps avoid duplicate listings. For more information, see Ensuring Idempotency."
+    description: "The ID of the active Standard Reserved Instance."
     required: true
   InstanceCount:
     type: integer
@@ -30,7 +31,7 @@ parameters:
     type: array
     description: "A list specifying the price of the Standard Reserved Instance for each month remaining in the Reserved Instance term."
     required: true
-  ReservedInstancesId:
+  ClientToken:
     type: string
-    description: "The ID of the active Standard Reserved Instance."
+    description: "Unique, case-sensitive identifier you provide to ensure idempotency of your listings. This helps avoid duplicate listings. For more information, see Ensuring Idempotency."
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -87,4 +88,4 @@ parameters:
     description: "The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard). Example: 05:00-09:00  If you do not specify this parameter, ElastiCache automatically chooses an appropriate time range.  Note: This parameter is only valid if the Engine parameter is redis."
   AuthToken:
     type: string
-    description: " Reserved parameter. The password used to access a password protected server. Password constraints:   Must be only printable ASCII characters.   Must be at least 16 characters and no more than 128 characters in length.   Cannot contain any of the following characters: '/', ''', or '@'.    For more information, see AUTH password at Redis."
+    description: "The password used to access a password protected server. Password constraints:   Must be only printable ASCII characters.   Must be at least 16 characters and no more than 128 characters in length.   Cannot contain any of the following characters: '/', ''', or '@'.    For more information, see AUTH password at Redis."

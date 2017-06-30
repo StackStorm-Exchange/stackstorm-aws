@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,13 +19,13 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  CustomerGatewayId:
-    type: string
-    description: "The ID of the customer gateway."
-    required: true
   Type:
     type: string
     description: "The type of VPN connection (ipsec.1)."
+    required: true
+  CustomerGatewayId:
+    type: string
+    description: "The ID of the customer gateway."
     required: true
   VpnGatewayId:
     type: string

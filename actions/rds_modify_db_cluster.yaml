@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -36,7 +37,7 @@ parameters:
     description: "The name of the DB cluster parameter group to use for the DB cluster."
   VpcSecurityGroupIds:
     type: array
-    description: "A list of VPC security groups that the DB cluster will belong to."
+    description: "A lst of VPC security groups that the DB cluster will belong to."
   Port:
     type: integer
     description: "The port number on which the DB cluster accepts connections. Constraints: Value must be 1150-65535  Default: The same port as the original DB cluster."
@@ -52,6 +53,3 @@ parameters:
   PreferredMaintenanceWindow:
     type: string
     description: "The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).  Format: ddd:hh24:mi-ddd:hh24:mi  Default: A 30-minute window selected at random from an 8-hour block of time per region, occurring on a random day of the week. To see the time blocks available, see  Adjusting the Preferred Maintenance Window in the Amazon RDS User Guide.  Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun Constraints: Minimum 30-minute window."
-  EnableIAMDatabaseAuthentication:
-    type: boolean
-    description: "A Boolean value that is true to enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts, and otherwise false. Default: false "

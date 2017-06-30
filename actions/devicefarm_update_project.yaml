@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -25,6 +26,3 @@ parameters:
   name:
     type: string
     description: "A string representing the new name of the project that you are updating."
-  defaultJobTimeoutMinutes:
-    type: integer
-    description: "The number of minutes a test run in the project will execute before it times out."

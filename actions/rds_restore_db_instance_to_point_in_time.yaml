@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -89,6 +90,3 @@ parameters:
   DomainIAMRoleName:
     type: string
     description: "Specify the name of the IAM role to be used when making API calls to the Directory Service."
-  EnableIAMDatabaseAuthentication:
-    type: boolean
-    description: "True to enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts; otherwise false.  You can enable IAM database authentication for the following database engines   For MySQL 5.6, minor version 5.6.34 or higher   For MySQL 5.7, minor version 5.7.16 or higher   Aurora 5.6 or higher.   Default: false "

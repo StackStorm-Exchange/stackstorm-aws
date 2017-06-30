@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -35,7 +36,7 @@ parameters:
     description: "A keyed-hash message authentication code (HMAC) calculated using the secret key of a user pool client and username plus the client ID in the message."
   UserAttributes:
     type: array
-    description: "An array of name-value pairs representing user attributes. For custom attributes, you must prepend the custom: prefix to the attribute name."
+    description: "An array of name-value pairs representing user attributes."
   ValidationData:
     type: array
     description: "The validation data in the request to register a user."

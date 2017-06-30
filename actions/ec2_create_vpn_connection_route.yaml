@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,11 +19,11 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  DestinationCidrBlock:
-    type: string
-    description: "The CIDR block associated with the local subnet of the customer network."
-    required: true
   VpnConnectionId:
     type: string
     description: "The ID of the VPN connection."
+    required: true
+  DestinationCidrBlock:
+    type: string
+    description: "The CIDR block associated with the local subnet of the customer network."
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -28,7 +29,7 @@ parameters:
     required: true
   Updates:
     type: array
-    description: "An array of updates to make to the WebACL. An array of WebACLUpdate objects that you want to insert into or delete from a WebACL. For more information, see the applicable data types:    WebACLUpdate: Contains Action and ActivatedRule     ActivatedRule: Contains Action, Priority, RuleId, and Type     WafAction: Contains Type   "
+    description: "An array of updates to make to the WebACL. An array of WebACLUpdate objects that you want to insert into or delete from a WebACL. For more information, see the applicable data types:    WebACLUpdate: Contains Action and ActivatedRule     ActivatedRule: Contains Action, Priority, and RuleId     WafAction: Contains Type   "
   DefaultAction:
     type: object
     description: "A default action for the web ACL, either ALLOW or BLOCK. AWS WAF performs the default action if a request doesn't match the criteria in any of the rules in a web ACL."

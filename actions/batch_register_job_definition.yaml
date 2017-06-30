@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -32,6 +33,3 @@ parameters:
   containerProperties:
     type: object
     description: "An object with various properties specific for container-based jobs. This parameter is required if the type parameter is container."
-  retryStrategy:
-    type: object
-    description: "The retry strategy to use for failed jobs that are submitted with this job definition. Any retry strategy that is specified during a SubmitJob operation overrides the retry strategy defined here."

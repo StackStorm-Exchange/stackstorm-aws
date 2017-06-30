@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,7 +25,7 @@ parameters:
     required: true
   Image:
     type: object
-    description: "The input image as bytes or an S3 object."
+    description: ""
     required: true
   MaxFaces:
     type: integer

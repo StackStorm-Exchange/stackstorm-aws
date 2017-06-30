@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,13 +19,13 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  RouteTableId:
-    type: string
-    description: "The ID of the route table."
-    required: true
   SubnetId:
     type: string
     description: "The ID of the subnet."
+    required: true
+  RouteTableId:
+    type: string
+    description: "The ID of the route table."
     required: true
   DryRun:
     type: boolean

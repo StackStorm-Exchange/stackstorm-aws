@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   Name:
     type: string
-    description: "The name of the Systems Manager document."
+    description: "The name of the SSM document."
   InstanceId:
     type: string
     description: "The ID of the instance."

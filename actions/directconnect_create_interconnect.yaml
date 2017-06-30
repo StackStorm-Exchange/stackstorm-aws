@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -30,6 +31,3 @@ parameters:
     type: string
     description: "Where the interconnect is located Example: EqSV5 Default: None"
     required: true
-  lagId:
-    type: string
-    description: ""

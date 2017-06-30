@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,7 +25,7 @@ parameters:
     required: true
   Description:
     type: string
-    description: "A userdefined description of the resource that you want to register with Amazon EC2. "
+    description: "A user-defined description of the resource that you want to register with Amazon EC2. "
   DefaultInstanceName:
     type: string
     description: "The name of the registered, managed instance as it will appear in the Amazon EC2 console or when you use the AWS command line tools to list EC2 resources."

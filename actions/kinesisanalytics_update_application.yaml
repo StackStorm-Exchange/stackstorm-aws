@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: "Name of the Amazon Kinesis Analytics application to update."
+    description: "Name of the Kinesis Analytics application to update."
     required: true
   CurrentApplicationVersionId:
     type: integer

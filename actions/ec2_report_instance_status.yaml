@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -22,23 +23,23 @@ parameters:
     type: array
     description: "One or more instances."
     required: true
-  ReasonCodes:
-    type: array
-    description: "One or more reason codes that describes the health state of your instance.    instance-stuck-in-state: My instance is stuck in a state.    unresponsive: My instance is unresponsive.    not-accepting-credentials: My instance is not accepting my credentials.    password-not-available: A password is not available for my instance.    performance-network: My instance is experiencing performance problems which I believe are network related.    performance-instance-store: My instance is experiencing performance problems which I believe are related to the instance stores.    performance-ebs-volume: My instance is experiencing performance problems which I believe are related to an EBS volume.    performance-other: My instance is experiencing performance problems.    other: [explain using the description parameter]  "
-    required: true
   Status:
     type: string
     description: "The status of all instances listed."
     required: true
-  Description:
-    type: string
-    description: "Descriptive text about the health state of your instance."
+  ReasonCodes:
+    type: array
+    description: "One or more reason codes that describes the health state of your instance.    instance-stuck-in-state: My instance is stuck in a state.    unresponsive: My instance is unresponsive.    not-accepting-credentials: My instance is not accepting my credentials.    password-not-available: A password is not available for my instance.    performance-network: My instance is experiencing performance problems which I believe are network related.    performance-instance-store: My instance is experiencing performance problems which I believe are related to the instance stores.    performance-ebs-volume: My instance is experiencing performance problems which I believe are related to an EBS volume.    performance-other: My instance is experiencing performance problems.    other: [explain using the description parameter]  "
+    required: true
   DryRun:
     type: boolean
     description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
-  EndTime:
-    type: string
-    description: "The time at which the reported instance health state ended."
   StartTime:
     type: string
     description: "The time at which the reported instance health state began."
+  EndTime:
+    type: string
+    description: "The time at which the reported instance health state ended."
+  Description:
+    type: string
+    description: "Descriptive text about the health state of your instance."

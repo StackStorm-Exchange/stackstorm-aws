@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,7 +25,7 @@ parameters:
     required: true
   Instances:
     type: object
-    description: "A specification of the number and type of Amazon EC2 instances."
+    description: "A specification of the number and type of Amazon EC2 instances on which to run the job flow."
     required: true
   LogUri:
     type: string
@@ -40,16 +41,16 @@ parameters:
     description: " Amazon EMR releases 4.x or later.  The release label for the Amazon EMR release. For Amazon EMR 3.x and 2.x AMIs, use amiVersion instead instead of ReleaseLabel."
   Steps:
     type: array
-    description: "A list of steps to run."
+    description: "A list of steps to be executed by the job flow."
   BootstrapActions:
     type: array
-    description: "A list of bootstrap actions to run before Hadoop starts on the cluster nodes."
+    description: "A list of bootstrap actions that will be run before Hadoop is started on the cluster nodes."
   SupportedProducts:
     type: array
-    description: " For Amazon EMR releases 3.x and 2.x. For Amazon EMR releases 4.x and greater, use Applications.  A list of strings that indicates third-party software to use. For more information, see Use Third Party Applications with Amazon EMR. Currently supported values are:   'mapr-m3' - launch the job flow using MapR M3 Edition.   'mapr-m5' - launch the job flow using MapR M5 Edition.  "
+    description: " For Amazon EMR releases 3.x and 2.x. For Amazon EMR releases 4.x and greater, use Applications.  A list of strings that indicates third-party software to use with the job flow. For more information, see Use Third Party Applications with Amazon EMR. Currently supported values are:   'mapr-m3' - launch the job flow using MapR M3 Edition.   'mapr-m5' - launch the job flow using MapR M5 Edition.  "
   NewSupportedProducts:
     type: array
-    description: " For Amazon EMR releases 3.x and 2.x. For Amazon EMR releases 4.x and greater, use Applications.  A list of strings that indicates third-party software to use with the job flow that accepts a user argument list. EMR accepts and forwards the argument list to the corresponding installation script as bootstrap action arguments. For more information, see 'Launch a Job Flow on the MapR Distribution for Hadoop' in the Amazon EMR Developer Guide. Supported values are:   'mapr-m3' - launch the cluster using MapR M3 Edition.   'mapr-m5' - launch the cluster using MapR M5 Edition.   'mapr' with the user arguments specifying '--edition,m3' or '--edition,m5' - launch the job flow using MapR M3 or M5 Edition respectively.   'mapr-m7' - launch the cluster using MapR M7 Edition.   'hunk' - launch the cluster with the Hunk Big Data Analtics Platform.   'hue'- launch the cluster with Hue installed.   'spark' - launch the cluster with Apache Spark installed.   'ganglia' - launch the cluster with the Ganglia Monitoring System installed.  "
+    description: " For Amazon EMR releases 3.x and 2.x. For Amazon EMR releases 4.x and greater, use Applications.  A list of strings that indicates third-party software to use with the job flow that accepts a user argument list. EMR accepts and forwards the argument list to the corresponding installation script as bootstrap action arguments. For more information, see Launch a Job Flow on the MapR Distribution for Hadoop. Currently supported values are:   'mapr-m3' - launch the cluster using MapR M3 Edition.   'mapr-m5' - launch the cluster using MapR M5 Edition.   'mapr' with the user arguments specifying '--edition,m3' or '--edition,m5' - launch the job flow using MapR M3 or M5 Edition respectively.   'mapr-m7' - launch the cluster using MapR M7 Edition.   'hunk' - launch the cluster with the Hunk Big Data Analtics Platform.   'hue'- launch the cluster with Hue installed.   'spark' - launch the cluster with Apache Spark installed.   'ganglia' - launch the cluster with the Ganglia Monitoring System installed.  "
   Applications:
     type: array
     description: " Amazon EMR releases 4.x or later.  A list of applications for the cluster. Valid values are: 'Hadoop', 'Hive', 'Mahout', 'Pig', and 'Spark.' They are case insensitive."
@@ -58,7 +59,7 @@ parameters:
     description: " Amazon EMR releases 4.x or later.  The list of configurations supplied for the EMR cluster you are creating."
   VisibleToAllUsers:
     type: boolean
-    description: "Whether the cluster is visible to all IAM users of the AWS account associated with the cluster. If this value is set to true, all IAM users of that AWS account can view and (if they have the proper policy permissions set) manage the cluster. If it is set to false, only the IAM user that created the cluster can view and manage it."
+    description: "Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. If this value is set to true, all IAM users of that AWS account can view and (if they have the proper policy permissions set) manage the job flow. If it is set to false, only the IAM user that created the job flow can view and manage it."
   JobFlowRole:
     type: string
     description: "Also called instance profile and EC2 role. An IAM role for an EMR cluster. The EC2 instances of the cluster assume this role. The default role is EMR_EC2_DefaultRole. In order to use the default role, you must have already created it using the CLI or console."

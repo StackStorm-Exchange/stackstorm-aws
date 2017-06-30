@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -27,7 +28,7 @@ parameters:
     description: "Enables load-based auto scaling for the layer."
   UpScaling:
     type: object
-    description: "An AutoScalingThresholds object with the upscaling threshold configuration. If the load exceeds these thresholds for a specified amount of time, AWS OpsWorks Stacks starts a specified number of instances."
+    description: "An AutoScalingThresholds object with the upscaling threshold configuration. If the load exceeds these thresholds for a specified amount of time, AWS OpsWorks starts a specified number of instances."
   DownScaling:
     type: object
-    description: "An AutoScalingThresholds object with the downscaling threshold configuration. If the load falls below these thresholds for a specified amount of time, AWS OpsWorks Stacks stops a specified number of instances."
+    description: "An AutoScalingThresholds object with the downscaling threshold configuration. If the load falls below these thresholds for a specified amount of time, AWS OpsWorks stops a specified number of instances."

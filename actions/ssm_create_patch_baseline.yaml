@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -39,4 +40,4 @@ parameters:
     description: "A description of the patch baseline."
   ClientToken:
     type: string
-    description: "User-provided idempotency token."
+    description: "Caller-provided idempotency token."

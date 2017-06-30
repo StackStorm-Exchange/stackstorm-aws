@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   Id:
     type: string
-    description: "The value of Id for the traffic policy that you want to update the comment for."
+    description: "The value of Id for the traffic policy for which you want to update the comment."
     required: true
   Version:
     type: integer
-    description: "The value of Version for the traffic policy that you want to update the comment for."
+    description: "The value of Version for the traffic policy for which you want to update the comment."
     required: true
   Comment:
     type: string

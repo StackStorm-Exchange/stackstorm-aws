@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -30,13 +31,7 @@ parameters:
     description: "The document version you want update for the association. "
   ScheduleExpression:
     type: string
-    description: "The cron expression used to schedule the association that you want to update."
+    description: "The cron expression used to schedule the association that you want to update. Supported expressions are every half, 1, 2, 4, 8 or 12 hour(s); every specified day and time of the week. For example: cron(0 0/30 * 1/1 * ? *) to run every thirty minutes; cron(0 0 0/4 1/1 * ? *) to run every four hours; and cron(0 0 10 ? * SUN *) to run every Sunday at 10 a.m."
   OutputLocation:
     type: object
-    description: "An Amazon S3 bucket where you want to store the results of this request."
-  Name:
-    type: string
-    description: "The name of the association document."
-  Targets:
-    type: array
-    description: "The targets of the association."
+    description: "An Amazon S3 bucket where you want to store the results of this request.  '{ \\'S3Location\\': { \\'OutputS3Region\\': \\'&lt;region&gt;\\', \\'OutputS3BucketName\\': \\'bucket name\\', \\'OutputS3KeyPrefix\\': \\'folder name\\' } }' "

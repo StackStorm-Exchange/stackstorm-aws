@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,7 +25,7 @@ parameters:
     required: true
   ImageId:
     type: string
-    description: "The ID of the Amazon Machine Image (AMI) to use to launch your EC2 instances. If you do not specify InstanceId, you must specify ImageId. For more information, see Finding an AMI in the Amazon Elastic Compute Cloud User Guide."
+    description: "The ID of the Amazon Machine Image (AMI) to use to launch your EC2 instances. For more information, see Finding an AMI in the Amazon Elastic Compute Cloud User Guide."
   KeyName:
     type: string
     description: "The name of the key pair. For more information, see Amazon EC2 Key Pairs in the Amazon Elastic Compute Cloud User Guide."
@@ -42,10 +43,10 @@ parameters:
     description: "The user data to make available to the launched EC2 instances. For more information, see Instance Metadata and User Data in the Amazon Elastic Compute Cloud User Guide."
   InstanceId:
     type: string
-    description: "The ID of the instance to use to create the launch configuration. The new launch configuration derives attributes from the instance, with the exception of the block device mapping. If you do not specify InstanceId, you must specify both ImageId and InstanceType. To create a launch configuration with a block device mapping or override any other instance attributes, specify them as part of the same request. For more information, see Create a Launch Configuration Using an EC2 Instance in the Auto Scaling User Guide."
+    description: "The ID of the instance to use to create the launch configuration. The new launch configuration derives attributes from the instance, with the exception of the block device mapping. To create a launch configuration with a block device mapping or override any other instance attributes, specify them as part of the same request. For more information, see Create a Launch Configuration Using an EC2 Instance in the Auto Scaling User Guide."
   InstanceType:
     type: string
-    description: "The instance type of the EC2 instance. If you do not specify InstanceId, you must specify InstanceType. For information about available instance types, see Available Instance Types in the Amazon Elastic Compute Cloud User Guide. "
+    description: "The instance type of the EC2 instance. For information about available instance types, see  Available Instance Types in the Amazon Elastic Compute Cloud User Guide. "
   KernelId:
     type: string
     description: "The ID of the kernel associated with the AMI."
@@ -57,7 +58,7 @@ parameters:
     description: "One or more mappings that specify how block devices are exposed to the instance. For more information, see Block Device Mapping in the Amazon Elastic Compute Cloud User Guide."
   InstanceMonitoring:
     type: object
-    description: "Enables detailed monitoring (true) or basic monitoring (false) for the Auto Scaling instances. The default is true."
+    description: "Enables detailed monitoring (true) or basic monitoring (false) for the Auto Scaling instances."
   SpotPrice:
     type: string
     description: "The maximum hourly price to be paid for any Spot Instance launched to fulfill the request. Spot Instances are launched when the price you specify exceeds the current Spot market price. For more information, see Launching Spot Instances in Your Auto Scaling Group in the Auto Scaling User Guide."

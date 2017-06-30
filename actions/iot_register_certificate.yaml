@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -30,4 +31,4 @@ parameters:
     description: "A boolean value that specifies if the CA certificate is set to active."
   status:
     type: string
-    description: "The status of the register certificate request."
+    description: ""

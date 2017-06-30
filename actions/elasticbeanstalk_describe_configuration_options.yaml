@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -30,9 +31,6 @@ parameters:
   SolutionStackName:
     type: string
     description: "The name of the solution stack whose configuration options you want to describe."
-  PlatformArn:
-    type: string
-    description: "The ARN of the custom platform."
   Options:
     type: array
     description: "If specified, restricts the descriptions to only the specified options."

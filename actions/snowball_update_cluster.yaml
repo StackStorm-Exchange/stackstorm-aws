@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -40,6 +41,3 @@ parameters:
   Notification:
     type: object
     description: "The new or updated Notification object."
-  ForwardingAddressId:
-    type: string
-    description: "The updated ID for the forwarding address for a cluster. This field is not supported in most regions."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,10 +19,6 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  AvailabilityZone:
-    type: string
-    description: "The Availability Zone for the Dedicated Hosts."
-    required: true
   InstanceType:
     type: string
     description: "Specify the instance type that you want your Dedicated Hosts to be configured for. When you specify the instance type, that is the only instance type that you can launch onto that host."
@@ -29,6 +26,10 @@ parameters:
   Quantity:
     type: integer
     description: "The number of Dedicated Hosts you want to allocate to your account with these parameters."
+    required: true
+  AvailabilityZone:
+    type: string
+    description: "The Availability Zone for the Dedicated Hosts."
     required: true
   AutoPlacement:
     type: string

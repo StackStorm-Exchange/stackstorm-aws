@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: "The instance's AWS OpsWorks Stacks ID."
+    description: "The instance's AWS OpsWorks ID."
     required: true
   ValidForInMinutes:
     type: integer

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   FunctionName:
     type: string
-    description: "The Lambda function name. Note that the length constraint applies only to the ARN. If you specify only the function name, it is limited to 64 characters in length."
+    description: "The Lambda function name."
     required: true
   InvokeArgs:
     type: string

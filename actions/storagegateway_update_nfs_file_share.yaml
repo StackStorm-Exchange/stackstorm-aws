@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -34,12 +35,3 @@ parameters:
   DefaultStorageClass:
     type: string
     description: "The default storage class for objects put into an Amazon S3 bucket by a file gateway. Possible values are S3_STANDARD or S3_STANDARD_IA. If this field is not populated, the default value S3_STANDARD is used. Optional."
-  ClientList:
-    type: array
-    description: "The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks."
-  Squash:
-    type: string
-    description: "The user mapped to anonymous user. Valid options are the following:   'RootSquash' - Only root is mapped to anonymous user.   'NoSquash' - No one is mapped to anonymous user   'AllSquash' - Everyone is mapped to anonymous user.  "
-  ReadOnly:
-    type: boolean
-    description: "Sets the write status of a file share: 'true' if the write status is read-only, and otherwise 'false'."

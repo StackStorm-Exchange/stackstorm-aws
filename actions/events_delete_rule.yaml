@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   Name:
     type: string
-    description: "The name of the rule."
+    description: "The name of the rule to be deleted."
     required: true

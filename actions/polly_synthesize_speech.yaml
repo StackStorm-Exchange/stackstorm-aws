@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   OutputFormat:
     type: string
-    description: " The format in which the returned output will be encoded. For audio stream, this will be mp3, ogg_vorbis, or pcm. For speech marks, this will be json. "
+    description: " The audio format in which the resulting stream will be encoded. "
     required: true
   Text:
     type: string
@@ -36,9 +37,6 @@ parameters:
   SampleRate:
     type: string
     description: " The audio frequency specified in Hz.  The valid values for mp3 and ogg_vorbis are '8000', '16000', and '22050'. The default value is '22050'.   Valid values for pcm are '8000' and '16000' The default value is '16000'. "
-  SpeechMarkTypes:
-    type: array
-    description: "The type of speech marks returned for the input text."
   TextType:
     type: string
     description: " Specifies whether the input text is plain text or SSML. The default value is plain text. For more information, see Using SSML."

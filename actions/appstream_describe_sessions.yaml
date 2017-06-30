@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -35,6 +36,3 @@ parameters:
   Limit:
     type: integer
     description: "The size of each page of results. The default value is 20 and the maximum supported value is 50."
-  AuthenticationType:
-    type: string
-    description: "The authentication method of the user. It can be API for a user authenticated using a streaming URL, or SAML for a SAML federated user. If an authentication type is not provided, the operation defaults to users authenticated using a streaming URL."

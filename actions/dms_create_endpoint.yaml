@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -28,7 +29,7 @@ parameters:
     required: true
   EngineName:
     type: string
-    description: "The type of engine for the endpoint. Valid values, depending on the EndPointType, include MYSQL, ORACLE, POSTGRES, MARIADB, AURORA, REDSHIFT, S3, SYBASE, DYNAMODB, MONGODB, and SQLSERVER."
+    description: "The type of engine for the endpoint. Valid values include MYSQL, ORACLE, POSTGRES, MARIADB, AURORA, REDSHIFT, SYBASE, and SQLSERVER."
     required: true
   Username:
     type: string
@@ -60,12 +61,3 @@ parameters:
   SslMode:
     type: string
     description: "The SSL mode to use for the SSL connection. SSL mode can be one of four values: none, require, verify-ca, verify-full.  The default value is none."
-  DynamoDbSettings:
-    type: object
-    description: "Settings in JSON format for the target Amazon DynamoDB endpoint. For more information about the available settings, see the Using Object Mapping to Migrate Data to DynamoDB section at  Using an Amazon DynamoDB Database as a Target for AWS Database Migration Service. "
-  S3Settings:
-    type: object
-    description: "Settings in JSON format for the target S3 endpoint. For more information about the available settings, see the Extra Connection Attributes section at  Using Amazon S3 as a Target for AWS Database Migration Service. "
-  MongoDbSettings:
-    type: object
-    description: "Settings in JSON format for the source MongoDB endpoint. For more information about the available settings, see the Configuration Properties When Using MongoDB as a Source for AWS Database Migration Service section at  Using Amazon S3 as a Target for AWS Database Migration Service. "

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,10 +25,10 @@ parameters:
     required: true
   ProvisionedProductName:
     type: string
-    description: "The name of the ProvisionedProduct object to terminate. Specify either ProvisionedProductName or ProvisionedProductId, but not both."
+    description: "The name of the ProvisionedProduct object to terminate. You must specify either ProvisionedProductName or ProvisionedProductId, but not both."
   ProvisionedProductId:
     type: string
-    description: "The identifier of the ProvisionedProduct object to terminate. Specify either ProvisionedProductName or ProvisionedProductId, but not both."
+    description: "The identifier of the ProvisionedProduct object to terminate. You must specify either ProvisionedProductName or ProvisionedProductId, but not both."
   IgnoreErrors:
     type: boolean
     description: "If set to true, AWS Service Catalog stops managing the specified ProvisionedProduct object even if it cannot delete the underlying resources."

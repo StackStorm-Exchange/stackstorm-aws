@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,6 +25,3 @@ parameters:
   quantity:
     type: integer
     description: "The number of device slots you wish to purchase in an offering request."
-  offeringPromotionId:
-    type: string
-    description: "The ID of the offering promotion to be applied to the purchase."

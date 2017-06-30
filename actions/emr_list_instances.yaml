@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -28,12 +29,6 @@ parameters:
   InstanceGroupTypes:
     type: array
     description: "The type of instance group for which to list the instances."
-  InstanceFleetId:
-    type: string
-    description: "The unique identifier of the instance fleet."
-  InstanceFleetType:
-    type: string
-    description: "The node type of the instance fleet. For example MASTER, CORE, or TASK."
   InstanceStates:
     type: array
     description: "A list of instance states that will filter the instances returned with this request."

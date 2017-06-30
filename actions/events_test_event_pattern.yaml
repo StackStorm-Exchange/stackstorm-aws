@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   EventPattern:
     type: string
-    description: "The event pattern. For more information, see Events and Event Patterns in the Amazon CloudWatch Events User Guide."
+    description: "The event pattern you want to test."
     required: true
   Event:
     type: string
-    description: "The event, in JSON format, to test against the event pattern."
+    description: "The event in the JSON format to test against the event pattern."
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -33,7 +34,7 @@ parameters:
     description: "The path of API entities of the to-be-retrieved documentation parts."
   position:
     type: string
-    description: "The current pagination position in the paged result set."
+    description: "The position of the to-be-retrieved documentation part in the DocumentationParts collection."
   limit:
     type: integer
-    description: "The maximum number of returned results per page."
+    description: "The size of the paged results."

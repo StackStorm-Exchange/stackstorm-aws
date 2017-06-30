@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,17 +19,17 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  BgpAsn:
-    type: integer
-    description: "For devices that support BGP, the customer gateway's BGP ASN. Default: 65000"
+  Type:
+    type: string
+    description: "The type of VPN connection that this customer gateway supports (ipsec.1)."
     required: true
   PublicIp:
     type: string
     description: "The Internet-routable IP address for the customer gateway's outside interface. The address must be static."
     required: true
-  Type:
-    type: string
-    description: "The type of VPN connection that this customer gateway supports (ipsec.1)."
+  BgpAsn:
+    type: integer
+    description: "For devices that support BGP, the customer gateway's BGP ASN. Default: 65000"
     required: true
   DryRun:
     type: boolean

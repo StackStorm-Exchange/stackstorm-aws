@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -22,30 +23,30 @@ parameters:
     type: string
     description: "The ID of the route table for the route."
     required: true
-  DestinationCidrBlock:
-    type: string
-    description: "The IPv4 CIDR address block used for the destination match. Routing decisions are based on the most specific match."
-  DestinationIpv6CidrBlock:
-    type: string
-    description: "The IPv6 CIDR block used for the destination match. Routing decisions are based on the most specific match."
   DryRun:
     type: boolean
     description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
-  EgressOnlyInternetGatewayId:
+  DestinationCidrBlock:
     type: string
-    description: "[IPv6 traffic only] The ID of an egress-only Internet gateway."
+    description: "The IPv4 CIDR address block used for the destination match. Routing decisions are based on the most specific match."
   GatewayId:
     type: string
     description: "The ID of an Internet gateway or virtual private gateway attached to your VPC."
+  DestinationIpv6CidrBlock:
+    type: string
+    description: "The IPv6 CIDR block used for the destination match. Routing decisions are based on the most specific match."
+  EgressOnlyInternetGatewayId:
+    type: string
+    description: "[IPv6 traffic only] The ID of an egress-only Internet gateway."
   InstanceId:
     type: string
     description: "The ID of a NAT instance in your VPC. The operation fails if you specify an instance ID unless exactly one network interface is attached."
-  NatGatewayId:
-    type: string
-    description: "[IPv4 traffic only] The ID of a NAT gateway."
   NetworkInterfaceId:
     type: string
     description: "The ID of a network interface."
   VpcPeeringConnectionId:
     type: string
     description: "The ID of a VPC peering connection."
+  NatGatewayId:
+    type: string
+    description: "[IPv4 traffic only] The ID of a NAT gateway."

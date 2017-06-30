@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,12 +19,12 @@ parameters:
     default: boto3
     immutable: true
     type: string
+  VpcIds:
+    type: array
+    description: "One or more VPC IDs."
   MaxResults:
     type: integer
     description: "The maximum number of items to return for this request. The request returns a token that you can specify in a subsequent call to get the next set of results."
   NextToken:
     type: string
     description: "The token for the next set of items to return. (You received this token from a prior call.)"
-  VpcIds:
-    type: array
-    description: "One or more VPC IDs."

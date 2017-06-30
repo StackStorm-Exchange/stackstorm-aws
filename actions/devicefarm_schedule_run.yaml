@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -39,6 +40,3 @@ parameters:
   configuration:
     type: object
     description: "Information about the settings for the run to be scheduled."
-  executionConfiguration:
-    type: object
-    description: "Specifies configuration information about a test run, such as the execution timeout (in minutes)."

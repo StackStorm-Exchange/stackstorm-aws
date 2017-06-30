@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,7 +25,7 @@ parameters:
     required: true
   Filters:
     type: array
-    description: "Each entry in the array is a structure containing: Key (string between 1 and 200 characters)  Values (array containing a single string)  Type (string 'Equal', 'NotEqual', 'LessThan', 'GreaterThan')"
+    description: "Each entry in the array is a structure containing: Key (string 1 ≤ length ≤ 200)  Values (array containing a single string)  Type (string “Equal”, “NotEqual”, “LessThan”, “GreaterThan”)"
   NextToken:
     type: string
     description: "The token for the next set of items to return. (You received this token from a previous call.)"

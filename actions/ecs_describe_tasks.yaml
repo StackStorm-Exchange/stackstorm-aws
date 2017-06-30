@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   tasks:
     type: array
-    description: "A list of up to 100 task IDs or full Amazon Resource Name (ARN) entries."
+    description: "A space-separated list of task IDs or full Amazon Resource Name (ARN) entries."
     required: true
   cluster:
     type: string

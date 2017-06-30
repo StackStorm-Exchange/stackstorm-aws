@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   FleetId:
     type: string
-    description: "Unique identifier for a fleet to update attribute metadata for."
+    description: "Unique identifier for the fleet you want to update attribute metadata for."
     required: true
   Name:
     type: string
-    description: "Descriptive label that is associated with a fleet. Fleet names do not need to be unique."
+    description: "Descriptive label associated with a fleet. Fleet names do not need to be unique."
   Description:
     type: string
     description: "Human-readable description of a fleet."
@@ -34,6 +35,3 @@ parameters:
   ResourceCreationLimitPolicy:
     type: object
     description: "Policy that limits the number of game sessions an individual player can create over a span of time. "
-  MetricGroups:
-    type: array
-    description: "Names of metric groups to include this fleet with. A fleet metric group is used in Amazon CloudWatch to aggregate metrics from multiple fleets. Use an existing metric group name to add this fleet to the group, or use a new name to create a new metric group. Currently, a fleet can only be included in one metric group at a time."

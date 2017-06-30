@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   FleetId:
     type: string
-    description: "Unique identifier for a fleet to get event logs for."
+    description: "Unique identifier for the fleet to get event logs for."
     required: true
   StartTime:
     type: string
@@ -33,4 +34,4 @@ parameters:
     description: "Maximum number of results to return. Use this parameter with NextToken to get results as a set of sequential pages."
   NextToken:
     type: string
-    description: "Token that indicates the start of the next sequential page of results. Use the token that is returned with a previous call to this action. To specify the start of the result set, do not specify a value."
+    description: "Token indicating the start of the next sequential page of results. Use the token that is returned with a previous call to this action. To specify the start of the result set, do not specify a value."

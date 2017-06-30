@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,5 +25,5 @@ parameters:
     required: true
   Username:
     type: string
-    description: "The user name of the user you wish to enable."
+    description: "The user name of the user you wish to ebable."
     required: true

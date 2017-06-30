@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -49,16 +50,7 @@ parameters:
     description: "Information about triggers to change when the deployment group is updated. For examples, see Modify Triggers in an AWS CodeDeploy Deployment Group in the AWS CodeDeploy User Guide."
   alarmConfiguration:
     type: object
-    description: "Information to add or change about Amazon CloudWatch alarms when the deployment group is updated."
+    description: "Information to add or change about Amazon CloudWatch alarms when the deployment group is updated. "
   autoRollbackConfiguration:
     type: object
     description: "Information for an automatic rollback configuration that is added or changed when a deployment group is updated."
-  deploymentStyle:
-    type: object
-    description: "Information about the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer."
-  blueGreenDeploymentConfiguration:
-    type: object
-    description: "Information about blue/green deployment options for a deployment group."
-  loadBalancerInfo:
-    type: object
-    description: "Information about the load balancer used in a deployment."

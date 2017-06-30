@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -33,9 +34,6 @@ parameters:
   EnvironmentName:
     type: string
     description: "If specified, AWS Elastic Beanstalk restricts the returned descriptions to those associated with this environment."
-  PlatformArn:
-    type: string
-    description: "The ARN of the version of the custom platform."
   RequestId:
     type: string
     description: "If specified, AWS Elastic Beanstalk restricts the described events to include only those associated with this request ID."

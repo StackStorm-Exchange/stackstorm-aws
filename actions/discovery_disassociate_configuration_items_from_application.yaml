@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   applicationConfigurationId:
     type: string
-    description: "Configuration ID of an application from which each item is disassociated."
+    description: "Configuration ID of an application from which each item will be disassociated."
     required: true
   configurationIds:
     type: array
-    description: "Configuration ID of each item to be disassociated from an application."
+    description: "Configuration ID of each item be be disassociated from an application."
     required: true

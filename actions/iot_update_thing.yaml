@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -27,7 +28,7 @@ parameters:
     description: "The name of the thing type."
   attributePayload:
     type: object
-    description: "A list of thing attributes, a JSON string containing name-value pairs. For example:  {\'attributes\':{\'name1\':\'value2\'}}  This data is used to add new attributes or update existing attributes."
+    description: "A list of thing attributes, a JSON string containing name-value pairs. For example: {\\'attributes\\':{\\'name1\\':\\'value2\\'}}) This data is used to add new attributes or update existing attributes."
   expectedVersion:
     type: integer
     description: "The expected version of the thing record in the registry. If the version of the record in the registry does not match the expected version specified in the request, the UpdateThing request is rejected with a VersionConflictException."

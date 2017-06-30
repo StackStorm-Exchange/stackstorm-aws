@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   ReplicationTaskIdentifier:
     type: string
-    description: "The replication task identifier. Constraints:   Must contain from 1 to 255 alphanumeric characters or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.  "
+    description: "The replication task identifier. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.  "
     required: true
   SourceEndpointArn:
     type: string
@@ -40,7 +41,7 @@ parameters:
     required: true
   TableMappings:
     type: string
-    description: "When using the AWS CLI or boto3, provide the path of the JSON file that contains the table mappings. Precede the path with 'file://'. When working with the DMS API, provide the JSON as the parameter value. For example, --table-mappings file://mappingfile.json"
+    description: "The path of the JSON file that contains the table mappings. Preceed the path with 'file://'. For example, --table-mappings file://mappingfile.json"
     required: true
   ReplicationTaskSettings:
     type: string

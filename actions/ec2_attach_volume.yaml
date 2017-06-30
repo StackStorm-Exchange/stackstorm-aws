@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,17 +19,17 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  Device:
+  VolumeId:
     type: string
-    description: "The device name to expose to the instance (for example, /dev/sdh or xvdh)."
+    description: "The ID of the EBS volume. The volume and instance must be within the same Availability Zone."
     required: true
   InstanceId:
     type: string
     description: "The ID of the instance."
     required: true
-  VolumeId:
+  Device:
     type: string
-    description: "The ID of the EBS volume. The volume and instance must be within the same Availability Zone."
+    description: "The device name to expose to the instance (for example, /dev/sdh or xvdh)."
     required: true
   DryRun:
     type: boolean

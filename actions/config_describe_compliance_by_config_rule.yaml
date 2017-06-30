@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -26,4 +27,4 @@ parameters:
     description: "Filters the results by compliance. The allowed values are COMPLIANT, NON_COMPLIANT, and INSUFFICIENT_DATA."
   NextToken:
     type: string
-    description: "The NextToken string returned on a previous page that you use to get the next page of results in a paginated response."
+    description: "The nextToken string returned on a previous page that you use to get the next page of results in a paginated response."

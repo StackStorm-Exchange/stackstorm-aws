@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,7 @@ parameters:
     type: string
   repositoryName:
     type: string
-    description: "The name of the repository where you want to create or update the trigger."
-    required: true
+    description: "The name of the repository where you want to create or update the trigger. "
   triggers:
     type: array
-    description: "The JSON block of configuration information for each trigger."
-    required: true
+    description: "The JSON block of configuration information for each trigger. "

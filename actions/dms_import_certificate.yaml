@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -28,6 +29,3 @@ parameters:
   CertificateWallet:
     type: string
     description: "The location of the imported Oracle Wallet certificate for use with SSL."
-  Tags:
-    type: array
-    description: "The tags associated with the certificate."

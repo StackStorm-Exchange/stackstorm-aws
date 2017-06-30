@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   Id:
     type: string
-    description: "The ID for the hosted zone that you want to update the comment for."
+    description: "The ID for the hosted zone for which you want to update the comment."
     required: true
   Comment:
     type: string

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,5 +25,5 @@ parameters:
     required: true
   LoadBalancerAttributes:
     type: object
-    description: "The attributes for the load balancer."
+    description: "The attributes of the load balancer."
     required: true

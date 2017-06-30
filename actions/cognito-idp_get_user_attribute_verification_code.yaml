@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -18,11 +19,10 @@ parameters:
     default: boto3
     immutable: true
     type: string
-  AccessToken:
-    type: string
-    description: "The access token returned by the server response to get the user attribute verification code."
-    required: true
   AttributeName:
     type: string
     description: "The attribute name returned by the server response to get the user attribute verification code."
     required: true
+  AccessToken:
+    type: string
+    description: "The access token returned by the server response to get the user attribute verification code."

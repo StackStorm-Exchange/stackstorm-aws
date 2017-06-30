@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   LoadBalancerArns:
     type: array
-    description: "The Amazon Resource Names (ARN) of the load balancers. You can specify up to 20 load balancers in a single call."
+    description: "The Amazon Resource Names (ARN) of the load balancers."
   Names:
     type: array
     description: "The names of the load balancers."

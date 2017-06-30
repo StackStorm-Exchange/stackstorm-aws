@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   DomainName:
     type: string
-    description: "The name of the domain that you want to disable automatic renewal for."
+    description: ""
     required: true

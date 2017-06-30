@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -39,16 +40,13 @@ parameters:
     description: "The VPC configuration for the fleet."
   MaxUserDurationInSeconds:
     type: integer
-    description: "The maximum time for which a streaming session can run. The input can be any numeric value in seconds between 600 and 57600."
+    description: "The maximum time up to which a streaming session can run."
   DisconnectTimeoutInSeconds:
     type: integer
-    description: "The time after disconnection when a session is considered to have ended. If a user who got disconnected reconnects within this timeout interval, the user is connected back to their previous session. The input can be any numeric value in seconds between 60 and 57600. "
+    description: "The time after disconnection when a session is considered to have ended. If a user who got disconnected reconnects within this timeout interval, the user is connected back to his/her previous session. "
   Description:
     type: string
     description: "The description of the fleet."
   DisplayName:
     type: string
     description: "The display name of the fleet."
-  EnableDefaultInternetAccess:
-    type: boolean
-    description: "Enables or disables default Internet access for the fleet."

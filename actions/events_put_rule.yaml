@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -27,7 +28,7 @@ parameters:
     description: "The scheduling expression. For example, 'cron(0 20 * * ? *)', 'rate(5 minutes)'."
   EventPattern:
     type: string
-    description: "The event pattern. For more information, see Events and Event Patterns in the Amazon CloudWatch Events User Guide."
+    description: "The event pattern."
   State:
     type: string
     description: "Indicates whether the rule is enabled or disabled."

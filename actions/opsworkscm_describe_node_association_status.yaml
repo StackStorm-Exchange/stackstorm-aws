@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -24,5 +25,5 @@ parameters:
     required: true
   ServerName:
     type: string
-    description: "The name of the server from which to disassociate the node. "
+    description: ""
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   projectName:
     type: string
-    description: "The name of the build project."
+    description: "The name of the build project to get a list of build IDs for."
     required: true
   sortOrder:
     type: string

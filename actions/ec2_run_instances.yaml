@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -22,80 +23,77 @@ parameters:
     type: string
     description: "The ID of the AMI, which you can get by calling DescribeImages."
     required: true
-  MaxCount:
-    type: integer
-    description: "The maximum number of instances to launch. If you specify more instances than Amazon EC2 can launch in the target Availability Zone, Amazon EC2 launches the largest possible number of instances above MinCount. Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more information about the default limits, and how to request an increase, see How many instances can I run in Amazon EC2 in the Amazon EC2 FAQ."
-    required: true
   MinCount:
     type: integer
     description: "The minimum number of instances to launch. If you specify a minimum that is more instances than Amazon EC2 can launch in the target Availability Zone, Amazon EC2 launches no instances. Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more information about the default limits, and how to request an increase, see How many instances can I run in Amazon EC2 in the Amazon EC2 General FAQ."
     required: true
-  BlockDeviceMappings:
-    type: array
-    description: "The block device mapping.  Supplying both a snapshot ID and an encryption value as arguments for block-device mapping results in an error. This is because only blank volumes can be encrypted on start, and these are not created from a snapshot. If a snapshot is the basis for the volume, it contains data by definition and its encryption status cannot be changed using this action. "
-  InstanceType:
-    type: string
-    description: "The instance type. For more information, see Instance Types in the Amazon Elastic Compute Cloud User Guide. Default: m1.small "
-  Ipv6AddressCount:
+  MaxCount:
     type: integer
-    description: "[EC2-VPC] A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet. You cannot specify this option and the option to assign specific IPv6 addresses in the same request. You can specify this option if you've specified a minimum number of instances to launch."
-  Ipv6Addresses:
-    type: array
-    description: "[EC2-VPC] Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface. You cannot specify this option and the option to assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified a minimum number of instances to launch."
-  KernelId:
-    type: string
-    description: "The ID of the kernel.  We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see  PV-GRUB in the Amazon Elastic Compute Cloud User Guide. "
-  KeyName:
-    type: string
-    description: "The name of the key pair. You can create a key pair using CreateKeyPair or ImportKeyPair.  If you do not specify a key pair, you can't connect to the instance unless you choose an AMI that is configured to allow users another way to log in. "
-  Monitoring:
-    type: object
-    description: "The monitoring for the instance."
-  Placement:
-    type: object
-    description: "The placement for the instance."
-  RamdiskId:
-    type: string
-    description: "The ID of the RAM disk.  We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see  PV-GRUB in the Amazon Elastic Compute Cloud User Guide. "
-  SecurityGroupIds:
-    type: array
-    description: "One or more security group IDs. You can create a security group using CreateSecurityGroup. Default: Amazon EC2 uses the default security group."
-  SecurityGroups:
-    type: array
-    description: "[EC2-Classic, default VPC] One or more security group names. For a nondefault VPC, you must use security group IDs instead. Default: Amazon EC2 uses the default security group."
-  SubnetId:
-    type: string
-    description: "[EC2-VPC] The ID of the subnet to launch the instance into."
-  UserData:
-    type: string
-    description: "The user data to make available to the instance. For more information, see Running Commands on Your Linux Instance at Launch (Linux) and Adding User Data (Windows). If you are using an AWS SDK or command line tool, Base64-encoding is performed for you, and you can load the text from a file. Otherwise, you must provide Base64-encoded text."
-  AdditionalInfo:
-    type: string
-    description: "Reserved."
-  ClientToken:
-    type: string
-    description: "Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more information, see Ensuring Idempotency. Constraints: Maximum 64 ASCII characters"
-  DisableApiTermination:
-    type: boolean
-    description: "If you set this parameter to true, you can't terminate the instance using the Amazon EC2 console, CLI, or API; otherwise, you can. To change this attribute to false after launch, use ModifyInstanceAttribute. Alternatively, if you set InstanceInitiatedShutdownBehavior to terminate, you can terminate the instance by running the shutdown command from the instance. Default: false "
+    description: "The maximum number of instances to launch. If you specify more instances than Amazon EC2 can launch in the target Availability Zone, Amazon EC2 launches the largest possible number of instances above MinCount. Constraints: Between 1 and the maximum number you're allowed for the specified instance type. For more information about the default limits, and how to request an increase, see How many instances can I run in Amazon EC2 in the Amazon EC2 FAQ."
+    required: true
   DryRun:
     type: boolean
     description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
-  EbsOptimized:
-    type: boolean
-    description: "Indicates whether the instance is optimized for EBS I/O. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance. This optimization isn't available with all instance types. Additional usage charges apply when using an EBS-optimized instance. Default: false "
-  IamInstanceProfile:
+  KeyName:
+    type: string
+    description: "The name of the key pair. You can create a key pair using CreateKeyPair or ImportKeyPair.  If you do not specify a key pair, you can't connect to the instance unless you choose an AMI that is configured to allow users another way to log in. "
+  SecurityGroups:
+    type: array
+    description: "[EC2-Classic, default VPC] One or more security group names. For a nondefault VPC, you must use security group IDs instead. Default: Amazon EC2 uses the default security group."
+  SecurityGroupIds:
+    type: array
+    description: "One or more security group IDs. You can create a security group using CreateSecurityGroup. Default: Amazon EC2 uses the default security group."
+  UserData:
+    type: string
+    description: "The user data to make available to the instance. For more information, see Running Commands on Your Linux Instance at Launch (Linux) and Adding User Data (Windows). If you are using an AWS SDK or command line tool, Base64-encoding is performed for you, and you can load the text from a file. Otherwise, you must provide Base64-encoded text."
+  InstanceType:
+    type: string
+    description: "The instance type. For more information, see Instance Types in the Amazon Elastic Compute Cloud User Guide. Default: m1.small "
+  Placement:
     type: object
-    description: "The IAM instance profile."
+    description: "The placement for the instance."
+  KernelId:
+    type: string
+    description: "The ID of the kernel.  We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see  PV-GRUB in the Amazon Elastic Compute Cloud User Guide. "
+  RamdiskId:
+    type: string
+    description: "The ID of the RAM disk.  We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see  PV-GRUB in the Amazon Elastic Compute Cloud User Guide. "
+  BlockDeviceMappings:
+    type: array
+    description: "The block device mapping.  Supplying both a snapshot ID and an encryption value as arguments for block-device mapping results in an error. This is because only blank volumes can be encrypted on start, and these are not created from a snapshot. If a snapshot is the basis for the volume, it contains data by definition and its encryption status cannot be changed using this action. "
+  Monitoring:
+    type: object
+    description: "The monitoring for the instance."
+  SubnetId:
+    type: string
+    description: "[EC2-VPC] The ID of the subnet to launch the instance into."
+  DisableApiTermination:
+    type: boolean
+    description: "If you set this parameter to true, you can't terminate the instance using the Amazon EC2 console, CLI, or API; otherwise, you can. To change this attribute to false after launch, use ModifyInstanceAttribute. Alternatively, if you set InstanceInitiatedShutdownBehavior to terminate, you can terminate the instance by running the shutdown command from the instance. Default: false "
   InstanceInitiatedShutdownBehavior:
     type: string
     description: "Indicates whether an instance stops or terminates when you initiate shutdown from the instance (using the operating system command for system shutdown). Default: stop "
-  NetworkInterfaces:
-    type: array
-    description: "One or more network interfaces."
   PrivateIpAddress:
     type: string
     description: "[EC2-VPC] The primary IPv4 address. You must specify a value from the IPv4 address range of the subnet. Only one private IP address can be designated as primary. You can't specify this option if you've specified the option to designate a private IP address as the primary IP address in a network interface specification. You cannot specify this option if you're launching more than one instance in the request."
-  TagSpecifications:
+  Ipv6Addresses:
     type: array
-    description: "The tags to apply to the resources during launch. You can tag instances and volumes. The specified tags are applied to all instances or volumes that are created during launch."
+    description: "[EC2-VPC] Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface. You cannot specify this option and the option to assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified a minimum number of instances to launch."
+  Ipv6AddressCount:
+    type: integer
+    description: "[EC2-VPC] A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet. You cannot specify this option and the option to assign specific IPv6 addresses in the same request. You can specify this option if you've specified a minimum number of instances to launch."
+  ClientToken:
+    type: string
+    description: "Unique, case-sensitive identifier you provide to ensure the idempotency of the request. For more information, see Ensuring Idempotency. Constraints: Maximum 64 ASCII characters"
+  AdditionalInfo:
+    type: string
+    description: "Reserved."
+  NetworkInterfaces:
+    type: array
+    description: "One or more network interfaces."
+  IamInstanceProfile:
+    type: object
+    description: "The IAM instance profile."
+  EbsOptimized:
+    type: boolean
+    description: "Indicates whether the instance is optimized for EBS I/O. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance. This optimization isn't available with all instance types. Additional usage charges apply when using an EBS-optimized instance. Default: false "
