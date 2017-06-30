@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   CreationToken:
     type: string
-    description: 'String of up to 64 ASCII characters. Amazon EFS uses this to ensure idempotent creation.'
+    description: "String of up to 64 ASCII characters. Amazon EFS uses this to ensure idempotent creation."
     required: true
   PerformanceMode:
     type: string
-    description: 'The PerformanceMode of the file system. We recommend generalPurpose performance mode for most file systems. File systems using the maxIO performance mode can scale to higher levels of aggregate throughput and operations per second with a tradeoff of slightly higher latencies for most file operations. This can"t be changed after the file system has been created.'
+    description: "The PerformanceMode of the file system. We recommend generalPurpose performance mode for most file systems. File systems using the maxIO performance mode can scale to higher levels of aggregate throughput and operations per second with a tradeoff of slightly higher latencies for most file operations. This can't be changed after the file system has been created."

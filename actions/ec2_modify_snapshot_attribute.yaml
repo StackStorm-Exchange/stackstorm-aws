@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,23 +21,23 @@ parameters:
     type: string
   SnapshotId:
     type: string
-    description: 'The ID of the snapshot.'
+    description: "The ID of the snapshot."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   Attribute:
     type: string
-    description: 'The snapshot attribute to modify.  Only volume creation permissions may be modified at the customer level. '
+    description: "The snapshot attribute to modify.  Only volume creation permissions may be modified at the customer level. "
   OperationType:
     type: string
-    description: 'The type of operation to perform to the attribute.'
+    description: "The type of operation to perform to the attribute."
   UserIds:
     type: array
-    description: 'The account ID to modify for the snapshot.'
+    description: "The account ID to modify for the snapshot."
   GroupNames:
     type: array
-    description: 'The group to modify for the snapshot.'
+    description: "The group to modify for the snapshot."
   CreateVolumePermission:
     type: object
-    description: 'A JSON representation of the snapshot attribute modification.'
+    description: "A JSON representation of the snapshot attribute modification."

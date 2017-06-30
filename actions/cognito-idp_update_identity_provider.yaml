@@ -1,0 +1,38 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: cognito-idp_update_identity_provider
+runner_type: python-script
+parameters:
+  action:
+    default: update_identity_provider
+    immutable: true
+    type: string
+  cls:
+    default: cognito-idp
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  UserPoolId:
+    type: string
+    description: "The user pool ID."
+    required: true
+  ProviderName:
+    type: string
+    description: "The identity provider name."
+    required: true
+  ProviderDetails:
+    type: object
+    description: "The identity provider details to be updated, such as MetadataURL and MetadataFile."
+  AttributeMapping:
+    type: object
+    description: "The identity provider attribute mapping to be changed."
+  IdpIdentifiers:
+    type: array
+    description: "A list of identity provider identifiers."

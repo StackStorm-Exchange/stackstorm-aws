@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   StartTime:
     type: string
-    description: 'The start of the time frame for which to generate a graph.'
+    description: "The start of the time frame for which to generate a graph."
     required: true
   EndTime:
     type: string
-    description: 'The end of the time frame for which to generate a graph.'
+    description: "The end of the time frame for which to generate a graph."
     required: true
   NextToken:
     type: string
-    description: 'Pagination token. Not used.'
+    description: "Pagination token. Not used."

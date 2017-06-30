@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,42 +21,42 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the product.'
+    description: "The name of the product."
     required: true
   Owner:
     type: string
-    description: 'The owner of the product.'
+    description: "The owner of the product."
     required: true
   ProductType:
     type: string
-    description: 'The type of the product to create.'
+    description: "The type of the product to create."
     required: true
   ProvisioningArtifactParameters:
     type: object
-    description: 'Parameters for the provisioning artifact.'
+    description: "Parameters for the provisioning artifact."
     required: true
   IdempotencyToken:
     type: string
-    description: 'A token to disambiguate duplicate requests. You can create multiple resources using the same input in multiple requests, provided that you also specify a different idempotency token for each request.'
+    description: "A token to disambiguate duplicate requests. You can create multiple resources using the same input in multiple requests, provided that you also specify a different idempotency token for each request."
     required: true
   AcceptLanguage:
     type: string
-    description: 'The language code to use for this operation. Supported language codes are as follows: "en" (English) "jp" (Japanese) "zh" (Chinese) If no code is specified, "en" is used as the default.'
+    description: "The language code to use for this operation. Supported language codes are as follows: 'en' (English) 'jp' (Japanese) 'zh' (Chinese) If no code is specified, 'en' is used as the default."
   Description:
     type: string
-    description: 'The text description of the product.'
+    description: "The text description of the product."
   Distributor:
     type: string
-    description: 'The distributor of the product.'
+    description: "The distributor of the product."
   SupportDescription:
     type: string
-    description: 'Support information about the product.'
+    description: "Support information about the product."
   SupportEmail:
     type: string
-    description: 'Contact email for product support.'
+    description: "Contact email for product support."
   SupportUrl:
     type: string
-    description: 'Contact URL for product support.'
+    description: "Contact URL for product support."
   Tags:
     type: array
-    description: 'Tags to associate with the new product.'
+    description: "Tags to associate with the new product."

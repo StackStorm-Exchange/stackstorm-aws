@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   DataSourceId:
     type: string
-    description: 'The ID assigned to the DataSource at creation.'
+    description: "The ID assigned to the DataSource at creation."
     required: true
   Verbose:
     type: boolean
-    description: 'Specifies whether the GetDataSource operation should return DataSourceSchema. If true, DataSourceSchema is returned. If false, DataSourceSchema is not returned.'
+    description: "Specifies whether the GetDataSource operation should return DataSourceSchema. If true, DataSourceSchema is returned. If false, DataSourceSchema is not returned."

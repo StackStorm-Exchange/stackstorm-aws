@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   CloudFrontOriginAccessIdentityConfig:
     type: object
-    description: 'The identity"s configuration information.'
+    description: "The identity's configuration information."
     required: true
   Id:
     type: string
-    description: 'The identity"s id.'
+    description: "The identity's id."
     required: true
   IfMatch:
     type: string
-    description: 'The value of the ETag header that you received when retrieving the identity"s configuration. For example: E2QWRUHAPOMQZL.'
+    description: "The value of the ETag header that you received when retrieving the identity's configuration. For example: E2QWRUHAPOMQZL."

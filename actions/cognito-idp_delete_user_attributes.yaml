@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   UserAttributeNames:
     type: array
-    description: 'An array of strings representing the user attribute names you wish to delete.'
+    description: "An array of strings representing the user attribute names you wish to delete."
     required: true
   AccessToken:
     type: string
-    description: 'The access token used in the request to delete user attributes.'
+    description: "The access token used in the request to delete user attributes."

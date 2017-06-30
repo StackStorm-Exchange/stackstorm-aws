@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ResourceArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the AWS CloudHSM resource.'
+    description: "The Amazon Resource Name (ARN) of the AWS CloudHSM resource."
     required: true
   TagKeyList:
     type: array
-    description: 'The tag key or keys to remove. Specify only the tag key to remove (not the value). To overwrite the value for an existing tag, use AddTagsToResource.'
+    description: "The tag key or keys to remove. Specify only the tag key to remove (not the value). To overwrite the value for an existing tag, use AddTagsToResource."
     required: true

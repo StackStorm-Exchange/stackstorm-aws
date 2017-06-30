@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   virtualInterfaceId:
     type: string
-    description: 'The ID of the virtual interface on which the BGP peer will be provisioned. Example: dxvif-456abc78 Default: None'
+    description: "The ID of the virtual interface on which the BGP peer will be provisioned. Example: dxvif-456abc78 Default: None"
   newBGPPeer:
     type: object
-    description: 'Detailed information for the BGP peer to be created. Default: None'
+    description: "Detailed information for the BGP peer to be created. Default: None"

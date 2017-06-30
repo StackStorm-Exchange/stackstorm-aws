@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   ClusterId:
     type: string
-    description: 'Specifies the ID of a cluster. The instance group to which the automatic scaling policy is applied is within this cluster.'
+    description: "Specifies the ID of a cluster. The instance group to which the automatic scaling policy is applied is within this cluster."
     required: true
   InstanceGroupId:
     type: string
-    description: 'Specifies the ID of the instance group to which the automatic scaling policy is applied.'
+    description: "Specifies the ID of the instance group to which the automatic scaling policy is applied."
     required: true
   AutoScalingPolicy:
     type: object
-    description: 'Specifies the definition of the automatic scaling policy.'
+    description: "Specifies the definition of the automatic scaling policy."
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   ConfigRuleName:
     type: string
-    description: 'The name of the Config rule for which you want to delete the evaluation results.'
+    description: "The name of the Config rule for which you want to delete the evaluation results."
     required: true

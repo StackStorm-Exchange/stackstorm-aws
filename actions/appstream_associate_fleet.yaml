@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   FleetName:
     type: string
-    description: 'The name of the fleet to associate.'
+    description: "The name of the fleet to associate."
     required: true
   StackName:
     type: string
-    description: 'The name of the stack to which the fleet is associated.'
+    description: "The name of the stack to which the fleet is associated."
     required: true

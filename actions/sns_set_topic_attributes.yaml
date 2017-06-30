@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   TopicArn:
     type: string
-    description: 'The ARN of the topic to modify.'
+    description: "The ARN of the topic to modify."
     required: true
   AttributeName:
     type: string
-    description: 'The name of the attribute you want to set. Only a subset of the topic"s attributes are mutable. Valid values: Policy | DisplayName | DeliveryPolicy '
+    description: "The name of the attribute you want to set. Only a subset of the topic's attributes are mutable. Valid values: Policy | DisplayName | DeliveryPolicy "
     required: true
   AttributeValue:
     type: string
-    description: 'The new value for the attribute.'
+    description: "The new value for the attribute."

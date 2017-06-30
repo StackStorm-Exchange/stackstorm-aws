@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   WorkspaceIds:
     type: array
-    description: 'An array of strings that contain the identifiers of the WorkSpaces.'
+    description: "An array of strings that contain the identifiers of the WorkSpaces."
   NextToken:
     type: string
-    description: 'The next token of the request.'
+    description: "The next token of the request."

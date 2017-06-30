@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   ResourceIdList:
     type: array
-    description: 'Specifies a list of trail ARNs whose tags will be listed. The list has a limit of 20 ARNs. The format of a trail ARN is:  arn:aws:cloudtrail:us-east-1:123456789012:trail/MyTrail '
+    description: "Specifies a list of trail ARNs whose tags will be listed. The list has a limit of 20 ARNs. The format of a trail ARN is:  arn:aws:cloudtrail:us-east-1:123456789012:trail/MyTrail "
     required: true
   NextToken:
     type: string
-    description: 'Reserved for future use.'
+    description: "Reserved for future use."

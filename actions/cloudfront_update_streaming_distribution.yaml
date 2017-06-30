@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   StreamingDistributionConfig:
     type: object
-    description: 'The streaming distribution"s configuration information.'
+    description: "The streaming distribution's configuration information."
     required: true
   Id:
     type: string
-    description: 'The streaming distribution"s id.'
+    description: "The streaming distribution's id."
     required: true
   IfMatch:
     type: string
-    description: 'The value of the ETag header that you received when retrieving the streaming distribution"s configuration. For example: E2QWRUHAPOMQZL.'
+    description: "The value of the ETag header that you received when retrieving the streaming distribution's configuration. For example: E2QWRUHAPOMQZL."

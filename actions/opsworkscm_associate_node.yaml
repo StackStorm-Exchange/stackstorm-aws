@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   ServerName:
     type: string
-    description: ''
+    description: ""
     required: true
   NodeName:
     type: string
-    description: ''
+    description: ""
     required: true
   EngineAttributes:
     type: array
-    description: ''
+    description: ""

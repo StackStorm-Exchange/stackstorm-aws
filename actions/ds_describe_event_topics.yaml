@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'The Directory ID for which to get the list of associated SNS topics. If this member is null, associations for all Directory IDs are returned.'
+    description: "The Directory ID for which to get the list of associated SNS topics. If this member is null, associations for all Directory IDs are returned."
   TopicNames:
     type: array
-    description: 'A list of SNS topic names for which to obtain the information. If this member is null, all associations for the specified Directory ID are returned. An empty list results in an InvalidParameterException being thrown.'
+    description: "A list of SNS topic names for which to obtain the information. If this member is null, all associations for the specified Directory ID are returned. An empty list results in an InvalidParameterException being thrown."

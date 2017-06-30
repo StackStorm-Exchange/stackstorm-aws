@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   ResourceType:
     type: string
-    description: 'Specifies the type of resource you are tagging.'
+    description: "Specifies the type of resource you are tagging."
     required: true
   ResourceId:
     type: string
-    description: 'The resource ID you want to tag.'
+    description: "The resource ID you want to tag."
     required: true
   Tags:
     type: array
-    description: ' One or more tags. The value parameter is required, but if you don"t want the tag to have a value, specify the parameter with no value, and we set the value to an empty string. '
+    description: " One or more tags. The value parameter is required, but if you don't want the tag to have a value, specify the parameter with no value, and we set the value to an empty string. "
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,24 +21,24 @@ parameters:
     type: string
   MetricName:
     type: string
-    description: 'The name of the metric.'
+    description: "The name of the metric."
     required: true
   Namespace:
     type: string
-    description: 'The namespace of the metric.'
+    description: "The namespace of the metric."
     required: true
   Statistic:
     type: string
-    description: 'The statistic for the metric, other than percentiles. For percentile statistics, use ExtendedStatistics.'
+    description: "The statistic for the metric, other than percentiles. For percentile statistics, use ExtendedStatistics."
   ExtendedStatistic:
     type: string
-    description: 'The percentile statistic for the metric. Specify a value between p0.0 and p100.'
+    description: "The percentile statistic for the metric. Specify a value between p0.0 and p100."
   Dimensions:
     type: array
-    description: 'The dimensions associated with the metric. If the metric has any associated dimensions, you must specify them in order for the call to succeed.'
+    description: "The dimensions associated with the metric. If the metric has any associated dimensions, you must specify them in order for the call to succeed."
   Period:
     type: integer
-    description: 'The period, in seconds, over which the statistic is applied.'
+    description: "The period, in seconds, over which the statistic is applied."
   Unit:
     type: string
-    description: 'The unit for the metric.'
+    description: "The unit for the metric."

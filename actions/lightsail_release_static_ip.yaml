@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   staticIpName:
     type: string
-    description: 'The name of the static IP to delete.'
+    description: "The name of the static IP to delete."
     required: true

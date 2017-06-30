@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   CommandId:
     type: string
-    description: '(Required) The parent command ID of the invocation plugin.'
+    description: "(Required) The parent command ID of the invocation plugin."
     required: true
   InstanceId:
     type: string
-    description: '(Required) The ID of the managed instance targeted by the command. A managed instance can be an Amazon EC2 instance or an instance in your hybrid environment that is configured for Systems Manager.'
+    description: "(Required) The ID of the managed instance targeted by the command. A managed instance can be an Amazon EC2 instance or an instance in your hybrid environment that is configured for Systems Manager."
     required: true
   PluginName:
     type: string
-    description: '(Optional) The name of the plugin for which you want detailed results. If the SSM document contains only one plugin, the name can be omitted and the details will be returned.'
+    description: "(Optional) The name of the plugin for which you want detailed results. If the SSM document contains only one plugin, the name can be omitted and the details will be returned."

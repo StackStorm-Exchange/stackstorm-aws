@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'A friendly name or description of the SizeConstraintSet. You can"t change Name after you create a SizeConstraintSet.'
+    description: "A friendly name or description of the SizeConstraintSet. You can't change Name after you create a SizeConstraintSet."
     required: true
   ChangeToken:
     type: string
-    description: 'The value returned by the most recent call to GetChangeToken.'
+    description: "The value returned by the most recent call to GetChangeToken."
     required: true

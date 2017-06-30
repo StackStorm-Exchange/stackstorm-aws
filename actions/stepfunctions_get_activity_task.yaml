@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   activityArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the activity to retrieve tasks from.'
+    description: "The Amazon Resource Name (ARN) of the activity to retrieve tasks from."
     required: true
   workerName:
     type: string
-    description: 'An arbitrary name may be provided in order to identify the worker that the task is assigned to. This name will be used when it is logged in the execution history.'
+    description: "An arbitrary name may be provided in order to identify the worker that the task is assigned to. This name will be used when it is logged in the execution history."

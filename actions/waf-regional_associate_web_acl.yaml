@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   WebACLId:
     type: string
-    description: 'A unique identifier (ID) for the web ACL.'
+    description: "A unique identifier (ID) for the web ACL."
     required: true
   ResourceArn:
     type: string
-    description: 'The ARN (Amazon Resource Name) of the resource to be protected.'
+    description: "The ARN (Amazon Resource Name) of the resource to be protected."
     required: true

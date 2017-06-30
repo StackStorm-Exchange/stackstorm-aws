@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,14 +21,14 @@ parameters:
     type: string
   ConfigRuleName:
     type: string
-    description: 'The name of the AWS Config rule for which you want compliance information.'
+    description: "The name of the AWS Config rule for which you want compliance information."
     required: true
   ComplianceTypes:
     type: array
-    description: 'Filters the results by compliance. The allowed values are COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.'
+    description: "Filters the results by compliance. The allowed values are COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE."
   Limit:
     type: integer
-    description: 'The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a limit greater than 100. If you specify 0, AWS Config uses the default.'
+    description: "The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a limit greater than 100. If you specify 0, AWS Config uses the default."
   NextToken:
     type: string
-    description: 'The nextToken string returned on a previous page that you use to get the next page of results in a paginated response.'
+    description: "The nextToken string returned on a previous page that you use to get the next page of results in a paginated response."

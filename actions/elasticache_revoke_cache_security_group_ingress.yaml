@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   CacheSecurityGroupName:
     type: string
-    description: 'The name of the cache security group to revoke ingress from.'
+    description: "The name of the cache security group to revoke ingress from."
     required: true
   EC2SecurityGroupName:
     type: string
-    description: 'The name of the Amazon EC2 security group to revoke access from.'
+    description: "The name of the Amazon EC2 security group to revoke access from."
     required: true
   EC2SecurityGroupOwnerId:
     type: string
-    description: 'The AWS account number of the Amazon EC2 security group owner. Note that this is not the same thing as an AWS access key ID - you must provide a valid AWS account number for this parameter.'
+    description: "The AWS account number of the Amazon EC2 security group owner. Note that this is not the same thing as an AWS access key ID - you must provide a valid AWS account number for this parameter."
     required: true

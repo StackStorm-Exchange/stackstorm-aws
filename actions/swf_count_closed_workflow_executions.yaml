@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,23 +21,23 @@ parameters:
     type: string
   domain:
     type: string
-    description: 'The name of the domain containing the workflow executions to count.'
+    description: "The name of the domain containing the workflow executions to count."
     required: true
   startTimeFilter:
     type: object
-    description: 'If specified, only workflow executions that meet the start time criteria of the filter are counted. startTimeFilter and closeTimeFilter are mutually exclusive. You must specify one of these in a request but not both.'
+    description: "If specified, only workflow executions that meet the start time criteria of the filter are counted. startTimeFilter and closeTimeFilter are mutually exclusive. You must specify one of these in a request but not both."
   closeTimeFilter:
     type: object
-    description: 'If specified, only workflow executions that meet the close time criteria of the filter are counted. startTimeFilter and closeTimeFilter are mutually exclusive. You must specify one of these in a request but not both.'
+    description: "If specified, only workflow executions that meet the close time criteria of the filter are counted. startTimeFilter and closeTimeFilter are mutually exclusive. You must specify one of these in a request but not both."
   executionFilter:
     type: object
-    description: 'If specified, only workflow executions matching the WorkflowId in the filter are counted. closeStatusFilter, executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request.'
+    description: "If specified, only workflow executions matching the WorkflowId in the filter are counted. closeStatusFilter, executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request."
   typeFilter:
     type: object
-    description: 'If specified, indicates the type of the workflow executions to be counted. closeStatusFilter, executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request.'
+    description: "If specified, indicates the type of the workflow executions to be counted. closeStatusFilter, executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request."
   tagFilter:
     type: object
-    description: 'If specified, only executions that have a tag that matches the filter are counted. closeStatusFilter, executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request.'
+    description: "If specified, only executions that have a tag that matches the filter are counted. closeStatusFilter, executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request."
   closeStatusFilter:
     type: object
-    description: 'If specified, only workflow executions that match this close status are counted. This filter has an affect only if executionStatus is specified as CLOSED. closeStatusFilter, executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request.'
+    description: "If specified, only workflow executions that match this close status are counted. This filter has an affect only if executionStatus is specified as CLOSED. closeStatusFilter, executionFilter, typeFilter and tagFilter are mutually exclusive. You can specify at most one of these in a request."

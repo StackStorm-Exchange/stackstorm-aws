@@ -1,0 +1,39 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: codestar_associate_team_member
+runner_type: python-script
+parameters:
+  action:
+    default: associate_team_member
+    immutable: true
+    type: string
+  cls:
+    default: codestar
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  projectId:
+    type: string
+    description: "The ID of the project to which you will add the IAM user."
+    required: true
+  userArn:
+    type: string
+    description: "The Amazon Resource Name (ARN) for the IAM user you want to add to the DevHub project."
+    required: true
+  projectRole:
+    type: string
+    description: "The AWS CodeStar project role that will apply to this user. This role determines what actions a user can take in an AWS CodeStar project."
+    required: true
+  clientRequestToken:
+    type: string
+    description: "A user- or system-generated token that identifies the entity that requested the team member association to the project. This token can be used to repeat the request. "
+  remoteAccessAllowed:
+    type: boolean
+    description: "Whether the team member is allowed to use an SSH public/private key pair to remotely access project resources, for example Amazon EC2 instances."

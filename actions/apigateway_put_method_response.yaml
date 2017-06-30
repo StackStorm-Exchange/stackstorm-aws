@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,23 +21,23 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The RestApi identifier for the Method resource.'
+    description: "The RestApi identifier for the Method resource."
     required: true
   resourceId:
     type: string
-    description: 'The Resource identifier for the Method resource.'
+    description: "The Resource identifier for the Method resource."
     required: true
   httpMethod:
     type: string
-    description: 'The HTTP verb of the Method resource.'
+    description: "The HTTP verb of the Method resource."
     required: true
   statusCode:
     type: string
-    description: 'The method response"s status code.'
+    description: "The method response's status code."
     required: true
   responseParameters:
     type: object
-    description: 'A key-value map specifying required or optional response parameters that Amazon API Gateway can send back to the caller. A key defines a method response header name and the associated value is a Boolean flag indicating whether the method response parameter is required or not. The method response header names must match the pattern of method.response.header.{name}, where name is a valid and unique header name. The response parameter names defined here are available in the integration response to be mapped from an integration response header expressed in integration.response.header.{name}, a static value enclosed within a pair of single quotes (e.g., "application/json"), or a JSON expression from the back-end response payload in the form of integration.response.body.{JSON-expression}, where JSON-expression is a valid JSON expression without the $ prefix.)'
+    description: "A key-value map specifying required or optional response parameters that Amazon API Gateway can send back to the caller. A key defines a method response header name and the associated value is a Boolean flag indicating whether the method response parameter is required or not. The method response header names must match the pattern of method.response.header.{name}, where name is a valid and unique header name. The response parameter names defined here are available in the integration response to be mapped from an integration response header expressed in integration.response.header.{name}, a static value enclosed within a pair of single quotes (e.g., 'application/json'), or a JSON expression from the back-end response payload in the form of integration.response.body.{JSON-expression}, where JSON-expression is a valid JSON expression without the $ prefix.)"
   responseModels:
     type: object
-    description: 'Specifies the Model resources used for the response"s content type. Response models are represented as a key/value map, with a content type as the key and a Model name as the value.'
+    description: "Specifies the Model resources used for the response's content type. Response models are represented as a key/value map, with a content type as the key and a Model name as the value."

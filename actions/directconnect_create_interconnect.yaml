@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   interconnectName:
     type: string
-    description: 'The name of the interconnect. Example: "1G Interconnect to AWS" Default: None'
+    description: "The name of the interconnect. Example: '1G Interconnect to AWS' Default: None"
     required: true
   bandwidth:
     type: string
-    description: 'The port bandwidth Example: 1Gbps Default: None Available values: 1Gbps,10Gbps'
+    description: "The port bandwidth Example: 1Gbps Default: None Available values: 1Gbps,10Gbps"
     required: true
   location:
     type: string
-    description: 'Where the interconnect is located Example: EqSV5 Default: None'
+    description: "Where the interconnect is located Example: EqSV5 Default: None"
     required: true

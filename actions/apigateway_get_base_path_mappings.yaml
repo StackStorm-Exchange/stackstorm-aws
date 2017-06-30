@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   domainName:
     type: string
-    description: 'The domain name of a BasePathMapping resource.'
+    description: "The domain name of a BasePathMapping resource."
     required: true
   position:
     type: string
-    description: 'The position of the current BasePathMapping resource in the collection to get information about.'
+    description: "The position of the current BasePathMapping resource in the collection to get information about."
   limit:
     type: integer
-    description: 'The maximum number of BasePathMapping resources in the collection to get information about. The default limit is 25. It should be an integer between 1 - 500.'
+    description: "The maximum number of BasePathMapping resources in the collection to get information about. The default limit is 25. It should be an integer between 1 - 500."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,22 +21,22 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the parameter that you want to add to the system.'
+    description: "The name of the parameter that you want to add to the system."
     required: true
   Value:
     type: string
-    description: 'The parameter value that you want to add to the system.'
+    description: "The parameter value that you want to add to the system."
     required: true
   Type:
     type: string
-    description: 'The type of parameter that you want to add to the system.'
+    description: "The type of parameter that you want to add to the system."
     required: true
   Description:
     type: string
-    description: 'Information about the parameter that you want to add to the system'
+    description: "Information about the parameter that you want to add to the system"
   KeyId:
     type: string
-    description: 'The parameter key ID that you want to add to the system.'
+    description: "The parameter key ID that you want to add to the system."
   Overwrite:
     type: boolean
-    description: 'Overwrite an existing parameter.'
+    description: "Overwrite an existing parameter."

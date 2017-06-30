@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,23 +21,23 @@ parameters:
     type: string
   ClusterId:
     type: string
-    description: 'The cluster ID of the cluster that you want to update, for example CID123e4567-e89b-12d3-a456-426655440000.'
+    description: "The cluster ID of the cluster that you want to update, for example CID123e4567-e89b-12d3-a456-426655440000."
     required: true
   RoleARN:
     type: string
-    description: 'The new role Amazon Resource Name (ARN) that you want to associate with this cluster. To create a role ARN, use the CreateRole API action in AWS Identity and Access Management (IAM).'
+    description: "The new role Amazon Resource Name (ARN) that you want to associate with this cluster. To create a role ARN, use the CreateRole API action in AWS Identity and Access Management (IAM)."
   Description:
     type: string
-    description: 'The updated description of this cluster.'
+    description: "The updated description of this cluster."
   Resources:
     type: object
-    description: 'The updated arrays of JobResource objects that can include updated S3Resource objects or LambdaResource objects.'
+    description: "The updated arrays of JobResource objects that can include updated S3Resource objects or LambdaResource objects."
   AddressId:
     type: string
-    description: 'The ID of the updated Address object.'
+    description: "The ID of the updated Address object."
   ShippingOption:
     type: string
-    description: 'The updated shipping option value of this cluster"s ShippingDetails object.'
+    description: "The updated shipping option value of this cluster's ShippingDetails object."
   Notification:
     type: object
-    description: 'The new or updated Notification object.'
+    description: "The new or updated Notification object."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   PortfolioId:
     type: string
-    description: 'The portfolio identifier.'
+    description: "The portfolio identifier."
     required: true
   PrincipalARN:
     type: string
-    description: 'The ARN representing the principal (IAM user, role, or group).'
+    description: "The ARN representing the principal (IAM user, role, or group)."
     required: true
   AcceptLanguage:
     type: string
-    description: 'The language code to use for this operation. Supported language codes are as follows: "en" (English) "jp" (Japanese) "zh" (Chinese) If no code is specified, "en" is used as the default.'
+    description: "The language code to use for this operation. Supported language codes are as follows: 'en' (English) 'jp' (Japanese) 'zh' (Chinese) If no code is specified, 'en' is used as the default."

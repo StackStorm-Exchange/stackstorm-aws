@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,16 +21,16 @@ parameters:
     type: string
   DomainName:
     type: string
-    description: 'The name of the domain in which to perform the operation.'
+    description: "The name of the domain in which to perform the operation."
     required: true
   ItemName:
     type: string
-    description: 'The name of the item.'
+    description: "The name of the item."
     required: true
   Attributes:
     type: array
-    description: 'The list of attributes.'
+    description: "The list of attributes."
     required: true
   Expected:
     type: object
-    description: 'The update condition which, if specified, determines whether the specified attributes will be updated or not. The update condition must be satisfied in order for this request to be processed and the attributes to be updated.'
+    description: "The update condition which, if specified, determines whether the specified attributes will be updated or not. The update condition must be satisfied in order for this request to be processed and the attributes to be updated."

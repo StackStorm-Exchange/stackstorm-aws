@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   stateMachineArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the state machine to delete.'
+    description: "The Amazon Resource Name (ARN) of the state machine to delete."
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   interconnectId:
     type: string
-    description: ''
+    description: ""
     required: true
   providerName:
     type: string
-    description: 'The name of the service provider who establishes connectivity on your behalf. If you supply this parameter, the LOA-CFA lists the provider name alongside your company name as the requester of the cross connect. Default: None'
+    description: "The name of the service provider who establishes connectivity on your behalf. If you supply this parameter, the LOA-CFA lists the provider name alongside your company name as the requester of the cross connect. Default: None"
   loaContentType:
     type: string
-    description: ''
+    description: ""

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,22 +21,22 @@ parameters:
     type: string
   OriginalMessageId:
     type: string
-    description: 'The message ID of the message to be bounced.'
+    description: "The message ID of the message to be bounced."
     required: true
   BounceSender:
     type: string
-    description: 'The address to use in the "From" header of the bounce message. This must be an identity that you have verified with Amazon SES.'
+    description: "The address to use in the 'From' header of the bounce message. This must be an identity that you have verified with Amazon SES."
     required: true
   BouncedRecipientInfoList:
     type: array
-    description: 'A list of recipients of the bounced message, including the information required to create the Delivery Status Notifications (DSNs) for the recipients. You must specify at least one BouncedRecipientInfo in the list.'
+    description: "A list of recipients of the bounced message, including the information required to create the Delivery Status Notifications (DSNs) for the recipients. You must specify at least one BouncedRecipientInfo in the list."
     required: true
   Explanation:
     type: string
-    description: 'Human-readable text for the bounce message to explain the failure. If not specified, the text will be auto-generated based on the bounced recipient information.'
+    description: "Human-readable text for the bounce message to explain the failure. If not specified, the text will be auto-generated based on the bounced recipient information."
   MessageDsn:
     type: object
-    description: 'Message-related DSN fields. If not specified, Amazon SES will choose the values.'
+    description: "Message-related DSN fields. If not specified, Amazon SES will choose the values."
   BounceSenderArn:
     type: string
-    description: 'This parameter is used only for sending authorization. It is the ARN of the identity that is associated with the sending authorization policy that permits you to use the address in the "From" header of the bounce. For more information about sending authorization, see the Amazon SES Developer Guide.'
+    description: "This parameter is used only for sending authorization. It is the ARN of the identity that is associated with the sending authorization policy that permits you to use the address in the 'From' header of the bounce. For more information about sending authorization, see the Amazon SES Developer Guide."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,17 +21,17 @@ parameters:
     type: string
   configurationId:
     type: string
-    description: 'Configuration ID of the server for which neighbors are being listed.'
+    description: "Configuration ID of the server for which neighbors are being listed."
     required: true
   portInformationNeeded:
     type: boolean
-    description: 'Flag to indicate if port and protocol information is needed as part of the response.'
+    description: "Flag to indicate if port and protocol information is needed as part of the response."
   neighborConfigurationIds:
     type: array
-    description: 'List of configuration IDs to test for one-hop-away.'
+    description: "List of configuration IDs to test for one-hop-away."
   maxResults:
     type: integer
-    description: 'Maximum number of results to return in a single page of output.'
+    description: "Maximum number of results to return in a single page of output."
   nextToken:
     type: string
-    description: 'Token to retrieve the next set of results. For example, if you previously specified 100 IDs for ListServerNeighborsRequest$neighborConfigurationIds but set ListServerNeighborsRequest$maxResults to 10, you received a set of 10 results along with a token. Use that token in this query to get the next set of 10.'
+    description: "Token to retrieve the next set of results. For example, if you previously specified 100 IDs for ListServerNeighborsRequest$neighborConfigurationIds but set ListServerNeighborsRequest$maxResults to 10, you received a set of 10 results along with a token. Use that token in this query to get the next set of 10."

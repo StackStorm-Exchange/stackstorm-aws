@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   HostIds:
     type: array
-    description: 'The host IDs of the Dedicated Hosts you want to modify.'
+    description: "The host IDs of the Dedicated Hosts you want to modify."
     required: true
   AutoPlacement:
     type: string
-    description: 'Specify whether to enable or disable auto-placement.'
+    description: "Specify whether to enable or disable auto-placement."
     required: true

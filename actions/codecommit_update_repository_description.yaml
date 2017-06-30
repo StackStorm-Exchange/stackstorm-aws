@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   repositoryName:
     type: string
-    description: 'The name of the repository to set or change the comment or description for.'
+    description: "The name of the repository to set or change the comment or description for."
     required: true
   repositoryDescription:
     type: string
-    description: 'The new comment or description for the specified repository. Repository descriptions are limited to 1,000 characters.'
+    description: "The new comment or description for the specified repository. Repository descriptions are limited to 1,000 characters."

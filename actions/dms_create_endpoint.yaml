@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,43 +21,43 @@ parameters:
     type: string
   EndpointIdentifier:
     type: string
-    description: 'The database endpoint identifier. Identifiers must begin with a letter; must contain only ASCII letters, digits, and hyphens; and must not end with a hyphen or contain two consecutive hyphens.'
+    description: "The database endpoint identifier. Identifiers must begin with a letter; must contain only ASCII letters, digits, and hyphens; and must not end with a hyphen or contain two consecutive hyphens."
     required: true
   EndpointType:
     type: string
-    description: 'The type of endpoint.'
+    description: "The type of endpoint."
     required: true
   EngineName:
     type: string
-    description: 'The type of engine for the endpoint. Valid values include MYSQL, ORACLE, POSTGRES, MARIADB, AURORA, REDSHIFT, SYBASE, and SQLSERVER.'
+    description: "The type of engine for the endpoint. Valid values include MYSQL, ORACLE, POSTGRES, MARIADB, AURORA, REDSHIFT, SYBASE, and SQLSERVER."
     required: true
   Username:
     type: string
-    description: 'The user name to be used to login to the endpoint database.'
+    description: "The user name to be used to login to the endpoint database."
   Password:
     type: string
-    description: 'The password to be used to login to the endpoint database.'
+    description: "The password to be used to login to the endpoint database."
   ServerName:
     type: string
-    description: 'The name of the server where the endpoint database resides.'
+    description: "The name of the server where the endpoint database resides."
   Port:
     type: integer
-    description: 'The port used by the endpoint database.'
+    description: "The port used by the endpoint database."
   DatabaseName:
     type: string
-    description: 'The name of the endpoint database.'
+    description: "The name of the endpoint database."
   ExtraConnectionAttributes:
     type: string
-    description: 'Additional attributes associated with the connection.'
+    description: "Additional attributes associated with the connection."
   KmsKeyId:
     type: string
-    description: 'The KMS key identifier that will be used to encrypt the connection parameters. If you do not specify a value for the KmsKeyId parameter, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.'
+    description: "The KMS key identifier that will be used to encrypt the connection parameters. If you do not specify a value for the KmsKeyId parameter, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region."
   Tags:
     type: array
-    description: 'Tags to be added to the endpoint.'
+    description: "Tags to be added to the endpoint."
   CertificateArn:
     type: string
-    description: 'The Amazon Resource Number (ARN) for the certificate.'
+    description: "The Amazon Resource Number (ARN) for the certificate."
   SslMode:
     type: string
-    description: 'The SSL mode to use for the SSL connection. SSL mode can be one of four values: none, require, verify-ca, verify-full.  The default value is none.'
+    description: "The SSL mode to use for the SSL connection. SSL mode can be one of four values: none, require, verify-ca, verify-full.  The default value is none."

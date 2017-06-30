@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,29 +21,29 @@ parameters:
     type: string
   TargetGroupArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the target group.'
+    description: "The Amazon Resource Name (ARN) of the target group."
     required: true
   HealthCheckProtocol:
     type: string
-    description: 'The protocol to use to connect with the target.'
+    description: "The protocol to use to connect with the target."
   HealthCheckPort:
     type: string
-    description: 'The port to use to connect with the target.'
+    description: "The port to use to connect with the target."
   HealthCheckPath:
     type: string
-    description: 'The ping path that is the destination for the health check request.'
+    description: "The ping path that is the destination for the health check request."
   HealthCheckIntervalSeconds:
     type: integer
-    description: 'The approximate amount of time, in seconds, between health checks of an individual target.'
+    description: "The approximate amount of time, in seconds, between health checks of an individual target."
   HealthCheckTimeoutSeconds:
     type: integer
-    description: 'The amount of time, in seconds, during which no response means a failed health check.'
+    description: "The amount of time, in seconds, during which no response means a failed health check."
   HealthyThresholdCount:
     type: integer
-    description: 'The number of consecutive health checks successes required before considering an unhealthy target healthy.'
+    description: "The number of consecutive health checks successes required before considering an unhealthy target healthy."
   UnhealthyThresholdCount:
     type: integer
-    description: 'The number of consecutive health check failures required before considering the target unhealthy.'
+    description: "The number of consecutive health check failures required before considering the target unhealthy."
   Matcher:
     type: object
-    description: 'The HTTP codes to use when checking for a successful response from a target.'
+    description: "The HTTP codes to use when checking for a successful response from a target."

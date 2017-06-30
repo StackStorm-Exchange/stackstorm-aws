@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   DeliveryStreamName:
     type: string
-    description: 'The name of the delivery stream.'
+    description: "The name of the delivery stream."
     required: true

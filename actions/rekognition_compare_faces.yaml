@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   SourceImage:
     type: object
-    description: 'Source image either as bytes or an S3 object'
+    description: "Source image either as bytes or an S3 object"
     required: true
   TargetImage:
     type: object
-    description: 'Target image either as bytes or an S3 object'
+    description: "Target image either as bytes or an S3 object"
     required: true
   SimilarityThreshold:
     type: number
-    description: 'The minimum level of confidence in the match you want included in the result.'
+    description: "The minimum level of confidence in the match you want included in the result."

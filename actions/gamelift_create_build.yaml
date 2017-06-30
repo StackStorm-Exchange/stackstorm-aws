@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'Descriptive label associated with a build. Build names do not need to be unique. A build name can be changed later using UpdateBuild .'
+    description: "Descriptive label associated with a build. Build names do not need to be unique. A build name can be changed later using UpdateBuild ."
   Version:
     type: string
-    description: 'Version associated with this build. Version strings do not need to be unique to a build. A build version can be changed later using UpdateBuild .'
+    description: "Version associated with this build. Version strings do not need to be unique to a build. A build version can be changed later using UpdateBuild ."
   StorageLocation:
     type: object
-    description: ''
+    description: ""
   OperatingSystem:
     type: string
-    description: 'Operating system that the game server binaries are built to run on. This value determines the type of fleet resources that you can use for this build.'
+    description: "Operating system that the game server binaries are built to run on. This value determines the type of fleet resources that you can use for this build."

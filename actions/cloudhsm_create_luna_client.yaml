@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   Certificate:
     type: string
-    description: 'The contents of a Base64-Encoded X.509 v3 certificate to be installed on the HSMs used by this client.'
+    description: "The contents of a Base64-Encoded X.509 v3 certificate to be installed on the HSMs used by this client."
     required: true
   Label:
     type: string
-    description: 'The label for the client.'
+    description: "The label for the client."

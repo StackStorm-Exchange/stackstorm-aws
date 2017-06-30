@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   DBClusterIdentifier:
     type: string
-    description: 'The name of the DB cluster to disassociate the IAM role rom.'
+    description: "The name of the DB cluster to disassociate the IAM role rom."
     required: true
   RoleArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the IAM role to disassociate from the Aurora DB cluster, for example arn:aws:iam::123456789012:role/AuroraAccessRole.'
+    description: "The Amazon Resource Name (ARN) of the IAM role to disassociate from the Aurora DB cluster, for example arn:aws:iam::123456789012:role/AuroraAccessRole."
     required: true

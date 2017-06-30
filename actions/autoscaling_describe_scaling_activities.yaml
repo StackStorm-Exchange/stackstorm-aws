@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   ActivityIds:
     type: array
-    description: 'The activity IDs of the desired scaling activities. If you omit this parameter, all activities for the past six weeks are described. If you specify an Auto Scaling group, the results are limited to that group. The list of requested activities cannot contain more than 50 items. If unknown activities are requested, they are ignored with no error.'
+    description: "The activity IDs of the desired scaling activities. If you omit this parameter, all activities for the past six weeks are described. If you specify an Auto Scaling group, the results are limited to that group. The list of requested activities cannot contain more than 50 items. If unknown activities are requested, they are ignored with no error."
   AutoScalingGroupName:
     type: string
-    description: 'The name of the group.'
+    description: "The name of the group."
   MaxRecords:
     type: integer
-    description: 'The maximum number of items to return with this call.'
+    description: "The maximum number of items to return with this call."
   NextToken:
     type: string
-    description: 'The token for the next set of items to return. (You received this token from a previous call.)'
+    description: "The token for the next set of items to return. (You received this token from a previous call.)"

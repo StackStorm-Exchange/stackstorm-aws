@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The identifier of the pipeline to update.'
+    description: "The identifier of the pipeline to update."
     required: true
   Status:
     type: string
-    description: 'The desired status of the pipeline:    Active: The pipeline is processing jobs.    Paused: The pipeline is not currently processing jobs.  '
+    description: "The desired status of the pipeline:    Active: The pipeline is processing jobs.    Paused: The pipeline is not currently processing jobs.  "
     required: true

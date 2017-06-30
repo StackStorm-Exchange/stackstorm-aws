@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'The identifier of the directory whose schema extension will be canceled.'
+    description: "The identifier of the directory whose schema extension will be canceled."
     required: true
   SchemaExtensionId:
     type: string
-    description: 'The identifier of the schema extension that will be canceled.'
+    description: "The identifier of the schema extension that will be canceled."
     required: true

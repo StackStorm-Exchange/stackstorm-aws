@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   Content:
     type: string
-    description: 'A valid JSON string.'
+    description: "A valid JSON string."
     required: true
   Name:
     type: string
-    description: 'A name for the SSM document.'
+    description: "A name for the SSM document."
     required: true
   DocumentType:
     type: string
-    description: 'The type of document to create. Valid document types include: Policy, Automation, and Command.'
+    description: "The type of document to create. Valid document types include: Policy, Automation, and Command."

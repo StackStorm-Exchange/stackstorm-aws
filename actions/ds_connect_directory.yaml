@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,23 +21,23 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The fully-qualified name of the on-premises directory, such as corp.example.com.'
+    description: "The fully-qualified name of the on-premises directory, such as corp.example.com."
     required: true
   Password:
     type: string
-    description: 'The password for the on-premises user account.'
+    description: "The password for the on-premises user account."
     required: true
   Size:
     type: string
-    description: 'The size of the directory.'
+    description: "The size of the directory."
     required: true
   ConnectSettings:
     type: object
-    description: 'A DirectoryConnectSettings object that contains additional information for the operation.'
+    description: "A DirectoryConnectSettings object that contains additional information for the operation."
     required: true
   ShortName:
     type: string
-    description: 'The NetBIOS name of the on-premises directory, such as CORP.'
+    description: "The NetBIOS name of the on-premises directory, such as CORP."
   Description:
     type: string
-    description: 'A textual description for the directory.'
+    description: "A textual description for the directory."

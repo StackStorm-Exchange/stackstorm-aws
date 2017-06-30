@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The identifier of the product for which to retrieve information.'
+    description: "The identifier of the product for which to retrieve information."
     required: true
   AcceptLanguage:
     type: string
-    description: 'The language code to use for this operation. Supported language codes are as follows: "en" (English) "jp" (Japanese) "zh" (Chinese) If no code is specified, "en" is used as the default.'
+    description: "The language code to use for this operation. Supported language codes are as follows: 'en' (English) 'jp' (Japanese) 'zh' (Chinese) If no code is specified, 'en' is used as the default."

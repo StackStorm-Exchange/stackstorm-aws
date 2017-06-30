@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,16 +21,16 @@ parameters:
     type: string
   LookupAttributes:
     type: array
-    description: 'Contains a list of lookup attributes. Currently the list can contain only one item.'
+    description: "Contains a list of lookup attributes. Currently the list can contain only one item."
   StartTime:
     type: string
-    description: 'Specifies that only events that occur after or at the specified time are returned. If the specified start time is after the specified end time, an error is returned.'
+    description: "Specifies that only events that occur after or at the specified time are returned. If the specified start time is after the specified end time, an error is returned."
   EndTime:
     type: string
-    description: 'Specifies that only events that occur before or at the specified time are returned. If the specified end time is before the specified start time, an error is returned.'
+    description: "Specifies that only events that occur before or at the specified time are returned. If the specified end time is before the specified start time, an error is returned."
   MaxResults:
     type: integer
-    description: 'The number of events to return. Possible values are 1 through 50. The default is 10.'
+    description: "The number of events to return. Possible values are 1 through 50. The default is 10."
   NextToken:
     type: string
-    description: 'The token to use to get the next page of results after a previous API call. This token must be passed in with the same parameters that were specified in the the original call. For example, if the original call specified an AttributeKey of "Username" with a value of "root", the call with NextToken should include those same parameters.'
+    description: "The token to use to get the next page of results after a previous API call. This token must be passed in with the same parameters that were specified in the the original call. For example, if the original call specified an AttributeKey of 'Username' with a value of 'root', the call with NextToken should include those same parameters."

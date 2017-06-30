@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,10 +21,10 @@ parameters:
     type: string
   pageSize:
     type: integer
-    description: 'The result page size.'
+    description: "The result page size."
   marker:
     type: string
-    description: 'The marker for the next set of results.'
+    description: "The marker for the next set of results."
   ascendingOrder:
     type: boolean
-    description: 'Determines the order of the results.'
+    description: "Determines the order of the results."

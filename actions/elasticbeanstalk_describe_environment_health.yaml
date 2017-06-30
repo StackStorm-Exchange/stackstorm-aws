@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,10 +21,10 @@ parameters:
     type: string
   EnvironmentName:
     type: string
-    description: 'Specify the environment by name. You must specify either this or an EnvironmentName, or both.'
+    description: "Specify the environment by name. You must specify either this or an EnvironmentName, or both."
   EnvironmentId:
     type: string
-    description: 'Specify the environment by ID. You must specify either this or an EnvironmentName, or both.'
+    description: "Specify the environment by ID. You must specify either this or an EnvironmentName, or both."
   AttributeNames:
     type: array
-    description: 'Specify the response elements to return. To retrieve all attributes, set to All. If no attribute names are specified, returns the name of the environment.'
+    description: "Specify the response elements to return. To retrieve all attributes, set to All. If no attribute names are specified, returns the name of the environment."

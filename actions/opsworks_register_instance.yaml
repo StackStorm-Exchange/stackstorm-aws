@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,23 +21,23 @@ parameters:
     type: string
   StackId:
     type: string
-    description: 'The ID of the stack that the instance is to be registered with.'
+    description: "The ID of the stack that the instance is to be registered with."
     required: true
   Hostname:
     type: string
-    description: 'The instance"s hostname.'
+    description: "The instance's hostname."
   PublicIp:
     type: string
-    description: 'The instance"s public IP address.'
+    description: "The instance's public IP address."
   PrivateIp:
     type: string
-    description: 'The instance"s private IP address.'
+    description: "The instance's private IP address."
   RsaPublicKey:
     type: string
-    description: 'The instances public RSA key. This key is used to encrypt communication between the instance and the service.'
+    description: "The instances public RSA key. This key is used to encrypt communication between the instance and the service."
   RsaPublicKeyFingerprint:
     type: string
-    description: 'The instances public RSA key fingerprint.'
+    description: "The instances public RSA key fingerprint."
   InstanceIdentity:
     type: object
-    description: 'An InstanceIdentity object that contains the instance"s identity.'
+    description: "An InstanceIdentity object that contains the instance's identity."

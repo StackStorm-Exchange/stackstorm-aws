@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   connectionId:
     type: string
-    description: ''
+    description: ""
     required: true
   newPrivateVirtualInterface:
     type: object
-    description: 'Detailed information for the private virtual interface to be created. Default: None'
+    description: "Detailed information for the private virtual interface to be created. Default: None"
     required: true

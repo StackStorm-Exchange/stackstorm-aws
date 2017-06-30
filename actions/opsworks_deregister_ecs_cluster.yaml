@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   EcsClusterArn:
     type: string
-    description: 'The cluster"s ARN.'
+    description: "The cluster's ARN."
     required: true

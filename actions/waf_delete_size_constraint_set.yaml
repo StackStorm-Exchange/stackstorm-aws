@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   SizeConstraintSetId:
     type: string
-    description: 'The SizeConstraintSetId of the SizeConstraintSet that you want to delete. SizeConstraintSetId is returned by CreateSizeConstraintSet and by ListSizeConstraintSets.'
+    description: "The SizeConstraintSetId of the SizeConstraintSet that you want to delete. SizeConstraintSetId is returned by CreateSizeConstraintSet and by ListSizeConstraintSets."
     required: true
   ChangeToken:
     type: string
-    description: 'The value returned by the most recent call to GetChangeToken.'
+    description: "The value returned by the most recent call to GetChangeToken."
     required: true

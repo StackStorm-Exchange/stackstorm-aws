@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   policyName:
     type: string
-    description: 'The policy name.'
+    description: "The policy name."
     required: true
   policyDocument:
     type: string
-    description: 'The JSON document that describes the policy. policyDocument must have a minimum length of 1, with a maximum length of 2048, excluding whitespace.'
+    description: "The JSON document that describes the policy. policyDocument must have a minimum length of 1, with a maximum length of 2048, excluding whitespace."
     required: true

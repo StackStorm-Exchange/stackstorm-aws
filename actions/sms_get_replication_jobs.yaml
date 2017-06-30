@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,10 +21,10 @@ parameters:
     type: string
   replicationJobId:
     type: string
-    description: ''
+    description: ""
   nextToken:
     type: string
-    description: ''
+    description: ""
   maxResults:
     type: integer
-    description: ''
+    description: ""

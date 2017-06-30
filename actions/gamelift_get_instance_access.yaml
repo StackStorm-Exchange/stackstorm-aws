@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   FleetId:
     type: string
-    description: 'Unique identifier for a fleet. Specify the fleet that contain the instance you want access to. The fleet can be in any of the following statuses: ACTIVATING, ACTIVE, or ERROR. Fleets with an ERROR status can be accessed for a few hours before being deleted.'
+    description: "Unique identifier for a fleet. Specify the fleet that contain the instance you want access to. The fleet can be in any of the following statuses: ACTIVATING, ACTIVE, or ERROR. Fleets with an ERROR status can be accessed for a few hours before being deleted."
     required: true
   InstanceId:
     type: string
-    description: 'Unique identifier for an instance. Specify the instance you want to get access to. You can access an instance in any status.'
+    description: "Unique identifier for an instance. Specify the instance you want to get access to. You can access an instance in any status."
     required: true

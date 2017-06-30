@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ApplicationId:
     type: string
-    description: ''
+    description: ""
     required: true
   ImportJobRequest:
     type: object
-    description: ''
+    description: ""
     required: true

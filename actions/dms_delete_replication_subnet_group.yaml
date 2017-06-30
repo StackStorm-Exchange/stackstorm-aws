@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   ReplicationSubnetGroupIdentifier:
     type: string
-    description: 'The subnet group name of the replication instance.'
+    description: "The subnet group name of the replication instance."
     required: true

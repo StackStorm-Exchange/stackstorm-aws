@@ -1,0 +1,34 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: marketplace-entitlement_get_entitlements
+runner_type: python-script
+parameters:
+  action:
+    default: get_entitlements
+    immutable: true
+    type: string
+  cls:
+    default: marketplace-entitlement
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ProductCode:
+    type: string
+    description: "Product code is used to uniquely identify a product in AWS Marketplace. The product code will be provided by AWS Marketplace when the product listing is created."
+    required: true
+  Filter:
+    type: object
+    description: "Filter is used to return entitlements for a specific customer or for a specific dimension. Filters are described as keys mapped to a lists of values. Filtered requests are unioned for each value in the value list, and then intersected for each filter key."
+  NextToken:
+    type: string
+    description: "For paginated calls to GetEntitlements, pass the NextToken from the previous GetEntitlementsResult."
+  MaxResults:
+    type: integer
+    description: "The maximum number of items to retrieve from the GetEntitlements operation. For pagination, use the NextToken field in subsequent calls to GetEntitlements."

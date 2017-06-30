@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   ResourceType:
     type: string
-    description: 'The type of resource of which you want to remove a tag.'
+    description: "The type of resource of which you want to remove a tag."
     required: true
   ResourceId:
     type: string
-    description: 'The resource ID for which you want to remove tags.'
+    description: "The resource ID for which you want to remove tags."
     required: true
   TagKeys:
     type: array
-    description: 'Tag keys that you want to remove from the specified resource.'
+    description: "Tag keys that you want to remove from the specified resource."
     required: true

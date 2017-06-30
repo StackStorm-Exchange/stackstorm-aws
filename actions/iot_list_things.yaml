@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,16 +21,16 @@ parameters:
     type: string
   nextToken:
     type: string
-    description: 'The token for the next set of results, or null if there are no additional results.'
+    description: "The token for the next set of results, or null if there are no additional results."
   maxResults:
     type: integer
-    description: 'The maximum number of results to return in this operation.'
+    description: "The maximum number of results to return in this operation."
   attributeName:
     type: string
-    description: 'The attribute name used to search for things.'
+    description: "The attribute name used to search for things."
   attributeValue:
     type: string
-    description: 'The attribute value used to search for things.'
+    description: "The attribute value used to search for things."
   thingTypeName:
     type: string
-    description: 'The name of the thing type used to search for things.'
+    description: "The name of the thing type used to search for things."

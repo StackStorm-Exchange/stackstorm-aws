@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,35 +21,35 @@ parameters:
     type: string
   AppId:
     type: string
-    description: 'The app ID.'
+    description: "The app ID."
     required: true
   Name:
     type: string
-    description: 'The app name.'
+    description: "The app name."
   Description:
     type: string
-    description: 'A description of the app.'
+    description: "A description of the app."
   DataSources:
     type: array
-    description: 'The app"s data sources.'
+    description: "The app's data sources."
   Type:
     type: string
-    description: 'The app type.'
+    description: "The app type."
   AppSource:
     type: object
-    description: 'A Source object that specifies the app repository.'
+    description: "A Source object that specifies the app repository."
   Domains:
     type: array
-    description: 'The app"s virtual host settings, with multiple domains separated by commas. For example: "www.example.com, example.com" '
+    description: "The app's virtual host settings, with multiple domains separated by commas. For example: 'www.example.com, example.com' "
   EnableSsl:
     type: boolean
-    description: 'Whether SSL is enabled for the app.'
+    description: "Whether SSL is enabled for the app."
   SslConfiguration:
     type: object
-    description: 'An SslConfiguration object with the SSL configuration.'
+    description: "An SslConfiguration object with the SSL configuration."
   Attributes:
     type: object
-    description: 'One or more user-defined key/value pairs to be added to the stack attributes.'
+    description: "One or more user-defined key/value pairs to be added to the stack attributes."
   Environment:
     type: array
-    description: 'An array of EnvironmentVariable objects that specify environment variables to be associated with the app. After you deploy the app, these variables are defined on the associated app server instances.For more information, see  Environment Variables. There is no specific limit on the number of environment variables. However, the size of the associated data structure - which includes the variables" names, values, and protected flag values - cannot exceed 10 KB (10240 Bytes). This limit should accommodate most if not all use cases. Exceeding it will cause an exception with the message, "Environment: is too large (maximum is 10KB)."  This parameter is supported only by Chef 11.10 stacks. If you have specified one or more environment variables, you cannot modify the stack"s Chef version. '
+    description: "An array of EnvironmentVariable objects that specify environment variables to be associated with the app. After you deploy the app, these variables are defined on the associated app server instances.For more information, see  Environment Variables. There is no specific limit on the number of environment variables. However, the size of the associated data structure - which includes the variables' names, values, and protected flag values - cannot exceed 10 KB (10240 Bytes). This limit should accommodate most if not all use cases. Exceeding it will cause an exception with the message, 'Environment: is too large (maximum is 10KB).'  This parameter is supported only by Chef 11.10 stacks. If you have specified one or more environment variables, you cannot modify the stack's Chef version. "

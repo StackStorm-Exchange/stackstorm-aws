@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'A friendly name or description for the SqlInjectionMatchSet that you"re creating. You can"t change Name after you create the SqlInjectionMatchSet.'
+    description: "A friendly name or description for the SqlInjectionMatchSet that you're creating. You can't change Name after you create the SqlInjectionMatchSet."
     required: true
   ChangeToken:
     type: string
-    description: 'The value returned by the most recent call to GetChangeToken.'
+    description: "The value returned by the most recent call to GetChangeToken."
     required: true

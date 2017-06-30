@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,24 +21,24 @@ parameters:
     type: string
   IdentityPoolName:
     type: string
-    description: 'A string that you provide.'
+    description: "A string that you provide."
     required: true
   AllowUnauthenticatedIdentities:
     type: boolean
-    description: 'TRUE if the identity pool supports unauthenticated logins.'
+    description: "TRUE if the identity pool supports unauthenticated logins."
     required: true
   SupportedLoginProviders:
     type: object
-    description: 'Optional key:value pairs mapping provider names to provider app IDs.'
+    description: "Optional key:value pairs mapping provider names to provider app IDs."
   DeveloperProviderName:
     type: string
-    description: 'The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your backend and the Cognito service to communicate about the developer provider. For the DeveloperProviderName, you can use letters as well as period (.), underscore (_), and dash (-). Once you have set a developer provider name, you cannot change it. Please take care in setting this parameter.'
+    description: "The 'domain' by which Cognito will refer to your users. This name acts as a placeholder that allows your backend and the Cognito service to communicate about the developer provider. For the DeveloperProviderName, you can use letters as well as period (.), underscore (_), and dash (-). Once you have set a developer provider name, you cannot change it. Please take care in setting this parameter."
   OpenIdConnectProviderARNs:
     type: array
-    description: 'A list of OpendID Connect provider ARNs.'
+    description: "A list of OpendID Connect provider ARNs."
   CognitoIdentityProviders:
     type: array
-    description: 'An array of Amazon Cognito Identity user pools and their client IDs.'
+    description: "An array of Amazon Cognito Identity user pools and their client IDs."
   SamlProviderARNs:
     type: array
-    description: 'An array of Amazon Resource Names (ARNs) of the SAML provider for your identity pool.'
+    description: "An array of Amazon Resource Names (ARNs) of the SAML provider for your identity pool."

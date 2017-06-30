@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,10 +21,10 @@ parameters:
     type: string
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   GroupNames:
     type: array
-    description: 'One or more placement group names. Default: Describes all your placement groups, or only those otherwise specified.'
+    description: "One or more placement group names. Default: Describes all your placement groups, or only those otherwise specified."
   Filters:
     type: array
-    description: 'One or more filters.    group-name - The name of the placement group.    state - The state of the placement group (pending | available | deleting | deleted).    strategy - The strategy of the placement group (cluster).  '
+    description: "One or more filters.    group-name - The name of the placement group.    state - The state of the placement group (pending | available | deleting | deleted).    strategy - The strategy of the placement group (cluster).  "

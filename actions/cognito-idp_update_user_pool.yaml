@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,44 +21,44 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID for the user pool you want to update.'
+    description: "The user pool ID for the user pool you want to update."
     required: true
   Policies:
     type: object
-    description: 'A container with the policies you wish to update in a user pool.'
+    description: "A container with the policies you wish to update in a user pool."
   LambdaConfig:
     type: object
-    description: 'The AWS Lambda configuration information from the request to update the user pool.'
+    description: "The AWS Lambda configuration information from the request to update the user pool."
   AutoVerifiedAttributes:
     type: array
-    description: 'The attributes that are automatically verified when the Amazon Cognito service makes a request to update user pools.'
+    description: "The attributes that are automatically verified when the Amazon Cognito service makes a request to update user pools."
   SmsVerificationMessage:
     type: string
-    description: 'A container with information about the SMS verification message.'
+    description: "A container with information about the SMS verification message."
   EmailVerificationMessage:
     type: string
-    description: 'The contents of the email verification message.'
+    description: "The contents of the email verification message."
   EmailVerificationSubject:
     type: string
-    description: 'The subject of the email verfication message.'
+    description: "The subject of the email verfication message."
   SmsAuthenticationMessage:
     type: string
-    description: 'The contents of the SMS authentication message.'
+    description: "The contents of the SMS authentication message."
   MfaConfiguration:
     type: string
-    description: 'Can be one of the following values:    OFF - MFA tokens are not required and cannot be specified during user registration.    ON - MFA tokens are required for all user registrations. You can only specify required when you are initially creating a user pool.    OPTIONAL - Users have the option when registering to create an MFA token.  '
+    description: "Can be one of the following values:    OFF - MFA tokens are not required and cannot be specified during user registration.    ON - MFA tokens are required for all user registrations. You can only specify required when you are initially creating a user pool.    OPTIONAL - Users have the option when registering to create an MFA token.  "
   DeviceConfiguration:
     type: object
-    description: 'Device configuration.'
+    description: "Device configuration."
   EmailConfiguration:
     type: object
-    description: 'Email configuration.'
+    description: "Email configuration."
   SmsConfiguration:
     type: object
-    description: 'SMS configuration.'
+    description: "SMS configuration."
   UserPoolTags:
     type: object
-    description: 'The cost allocation tags for the user pool. For more information, see Adding Cost Allocation Tags to Your User Pool '
+    description: "The cost allocation tags for the user pool. For more information, see Adding Cost Allocation Tags to Your User Pool "
   AdminCreateUserConfig:
     type: object
-    description: 'The configuration for AdminCreateUser requests.'
+    description: "The configuration for AdminCreateUser requests."

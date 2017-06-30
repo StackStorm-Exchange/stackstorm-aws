@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ByteMatchSetId:
     type: string
-    description: 'The ByteMatchSetId of the ByteMatchSet that you want to delete. ByteMatchSetId is returned by CreateByteMatchSet and by ListByteMatchSets.'
+    description: "The ByteMatchSetId of the ByteMatchSet that you want to delete. ByteMatchSetId is returned by CreateByteMatchSet and by ListByteMatchSets."
     required: true
   ChangeToken:
     type: string
-    description: 'The value returned by the most recent call to GetChangeToken.'
+    description: "The value returned by the most recent call to GetChangeToken."
     required: true

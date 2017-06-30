@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID for the user pool where you want to update user attributes.'
+    description: "The user pool ID for the user pool where you want to update user attributes."
     required: true
   Username:
     type: string
-    description: 'The user name of the user for whom you want to update user attributes.'
+    description: "The user name of the user for whom you want to update user attributes."
     required: true
   UserAttributes:
     type: array
-    description: 'An array of name-value pairs representing user attributes.'
+    description: "An array of name-value pairs representing user attributes."
     required: true

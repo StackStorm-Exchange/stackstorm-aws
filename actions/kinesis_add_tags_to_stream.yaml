@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   StreamName:
     type: string
-    description: 'The name of the stream.'
+    description: "The name of the stream."
     required: true
   Tags:
     type: object
-    description: 'The set of key-value pairs to use to create the tags.'
+    description: "The set of key-value pairs to use to create the tags."
     required: true

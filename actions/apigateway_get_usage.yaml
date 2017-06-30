@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,22 +21,22 @@ parameters:
     type: string
   usagePlanId:
     type: string
-    description: 'The Id of the usage plan associated with the usage data.'
+    description: "The Id of the usage plan associated with the usage data."
     required: true
   startDate:
     type: string
-    description: 'The starting date (e.g., 2016-01-01) of the usage data.'
+    description: "The starting date (e.g., 2016-01-01) of the usage data."
     required: true
   endDate:
     type: string
-    description: 'The ending date (e.g., 2016-12-31) of the usage data.'
+    description: "The ending date (e.g., 2016-12-31) of the usage data."
     required: true
   keyId:
     type: string
-    description: 'The Id of the API key associated with the resultant usage data.'
+    description: "The Id of the API key associated with the resultant usage data."
   position:
     type: string
-    description: 'Position'
+    description: "Position"
   limit:
     type: integer
-    description: 'The maximum number of results to be returned.'
+    description: "The maximum number of results to be returned."

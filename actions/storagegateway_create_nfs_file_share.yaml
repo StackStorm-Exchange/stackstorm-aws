@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,29 +21,29 @@ parameters:
     type: string
   ClientToken:
     type: string
-    description: 'A unique string value that you supply that is used by file gateway to ensure idempotent file share creation.'
+    description: "A unique string value that you supply that is used by file gateway to ensure idempotent file share creation."
     required: true
   GatewayARN:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the file gateway on which you want to create a file share.'
+    description: "The Amazon Resource Name (ARN) of the file gateway on which you want to create a file share."
     required: true
   Role:
     type: string
-    description: 'The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage. '
+    description: "The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage. "
     required: true
   LocationARN:
     type: string
-    description: 'The ARN of the backend storage used for storing file data. '
+    description: "The ARN of the backend storage used for storing file data. "
     required: true
   NFSFileShareDefaults:
     type: object
-    description: 'File share default values. Optional.'
+    description: "File share default values. Optional."
   KMSEncrypted:
     type: boolean
-    description: 'True to use Amazon S3 server side encryption with your own AWS KMS key, or false to use a key managed by Amazon S3. Optional.'
+    description: "True to use Amazon S3 server side encryption with your own AWS KMS key, or false to use a key managed by Amazon S3. Optional."
   KMSKey:
     type: string
-    description: 'The KMS key used for Amazon S3 server side encryption. This value can only be set when KmsEncrypted is true. Optional.'
+    description: "The KMS key used for Amazon S3 server side encryption. This value can only be set when KmsEncrypted is true. Optional."
   DefaultStorageClass:
     type: string
-    description: 'The default storage class for objects put into an Amazon S3 bucket by file gateway. Possible values are S3_STANDARD or S3_STANDARD_IA. If this field is not populated, the default value S3_STANDARD is used. Optional.'
+    description: "The default storage class for objects put into an Amazon S3 bucket by file gateway. Possible values are S3_STANDARD or S3_STANDARD_IA. If this field is not populated, the default value S3_STANDARD is used. Optional."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ResourceId:
     type: string
-    description: 'The Amazon EMR resource identifier to which tags will be added. This value must be a cluster identifier.'
+    description: "The Amazon EMR resource identifier to which tags will be added. This value must be a cluster identifier."
     required: true
   Tags:
     type: array
-    description: 'A list of tags to associate with a cluster and propagate to EC2 instances. Tags are user-defined key/value pairs that consist of a required key string with a maximum of 128 characters, and an optional value string with a maximum of 256 characters.'
+    description: "A list of tags to associate with a cluster and propagate to EC2 instances. Tags are user-defined key/value pairs that consist of a required key string with a maximum of 128 characters, and an optional value string with a maximum of 256 characters."
     required: true

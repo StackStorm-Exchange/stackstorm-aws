@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,22 +21,22 @@ parameters:
     type: string
   DisplayName:
     type: string
-    description: 'The name to use for display purposes.'
+    description: "The name to use for display purposes."
     required: true
   ProviderName:
     type: string
-    description: 'The name of the portfolio provider.'
+    description: "The name of the portfolio provider."
     required: true
   IdempotencyToken:
     type: string
-    description: 'A token to disambiguate duplicate requests. You can create multiple resources using the same input in multiple requests, provided that you also specify a different idempotency token for each request.'
+    description: "A token to disambiguate duplicate requests. You can create multiple resources using the same input in multiple requests, provided that you also specify a different idempotency token for each request."
     required: true
   AcceptLanguage:
     type: string
-    description: 'The language code to use for this operation. Supported language codes are as follows: "en" (English) "jp" (Japanese) "zh" (Chinese) If no code is specified, "en" is used as the default.'
+    description: "The language code to use for this operation. Supported language codes are as follows: 'en' (English) 'jp' (Japanese) 'zh' (Chinese) If no code is specified, 'en' is used as the default."
   Description:
     type: string
-    description: 'The text description of the portfolio.'
+    description: "The text description of the portfolio."
   Tags:
     type: array
-    description: 'Tags to associate with the new portfolio.'
+    description: "Tags to associate with the new portfolio."

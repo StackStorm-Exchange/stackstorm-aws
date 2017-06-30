@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,38 +21,38 @@ parameters:
     type: string
   jobIds:
     type: array
-    description: ''
+    description: ""
     required: true
   name:
     type: string
-    description: ''
+    description: ""
   company:
     type: string
-    description: ''
+    description: ""
   phoneNumber:
     type: string
-    description: ''
+    description: ""
   country:
     type: string
-    description: ''
+    description: ""
   stateOrProvince:
     type: string
-    description: ''
+    description: ""
   city:
     type: string
-    description: ''
+    description: ""
   postalCode:
     type: string
-    description: ''
+    description: ""
   street1:
     type: string
-    description: ''
+    description: ""
   street2:
     type: string
-    description: ''
+    description: ""
   street3:
     type: string
-    description: ''
+    description: ""
   APIVersion:
     type: string
-    description: ''
+    description: ""

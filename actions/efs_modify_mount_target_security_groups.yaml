@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   MountTargetId:
     type: string
-    description: 'ID of the mount target whose security groups you want to modify.'
+    description: "ID of the mount target whose security groups you want to modify."
     required: true
   SecurityGroups:
     type: array
-    description: 'Array of up to five VPC security group IDs.'
+    description: "Array of up to five VPC security group IDs."

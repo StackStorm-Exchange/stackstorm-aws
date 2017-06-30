@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   Names:
     type: array
-    description: 'The stack names to describe. Use null to describe all the stacks for the AWS account.'
+    description: "The stack names to describe. Use null to describe all the stacks for the AWS account."
   NextToken:
     type: string
-    description: 'The pagination token to use to retrieve the next page of results for this operation. If this value is null, it retrieves the first page.'
+    description: "The pagination token to use to retrieve the next page of results for this operation. If this value is null, it retrieves the first page."

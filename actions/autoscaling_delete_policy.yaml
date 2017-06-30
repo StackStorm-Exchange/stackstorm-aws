@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   PolicyName:
     type: string
-    description: 'The name or Amazon Resource Name (ARN) of the policy.'
+    description: "The name or Amazon Resource Name (ARN) of the policy."
     required: true
   AutoScalingGroupName:
     type: string
-    description: 'The name of the Auto Scaling group.'
+    description: "The name of the Auto Scaling group."

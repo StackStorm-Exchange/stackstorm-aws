@@ -1,0 +1,25 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: athena_get_named_query
+runner_type: python-script
+parameters:
+  action:
+    default: get_named_query
+    immutable: true
+    type: string
+  cls:
+    default: athena
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  NamedQueryId:
+    type: string
+    description: "The unique ID of the query. Use ListNamedQueries to get query IDs."
+    required: true

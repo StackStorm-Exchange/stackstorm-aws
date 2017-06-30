@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   topic:
     type: string
-    description: 'The topic.'
+    description: "The topic."
   maxResults:
     type: integer
-    description: 'The maximum number of results to return.'
+    description: "The maximum number of results to return."
   nextToken:
     type: string
-    description: 'A token used to retrieve the next value.'
+    description: "A token used to retrieve the next value."
   ruleDisabled:
     type: boolean
-    description: 'Specifies whether the rule is disabled.'
+    description: "Specifies whether the rule is disabled."

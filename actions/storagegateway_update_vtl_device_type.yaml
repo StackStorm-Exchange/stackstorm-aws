@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   VTLDeviceARN:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the medium changer you want to select.'
+    description: "The Amazon Resource Name (ARN) of the medium changer you want to select."
     required: true
   DeviceType:
     type: string
-    description: 'The type of medium changer you want to select.  Valid Values: "STK-L700", "AWS-Gateway-VTL"'
+    description: "The type of medium changer you want to select.  Valid Values: 'STK-L700', 'AWS-Gateway-VTL'"
     required: true

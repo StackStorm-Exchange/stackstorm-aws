@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,29 +21,29 @@ parameters:
     type: string
   SubnetId:
     type: string
-    description: 'The identifier of the subnet in your VPC in which to place the HSM.'
+    description: "The identifier of the subnet in your VPC in which to place the HSM."
     required: true
   SshKey:
     type: string
-    description: 'The SSH public key to install on the HSM.'
+    description: "The SSH public key to install on the HSM."
     required: true
   IamRoleArn:
     type: string
-    description: 'The ARN of an IAM role to enable the AWS CloudHSM service to allocate an ENI on your behalf.'
+    description: "The ARN of an IAM role to enable the AWS CloudHSM service to allocate an ENI on your behalf."
     required: true
   SubscriptionType:
     type: string
-    description: ''
+    description: ""
     required: true
   EniIp:
     type: string
-    description: 'The IP address to assign to the HSM"s ENI. If an IP address is not specified, an IP address will be randomly chosen from the CIDR range of the subnet.'
+    description: "The IP address to assign to the HSM's ENI. If an IP address is not specified, an IP address will be randomly chosen from the CIDR range of the subnet."
   ExternalId:
     type: string
-    description: 'The external ID from IamRoleArn, if present.'
+    description: "The external ID from IamRoleArn, if present."
   ClientToken:
     type: string
-    description: 'A user-defined token to ensure idempotence. Subsequent calls to this operation with the same token will be ignored.'
+    description: "A user-defined token to ensure idempotence. Subsequent calls to this operation with the same token will be ignored."
   SyslogIp:
     type: string
-    description: 'The IP address for the syslog monitoring server. The AWS CloudHSM service only supports one syslog monitoring server.'
+    description: "The IP address for the syslog monitoring server. The AWS CloudHSM service only supports one syslog monitoring server."

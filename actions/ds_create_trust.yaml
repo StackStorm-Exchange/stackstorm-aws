@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,23 +21,23 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'The Directory ID of the Microsoft AD in the AWS cloud for which to establish the trust relationship.'
+    description: "The Directory ID of the Microsoft AD in the AWS cloud for which to establish the trust relationship."
     required: true
   RemoteDomainName:
     type: string
-    description: 'The Fully Qualified Domain Name (FQDN) of the external domain for which to create the trust relationship.'
+    description: "The Fully Qualified Domain Name (FQDN) of the external domain for which to create the trust relationship."
     required: true
   TrustPassword:
     type: string
-    description: 'The trust password. The must be the same password that was used when creating the trust relationship on the external domain.'
+    description: "The trust password. The must be the same password that was used when creating the trust relationship on the external domain."
     required: true
   TrustDirection:
     type: string
-    description: 'The direction of the trust relationship.'
+    description: "The direction of the trust relationship."
     required: true
   TrustType:
     type: string
-    description: 'The trust relationship type.'
+    description: "The trust relationship type."
   ConditionalForwarderIpAddrs:
     type: array
-    description: 'The IP addresses of the remote DNS server associated with RemoteDomainName.'
+    description: "The IP addresses of the remote DNS server associated with RemoteDomainName."

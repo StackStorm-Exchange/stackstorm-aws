@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   ClientArn:
     type: string
-    description: 'The ARN of the client.'
+    description: "The ARN of the client."
     required: true
   ClientVersion:
     type: string
-    description: 'The client version.'
+    description: "The client version."
     required: true
   HapgList:
     type: array
-    description: 'A list of ARNs that identify the high-availability partition groups that are associated with the client.'
+    description: "A list of ARNs that identify the high-availability partition groups that are associated with the client."
     required: true

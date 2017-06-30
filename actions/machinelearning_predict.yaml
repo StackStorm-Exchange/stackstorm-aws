@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   MLModelId:
     type: string
-    description: 'A unique identifier of the MLModel.'
+    description: "A unique identifier of the MLModel."
     required: true
   Record:
     type: object
-    description: ''
+    description: ""
     required: true
   PredictEndpoint:
     type: string
-    description: ''
+    description: ""
     required: true

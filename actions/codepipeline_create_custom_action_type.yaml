@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,27 +21,27 @@ parameters:
     type: string
   category:
     type: string
-    description: 'The category of the custom action, such as a build action or a test action.  Although Source and Approval are listed as valid values, they are not currently functional. These values are reserved for future use. '
+    description: "The category of the custom action, such as a build action or a test action.  Although Source and Approval are listed as valid values, they are not currently functional. These values are reserved for future use. "
     required: true
   provider:
     type: string
-    description: 'The provider of the service used in the custom action, such as AWS CodeDeploy.'
+    description: "The provider of the service used in the custom action, such as AWS CodeDeploy."
     required: true
   version:
     type: string
-    description: 'The version identifier of the custom action.'
+    description: "The version identifier of the custom action."
     required: true
   inputArtifactDetails:
     type: object
-    description: ''
+    description: ""
     required: true
   outputArtifactDetails:
     type: object
-    description: ''
+    description: ""
     required: true
   settings:
     type: object
-    description: ''
+    description: ""
   configurationProperties:
     type: array
-    description: 'The configuration properties for the custom action.  You can refer to a name in the configuration properties of the custom action within the URL templates by following the format of {Config:name}, as long as the configuration property is both required and not secret. For more information, see Create a Custom Action for a Pipeline. '
+    description: "The configuration properties for the custom action.  You can refer to a name in the configuration properties of the custom action within the URL templates by following the format of {Config:name}, as long as the configuration property is both required and not secret. For more information, see Create a Custom Action for a Pipeline. "

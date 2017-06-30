@@ -1,0 +1,29 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: codestar_disassociate_team_member
+runner_type: python-script
+parameters:
+  action:
+    default: disassociate_team_member
+    immutable: true
+    type: string
+  cls:
+    default: codestar
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  projectId:
+    type: string
+    description: "The ID of the AWS CodeStar project from which you want to remove a team member."
+    required: true
+  userArn:
+    type: string
+    description: "The Amazon Resource Name (ARN) of the IAM user or group whom you want to remove from the project."
+    required: true

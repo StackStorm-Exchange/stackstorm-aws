@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,21 +21,21 @@ parameters:
     type: string
   domainName:
     type: string
-    description: 'The name of the DomainName resource.'
+    description: "The name of the DomainName resource."
     required: true
   certificateName:
     type: string
-    description: 'The name of the certificate.'
+    description: "The name of the certificate."
     required: true
   certificateBody:
     type: string
-    description: 'The body of the server certificate provided by your certificate authority.'
+    description: "The body of the server certificate provided by your certificate authority."
     required: true
   certificatePrivateKey:
     type: string
-    description: 'Your certificate"s private key.'
+    description: "Your certificate's private key."
     required: true
   certificateChain:
     type: string
-    description: 'The intermediate certificates and optionally the root certificate, one after the other without any blank lines. If you include the root certificate, your certificate chain must start with intermediate certificates and end with the root certificate. Use the intermediate certificates that were provided by your certificate authority. Do not include any intermediaries that are not in the chain of trust path.'
+    description: "The intermediate certificates and optionally the root certificate, one after the other without any blank lines. If you include the root certificate, your certificate chain must start with intermediate certificates and end with the root certificate. Use the intermediate certificates that were provided by your certificate authority. Do not include any intermediaries that are not in the chain of trust path."
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   NextToken:
     type: string
-    description: 'A token returned from a previous call to ListConfigurationSets to indicate the position of the configuration set in the configuration set list.'
+    description: "A token returned from a previous call to ListConfigurationSets to indicate the position of the configuration set in the configuration set list."
   MaxItems:
     type: integer
-    description: 'The number of configuration sets to return.'
+    description: "The number of configuration sets to return."

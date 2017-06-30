@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the traffic policy.'
+    description: "The name of the traffic policy."
     required: true
   Document:
     type: string
-    description: 'The definition of this traffic policy in JSON format. For more information, see Traffic Policy Document Format.'
+    description: "The definition of this traffic policy in JSON format. For more information, see Traffic Policy Document Format."
     required: true
   Comment:
     type: string
-    description: '(Optional) Any comments that you want to include about the traffic policy.'
+    description: "(Optional) Any comments that you want to include about the traffic policy."

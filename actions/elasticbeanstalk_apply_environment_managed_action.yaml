@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   ActionId:
     type: string
-    description: 'The action ID of the scheduled managed action to execute.'
+    description: "The action ID of the scheduled managed action to execute."
     required: true
   EnvironmentName:
     type: string
-    description: 'The name of the target environment.'
+    description: "The name of the target environment."
   EnvironmentId:
     type: string
-    description: 'The environment ID of the target environment.'
+    description: "The environment ID of the target environment."

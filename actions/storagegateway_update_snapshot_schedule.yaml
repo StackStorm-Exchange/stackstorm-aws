@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,16 +21,16 @@ parameters:
     type: string
   VolumeARN:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the volume. Use the ListVolumes operation to return a list of gateway volumes.'
+    description: "The Amazon Resource Name (ARN) of the volume. Use the ListVolumes operation to return a list of gateway volumes."
     required: true
   StartAt:
     type: integer
-    description: 'The hour of the day at which the snapshot schedule begins represented as hh, where hh is the hour (0 to 23). The hour of the day is in the time zone of the gateway.'
+    description: "The hour of the day at which the snapshot schedule begins represented as hh, where hh is the hour (0 to 23). The hour of the day is in the time zone of the gateway."
     required: true
   RecurrenceInHours:
     type: integer
-    description: 'Frequency of snapshots. Specify the number of hours between snapshots.'
+    description: "Frequency of snapshots. Specify the number of hours between snapshots."
     required: true
   Description:
     type: string
-    description: 'Optional description of the snapshot that overwrites the existing description.'
+    description: "Optional description of the snapshot that overwrites the existing description."

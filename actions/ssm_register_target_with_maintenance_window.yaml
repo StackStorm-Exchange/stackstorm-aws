@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,19 +21,19 @@ parameters:
     type: string
   WindowId:
     type: string
-    description: 'The ID of the Maintenance Window the target should be registered with.'
+    description: "The ID of the Maintenance Window the target should be registered with."
     required: true
   ResourceType:
     type: string
-    description: 'The type of target being registered with the Maintenance Window.'
+    description: "The type of target being registered with the Maintenance Window."
     required: true
   Targets:
     type: array
-    description: 'The targets (either instances or tags). Instances are specified using Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;. Tags are specified using Key=&lt;tag name&gt;,Values=&lt;tag value&gt;.'
+    description: "The targets (either instances or tags). Instances are specified using Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;. Tags are specified using Key=&lt;tag name&gt;,Values=&lt;tag value&gt;."
     required: true
   OwnerInformation:
     type: string
-    description: 'User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.'
+    description: "User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window."
   ClientToken:
     type: string
-    description: 'User-provided idempotency token.'
+    description: "User-provided idempotency token."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   ClusterId:
     type: string
-    description: 'The cluster identifier for the bootstrap actions to list.'
+    description: "The cluster identifier for the bootstrap actions to list."
     required: true
   Marker:
     type: string
-    description: 'The pagination token that indicates the next set of results to retrieve.'
+    description: "The pagination token that indicates the next set of results to retrieve."

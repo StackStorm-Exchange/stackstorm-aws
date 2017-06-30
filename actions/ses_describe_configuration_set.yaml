@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   ConfigurationSetName:
     type: string
-    description: 'The name of the configuration set to describe.'
+    description: "The name of the configuration set to describe."
     required: true
   ConfigurationSetAttributeNames:
     type: array
-    description: 'A list of configuration set attributes to return.'
+    description: "A list of configuration set attributes to return."

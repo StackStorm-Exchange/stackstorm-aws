@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   Rule:
     type: string
-    description: 'The name of the rule you want to remove targets from.'
+    description: "The name of the rule you want to remove targets from."
     required: true
   Ids:
     type: array
-    description: 'The list of target IDs to remove from the rule.'
+    description: "The list of target IDs to remove from the rule."
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   EvaluationId:
     type: string
-    description: 'The ID assigned to the Evaluation during creation.'
+    description: "The ID assigned to the Evaluation during creation."
     required: true
   EvaluationName:
     type: string
-    description: 'A new user-supplied name or description of the Evaluation that will replace the current content. '
+    description: "A new user-supplied name or description of the Evaluation that will replace the current content. "
     required: true

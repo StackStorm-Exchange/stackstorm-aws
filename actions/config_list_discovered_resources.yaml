@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,20 +21,20 @@ parameters:
     type: string
   resourceType:
     type: string
-    description: 'The type of resources that you want AWS Config to list in the response.'
+    description: "The type of resources that you want AWS Config to list in the response."
     required: true
   resourceIds:
     type: array
-    description: 'The IDs of only those resources that you want AWS Config to list in the response. If you do not specify this parameter, AWS Config lists all resources of the specified type that it has discovered.'
+    description: "The IDs of only those resources that you want AWS Config to list in the response. If you do not specify this parameter, AWS Config lists all resources of the specified type that it has discovered."
   resourceName:
     type: string
-    description: 'The custom name of only those resources that you want AWS Config to list in the response. If you do not specify this parameter, AWS Config lists all resources of the specified type that it has discovered.'
+    description: "The custom name of only those resources that you want AWS Config to list in the response. If you do not specify this parameter, AWS Config lists all resources of the specified type that it has discovered."
   limit:
     type: integer
-    description: 'The maximum number of resource identifiers returned on each page. The default is 100. You cannot specify a limit greater than 100. If you specify 0, AWS Config uses the default.'
+    description: "The maximum number of resource identifiers returned on each page. The default is 100. You cannot specify a limit greater than 100. If you specify 0, AWS Config uses the default."
   includeDeletedResources:
     type: boolean
-    description: 'Specifies whether AWS Config includes deleted resources in the results. By default, deleted resources are not included.'
+    description: "Specifies whether AWS Config includes deleted resources in the results. By default, deleted resources are not included."
   nextToken:
     type: string
-    description: 'The nextToken string returned on a previous page that you use to get the next page of results in a paginated response.'
+    description: "The nextToken string returned on a previous page that you use to get the next page of results in a paginated response."

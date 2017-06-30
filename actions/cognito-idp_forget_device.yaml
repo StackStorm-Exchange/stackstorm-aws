@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   DeviceKey:
     type: string
-    description: 'The device key.'
+    description: "The device key."
     required: true
   AccessToken:
     type: string
-    description: 'The access token for the forgotten device request.'
+    description: "The access token for the forgotten device request."

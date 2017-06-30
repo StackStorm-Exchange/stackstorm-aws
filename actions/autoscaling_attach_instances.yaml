@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   AutoScalingGroupName:
     type: string
-    description: 'The name of the group.'
+    description: "The name of the group."
     required: true
   InstanceIds:
     type: array
-    description: 'One or more instance IDs.'
+    description: "One or more instance IDs."

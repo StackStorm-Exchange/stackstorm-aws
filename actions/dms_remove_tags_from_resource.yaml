@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ResourceArn:
     type: string
-    description: '&gt;The Amazon Resource Name (ARN) of the AWS DMS resource the tag is to be removed from.'
+    description: "&gt;The Amazon Resource Name (ARN) of the AWS DMS resource the tag is to be removed from."
     required: true
   TagKeys:
     type: array
-    description: 'The tag key (name) of the tag to be removed.'
+    description: "The tag key (name) of the tag to be removed."
     required: true

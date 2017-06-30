@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID for the user pool where you want to add custom attributes.'
+    description: "The user pool ID for the user pool where you want to add custom attributes."
     required: true
   CustomAttributes:
     type: array
-    description: 'An array of custom attributes, such as Mutable and Name.'
+    description: "An array of custom attributes, such as Mutable and Name."
     required: true

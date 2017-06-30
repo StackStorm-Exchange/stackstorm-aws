@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,4 +21,4 @@ parameters:
     type: string
   NextToken:
     type: string
-    description: 'NextToken string is used when calling ListPlatformApplications action to retrieve additional records that are available after the first page results.'
+    description: "NextToken string is used when calling ListPlatformApplications action to retrieve additional records that are available after the first page results."

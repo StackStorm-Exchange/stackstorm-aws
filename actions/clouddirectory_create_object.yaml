@@ -1,0 +1,38 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: clouddirectory_create_object
+runner_type: python-script
+parameters:
+  action:
+    default: create_object
+    immutable: true
+    type: string
+  cls:
+    default: clouddirectory
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DirectoryArn:
+    type: string
+    description: "The Amazon Resource Name (ARN) that is associated with the Directory in which the object will be created. For more information, see arns."
+    required: true
+  SchemaFacets:
+    type: array
+    description: "A list of schema facets to be associated with the object that contains SchemaArn and facet name. For more information, see arns."
+    required: true
+  ObjectAttributeList:
+    type: array
+    description: "The attribute map whose attribute ARN contains the key and attribute value as the map value."
+  ParentReference:
+    type: object
+    description: "If specified, the parent reference to which this object will be attached."
+  LinkName:
+    type: string
+    description: "The name of link that is used to attach this object to a parent."

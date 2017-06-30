@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   HostedZoneId:
     type: string
-    description: 'The ID of the private hosted zone that you want to disassociate a VPC from.'
+    description: "The ID of the private hosted zone that you want to disassociate a VPC from."
     required: true
   VPC:
     type: object
-    description: 'A complex type that contains information about the VPC that you"re disassociating from the specified hosted zone.'
+    description: "A complex type that contains information about the VPC that you're disassociating from the specified hosted zone."
     required: true
   Comment:
     type: string
-    description: ' Optional: A comment about the disassociation request.'
+    description: " Optional: A comment about the disassociation request."

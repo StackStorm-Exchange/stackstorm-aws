@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   Tags:
     type: array
-    description: 'One or more tags.'
+    description: "One or more tags."
     required: true

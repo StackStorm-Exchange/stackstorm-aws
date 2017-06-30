@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   StackName:
     type: string
-    description: 'The name of the stack whose associated fleets are listed.'
+    description: "The name of the stack whose associated fleets are listed."
     required: true
   NextToken:
     type: string
-    description: 'The pagination token to use to retrieve the next page of results for this operation. If this value is null, it retrieves the first page.'
+    description: "The pagination token to use to retrieve the next page of results for this operation. If this value is null, it retrieves the first page."

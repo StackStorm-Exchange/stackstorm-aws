@@ -1,0 +1,29 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: opsworks_untag_resource
+runner_type: python-script
+parameters:
+  action:
+    default: untag_resource
+    immutable: true
+    type: string
+  cls:
+    default: opsworks
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ResourceArn:
+    type: string
+    description: "The stack or layer's Amazon Resource Number (ARN)."
+    required: true
+  TagKeys:
+    type: array
+    description: "A list of the keys of tags to be removed from a stack or layer."
+    required: true

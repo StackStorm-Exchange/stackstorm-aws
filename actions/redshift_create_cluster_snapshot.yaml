@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   SnapshotIdentifier:
     type: string
-    description: 'A unique identifier for the snapshot that you are requesting. This identifier must be unique for all snapshots within the AWS account. Constraints:   Cannot be null, empty, or blank   Must contain from 1 to 255 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens   Example: my-snapshot-id '
+    description: "A unique identifier for the snapshot that you are requesting. This identifier must be unique for all snapshots within the AWS account. Constraints:   Cannot be null, empty, or blank   Must contain from 1 to 255 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens   Example: my-snapshot-id "
     required: true
   ClusterIdentifier:
     type: string
-    description: 'The cluster identifier for which you want a snapshot.'
+    description: "The cluster identifier for which you want a snapshot."
     required: true
   Tags:
     type: array
-    description: 'A list of tag instances.'
+    description: "A list of tag instances."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,19 +21,19 @@ parameters:
     type: string
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   ScheduledInstanceIds:
     type: array
-    description: 'One or more Scheduled Instance IDs.'
+    description: "One or more Scheduled Instance IDs."
   SlotStartTimeRange:
     type: object
-    description: 'The time period for the first schedule to start.'
+    description: "The time period for the first schedule to start."
   NextToken:
     type: string
-    description: 'The token for the next set of results.'
+    description: "The token for the next set of results."
   MaxResults:
     type: integer
-    description: 'The maximum number of results to return in a single call. This value can be between 5 and 300. The default value is 100. To retrieve the remaining results, make another call with the returned NextToken value.'
+    description: "The maximum number of results to return in a single call. This value can be between 5 and 300. The default value is 100. To retrieve the remaining results, make another call with the returned NextToken value."
   Filters:
     type: array
-    description: 'One or more filters.    availability-zone - The Availability Zone (for example, us-west-2a).    instance-type - The instance type (for example, c4.large).    network-platform - The network platform (EC2-Classic or EC2-VPC).    platform - The platform (Linux/UNIX or Windows).  '
+    description: "One or more filters.    availability-zone - The Availability Zone (for example, us-west-2a).    instance-type - The instance type (for example, c4.large).    network-platform - The network platform (EC2-Classic or EC2-VPC).    platform - The platform (Linux/UNIX or Windows).  "

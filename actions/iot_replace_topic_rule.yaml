@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ruleName:
     type: string
-    description: 'The name of the rule.'
+    description: "The name of the rule."
     required: true
   topicRulePayload:
     type: object
-    description: 'The rule payload.'
+    description: "The rule payload."
     required: true

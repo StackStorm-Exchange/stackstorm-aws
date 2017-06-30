@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   ReservedInstanceIds:
     type: array
-    description: 'The IDs of the Convertible Reserved Instances to exchange for other Convertible Reserved Instances of the same or higher value.'
+    description: "The IDs of the Convertible Reserved Instances to exchange for other Convertible Reserved Instances of the same or higher value."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   TargetConfigurations:
     type: array
-    description: 'The configurations of the Convertible Reserved Instance offerings that you are purchasing in this exchange.'
+    description: "The configurations of the Convertible Reserved Instance offerings that you are purchasing in this exchange."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   assessmentTemplateArn:
     type: string
-    description: 'The ARN of the assessment template of the assessment run that you want to start.'
+    description: "The ARN of the assessment template of the assessment run that you want to start."
     required: true
   assessmentRunName:
     type: string
-    description: 'You can specify the name for the assessment run. The name must be unique for the assessment template whose ARN is used to start the assessment run.'
+    description: "You can specify the name for the assessment run. The name must be unique for the assessment template whose ARN is used to start the assessment run."

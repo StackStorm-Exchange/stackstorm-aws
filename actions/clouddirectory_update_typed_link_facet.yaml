@@ -1,0 +1,37 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: clouddirectory_update_typed_link_facet
+runner_type: python-script
+parameters:
+  action:
+    default: update_typed_link_facet
+    immutable: true
+    type: string
+  cls:
+    default: clouddirectory
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  SchemaArn:
+    type: string
+    description: "The Amazon Resource Name (ARN) that is associated with the schema. For more information, see arns."
+    required: true
+  Name:
+    type: string
+    description: "The unique name of the typed link facet."
+    required: true
+  AttributeUpdates:
+    type: array
+    description: "Attributes update structure."
+    required: true
+  IdentityAttributeOrder:
+    type: array
+    description: "The order of identity attributes for the facet, from most significant to least significant. The ability to filter typed links considers the order that the attributes are defined on the typed link facet. When providing ranges to a typed link selection, any inexact ranges must be specified at the end. Any attributes that do not have a range specified are presumed to match the entire range. Filters are interpreted in the order of the attributes on the typed link facet, not the order in which they are supplied to any API calls. For more information about identity attributes, see Typed link."
+    required: true

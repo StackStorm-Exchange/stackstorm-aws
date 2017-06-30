@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   LoadBalancerName:
     type: string
-    description: 'The name of the load balancer.'
+    description: "The name of the load balancer."
     required: true
   Instances:
     type: array
-    description: 'The IDs of the instances.'
+    description: "The IDs of the instances."
     required: true

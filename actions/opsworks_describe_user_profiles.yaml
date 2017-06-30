@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,4 +21,4 @@ parameters:
     type: string
   IamUserArns:
     type: array
-    description: 'An array of IAM or federated user ARNs that identify the users to be described.'
+    description: "An array of IAM or federated user ARNs that identify the users to be described."

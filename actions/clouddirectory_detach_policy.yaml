@@ -1,0 +1,33 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: clouddirectory_detach_policy
+runner_type: python-script
+parameters:
+  action:
+    default: detach_policy
+    immutable: true
+    type: string
+  cls:
+    default: clouddirectory
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DirectoryArn:
+    type: string
+    description: "The Amazon Resource Name (ARN) that is associated with the Directory where both objects reside. For more information, see arns."
+    required: true
+  PolicyReference:
+    type: object
+    description: "Reference that identifies the policy object."
+    required: true
+  ObjectReference:
+    type: object
+    description: "Reference that identifies the object whose policy object will be detached."
+    required: true

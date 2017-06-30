@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   agentIds:
     type: array
-    description: 'The IDs of the agents or Connectors that you want to stop collecting data.'
+    description: "The IDs of the agents or Connectors that you want to stop collecting data."
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   NetworkInterfaceId:
     type: string
-    description: 'The ID of the network interface.'
+    description: "The ID of the network interface."
     required: true
   PrivateIpAddresses:
     type: array
-    description: 'The secondary private IP addresses to unassign from the network interface. You can specify this option multiple times to unassign more than one IP address.'
+    description: "The secondary private IP addresses to unassign from the network interface. You can specify this option multiple times to unassign more than one IP address."
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,10 +21,10 @@ parameters:
     type: string
   StartTime:
     type: string
-    description: 'Optionally specifies, in UTC, the start of the time range to look up public keys for CloudTrail digest files. If not specified, the current time is used, and the current public key is returned.'
+    description: "Optionally specifies, in UTC, the start of the time range to look up public keys for CloudTrail digest files. If not specified, the current time is used, and the current public key is returned."
   EndTime:
     type: string
-    description: 'Optionally specifies, in UTC, the end of the time range to look up public keys for CloudTrail digest files. If not specified, the current time is used.'
+    description: "Optionally specifies, in UTC, the end of the time range to look up public keys for CloudTrail digest files. If not specified, the current time is used."
   NextToken:
     type: string
-    description: 'Reserved for future use.'
+    description: "Reserved for future use."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   Filter:
     type: object
-    description: 'A data structure that describes the IP address filter to create, which consists of a name, an IP address range, and whether to allow or block mail from it.'
+    description: "A data structure that describes the IP address filter to create, which consists of a name, an IP address range, and whether to allow or block mail from it."
     required: true

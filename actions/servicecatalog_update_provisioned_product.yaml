@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,26 +21,26 @@ parameters:
     type: string
   UpdateToken:
     type: string
-    description: 'The idempotency token that uniquely identifies the provisioning update request.'
+    description: "The idempotency token that uniquely identifies the provisioning update request."
     required: true
   AcceptLanguage:
     type: string
-    description: 'The language code to use for this operation. Supported language codes are as follows: "en" (English) "jp" (Japanese) "zh" (Chinese) If no code is specified, "en" is used as the default.'
+    description: "The language code to use for this operation. Supported language codes are as follows: 'en' (English) 'jp' (Japanese) 'zh' (Chinese) If no code is specified, 'en' is used as the default."
   ProvisionedProductName:
     type: string
-    description: 'The updated name of the ProvisionedProduct object . You must specify either ProvisionedProductName or ProvisionedProductId, but not both.'
+    description: "The updated name of the ProvisionedProduct object . You must specify either ProvisionedProductName or ProvisionedProductId, but not both."
   ProvisionedProductId:
     type: string
-    description: 'The identifier of the ProvisionedProduct object to update. You must specify either ProvisionedProductName or ProvisionedProductId, but not both.'
+    description: "The identifier of the ProvisionedProduct object to update. You must specify either ProvisionedProductName or ProvisionedProductId, but not both."
   ProductId:
     type: string
-    description: 'The identifier of the ProvisionedProduct object.'
+    description: "The identifier of the ProvisionedProduct object."
   ProvisioningArtifactId:
     type: string
-    description: 'The provisioning artifact identifier for this product.'
+    description: "The provisioning artifact identifier for this product."
   PathId:
     type: string
-    description: 'The identifier of the path to use in the updated ProvisionedProduct object. This value is optional if the product has a default path, and is required if there is more than one path for the specified product.'
+    description: "The identifier of the path to use in the updated ProvisionedProduct object. This value is optional if the product has a default path, and is required if there is more than one path for the specified product."
   ProvisioningParameters:
     type: array
-    description: 'A list of ProvisioningParameter objects used to update the ProvisionedProduct object.'
+    description: "A list of ProvisioningParameter objects used to update the ProvisionedProduct object."

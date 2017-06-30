@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,26 +21,26 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ''
+    description: ""
     required: true
   ACL:
     type: string
-    description: 'The canned ACL to apply to the bucket.'
+    description: "The canned ACL to apply to the bucket."
   CreateBucketConfiguration:
     type: object
-    description: ''
+    description: ""
   GrantFullControl:
     type: string
-    description: 'Allows grantee the read, write, read ACP, and write ACP permissions on the bucket.'
+    description: "Allows grantee the read, write, read ACP, and write ACP permissions on the bucket."
   GrantRead:
     type: string
-    description: 'Allows grantee to list the objects in the bucket.'
+    description: "Allows grantee to list the objects in the bucket."
   GrantReadACP:
     type: string
-    description: 'Allows grantee to read the bucket ACL.'
+    description: "Allows grantee to read the bucket ACL."
   GrantWrite:
     type: string
-    description: 'Allows grantee to create, overwrite, and delete any object in the bucket.'
+    description: "Allows grantee to create, overwrite, and delete any object in the bucket."
   GrantWriteACP:
     type: string
-    description: 'Allows grantee to write the ACL for the applicable bucket.'
+    description: "Allows grantee to write the ACL for the applicable bucket."

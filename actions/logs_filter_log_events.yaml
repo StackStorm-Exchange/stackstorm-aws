@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,26 +21,26 @@ parameters:
     type: string
   logGroupName:
     type: string
-    description: 'The name of the log group.'
+    description: "The name of the log group."
     required: true
   logStreamNames:
     type: array
-    description: 'Optional list of log stream names.'
+    description: "Optional list of log stream names."
   startTime:
     type: integer
-    description: 'The start of the time range, expressed as the number of milliseconds since Jan 1, 1970 00:00:00 UTC. Events with a timestamp prior to this time are not returned.'
+    description: "The start of the time range, expressed as the number of milliseconds since Jan 1, 1970 00:00:00 UTC. Events with a timestamp prior to this time are not returned."
   endTime:
     type: integer
-    description: 'The end of the time range, expressed as the number of milliseconds since Jan 1, 1970 00:00:00 UTC. Events with a timestamp later than this time are not returned.'
+    description: "The end of the time range, expressed as the number of milliseconds since Jan 1, 1970 00:00:00 UTC. Events with a timestamp later than this time are not returned."
   filterPattern:
     type: string
-    description: 'The filter pattern to use. If not provided, all the events are matched.'
+    description: "The filter pattern to use. If not provided, all the events are matched."
   nextToken:
     type: string
-    description: 'The token for the next set of events to return. (You received this token from a previous call.)'
+    description: "The token for the next set of events to return. (You received this token from a previous call.)"
   limit:
     type: integer
-    description: 'The maximum number of events to return. The default is 10,000 events.'
+    description: "The maximum number of events to return. The default is 10,000 events."
   interleaved:
     type: boolean
-    description: 'If the value is true, the operation makes a best effort to provide responses that contain events from multiple log streams within the log group interleaved in a single response. If the value is false all the matched log events in the first log stream are searched first, then those in the next log stream, and so on. The default is false.'
+    description: "If the value is true, the operation makes a best effort to provide responses that contain events from multiple log streams within the log group interleaved in a single response. If the value is false all the matched log events in the first log stream are searched first, then those in the next log stream, and so on. The default is false."

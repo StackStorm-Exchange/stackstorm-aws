@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,19 +21,19 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ''
+    description: ""
     required: true
   Key:
     type: string
-    description: ''
+    description: ""
     required: true
   UploadId:
     type: string
-    description: ''
+    description: ""
     required: true
   MultipartUpload:
     type: object
-    description: ''
+    description: ""
   RequestPayer:
     type: string
-    description: ''
+    description: ""

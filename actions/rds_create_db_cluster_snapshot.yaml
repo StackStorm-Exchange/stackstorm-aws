@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   DBClusterSnapshotIdentifier:
     type: string
-    description: 'The identifier of the DB cluster snapshot. This parameter is stored as a lowercase string. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.   Example: my-cluster1-snapshot1 '
+    description: "The identifier of the DB cluster snapshot. This parameter is stored as a lowercase string. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.   Example: my-cluster1-snapshot1 "
     required: true
   DBClusterIdentifier:
     type: string
-    description: 'The identifier of the DB cluster to create a snapshot for. This parameter is not case-sensitive. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.   Example: my-cluster1 '
+    description: "The identifier of the DB cluster to create a snapshot for. This parameter is not case-sensitive. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.   Example: my-cluster1 "
     required: true
   Tags:
     type: array
-    description: 'The tags to be assigned to the DB cluster snapshot.'
+    description: "The tags to be assigned to the DB cluster snapshot."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   repositoryName:
     type: string
-    description: 'The name of the repository in which to test the triggers.'
+    description: "The name of the repository in which to test the triggers."
   triggers:
     type: array
-    description: 'The list of triggers to test.'
+    description: "The list of triggers to test."

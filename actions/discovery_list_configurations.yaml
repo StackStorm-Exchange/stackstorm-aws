@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,17 +21,17 @@ parameters:
     type: string
   configurationType:
     type: string
-    description: 'A valid configuration identified by the Discovery Service. '
+    description: "A valid configuration identified by the Discovery Service. "
     required: true
   filters:
     type: array
-    description: 'You can filter the request using various logical operators and a key-value format. For example:   {"key": "serverType", "value": "webServer"}  For a complete list of filter options and guidance about using them with this action, see Querying Discovered Configuration Items. '
+    description: "You can filter the request using various logical operators and a key-value format. For example:   {'key': 'serverType', 'value': 'webServer'}  For a complete list of filter options and guidance about using them with this action, see Querying Discovered Configuration Items. "
   maxResults:
     type: integer
-    description: 'The total number of items to return. The maximum value is 100.'
+    description: "The total number of items to return. The maximum value is 100."
   nextToken:
     type: string
-    description: 'Token to retrieve the next set of results. For example, if a previous call to ListConfigurations returned 100 items, but you set ListConfigurationsRequest$maxResults to 10, you received a set of 10 results along with a token. Use that token in this query to get the next set of 10.'
+    description: "Token to retrieve the next set of results. For example, if a previous call to ListConfigurations returned 100 items, but you set ListConfigurationsRequest$maxResults to 10, you received a set of 10 results along with a token. Use that token in this query to get the next set of 10."
   orderBy:
     type: array
-    description: 'Certain filter criteria return output that can be sorted in ascending or descending order. For a list of output characteristics for each filter, see Querying Discovered Configuration Items.'
+    description: "Certain filter criteria return output that can be sorted in ascending or descending order. For a list of output characteristics for each filter, see Querying Discovered Configuration Items."

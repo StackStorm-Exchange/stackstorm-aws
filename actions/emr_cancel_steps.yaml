@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   ClusterId:
     type: string
-    description: 'The ClusterID for which specified steps will be canceled. Use RunJobFlow and ListClusters to get ClusterIDs. '
+    description: "The ClusterID for which specified steps will be canceled. Use RunJobFlow and ListClusters to get ClusterIDs. "
   StepIds:
     type: array
-    description: 'The list of StepIDs to cancel. Use ListSteps to get steps and their states for the specified cluster.'
+    description: "The list of StepIDs to cancel. Use ListSteps to get steps and their states for the specified cluster."

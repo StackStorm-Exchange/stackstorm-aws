@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   Identity:
     type: string
-    description: 'The identity for which DKIM signing should be enabled or disabled.'
+    description: "The identity for which DKIM signing should be enabled or disabled."
     required: true
   DkimEnabled:
     type: boolean
-    description: 'Sets whether DKIM signing is enabled for an identity. Set to true to enable DKIM signing for this identity; false to disable it. '
+    description: "Sets whether DKIM signing is enabled for an identity. Set to true to enable DKIM signing for this identity; false to disable it. "
     required: true

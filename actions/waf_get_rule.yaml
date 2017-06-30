@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   RuleId:
     type: string
-    description: 'The RuleId of the Rule that you want to get. RuleId is returned by CreateRule and by ListRules.'
+    description: "The RuleId of the Rule that you want to get. RuleId is returned by CreateRule and by ListRules."
     required: true

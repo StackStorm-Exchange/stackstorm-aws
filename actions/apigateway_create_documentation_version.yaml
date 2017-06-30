@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,15 +21,15 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: '[Required] Specifies the API identifier of the to-be-created documentation version.'
+    description: "[Required] Specifies the API identifier of the to-be-created documentation version."
     required: true
   documentationVersion:
     type: string
-    description: '[Required] The version identifier of the new snapshot.'
+    description: "[Required] The version identifier of the new snapshot."
     required: true
   stageName:
     type: string
-    description: 'The stage name to be associated with the new documentation snapshot.'
+    description: "The stage name to be associated with the new documentation snapshot."
   description:
     type: string
-    description: 'A description about the new documentation snapshot.'
+    description: "A description about the new documentation snapshot."

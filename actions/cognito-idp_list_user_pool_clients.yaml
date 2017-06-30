@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID for the user pool where you want to list user pool clients.'
+    description: "The user pool ID for the user pool where you want to list user pool clients."
     required: true
   MaxResults:
     type: integer
-    description: 'The maximum number of results you want the request to return when listing the user pool clients.'
+    description: "The maximum number of results you want the request to return when listing the user pool clients."
   NextToken:
     type: string
-    description: 'An identifier that was returned from the previous call to this operation, which can be used to return the next set of items in the list.'
+    description: "An identifier that was returned from the previous call to this operation, which can be used to return the next set of items in the list."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   StackName:
     type: string
-    description: 'The name or the Amazon Resource Name (ARN) of the stack for which you want to list change sets.'
+    description: "The name or the Amazon Resource Name (ARN) of the stack for which you want to list change sets."
     required: true
   NextToken:
     type: string
-    description: 'A string (provided by the ListChangeSets response output) that identifies the next page of change sets that you want to retrieve.'
+    description: "A string (provided by the ListChangeSets response output) that identifies the next page of change sets that you want to retrieve."

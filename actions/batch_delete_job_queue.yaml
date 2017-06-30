@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   jobQueue:
     type: string
-    description: 'The short name or full Amazon Resource Name (ARN) of the queue to delete. '
+    description: "The short name or full Amazon Resource Name (ARN) of the queue to delete. "
     required: true

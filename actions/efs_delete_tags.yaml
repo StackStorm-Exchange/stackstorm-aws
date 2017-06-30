@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   FileSystemId:
     type: string
-    description: 'ID of the file system whose tags you want to delete (String).'
+    description: "ID of the file system whose tags you want to delete (String)."
     required: true
   TagKeys:
     type: array
-    description: 'List of tag keys to delete.'
+    description: "List of tag keys to delete."
     required: true

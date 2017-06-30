@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,14 +21,14 @@ parameters:
     type: string
   UUID:
     type: string
-    description: 'The event source mapping identifier.'
+    description: "The event source mapping identifier."
     required: true
   FunctionName:
     type: string
-    description: 'The Lambda function to which you want the stream records sent.  You can specify a function name (for example, Thumbnail) or you can specify Amazon Resource Name (ARN) of the function (for example, arn:aws:lambda:us-west-2:account-id:function:ThumbNail). AWS Lambda also allows you to specify a partial ARN (for example, account-id:Thumbnail).  If you are using versioning, you can also provide a qualified function ARN (ARN that is qualified with function version or alias name as suffix). For more information about versioning, see AWS Lambda Function Versioning and Aliases  Note that the length constraint applies only to the ARN. If you specify only the function name, it is limited to 64 character in length.'
+    description: "The Lambda function to which you want the stream records sent.  You can specify a function name (for example, Thumbnail) or you can specify Amazon Resource Name (ARN) of the function (for example, arn:aws:lambda:us-west-2:account-id:function:ThumbNail). AWS Lambda also allows you to specify a partial ARN (for example, account-id:Thumbnail).  If you are using versioning, you can also provide a qualified function ARN (ARN that is qualified with function version or alias name as suffix). For more information about versioning, see AWS Lambda Function Versioning and Aliases  Note that the length constraint applies only to the ARN. If you specify only the function name, it is limited to 64 character in length."
   Enabled:
     type: boolean
-    description: 'Specifies whether AWS Lambda should actively poll the stream or not. If disabled, AWS Lambda will not poll the stream.'
+    description: "Specifies whether AWS Lambda should actively poll the stream or not. If disabled, AWS Lambda will not poll the stream."
   BatchSize:
     type: integer
-    description: 'The maximum number of stream records that can be sent to your Lambda function for a single invocation.'
+    description: "The maximum number of stream records that can be sent to your Lambda function for a single invocation."

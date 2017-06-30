@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID for the user pool where you want to delete user attributes.'
+    description: "The user pool ID for the user pool where you want to delete user attributes."
     required: true
   Username:
     type: string
-    description: 'The user name of the user from which you would like to delete attributes.'
+    description: "The user name of the user from which you would like to delete attributes."
     required: true
   UserAttributeNames:
     type: array
-    description: 'An array of strings representing the user attribute names you wish to delete.'
+    description: "An array of strings representing the user attribute names you wish to delete."
     required: true

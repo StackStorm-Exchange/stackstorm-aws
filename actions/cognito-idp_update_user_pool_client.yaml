@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,24 +21,24 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID for the user pool where you want to update the user pool client.'
+    description: "The user pool ID for the user pool where you want to update the user pool client."
     required: true
   ClientId:
     type: string
-    description: 'The ID of the client associated with the user pool.'
+    description: "The ID of the client associated with the user pool."
     required: true
   ClientName:
     type: string
-    description: 'The client name from the update user pool client request.'
+    description: "The client name from the update user pool client request."
   RefreshTokenValidity:
     type: integer
-    description: 'The validity of the refresh token, in days.'
+    description: "The validity of the refresh token, in days."
   ReadAttributes:
     type: array
-    description: 'The read-only attributes of the user pool.'
+    description: "The read-only attributes of the user pool."
   WriteAttributes:
     type: array
-    description: 'The writeable attributes of the user pool.'
+    description: "The writeable attributes of the user pool."
   ExplicitAuthFlows:
     type: array
-    description: 'Explicit authentication flows.'
+    description: "Explicit authentication flows."

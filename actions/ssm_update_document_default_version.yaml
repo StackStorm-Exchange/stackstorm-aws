@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of a custom document that you want to set as the default version.'
+    description: "The name of a custom document that you want to set as the default version."
     required: true
   DocumentVersion:
     type: string
-    description: 'The version of a custom document that you want to set as the default version.'
+    description: "The version of a custom document that you want to set as the default version."
     required: true

@@ -1,0 +1,39 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: athena_create_named_query
+runner_type: python-script
+parameters:
+  action:
+    default: create_named_query
+    immutable: true
+    type: string
+  cls:
+    default: athena
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Name:
+    type: string
+    description: "The plain language name for the query."
+    required: true
+  Database:
+    type: string
+    description: "The database to which the query belongs."
+    required: true
+  QueryString:
+    type: string
+    description: "The text of the query itself. In other words, all query statements."
+    required: true
+  Description:
+    type: string
+    description: "A brief explanation of the query."
+  ClientRequestToken:
+    type: string
+    description: "A unique case-sensitive string used to ensure the request to create the query is idempotent (executes only once). If another CreateNamedQuery request is received, the same response is returned and another query is not created. If a parameter has changed, for example, the QueryString, an error is returned.  This token is listed as not required because AWS SDKs (for example the AWS SDK for Java) auto-generate the token for users. If you are not using the AWS SDK or the AWS CLI, you must provide this token or the action will fail. "

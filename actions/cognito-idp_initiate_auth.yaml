@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,15 +21,15 @@ parameters:
     type: string
   AuthFlow:
     type: string
-    description: 'The authentication flow.'
+    description: "The authentication flow."
     required: true
   ClientId:
     type: string
-    description: 'The client ID.'
+    description: "The client ID."
     required: true
   AuthParameters:
     type: object
-    description: 'The authentication parameters.'
+    description: "The authentication parameters."
   ClientMetadata:
     type: object
-    description: 'The client app"s metadata.'
+    description: "The client app's metadata."

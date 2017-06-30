@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'The name of the application.'
+    description: "The name of the application."
     required: true
   ResourceLifecycleConfig:
     type: object
-    description: 'The lifecycle configuration.'
+    description: "The lifecycle configuration."
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   AutomationExecutionId:
     type: string
-    description: 'The execution ID of the Automation to stop.'
+    description: "The execution ID of the Automation to stop."
     required: true

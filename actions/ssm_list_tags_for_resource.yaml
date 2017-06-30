@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ResourceType:
     type: string
-    description: 'Returns a list of tags for a specific resource type.'
+    description: "Returns a list of tags for a specific resource type."
     required: true
   ResourceId:
     type: string
-    description: 'The resource ID for which you want to see a list of tags.'
+    description: "The resource ID for which you want to see a list of tags."
     required: true

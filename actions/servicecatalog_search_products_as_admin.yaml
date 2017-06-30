@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,25 +21,25 @@ parameters:
     type: string
   AcceptLanguage:
     type: string
-    description: 'The language code to use for this operation. Supported language codes are as follows: "en" (English) "jp" (Japanese) "zh" (Chinese) If no code is specified, "en" is used as the default.'
+    description: "The language code to use for this operation. Supported language codes are as follows: 'en' (English) 'jp' (Japanese) 'zh' (Chinese) If no code is specified, 'en' is used as the default."
   PortfolioId:
     type: string
-    description: 'The portfolio identifier.'
+    description: "The portfolio identifier."
   Filters:
     type: object
-    description: 'The list of filters with which to limit search results. If no search filters are specified, the output is all the products to which the administrator has access.'
+    description: "The list of filters with which to limit search results. If no search filters are specified, the output is all the products to which the administrator has access."
   SortBy:
     type: string
-    description: 'The sort field specifier. If no value is specified, results are not sorted.'
+    description: "The sort field specifier. If no value is specified, results are not sorted."
   SortOrder:
     type: string
-    description: 'The sort order specifier. If no value is specified, results are not sorted.'
+    description: "The sort order specifier. If no value is specified, results are not sorted."
   PageToken:
     type: string
-    description: 'The page token of the first page retrieved. If null, this retrieves the first page of size PageSize.'
+    description: "The page token of the first page retrieved. If null, this retrieves the first page of size PageSize."
   PageSize:
     type: integer
-    description: 'The maximum number of items to return in the results. If more results exist than fit in the specified PageSize, the value of NextPageToken in the response is non-null.'
+    description: "The maximum number of items to return in the results. If more results exist than fit in the specified PageSize, the value of NextPageToken in the response is non-null."
   ProductSource:
     type: string
-    description: 'Access level of the source of the product.'
+    description: "Access level of the source of the product."

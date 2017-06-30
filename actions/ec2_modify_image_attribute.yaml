@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,32 +21,32 @@ parameters:
     type: string
   ImageId:
     type: string
-    description: 'The ID of the AMI.'
+    description: "The ID of the AMI."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   Attribute:
     type: string
-    description: 'The name of the attribute to modify.'
+    description: "The name of the attribute to modify."
   OperationType:
     type: string
-    description: 'The operation type.'
+    description: "The operation type."
   UserIds:
     type: array
-    description: 'One or more AWS account IDs. This is only valid when modifying the launchPermission attribute.'
+    description: "One or more AWS account IDs. This is only valid when modifying the launchPermission attribute."
   UserGroups:
     type: array
-    description: 'One or more user groups. This is only valid when modifying the launchPermission attribute.'
+    description: "One or more user groups. This is only valid when modifying the launchPermission attribute."
   ProductCodes:
     type: array
-    description: 'One or more product codes. After you add a product code to an AMI, it can"t be removed. This is only valid when modifying the productCodes attribute.'
+    description: "One or more product codes. After you add a product code to an AMI, it can't be removed. This is only valid when modifying the productCodes attribute."
   Value:
     type: string
-    description: 'The value of the attribute being modified. This is only valid when modifying the description attribute.'
+    description: "The value of the attribute being modified. This is only valid when modifying the description attribute."
   LaunchPermission:
     type: object
-    description: 'A launch permission modification.'
+    description: "A launch permission modification."
   Description:
     type: object
-    description: 'A description for the AMI.'
+    description: "A description for the AMI."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   RuleSetName:
     type: string
-    description: 'The name of the receipt rule set that contains the receipt rule to reposition.'
+    description: "The name of the receipt rule set that contains the receipt rule to reposition."
     required: true
   RuleName:
     type: string
-    description: 'The name of the receipt rule to reposition.'
+    description: "The name of the receipt rule to reposition."
     required: true
   After:
     type: string
-    description: 'The name of the receipt rule after which to place the specified receipt rule.'
+    description: "The name of the receipt rule after which to place the specified receipt rule."

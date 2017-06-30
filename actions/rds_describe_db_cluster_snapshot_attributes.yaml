@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   DBClusterSnapshotIdentifier:
     type: string
-    description: 'The identifier for the DB cluster snapshot to describe the attributes for.'
+    description: "The identifier for the DB cluster snapshot to describe the attributes for."
     required: true

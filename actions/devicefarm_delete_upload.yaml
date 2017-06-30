@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   arn:
     type: string
-    description: 'Represents the Amazon Resource Name (ARN) of the Device Farm upload you wish to delete.'
+    description: "Represents the Amazon Resource Name (ARN) of the Device Farm upload you wish to delete."
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   CertificateIdentifier:
     type: string
-    description: 'The customer-assigned name of the certificate. Valid characters are A-z and 0-9.'
+    description: "The customer-assigned name of the certificate. Valid characters are A-z and 0-9."
     required: true
   CertificatePem:
     type: string
-    description: 'The contents of the .pem X.509 certificate file for the certificate.'
+    description: "The contents of the .pem X.509 certificate file for the certificate."
   CertificateWallet:
     type: string
-    description: 'The location of the imported Oracle Wallet certificate for use with SSL.'
+    description: "The location of the imported Oracle Wallet certificate for use with SSL."

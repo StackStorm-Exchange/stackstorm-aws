@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   DomainName:
     type: string
-    description: ''
+    description: ""
     required: true
   AccessPolicies:
     type: string
-    description: 'The access rules you want to configure. These rules replace any existing rules. '
+    description: "The access rules you want to configure. These rules replace any existing rules. "
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   CallerReference:
     type: string
-    description: 'A unique string that identifies the request and that allows failed CreateHealthCheck requests to be retried without the risk of executing the operation twice. You must use a unique CallerReference string every time you create a health check.'
+    description: "A unique string that identifies the request and that allows failed CreateHealthCheck requests to be retried without the risk of executing the operation twice. You must use a unique CallerReference string every time you create a health check."
     required: true
   HealthCheckConfig:
     type: object
-    description: 'A complex type that contains the response to a CreateHealthCheck request. '
+    description: "A complex type that contains the response to a CreateHealthCheck request. "
     required: true

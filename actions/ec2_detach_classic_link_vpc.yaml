@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: 'The ID of the instance to unlink from the VPC.'
+    description: "The ID of the instance to unlink from the VPC."
     required: true
   VpcId:
     type: string
-    description: 'The ID of the VPC to which the instance is linked.'
+    description: "The ID of the VPC to which the instance is linked."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."

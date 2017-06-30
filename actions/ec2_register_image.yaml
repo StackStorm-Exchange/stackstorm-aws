@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,38 +21,38 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'A name for your AMI. Constraints: 3-128 alphanumeric characters, parentheses (()), square brackets ([]), spaces ( ), periods (.), slashes (/), dashes (-), single quotes ("), at-signs (@), or underscores(_)'
+    description: "A name for your AMI. Constraints: 3-128 alphanumeric characters, parentheses (()), square brackets ([]), spaces ( ), periods (.), slashes (/), dashes (-), single quotes ('), at-signs (@), or underscores(_)"
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   ImageLocation:
     type: string
-    description: 'The full path to your AMI manifest in Amazon S3 storage.'
+    description: "The full path to your AMI manifest in Amazon S3 storage."
   Description:
     type: string
-    description: 'A description for your AMI.'
+    description: "A description for your AMI."
   Architecture:
     type: string
-    description: 'The architecture of the AMI. Default: For Amazon EBS-backed AMIs, i386. For instance store-backed AMIs, the architecture specified in the manifest file.'
+    description: "The architecture of the AMI. Default: For Amazon EBS-backed AMIs, i386. For instance store-backed AMIs, the architecture specified in the manifest file."
   KernelId:
     type: string
-    description: 'The ID of the kernel.'
+    description: "The ID of the kernel."
   RamdiskId:
     type: string
-    description: 'The ID of the RAM disk.'
+    description: "The ID of the RAM disk."
   RootDeviceName:
     type: string
-    description: 'The name of the root device (for example, /dev/sda1, or /dev/xvda).'
+    description: "The name of the root device (for example, /dev/sda1, or /dev/xvda)."
   BlockDeviceMappings:
     type: array
-    description: 'One or more block device mapping entries.'
+    description: "One or more block device mapping entries."
   VirtualizationType:
     type: string
-    description: 'The type of virtualization. Default: paravirtual '
+    description: "The type of virtualization. Default: paravirtual "
   SriovNetSupport:
     type: string
-    description: 'Set to simple to enable enhanced networking with the Intel 82599 Virtual Function interface for the AMI and any instances that you launch from the AMI. There is no way to disable sriovNetSupport at this time. This option is supported only for HVM AMIs. Specifying this option with a PV AMI can make instances launched from the AMI unreachable.'
+    description: "Set to simple to enable enhanced networking with the Intel 82599 Virtual Function interface for the AMI and any instances that you launch from the AMI. There is no way to disable sriovNetSupport at this time. This option is supported only for HVM AMIs. Specifying this option with a PV AMI can make instances launched from the AMI unreachable."
   EnaSupport:
     type: boolean
-    description: 'Set to true to enable enhanced networking with ENA for the AMI and any instances that you launch from the AMI. This option is supported only for HVM AMIs. Specifying this option with a PV AMI can make instances launched from the AMI unreachable.'
+    description: "Set to true to enable enhanced networking with ENA for the AMI and any instances that you launch from the AMI. This option is supported only for HVM AMIs. Specifying this option with a PV AMI can make instances launched from the AMI unreachable."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   HsmClientCertificateIdentifier:
     type: string
-    description: 'The identifier to be assigned to the new HSM client certificate that the cluster will use to connect to the HSM to use the database encryption keys.'
+    description: "The identifier to be assigned to the new HSM client certificate that the cluster will use to connect to the HSM to use the database encryption keys."
     required: true
   Tags:
     type: array
-    description: 'A list of tag instances.'
+    description: "A list of tag instances."

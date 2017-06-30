@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   TrustId:
     type: string
-    description: 'The Trust ID of the trust relationship to be deleted.'
+    description: "The Trust ID of the trust relationship to be deleted."
     required: true
   DeleteAssociatedConditionalForwarder:
     type: boolean
-    description: 'Delete a conditional forwarder as part of a DeleteTrustRequest.'
+    description: "Delete a conditional forwarder as part of a DeleteTrustRequest."

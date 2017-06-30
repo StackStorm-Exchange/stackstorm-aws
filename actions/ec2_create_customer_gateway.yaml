@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,16 +21,16 @@ parameters:
     type: string
   Type:
     type: string
-    description: 'The type of VPN connection that this customer gateway supports (ipsec.1).'
+    description: "The type of VPN connection that this customer gateway supports (ipsec.1)."
     required: true
   PublicIp:
     type: string
-    description: 'The Internet-routable IP address for the customer gateway"s outside interface. The address must be static.'
+    description: "The Internet-routable IP address for the customer gateway's outside interface. The address must be static."
     required: true
   BgpAsn:
     type: integer
-    description: 'For devices that support BGP, the customer gateway"s BGP ASN. Default: 65000'
+    description: "For devices that support BGP, the customer gateway's BGP ASN. Default: 65000"
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."

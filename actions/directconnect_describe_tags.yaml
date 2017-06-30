@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   resourceArns:
     type: array
-    description: 'The Amazon Resource Names (ARNs) of the Direct Connect resources.'
+    description: "The Amazon Resource Names (ARNs) of the Direct Connect resources."
     required: true

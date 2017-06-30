@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   Marker:
     type: string
-    description: 'If you"re making the second or subsequent call to ListReusableDelegationSets, the Marker element matches the value that you specified in the marker parameter in the previous request.'
+    description: "If you're making the second or subsequent call to ListReusableDelegationSets, the Marker element matches the value that you specified in the marker parameter in the previous request."
   MaxItems:
     type: string
-    description: 'The value that you specified for the maxitems parameter in the request that produced the current response.'
+    description: "The value that you specified for the maxitems parameter in the request that produced the current response."

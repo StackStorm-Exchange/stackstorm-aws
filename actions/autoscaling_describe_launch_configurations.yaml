@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,10 +21,10 @@ parameters:
     type: string
   LaunchConfigurationNames:
     type: array
-    description: 'The launch configuration names. If you omit this parameter, all launch configurations are described.'
+    description: "The launch configuration names. If you omit this parameter, all launch configurations are described."
   NextToken:
     type: string
-    description: 'The token for the next set of items to return. (You received this token from a previous call.)'
+    description: "The token for the next set of items to return. (You received this token from a previous call.)"
   MaxRecords:
     type: integer
-    description: 'The maximum number of items to return with this call. The default is 100.'
+    description: "The maximum number of items to return with this call. The default is 100."

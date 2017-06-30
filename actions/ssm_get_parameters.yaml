@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   Names:
     type: array
-    description: 'Names of the parameters for which you want to query information.'
+    description: "Names of the parameters for which you want to query information."
     required: true
   WithDecryption:
     type: boolean
-    description: 'Return decrypted secure string value. Return decrypted values for secure string parameters. This flag is ignored for String and StringList parameter types.'
+    description: "Return decrypted secure string value. Return decrypted values for secure string parameters. This flag is ignored for String and StringList parameter types."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   PipelineId:
     type: string
-    description: 'The ID of the pipeline for which you want to get job information.'
+    description: "The ID of the pipeline for which you want to get job information."
     required: true
   Ascending:
     type: string
-    description: ' To list jobs in chronological order by the date and time that they were submitted, enter true. To list jobs in reverse chronological order, enter false. '
+    description: " To list jobs in chronological order by the date and time that they were submitted, enter true. To list jobs in reverse chronological order, enter false. "
   PageToken:
     type: string
-    description: ' When Elastic Transcoder returns more than one page of results, use pageToken in subsequent GET requests to get each successive page of results. '
+    description: " When Elastic Transcoder returns more than one page of results, use pageToken in subsequent GET requests to get each successive page of results. "

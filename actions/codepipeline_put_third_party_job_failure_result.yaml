@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   jobId:
     type: string
-    description: 'The ID of the job that failed. This is the same ID returned from PollForThirdPartyJobs.'
+    description: "The ID of the job that failed. This is the same ID returned from PollForThirdPartyJobs."
     required: true
   clientToken:
     type: string
-    description: 'The clientToken portion of the clientId and clientToken pair used to verify that the calling entity is allowed access to the job and its details.'
+    description: "The clientToken portion of the clientId and clientToken pair used to verify that the calling entity is allowed access to the job and its details."
     required: true
   failureDetails:
     type: object
-    description: ''
+    description: ""
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   services:
     type: array
-    description: 'A list of services to describe. You may specify up to 10 services to describe in a single operation.'
+    description: "A list of services to describe. You may specify up to 10 services to describe in a single operation."
     required: true
   cluster:
     type: string
-    description: 'The name of the cluster that hosts the service to describe. If you do not specify a cluster, the default cluster is assumed.'
+    description: "The name of the cluster that hosts the service to describe. If you do not specify a cluster, the default cluster is assumed."

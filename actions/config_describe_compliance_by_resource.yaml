@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,16 +21,16 @@ parameters:
     type: string
   ResourceType:
     type: string
-    description: 'The types of AWS resources for which you want compliance information; for example, AWS::EC2::Instance. For this action, you can specify that the resource type is an AWS account by specifying AWS::::Account.'
+    description: "The types of AWS resources for which you want compliance information; for example, AWS::EC2::Instance. For this action, you can specify that the resource type is an AWS account by specifying AWS::::Account."
   ResourceId:
     type: string
-    description: 'The ID of the AWS resource for which you want compliance information. You can specify only one resource ID. If you specify a resource ID, you must also specify a type for ResourceType.'
+    description: "The ID of the AWS resource for which you want compliance information. You can specify only one resource ID. If you specify a resource ID, you must also specify a type for ResourceType."
   ComplianceTypes:
     type: array
-    description: 'Filters the results by compliance. The allowed values are COMPLIANT, NON_COMPLIANT, and INSUFFICIENT_DATA.'
+    description: "Filters the results by compliance. The allowed values are COMPLIANT, NON_COMPLIANT, and INSUFFICIENT_DATA."
   Limit:
     type: integer
-    description: 'The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a limit greater than 100. If you specify 0, AWS Config uses the default.'
+    description: "The maximum number of evaluation results returned on each page. The default is 10. You cannot specify a limit greater than 100. If you specify 0, AWS Config uses the default."
   NextToken:
     type: string
-    description: 'The nextToken string returned on a previous page that you use to get the next page of results in a paginated response.'
+    description: "The nextToken string returned on a previous page that you use to get the next page of results in a paginated response."

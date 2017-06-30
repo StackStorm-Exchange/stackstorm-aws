@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   WindowExecutionId:
     type: string
-    description: 'The ID of the Maintenance Window execution that includes the task.'
+    description: "The ID of the Maintenance Window execution that includes the task."
     required: true
   TaskId:
     type: string
-    description: 'The ID of the specific task execution in the Maintenance Window task that should be retrieved.'
+    description: "The ID of the specific task execution in the Maintenance Window task that should be retrieved."
     required: true

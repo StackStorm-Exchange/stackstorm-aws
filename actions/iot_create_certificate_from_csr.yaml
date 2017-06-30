@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   certificateSigningRequest:
     type: string
-    description: 'The certificate signing request (CSR).'
+    description: "The certificate signing request (CSR)."
     required: true
   setAsActive:
     type: boolean
-    description: 'Specifies whether the certificate is active.'
+    description: "Specifies whether the certificate is active."

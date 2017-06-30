@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   ResourceArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the AWS CloudHSM resource.'
+    description: "The Amazon Resource Name (ARN) of the AWS CloudHSM resource."
     required: true

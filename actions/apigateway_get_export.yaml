@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,19 +21,19 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The identifier of the RestApi to be exported.'
+    description: "The identifier of the RestApi to be exported."
     required: true
   stageName:
     type: string
-    description: 'The name of the Stage that will be exported.'
+    description: "The name of the Stage that will be exported."
     required: true
   exportType:
     type: string
-    description: 'The type of export. Currently only "swagger" is supported.'
+    description: "The type of export. Currently only 'swagger' is supported."
     required: true
   parameters:
     type: object
-    description: 'A key-value map of query string parameters that specify properties of the export, depending on the requested exportType. For exportType swagger, any combination of the following parameters are supported: integrations will export the API with x-amazon-apigateway-integration extensions. authorizers will export the API with x-amazon-apigateway-authorizer extensions. postman will export the API with Postman extensions, allowing for import to the Postman tool'
+    description: "A key-value map of query string parameters that specify properties of the export, depending on the requested exportType. For exportType swagger, any combination of the following parameters are supported: integrations will export the API with x-amazon-apigateway-integration extensions. authorizers will export the API with x-amazon-apigateway-authorizer extensions. postman will export the API with Postman extensions, allowing for import to the Postman tool"
   accepts:
     type: string
-    description: 'The content-type of the export, for example application/json. Currently application/json and application/yaml are supported for exportType of swagger. This should be specified in the Accept header for direct API requests.'
+    description: "The content-type of the export, for example application/json. Currently application/json and application/yaml are supported for exportType of swagger. This should be specified in the Accept header for direct API requests."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,34 +21,34 @@ parameters:
     type: string
   applicationName:
     type: string
-    description: 'The name of an AWS CodeDeploy application associated with the applicable IAM user or AWS account.'
+    description: "The name of an AWS CodeDeploy application associated with the applicable IAM user or AWS account."
     required: true
   deploymentGroupName:
     type: string
-    description: 'The name of a new deployment group for the specified application.'
+    description: "The name of a new deployment group for the specified application."
     required: true
   serviceRoleArn:
     type: string
-    description: 'A service role ARN that allows AWS CodeDeploy to act on the user"s behalf when interacting with AWS services.'
+    description: "A service role ARN that allows AWS CodeDeploy to act on the user's behalf when interacting with AWS services."
     required: true
   deploymentConfigName:
     type: string
-    description: 'If specified, the deployment configuration name can be either one of the predefined configurations provided with AWS CodeDeploy or a custom deployment configuration that you create by calling the create deployment configuration operation. CodeDeployDefault.OneAtATime is the default deployment configuration. It is used if a configuration isn"t specified for the deployment or the deployment group. For more information about the predefined deployment configurations in AWS CodeDeploy, see see Working with Deployment Groups in AWS CodeDeploy in the AWS CodeDeploy User Guide.'
+    description: "If specified, the deployment configuration name can be either one of the predefined configurations provided with AWS CodeDeploy or a custom deployment configuration that you create by calling the create deployment configuration operation. CodeDeployDefault.OneAtATime is the default deployment configuration. It is used if a configuration isn't specified for the deployment or the deployment group. For more information about the predefined deployment configurations in AWS CodeDeploy, see see Working with Deployment Groups in AWS CodeDeploy in the AWS CodeDeploy User Guide."
   ec2TagFilters:
     type: array
-    description: 'The Amazon EC2 tags on which to filter.'
+    description: "The Amazon EC2 tags on which to filter."
   onPremisesInstanceTagFilters:
     type: array
-    description: 'The on-premises instance tags on which to filter.'
+    description: "The on-premises instance tags on which to filter."
   autoScalingGroups:
     type: array
-    description: 'A list of associated Auto Scaling groups.'
+    description: "A list of associated Auto Scaling groups."
   triggerConfigurations:
     type: array
-    description: 'Information about triggers to create when the deployment group is created. For examples, see Create a Trigger for an AWS CodeDeploy Event in the AWS CodeDeploy User Guide.'
+    description: "Information about triggers to create when the deployment group is created. For examples, see Create a Trigger for an AWS CodeDeploy Event in the AWS CodeDeploy User Guide."
   alarmConfiguration:
     type: object
-    description: 'Information to add about Amazon CloudWatch alarms when the deployment group is created. '
+    description: "Information to add about Amazon CloudWatch alarms when the deployment group is created. "
   autoRollbackConfiguration:
     type: object
-    description: 'Configuration information for an automatic rollback that is added when a deployment group is created.'
+    description: "Configuration information for an automatic rollback that is added when a deployment group is created."

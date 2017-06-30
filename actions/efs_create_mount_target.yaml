@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,15 +21,15 @@ parameters:
     type: string
   FileSystemId:
     type: string
-    description: 'ID of the file system for which to create the mount target.'
+    description: "ID of the file system for which to create the mount target."
     required: true
   SubnetId:
     type: string
-    description: 'ID of the subnet to add the mount target in.'
+    description: "ID of the subnet to add the mount target in."
     required: true
   IpAddress:
     type: string
-    description: 'Valid IPv4 address within the address range of the specified subnet.'
+    description: "Valid IPv4 address within the address range of the specified subnet."
   SecurityGroups:
     type: array
-    description: 'Up to five VPC security group IDs, of the form sg-xxxxxxxx. These must be for the same VPC as subnet specified.'
+    description: "Up to five VPC security group IDs, of the form sg-xxxxxxxx. These must be for the same VPC as subnet specified."

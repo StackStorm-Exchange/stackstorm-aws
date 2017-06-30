@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   GatewayARN:
     type: string
-    description: ''
+    description: ""
     required: true
   TapeARN:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the virtual tape you want to cancel retrieval for.'
+    description: "The Amazon Resource Name (ARN) of the virtual tape you want to cancel retrieval for."
     required: true

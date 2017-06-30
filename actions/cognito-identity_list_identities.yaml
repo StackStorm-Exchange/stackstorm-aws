@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,15 +21,15 @@ parameters:
     type: string
   IdentityPoolId:
     type: string
-    description: 'An identity pool ID in the format REGION:GUID.'
+    description: "An identity pool ID in the format REGION:GUID."
     required: true
   MaxResults:
     type: integer
-    description: 'The maximum number of identities to return.'
+    description: "The maximum number of identities to return."
     required: true
   NextToken:
     type: string
-    description: 'A pagination token.'
+    description: "A pagination token."
   HideDisabled:
     type: boolean
-    description: 'An optional boolean parameter that allows you to hide disabled identities. If omitted, the ListIdentities API will include disabled identities in the response.'
+    description: "An optional boolean parameter that allows you to hide disabled identities. If omitted, the ListIdentities API will include disabled identities in the response."

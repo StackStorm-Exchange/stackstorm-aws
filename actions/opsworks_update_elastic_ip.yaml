@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   ElasticIp:
     type: string
-    description: 'The address.'
+    description: "The address."
     required: true
   Name:
     type: string
-    description: 'The new name.'
+    description: "The new name."

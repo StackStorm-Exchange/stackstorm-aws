@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID for which you want to confirm user registration.'
+    description: "The user pool ID for which you want to confirm user registration."
     required: true
   Username:
     type: string
-    description: 'The user name for which you want to confirm user registration.'
+    description: "The user name for which you want to confirm user registration."
     required: true

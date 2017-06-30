@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   assessmentTemplateArn:
     type: string
-    description: 'The ARN that specifies the assessment template that you want to delete.'
+    description: "The ARN that specifies the assessment template that you want to delete."
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,22 +21,22 @@ parameters:
     type: string
   cluster:
     type: string
-    description: 'The short name or full Amazon Resource Name (ARN) of the cluster with which to register your container instance. If you do not specify a cluster, the default cluster is assumed.'
+    description: "The short name or full Amazon Resource Name (ARN) of the cluster with which to register your container instance. If you do not specify a cluster, the default cluster is assumed."
   instanceIdentityDocument:
     type: string
-    description: 'The instance identity document for the EC2 instance to register. This document can be found by running the following command from the instance: curl http://169.254.169.254/latest/dynamic/instance-identity/document/ '
+    description: "The instance identity document for the EC2 instance to register. This document can be found by running the following command from the instance: curl http://169.254.169.254/latest/dynamic/instance-identity/document/ "
   instanceIdentityDocumentSignature:
     type: string
-    description: 'The instance identity document signature for the EC2 instance to register. This signature can be found by running the following command from the instance: curl http://169.254.169.254/latest/dynamic/instance-identity/signature/ '
+    description: "The instance identity document signature for the EC2 instance to register. This signature can be found by running the following command from the instance: curl http://169.254.169.254/latest/dynamic/instance-identity/signature/ "
   totalResources:
     type: array
-    description: 'The resources available on the instance.'
+    description: "The resources available on the instance."
   versionInfo:
     type: object
-    description: 'The version information for the Amazon ECS container agent and Docker daemon running on the container instance.'
+    description: "The version information for the Amazon ECS container agent and Docker daemon running on the container instance."
   containerInstanceArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the container instance (if it was previously registered).'
+    description: "The Amazon Resource Name (ARN) of the container instance (if it was previously registered)."
   attributes:
     type: array
-    description: 'The container instance attributes that this container instance supports.'
+    description: "The container instance attributes that this container instance supports."

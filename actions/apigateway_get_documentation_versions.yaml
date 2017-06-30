@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: '[Required] The identifier of an API of the to-be-retrieved documentation versions.'
+    description: "[Required] The identifier of an API of the to-be-retrieved documentation versions."
     required: true
   position:
     type: string
-    description: 'The position of the returned DocumentationVersion in the DocumentationVersions collection.'
+    description: "The position of the returned DocumentationVersion in the DocumentationVersions collection."
   limit:
     type: integer
-    description: 'The page size of the returned documentation versions.'
+    description: "The page size of the returned documentation versions."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: 'The ID of the instance for which the appropriate patch snapshot should be retrieved.'
+    description: "The ID of the instance for which the appropriate patch snapshot should be retrieved."
     required: true
   SnapshotId:
     type: string
-    description: 'The user-defined snapshot ID.'
+    description: "The user-defined snapshot ID."
     required: true

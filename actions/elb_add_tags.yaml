@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   LoadBalancerNames:
     type: array
-    description: 'The name of the load balancer. You can specify one load balancer only.'
+    description: "The name of the load balancer. You can specify one load balancer only."
     required: true
   Tags:
     type: array
-    description: 'The tags.'
+    description: "The tags."
     required: true

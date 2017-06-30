@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,4 +21,4 @@ parameters:
     type: string
   pageToken:
     type: string
-    description: 'A token used for paginating results from your get active names request.'
+    description: "A token used for paginating results from your get active names request."

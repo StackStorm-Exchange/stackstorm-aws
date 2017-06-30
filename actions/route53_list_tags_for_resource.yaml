@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ResourceType:
     type: string
-    description: 'The type of the resource.   The resource type for health checks is healthcheck.   The resource type for hosted zones is hostedzone.  '
+    description: "The type of the resource.   The resource type for health checks is healthcheck.   The resource type for hosted zones is hostedzone.  "
     required: true
   ResourceId:
     type: string
-    description: 'The ID of the resource for which you want to retrieve tags.'
+    description: "The ID of the resource for which you want to retrieve tags."
     required: true

@@ -1,0 +1,37 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: mturk_list_qualification_types
+runner_type: python-script
+parameters:
+  action:
+    default: list_qualification_types
+    immutable: true
+    type: string
+  cls:
+    default: mturk
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  MustBeRequestable:
+    type: boolean
+    description: "Specifies that only Qualification types that a user can request through the Amazon Mechanical Turk web site, such as by taking a Qualification test, are returned as results of the search. Some Qualification types, such as those assigned automatically by the system, cannot be requested directly by users. If false, all Qualification types, including those managed by the system, are considered. Valid values are True | False. "
+    required: true
+  Query:
+    type: string
+    description: " A text query against all of the searchable attributes of Qualification types. "
+  MustBeOwnedByCaller:
+    type: boolean
+    description: " Specifies that only Qualification types that the Requester created are returned. If false, the operation returns all Qualification types. "
+  NextToken:
+    type: string
+    description: ""
+  MaxResults:
+    type: integer
+    description: " The maximum number of results to return in a single call. "

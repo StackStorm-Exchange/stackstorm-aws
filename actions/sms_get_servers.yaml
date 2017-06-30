@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   nextToken:
     type: string
-    description: ''
+    description: ""
   maxResults:
     type: integer
-    description: ''
+    description: ""

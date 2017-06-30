@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,24 +21,24 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID for the user pool where you want to create a user pool client.'
+    description: "The user pool ID for the user pool where you want to create a user pool client."
     required: true
   ClientName:
     type: string
-    description: 'The client name for the user pool client you would like to create.'
+    description: "The client name for the user pool client you would like to create."
     required: true
   GenerateSecret:
     type: boolean
-    description: 'Boolean to specify whether you want to generate a secret for the user pool client being created.'
+    description: "Boolean to specify whether you want to generate a secret for the user pool client being created."
   RefreshTokenValidity:
     type: integer
-    description: 'The validity of the refresh token, in days.'
+    description: "The validity of the refresh token, in days."
   ReadAttributes:
     type: array
-    description: 'The read attributes.'
+    description: "The read attributes."
   WriteAttributes:
     type: array
-    description: 'The write attributes.'
+    description: "The write attributes."
   ExplicitAuthFlows:
     type: array
-    description: 'The explicit authentication flows.'
+    description: "The explicit authentication flows."

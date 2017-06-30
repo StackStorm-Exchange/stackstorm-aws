@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   Limit:
     type: integer
-    description: 'Maximum number of applications to list.'
+    description: "Maximum number of applications to list."
   ExclusiveStartApplicationName:
     type: string
-    description: 'Name of the application to start the list with. When using pagination to retrieve the list, you don"t need to specify this parameter in the first request. However, in subsequent requests, you add the last application name from the previous response to get the next page of applications.'
+    description: "Name of the application to start the list with. When using pagination to retrieve the list, you don't need to specify this parameter in the first request. However, in subsequent requests, you add the last application name from the previous response to get the next page of applications."

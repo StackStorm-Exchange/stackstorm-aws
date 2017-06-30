@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   SnapshotIdentifier:
     type: string
-    description: 'The identifier of the snapshot the account is authorized to restore.'
+    description: "The identifier of the snapshot the account is authorized to restore."
     required: true
   AccountWithRestoreAccess:
     type: string
-    description: 'The identifier of the AWS customer account authorized to restore the specified snapshot.'
+    description: "The identifier of the AWS customer account authorized to restore the specified snapshot."
     required: true
   SnapshotClusterIdentifier:
     type: string
-    description: 'The identifier of the cluster the snapshot was created from. This parameter is required if your IAM user has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.'
+    description: "The identifier of the cluster the snapshot was created from. This parameter is required if your IAM user has a policy containing a snapshot resource element that specifies anything other than * for the cluster name."

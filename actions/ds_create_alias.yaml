@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'The identifier of the directory for which to create the alias.'
+    description: "The identifier of the directory for which to create the alias."
     required: true
   Alias:
     type: string
-    description: 'The requested alias. The alias must be unique amongst all aliases in AWS. This operation throws an EntityAlreadyExistsException error if the alias already exists.'
+    description: "The requested alias. The alias must be unique amongst all aliases in AWS. This operation throws an EntityAlreadyExistsException error if the alias already exists."
     required: true

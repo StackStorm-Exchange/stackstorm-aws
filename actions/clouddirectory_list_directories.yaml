@@ -1,0 +1,30 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: clouddirectory_list_directories
+runner_type: python-script
+parameters:
+  action:
+    default: list_directories
+    immutable: true
+    type: string
+  cls:
+    default: clouddirectory
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  NextToken:
+    type: string
+    description: "The pagination token."
+  MaxResults:
+    type: integer
+    description: "The maximum number of results to retrieve."
+  state:
+    type: string
+    description: "The state of the directories in the list. Can be either Enabled, Disabled, or Deleted."

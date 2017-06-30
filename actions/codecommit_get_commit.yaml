@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   repositoryName:
     type: string
-    description: 'The name of the repository to which the commit was made.'
+    description: "The name of the repository to which the commit was made."
     required: true
   commitId:
     type: string
-    description: 'The commit ID.'
+    description: "The commit ID."
     required: true

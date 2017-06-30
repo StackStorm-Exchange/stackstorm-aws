@@ -1,0 +1,29 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: dynamodb_untag_resource
+runner_type: python-script
+parameters:
+  action:
+    default: untag_resource
+    immutable: true
+    type: string
+  cls:
+    default: dynamodb
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ResourceArn:
+    type: string
+    description: "The Amazon DyanamoDB resource the tags will be removed from. This value is an Amazon Resource Name (ARN)."
+    required: true
+  TagKeys:
+    type: array
+    description: "A list of tag keys. Existing tags of the resource whose keys are members of this list will be removed from the Amazon DynamoDB resource."
+    required: true

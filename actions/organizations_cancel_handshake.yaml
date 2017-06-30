@@ -1,0 +1,25 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: organizations_cancel_handshake
+runner_type: python-script
+parameters:
+  action:
+    default: cancel_handshake
+    immutable: true
+    type: string
+  cls:
+    default: organizations
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  HandshakeId:
+    type: string
+    description: "The unique identifier (ID) of the handshake that you want to cancel. You can get the ID from the ListHandshakesForOrganization operation. The regex pattern for handshake ID string requires 'h-' followed by from 8 to 32 lower-case letters or digits."
+    required: true

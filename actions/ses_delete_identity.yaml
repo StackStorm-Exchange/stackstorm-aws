@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   Identity:
     type: string
-    description: 'The identity to be removed from the list of identities for the AWS Account.'
+    description: "The identity to be removed from the list of identities for the AWS Account."
     required: true

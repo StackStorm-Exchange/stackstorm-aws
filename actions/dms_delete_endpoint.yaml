@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   EndpointArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) string that uniquely identifies the endpoint.'
+    description: "The Amazon Resource Name (ARN) string that uniquely identifies the endpoint."
     required: true

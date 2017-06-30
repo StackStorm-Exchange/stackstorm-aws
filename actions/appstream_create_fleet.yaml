@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,32 +21,32 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'A unique identifier for the fleet.'
+    description: "A unique identifier for the fleet."
     required: true
   ImageName:
     type: string
-    description: 'Unique name of the image used by the fleet.'
+    description: "Unique name of the image used by the fleet."
     required: true
   InstanceType:
     type: string
-    description: 'The instance type of compute resources for the fleet. Fleet instances are launched from this instance type.'
+    description: "The instance type of compute resources for the fleet. Fleet instances are launched from this instance type."
     required: true
   ComputeCapacity:
     type: object
-    description: 'The parameters for the capacity allocated to the fleet.'
+    description: "The parameters for the capacity allocated to the fleet."
     required: true
   VpcConfig:
     type: object
-    description: 'The VPC configuration for the fleet.'
+    description: "The VPC configuration for the fleet."
   MaxUserDurationInSeconds:
     type: integer
-    description: 'The maximum time up to which a streaming session can run.'
+    description: "The maximum time up to which a streaming session can run."
   DisconnectTimeoutInSeconds:
     type: integer
-    description: 'The time after disconnection when a session is considered to have ended. If a user who got disconnected reconnects within this timeout interval, the user is connected back to his/her previous session. '
+    description: "The time after disconnection when a session is considered to have ended. If a user who got disconnected reconnects within this timeout interval, the user is connected back to his/her previous session. "
   Description:
     type: string
-    description: 'The description of the fleet.'
+    description: "The description of the fleet."
   DisplayName:
     type: string
-    description: 'The display name of the fleet.'
+    description: "The display name of the fleet."

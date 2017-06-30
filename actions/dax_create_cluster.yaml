@@ -1,0 +1,61 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: dax_create_cluster
+runner_type: python-script
+parameters:
+  action:
+    default: create_cluster
+    immutable: true
+    type: string
+  cls:
+    default: dax
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  ClusterName:
+    type: string
+    description: "The cluster identifier. This parameter is stored as a lowercase string.  Constraints:    A name must contain from 1 to 20 alphanumeric characters or hyphens.   The first character must be a letter.   A name cannot end with a hyphen or contain two consecutive hyphens.  "
+    required: true
+  NodeType:
+    type: string
+    description: "The compute and memory capacity of the nodes in the cluster."
+    required: true
+  ReplicationFactor:
+    type: integer
+    description: "The number of nodes in the DAX cluster. A replication factor of 1 will create a single-node cluster, without any read replicas. For additional fault tolerance, you can create a multiple node cluster with one or more read replicas. To do this, set ReplicationFactor to 2 or more.  AWS recommends that you have at least two read replicas per cluster. "
+    required: true
+  IamRoleArn:
+    type: string
+    description: "A valid Amazon Resource Name (ARN) that identifies an IAM role. At runtime, DAX will assume this role and use the role's permissions to access DynamoDB on your behalf."
+    required: true
+  Description:
+    type: string
+    description: "A description of the cluster."
+  AvailabilityZones:
+    type: array
+    description: "The Availability Zones (AZs) in which the cluster nodes will be created. All nodes belonging to the cluster are placed in these Availability Zones. Use this parameter if you want to distribute the nodes across multiple AZs."
+  SubnetGroupName:
+    type: string
+    description: "The name of the subnet group to be used for the replication group.  DAX clusters can only run in an Amazon VPC environment. All of the subnets that you specify in a subnet group must exist in the same VPC. "
+  SecurityGroupIds:
+    type: array
+    description: "A list of security group IDs to be assigned to each node in the DAX cluster. (Each of the security group ID is system-generated.) If this parameter is not specified, DAX assigns the default VPC security group to each node."
+  PreferredMaintenanceWindow:
+    type: string
+    description: "Specifies the weekly time range during which maintenance on the DAX cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Valid values for ddd are:    sun     mon     tue     wed     thu     fri     sat    Example: sun:05:00-sun:09:00   If you don't specify a preferred maintenance window when you create or modify a cache cluster, DAX assigns a 60-minute maintenance window on a randomly selected day of the week. "
+  NotificationTopicArn:
+    type: string
+    description: "The Amazon Resource Name (ARN) of the Amazon SNS topic to which notifications will be sent.  The Amazon SNS topic owner must be same as the DAX cluster owner. "
+  ParameterGroupName:
+    type: string
+    description: "The parameter group to be associated with the DAX cluster."
+  Tags:
+    type: array
+    description: "A set of tags to associate with the DAX cluster. "

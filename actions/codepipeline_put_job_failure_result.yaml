@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   jobId:
     type: string
-    description: 'The unique system-generated ID of the job that failed. This is the same ID returned from PollForJobs.'
+    description: "The unique system-generated ID of the job that failed. This is the same ID returned from PollForJobs."
     required: true
   failureDetails:
     type: object
-    description: 'The details about the failure of a job.'
+    description: "The details about the failure of a job."
     required: true

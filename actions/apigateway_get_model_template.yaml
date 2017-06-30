@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The ID of the RestApi under which the model exists.'
+    description: "The ID of the RestApi under which the model exists."
     required: true
   modelName:
     type: string
-    description: 'The name of the model for which to generate a template.'
+    description: "The name of the model for which to generate a template."
     required: true

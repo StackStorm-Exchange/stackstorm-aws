@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,21 +21,21 @@ parameters:
     type: string
   domain:
     type: string
-    description: 'The domain of the workflow execution to terminate.'
+    description: "The domain of the workflow execution to terminate."
     required: true
   workflowId:
     type: string
-    description: 'The workflowId of the workflow execution to terminate.'
+    description: "The workflowId of the workflow execution to terminate."
     required: true
   runId:
     type: string
-    description: 'The runId of the workflow execution to terminate.'
+    description: "The runId of the workflow execution to terminate."
   reason:
     type: string
-    description: 'Optional. A descriptive reason for terminating the workflow execution.'
+    description: "Optional. A descriptive reason for terminating the workflow execution."
   details:
     type: string
-    description: 'Optional. Details for terminating the workflow execution.'
+    description: "Optional. Details for terminating the workflow execution."
   childPolicy:
     type: string
-    description: 'If set, specifies the policy to use for the child workflow executions of the workflow execution being terminated. This policy overrides the child policy specified for the workflow execution at registration time or when starting the execution. The supported child policies are:  TERMINATE: the child executions will be terminated. REQUEST_CANCEL: a request to cancel will be attempted for each child execution by recording a WorkflowExecutionCancelRequested event in its history. It is up to the decider to take appropriate actions when it receives an execution history with this event. ABANDON: no action will be taken. The child executions will continue to run.  A child policy for this workflow execution must be specified either as a default for the workflow type or through this parameter. If neither this parameter is set nor a default child policy was specified at registration time then a fault will be returned.'
+    description: "If set, specifies the policy to use for the child workflow executions of the workflow execution being terminated. This policy overrides the child policy specified for the workflow execution at registration time or when starting the execution. The supported child policies are:  TERMINATE: the child executions will be terminated. REQUEST_CANCEL: a request to cancel will be attempted for each child execution by recording a WorkflowExecutionCancelRequested event in its history. It is up to the decider to take appropriate actions when it receives an execution history with this event. ABANDON: no action will be taken. The child executions will continue to run.  A child policy for this workflow execution must be specified either as a default for the workflow type or through this parameter. If neither this parameter is set nor a default child policy was specified at registration time then a fault will be returned."

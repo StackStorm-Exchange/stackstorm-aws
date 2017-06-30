@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,20 +21,20 @@ parameters:
     type: string
   replicationJobId:
     type: string
-    description: ''
+    description: ""
     required: true
   frequency:
     type: integer
-    description: ''
+    description: ""
   nextReplicationRunStartTime:
     type: string
-    description: ''
+    description: ""
   licenseType:
     type: string
-    description: ''
+    description: ""
   roleName:
     type: string
-    description: ''
+    description: ""
   description:
     type: string
-    description: ''
+    description: ""

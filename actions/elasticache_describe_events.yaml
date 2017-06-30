@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,22 +21,22 @@ parameters:
     type: string
   SourceIdentifier:
     type: string
-    description: 'The identifier of the event source for which events are returned. If not specified, all sources are included in the response.'
+    description: "The identifier of the event source for which events are returned. If not specified, all sources are included in the response."
   SourceType:
     type: string
-    description: 'The event source to retrieve events for. If no value is specified, all events are returned.'
+    description: "The event source to retrieve events for. If no value is specified, all events are returned."
   StartTime:
     type: string
-    description: 'The beginning of the time interval to retrieve events for, specified in ISO 8601 format.'
+    description: "The beginning of the time interval to retrieve events for, specified in ISO 8601 format."
   EndTime:
     type: string
-    description: 'The end of the time interval for which to retrieve events, specified in ISO 8601 format.'
+    description: "The end of the time interval for which to retrieve events, specified in ISO 8601 format."
   Duration:
     type: integer
-    description: 'The number of minutes" worth of events to retrieve.'
+    description: "The number of minutes' worth of events to retrieve."
   MaxRecords:
     type: integer
-    description: 'The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a marker is included in the response so that the remaining results can be retrieved. Default: 100 Constraints: minimum 20; maximum 100.'
+    description: "The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a marker is included in the response so that the remaining results can be retrieved. Default: 100 Constraints: minimum 20; maximum 100."
   Marker:
     type: string
-    description: 'An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords.'
+    description: "An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords."

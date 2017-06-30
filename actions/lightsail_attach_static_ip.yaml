@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   staticIpName:
     type: string
-    description: 'The name of the static IP.'
+    description: "The name of the static IP."
     required: true
   instanceName:
     type: string
-    description: 'The instance name to which you want to attach the static IP address.'
+    description: "The instance name to which you want to attach the static IP address."
     required: true

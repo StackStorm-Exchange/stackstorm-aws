@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   body:
     type: string
-    description: 'The payload of the POST request to import API keys. For the payload format, see API Key File Format.'
+    description: "The payload of the POST request to import API keys. For the payload format, see API Key File Format."
     required: true
   format:
     type: string
-    description: 'A query parameter to specify the input format to imported API keys. Currently, only the csv format is supported.'
+    description: "A query parameter to specify the input format to imported API keys. Currently, only the csv format is supported."
     required: true
   failOnWarnings:
     type: boolean
-    description: 'A query parameter to indicate whether to rollback ApiKey importation (true) or not (false) when error is encountered.'
+    description: "A query parameter to indicate whether to rollback ApiKey importation (true) or not (false) when error is encountered."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   certificateId:
     type: string
-    description: 'The CA certificate identifier.'
+    description: "The CA certificate identifier."
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,14 +21,14 @@ parameters:
     type: string
   ClusterId:
     type: string
-    description: 'The identifier of the cluster for which to list the steps.'
+    description: "The identifier of the cluster for which to list the steps."
     required: true
   StepStates:
     type: array
-    description: 'The filter to limit the step list based on certain states.'
+    description: "The filter to limit the step list based on certain states."
   StepIds:
     type: array
-    description: 'The filter to limit the step list based on the identifier of the steps.'
+    description: "The filter to limit the step list based on the identifier of the steps."
   Marker:
     type: string
-    description: 'The pagination token that indicates the next set of results to retrieve.'
+    description: "The pagination token that indicates the next set of results to retrieve."

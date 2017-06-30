@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,17 +21,17 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'The identifier of the directory for which the schema extension will be applied to.'
+    description: "The identifier of the directory for which the schema extension will be applied to."
     required: true
   CreateSnapshotBeforeSchemaExtension:
     type: boolean
-    description: 'If true, creates a snapshot of the directory before applying the schema extension.'
+    description: "If true, creates a snapshot of the directory before applying the schema extension."
     required: true
   LdifContent:
     type: string
-    description: 'The LDIF file represented as a string. To construct the LdifContent string, precede each line as it would be formatted in an ldif file with \n. See the example request below for more details. The file size can be no larger than 1MB.'
+    description: "The LDIF file represented as a string. To construct the LdifContent string, precede each line as it would be formatted in an ldif file with \\n. See the example request below for more details. The file size can be no larger than 1MB."
     required: true
   Description:
     type: string
-    description: 'A description of the schema extension.'
+    description: "A description of the schema extension."
     required: true

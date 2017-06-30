@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   DBInstanceIdentifier:
     type: string
-    description: 'The DB instance identifier. This parameter is stored as a lowercase string. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens  '
+    description: "The DB instance identifier. This parameter is stored as a lowercase string. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens  "
     required: true
   ForceFailover:
     type: boolean
-    description: ' When true, the reboot will be conducted through a MultiAZ failover.  Constraint: You cannot specify true if the instance is not configured for MultiAZ.'
+    description: " When true, the reboot will be conducted through a MultiAZ failover.  Constraint: You cannot specify true if the instance is not configured for MultiAZ."

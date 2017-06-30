@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   IdentityPoolId:
     type: string
-    description: 'The Cognito Identity Pool to use when configuring Cognito Events'
+    description: "The Cognito Identity Pool to use when configuring Cognito Events"
     required: true
   Events:
     type: object
-    description: 'The events to configure'
+    description: "The events to configure"
     required: true

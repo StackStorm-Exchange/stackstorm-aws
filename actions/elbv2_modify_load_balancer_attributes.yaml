@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   LoadBalancerArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the load balancer.'
+    description: "The Amazon Resource Name (ARN) of the load balancer."
     required: true
   Attributes:
     type: array
-    description: 'The load balancer attributes.'
+    description: "The load balancer attributes."
     required: true

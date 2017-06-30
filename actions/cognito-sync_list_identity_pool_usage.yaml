@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   NextToken:
     type: string
-    description: 'A pagination token for obtaining the next page of results.'
+    description: "A pagination token for obtaining the next page of results."
   MaxResults:
     type: integer
-    description: 'The maximum number of results to be returned.'
+    description: "The maximum number of results to be returned."

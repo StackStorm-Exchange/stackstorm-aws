@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'Contains the identifier of the directory to obtain the limits for.'
+    description: "Contains the identifier of the directory to obtain the limits for."
     required: true

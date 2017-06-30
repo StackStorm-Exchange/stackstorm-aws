@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ElasticLoadBalancerName:
     type: string
-    description: 'The Elastic Load Balancing instance"s name.'
+    description: "The Elastic Load Balancing instance's name."
     required: true
   LayerId:
     type: string
-    description: 'The ID of the layer that the Elastic Load Balancing instance is attached to.'
+    description: "The ID of the layer that the Elastic Load Balancing instance is attached to."
     required: true

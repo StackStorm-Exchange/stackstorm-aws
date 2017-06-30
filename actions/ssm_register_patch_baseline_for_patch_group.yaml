@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   BaselineId:
     type: string
-    description: 'The ID of the patch baseline to register the patch group with.'
+    description: "The ID of the patch baseline to register the patch group with."
     required: true
   PatchGroup:
     type: string
-    description: 'The name of the patch group that should be registered with the patch baseline.'
+    description: "The name of the patch group that should be registered with the patch baseline."
     required: true

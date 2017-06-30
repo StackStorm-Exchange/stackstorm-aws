@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   policyName:
     type: string
-    description: 'The name of the policy.'
+    description: "The name of the policy."
     required: true
   policyVersionId:
     type: string
-    description: 'The policy version ID.'
+    description: "The policy version ID."
     required: true

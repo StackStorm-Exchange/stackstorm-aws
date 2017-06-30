@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   QueueUrl:
     type: string
-    description: 'The URL of the Amazon SQS queue from which permissions are removed. Queue URLs are case-sensitive.'
+    description: "The URL of the Amazon SQS queue from which permissions are removed. Queue URLs are case-sensitive."
     required: true
   Label:
     type: string
-    description: 'The identification of the permission to remove. This is the label added using the  AddPermission  action.'
+    description: "The identification of the permission to remove. This is the label added using the  AddPermission  action."
     required: true

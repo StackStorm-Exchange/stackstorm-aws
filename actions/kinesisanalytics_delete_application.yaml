@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'Name of the Amazon Kinesis Analytics application to delete.'
+    description: "Name of the Amazon Kinesis Analytics application to delete."
     required: true
   CreateTimestamp:
     type: string
-    description: ' You can use the DescribeApplication operation to get this value. '
+    description: " You can use the DescribeApplication operation to get this value. "
     required: true

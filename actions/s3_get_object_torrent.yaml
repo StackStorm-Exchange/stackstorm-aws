@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ''
+    description: ""
     required: true
   Key:
     type: string
-    description: ''
+    description: ""
     required: true
   RequestPayer:
     type: string
-    description: ''
+    description: ""

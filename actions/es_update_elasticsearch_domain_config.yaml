@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,20 +21,20 @@ parameters:
     type: string
   DomainName:
     type: string
-    description: 'The name of the Elasticsearch domain that you are updating. '
+    description: "The name of the Elasticsearch domain that you are updating. "
     required: true
   ElasticsearchClusterConfig:
     type: object
-    description: 'The type and number of instances to instantiate for the domain cluster.'
+    description: "The type and number of instances to instantiate for the domain cluster."
   EBSOptions:
     type: object
-    description: 'Specify the type and size of the EBS volume that you want to use. '
+    description: "Specify the type and size of the EBS volume that you want to use. "
   SnapshotOptions:
     type: object
-    description: 'Option to set the time, in UTC format, for the daily automated snapshot. Default value is 0 hours. '
+    description: "Option to set the time, in UTC format, for the daily automated snapshot. Default value is 0 hours. "
   AdvancedOptions:
     type: object
-    description: 'Modifies the advanced option to allow references to indices in an HTTP request body. Must be false when configuring access to individual sub-resources. By default, the value is true. See Configuration Advanced Options for more information.'
+    description: "Modifies the advanced option to allow references to indices in an HTTP request body. Must be false when configuring access to individual sub-resources. By default, the value is true. See Configuration Advanced Options for more information."
   AccessPolicies:
     type: string
-    description: 'IAM access policy as a JSON-formatted string.'
+    description: "IAM access policy as a JSON-formatted string."

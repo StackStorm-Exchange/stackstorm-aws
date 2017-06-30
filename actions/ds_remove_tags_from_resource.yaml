@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ResourceId:
     type: string
-    description: 'Identifier (ID) of the directory from which to remove the tag.'
+    description: "Identifier (ID) of the directory from which to remove the tag."
     required: true
   TagKeys:
     type: array
-    description: 'The tag key (name) of the tag to be removed.'
+    description: "The tag key (name) of the tag to be removed."
     required: true

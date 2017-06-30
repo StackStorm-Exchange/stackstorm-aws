@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,16 +21,16 @@ parameters:
     type: string
   ResourceArns:
     type: array
-    description: 'The ARN (Amazon Resource Name) of the resource that was attacked. If this is left blank, all applicable resources for this account will be included.'
+    description: "The ARN (Amazon Resource Name) of the resource that was attacked. If this is left blank, all applicable resources for this account will be included."
   StartTime:
     type: object
-    description: 'The time period for the attacks.'
+    description: "The time period for the attacks."
   EndTime:
     type: object
-    description: 'The end of the time period for the attacks.'
+    description: "The end of the time period for the attacks."
   NextToken:
     type: string
-    description: 'The ListAttacksRequest.NextMarker value from a previous call to ListAttacksRequest. Pass null if this is the first call.'
+    description: "The ListAttacksRequest.NextMarker value from a previous call to ListAttacksRequest. Pass null if this is the first call."
   MaxResults:
     type: integer
-    description: 'The maximum number of AttackSummary objects to be returned. If this is left blank, the first 20 results will be returned.'
+    description: "The maximum number of AttackSummary objects to be returned. If this is left blank, the first 20 results will be returned."

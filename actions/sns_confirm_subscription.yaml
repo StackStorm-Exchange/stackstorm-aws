@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   TopicArn:
     type: string
-    description: 'The ARN of the topic for which you wish to confirm a subscription.'
+    description: "The ARN of the topic for which you wish to confirm a subscription."
     required: true
   Token:
     type: string
-    description: 'Short-lived token sent to an endpoint during the Subscribe action.'
+    description: "Short-lived token sent to an endpoint during the Subscribe action."
     required: true
   AuthenticateOnUnsubscribe:
     type: string
-    description: 'Disallows unauthenticated unsubscribes of the subscription. If the value of this parameter is true and the request has an AWS signature, then only the topic owner and the subscription owner can unsubscribe the endpoint. The unsubscribe action requires AWS authentication. '
+    description: "Disallows unauthenticated unsubscribes of the subscription. If the value of this parameter is true and the request has an AWS signature, then only the topic owner and the subscription owner can unsubscribe the endpoint. The unsubscribe action requires AWS authentication. "

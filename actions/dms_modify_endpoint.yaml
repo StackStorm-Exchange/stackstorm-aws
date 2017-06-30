@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,38 +21,38 @@ parameters:
     type: string
   EndpointArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) string that uniquely identifies the endpoint.'
+    description: "The Amazon Resource Name (ARN) string that uniquely identifies the endpoint."
     required: true
   EndpointIdentifier:
     type: string
-    description: 'The database endpoint identifier. Identifiers must begin with a letter; must contain only ASCII letters, digits, and hyphens; and must not end with a hyphen or contain two consecutive hyphens.'
+    description: "The database endpoint identifier. Identifiers must begin with a letter; must contain only ASCII letters, digits, and hyphens; and must not end with a hyphen or contain two consecutive hyphens."
   EndpointType:
     type: string
-    description: 'The type of endpoint.'
+    description: "The type of endpoint."
   EngineName:
     type: string
-    description: 'The type of engine for the endpoint. Valid values include MYSQL, ORACLE, POSTGRES, MARIADB, AURORA, REDSHIFT, SYBASE, and SQLSERVER.'
+    description: "The type of engine for the endpoint. Valid values include MYSQL, ORACLE, POSTGRES, MARIADB, AURORA, REDSHIFT, SYBASE, and SQLSERVER."
   Username:
     type: string
-    description: 'The user name to be used to login to the endpoint database.'
+    description: "The user name to be used to login to the endpoint database."
   Password:
     type: string
-    description: 'The password to be used to login to the endpoint database.'
+    description: "The password to be used to login to the endpoint database."
   ServerName:
     type: string
-    description: 'The name of the server where the endpoint database resides.'
+    description: "The name of the server where the endpoint database resides."
   Port:
     type: integer
-    description: 'The port used by the endpoint database.'
+    description: "The port used by the endpoint database."
   DatabaseName:
     type: string
-    description: 'The name of the endpoint database.'
+    description: "The name of the endpoint database."
   ExtraConnectionAttributes:
     type: string
-    description: 'Additional attributes associated with the connection.'
+    description: "Additional attributes associated with the connection."
   CertificateArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the certificate used for SSL connection.'
+    description: "The Amazon Resource Name (ARN) of the certificate used for SSL connection."
   SslMode:
     type: string
-    description: 'The SSL mode to be used. SSL mode can be one of four values: none, require, verify-ca, verify-full.  The default value is none.'
+    description: "The SSL mode to be used. SSL mode can be one of four values: none, require, verify-ca, verify-full.  The default value is none."

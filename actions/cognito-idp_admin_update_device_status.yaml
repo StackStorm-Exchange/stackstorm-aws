@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,16 +21,16 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID&gt;'
+    description: "The user pool ID&gt;"
     required: true
   Username:
     type: string
-    description: 'The user name.'
+    description: "The user name."
     required: true
   DeviceKey:
     type: string
-    description: 'The device key.'
+    description: "The device key."
     required: true
   DeviceRememberedStatus:
     type: string
-    description: 'The status indicating whether a device has been remembered or not.'
+    description: "The status indicating whether a device has been remembered or not."

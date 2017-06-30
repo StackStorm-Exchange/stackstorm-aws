@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,4 +21,4 @@ parameters:
     type: string
   nextToken:
     type: string
-    description: 'An identifier that was returned from the previous call to this operation, which can be used to return the next set of items in the list.'
+    description: "An identifier that was returned from the previous call to this operation, which can be used to return the next set of items in the list."

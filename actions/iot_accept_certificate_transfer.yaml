@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   certificateId:
     type: string
-    description: 'The ID of the certificate.'
+    description: "The ID of the certificate."
     required: true
   setAsActive:
     type: boolean
-    description: 'Specifies whether the certificate is active.'
+    description: "Specifies whether the certificate is active."

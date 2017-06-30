@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   RuleId:
     type: string
-    description: 'The RuleId of the Rule that you want to update. RuleId is returned by CreateRule and by ListRules.'
+    description: "The RuleId of the Rule that you want to update. RuleId is returned by CreateRule and by ListRules."
     required: true
   ChangeToken:
     type: string
-    description: 'The value returned by the most recent call to GetChangeToken.'
+    description: "The value returned by the most recent call to GetChangeToken."
     required: true
   Updates:
     type: array
-    description: 'An array of RuleUpdate objects that you want to insert into or delete from a Rule. For more information, see the applicable data types:    RuleUpdate: Contains Action and Predicate     Predicate: Contains DataId, Negated, and Type     FieldToMatch: Contains Data and Type   '
+    description: "An array of RuleUpdate objects that you want to insert into or delete from a Rule. For more information, see the applicable data types:    RuleUpdate: Contains Action and Predicate     Predicate: Contains DataId, Negated, and Type     FieldToMatch: Contains Data and Type   "
     required: true

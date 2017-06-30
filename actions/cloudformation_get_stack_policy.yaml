@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   StackName:
     type: string
-    description: 'The name or unique stack ID that is associated with the stack whose policy you want to get.'
+    description: "The name or unique stack ID that is associated with the stack whose policy you want to get."
     required: true

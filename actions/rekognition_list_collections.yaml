@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   NextToken:
     type: string
-    description: 'Pagination token from the previous response.'
+    description: "Pagination token from the previous response."
   MaxResults:
     type: integer
-    description: 'Maximum number of collection IDs to return.'
+    description: "Maximum number of collection IDs to return."

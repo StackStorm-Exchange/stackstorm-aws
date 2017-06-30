@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,17 +21,17 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The ID of the traffic policy instance that you want to update.'
+    description: "The ID of the traffic policy instance that you want to update."
     required: true
   TTL:
     type: integer
-    description: 'The TTL that you want Amazon Route 53 to assign to all of the updated resource record sets.'
+    description: "The TTL that you want Amazon Route 53 to assign to all of the updated resource record sets."
     required: true
   TrafficPolicyId:
     type: string
-    description: 'The ID of the traffic policy that you want Amazon Route 53 to use to update resource record sets for the specified traffic policy instance.'
+    description: "The ID of the traffic policy that you want Amazon Route 53 to use to update resource record sets for the specified traffic policy instance."
     required: true
   TrafficPolicyVersion:
     type: integer
-    description: 'The version of the traffic policy that you want Amazon Route 53 to use to update resource record sets for the specified traffic policy instance.'
+    description: "The version of the traffic policy that you want Amazon Route 53 to use to update resource record sets for the specified traffic policy instance."
     required: true

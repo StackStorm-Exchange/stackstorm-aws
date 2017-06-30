@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,18 +21,18 @@ parameters:
     type: string
   GroupName:
     type: string
-    description: 'The name of the group.'
+    description: "The name of the group."
     required: true
   UserPoolId:
     type: string
-    description: 'The user pool ID for the user pool.'
+    description: "The user pool ID for the user pool."
     required: true
   Description:
     type: string
-    description: 'A string containing the new description of the group.'
+    description: "A string containing the new description of the group."
   RoleArn:
     type: string
-    description: 'The new role ARN for the group. This is used for setting the cognito:roles and cognito:preferred_role claims in the token.'
+    description: "The new role ARN for the group. This is used for setting the cognito:roles and cognito:preferred_role claims in the token."
   Precedence:
     type: integer
-    description: 'The new precedence value for the group. For more information about this parameter, see CreateGroupRequest.'
+    description: "The new precedence value for the group. For more information about this parameter, see CreateGroupRequest."

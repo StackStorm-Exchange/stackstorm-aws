@@ -1,0 +1,30 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: gamelift_describe_game_session_queues
+runner_type: python-script
+parameters:
+  action:
+    default: describe_game_session_queues
+    immutable: true
+    type: string
+  cls:
+    default: gamelift
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Names:
+    type: array
+    description: "List of queue names to retrieve information for. To request settings for all queues, leave this parameter empty."
+  Limit:
+    type: integer
+    description: "Maximum number of results to return. Use this parameter with NextToken to get results as a set of sequential pages."
+  NextToken:
+    type: string
+    description: "Token that indicates the start of the next sequential page of results. Use the token that is returned with a previous call to this action. To specify the start of the result set, do not specify a value."

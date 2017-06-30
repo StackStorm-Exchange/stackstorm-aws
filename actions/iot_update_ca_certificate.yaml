@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   certificateId:
     type: string
-    description: 'The CA certificate identifier.'
+    description: "The CA certificate identifier."
     required: true
   newStatus:
     type: string
-    description: 'The updated status of the CA certificate. Note: The status value REGISTER_INACTIVE is deprecated and should not be used.'
+    description: "The updated status of the CA certificate. Note: The status value REGISTER_INACTIVE is deprecated and should not be used."
   newAutoRegistrationStatus:
     type: string
-    description: 'The new value for the auto registration status. Valid values are: "ENABLE" or "DISABLE".'
+    description: "The new value for the auto registration status. Valid values are: 'ENABLE' or 'DISABLE'."

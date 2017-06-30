@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,22 +21,22 @@ parameters:
     type: string
   StackName:
     type: string
-    description: 'The stack for which the URL is generated.'
+    description: "The stack for which the URL is generated."
     required: true
   FleetName:
     type: string
-    description: 'The fleet for which the URL is generated.'
+    description: "The fleet for which the URL is generated."
     required: true
   UserId:
     type: string
-    description: 'A unique user ID for whom the URL is generated.'
+    description: "A unique user ID for whom the URL is generated."
     required: true
   ApplicationId:
     type: string
-    description: 'The ID of the application that must be launched after the session starts.'
+    description: "The ID of the application that must be launched after the session starts."
   Validity:
     type: integer
-    description: 'The validity duration of the URL in seconds. After this duration, the URL returned by this operation becomes invalid.'
+    description: "The validity duration of the URL in seconds. After this duration, the URL returned by this operation becomes invalid."
   SessionContext:
     type: string
-    description: 'The sessionContext of the streaming URL.'
+    description: "The sessionContext of the streaming URL."

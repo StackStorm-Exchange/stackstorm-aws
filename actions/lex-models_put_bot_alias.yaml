@@ -1,0 +1,39 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: lex-models_put_bot_alias
+runner_type: python-script
+parameters:
+  action:
+    default: put_bot_alias
+    immutable: true
+    type: string
+  cls:
+    default: lex-models
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  name:
+    type: string
+    description: "The name of the alias. The name is not case sensitive."
+    required: true
+  botVersion:
+    type: string
+    description: "The version of the bot."
+    required: true
+  botName:
+    type: string
+    description: "The name of the bot."
+    required: true
+  description:
+    type: string
+    description: "A description of the alias."
+  checksum:
+    type: string
+    description: "Identifies a specific revision of the $LATEST version. When you create a new bot alias, leave the checksum field blank. If you specify a checksum you get a BadRequestException exception. When you want to update a bot alias, set the checksum field to the checksum of the most recent revision of the $LATEST version. If you don't specify the  checksum field, or if the checksum does not match the $LATEST version, you get a PreconditionFailedException exception."

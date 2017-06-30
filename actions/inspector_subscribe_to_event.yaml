@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   resourceArn:
     type: string
-    description: 'The ARN of the assessment template that is used during the event for which you want to receive SNS notifications.'
+    description: "The ARN of the assessment template that is used during the event for which you want to receive SNS notifications."
     required: true
   event:
     type: string
-    description: 'The event for which you want to receive SNS notifications.'
+    description: "The event for which you want to receive SNS notifications."
     required: true
   topicArn:
     type: string
-    description: 'The ARN of the SNS topic to which the SNS notifications are sent.'
+    description: "The ARN of the SNS topic to which the SNS notifications are sent."
     required: true

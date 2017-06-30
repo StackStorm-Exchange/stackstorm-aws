@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   pipelineName:
     type: string
-    description: 'The name of the pipeline in which you want to enable the flow of artifacts from one stage to another.'
+    description: "The name of the pipeline in which you want to enable the flow of artifacts from one stage to another."
     required: true
   stageName:
     type: string
-    description: 'The name of the stage where you want to enable the transition of artifacts, either into the stage (inbound) or from that stage to the next stage (outbound).'
+    description: "The name of the stage where you want to enable the transition of artifacts, either into the stage (inbound) or from that stage to the next stage (outbound)."
     required: true
   transitionType:
     type: string
-    description: 'Specifies whether artifacts will be allowed to enter the stage and be processed by the actions in that stage (inbound) or whether already-processed artifacts will be allowed to transition to the next stage (outbound).'
+    description: "Specifies whether artifacts will be allowed to enter the stage and be processed by the actions in that stage (inbound) or whether already-processed artifacts will be allowed to transition to the next stage (outbound)."
     required: true

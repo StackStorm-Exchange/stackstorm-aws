@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,17 +21,17 @@ parameters:
     type: string
   FleetId:
     type: string
-    description: 'Unique identifier for the fleet to get event logs for.'
+    description: "Unique identifier for the fleet to get event logs for."
     required: true
   StartTime:
     type: string
-    description: 'Earliest date to retrieve event logs for. If no start time is specified, this call returns entries starting from when the fleet was created to the specified end time. Format is a number expressed in Unix time as milliseconds (ex: "1469498468.057").'
+    description: "Earliest date to retrieve event logs for. If no start time is specified, this call returns entries starting from when the fleet was created to the specified end time. Format is a number expressed in Unix time as milliseconds (ex: '1469498468.057')."
   EndTime:
     type: string
-    description: 'Most recent date to retrieve event logs for. If no end time is specified, this call returns entries from the specified start time up to the present. Format is a number expressed in Unix time as milliseconds (ex: "1469498468.057").'
+    description: "Most recent date to retrieve event logs for. If no end time is specified, this call returns entries from the specified start time up to the present. Format is a number expressed in Unix time as milliseconds (ex: '1469498468.057')."
   Limit:
     type: integer
-    description: 'Maximum number of results to return. Use this parameter with NextToken to get results as a set of sequential pages.'
+    description: "Maximum number of results to return. Use this parameter with NextToken to get results as a set of sequential pages."
   NextToken:
     type: string
-    description: 'Token indicating the start of the next sequential page of results. Use the token that is returned with a previous call to this action. To specify the start of the result set, do not specify a value.'
+    description: "Token indicating the start of the next sequential page of results. Use the token that is returned with a previous call to this action. To specify the start of the result set, do not specify a value."

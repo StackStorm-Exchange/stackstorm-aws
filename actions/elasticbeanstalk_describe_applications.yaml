@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,4 +21,4 @@ parameters:
     type: string
   ApplicationNames:
     type: array
-    description: 'If specified, AWS Elastic Beanstalk restricts the returned descriptions to only include those with the specified names.'
+    description: "If specified, AWS Elastic Beanstalk restricts the returned descriptions to only include those with the specified names."

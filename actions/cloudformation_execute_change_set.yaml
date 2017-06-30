@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   ChangeSetName:
     type: string
-    description: 'The name or ARN of the change set that you want use to update the specified stack.'
+    description: "The name or ARN of the change set that you want use to update the specified stack."
     required: true
   StackName:
     type: string
-    description: 'If you specified the name of a change set, specify the stack name or ID (ARN) that is associated with the change set you want to execute.'
+    description: "If you specified the name of a change set, specify the stack name or ID (ARN) that is associated with the change set you want to execute."

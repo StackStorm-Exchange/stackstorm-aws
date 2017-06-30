@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,22 +21,22 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ''
+    description: ""
     required: true
   Key:
     type: string
-    description: ''
+    description: ""
     required: true
   UploadId:
     type: string
-    description: 'Upload ID identifying the multipart upload whose parts are being listed.'
+    description: "Upload ID identifying the multipart upload whose parts are being listed."
     required: true
   MaxParts:
     type: integer
-    description: 'Sets the maximum number of parts to return.'
+    description: "Sets the maximum number of parts to return."
   PartNumberMarker:
     type: integer
-    description: 'Specifies the part after which listing should begin. Only parts with higher part numbers will be listed.'
+    description: "Specifies the part after which listing should begin. Only parts with higher part numbers will be listed."
   RequestPayer:
     type: string
-    description: ''
+    description: ""

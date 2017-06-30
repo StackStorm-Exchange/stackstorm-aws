@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   ApplicationId:
     type: string
-    description: ''
+    description: ""
     required: true
   CampaignId:
     type: string
-    description: ''
+    description: ""
     required: true
   WriteCampaignRequest:
     type: object
-    description: ''
+    description: ""
     required: true

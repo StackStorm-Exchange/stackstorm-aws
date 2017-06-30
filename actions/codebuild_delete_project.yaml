@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   name:
     type: string
-    description: 'The name of the build project to delete.'
+    description: "The name of the build project to delete."
     required: true

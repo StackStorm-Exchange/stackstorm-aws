@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,19 +21,19 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The ID of the Amazon Cognito user pool.'
+    description: "The ID of the Amazon Cognito user pool."
     required: true
   ClientId:
     type: string
-    description: 'The client ID.'
+    description: "The client ID."
     required: true
   ChallengeName:
     type: string
-    description: 'The name of the challenge.'
+    description: "The name of the challenge."
     required: true
   ChallengeResponses:
     type: object
-    description: 'The challenge response.'
+    description: "The challenge response."
   Session:
     type: string
-    description: 'The session.'
+    description: "The session."

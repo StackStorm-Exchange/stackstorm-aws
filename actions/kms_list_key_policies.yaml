@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   KeyId:
     type: string
-    description: 'A unique identifier for the customer master key (CMK). You can use the unique key ID or the Amazon Resource Name (ARN) of the CMK. Examples:   Unique key ID: 1234abcd-12ab-34cd-56ef-1234567890ab    Key ARN: arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab   '
+    description: "A unique identifier for the customer master key (CMK). You can use the unique key ID or the Amazon Resource Name (ARN) of the CMK. Examples:   Unique key ID: 1234abcd-12ab-34cd-56ef-1234567890ab    Key ARN: arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab   "
     required: true
   Limit:
     type: integer
-    description: 'When paginating results, specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the Truncated element in the response is set to true. This value is optional. If you include a value, it must be between 1 and 1000, inclusive. If you do not include a value, it defaults to 100. Currently only 1 policy can be attached to a key.'
+    description: "When paginating results, specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the Truncated element in the response is set to true. This value is optional. If you include a value, it must be between 1 and 1000, inclusive. If you do not include a value, it defaults to 100. Currently only 1 policy can be attached to a key."
   Marker:
     type: string
-    description: 'Use this parameter only when paginating results and only in a subsequent request after you receive a response with truncated results. Set it to the value of NextMarker from the response you just received.'
+    description: "Use this parameter only when paginating results and only in a subsequent request after you receive a response with truncated results. Set it to the value of NextMarker from the response you just received."

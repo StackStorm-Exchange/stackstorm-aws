@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ARN:
     type: string
-    description: 'Specifies the ARN for the Elasticsearch domain from which you want to delete the specified tags.'
+    description: "Specifies the ARN for the Elasticsearch domain from which you want to delete the specified tags."
     required: true
   TagKeys:
     type: array
-    description: 'Specifies the TagKey list which you want to remove from the Elasticsearch domain.'
+    description: "Specifies the TagKey list which you want to remove from the Elasticsearch domain."
     required: true

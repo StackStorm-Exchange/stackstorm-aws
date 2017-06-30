@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   StackId:
     type: string
-    description: 'The stack ID.'
+    description: "The stack ID."
   ConfigurationManager:
     type: object
-    description: 'The configuration manager.'
+    description: "The configuration manager."

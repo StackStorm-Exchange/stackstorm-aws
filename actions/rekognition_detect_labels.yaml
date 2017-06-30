@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   Image:
     type: object
-    description: 'The input image. You can provide a blob of image bytes or an S3 object.'
+    description: "The input image. You can provide a blob of image bytes or an S3 object."
     required: true
   MaxLabels:
     type: integer
-    description: 'Maximum number of labels you want the service to return in the response. The service returns the specified number of highest confidence labels. '
+    description: "Maximum number of labels you want the service to return in the response. The service returns the specified number of highest confidence labels. "
   MinConfidence:
     type: number
-    description: 'Specifies the minimum confidence level for the labels to return. Amazon Rekognition doesn"t return any labels with confidence lower than this specified value. If minConfidence is not specified, the operation returns labels with a confidence values greater than or equal to 50 percent.'
+    description: "Specifies the minimum confidence level for the labels to return. Amazon Rekognition doesn't return any labels with confidence lower than this specified value. If minConfidence is not specified, the operation returns labels with a confidence values greater than or equal to 50 percent."

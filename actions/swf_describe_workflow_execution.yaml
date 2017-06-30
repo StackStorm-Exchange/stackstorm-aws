@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   domain:
     type: string
-    description: 'The name of the domain containing the workflow execution.'
+    description: "The name of the domain containing the workflow execution."
     required: true
   execution:
     type: object
-    description: 'The workflow execution to describe.'
+    description: "The workflow execution to describe."
     required: true

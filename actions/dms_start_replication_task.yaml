@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   ReplicationTaskArn:
     type: string
-    description: 'The Amazon Resource Number (ARN) of the replication task to be started.'
+    description: "The Amazon Resource Number (ARN) of the replication task to be started."
     required: true
   StartReplicationTaskType:
     type: string
-    description: 'The type of replication task.'
+    description: "The type of replication task."
     required: true
   CdcStartTime:
     type: string
-    description: 'The start time for the Change Data Capture (CDC) operation.'
+    description: "The start time for the Change Data Capture (CDC) operation."

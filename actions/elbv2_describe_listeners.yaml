@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   LoadBalancerArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the load balancer.'
+    description: "The Amazon Resource Name (ARN) of the load balancer."
   ListenerArns:
     type: array
-    description: 'The Amazon Resource Names (ARN) of the listeners.'
+    description: "The Amazon Resource Names (ARN) of the listeners."
   Marker:
     type: string
-    description: 'The marker for the next set of results. (You received this marker from a previous call.)'
+    description: "The marker for the next set of results. (You received this marker from a previous call.)"
   PageSize:
     type: integer
-    description: 'The maximum number of results to return with this call.'
+    description: "The maximum number of results to return with this call."

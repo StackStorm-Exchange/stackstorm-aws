@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   LoadBalancerName:
     type: string
-    description: 'The name of the load balancer.'
+    description: "The name of the load balancer."
     required: true
   LoadBalancerPort:
     type: integer
-    description: 'The external port of the load balancer.'
+    description: "The external port of the load balancer."
     required: true
   PolicyNames:
     type: array
-    description: 'The names of the policies. This list must include all policies to be enabled. If you omit a policy that is currently enabled, it is disabled. If the list is empty, all current policies are disabled.'
+    description: "The names of the policies. This list must include all policies to be enabled. If you omit a policy that is currently enabled, it is disabled. If the list is empty, all current policies are disabled."
     required: true

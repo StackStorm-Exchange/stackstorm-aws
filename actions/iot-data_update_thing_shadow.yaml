@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   thingName:
     type: string
-    description: 'The name of the thing.'
+    description: "The name of the thing."
     required: true
   payload:
     type: string
-    description: 'The state information, in JSON format.'
+    description: "The state information, in JSON format."
     required: true

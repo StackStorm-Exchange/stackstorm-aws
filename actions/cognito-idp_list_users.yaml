@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,17 +21,17 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID for which you want to list users.'
+    description: "The user pool ID for which you want to list users."
     required: true
   AttributesToGet:
     type: array
-    description: 'The attributes to get from the request to list users.'
+    description: "The attributes to get from the request to list users."
   Limit:
     type: integer
-    description: 'The limit of the request to list users.'
+    description: "The limit of the request to list users."
   PaginationToken:
     type: string
-    description: 'An identifier that was returned from the previous call to this operation, which can be used to return the next set of items in the list.'
+    description: "An identifier that was returned from the previous call to this operation, which can be used to return the next set of items in the list."
   Filter:
     type: string
-    description: 'The filter for the list users request.'
+    description: "The filter for the list users request."

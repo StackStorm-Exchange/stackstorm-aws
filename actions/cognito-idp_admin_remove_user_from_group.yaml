@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The user pool ID for the user pool.'
+    description: "The user pool ID for the user pool."
     required: true
   Username:
     type: string
-    description: 'The username for the user.'
+    description: "The username for the user."
     required: true
   GroupName:
     type: string
-    description: 'The group name.'
+    description: "The group name."
     required: true

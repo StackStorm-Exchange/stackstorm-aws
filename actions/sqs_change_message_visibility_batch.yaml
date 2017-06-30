@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   QueueUrl:
     type: string
-    description: 'The URL of the Amazon SQS queue whose messages" visibility is changed. Queue URLs are case-sensitive.'
+    description: "The URL of the Amazon SQS queue whose messages' visibility is changed. Queue URLs are case-sensitive."
     required: true
   Entries:
     type: array
-    description: 'A list of receipt handles of the messages for which the visibility timeout must be changed.'
+    description: "A list of receipt handles of the messages for which the visibility timeout must be changed."
     required: true

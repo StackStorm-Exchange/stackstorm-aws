@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   MaxResults:
     type: integer
-    description: 'The number of ClusterListEntry objects to return.'
+    description: "The number of ClusterListEntry objects to return."
   NextToken:
     type: string
-    description: 'HTTP requests are stateless. To identify what object comes "next" in the list of ClusterListEntry objects, you have the option of specifying NextToken as the starting point for your returned list.'
+    description: "HTTP requests are stateless. To identify what object comes 'next' in the list of ClusterListEntry objects, you have the option of specifying NextToken as the starting point for your returned list."

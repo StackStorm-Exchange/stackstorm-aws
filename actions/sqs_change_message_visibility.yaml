@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   QueueUrl:
     type: string
-    description: 'The URL of the Amazon SQS queue whose message"s visibility is changed. Queue URLs are case-sensitive.'
+    description: "The URL of the Amazon SQS queue whose message's visibility is changed. Queue URLs are case-sensitive."
     required: true
   ReceiptHandle:
     type: string
-    description: 'The receipt handle associated with the message whose visibility timeout is changed. This parameter is returned by the  ReceiveMessage  action.'
+    description: "The receipt handle associated with the message whose visibility timeout is changed. This parameter is returned by the  ReceiveMessage  action."
     required: true
   VisibilityTimeout:
     type: integer
-    description: 'The new value for the message"s visibility timeout (in seconds). Values values: 0 to 43200. Maximum: 12 hours.'
+    description: "The new value for the message's visibility timeout (in seconds). Values values: 0 to 43200. Maximum: 12 hours."
     required: true

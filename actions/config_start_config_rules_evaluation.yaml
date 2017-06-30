@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,4 +21,4 @@ parameters:
     type: string
   ConfigRuleNames:
     type: array
-    description: 'The list of names of Config rules that you want to run evaluations for.'
+    description: "The list of names of Config rules that you want to run evaluations for."

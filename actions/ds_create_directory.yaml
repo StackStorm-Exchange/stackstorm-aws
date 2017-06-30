@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,22 +21,22 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The fully qualified name for the directory, such as corp.example.com.'
+    description: "The fully qualified name for the directory, such as corp.example.com."
     required: true
   Password:
     type: string
-    description: 'The password for the directory administrator. The directory creation process creates a directory administrator account with the username Administrator and this password.'
+    description: "The password for the directory administrator. The directory creation process creates a directory administrator account with the username Administrator and this password."
     required: true
   Size:
     type: string
-    description: 'The size of the directory.'
+    description: "The size of the directory."
     required: true
   ShortName:
     type: string
-    description: 'The short name of the directory, such as CORP.'
+    description: "The short name of the directory, such as CORP."
   Description:
     type: string
-    description: 'A textual description for the directory.'
+    description: "A textual description for the directory."
   VpcSettings:
     type: object
-    description: 'A DirectoryVpcSettings object that contains additional information for the operation.'
+    description: "A DirectoryVpcSettings object that contains additional information for the operation."

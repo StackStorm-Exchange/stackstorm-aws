@@ -1,0 +1,29 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: mturk_get_qualification_score
+runner_type: python-script
+parameters:
+  action:
+    default: get_qualification_score
+    immutable: true
+    type: string
+  cls:
+    default: mturk
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  QualificationTypeId:
+    type: string
+    description: "The ID of the QualificationType."
+    required: true
+  WorkerId:
+    type: string
+    description: "The ID of the Worker whose Qualification is being updated."
+    required: true

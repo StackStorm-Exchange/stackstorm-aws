@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,20 +21,20 @@ parameters:
     type: string
   ReplicationTaskArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the replication task.'
+    description: "The Amazon Resource Name (ARN) of the replication task."
     required: true
   ReplicationTaskIdentifier:
     type: string
-    description: 'The replication task identifier. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.  '
+    description: "The replication task identifier. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.  "
   MigrationType:
     type: string
-    description: 'The migration type. Valid values: full-load | cdc | full-load-and-cdc'
+    description: "The migration type. Valid values: full-load | cdc | full-load-and-cdc"
   TableMappings:
     type: string
-    description: 'The path of the JSON file that contains the table mappings. Preceed the path with "file://". For example, --table-mappings file://mappingfile.json'
+    description: "The path of the JSON file that contains the table mappings. Preceed the path with 'file://'. For example, --table-mappings file://mappingfile.json"
   ReplicationTaskSettings:
     type: string
-    description: 'JSON file that contains settings for the task, such as target metadata settings.'
+    description: "JSON file that contains settings for the task, such as target metadata settings."
   CdcStartTime:
     type: string
-    description: 'The start time for the Change Data Capture (CDC) operation.'
+    description: "The start time for the Change Data Capture (CDC) operation."

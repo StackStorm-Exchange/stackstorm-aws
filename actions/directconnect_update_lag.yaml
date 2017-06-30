@@ -1,0 +1,31 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: directconnect_update_lag
+runner_type: python-script
+parameters:
+  action:
+    default: update_lag
+    immutable: true
+    type: string
+  cls:
+    default: directconnect
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  lagId:
+    type: string
+    description: "The ID of the LAG to update. Example: dxlag-abc123 Default: None"
+    required: true
+  lagName:
+    type: string
+    description: "The name for the LAG. Example: '3x10G LAG to AWS' Default: None"
+  minimumLinks:
+    type: integer
+    description: "The minimum number of physical connections that must be operational for the LAG itself to be operational. Default: None"

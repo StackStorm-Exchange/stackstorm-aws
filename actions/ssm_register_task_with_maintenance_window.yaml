@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,41 +21,41 @@ parameters:
     type: string
   WindowId:
     type: string
-    description: 'The id of the Maintenance Window the task should be added to.'
+    description: "The id of the Maintenance Window the task should be added to."
     required: true
   Targets:
     type: array
-    description: 'The targets (either instances or tags). Instances are specified using Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;. Tags are specified using Key=&lt;tag name&gt;,Values=&lt;tag value&gt;.'
+    description: "The targets (either instances or tags). Instances are specified using Key=instanceids,Values=&lt;instanceid1&gt;,&lt;instanceid2&gt;. Tags are specified using Key=&lt;tag name&gt;,Values=&lt;tag value&gt;."
     required: true
   TaskArn:
     type: string
-    description: 'The ARN of the task to execute '
+    description: "The ARN of the task to execute "
     required: true
   ServiceRoleArn:
     type: string
-    description: 'The role that should be assumed when executing the task.'
+    description: "The role that should be assumed when executing the task."
     required: true
   TaskType:
     type: string
-    description: 'The type of task being registered.'
+    description: "The type of task being registered."
     required: true
   MaxConcurrency:
     type: string
-    description: 'The maximum number of targets this task can be run for in parallel.'
+    description: "The maximum number of targets this task can be run for in parallel."
     required: true
   MaxErrors:
     type: string
-    description: 'The maximum number of errors allowed before this task stops being scheduled.'
+    description: "The maximum number of errors allowed before this task stops being scheduled."
     required: true
   TaskParameters:
     type: object
-    description: 'The parameters that should be passed to the task when it is executed.'
+    description: "The parameters that should be passed to the task when it is executed."
   Priority:
     type: integer
-    description: 'The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.'
+    description: "The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel."
   LoggingInfo:
     type: object
-    description: 'A structure containing information about an Amazon S3 bucket to write instance-level logs to. '
+    description: "A structure containing information about an Amazon S3 bucket to write instance-level logs to. "
   ClientToken:
     type: string
-    description: 'User-provided idempotency token.'
+    description: "User-provided idempotency token."

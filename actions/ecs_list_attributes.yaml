@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,20 +21,20 @@ parameters:
     type: string
   targetType:
     type: string
-    description: 'The type of the target with which to list attributes.'
+    description: "The type of the target with which to list attributes."
     required: true
   cluster:
     type: string
-    description: 'The short name or full Amazon Resource Name (ARN) of the cluster to list attributes. If you do not specify a cluster, the default cluster is assumed.'
+    description: "The short name or full Amazon Resource Name (ARN) of the cluster to list attributes. If you do not specify a cluster, the default cluster is assumed."
   attributeName:
     type: string
-    description: 'The name of the attribute with which to filter the results. '
+    description: "The name of the attribute with which to filter the results. "
   attributeValue:
     type: string
-    description: 'The value of the attribute with which to filter results. You must also specify an attribute name to use this parameter.'
+    description: "The value of the attribute with which to filter results. You must also specify an attribute name to use this parameter."
   nextToken:
     type: string
-    description: 'The nextToken value returned from a previous paginated ListAttributes request where maxResults was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the nextToken value. This value is null when there are no more results to return.  This token should be treated as an opaque identifier that is only used to retrieve the next items in a list and not for other programmatic purposes. '
+    description: "The nextToken value returned from a previous paginated ListAttributes request where maxResults was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the nextToken value. This value is null when there are no more results to return.  This token should be treated as an opaque identifier that is only used to retrieve the next items in a list and not for other programmatic purposes. "
   maxResults:
     type: integer
-    description: 'The maximum number of cluster results returned by ListAttributes in paginated output. When this parameter is used, ListAttributes only returns maxResults results in a single page along with a nextToken response element. The remaining results of the initial request can be seen by sending another ListAttributes request with the returned nextToken value. This value can be between 1 and 100. If this parameter is not used, then ListAttributes returns up to 100 results and a nextToken value if applicable.'
+    description: "The maximum number of cluster results returned by ListAttributes in paginated output. When this parameter is used, ListAttributes only returns maxResults results in a single page along with a nextToken response element. The remaining results of the initial request can be seen by sending another ListAttributes request with the returned nextToken value. This value can be between 1 and 100. If this parameter is not used, then ListAttributes returns up to 100 results and a nextToken value if applicable."

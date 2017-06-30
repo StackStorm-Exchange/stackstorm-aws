@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   PatchGroup:
     type: string
-    description: 'The name of the patch group whose patch snapshot should be retrieved.'
+    description: "The name of the patch group whose patch snapshot should be retrieved."
     required: true

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   OfferingId:
     type: string
-    description: 'The offering ID of the reservation.'
+    description: "The offering ID of the reservation."
     required: true
   HostIdSet:
     type: array
-    description: 'The ID/s of the Dedicated Host/s that the reservation will be associated with.'
+    description: "The ID/s of the Dedicated Host/s that the reservation will be associated with."
     required: true

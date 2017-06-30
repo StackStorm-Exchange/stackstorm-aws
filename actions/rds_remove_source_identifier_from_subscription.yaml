@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   SubscriptionName:
     type: string
-    description: 'The name of the RDS event notification subscription you want to remove a source identifier from.'
+    description: "The name of the RDS event notification subscription you want to remove a source identifier from."
     required: true
   SourceIdentifier:
     type: string
-    description: ' The source identifier to be removed from the subscription, such as the DB instance identifier for a DB instance or the name of a security group. '
+    description: " The source identifier to be removed from the subscription, such as the DB instance identifier for a DB instance or the name of a security group. "
     required: true

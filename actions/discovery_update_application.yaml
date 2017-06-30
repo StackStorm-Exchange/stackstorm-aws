@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   configurationId:
     type: string
-    description: 'Configuration ID of the application to be updated.'
+    description: "Configuration ID of the application to be updated."
     required: true
   name:
     type: string
-    description: 'New name of the application to be updated.'
+    description: "New name of the application to be updated."
   description:
     type: string
-    description: 'New description of the application to be updated.'
+    description: "New description of the application to be updated."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,56 +21,56 @@ parameters:
     type: string
   StackId:
     type: string
-    description: 'The layer stack ID.'
+    description: "The layer stack ID."
     required: true
   Type:
     type: string
-    description: 'The layer type. A stack cannot have more than one built-in layer of the same type. It can have any number of custom layers. Built-in layers are not available in Chef 12 stacks.'
+    description: "The layer type. A stack cannot have more than one built-in layer of the same type. It can have any number of custom layers. Built-in layers are not available in Chef 12 stacks."
     required: true
   Name:
     type: string
-    description: 'The layer name, which is used by the console.'
+    description: "The layer name, which is used by the console."
     required: true
   Shortname:
     type: string
-    description: 'For custom layers only, use this parameter to specify the layer"s short name, which is used internally by AWS OpsWorks and by Chef recipes. The short name is also used as the name for the directory where your app files are installed. It can have a maximum of 200 characters, which are limited to the alphanumeric characters, "-", "_", and ".". The built-in layers" short names are defined by AWS OpsWorks. For more information, see the Layer Reference.'
+    description: "For custom layers only, use this parameter to specify the layer's short name, which is used internally by AWS OpsWorks and by Chef recipes. The short name is also used as the name for the directory where your app files are installed. It can have a maximum of 200 characters, which are limited to the alphanumeric characters, '-', '_', and '.'. The built-in layers' short names are defined by AWS OpsWorks. For more information, see the Layer Reference."
     required: true
   Attributes:
     type: object
-    description: 'One or more user-defined key-value pairs to be added to the stack attributes. To create a cluster layer, set the EcsClusterArn attribute to the cluster"s ARN.'
+    description: "One or more user-defined key-value pairs to be added to the stack attributes. To create a cluster layer, set the EcsClusterArn attribute to the cluster's ARN."
   CustomInstanceProfileArn:
     type: string
-    description: 'The ARN of an IAM profile to be used for the layer"s EC2 instances. For more information about IAM ARNs, see Using Identifiers.'
+    description: "The ARN of an IAM profile to be used for the layer's EC2 instances. For more information about IAM ARNs, see Using Identifiers."
   CustomJson:
     type: string
-    description: 'A JSON-formatted string containing custom stack configuration and deployment attributes to be installed on the layer"s instances. For more information, see  Using Custom JSON. This feature is supported as of version 1.7.42 of the AWS CLI. '
+    description: "A JSON-formatted string containing custom stack configuration and deployment attributes to be installed on the layer's instances. For more information, see  Using Custom JSON. This feature is supported as of version 1.7.42 of the AWS CLI. "
   CustomSecurityGroupIds:
     type: array
-    description: 'An array containing the layer custom security group IDs.'
+    description: "An array containing the layer custom security group IDs."
   Packages:
     type: array
-    description: 'An array of Package objects that describes the layer packages.'
+    description: "An array of Package objects that describes the layer packages."
   VolumeConfigurations:
     type: array
-    description: 'A VolumeConfigurations object that describes the layer"s Amazon EBS volumes.'
+    description: "A VolumeConfigurations object that describes the layer's Amazon EBS volumes."
   EnableAutoHealing:
     type: boolean
-    description: 'Whether to disable auto healing for the layer.'
+    description: "Whether to disable auto healing for the layer."
   AutoAssignElasticIps:
     type: boolean
-    description: 'Whether to automatically assign an Elastic IP address to the layer"s instances. For more information, see How to Edit a Layer.'
+    description: "Whether to automatically assign an Elastic IP address to the layer's instances. For more information, see How to Edit a Layer."
   AutoAssignPublicIps:
     type: boolean
-    description: 'For stacks that are running in a VPC, whether to automatically assign a public IP address to the layer"s instances. For more information, see How to Edit a Layer.'
+    description: "For stacks that are running in a VPC, whether to automatically assign a public IP address to the layer's instances. For more information, see How to Edit a Layer."
   CustomRecipes:
     type: object
-    description: 'A LayerCustomRecipes object that specifies the layer custom recipes.'
+    description: "A LayerCustomRecipes object that specifies the layer custom recipes."
   InstallUpdatesOnBoot:
     type: boolean
-    description: 'Whether to install operating system and package updates when the instance boots. The default value is true. To control when updates are installed, set this value to false. You must then update your instances manually by using CreateDeployment to run the update_dependencies stack command or by manually running yum (Amazon Linux) or apt-get (Ubuntu) on the instances.   To ensure that your instances have the latest security updates, we strongly recommend using the default value of true. '
+    description: "Whether to install operating system and package updates when the instance boots. The default value is true. To control when updates are installed, set this value to false. You must then update your instances manually by using CreateDeployment to run the update_dependencies stack command or by manually running yum (Amazon Linux) or apt-get (Ubuntu) on the instances.   To ensure that your instances have the latest security updates, we strongly recommend using the default value of true. "
   UseEbsOptimizedInstances:
     type: boolean
-    description: 'Whether to use Amazon EBS-optimized instances.'
+    description: "Whether to use Amazon EBS-optimized instances."
   LifecycleEventConfiguration:
     type: object
-    description: 'A LifeCycleEventConfiguration object that you can use to configure the Shutdown event to specify an execution timeout and enable or disable Elastic Load Balancer connection draining.'
+    description: "A LifeCycleEventConfiguration object that you can use to configure the Shutdown event to specify an execution timeout and enable or disable Elastic Load Balancer connection draining."

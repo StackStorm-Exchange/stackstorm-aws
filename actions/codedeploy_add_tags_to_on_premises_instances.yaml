@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   tags:
     type: array
-    description: 'The tag key-value pairs to add to the on-premises instances. Keys and values are both required. Keys cannot be null or empty strings. Value-only tags are not allowed.'
+    description: "The tag key-value pairs to add to the on-premises instances. Keys and values are both required. Keys cannot be null or empty strings. Value-only tags are not allowed."
     required: true
   instanceNames:
     type: array
-    description: 'The names of the on-premises instances to which to add tags.'
+    description: "The names of the on-premises instances to which to add tags."
     required: true

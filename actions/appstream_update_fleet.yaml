@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,32 +21,32 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the fleet.'
+    description: "The name of the fleet."
     required: true
   ImageName:
     type: string
-    description: 'The image name from which a fleet is created.'
+    description: "The image name from which a fleet is created."
   InstanceType:
     type: string
-    description: 'The instance type of compute resources for the fleet. Fleet instances are launched from this instance type.'
+    description: "The instance type of compute resources for the fleet. Fleet instances are launched from this instance type."
   ComputeCapacity:
     type: object
-    description: 'The parameters for the capacity allocated to the fleet. '
+    description: "The parameters for the capacity allocated to the fleet. "
   VpcConfig:
     type: object
-    description: 'The VPC configuration for the fleet.'
+    description: "The VPC configuration for the fleet."
   MaxUserDurationInSeconds:
     type: integer
-    description: 'The maximum time during which a streaming session can run.'
+    description: "The maximum time during which a streaming session can run."
   DisconnectTimeoutInSeconds:
     type: integer
-    description: 'The time after disconnection when a session is considered to have ended. When the user reconnects after a disconnection, the user is connected to the same instance within this time interval.'
+    description: "The time after disconnection when a session is considered to have ended. When the user reconnects after a disconnection, the user is connected to the same instance within this time interval."
   DeleteVpcConfig:
     type: boolean
-    description: 'Delete the VPC association for the specified fleet.'
+    description: "Delete the VPC association for the specified fleet."
   Description:
     type: string
-    description: 'The description displayed to end users on the AppStream 2.0 portal.'
+    description: "The description displayed to end users on the AppStream 2.0 portal."
   DisplayName:
     type: string
-    description: 'The name displayed to end users on the AppStream 2.0 portal.'
+    description: "The name displayed to end users on the AppStream 2.0 portal."

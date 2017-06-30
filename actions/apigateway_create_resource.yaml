@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'The identifier of the RestApi for the resource. '
+    description: "The identifier of the RestApi for the resource. "
     required: true
   parentId:
     type: string
-    description: 'The parent resource"s identifier.'
+    description: "The parent resource's identifier."
     required: true
   pathPart:
     type: string
-    description: 'The last path segment for this resource.'
+    description: "The last path segment for this resource."
     required: true

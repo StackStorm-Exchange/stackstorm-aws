@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   Address:
     type: object
-    description: 'The address that you want the Snowball shipped to.'
+    description: "The address that you want the Snowball shipped to."
     required: true

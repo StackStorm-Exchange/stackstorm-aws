@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   arn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the project whose name you wish to update.'
+    description: "The Amazon Resource Name (ARN) of the project whose name you wish to update."
     required: true
   name:
     type: string
-    description: 'A string representing the new name of the project that you are updating.'
+    description: "A string representing the new name of the project that you are updating."

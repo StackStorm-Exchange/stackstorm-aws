@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,4 +21,4 @@ parameters:
     type: string
   AccessToken:
     type: string
-    description: 'The access token returned by the server response to get information about the user.'
+    description: "The access token returned by the server response to get information about the user."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   SpotFleetRequestId:
     type: string
-    description: 'The ID of the Spot fleet request.'
+    description: "The ID of the Spot fleet request."
     required: true
   TargetCapacity:
     type: integer
-    description: 'The size of the fleet.'
+    description: "The size of the fleet."
   ExcessCapacityTerminationPolicy:
     type: string
-    description: 'Indicates whether running Spot instances should be terminated if the target capacity of the Spot fleet request is decreased below the current size of the Spot fleet.'
+    description: "Indicates whether running Spot instances should be terminated if the target capacity of the Spot fleet request is decreased below the current size of the Spot fleet."

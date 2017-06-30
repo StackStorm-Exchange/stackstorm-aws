@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   pipelineId:
     type: string
-    description: 'The ID of the pipeline.'
+    description: "The ID of the pipeline."
     required: true
   tags:
     type: array
-    description: 'The tags to add, as key/value pairs.'
+    description: "The tags to add, as key/value pairs."
     required: true

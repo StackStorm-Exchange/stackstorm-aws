@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   TargetGroupArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the target group.'
+    description: "The Amazon Resource Name (ARN) of the target group."
     required: true
   Attributes:
     type: array
-    description: 'The attributes.'
+    description: "The attributes."
     required: true

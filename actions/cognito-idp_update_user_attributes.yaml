@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   UserAttributes:
     type: array
-    description: 'An array of name-value pairs representing user attributes.'
+    description: "An array of name-value pairs representing user attributes."
     required: true
   AccessToken:
     type: string
-    description: 'The access token for the request to update user attributes.'
+    description: "The access token for the request to update user attributes."

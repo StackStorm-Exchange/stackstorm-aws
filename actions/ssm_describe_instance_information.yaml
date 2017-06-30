@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   InstanceInformationFilterList:
     type: array
-    description: 'One or more filters. Use a filter to return a more specific list of instances.'
+    description: "One or more filters. Use a filter to return a more specific list of instances."
   Filters:
     type: array
-    description: 'One or more filters. Use a filter to return a more specific list of instances.'
+    description: "One or more filters. Use a filter to return a more specific list of instances."
   MaxResults:
     type: integer
-    description: 'The maximum number of items to return for this call. The call also returns a token that you can specify in a subsequent call to get the next set of results. '
+    description: "The maximum number of items to return for this call. The call also returns a token that you can specify in a subsequent call to get the next set of results. "
   NextToken:
     type: string
-    description: 'The token for the next set of items to return. (You received this token from a previous call.)'
+    description: "The token for the next set of items to return. (You received this token from a previous call.)"

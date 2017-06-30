@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'The name of the application. Constraint: This name must be unique within your account. If the specified name already exists, the action returns an InvalidParameterValue error.'
+    description: "The name of the application. Constraint: This name must be unique within your account. If the specified name already exists, the action returns an InvalidParameterValue error."
     required: true
   Description:
     type: string
-    description: 'Describes the application.'
+    description: "Describes the application."
   ResourceLifecycleConfig:
     type: object
-    description: 'Specify an application resource lifecycle configuration to prevent your application from accumulating too many versions.'
+    description: "Specify an application resource lifecycle configuration to prevent your application from accumulating too many versions."

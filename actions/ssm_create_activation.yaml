@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,17 +21,17 @@ parameters:
     type: string
   IamRole:
     type: string
-    description: 'The Amazon Identity and Access Management (IAM) role that you want to assign to the managed instance. '
+    description: "The Amazon Identity and Access Management (IAM) role that you want to assign to the managed instance. "
     required: true
   Description:
     type: string
-    description: 'A user-defined description of the resource that you want to register with Amazon EC2. '
+    description: "A user-defined description of the resource that you want to register with Amazon EC2. "
   DefaultInstanceName:
     type: string
-    description: 'The name of the registered, managed instance as it will appear in the Amazon EC2 console or when you use the AWS command line tools to list EC2 resources.'
+    description: "The name of the registered, managed instance as it will appear in the Amazon EC2 console or when you use the AWS command line tools to list EC2 resources."
   RegistrationLimit:
     type: integer
-    description: 'Specify the maximum number of managed instances you want to register. The default value is 1 instance.'
+    description: "Specify the maximum number of managed instances you want to register. The default value is 1 instance."
   ExpirationDate:
     type: string
-    description: 'The date by which this activation request should expire. The default value is 24 hours.'
+    description: "The date by which this activation request should expire. The default value is 24 hours."

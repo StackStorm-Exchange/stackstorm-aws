@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   MLModelId:
     type: string
-    description: 'The ID assigned to the MLModel at creation.'
+    description: "The ID assigned to the MLModel at creation."
     required: true
   Verbose:
     type: boolean
-    description: 'Specifies whether the GetMLModel operation should return Recipe. If true, Recipe is returned. If false, Recipe is not returned.'
+    description: "Specifies whether the GetMLModel operation should return Recipe. If true, Recipe is returned. If false, Recipe is not returned."

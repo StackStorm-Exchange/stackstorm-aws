@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   LaunchConfigurationName:
     type: string
-    description: 'The name of the launch configuration.'
+    description: "The name of the launch configuration."
     required: true

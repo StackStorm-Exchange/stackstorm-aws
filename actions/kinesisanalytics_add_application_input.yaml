@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   ApplicationName:
     type: string
-    description: 'Name of your existing Amazon Kinesis Analytics application to which you want to add the streaming source.'
+    description: "Name of your existing Amazon Kinesis Analytics application to which you want to add the streaming source."
     required: true
   CurrentApplicationVersionId:
     type: integer
-    description: 'Current version of your Amazon Kinesis Analytics application. You can use the DescribeApplication operation to find the current application version.'
+    description: "Current version of your Amazon Kinesis Analytics application. You can use the DescribeApplication operation to find the current application version."
     required: true
   Input:
     type: object
-    description: ''
+    description: ""
     required: true

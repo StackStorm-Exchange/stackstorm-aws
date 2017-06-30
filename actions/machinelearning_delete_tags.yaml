@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   TagKeys:
     type: array
-    description: 'One or more tags to delete.'
+    description: "One or more tags to delete."
     required: true
   ResourceId:
     type: string
-    description: 'The ID of the tagged ML object. For example, exampleModelId.'
+    description: "The ID of the tagged ML object. For example, exampleModelId."
     required: true
   ResourceType:
     type: string
-    description: 'The type of the tagged ML object.'
+    description: "The type of the tagged ML object."
     required: true

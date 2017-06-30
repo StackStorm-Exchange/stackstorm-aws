@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   DomainName:
     type: string
-    description: 'The domain for which you want to get a list of tags.'
+    description: "The domain for which you want to get a list of tags."
     required: true

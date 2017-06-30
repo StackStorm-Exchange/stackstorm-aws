@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   ServerName:
     type: string
-    description: 'The name of the server to update. '
+    description: "The name of the server to update. "
     required: true
   AttributeName:
     type: string
-    description: 'The name of the engine attribute to update. '
+    description: "The name of the engine attribute to update. "
     required: true
   AttributeValue:
     type: string
-    description: 'The value to set for the attribute. '
+    description: "The value to set for the attribute. "

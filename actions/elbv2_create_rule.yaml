@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,17 +21,17 @@ parameters:
     type: string
   ListenerArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the listener.'
+    description: "The Amazon Resource Name (ARN) of the listener."
     required: true
   Conditions:
     type: array
-    description: 'A condition. Each condition has the field path-pattern and specifies one path pattern. A path pattern is case sensitive, can be up to 255 characters in length, and can contain any of the following characters:   A-Z, a-z, 0-9   _ - . $ / ~ " " @ : +   &amp; (using &amp;amp;)   * (matches 0 or more characters)   ? (matches exactly 1 character)  '
+    description: "A condition. Each condition has the field path-pattern and specifies one path pattern. A path pattern is case sensitive, can be up to 255 characters in length, and can contain any of the following characters:   A-Z, a-z, 0-9   _ - . $ / ~ ' ' @ : +   &amp; (using &amp;amp;)   * (matches 0 or more characters)   ? (matches exactly 1 character)  "
     required: true
   Priority:
     type: integer
-    description: 'The priority for the rule. A listener can"t have multiple rules with the same priority.'
+    description: "The priority for the rule. A listener can't have multiple rules with the same priority."
     required: true
   Actions:
     type: array
-    description: 'An action. Each action has the type forward and specifies a target group.'
+    description: "An action. Each action has the type forward and specifies a target group."
     required: true

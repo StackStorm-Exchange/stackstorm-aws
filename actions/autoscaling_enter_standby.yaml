@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   AutoScalingGroupName:
     type: string
-    description: 'The name of the Auto Scaling group.'
+    description: "The name of the Auto Scaling group."
     required: true
   ShouldDecrementDesiredCapacity:
     type: boolean
-    description: 'Specifies whether the instances moved to Standby mode count as part of the Auto Scaling group"s desired capacity. If set, the desired capacity for the Auto Scaling group decrements by the number of instances moved to Standby mode.'
+    description: "Specifies whether the instances moved to Standby mode count as part of the Auto Scaling group's desired capacity. If set, the desired capacity for the Auto Scaling group decrements by the number of instances moved to Standby mode."
     required: true
   InstanceIds:
     type: array
-    description: 'One or more instances to move into Standby mode. You must specify at least one instance ID.'
+    description: "One or more instances to move into Standby mode. You must specify at least one instance ID."

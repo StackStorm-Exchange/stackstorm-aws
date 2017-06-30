@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'The Directory ID that will publish status messages to the SNS topic.'
+    description: "The Directory ID that will publish status messages to the SNS topic."
     required: true
   TopicName:
     type: string
-    description: 'The SNS topic name to which the directory will publish status messages. This SNS topic must be in the same region as the specified Directory ID.'
+    description: "The SNS topic name to which the directory will publish status messages. This SNS topic must be in the same region as the specified Directory ID."
     required: true

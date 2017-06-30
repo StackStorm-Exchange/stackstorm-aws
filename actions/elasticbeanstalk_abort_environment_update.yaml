@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   EnvironmentId:
     type: string
-    description: 'This specifies the ID of the environment with the in-progress update that you want to cancel.'
+    description: "This specifies the ID of the environment with the in-progress update that you want to cancel."
   EnvironmentName:
     type: string
-    description: 'This specifies the name of the environment with the in-progress update that you want to cancel.'
+    description: "This specifies the name of the environment with the in-progress update that you want to cancel."

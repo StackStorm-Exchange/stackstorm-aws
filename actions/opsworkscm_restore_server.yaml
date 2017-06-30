@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,15 +21,15 @@ parameters:
     type: string
   BackupId:
     type: string
-    description: ' The ID of the backup that you want to use to restore a server. '
+    description: " The ID of the backup that you want to use to restore a server. "
     required: true
   ServerName:
     type: string
-    description: ' The name of the server that you want to restore. '
+    description: " The name of the server that you want to restore. "
     required: true
   InstanceType:
     type: string
-    description: ' The type of the instance to create. Valid values must be specified in the following format: ^([cm][34]|t2).* For example, c3.large. If you do not specify this parameter, RestoreServer uses the instance type from the specified backup. '
+    description: " The type of the instance to create. Valid values must be specified in the following format: ^([cm][34]|t2).* For example, c3.large. If you do not specify this parameter, RestoreServer uses the instance type from the specified backup. "
   KeyPair:
     type: string
-    description: ' The name of the key pair to set on the new EC2 instance. This can be helpful if any of the administrators who manage the server no longer have the SSH key. '
+    description: " The name of the key pair to set on the new EC2 instance. This can be helpful if any of the administrators who manage the server no longer have the SSH key. "

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   destinationName:
     type: string
-    description: 'A name for the destination.'
+    description: "A name for the destination."
     required: true
   targetArn:
     type: string
-    description: 'The ARN of an Amazon Kinesis stream to deliver matching log events to.'
+    description: "The ARN of an Amazon Kinesis stream to deliver matching log events to."
     required: true
   roleArn:
     type: string
-    description: 'The ARN of an IAM role that grants CloudWatch Logs permissions to call Amazon Kinesis PutRecord on the destination stream.'
+    description: "The ARN of an IAM role that grants CloudWatch Logs permissions to call Amazon Kinesis PutRecord on the destination stream."
     required: true

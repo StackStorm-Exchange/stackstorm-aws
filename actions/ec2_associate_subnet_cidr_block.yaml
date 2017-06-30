@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   SubnetId:
     type: string
-    description: 'The ID of your subnet.'
+    description: "The ID of your subnet."
     required: true
   Ipv6CidrBlock:
     type: string
-    description: 'The IPv6 CIDR block for your subnet. The subnet must have a /64 prefix length.'
+    description: "The IPv6 CIDR block for your subnet. The subnet must have a /64 prefix length."
     required: true

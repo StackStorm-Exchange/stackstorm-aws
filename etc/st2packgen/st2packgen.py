@@ -103,6 +103,7 @@ for myservice in myservices:
             tmp['type'] = stype
             if 'documentation' in sdata:
                 tmp['description'] = striphtml(sdata['documentation'].rstrip().replace('"', "'"))
+                tmp['description'] = striphtml(tmp['description'].replace("\\", "\\\\"))
             else:
                 tmp['description'] = ''
 
@@ -112,8 +113,8 @@ for myservice in myservices:
                 allvars['params'].append(tmp)
 
         actionyaml = outputdir + "/" + allvars['name'] + ".yaml"
-        with open(actionyaml, 'w') as y:
+        template = templateEnv.get_template('action_template.yaml.jinja')
 
-            template = templateEnv.get_template('action_template.yaml.jinja')
+        with open(actionyaml, 'w') as y:
             outputText = template.render(allvars).encode('utf8')  # pylint: disable=no-member
             y.write(outputText)

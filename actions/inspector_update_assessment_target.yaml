@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   assessmentTargetArn:
     type: string
-    description: 'The ARN of the assessment target that you want to update.'
+    description: "The ARN of the assessment target that you want to update."
     required: true
   assessmentTargetName:
     type: string
-    description: 'The name of the assessment target that you want to update.'
+    description: "The name of the assessment target that you want to update."
     required: true
   resourceGroupArn:
     type: string
-    description: 'The ARN of the resource group that is used to specify the new resource group to associate with the assessment target.'
+    description: "The ARN of the resource group that is used to specify the new resource group to associate with the assessment target."
     required: true

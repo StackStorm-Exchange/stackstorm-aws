@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   applicationName:
     type: string
-    description: 'The current name of the application you want to change.'
+    description: "The current name of the application you want to change."
   newApplicationName:
     type: string
-    description: 'The new name to give the application.'
+    description: "The new name to give the application."

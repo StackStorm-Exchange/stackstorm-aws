@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   apiKey:
     type: string
-    description: 'The identifier of the ApiKey resource.'
+    description: "The identifier of the ApiKey resource."
     required: true
   includeValue:
     type: boolean
-    description: 'A boolean flag to specify whether (true) or not (false) the result contains the key value.'
+    description: "A boolean flag to specify whether (true) or not (false) the result contains the key value."

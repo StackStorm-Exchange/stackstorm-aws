@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,23 +21,23 @@ parameters:
     type: string
   Bucket:
     type: string
-    description: ''
+    description: ""
     required: true
   Delimiter:
     type: string
-    description: 'A delimiter is a character you use to group keys.'
+    description: "A delimiter is a character you use to group keys."
   EncodingType:
     type: string
-    description: ''
+    description: ""
   KeyMarker:
     type: string
-    description: 'Specifies the key to start with when listing objects in a bucket.'
+    description: "Specifies the key to start with when listing objects in a bucket."
   MaxKeys:
     type: integer
-    description: 'Sets the maximum number of keys returned in the response. The response might contain fewer keys but will never contain more.'
+    description: "Sets the maximum number of keys returned in the response. The response might contain fewer keys but will never contain more."
   Prefix:
     type: string
-    description: 'Limits the response to keys that begin with the specified prefix.'
+    description: "Limits the response to keys that begin with the specified prefix."
   VersionIdMarker:
     type: string
-    description: 'Specifies the object version you want to start listing from.'
+    description: "Specifies the object version you want to start listing from."

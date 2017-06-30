@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   IdentityId:
     type: string
-    description: 'A unique identifier in the format REGION:GUID.'
+    description: "A unique identifier in the format REGION:GUID."
     required: true
   Logins:
     type: object
-    description: 'A set of optional name-value pairs that map provider names to provider tokens.'
+    description: "A set of optional name-value pairs that map provider names to provider tokens."
     required: true
   LoginsToRemove:
     type: array
-    description: 'Provider names to unlink from this identity.'
+    description: "Provider names to unlink from this identity."
     required: true

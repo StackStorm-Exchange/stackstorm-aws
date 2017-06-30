@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   HostIds:
     type: array
-    description: 'The IDs of the Dedicated Hosts. The IDs are used for targeted instance launches.'
+    description: "The IDs of the Dedicated Hosts. The IDs are used for targeted instance launches."
   NextToken:
     type: string
-    description: 'The token to retrieve the next page of results.'
+    description: "The token to retrieve the next page of results."
   MaxResults:
     type: integer
-    description: 'The maximum number of results to return for the request in a single page. The remaining results can be seen by sending another request with the returned nextToken value. This value can be between 5 and 500; if maxResults is given a larger value than 500, you will receive an error. You cannot specify this parameter and the host IDs parameter in the same request.'
+    description: "The maximum number of results to return for the request in a single page. The remaining results can be seen by sending another request with the returned nextToken value. This value can be between 5 and 500; if maxResults is given a larger value than 500, you will receive an error. You cannot specify this parameter and the host IDs parameter in the same request."
   Filter:
     type: array
-    description: 'One or more filters.    instance-type - The instance type size that the Dedicated Host is configured to support.    auto-placement - Whether auto-placement is enabled or disabled (on | off).    host-reservation-id - The ID of the reservation assigned to this host.    client-token - The idempotency token you provided when you launched the instance    state- The allocation state of the Dedicated Host (available | under-assessment | permanent-failure | released | released-permanent-failure).    availability-zone - The Availability Zone of the host.  '
+    description: "One or more filters.    instance-type - The instance type size that the Dedicated Host is configured to support.    auto-placement - Whether auto-placement is enabled or disabled (on | off).    host-reservation-id - The ID of the reservation assigned to this host.    client-token - The idempotency token you provided when you launched the instance    state- The allocation state of the Dedicated Host (available | under-assessment | permanent-failure | released | released-permanent-failure).    availability-zone - The Availability Zone of the host.  "

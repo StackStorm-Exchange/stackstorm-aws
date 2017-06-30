@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   SnapshotId:
     type: string
-    description: 'The ID of the snapshot.'
+    description: "The ID of the snapshot."
     required: true
   Attribute:
     type: string
-    description: 'The attribute to reset. Currently, only the attribute for permission to create volumes can be reset.'
+    description: "The attribute to reset. Currently, only the attribute for permission to create volumes can be reset."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."

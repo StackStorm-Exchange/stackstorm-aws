@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,14 +21,14 @@ parameters:
     type: string
   WindowId:
     type: string
-    description: 'The ID of the Maintenance Window whose executions should be retrieved.'
+    description: "The ID of the Maintenance Window whose executions should be retrieved."
     required: true
   Filters:
     type: array
-    description: 'Each entry in the array is a structure containing: Key (string, 1 ≤ length ≤ 128) Values (array of strings 1 ≤ length ≤ 256) The supported Keys are ExecutedBefore and ExecutedAfter with the value being a date/time string such as 2016-11-04T05:00:00Z.'
+    description: "Each entry in the array is a structure containing: Key (string, 1 ≤ length ≤ 128) Values (array of strings 1 ≤ length ≤ 256) The supported Keys are ExecutedBefore and ExecutedAfter with the value being a date/time string such as 2016-11-04T05:00:00Z."
   MaxResults:
     type: integer
-    description: 'The maximum number of items to return for this call. The call also returns a token that you can specify in a subsequent call to get the next set of results.'
+    description: "The maximum number of items to return for this call. The call also returns a token that you can specify in a subsequent call to get the next set of results."
   NextToken:
     type: string
-    description: 'The token for the next set of items to return. (You received this token from a previous call.)'
+    description: "The token for the next set of items to return. (You received this token from a previous call.)"

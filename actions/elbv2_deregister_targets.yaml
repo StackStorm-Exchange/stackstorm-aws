@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   TargetGroupArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the target group.'
+    description: "The Amazon Resource Name (ARN) of the target group."
     required: true
   Targets:
     type: array
-    description: 'The targets. If you specified a port override when you registered a target, you must specify both the target ID and the port when you deregister it.'
+    description: "The targets. If you specified a port override when you registered a target, you must specify both the target ID and the port when you deregister it."
     required: true

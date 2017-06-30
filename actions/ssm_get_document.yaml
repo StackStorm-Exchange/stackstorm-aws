@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the SSM document.'
+    description: "The name of the SSM document."
     required: true
   DocumentVersion:
     type: string
-    description: 'The document version for which you want information.'
+    description: "The document version for which you want information."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,22 +21,22 @@ parameters:
     type: string
   OutputFormat:
     type: string
-    description: ' The audio format in which the resulting stream will be encoded. '
+    description: " The audio format in which the resulting stream will be encoded. "
     required: true
   Text:
     type: string
-    description: ' Input text to synthesize. If you specify ssml as the TextType, follow the SSML format for the input text. '
+    description: " Input text to synthesize. If you specify ssml as the TextType, follow the SSML format for the input text. "
     required: true
   VoiceId:
     type: string
-    description: ' Voice ID to use for the synthesis. You can get a list of available voice IDs by calling the DescribeVoices operation. '
+    description: " Voice ID to use for the synthesis. You can get a list of available voice IDs by calling the DescribeVoices operation. "
     required: true
   LexiconNames:
     type: array
-    description: 'List of one or more pronunciation lexicon names you want the service to apply during synthesis. Lexicons are applied only if the language of the lexicon is the same as the language of the voice. For information about storing lexicons, see PutLexicon.'
+    description: "List of one or more pronunciation lexicon names you want the service to apply during synthesis. Lexicons are applied only if the language of the lexicon is the same as the language of the voice. For information about storing lexicons, see PutLexicon."
   SampleRate:
     type: string
-    description: ' The audio frequency specified in Hz.  The valid values for mp3 and ogg_vorbis are "8000", "16000", and "22050". The default value is "22050".   Valid values for pcm are "8000" and "16000" The default value is "16000". '
+    description: " The audio frequency specified in Hz.  The valid values for mp3 and ogg_vorbis are '8000', '16000', and '22050'. The default value is '22050'.   Valid values for pcm are '8000' and '16000' The default value is '16000'. "
   TextType:
     type: string
-    description: ' Specifies whether the input text is plain text or SSML. The default value is plain text. For more information, see Using SSML.'
+    description: " Specifies whether the input text is plain text or SSML. The default value is plain text. For more information, see Using SSML."

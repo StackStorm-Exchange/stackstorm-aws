@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,8 +21,8 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The ID for the hosted zone for which you want to update the comment.'
+    description: "The ID for the hosted zone for which you want to update the comment."
     required: true
   Comment:
     type: string
-    description: 'The new comment for the hosted zone. If you don"t specify a value for Comment, Amazon Route 53 deletes the existing value of the Comment element, if any.'
+    description: "The new comment for the hosted zone. If you don't specify a value for Comment, Amazon Route 53 deletes the existing value of the Comment element, if any."

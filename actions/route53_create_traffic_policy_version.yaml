@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   Id:
     type: string
-    description: 'The ID of the traffic policy for which you want to create a new version.'
+    description: "The ID of the traffic policy for which you want to create a new version."
     required: true
   Document:
     type: string
-    description: 'The definition of this version of the traffic policy, in JSON format. You specified the JSON in the CreateTrafficPolicyVersion request. For more information about the JSON format, see CreateTrafficPolicy.'
+    description: "The definition of this version of the traffic policy, in JSON format. You specified the JSON in the CreateTrafficPolicyVersion request. For more information about the JSON format, see CreateTrafficPolicy."
     required: true
   Comment:
     type: string
-    description: 'The comment that you specified in the CreateTrafficPolicyVersion request, if any.'
+    description: "The comment that you specified in the CreateTrafficPolicyVersion request, if any."

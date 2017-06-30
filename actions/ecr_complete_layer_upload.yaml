@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,16 +21,16 @@ parameters:
     type: string
   repositoryName:
     type: string
-    description: 'The name of the repository to associate with the image layer.'
+    description: "The name of the repository to associate with the image layer."
     required: true
   uploadId:
     type: string
-    description: 'The upload ID from a previous InitiateLayerUpload operation to associate with the image layer.'
+    description: "The upload ID from a previous InitiateLayerUpload operation to associate with the image layer."
     required: true
   layerDigests:
     type: array
-    description: 'The sha256 digest of the image layer.'
+    description: "The sha256 digest of the image layer."
     required: true
   registryId:
     type: string
-    description: 'The AWS account ID associated with the registry to which to upload layers. If you do not specify a registry, the default registry is assumed.'
+    description: "The AWS account ID associated with the registry to which to upload layers. If you do not specify a registry, the default registry is assumed."

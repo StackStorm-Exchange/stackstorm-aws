@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,18 +21,18 @@ parameters:
     type: string
   taskId:
     type: string
-    description: 'The ID of the task assigned to the task runner. This value is provided in the response for PollForTask.'
+    description: "The ID of the task assigned to the task runner. This value is provided in the response for PollForTask."
     required: true
   taskStatus:
     type: string
-    description: 'If FINISHED, the task successfully completed. If FAILED, the task ended unsuccessfully. Preconditions use false.'
+    description: "If FINISHED, the task successfully completed. If FAILED, the task ended unsuccessfully. Preconditions use false."
     required: true
   errorId:
     type: string
-    description: 'If an error occurred during the task, this value specifies the error code. This value is set on the physical attempt object. It is used to display error information to the user. It should not start with string "Service_" which is reserved by the system.'
+    description: "If an error occurred during the task, this value specifies the error code. This value is set on the physical attempt object. It is used to display error information to the user. It should not start with string 'Service_' which is reserved by the system."
   errorMessage:
     type: string
-    description: 'If an error occurred during the task, this value specifies a text description of the error. This value is set on the physical attempt object. It is used to display error information to the user. The web service does not parse this value.'
+    description: "If an error occurred during the task, this value specifies a text description of the error. This value is set on the physical attempt object. It is used to display error information to the user. The web service does not parse this value."
   errorStackTrace:
     type: string
-    description: 'If an error occurred during the task, this value specifies the stack trace associated with the error. This value is set on the physical attempt object. It is used to display error information to the user. The web service does not parse this value.'
+    description: "If an error occurred during the task, this value specifies the stack trace associated with the error. This value is set on the physical attempt object. It is used to display error information to the user. The web service does not parse this value."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ARN:
     type: string
-    description: ' Specify the ARN for which you want to add the tags.'
+    description: " Specify the ARN for which you want to add the tags."
     required: true
   TagList:
     type: array
-    description: ' List of Tag that need to be added for the Elasticsearch domain. '
+    description: " List of Tag that need to be added for the Elasticsearch domain. "
     required: true

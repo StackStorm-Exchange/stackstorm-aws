@@ -1,0 +1,41 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: clouddirectory_list_index
+runner_type: python-script
+parameters:
+  action:
+    default: list_index
+    immutable: true
+    type: string
+  cls:
+    default: clouddirectory
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  DirectoryArn:
+    type: string
+    description: "The ARN of the directory that the index exists in."
+    required: true
+  IndexReference:
+    type: object
+    description: "The reference to the index to list."
+    required: true
+  RangesOnIndexedValues:
+    type: array
+    description: "Specifies the ranges of indexed values that you want to query."
+  MaxResults:
+    type: integer
+    description: "The maximum number of results to retrieve from the index."
+  NextToken:
+    type: string
+    description: "The pagination token."
+  ConsistencyLevel:
+    type: string
+    description: "The consistency level to execute the request at."

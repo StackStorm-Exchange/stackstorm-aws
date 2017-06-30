@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   applicationName:
     type: string
-    description: 'The name of an AWS CodeDeploy application associated with the applicable IAM user or AWS account.'
+    description: "The name of an AWS CodeDeploy application associated with the applicable IAM user or AWS account."
     required: true
   deploymentGroupName:
     type: string
-    description: 'The name of an existing deployment group for the specified application.'
+    description: "The name of an existing deployment group for the specified application."
     required: true

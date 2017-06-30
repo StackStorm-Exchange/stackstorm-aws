@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   RuleArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the rule.'
+    description: "The Amazon Resource Name (ARN) of the rule."
     required: true
   Conditions:
     type: array
-    description: 'The conditions.'
+    description: "The conditions."
   Actions:
     type: array
-    description: 'The actions.'
+    description: "The actions."

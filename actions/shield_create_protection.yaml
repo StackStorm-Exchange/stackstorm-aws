@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'Friendly name for the Protection you are creating.'
+    description: "Friendly name for the Protection you are creating."
     required: true
   ResourceArn:
     type: string
-    description: 'The ARN (Amazon Resource Name) of the resource to be protected.'
+    description: "The ARN (Amazon Resource Name) of the resource to be protected."
     required: true

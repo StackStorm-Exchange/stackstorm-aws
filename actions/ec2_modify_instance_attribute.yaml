@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,50 +21,50 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: 'The ID of the instance.'
+    description: "The ID of the instance."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."
   Attribute:
     type: string
-    description: 'The name of the attribute.'
+    description: "The name of the attribute."
   Value:
     type: string
-    description: 'A new value for the attribute. Use only with the kernel, ramdisk, userData, disableApiTermination, or instanceInitiatedShutdownBehavior attribute.'
+    description: "A new value for the attribute. Use only with the kernel, ramdisk, userData, disableApiTermination, or instanceInitiatedShutdownBehavior attribute."
   BlockDeviceMappings:
     type: array
-    description: 'Modifies the DeleteOnTermination attribute for volumes that are currently attached. The volume must be owned by the caller. If no value is specified for DeleteOnTermination, the default is true and the volume is deleted when the instance is terminated. To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the instance. For more information, see Updating the Block Device Mapping when Launching an Instance in the Amazon Elastic Compute Cloud User Guide.'
+    description: "Modifies the DeleteOnTermination attribute for volumes that are currently attached. The volume must be owned by the caller. If no value is specified for DeleteOnTermination, the default is true and the volume is deleted when the instance is terminated. To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the instance. For more information, see Updating the Block Device Mapping when Launching an Instance in the Amazon Elastic Compute Cloud User Guide."
   SourceDestCheck:
     type: object
-    description: 'Specifies whether source/destination checking is enabled. A value of true means that checking is enabled, and false means checking is disabled. This value must be false for a NAT instance to perform NAT.'
+    description: "Specifies whether source/destination checking is enabled. A value of true means that checking is enabled, and false means checking is disabled. This value must be false for a NAT instance to perform NAT."
   DisableApiTermination:
     type: object
-    description: 'If the value is true, you can"t terminate the instance using the Amazon EC2 console, CLI, or API; otherwise, you can. You cannot use this paramater for Spot Instances.'
+    description: "If the value is true, you can't terminate the instance using the Amazon EC2 console, CLI, or API; otherwise, you can. You cannot use this paramater for Spot Instances."
   InstanceType:
     type: object
-    description: 'Changes the instance type to the specified value. For more information, see Instance Types. If the instance type is not valid, the error returned is InvalidInstanceAttributeValue.'
+    description: "Changes the instance type to the specified value. For more information, see Instance Types. If the instance type is not valid, the error returned is InvalidInstanceAttributeValue."
   Kernel:
     type: object
-    description: 'Changes the instance"s kernel to the specified value. We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see PV-GRUB.'
+    description: "Changes the instance's kernel to the specified value. We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see PV-GRUB."
   Ramdisk:
     type: object
-    description: 'Changes the instance"s RAM disk to the specified value. We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see PV-GRUB.'
+    description: "Changes the instance's RAM disk to the specified value. We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see PV-GRUB."
   UserData:
     type: object
-    description: 'Changes the instance"s user data to the specified value. If you are using an AWS SDK or command line tool, Base64-encoding is performed for you, and you can load the text from a file. Otherwise, you must provide Base64-encoded text.'
+    description: "Changes the instance's user data to the specified value. If you are using an AWS SDK or command line tool, Base64-encoding is performed for you, and you can load the text from a file. Otherwise, you must provide Base64-encoded text."
   InstanceInitiatedShutdownBehavior:
     type: object
-    description: 'Specifies whether an instance stops or terminates when you initiate shutdown from the instance (using the operating system command for system shutdown).'
+    description: "Specifies whether an instance stops or terminates when you initiate shutdown from the instance (using the operating system command for system shutdown)."
   Groups:
     type: array
-    description: '[EC2-VPC] Changes the security groups of the instance. You must specify at least one security group, even if it"s just the default security group for the VPC. You must specify the security group ID, not the security group name.'
+    description: "[EC2-VPC] Changes the security groups of the instance. You must specify at least one security group, even if it's just the default security group for the VPC. You must specify the security group ID, not the security group name."
   EbsOptimized:
     type: object
-    description: 'Specifies whether the instance is optimized for EBS I/O. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance. This optimization isn"t available with all instance types. Additional usage charges apply when using an EBS Optimized instance.'
+    description: "Specifies whether the instance is optimized for EBS I/O. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance. This optimization isn't available with all instance types. Additional usage charges apply when using an EBS Optimized instance."
   SriovNetSupport:
     type: object
-    description: 'Set to simple to enable enhanced networking with the Intel 82599 Virtual Function interface for the instance. There is no way to disable enhanced networking with the Intel 82599 Virtual Function interface at this time. This option is supported only for HVM instances. Specifying this option with a PV instance can make it unreachable.'
+    description: "Set to simple to enable enhanced networking with the Intel 82599 Virtual Function interface for the instance. There is no way to disable enhanced networking with the Intel 82599 Virtual Function interface at this time. This option is supported only for HVM instances. Specifying this option with a PV instance can make it unreachable."
   EnaSupport:
     type: object
-    description: 'Set to true to enable enhanced networking with ENA for the instance. This option is supported only for HVM instances. Specifying this option with a PV instance can make it unreachable.'
+    description: "Set to true to enable enhanced networking with ENA for the instance. This option is supported only for HVM instances. Specifying this option with a PV instance can make it unreachable."

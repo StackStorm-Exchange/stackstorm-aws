@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,15 +21,15 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: '[Required] The identifier of an API of the to-be-imported documentation parts.'
+    description: "[Required] The identifier of an API of the to-be-imported documentation parts."
     required: true
   body:
     type: string
-    description: '[Required] Raw byte array representing the to-be-imported documentation parts. To import from a Swagger file, this is a JSON object.'
+    description: "[Required] Raw byte array representing the to-be-imported documentation parts. To import from a Swagger file, this is a JSON object."
     required: true
   mode:
     type: string
-    description: 'A query parameter to indicate whether to overwrite (OVERWRITE) any existing DocumentationParts definition or to merge (MERGE) the new definition into the existing one. The default value is MERGE.'
+    description: "A query parameter to indicate whether to overwrite (OVERWRITE) any existing DocumentationParts definition or to merge (MERGE) the new definition into the existing one. The default value is MERGE."
   failOnWarnings:
     type: boolean
-    description: 'A query parameter to specify whether to rollback the documentation importation (true) or not (false) when a warning is encountered. The default value is false.'
+    description: "A query parameter to specify whether to rollback the documentation importation (true) or not (false) when a warning is encountered. The default value is false."

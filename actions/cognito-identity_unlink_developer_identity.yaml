@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,17 +21,17 @@ parameters:
     type: string
   IdentityId:
     type: string
-    description: 'A unique identifier in the format REGION:GUID.'
+    description: "A unique identifier in the format REGION:GUID."
     required: true
   IdentityPoolId:
     type: string
-    description: 'An identity pool ID in the format REGION:GUID.'
+    description: "An identity pool ID in the format REGION:GUID."
     required: true
   DeveloperProviderName:
     type: string
-    description: 'The "domain" by which Cognito will refer to your users.'
+    description: "The 'domain' by which Cognito will refer to your users."
     required: true
   DeveloperUserIdentifier:
     type: string
-    description: 'A unique ID used by your backend authentication process to identify a user.'
+    description: "A unique ID used by your backend authentication process to identify a user."
     required: true

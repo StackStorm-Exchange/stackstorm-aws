@@ -1,0 +1,30 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: elasticbeanstalk_list_platform_versions
+runner_type: python-script
+parameters:
+  action:
+    default: list_platform_versions
+    immutable: true
+    type: string
+  cls:
+    default: elasticbeanstalk
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  Filters:
+    type: array
+    description: "List only the platforms where the platform member value relates to one of the supplied values."
+  MaxRecords:
+    type: integer
+    description: "The maximum number of platform values returned in one call."
+  NextToken:
+    type: string
+    description: "The starting index into the remaining list of platforms. Use the NextToken value from a previous ListPlatformVersion call."

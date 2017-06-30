@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   repositoryName:
     type: string
-    description: 'The name of the repository in which you want to create the new branch.'
+    description: "The name of the repository in which you want to create the new branch."
     required: true
   branchName:
     type: string
-    description: 'The name of the new branch to create.'
+    description: "The name of the new branch to create."
     required: true
   commitId:
     type: string
-    description: 'The ID of the commit to point the new branch to.'
+    description: "The ID of the commit to point the new branch to."
     required: true

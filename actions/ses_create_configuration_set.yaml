@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   ConfigurationSet:
     type: object
-    description: 'A data structure that contains the name of the configuration set.'
+    description: "A data structure that contains the name of the configuration set."
     required: true

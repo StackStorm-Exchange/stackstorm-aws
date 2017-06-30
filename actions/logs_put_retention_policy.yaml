@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   logGroupName:
     type: string
-    description: 'The name of the log group.'
+    description: "The name of the log group."
     required: true
   retentionInDays:
     type: integer
-    description: ''
+    description: ""
     required: true

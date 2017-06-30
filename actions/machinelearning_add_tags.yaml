@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   Tags:
     type: array
-    description: 'The key-value pairs to use to create tags. If you specify a key without specifying a value, Amazon ML creates a tag with the specified key and a value of null.'
+    description: "The key-value pairs to use to create tags. If you specify a key without specifying a value, Amazon ML creates a tag with the specified key and a value of null."
     required: true
   ResourceId:
     type: string
-    description: 'The ID of the ML object to tag. For example, exampleModelId.'
+    description: "The ID of the ML object to tag. For example, exampleModelId."
     required: true
   ResourceType:
     type: string
-    description: 'The type of the ML object to tag. '
+    description: "The type of the ML object to tag. "
     required: true

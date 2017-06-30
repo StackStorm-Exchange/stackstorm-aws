@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   loggingOptionsPayload:
     type: object
-    description: 'The logging options payload.'
+    description: "The logging options payload."
     required: true

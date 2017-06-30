@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   SpotFleetRequestIds:
     type: array
-    description: 'The IDs of the Spot fleet requests.'
+    description: "The IDs of the Spot fleet requests."
     required: true
   TerminateInstances:
     type: boolean
-    description: 'Indicates whether to terminate instances for a Spot fleet request if it is canceled successfully.'
+    description: "Indicates whether to terminate instances for a Spot fleet request if it is canceled successfully."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,21 +21,21 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the preset. We recommend that the name be unique within the AWS account, but uniqueness is not enforced.'
+    description: "The name of the preset. We recommend that the name be unique within the AWS account, but uniqueness is not enforced."
     required: true
   Container:
     type: string
-    description: 'The container type for the output file. Valid values include flac, flv, fmp4, gif, mp3, mp4, mpg, mxf, oga, ogg, ts, and webm.'
+    description: "The container type for the output file. Valid values include flac, flv, fmp4, gif, mp3, mp4, mpg, mxf, oga, ogg, ts, and webm."
     required: true
   Description:
     type: string
-    description: 'A description of the preset.'
+    description: "A description of the preset."
   Video:
     type: object
-    description: 'A section of the request body that specifies the video parameters.'
+    description: "A section of the request body that specifies the video parameters."
   Audio:
     type: object
-    description: 'A section of the request body that specifies the audio parameters.'
+    description: "A section of the request body that specifies the audio parameters."
   Thumbnails:
     type: object
-    description: 'A section of the request body that specifies the thumbnail parameters, if any.'
+    description: "A section of the request body that specifies the thumbnail parameters, if any."

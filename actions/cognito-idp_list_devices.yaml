@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   AccessToken:
     type: string
-    description: 'The access tokens for the request to list devices.'
+    description: "The access tokens for the request to list devices."
     required: true
   Limit:
     type: integer
-    description: 'The limit of the device request.'
+    description: "The limit of the device request."
   PaginationToken:
     type: string
-    description: 'The pagination token for the list request.'
+    description: "The pagination token for the list request."

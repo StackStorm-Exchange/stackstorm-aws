@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,10 +21,10 @@ parameters:
     type: string
   StackId:
     type: string
-    description: 'The stack ID. If you use this parameter, DescribeServiceErrors returns descriptions of the errors associated with the specified stack.'
+    description: "The stack ID. If you use this parameter, DescribeServiceErrors returns descriptions of the errors associated with the specified stack."
   InstanceId:
     type: string
-    description: 'The instance ID. If you use this parameter, DescribeServiceErrors returns descriptions of the errors associated with the specified instance.'
+    description: "The instance ID. If you use this parameter, DescribeServiceErrors returns descriptions of the errors associated with the specified instance."
   ServiceErrorIds:
     type: array
-    description: 'An array of service error IDs. If you use this parameter, DescribeServiceErrors returns descriptions of the specified errors. Otherwise, it returns a description of every error.'
+    description: "An array of service error IDs. If you use this parameter, DescribeServiceErrors returns descriptions of the specified errors. Otherwise, it returns a description of every error."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'The name of the security configuration.'
+    description: "The name of the security configuration."
     required: true
   SecurityConfiguration:
     type: string
-    description: 'The security configuration details in JSON format.'
+    description: "The security configuration details in JSON format."
     required: true

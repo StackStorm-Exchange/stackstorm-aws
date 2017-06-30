@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,10 +21,10 @@ parameters:
     type: string
   IdentityType:
     type: string
-    description: 'The type of the identities to list. Possible values are "EmailAddress" and "Domain". If this parameter is omitted, then all identities will be listed.'
+    description: "The type of the identities to list. Possible values are 'EmailAddress' and 'Domain'. If this parameter is omitted, then all identities will be listed."
   NextToken:
     type: string
-    description: 'The token to use for pagination.'
+    description: "The token to use for pagination."
   MaxItems:
     type: integer
-    description: 'The maximum number of identities per page. Possible values are 1-1000 inclusive.'
+    description: "The maximum number of identities per page. Possible values are 1-1000 inclusive."

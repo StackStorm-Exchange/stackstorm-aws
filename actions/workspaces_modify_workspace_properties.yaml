@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   WorkspaceId:
     type: string
-    description: 'The ID of the WorkSpace.'
+    description: "The ID of the WorkSpace."
     required: true
   WorkspaceProperties:
     type: object
-    description: 'The WorkSpace properties of the request.'
+    description: "The WorkSpace properties of the request."
     required: true

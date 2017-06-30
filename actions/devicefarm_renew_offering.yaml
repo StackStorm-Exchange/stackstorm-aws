@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   offeringId:
     type: string
-    description: 'The ID of a request to renew an offering.'
+    description: "The ID of a request to renew an offering."
   quantity:
     type: integer
-    description: 'The quantity requested in an offering renewal.'
+    description: "The quantity requested in an offering renewal."

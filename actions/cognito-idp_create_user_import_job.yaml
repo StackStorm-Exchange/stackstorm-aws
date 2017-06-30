@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   JobName:
     type: string
-    description: 'The job name for the user import job.'
+    description: "The job name for the user import job."
     required: true
   UserPoolId:
     type: string
-    description: 'The user pool ID for the user pool that the users are being imported into.'
+    description: "The user pool ID for the user pool that the users are being imported into."
     required: true
   CloudWatchLogsRoleArn:
     type: string
-    description: 'The role ARN for the Amazon CloudWatch Logging role for the user import job.'
+    description: "The role ARN for the Amazon CloudWatch Logging role for the user import job."
     required: true

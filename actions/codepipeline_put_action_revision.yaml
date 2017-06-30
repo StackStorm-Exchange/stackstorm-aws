@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,17 +21,17 @@ parameters:
     type: string
   pipelineName:
     type: string
-    description: 'The name of the pipeline that will start processing the revision to the source.'
+    description: "The name of the pipeline that will start processing the revision to the source."
     required: true
   stageName:
     type: string
-    description: 'The name of the stage that contains the action that will act upon the revision.'
+    description: "The name of the stage that contains the action that will act upon the revision."
     required: true
   actionName:
     type: string
-    description: 'The name of the action that will process the revision.'
+    description: "The name of the action that will process the revision."
     required: true
   actionRevision:
     type: object
-    description: ''
+    description: ""
     required: true

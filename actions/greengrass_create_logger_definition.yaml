@@ -1,0 +1,30 @@
+---
+description:
+pack: aws
+enabled: true
+entry_point: run.py
+name: greengrass_create_logger_definition
+runner_type: python-script
+parameters:
+  action:
+    default: create_logger_definition
+    immutable: true
+    type: string
+  cls:
+    default: greengrass
+    type: string
+  headers:
+    type: string
+  module_path:
+    default: boto3
+    immutable: true
+    type: string
+  AmznClientToken:
+    type: string
+    description: "The client token used to request idempotent operations."
+  InitialVersion:
+    type: object
+    description: "Information on the initial version"
+  Name:
+    type: string
+    description: "name of the logger definition"

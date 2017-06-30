@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: '[Required] The identifier of an API of the to-be-retrieved documentation part.'
+    description: "[Required] The identifier of an API of the to-be-retrieved documentation part."
     required: true
   documentationPartId:
     type: string
-    description: '[Required] The identifier of the to-be-retrieved documentation part.'
+    description: "[Required] The identifier of the to-be-retrieved documentation part."
     required: true

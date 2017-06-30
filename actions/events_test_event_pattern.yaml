@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   EventPattern:
     type: string
-    description: 'The event pattern you want to test.'
+    description: "The event pattern you want to test."
     required: true
   Event:
     type: string
-    description: 'The event in the JSON format to test against the event pattern.'
+    description: "The event in the JSON format to test against the event pattern."
     required: true

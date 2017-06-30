@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   keyPairName:
     type: string
-    description: 'The name of the key pair to delete.'
+    description: "The name of the key pair to delete."
     required: true

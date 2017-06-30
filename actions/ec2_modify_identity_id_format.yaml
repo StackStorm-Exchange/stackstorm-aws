@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   Resource:
     type: string
-    description: 'The type of resource: instance | reservation | snapshot | volume '
+    description: "The type of resource: instance | reservation | snapshot | volume "
     required: true
   UseLongIds:
     type: boolean
-    description: 'Indicates whether the resource should use longer IDs (17-character IDs)'
+    description: "Indicates whether the resource should use longer IDs (17-character IDs)"
     required: true
   PrincipalArn:
     type: string
-    description: 'The ARN of the principal, which can be an IAM user, IAM role, or the root user. Specify all to modify the ID format for all IAM users, IAM roles, and the root user of the account.'
+    description: "The ARN of the principal, which can be an IAM user, IAM role, or the root user. Specify all to modify the ID format for all IAM users, IAM roles, and the root user of the account."
     required: true

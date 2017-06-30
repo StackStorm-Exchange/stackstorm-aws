@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,19 +21,19 @@ parameters:
     type: string
   AlarmNames:
     type: array
-    description: 'The names of the alarms.'
+    description: "The names of the alarms."
   AlarmNamePrefix:
     type: string
-    description: 'The alarm name prefix. You cannot specify AlarmNames if this parameter is specified.'
+    description: "The alarm name prefix. You cannot specify AlarmNames if this parameter is specified."
   StateValue:
     type: string
-    description: 'The state value to be used in matching alarms.'
+    description: "The state value to be used in matching alarms."
   ActionPrefix:
     type: string
-    description: 'The action name prefix.'
+    description: "The action name prefix."
   MaxRecords:
     type: integer
-    description: 'The maximum number of alarm descriptions to retrieve.'
+    description: "The maximum number of alarm descriptions to retrieve."
   NextToken:
     type: string
-    description: 'The token returned by a previous call to indicate that there is more data available.'
+    description: "The token returned by a previous call to indicate that there is more data available."

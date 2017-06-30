@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,5 +21,5 @@ parameters:
     type: string
   domainName:
     type: string
-    description: 'The name of the DomainName resource.'
+    description: "The name of the DomainName resource."
     required: true

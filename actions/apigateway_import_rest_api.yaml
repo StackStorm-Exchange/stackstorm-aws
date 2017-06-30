@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   body:
     type: string
-    description: 'The POST request body containing external API definitions. Currently, only Swagger definition JSON files are supported.'
+    description: "The POST request body containing external API definitions. Currently, only Swagger definition JSON files are supported."
     required: true
   failOnWarnings:
     type: boolean
-    description: 'A query parameter to indicate whether to rollback the API creation (true) or not (false) when a warning is encountered. The default value is false.'
+    description: "A query parameter to indicate whether to rollback the API creation (true) or not (false) when a warning is encountered. The default value is false."
   parameters:
     type: object
-    description: 'Custom header parameters as part of the request.'
+    description: "Custom header parameters as part of the request."

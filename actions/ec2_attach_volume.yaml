@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,16 +21,16 @@ parameters:
     type: string
   VolumeId:
     type: string
-    description: 'The ID of the EBS volume. The volume and instance must be within the same Availability Zone.'
+    description: "The ID of the EBS volume. The volume and instance must be within the same Availability Zone."
     required: true
   InstanceId:
     type: string
-    description: 'The ID of the instance.'
+    description: "The ID of the instance."
     required: true
   Device:
     type: string
-    description: 'The device name to expose to the instance (for example, /dev/sdh or xvdh).'
+    description: "The device name to expose to the instance (for example, /dev/sdh or xvdh)."
     required: true
   DryRun:
     type: boolean
-    description: 'Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.'
+    description: "Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation."

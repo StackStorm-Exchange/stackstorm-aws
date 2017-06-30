@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,16 +21,16 @@ parameters:
     type: string
   projectArn:
     type: string
-    description: 'The ARN of the project for the device pool.'
+    description: "The ARN of the project for the device pool."
     required: true
   name:
     type: string
-    description: 'The device pool"s name.'
+    description: "The device pool's name."
     required: true
   rules:
     type: array
-    description: 'The device pool"s rules.'
+    description: "The device pool's rules."
     required: true
   description:
     type: string
-    description: 'The device pool"s description.'
+    description: "The device pool's description."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   stateMachineArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the state machine to execute.'
+    description: "The Amazon Resource Name (ARN) of the state machine to execute."
     required: true
   name:
     type: string
-    description: 'The name of the execution. This name must be unique for your AWS account and region.'
+    description: "The name of the execution. This name must be unique for your AWS account and region."
   input:
     type: string
-    description: 'The JSON input data for the execution.'
+    description: "The JSON input data for the execution."

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   InstanceIds:
     type: array
-    description: 'One or more instance IDs.'
+    description: "One or more instance IDs."
     required: true
   AutoScalingGroupName:
     type: string
-    description: 'The name of the group.'
+    description: "The name of the group."
     required: true
   ProtectedFromScaleIn:
     type: boolean
-    description: 'Indicates whether the instance is protected from termination by Auto Scaling when scaling in.'
+    description: "Indicates whether the instance is protected from termination by Auto Scaling when scaling in."
     required: true

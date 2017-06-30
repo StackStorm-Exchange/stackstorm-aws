@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,24 +21,24 @@ parameters:
     type: string
   restApiId:
     type: string
-    description: 'Specifies a test invoke authorizer request"s RestApi identifier.'
+    description: "Specifies a test invoke authorizer request's RestApi identifier."
     required: true
   authorizerId:
     type: string
-    description: 'Specifies a test invoke authorizer request"s Authorizer ID.'
+    description: "Specifies a test invoke authorizer request's Authorizer ID."
     required: true
   headers:
     type: object
-    description: '[Required] A key-value map of headers to simulate an incoming invocation request. This is where the incoming authorization token, or identity source, should be specified.'
+    description: "[Required] A key-value map of headers to simulate an incoming invocation request. This is where the incoming authorization token, or identity source, should be specified."
   pathWithQueryString:
     type: string
-    description: '[Optional] The URI path, including query string, of the simulated invocation request. Use this to specify path parameters and query string parameters.'
+    description: "[Optional] The URI path, including query string, of the simulated invocation request. Use this to specify path parameters and query string parameters."
   body:
     type: string
-    description: '[Optional] The simulated request body of an incoming invocation request.'
+    description: "[Optional] The simulated request body of an incoming invocation request."
   stageVariables:
     type: object
-    description: 'A key-value map of stage variables to simulate an invocation on a deployed Stage.'
+    description: "A key-value map of stage variables to simulate an invocation on a deployed Stage."
   additionalContext:
     type: object
-    description: '[Optional] A key-value map of additional context variables.'
+    description: "[Optional] A key-value map of additional context variables."

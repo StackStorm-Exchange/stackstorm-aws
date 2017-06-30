@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   portInfo:
     type: object
-    description: 'An array of key-value pairs containing information about the port mappings.'
+    description: "An array of key-value pairs containing information about the port mappings."
     required: true
   instanceName:
     type: string
-    description: 'The name of the instance for which you want to open the public ports.'
+    description: "The name of the instance for which you want to open the public ports."
     required: true

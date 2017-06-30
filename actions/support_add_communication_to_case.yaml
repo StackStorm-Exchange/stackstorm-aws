@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,14 +21,14 @@ parameters:
     type: string
   communicationBody:
     type: string
-    description: 'The body of an email communication to add to the support case.'
+    description: "The body of an email communication to add to the support case."
     required: true
   caseId:
     type: string
-    description: 'The AWS Support case ID requested or returned in the call. The case ID is an alphanumeric string formatted as shown in this example: case-12345678910-2013-c4c1d2bf33c5cf47 '
+    description: "The AWS Support case ID requested or returned in the call. The case ID is an alphanumeric string formatted as shown in this example: case-12345678910-2013-c4c1d2bf33c5cf47 "
   ccEmailAddresses:
     type: array
-    description: 'The email addresses in the CC line of an email to be added to the support case.'
+    description: "The email addresses in the CC line of an email to be added to the support case."
   attachmentSetId:
     type: string
-    description: 'The ID of a set of one or more attachments for the communication to add to the case. Create the set by calling AddAttachmentsToSet '
+    description: "The ID of a set of one or more attachments for the communication to add to the case. Create the set by calling AddAttachmentsToSet "

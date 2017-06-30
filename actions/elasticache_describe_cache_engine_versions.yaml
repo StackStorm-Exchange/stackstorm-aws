@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,19 +21,19 @@ parameters:
     type: string
   Engine:
     type: string
-    description: 'The cache engine to return. Valid values: memcached | redis '
+    description: "The cache engine to return. Valid values: memcached | redis "
   EngineVersion:
     type: string
-    description: 'The cache engine version to return. Example: 1.4.14 '
+    description: "The cache engine version to return. Example: 1.4.14 "
   CacheParameterGroupFamily:
     type: string
-    description: 'The name of a specific cache parameter group family to return details for. Valid values are: memcached1.4 | redis2.6 | redis2.8 | redis3.2  Constraints:   Must be 1 to 255 alphanumeric characters   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens  '
+    description: "The name of a specific cache parameter group family to return details for. Valid values are: memcached1.4 | redis2.6 | redis2.8 | redis3.2  Constraints:   Must be 1 to 255 alphanumeric characters   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens  "
   MaxRecords:
     type: integer
-    description: 'The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a marker is included in the response so that the remaining results can be retrieved. Default: 100 Constraints: minimum 20; maximum 100.'
+    description: "The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a marker is included in the response so that the remaining results can be retrieved. Default: 100 Constraints: minimum 20; maximum 100."
   Marker:
     type: string
-    description: 'An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords.'
+    description: "An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords."
   DefaultOnly:
     type: boolean
-    description: 'If true, specifies that only the default version of the specified engine or engine and major version combination is to be returned.'
+    description: "If true, specifies that only the default version of the specified engine or engine and major version combination is to be returned."

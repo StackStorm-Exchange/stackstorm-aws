@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,17 +21,17 @@ parameters:
     type: string
   Name:
     type: string
-    description: 'A friendly name or description of the WebACL. You can"t change Name after you create the WebACL.'
+    description: "A friendly name or description of the WebACL. You can't change Name after you create the WebACL."
     required: true
   MetricName:
     type: string
-    description: 'A friendly name or description for the metrics for this WebACL. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can"t contain whitespace. You can"t change MetricName after you create the WebACL.'
+    description: "A friendly name or description for the metrics for this WebACL. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can't contain whitespace. You can't change MetricName after you create the WebACL."
     required: true
   DefaultAction:
     type: object
-    description: 'The action that you want AWS WAF to take when a request doesn"t match the criteria specified in any of the Rule objects that are associated with the WebACL.'
+    description: "The action that you want AWS WAF to take when a request doesn't match the criteria specified in any of the Rule objects that are associated with the WebACL."
     required: true
   ChangeToken:
     type: string
-    description: 'The value returned by the most recent call to GetChangeToken.'
+    description: "The value returned by the most recent call to GetChangeToken."
     required: true

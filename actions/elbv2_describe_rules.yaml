@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,7 +21,7 @@ parameters:
     type: string
   ListenerArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the listener.'
+    description: "The Amazon Resource Name (ARN) of the listener."
   RuleArns:
     type: array
-    description: 'The Amazon Resource Names (ARN) of the rules.'
+    description: "The Amazon Resource Names (ARN) of the rules."

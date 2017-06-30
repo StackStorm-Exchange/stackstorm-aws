@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,14 +21,14 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: 'The ID of the instance that you are modifying.'
+    description: "The ID of the instance that you are modifying."
     required: true
   Tenancy:
     type: string
-    description: 'The tenancy of the instance that you are modifying.'
+    description: "The tenancy of the instance that you are modifying."
   Affinity:
     type: string
-    description: 'The new affinity setting for the instance.'
+    description: "The new affinity setting for the instance."
   HostId:
     type: string
-    description: 'The ID of the Dedicated Host that the instance will have affinity with.'
+    description: "The ID of the Dedicated Host that the instance will have affinity with."

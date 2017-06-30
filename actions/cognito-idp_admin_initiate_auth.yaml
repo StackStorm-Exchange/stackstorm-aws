@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,19 +21,19 @@ parameters:
     type: string
   UserPoolId:
     type: string
-    description: 'The ID of the Amazon Cognito user pool.'
+    description: "The ID of the Amazon Cognito user pool."
     required: true
   ClientId:
     type: string
-    description: 'The client app ID.'
+    description: "The client app ID."
     required: true
   AuthFlow:
     type: string
-    description: 'The authentication flow.'
+    description: "The authentication flow."
     required: true
   AuthParameters:
     type: object
-    description: 'The authentication parameters.'
+    description: "The authentication parameters."
   ClientMetadata:
     type: object
-    description: 'The client app metadata.'
+    description: "The client app metadata."

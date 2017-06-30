@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   ResourceArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) of the AWS CloudHSM resource to tag.'
+    description: "The Amazon Resource Name (ARN) of the AWS CloudHSM resource to tag."
     required: true
   TagList:
     type: array
-    description: 'One or more tags.'
+    description: "One or more tags."
     required: true

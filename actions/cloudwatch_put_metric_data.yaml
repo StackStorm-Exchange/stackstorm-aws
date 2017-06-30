@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   Namespace:
     type: string
-    description: 'The namespace for the metric data. You cannot specify a namespace that begins with "AWS/". Namespaces that begin with "AWS/" are reserved for use by Amazon Web Services products.'
+    description: "The namespace for the metric data. You cannot specify a namespace that begins with 'AWS/'. Namespaces that begin with 'AWS/' are reserved for use by Amazon Web Services products."
     required: true
   MetricData:
     type: array
-    description: 'The data for the metric.'
+    description: "The data for the metric."
     required: true

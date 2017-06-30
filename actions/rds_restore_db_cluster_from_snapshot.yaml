@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,40 +21,40 @@ parameters:
     type: string
   DBClusterIdentifier:
     type: string
-    description: 'The name of the DB cluster to create from the DB cluster snapshot. This parameter isn"t case-sensitive. Constraints:   Must contain from 1 to 255 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens   Example: my-snapshot-id '
+    description: "The name of the DB cluster to create from the DB cluster snapshot. This parameter isn't case-sensitive. Constraints:   Must contain from 1 to 255 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens   Example: my-snapshot-id "
     required: true
   SnapshotIdentifier:
     type: string
-    description: 'The identifier for the DB cluster snapshot to restore from. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens  '
+    description: "The identifier for the DB cluster snapshot to restore from. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens   First character must be a letter   Cannot end with a hyphen or contain two consecutive hyphens  "
     required: true
   Engine:
     type: string
-    description: 'The database engine to use for the new DB cluster. Default: The same as source Constraint: Must be compatible with the engine of the source'
+    description: "The database engine to use for the new DB cluster. Default: The same as source Constraint: Must be compatible with the engine of the source"
     required: true
   AvailabilityZones:
     type: array
-    description: 'Provides the list of EC2 Availability Zones that instances in the restored DB cluster can be created in.'
+    description: "Provides the list of EC2 Availability Zones that instances in the restored DB cluster can be created in."
   EngineVersion:
     type: string
-    description: 'The version of the database engine to use for the new DB cluster.'
+    description: "The version of the database engine to use for the new DB cluster."
   Port:
     type: integer
-    description: 'The port number on which the new DB cluster accepts connections. Constraints: Value must be 1150-65535  Default: The same port as the original DB cluster.'
+    description: "The port number on which the new DB cluster accepts connections. Constraints: Value must be 1150-65535  Default: The same port as the original DB cluster."
   DBSubnetGroupName:
     type: string
-    description: 'The name of the DB subnet group to use for the new DB cluster. Constraints: Must contain no more than 255 alphanumeric characters, periods, underscores, spaces, or hyphens. Must not be default. Example: mySubnetgroup '
+    description: "The name of the DB subnet group to use for the new DB cluster. Constraints: Must contain no more than 255 alphanumeric characters, periods, underscores, spaces, or hyphens. Must not be default. Example: mySubnetgroup "
   DatabaseName:
     type: string
-    description: 'The database name for the restored DB cluster.'
+    description: "The database name for the restored DB cluster."
   OptionGroupName:
     type: string
-    description: 'The name of the option group to use for the restored DB cluster.'
+    description: "The name of the option group to use for the restored DB cluster."
   VpcSecurityGroupIds:
     type: array
-    description: 'A list of VPC security groups that the new DB cluster will belong to.'
+    description: "A list of VPC security groups that the new DB cluster will belong to."
   Tags:
     type: array
-    description: 'The tags to be assigned to the restored DB cluster.'
+    description: "The tags to be assigned to the restored DB cluster."
   KmsKeyId:
     type: string
-    description: 'The KMS key identifier to use when restoring an encrypted DB cluster from a DB cluster snapshot. The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are restoring a DB cluster with the same AWS account that owns the KMS encryption key used to encrypt the new DB cluster, then you can use the KMS key alias instead of the ARN for the KMS encryption key. If you do not specify a value for the KmsKeyId parameter, then the following will occur:   If the DB cluster snapshot is encrypted, then the restored DB cluster is encrypted using the KMS key that was used to encrypt the DB cluster snapshot.   If the DB cluster snapshot is not encrypted, then the restored DB cluster is encrypted using the specified encryption key.  '
+    description: "The KMS key identifier to use when restoring an encrypted DB cluster from a DB cluster snapshot. The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are restoring a DB cluster with the same AWS account that owns the KMS encryption key used to encrypt the new DB cluster, then you can use the KMS key alias instead of the ARN for the KMS encryption key. If you do not specify a value for the KmsKeyId parameter, then the following will occur:   If the DB cluster snapshot is encrypted, then the restored DB cluster is encrypted using the KMS key that was used to encrypt the DB cluster snapshot.   If the DB cluster snapshot is not encrypted, then the restored DB cluster is encrypted using the specified encryption key.  "

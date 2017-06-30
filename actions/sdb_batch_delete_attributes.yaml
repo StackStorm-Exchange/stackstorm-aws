@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,9 +21,9 @@ parameters:
     type: string
   DomainName:
     type: string
-    description: 'The name of the domain in which the attributes are being deleted.'
+    description: "The name of the domain in which the attributes are being deleted."
     required: true
   Items:
     type: array
-    description: 'A list of items on which to perform the operation.'
+    description: "A list of items on which to perform the operation."
     required: true

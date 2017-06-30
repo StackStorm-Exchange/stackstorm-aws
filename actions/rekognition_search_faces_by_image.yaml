@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,15 +21,15 @@ parameters:
     type: string
   CollectionId:
     type: string
-    description: 'ID of the collection to search.'
+    description: "ID of the collection to search."
     required: true
   Image:
     type: object
-    description: ''
+    description: ""
     required: true
   MaxFaces:
     type: integer
-    description: 'Maximum number of faces to return. The operation returns the maximum number of faces with the highest confidence in the match.'
+    description: "Maximum number of faces to return. The operation returns the maximum number of faces with the highest confidence in the match."
   FaceMatchThreshold:
     type: number
-    description: '(Optional) Specifies the minimum confidence in the face match to return. For example, don"t return any matches where confidence in matches is less than 70%.'
+    description: "(Optional) Specifies the minimum confidence in the face match to return. For example, don't return any matches where confidence in matches is less than 70%."

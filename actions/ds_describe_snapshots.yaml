@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   DirectoryId:
     type: string
-    description: 'The identifier of the directory for which to retrieve snapshot information.'
+    description: "The identifier of the directory for which to retrieve snapshot information."
   SnapshotIds:
     type: array
-    description: 'A list of identifiers of the snapshots to obtain the information for. If this member is null or empty, all snapshots are returned using the Limit and NextToken members.'
+    description: "A list of identifiers of the snapshots to obtain the information for. If this member is null or empty, all snapshots are returned using the Limit and NextToken members."
   NextToken:
     type: string
-    description: 'The DescribeSnapshotsResult.NextToken value from a previous call to DescribeSnapshots. Pass null if this is the first call.'
+    description: "The DescribeSnapshotsResult.NextToken value from a previous call to DescribeSnapshots. Pass null if this is the first call."
   Limit:
     type: integer
-    description: 'The maximum number of objects to return.'
+    description: "The maximum number of objects to return."

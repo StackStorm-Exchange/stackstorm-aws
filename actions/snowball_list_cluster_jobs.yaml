@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   ClusterId:
     type: string
-    description: 'The 39-character ID for the cluster that you want to list, for example CID123e4567-e89b-12d3-a456-426655440000.'
+    description: "The 39-character ID for the cluster that you want to list, for example CID123e4567-e89b-12d3-a456-426655440000."
     required: true
   MaxResults:
     type: integer
-    description: 'The number of JobListEntry objects to return.'
+    description: "The number of JobListEntry objects to return."
   NextToken:
     type: string
-    description: 'HTTP requests are stateless. To identify what object comes "next" in the list of JobListEntry objects, you have the option of specifying NextToken as the starting point for your returned list.'
+    description: "HTTP requests are stateless. To identify what object comes 'next' in the list of JobListEntry objects, you have the option of specifying NextToken as the starting point for your returned list."

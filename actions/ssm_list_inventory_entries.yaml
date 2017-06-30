@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,18 +21,18 @@ parameters:
     type: string
   InstanceId:
     type: string
-    description: 'The instance ID for which you want inventory information.'
+    description: "The instance ID for which you want inventory information."
     required: true
   TypeName:
     type: string
-    description: 'The type of inventory item for which you want information.'
+    description: "The type of inventory item for which you want information."
     required: true
   Filters:
     type: array
-    description: 'One or more filters. Use a filter to return a more specific list of results.'
+    description: "One or more filters. Use a filter to return a more specific list of results."
   NextToken:
     type: string
-    description: 'The token for the next set of items to return. (You received this token from a previous call.)'
+    description: "The token for the next set of items to return. (You received this token from a previous call.)"
   MaxResults:
     type: integer
-    description: 'The maximum number of items to return for this call. The call also returns a token that you can specify in a subsequent call to get the next set of results.'
+    description: "The maximum number of items to return for this call. The call also returns a token that you can specify in a subsequent call to get the next set of results."

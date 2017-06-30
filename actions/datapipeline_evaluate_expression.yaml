@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   pipelineId:
     type: string
-    description: 'The ID of the pipeline.'
+    description: "The ID of the pipeline."
     required: true
   objectId:
     type: string
-    description: 'The ID of the object.'
+    description: "The ID of the object."
     required: true
   expression:
     type: string
-    description: 'The expression to evaluate.'
+    description: "The expression to evaluate."
     required: true

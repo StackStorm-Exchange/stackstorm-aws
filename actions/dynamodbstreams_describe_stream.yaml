@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   StreamArn:
     type: string
-    description: 'The Amazon Resource Name (ARN) for the stream.'
+    description: "The Amazon Resource Name (ARN) for the stream."
     required: true
   Limit:
     type: integer
-    description: 'The maximum number of shard objects to return. The upper limit is 100.'
+    description: "The maximum number of shard objects to return. The upper limit is 100."
   ExclusiveStartShardId:
     type: string
-    description: 'The shard ID of the first item that this operation will evaluate. Use the value that was returned for LastEvaluatedShardId in the previous operation. '
+    description: "The shard ID of the first item that this operation will evaluate. Use the value that was returned for LastEvaluatedShardId in the previous operation. "

@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,12 +21,12 @@ parameters:
     type: string
   domain:
     type: string
-    description: 'The name of the domain containing the workflow execution to cancel.'
+    description: "The name of the domain containing the workflow execution to cancel."
     required: true
   workflowId:
     type: string
-    description: 'The workflowId of the workflow execution to cancel.'
+    description: "The workflowId of the workflow execution to cancel."
     required: true
   runId:
     type: string
-    description: 'The runId of the workflow execution to cancel.'
+    description: "The runId of the workflow execution to cancel."

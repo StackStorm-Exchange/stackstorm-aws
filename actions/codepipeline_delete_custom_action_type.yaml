@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,13 +21,13 @@ parameters:
     type: string
   category:
     type: string
-    description: 'The category of the custom action that you want to delete, such as source or deploy.'
+    description: "The category of the custom action that you want to delete, such as source or deploy."
     required: true
   provider:
     type: string
-    description: 'The provider of the service used in the custom action, such as AWS CodeDeploy.'
+    description: "The provider of the service used in the custom action, such as AWS CodeDeploy."
     required: true
   version:
     type: string
-    description: 'The version of the custom action to delete.'
+    description: "The version of the custom action to delete."
     required: true

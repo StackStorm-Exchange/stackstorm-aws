@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,10 +21,10 @@ parameters:
     type: string
   Filters:
     type: array
-    description: 'Optional filters used to narrow down the scope of the returned Maintenance Windows. Supported filter keys are Name and Enabled.'
+    description: "Optional filters used to narrow down the scope of the returned Maintenance Windows. Supported filter keys are Name and Enabled."
   MaxResults:
     type: integer
-    description: 'The maximum number of items to return for this call. The call also returns a token that you can specify in a subsequent call to get the next set of results.'
+    description: "The maximum number of items to return for this call. The call also returns a token that you can specify in a subsequent call to get the next set of results."
   NextToken:
     type: string
-    description: 'The token for the next set of items to return. (You received this token from a previous call.)'
+    description: "The token for the next set of items to return. (You received this token from a previous call.)"

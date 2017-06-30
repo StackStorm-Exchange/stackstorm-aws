@@ -1,3 +1,4 @@
+---
 description: 
 pack: aws
 enabled: true
@@ -20,11 +21,11 @@ parameters:
     type: string
   instanceName:
     type: string
-    description: 'The name of the on-premises instance to register.'
+    description: "The name of the on-premises instance to register."
     required: true
   iamSessionArn:
     type: string
-    description: 'The ARN of the IAM session to associate with the on-premises instance.'
+    description: "The ARN of the IAM session to associate with the on-premises instance."
   iamUserArn:
     type: string
-    description: 'The ARN of the IAM user to associate with the on-premises instance.'
+    description: "The ARN of the IAM user to associate with the on-premises instance."
