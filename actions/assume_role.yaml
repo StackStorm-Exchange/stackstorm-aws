@@ -1,7 +1,7 @@
 ---
 name: "assume_role"
 runner_type: "python-script"
-description: "Assume role"
+description: "Assume a role to use with boto3action"
 enabled: true
 entry_point: "assume_role.py"
 pack: "aws"

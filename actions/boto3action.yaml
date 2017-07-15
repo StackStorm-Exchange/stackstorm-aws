@@ -1,9 +1,9 @@
 ---
-name: "boto3_action"
+name: "boto3action"
 runner_type: "python-script"
 description: "Run any boto3 action"
 enabled: true
-entry_point: "boto3_action.py"
+entry_point: "boto3action.py"
 pack: "aws"
 parameters:
   service:
