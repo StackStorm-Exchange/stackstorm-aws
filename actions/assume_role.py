@@ -1,17 +1,9 @@
-from datetime import date, datetime
 import json
-
 import boto3
 
 from st2actions.runners.pythonrunner import Action
 
-
-# pylint: disable=too-few-public-methods
-def json_serial(obj):
-    if isinstance(obj, (datetime, date)):
-        serial = obj.isoformat()
-        return serial
-    raise TypeError("Type %s not serializable" % type(obj))
+from lib.util import json_serial
 
 
 # pylint: disable=too-few-public-methods
