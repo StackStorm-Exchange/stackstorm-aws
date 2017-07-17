@@ -19,6 +19,10 @@ parameters:
     default: boto3
     immutable: true
     type: string
+  region_name:
+    type: string
+  assume_role:
+    type: string
   {%- for parameter in paramsreq %}
   {{ parameter.name }}:
     type: {{ parameter.type }}
