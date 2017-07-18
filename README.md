@@ -10,7 +10,7 @@ AWS and Stackstorm, up and running.
 
 ### Install AWS pack on StackStorm
 
-1. Install the [AWS pack](https://github.com/stackstorm-exchange/stackstorm-sensu):
+1. Install the [AWS pack](https://github.com/stackstorm-exchange/stackstorm-aws):
 
     ```
     # Install AWS
