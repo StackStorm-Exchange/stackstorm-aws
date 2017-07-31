@@ -2,6 +2,8 @@
 
 The StackStorm AWS integration pack supplies action integration for numerous AWS services.
 
+The `boto3` branch will contain only boto3 functions.
+
 ## Prerequisites
 
 AWS and Stackstorm, up and running.
