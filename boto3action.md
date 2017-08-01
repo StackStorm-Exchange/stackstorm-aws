@@ -10,8 +10,8 @@
 `aws.boto3action` runs boto3 actions in stackstorm dynamically. It has following features.
 
 - Uses boto3 configurations. Find more information on boto3 configuration in boto3 documentation. http://boto3.readthedocs.io/en/latest/guide/quickstart.html#configuration
-- Ablity to run cross region actions
-- Ablility to run cross account actions.
+- Ability to run cross region actions
+- Ability to run cross account actions.
 
 ## Boto3 documentation
 
