@@ -1,0 +1,27 @@
+---
+name: "boto3action"
+runner_type: "python-script"
+description: "Run any boto3 action"
+enabled: true
+entry_point: "boto3action.py"
+pack: "aws"
+parameters:
+  service:
+    type: "string"
+    description: "Name of the service to create client"
+    required: true
+  region:
+    type: "string"
+    description: "Region where action is performed"
+    required: true
+  action_name:
+    type: "string"
+    description: "Name of the action to run"
+    required: true
+  credentials:
+    type: "object"
+    description: "Response from assume role"
+  params:
+    type: object
+    description: "Parameters for the action"
+

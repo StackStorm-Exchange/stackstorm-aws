@@ -290,3 +290,7 @@ This trigger is emitted when a single message is received from a queue.
 }
 ```
 
+
+## Boto3Action
+
+`aws.boto3action` added as an option to use boto3 actions dynamically. More on [boto3action](boto3action.md).
