@@ -45,6 +45,9 @@ class BaseAction(Action):
             # Assume old-style config
             self.credentials = config['setup']
 
+        if region:
+            self.credentials['region'] = region
+
         self.resultsets = ResultSets()
 
     def ec2_connect(self):
