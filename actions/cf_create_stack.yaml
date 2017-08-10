@@ -33,7 +33,7 @@ parameters:
   stack_policy_url:
     type: string
   tags:
-    type: string
+    type: object
   template_body:
     type: string
   template_url:
