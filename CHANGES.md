@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.0
+
+- Updated actions from boto to boto3 using st2packgen.py. 2244 actions were added (#35).
+
+## 0.11.0
+
+- Add capability for st2packgen.py to generate actions for all available services. Map stype "float"
+  to "number".
+
 ## 0.10.0
 
 - Updated action `runner_type` from `run-python` to `python-script`
