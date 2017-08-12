@@ -19,6 +19,6 @@ keywords:
   - SQS
   - lambda
 
-version : 0.12.0
+version : 0.1.0-boto3
 author : StackStorm, Inc.
 email : info@stackstorm.com
