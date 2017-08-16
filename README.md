@@ -32,13 +32,13 @@ You can generate the access key and secret access key by following these directi
 http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingCredentials.html#Using_CreateAccessKey
 
 If you would like to use the IAM role assigned to the instance stackstorm is running set the
-key and secret to null and set the region.
+key and secret to None and set the region.
 
 ```yaml
 ---
 region: "us-east-1"
-aws_access_key_id: null
-aws_secret_access_key: null
+aws_access_key_id: None
+aws_secret_access_key: None
 st2_user_data: ""
  ```
 

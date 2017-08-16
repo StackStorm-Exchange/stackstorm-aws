@@ -37,13 +37,20 @@ class BaseAction(Action):
         secret_access_key = config.get('aws_secret_access_key', None)
         region = config.get('region', None)
 
+        if access_key_id == "None":
+            access_key_id = None
+        if secret_access_key == "None":
+            secret_access_key = None
+
         if access_key_id and secret_access_key:
             self.credentials['aws_access_key_id'] = access_key_id
             self.credentials['aws_secret_access_key'] = secret_access_key
-            self.credentials['region'] = region
         elif 'setup' in config:
             # Assume old-style config
             self.credentials = config['setup']
+
+        if region:
+            self.credentials['region'] = region
 
         self.resultsets = ResultSets()
 
