@@ -252,7 +252,7 @@ http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#supported-
 This is generic *SQS* Sensor using boto3 api to fetch messages from *SQS* queue.
 After receiving a message it's content is passed as payload to a trigger 'aws.sqs_new_message'
 
-This sensor can be configured either by using config.yaml within a pack or by creating
+This sensor can be configured either by using aws.yaml or by creating
 following values in datastore:
 
 - aws.input_queues (list queues as comma separated string: first_queue,second_queue)
@@ -275,7 +275,7 @@ sqs_other:
   max_number_of_messages: 1
 ```
 
-If any value exist in datastore it will be taken instead of any value in config.yaml
+If any value exist in datastore it will be taken instead of any value in aws.yaml
 
 #### aws.sqs\_new\_message
 
