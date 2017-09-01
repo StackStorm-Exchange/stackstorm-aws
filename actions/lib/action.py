@@ -20,7 +20,8 @@ class BaseAction(Action):
         self.credentials = {
             'region': None,
             'aws_access_key_id': None,
-            'aws_secret_access_key': None
+            'aws_secret_access_key': None,
+            'aws_session_token': None,
         }
         self.userdata = None
 
@@ -35,12 +36,14 @@ class BaseAction(Action):
         # dynamic config values are top-level
         access_key_id = config.get('aws_access_key_id', None)
         secret_access_key = config.get('aws_secret_access_key', None)
+        session_token = config.get('aws_session_token', None)
         region = config.get('region', None)
 
         if access_key_id and secret_access_key:
             self.credentials['aws_access_key_id'] = access_key_id
             self.credentials['aws_secret_access_key'] = secret_access_key
             self.credentials['region'] = region
+            self.credentials['aws_session_token'] = session_token
         elif 'setup' in config:
             # Assume old-style config
             self.credentials = config['setup']
