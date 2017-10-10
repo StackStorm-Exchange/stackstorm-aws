@@ -42,6 +42,9 @@ aws_secret_access_key: None
 st2_user_data: ""
  ```
 
+In previous versions there was a 'setup' object within the config, which has been deprecated. This will
+break the configuration where iam roles are being used
+
 * ``service_notifications_sensor.host`` - Listen host for the HTTP interface.
 * ``service_notifications_sensor.port`` - Listen port for the HTTP interface.
 * ``service_notifications_sensor.path`` - Path where the events need to be sent.
