@@ -8,7 +8,7 @@ import boto.route53
 import boto.vpc
 import boto3
 
-from st2actions.runners.pythonrunner import Action
+from st2common.runners.base_action import Action
 from ec2parsers import ResultSets
 
 
