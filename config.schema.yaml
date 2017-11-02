@@ -9,6 +9,11 @@
     type: "string"
     secret: true
     required: true
+  aws_session_token:
+    description: "AWS session token to use."
+    type: "string"
+    secret: true
+    required: false
   region:
     description: "AWS region to use."
     type: "string"
