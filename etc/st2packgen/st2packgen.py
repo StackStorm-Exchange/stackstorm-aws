@@ -54,7 +54,7 @@ for myservice in myservices:
         print "\n%s\n" % e
         sys.exit(1)
 
-    for op in mysrv.operation_names:
+    for op in mysrv.operation_names:  # pylint: disable=not-an-iterable
 
         allvars = {}
         allvars['paramsreq'] = []
@@ -72,13 +72,13 @@ for myservice in myservices:
         if model.input_shape is None:
             continue
 
-        members = model.input_shape.members
+        members = model.input_shape.members  # pylint: disable=no-member
 
         smodel = model.service_model
 
         # print smodel._shape_resolver
 
-        smembers = model.input_shape._shape_model['members']
+        smembers = model.input_shape._shape_model['members']  # pylint: disable=no-member
         for sname, sdata in smembers.items():
             tmp = {}
             stype = smodel._shape_resolver._shape_map[sdata['shape']]['type']
@@ -107,7 +107,7 @@ for myservice in myservices:
             else:
                 tmp['description'] = ''
 
-            if sname in model.input_shape.required_members:
+            if sname in model.input_shape.required_members:  # pylint: disable=no-member
                 allvars['paramsreq'].append(tmp)
             else:
                 allvars['params'].append(tmp)
