@@ -64,6 +64,7 @@ class BaseAction(Action):
 
     def r53_connect(self):
         del self.credentials['region']
+        # pylint: disable=E1123
         return boto.route53.connection.Route53Connection(**self.credentials)
 
     def get_r53zone(self, zone):
