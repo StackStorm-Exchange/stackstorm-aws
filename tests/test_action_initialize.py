@@ -1,6 +1,3 @@
-import re
-import sys
-
 from aws_base_action_test_case import AWSBaseActionTestCase
 from run import ActionManager
 
