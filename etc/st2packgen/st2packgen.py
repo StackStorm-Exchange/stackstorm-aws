@@ -19,6 +19,7 @@ def convert(name):
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
     return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower()
 
+
 parser = argparse.ArgumentParser(description="Generate aws stackstorm actions")
 parser.add_argument('-d', '--outputdir', default="actions", help="base output directory")
 parser.add_argument('-s', '--service', default=None, help="service to generate actions for (eg s3)")
@@ -32,7 +33,7 @@ myservice = args.service
 
 try:
     os.stat(outputdir)
-except:
+except Exception:
     os.mkdir(outputdir)
 
 templateLoader = jinja2.FileSystemLoader(searchpath="templates")
@@ -54,7 +55,7 @@ for myservice in myservices:
         print "\n%s\n" % e
         sys.exit(1)
 
-    for op in mysrv.operation_names:
+    for op in mysrv.operation_names:  # pylint: disable=not-an-iterable
 
         allvars = {}
         allvars['paramsreq'] = []
@@ -72,13 +73,13 @@ for myservice in myservices:
         if model.input_shape is None:
             continue
 
-        members = model.input_shape.members
+        members = model.input_shape.members  # pylint: disable=no-member
 
         smodel = model.service_model
 
         # print smodel._shape_resolver
 
-        smembers = model.input_shape._shape_model['members']
+        smembers = model.input_shape._shape_model['members']  # pylint: disable=no-member
         for sname, sdata in smembers.items():
             tmp = {}
             stype = smodel._shape_resolver._shape_map[sdata['shape']]['type']
@@ -107,7 +108,7 @@ for myservice in myservices:
             else:
                 tmp['description'] = ''
 
-            if sname in model.input_shape.required_members:
+            if sname in model.input_shape.required_members:  # pylint: disable=no-member
                 allvars['paramsreq'].append(tmp)
             else:
                 allvars['params'].append(tmp)

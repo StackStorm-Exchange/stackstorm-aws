@@ -8,7 +8,7 @@ import boto.route53
 import boto.vpc
 import boto3
 
-from st2actions.runners.pythonrunner import Action
+from st2common.runners.base_action import Action
 from ec2parsers import ResultSets
 
 
@@ -64,6 +64,7 @@ class BaseAction(Action):
 
     def r53_connect(self):
         del self.credentials['region']
+        # pylint: disable=E1123
         return boto.route53.connection.Route53Connection(**self.credentials)
 
     def get_r53zone(self, zone):
