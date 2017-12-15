@@ -19,6 +19,7 @@ def convert(name):
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
     return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower()
 
+
 parser = argparse.ArgumentParser(description="Generate aws stackstorm actions")
 parser.add_argument('-d', '--outputdir', default="actions", help="base output directory")
 parser.add_argument('-s', '--service', default=None, help="service to generate actions for (eg s3)")
@@ -32,7 +33,7 @@ myservice = args.service
 
 try:
     os.stat(outputdir)
-except:
+except Exception:
     os.mkdir(outputdir)
 
 templateLoader = jinja2.FileSystemLoader(searchpath="templates")
