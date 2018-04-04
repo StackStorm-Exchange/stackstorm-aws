@@ -70,8 +70,10 @@ class BaseAction(Action):
         return boto.cloudformation.connect_to_region(region, **self.credentials)
 
     def r53_connect(self):
-        del self.credentials['region']
-        return boto.route53.connection.Route53Connection(**self.credentials)
+        route53_credentials = {
+            key: self.credentials[key] for key in self.credentials if key != 'region'
+        }
+        return boto.route53.connection.Route53Connection(**route53_credentials)
 
     def get_r53zone(self, zone):
         conn = self.r53_connect()
