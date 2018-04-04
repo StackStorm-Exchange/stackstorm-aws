@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+- Fix actions which operate with tags on AWS resources.
+
 ## 1.0.0
 
 - Updated actions from boto to boto3 using st2packgen.py. 2244 actions were added (#35).
