@@ -8,6 +8,11 @@ class ActionManager(action.BaseAction):
         del kwargs['action']
         module_path = kwargs['module_path']
         del kwargs['module_path']
+        if 'region_name' in kwargs.keys() and kwargs['region_name'] is not None:
+            self.credentials['region'] = kwargs['region_name']
+            del kwargs['region_name']
+        self.create_boto3_session(kwargs['assume_role'])
+        del kwargs['assume_role']
         if action == 'run_instances':
             kwargs['user_data'] = self.st2_user_data()
         if action == 'create_tags':

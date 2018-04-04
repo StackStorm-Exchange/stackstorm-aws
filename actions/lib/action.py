@@ -80,6 +80,16 @@ class BaseAction(Action):
     def st2_user_data(self):
         return self.userdata
 
+    def create_boto3_session(self, role=None):
+        if role is not None:
+            print "create_boto3_session - role: %s region: %s" % (role, self.credentials['region'])
+            client = boto3.client('sts', region_name=self.credentials['region'])
+            creds = client.assume_role(RoleArn=role, RoleSessionName='st2session')
+
+            boto3.setup_default_session(aws_access_key_id=creds['Credentials']['AccessKeyId'],
+                                aws_secret_access_key=creds['Credentials']['SecretAccessKey'],
+                                aws_session_token=creds['Credentials']['SessionToken'])
+
     def get_boto3_session(self, resource):
         region = self.credentials['region']
         del self.credentials['region']
