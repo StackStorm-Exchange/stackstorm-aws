@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+- Fixed issue with create_vm and destroy_vm workflows using snake_case for CamelCase params
+
 ## 1.0.2
 
 - Fix actions which operate with tags on AWS resources.

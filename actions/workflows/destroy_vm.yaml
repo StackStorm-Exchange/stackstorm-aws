@@ -22,7 +22,7 @@
       name: "destroy_vm"
       ref: "aws.ec2_terminate_instances"
       params:
-        instance_ids: "{{id.localhost.stdout}}"
+        InstanceIds: "{{id.localhost.stdout}}"
       on-success: "delete_cname"
     -
       name: "delete_cname"
