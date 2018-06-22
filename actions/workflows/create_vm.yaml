@@ -4,10 +4,10 @@
       name: "run_instance"
       ref: "aws.ec2_run_instances"
       params:
-        image_id: "{{image_id}}"
-        instance_type: "{{instance_type}}"
-        subnet_id: "{{subnet_id}}"
-        key_name: "{{key_name}}"
+        ImageId: "{{Image_id}}"
+        InstanceType: "{{InstanceType}}"
+        SubnetId: "{{SubnetId}}"
+        KeyName: "{{KeyName}}"
       on-success: "wait_for_instance"
     -
       name: "wait_for_instance"
@@ -30,8 +30,8 @@
       name: "add_name_tag"
       ref: "aws.ec2_create_tags"
       params:
-        resource_ids: "{{run_instance.result[0][0].id}}"
-        tags: "Name={{hostname}}"
+        Resources: "{{run_instance.result[0][0].id}}"
+        Tags: "Name={{hostname}}"
       on-success: "add_cname"
     -
       name: "add_cname"
