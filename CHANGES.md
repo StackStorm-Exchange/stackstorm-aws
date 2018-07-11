@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.0
+
+- Fix ``ec2_run_instances`` action so ``user_data`` parameter passed to this action takes
+  precedence over user data which is specified via ``st2_user_data`` config option.
+
+  This way user can override / provide custom user data on per action invocation basis.
+
+- Add additional log statements under debug log level which logs which boto method / function
+  is called and with which arguments. This helps with debugging / troubleshooting various
+  pack related issues.
+
 ## 1.0.3
 
 - Fixed issue with create_vm and destroy_vm workflows using snake_case for CamelCase params
