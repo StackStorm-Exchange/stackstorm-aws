@@ -22,11 +22,14 @@ class BaseAction(Action):
             'aws_access_key_id': None,
             'aws_secret_access_key': None
         }
+        self.user_data_file config.get('st2_user_data', None)
+
         self.userdata = None
 
-        if config.get('st2_user_data', None):
+        # Read in default user data
+        if self.user_data_file:
             try:
-                with open(config['st2_user_data'], 'r') as fp:
+                with open(self.user_data_file, 'r') as fp:
                     self.userdata = fp.read()
             except IOError as e:
                 self.logger.error(e)
