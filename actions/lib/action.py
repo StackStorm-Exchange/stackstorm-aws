@@ -22,7 +22,7 @@ class BaseAction(Action):
             'aws_access_key_id': None,
             'aws_secret_access_key': None
         }
-        self.user_data_file config.get('st2_user_data', None)
+        self.user_data_file = config.get('st2_user_data', None)
 
         self.userdata = None
 
