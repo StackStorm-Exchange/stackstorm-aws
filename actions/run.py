@@ -8,7 +8,7 @@ class ActionManager(action.BaseAction):
         del kwargs['action']
         module_path = kwargs['module_path']
         del kwargs['module_path']
-        if action == 'run_instances':
+        if action == 'run_instances' and not kwargs.get('user_data', None):
             kwargs['user_data'] = self.st2_user_data()
         if action == 'create_tags':
             kwargs['tags'] = self.split_tags(kwargs['tags'])
