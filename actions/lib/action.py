@@ -158,7 +158,7 @@ class BaseAction(Action):
     def do_function(self, module_path, action, **kwargs):
         module = __import__(module_path)
 
-        function_fqdn = '%s.%s' % (module_path,  action)
+        function_fqdn = '%s.%s' % (module_path, action)
         self.logger.debug('Calling function "%s" with kwargs: %s' % (function_fqdn, str(kwargs)))
 
         return getattr(module, action)(**kwargs)
