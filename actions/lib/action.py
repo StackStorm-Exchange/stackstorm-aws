@@ -22,11 +22,15 @@ class BaseAction(Action):
             'aws_access_key_id': None,
             'aws_secret_access_key': None
         }
+        self.user_data_file = config.get('st2_user_data', None)
+        self.debug = config.get('debug', False)
+
         self.userdata = None
 
-        if config.get('st2_user_data', None):
+        # Read in default user data
+        if self.user_data_file:
             try:
-                with open(config['st2_user_data'], 'r') as fp:
+                with open(self.user_data_file, 'r') as fp:
                     self.userdata = fp.read()
             except IOError as e:
                 self.logger.error(e)
@@ -148,10 +152,20 @@ class BaseAction(Action):
             raise ValueError('Invalid or missing credentials (aws_access_key_id,'
                              'aws_secret_access_key) or region')
 
+        if self.debug:
+            method_fqdn = '%s.%s.%s' % (module_path, cls, action)
+            self.logger.debug('Calling method "%s" with kwargs: %s' % (method_fqdn, str(kwargs)))
+
         resultset = getattr(obj, action)(**kwargs)
         formatted = self.resultsets.formatter(resultset)
         return formatted if isinstance(formatted, list) else [formatted]
 
     def do_function(self, module_path, action, **kwargs):
         module = __import__(module_path)
+
+        if self.debug:
+            function_fqdn = '%s.%s' % (module_path, action)
+            self.logger.debug('Calling function "%s" with kwargs: %s' % (function_fqdn,
+                                                                         str(kwargs)))
+
         return getattr(module, action)(**kwargs)

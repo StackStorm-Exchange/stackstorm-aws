@@ -17,6 +17,10 @@
   st2_user_data:
     description: "The file for all invocations of the 'aws.ec2_run_instances' action"
     type: "string"
+  debug:
+    type: "boolean"
+    description: "Set to True to log every boto method / function invocation"
+    default: false
   service_notifications_sensor:
     type: object
     properties:
