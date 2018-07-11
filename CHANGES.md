@@ -7,9 +7,9 @@
 
   This way user can override / provide custom user data on per action invocation basis.
 
-- Add additional log statements under debug log level which logs which boto method / function
-  is called and with which arguments. This helps with debugging / troubleshooting various
-  pack related issues.
+- Add additional log statements under debug log level which log which boto method / function
+  is called and with which arguments when ``debug`` config option is set to ``True``. This helps
+  with debugging / troubleshooting various pack related issues.
 
 ## 1.0.3
 

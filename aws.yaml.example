@@ -3,6 +3,7 @@ aws_access_key_id: access_key
 aws_secret_access_key: secret_key
 region: us-east-1
 st2_user_data: /opt/stackstorm/packs/aws/actions/scripts/bootstrap_user.sh
+debug: true
 
 service_notifications_sensor:
   host: localhost

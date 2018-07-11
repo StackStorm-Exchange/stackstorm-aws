@@ -23,6 +23,7 @@ class BaseAction(Action):
             'aws_secret_access_key': None
         }
         self.user_data_file = config.get('st2_user_data', None)
+        self.debug = config.get('debug', False)
 
         self.userdata = None
 
@@ -151,8 +152,9 @@ class BaseAction(Action):
             raise ValueError('Invalid or missing credentials (aws_access_key_id,'
                              'aws_secret_access_key) or region')
 
-        method_fqdn = '%s.%s.%s' % (module_path, cls, action)
-        self.logger.debug('Calling method "%s" with kwargs: %s' % (method_fqdn, str(kwargs)))
+        if self.debug:
+            method_fqdn = '%s.%s.%s' % (module_path, cls, action)
+            self.logger.debug('Calling method "%s" with kwargs: %s' % (method_fqdn, str(kwargs)))
 
         resultset = getattr(obj, action)(**kwargs)
         formatted = self.resultsets.formatter(resultset)
@@ -161,7 +163,8 @@ class BaseAction(Action):
     def do_function(self, module_path, action, **kwargs):
         module = __import__(module_path)
 
-        function_fqdn = '%s.%s' % (module_path, action)
-        self.logger.debug('Calling function "%s" with kwargs: %s' % (function_fqdn, str(kwargs)))
+        if self.debug:
+            function_fqdn = '%s.%s' % (module_path, action)
+            self.logger.debug('Calling function "%s" with kwargs: %s' % (function_fqdn, str(kwargs)))
 
         return getattr(module, action)(**kwargs)
