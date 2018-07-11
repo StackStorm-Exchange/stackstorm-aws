@@ -165,6 +165,7 @@ class BaseAction(Action):
 
         if self.debug:
             function_fqdn = '%s.%s' % (module_path, action)
-            self.logger.debug('Calling function "%s" with kwargs: %s' % (function_fqdn, str(kwargs)))
+            self.logger.debug('Calling function "%s" with kwargs: %s' % (function_fqdn,
+                                                                         str(kwargs)))
 
         return getattr(module, action)(**kwargs)
