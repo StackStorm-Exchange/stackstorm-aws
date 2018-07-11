@@ -16,7 +16,7 @@ class ActionManager(action.BaseAction):
         '''
         aws_action = kwargs.pop('action')
         module_path = kwargs.pop('module_path')
-        if aws_action == 'run_instances' and 'user_data' not in kwargs:
+        if aws_action == 'run_instances' and not kwargs.get('user_data', None):
             self.logger.info('Passing in default user_data from st2_user_data config option')
             kwargs['user_data'] = self.st2_user_data()
         if aws_action == 'create_tags':
