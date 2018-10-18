@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1
+
+- Use non-deprecated runner name and change ``runner_type`` from ``run-remote`` to
+  ``remote-shell-script``.
+
 ## 1.1.0
 
 - Fix ``ec2_run_instances`` action so ``user_data`` parameter passed to this action takes

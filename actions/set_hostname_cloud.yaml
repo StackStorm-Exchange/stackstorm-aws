@@ -1,6 +1,6 @@
 ---
   name: "set_hostname_cloud"
-  runner_type: "run-remote"
+  runner_type: "remote-shell-cmd"
   description: "Set the hostname on a VM and update cloud.cfg"
   enabled: true
   entry_point: ""
