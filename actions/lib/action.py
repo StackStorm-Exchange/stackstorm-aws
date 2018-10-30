@@ -149,7 +149,7 @@ class BaseAction(Action):
                     kwargs['Bucket'] = kwargs.pop(k)
                 elif k == 'key':
                     kwargs['Key'] = kwargs.pop(k)
-            obj = self.get_boto3_session('s3')
+           obj = self.get_boto3_session('s3')
         elif 'boto3' in module_path:
             for k, v in kwargs.items():
                 if not v:
