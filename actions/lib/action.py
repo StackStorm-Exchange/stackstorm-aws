@@ -143,6 +143,7 @@ class BaseAction(Action):
            for k, v in kwargs.items():
                 if not v:
                     del kwargs[k]
+                    continue
                 if k == 'filename':
                     kwargs['Filename'] = kwargs.pop(k)
                 elif k == 'bucket':
