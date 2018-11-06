@@ -139,6 +139,18 @@ class BaseAction(Action):
             zone = kwargs['zone']
             del kwargs['zone']
             obj = self.get_r53zone(zone)
+        elif module_path == 'boto3.s3.transfer':
+            for k, v in kwargs.items():
+                if not v:
+                    del kwargs[k]
+                    continue
+                if k == 'filename':
+                    kwargs['Filename'] = kwargs.pop(k)
+                elif k == 'bucket':
+                    kwargs['Bucket'] = kwargs.pop(k)
+                elif k == 'key':
+                    kwargs['Key'] = kwargs.pop(k)
+            obj = self.get_boto3_session('s3')
         elif 'boto3' in module_path:
             for k, v in kwargs.items():
                 if not v:
