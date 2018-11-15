@@ -1,3 +1,4 @@
+import os
 import re
 import eventlet
 import importlib
@@ -22,18 +23,20 @@ class BaseAction(Action):
             'aws_access_key_id': None,
             'aws_secret_access_key': None
         }
-        self.user_data_file = config.get('st2_user_data', None)
         self.debug = config.get('debug', False)
 
         self.userdata = None
-
-        # Read in default user data
-        if self.user_data_file:
-            try:
-                with open(self.user_data_file, 'r') as fp:
-                    self.userdata = fp.read()
-            except IOError as e:
-                self.logger.error(e)
+        if config.get('st2_user_data', None):
+            # Check if string "looks" like a normal absolute path
+            if os.path.isabs(config['st2_user_data']) and '\n' not in config['st2_user_data']:
+                # Read in default user data from file
+                try:
+                    with open(config['st2_user_data'], 'r') as fp:
+                        self.userdata = fp.read()
+                except IOError as e:
+                    self.logger.error(e)
+            else:
+                self.userdata = config['st2_user_data']
 
         # Note: In old static config credentials and region are under "setup" key and with a new
         # dynamic config values are top-level
