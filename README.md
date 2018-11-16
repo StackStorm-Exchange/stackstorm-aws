@@ -43,7 +43,7 @@ st2_user_data: ""
  ```
 
 In previous versions there was a 'setup' object within the config, which has been deprecated. This will
-break the configuration where iam roles are being used
+break the configuration where iam roles are being used:
 
 * ``service_notifications_sensor.host`` - Listen host for the HTTP interface.
 * ``service_notifications_sensor.port`` - Listen port for the HTTP interface.
@@ -55,15 +55,21 @@ break the configuration where iam roles are being used
 
 ## st2_user_data
 
-Optionally, you can set the user_data to set a default file to be used during new instance
-creation.  Put your user_data file somewhere accessible by the StackStorm user, and use
-the st2_user_data config option to set it.
+Optionally, you can add the [`user_data`](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) with a set of provisioning instructions to be used during the new instance
+creation.
 
+Put your user_data file somewhere accessible by the StackStorm user, and use the st2_user_data config option to set it.
+This file/script will be used for all invocations of the ec2_run_instances action:
 ```yaml
 st2_user_data: "/full/path/to/file"
  ```
 
-This file/script will be used for all invocations of the ec2_run_instances action
+Alternatively, user data can be specified inline:
+```yaml
+st2_user_data: |
+  #!/bin/bash
+  echo "I'm EC2 user data: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html"
+```
 
 ## Actions
 

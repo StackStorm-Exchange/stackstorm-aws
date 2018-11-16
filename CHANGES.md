@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.0
+- Update `st2_user_data` to take raw data as input as an alternative to file path.
+
 ## 1.1.1
 
 - Use non-deprecated runner name and change ``runner_type`` from ``run-remote`` to
