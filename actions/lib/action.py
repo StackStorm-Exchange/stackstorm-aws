@@ -119,7 +119,7 @@ class BaseAction(Action):
         for instance in instance_list:
             try:
                 current_state = instance.update()
-            except Exception, e:
+            except Exception as e:
                 self.logger.info("Instance (%s) not listed. Error: %s" %
                                  (instance_id, e))
                 eventlet.sleep(timeout)

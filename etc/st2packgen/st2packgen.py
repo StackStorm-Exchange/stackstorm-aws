@@ -47,12 +47,12 @@ else:
     myservices = [myservice]
 
 for myservice in myservices:
-    print "%s:" % myservice
+    print("%s:" % myservice)
 
     try:
         mysrv = session.get_service_model(myservice)
     except botocore.exceptions.UnknownServiceError as e:
-        print "\n%s\n" % e
+        print("\n%s\n" % e)
         sys.exit(1)
 
     for op in mysrv.operation_names:  # pylint: disable=not-an-iterable
@@ -64,7 +64,7 @@ for myservice in myservices:
 
         op = convert(op)
 
-        print " " + op
+        print(" " + op)
         allvars['action'] = op
         allvars['name'] = myservice + "_" + op
         allvars['service'] = myservice
