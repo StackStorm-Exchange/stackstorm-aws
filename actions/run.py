@@ -23,7 +23,7 @@ class ActionManager(action.BaseAction):
             if user_data:
                 self.logger.info('Passing in default user_data specified as st2_user_data config '
                                  'option (%s ...)' % (self.st2_user_data()[:15]))
-                kwargs['user_data'] = self.st2_user_data()
+                kwargs['UserData'] = self.st2_user_data()
         if aws_action == 'create_tags':
             # Skip "Tags" parameter and pass "tags" as is unless it is a string.
             if 'Tags' not in kwargs and isinstance(kwargs.get('tags'), str):
