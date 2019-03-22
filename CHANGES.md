@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.1
+- Update `kwargs['user_data`] to `kwargs['UserData']` per the aws.ec2_run_instances action.
+
 ## 1.2.0
 - Update `st2_user_data` to take raw data as input as an alternative to file path.
 
