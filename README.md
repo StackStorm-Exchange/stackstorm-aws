@@ -55,8 +55,7 @@ break the configuration where iam roles are being used:
 
 ## st2_user_data
 
-Optionally, you can add the [`UserData`](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) with a set of provisioning instructions to be used during the new instance
-creation.
+Optionally, you can add the [`UserData`](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) with a set of provisioning instructions to be used when using the ec2_run_instances action.
 
 Note that the ec2 boto3 SDK requires the parameter UserData, for the aws.ec2_run_instances action. This was previosly user_data. 
 
