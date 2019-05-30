@@ -23,6 +23,7 @@ If any value exist in datastore it will be taken instead of any value in config.
 """
 
 import six
+import json
 from boto3.session import Session
 from botocore.exceptions import ClientError
 from botocore.exceptions import NoRegionError
@@ -52,7 +53,7 @@ class AWSSQSSensor(PollingSensor):
                                           num_messages=self.max_number_of_messages)
             for msg in msgs:
                 if msg:
-                    payload = {"queue": queue, "body": msg.body}
+                    payload = {"queue": queue, "body": json.loads(msg.body)}
                     self._sensor_service.dispatch(trigger="aws.sqs_new_message", payload=payload)
                     msg.delete()
 
