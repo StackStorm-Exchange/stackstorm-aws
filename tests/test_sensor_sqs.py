@@ -75,7 +75,7 @@ class SQSSensorTestCase(BaseSensorTestCase):
 
         self.assertEqual(self.get_dispatched_triggers(), [])
 
-    @mock.patch.object(Session, 'resource', mock.Mock(return_value=MockResource(['foo'])))
+    @mock.patch.object(Session, 'resource', mock.Mock(return_value=MockResource([{'foo':'bar'}])))
     def test_poll_with_message(self):
         sensor = self.get_sensor_instance(config=self.full_config)
 
@@ -85,7 +85,7 @@ class SQSSensorTestCase(BaseSensorTestCase):
         self.assertTriggerDispatched(trigger='aws.sqs_new_message')
         self.assertNotEqual(self.get_dispatched_triggers(), [])
 
-    @mock.patch.object(Session, 'resource', mock.Mock(return_value=MockResource(['foo'])))
+    @mock.patch.object(Session, 'resource', mock.Mock(return_value=MockResource([{'foo':'bar'}])))
     def test_set_input_queues_config_dynamically(self):
         sensor = self.get_sensor_instance(config=self.blank_config)
         sensor.setup()
@@ -111,7 +111,7 @@ class SQSSensorTestCase(BaseSensorTestCase):
         # get message from queue 'hoge', 'fuga' then 'puyo'
         self.assertEqual([x['payload']['queue'] for x in contexts], ['hoge', 'fuga', 'puyo'])
 
-    @mock.patch.object(Session, 'resource', mock.Mock(return_value=MockResource(['foo'])))
+    @mock.patch.object(Session, 'resource', mock.Mock(return_value=MockResource([{'foo':'bar'}])))
     def test_set_input_queues_config_with_list(self):
         # set 'input_queues' config with list type
         config = self.full_config
