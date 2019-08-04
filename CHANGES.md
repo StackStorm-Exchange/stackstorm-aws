@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.2
+- Fix `sqs_sensor` to parse payload as dictionary (so that it actually works)
+
 ## 1.2.1
 - Update `kwargs['user_data`] to `kwargs['UserData']` per the aws.ec2_run_instances action.
 
