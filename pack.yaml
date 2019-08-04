@@ -19,7 +19,7 @@ keywords:
   - SQS
   - lambda
   - kinesis
-version : 1.2.1
+version : 1.2.2
 python_versions:
   - "2"
 author : StackStorm, Inc.
