@@ -2,17 +2,27 @@
 aws_access_key_id: access_key
 aws_secret_access_key: secret_key
 region: us-east-1
-st2_user_data: /opt/stackstorm/packs/aws/actions/scripts/bootstrap_user.sh
 debug: true
+cross_region: true
 
-service_notifications_sensor:
-  host: localhost
-  port: 12345
-  path: /my-path
+target_regions:
+  - us-west-2
+  - eu-west-1
+
+cross_roles_arns:
+  us-west-2: roleARNone
+  eu-west-1: roleARNtwo
 
 sqs_sensor:
   input_queues:
     - queuename
+  cross_input_queues:
+    us-west-2:
+      - queuename1
+    eu-west-1:
+      - queuename2
 
 sqs_other:
   max_number_of_messages: 1
+
+

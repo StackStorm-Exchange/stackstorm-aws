@@ -22,6 +22,7 @@ For configuration in config.yaml with config like this
 If any value exist in datastore it will be taken instead of any value in config.yaml
 """
 
+import boto3
 import six
 import json
 from boto3.session import Session
@@ -44,18 +45,24 @@ class AWSSQSSensor(PollingSensor):
         self.session = None
         self.sqs_res = None
 
+        self.cross_region = self._get_config_entry('cross_region')
+        if self.cross_region:
+            self.target_regions = self._get_config_entry('target_regions')
+            if not self.target_regions:
+                self._logger.warning("Target regions should be configured.")
+            self.cross_sessions = {}
+            self.cross_sqs_res = {}
+
     def poll(self):
         # setting SQS ServiceResource object from the parameter of datastore or configuration file
         self._may_setup_sqs()
 
-        for queue in self.input_queues:
-            msgs = self._receive_messages(queue=self._get_queue_by_name(queue),
-                                          num_messages=self.max_number_of_messages)
-            for msg in msgs:
-                if msg:
-                    payload = {"queue": queue, "body": json.loads(msg.body)}
-                    self._sensor_service.dispatch(trigger="aws.sqs_new_message", payload=payload)
-                    msg.delete()
+        self._process_messages(self.input_queues)
+
+        if self.cross_region:
+            for region in self.cross_input_queues:
+                self._process_messages(self.cross_input_queues[region], region)
+
 
     def cleanup(self):
         pass
@@ -71,11 +78,21 @@ class AWSSQSSensor(PollingSensor):
     def remove_trigger(self, trigger):
         pass
 
+    def _process_messages(self, input_queues, region=None):
+        for queue in input_queues:
+            msgs = self._receive_messages(queue=self._get_queue_by_name(queue, region),
+                                          num_messages=self.max_number_of_messages)
+            for msg in msgs:
+                if msg:
+                    payload = {"queue": queue, "region": region, "body": json.loads(msg.body)}
+                    self._sensor_service.dispatch(trigger="aws.sqs_new_message", payload=payload)
+                    msg.delete()
+
     def _get_config_entry(self, key, prefix=None):
         ''' Get configuration values either from Datastore or config file. '''
         config = self.config
         if prefix:
-            config = self._config.get(prefix, {})
+            config = self.config.get(prefix, {})
 
         value = self._sensor_service.get_value('aws.%s' % (key), local=False)
         if not value:
@@ -98,6 +115,11 @@ class AWSSQSSensor(PollingSensor):
         else:
             self.input_queues = []
 
+        if self.cross_region:
+            self.cross_input_queues = self._get_config_entry(key='cross_input_queues', prefix='sqs_sensor')
+            if not self.cross_input_queues:
+                self.cross_input_queues = {}
+
         self.aws_access_key = self._get_config_entry('aws_access_key_id')
         self.aws_secret_key = self._get_config_entry('aws_secret_access_key')
         self.aws_region = self._get_config_entry('region')
@@ -116,6 +138,9 @@ class AWSSQSSensor(PollingSensor):
         if self.session is None or not _is_same_credentials():
             self._setup_sqs()
 
+        if self.cross_region:
+            self._setup_target_regions_sqs()
+
     def _setup_sqs(self):
         ''' Setup Boto3 structures '''
         self._logger.debug('Setting up SQS resources')
@@ -128,14 +153,40 @@ class AWSSQSSensor(PollingSensor):
         except NoRegionError:
             self._logger.warning("The specified region '%s' is invalid", self.aws_region)
 
-    def _get_queue_by_name(self, queueName):
+    def _setup_target_regions_sqs(self):
+        for region in self.target_regions:
+            assumed_role = boto3.client('sts').assume_role(
+                RoleArn=self._get_config_entry(region, 'cross_roles_arns'),
+                RoleSessionName='StackStormEvents'
+            )
+
+            cross_session = Session(
+                region_name=region,
+                aws_access_key_id=assumed_role["Credentials"]["AccessKeyId"],
+                aws_secret_access_key=assumed_role["Credentials"]["SecretAccessKey"],
+                aws_session_token=assumed_role["Credentials"]["SessionToken"]
+            )
+
+            self.cross_sessions[region] = cross_session
+            try:
+                sqs_res = cross_session.resource('sqs')
+                self.cross_sqs_res[region] = sqs_res
+            except NoRegionError:
+                self._logger.warning("The specified region '%s' is invalid", region)
+
+    def _get_queue_by_name(self, queueName, region=None):
         ''' Fetch QUEUE by it's name create new one if queue doesn't exist '''
+        if region:
+            sqs_res = self.sqs_res['region']
+        else:
+            sqs_res = self.sqs_res
+
         try:
-            return self.sqs_res.get_queue_by_name(QueueName=queueName)
+            return sqs_res.get_queue_by_name(QueueName=queueName)
         except ClientError as e:
             if e.response['Error']['Code'] == 'AWS.SimpleQueueService.NonExistentQueue':
                 self._logger.warning("SQS Queue: %s doesn't exist, creating it.", queueName)
-                return self.sqs_res.create_queue(QueueName=queueName)
+                return sqs_res.create_queue(QueueName=queueName)
             elif e.response['Error']['Code'] == 'InvalidClientTokenId':
                 self._logger.warning("Cloudn't operate sqs because of invalid credential config")
             else:
