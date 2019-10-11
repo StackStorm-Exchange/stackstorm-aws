@@ -6,13 +6,22 @@ st2_user_data: /opt/stackstorm/packs/aws/actions/scripts/bootstrap_user.sh
 debug: true
 
 service_notifications_sensor:
-  host: localhost
-  port: 12345
-  path: /my-path
+  - host: localhost
+  - port: 12345
+  - path: /my-path
 
 sqs_sensor:
+  roles_arns:
+    - arn:aws:iam::123456789098:role/rolename1
+    - arn:aws:iam::901234567812:role/rolename2
+    - arn:aws:iam::567890123489:role/rolename3
   input_queues:
-    - queuename
+    - queue_name_1
+    - https://sqs.us-east-1.amazonaws.com/567890123489/queue_name_2
+    - https://sqs.us-west-2.amazonaws.com/123456789098/queue_name_3
+    - https://sqs.us-west-2.amazonaws.com/123456789098/queue_name_4
+    - https://sqs.eu-west-1.amazonaws.com/901234567812/queue_name_5
+    - https://sqs.sa-east-1.amazonaws.com/567890123489/queue_name_6
 
 sqs_other:
   max_number_of_messages: 1
