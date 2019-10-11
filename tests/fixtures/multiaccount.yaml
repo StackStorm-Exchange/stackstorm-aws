@@ -10,8 +10,10 @@ service_notifications_sensor:
   path: "/my-path"
 
 sqs_sensor:
+  roles_arns:
+    - "arn:aws:iam::345678901223:role/rolename1"
   input_queues:
-    - "input_queue"
+    - "https://sqs.us-east-1.amazonaws.com/345678901223/queue_name_2"
 
 sqs_other:
   max_number_of_messages: 1
