@@ -9,6 +9,10 @@ service_notifications_sensor:
   port: 12345
   path: "/my-path"
 
+action:
+  roles_arns:
+    - "arn:aws:iam::345678901223:role/rolename2"
+
 sqs_sensor:
   roles_arns:
     - "arn:aws:iam::345678901223:role/rolename1"

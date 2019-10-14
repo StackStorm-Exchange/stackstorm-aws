@@ -23,6 +23,14 @@
     type: "boolean"
     description: "Set to True to log every boto method / function invocation"
     default: false
+  action:
+    type: object
+    properties:
+      roles_arns:
+        type: "array"
+        description: "ARNs of the roles which allow effecting actions on resources on that account"
+        items:
+          type: "string"
   service_notifications_sensor:
     type: object
     properties:
