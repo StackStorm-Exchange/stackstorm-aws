@@ -98,7 +98,8 @@ class AWSSQSSensor(PollingSensor):
         self.access_key_id = self._get_config_entry('aws_access_key_id')
         self.secret_access_key = self._get_config_entry('aws_secret_access_key')
         self.aws_region = self._get_config_entry('region')
-        self.max_number_of_messages = self._get_config_entry('max_number_of_messages', prefix='sqs_other')
+        self.max_number_of_messages = self._get_config_entry('max_number_of_messages',
+                                                             prefix='sqs_other')
 
         if not self.account_id:
             self._setup_session()
@@ -126,7 +127,8 @@ class AWSSQSSensor(PollingSensor):
 
         # build a map between 'account_id' and its 'role arn' by parsing the matching config entry
         cross_roles_arns = {
-            arn.split(':')[4]: arn for arn in self._get_config_entry('roles_arns', 'sqs_sensor') or []
+            arn.split(':')[4]: arn
+            for arn in self._get_config_entry('roles_arns', 'sqs_sensor') or []
         }
         required_accounts = {self._get_info(queue)[0] for queue in self.input_queues}
 
@@ -185,7 +187,8 @@ class AWSSQSSensor(PollingSensor):
             self.sqs_res[account_id][region] = session.resource('sqs', region_name=region)
             return self.sqs_res[account_id][region]
         except NoRegionError:
-            self._logger.error("The specified region '%s' for account %s is invalid.", region, account_id)
+            self._logger.error("The specified region '%s' for account %s is invalid.",
+                               region, account_id)
 
     def _check_queue_if_url(self, queue):
         return queue.startswith('http://') or queue.startswith('https://')
