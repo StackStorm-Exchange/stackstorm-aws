@@ -46,6 +46,11 @@ class BaseAction(Action):
         secret_access_key = config.get('aws_secret_access_key', None)
         region = config.get('region', None)
 
+        if access_key_id == "None":
+            access_key_id = None
+        if secret_access_key == "None":
+            secret_access_key = None
+
         if access_key_id and secret_access_key:
             self.credentials['aws_access_key_id'] = access_key_id
             self.credentials['aws_secret_access_key'] = secret_access_key
@@ -61,7 +66,7 @@ class BaseAction(Action):
 
         self.account_id = self.session.client('sts').get_caller_identity().get('Account')
         self.cross_roles_arns = {
-            arn.split(':')[4]: arn for arn in self.config.get('action', {}).get('roles_arns', [])
+            arn.split(':')[4]: arn for arn in self.config.get('actions', {}).get('roles', [])
         }
 
         self.resultsets = ResultSets()
@@ -76,17 +81,22 @@ class BaseAction(Action):
                 RoleArn=self.cross_roles_arns[account_id],
                 RoleSessionName='StackStormEvents'
             )
-            self.credentials.update({
-                'aws_access_key_id': assumed_role["Credentials"]["AccessKeyId"],
-                'aws_secret_access_key': assumed_role["Credentials"]["SecretAccessKey"],
-                'security_token': assumed_role["Credentials"]["SessionToken"]
-            })
         except ClientError:
-            self.logger.error('Could not assume role on account with id: %s', account_id)
+            self.logger.error("Failed to assume role as account %s when using the AWS session "
+                              "client. Check the roles configured for the AWS pack and ensure "
+                              "that the '%s' is still valid.",
+                              account_id, self.cross_roles_arns[account_id])
             raise
         except KeyError:
-            self.logger.error('Could not find cross region role ARN in the config file.')
+            self.logger.error("Could not find the role referring %s account in the config file. "
+                              "Please, introduce it in 'aws.yaml' file.", account_id)
             raise
+
+        self.credentials.update({
+            'aws_access_key_id': assumed_role["Credentials"]["AccessKeyId"],
+            'aws_secret_access_key': assumed_role["Credentials"]["SecretAccessKey"],
+            'security_token': assumed_role["Credentials"]["SessionToken"]
+        })
 
     def ec2_connect(self):
         region = self.credentials['region']
