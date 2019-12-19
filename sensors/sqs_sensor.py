@@ -38,13 +38,14 @@ If any value exist in datastore it will be taken instead of any value in config.
 
 import six
 import json
+import sys
 
-from collections import defaultdict
 from boto3.session import Session
 from botocore.exceptions import ClientError
 from botocore.exceptions import NoRegionError
 from botocore.exceptions import NoCredentialsError
 from botocore.exceptions import EndpointConnectionError
+from collections import defaultdict
 
 from st2reactor.sensor.base import PollingSensor
 
@@ -122,9 +123,10 @@ class AWSSQSSensor(PollingSensor):
         # XXX: This is a hack as from datastore we can only receive a string while
         # from config.yaml we can receive a list
         if isinstance(queues, six.string_types):
-            self.input_queues = [x.strip() for x in queues.split(',')]
+            self.input_queues = [six.moves.urllib.parse.urlparse(x.strip()) for x in
+                                 queues.split(',')]
         elif isinstance(queues, list):
-            self.input_queues = queues
+            self.input_queues = [six.moves.urllib.parse.urlparse(queue) for queue in queues]
         else:
             self.input_queues = []
 
@@ -204,14 +206,35 @@ class AWSSQSSensor(PollingSensor):
             self._logger.error("The specified region '%s' for account %s is invalid.",
                                region, account_id)
 
-    def _check_queue_if_url(self, queue):
-        return queue.startswith('http://') or queue.startswith('https://')
-
     def _get_info(self, queue):
         ''' Retrieve the account ID and region from the queue URL '''
-        if self._check_queue_if_url(queue):
-            return queue.split('/')[3], queue.split('.')[1]
-        return self.account_id, self.aws_region
+        # Pull default values from previous configuration
+        account_id = self.account_id
+        aws_region = self.aws_region
+
+        # Netloc will be empty if the queue is just a name
+        if queue.netloc:
+            try:
+                account_id = queue.path.split('/')[1]
+            except IndexError as e:
+                six.reraise(type(e), type(e)(
+                    "Queue URL must contain the account ID as the first part of the path, "
+                    "eg: https://.../<account_id>"),
+                    sys.exec_info()[2])
+            else:
+                self._logger.debug("Using %s as account_id", account_id)
+
+            try:
+                aws_region = queue.netloc.split('.')[1]
+            except IndexError:
+                six.reraise(type(e), type(e)(
+                    "Queue URL must contain the AWS region, "
+                    "eg: https://sqs.<aws_region>.amazonaws.com/..."),
+                    sys.exec_info()[2])
+            else:
+                self._logger.debug("Using %s as the AWS region", aws_region)
+
+        return account_id, aws_region
 
     def _get_queue(self, queue, account_id, region):
         ''' Fetch QUEUE by its name or URL and create new one if queue doesn't exist '''
@@ -224,15 +247,13 @@ class AWSSQSSensor(PollingSensor):
             return None
 
         try:
-            if self._check_queue_if_url(queue):
-                return sqs_res.Queue(queue)
-            return sqs_res.get_queue_by_name(QueueName=queue)
+            if queue.netloc:
+                return sqs_res.Queue(six.moves.urllib.parse.urlunparse(queue))
+            return sqs_res.get_queue_by_name(QueueName=queue.path.split('/')[-1])
         except ClientError as e:
             if e.response['Error']['Code'] == 'AWS.SimpleQueueService.NonExistentQueue':
                 self._logger.warning("SQS Queue: %s doesn't exist, creating it.", queue)
-                if self._check_queue_if_url(queue):
-                    return sqs_res.create_queue(QueueName=queue.split('/')[4])
-                return sqs_res.create_queue(QueueName=queue)
+                return sqs_res.create_queue(QueueName=queue.path.split('/')[-1])
             elif e.response['Error']['Code'] == 'InvalidClientTokenId':
                 self._logger.warning("Couldn't operate sqs because of invalid credential config")
             else:
