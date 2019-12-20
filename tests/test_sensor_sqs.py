@@ -1,4 +1,5 @@
 import mock
+import six
 import yaml
 
 from boto3.session import Session
@@ -179,7 +180,7 @@ class SQSSensorTestCase(BaseSensorTestCase):
                        mock.Mock(return_value=MockResource(['{"foo":"bar"}'])))
     def test_set_input_queues_config_dynamically(self):
         sensor = self.get_sensor_instance(config=self.blank_config)
-        sensor._sensor_service.set_value('aws.roles_arns',
+        sensor._sensor_service.set_value('aws.roles',
                                          ['arn:aws:iam::123456789098:role/rolename1'],
                                          local=False)
         sensor.setup()
@@ -212,8 +213,9 @@ class SQSSensorTestCase(BaseSensorTestCase):
 
         # get message from queue 'hoge', 'fuga' then 'puyo'
         self.assertEqual([x['payload']['queue'] for x in contexts],
-                         ['hoge', 'fuga', 'puyo',
-                          'https://sqs.us-west-2.amazonaws.com/123456789098/queue_name_3'])
+                         [six.moves.urllib.parse.urlparse(queue) for queue in
+                          ['hoge', 'fuga', 'puyo',
+                          'https://sqs.us-west-2.amazonaws.com/123456789098/queue_name_3']])
 
     @mock.patch.object(Session, 'client', mock.Mock(return_value=MockStsClient()))
     @mock.patch.object(Session, 'resource',
@@ -226,7 +228,7 @@ class SQSSensorTestCase(BaseSensorTestCase):
             'bar',
             'https://sqs.us-west-2.amazonaws.com/123456789098/queue_name_3'
         ]
-        config['sqs_sensor']['roles_arns'] = ['arn:aws:iam::123456789098:role/rolename1']
+        config['sqs_sensor']['roles'] = ['arn:aws:iam::123456789098:role/rolename1']
 
         sensor = self.get_sensor_instance(config=config)
         sensor.setup()
@@ -236,8 +238,9 @@ class SQSSensorTestCase(BaseSensorTestCase):
         self.assertNotEqual(contexts, [])
         self.assertTriggerDispatched(trigger='aws.sqs_new_message')
         self.assertEqual([x['payload']['queue'] for x in contexts],
-                         ['foo', 'bar',
-                          'https://sqs.us-west-2.amazonaws.com/123456789098/queue_name_3'])
+                         [six.moves.urllib.parse.urlparse(queue) for queue in
+                          ['foo', 'bar',
+                          'https://sqs.us-west-2.amazonaws.com/123456789098/queue_name_3']])
 
     @mock.patch.object(Session, 'client', mock.Mock(return_value=MockStsClient()))
     @mock.patch.object(Session, 'resource',
@@ -328,7 +331,7 @@ class SQSSensorTestCase(BaseSensorTestCase):
     @mock.patch.object(Session, 'resource',
                        mock.Mock(return_value=MockResource(['{"foo":"bar"}'])))
     def _poll_with_missing_arn(self, config):
-        config['sqs_sensor']['roles_arns'] = []
+        config['sqs_sensor']['roles'] = []
 
         sensor = self.get_sensor_instance(config=config)
         sensor.setup()

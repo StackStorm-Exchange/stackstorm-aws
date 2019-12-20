@@ -141,15 +141,15 @@ class AWSSQSSensor(PollingSensor):
                 c.secret_key == self.credentials[account_id][1] and \
                 (account_id == self.account_id or c.token == self.credentials[account_id][2])
 
-        # build a map between 'account_id' and its 'role arn' by parsing the matching config entry
-        cross_roles_arns = {
+        # Build a map between 'account_id' and its 'role arn' by parsing the matching config entry
+        cross_roles = {
             arn.split(':')[4]: arn
-            for arn in self._get_config_entry('roles_arns', 'sqs_sensor') or []
+            for arn in self._get_config_entry('roles', 'sqs_sensor') or []
         }
         required_accounts = {self._get_info(queue)[0] for queue in self.input_queues}
 
         for account_id in required_accounts:
-            if account_id != self.account_id and account_id not in cross_roles_arns:
+            if account_id != self.account_id and account_id not in cross_roles:
                 continue
 
             session = self.sessions.get(account_id)
@@ -157,7 +157,7 @@ class AWSSQSSensor(PollingSensor):
                 if account_id == self.account_id:
                     self._setup_session()
                 else:
-                    self._setup_multiaccount_session(account_id, cross_roles_arns)
+                    self._setup_multiaccount_session(account_id, cross_roles)
 
     def _setup_session(self):
         ''' Setup Boto3 session '''
@@ -171,11 +171,11 @@ class AWSSQSSensor(PollingSensor):
         self.sessions[self.account_id] = session
         self.sqs_res.pop(self.account_id, None)
 
-    def _setup_multiaccount_session(self, account_id, cross_roles_arns):
+    def _setup_multiaccount_session(self, account_id, cross_roles):
         ''' Assume role and setup session for the cross-account capability'''
         try:
             assumed_role = self.sessions[self.account_id].client('sts').assume_role(
-                RoleArn=cross_roles_arns[account_id],
+                RoleArn=cross_roles[account_id],
                 RoleSessionName='StackStormEvents'
             )
         except ClientError:
@@ -219,8 +219,8 @@ class AWSSQSSensor(PollingSensor):
             except IndexError as e:
                 six.reraise(type(e), type(e)(
                     "Queue URL must contain the account ID as the first part of the path, "
-                    "eg: https://.../<account_id>"),
-                    sys.exec_info()[2])
+                    "eg: https://sqs.<aws_region>.amazonaws.com/<account_id>/<queue_name>"),
+                    sys.exc_info()[2])
             else:
                 self._logger.debug("Using %s as account_id", account_id)
 
@@ -230,7 +230,7 @@ class AWSSQSSensor(PollingSensor):
                 six.reraise(type(e), type(e)(
                     "Queue URL must contain the AWS region, "
                     "eg: https://sqs.<aws_region>.amazonaws.com/..."),
-                    sys.exec_info()[2])
+                    sys.exc_info()[2])
             else:
                 self._logger.debug("Using %s as the AWS region", aws_region)
 

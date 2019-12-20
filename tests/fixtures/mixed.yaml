@@ -10,7 +10,7 @@ service_notifications_sensor:
   path: "/my-path"
 
 sqs_sensor:
-  roles_arns:
+  roles:
     - "arn:aws:iam::345678901223:role/rolename1"
   input_queues:
     - "input_queue"

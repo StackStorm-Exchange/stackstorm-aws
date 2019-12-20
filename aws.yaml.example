@@ -11,7 +11,7 @@ service_notifications_sensor:
   path: /my-path
 
 sqs_sensor:
-  roles_arns:
+  roles:
     - arn:aws:iam::123456789098:role/rolename1
     - arn:aws:iam::901234567812:role/rolename2
     - arn:aws:iam::567890123489:role/rolename3

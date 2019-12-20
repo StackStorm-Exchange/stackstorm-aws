@@ -45,7 +45,7 @@
         type: "array"
         items:
           type: "string"
-        roles_arns:
+        roles:
           type: "array"
           description: "ARNs of the roles which allow queues to be fetched for messages"
           items:
