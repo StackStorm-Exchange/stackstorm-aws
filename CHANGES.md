@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.3
+- Support Python 3 everywhere
+
 ## 1.2.2
 - Fix `sqs_sensor` to parse payload as dictionary (so that it actually works)
 
