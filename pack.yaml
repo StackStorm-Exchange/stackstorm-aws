@@ -24,3 +24,6 @@ python_versions:
   - "2"
 author : StackStorm, Inc.
 email : info@stackstorm.com
+python_versions:
+  - "2"
+  - "3"
