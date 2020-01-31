@@ -140,7 +140,7 @@ class AWSSQSSensor(PollingSensor):
                 self._logger.warning("Cloudn't operate sqs because of invalid credential config")
             else:
                 raise
-        except NoCredentialsError as e:
+        except NoCredentialsError:
             self._logger.warning("Cloudn't operate sqs because of invalid credential config")
         except EndpointConnectionError as e:
             self._logger.warning(e)
