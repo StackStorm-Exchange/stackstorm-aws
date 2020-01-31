@@ -284,7 +284,7 @@ class ResultSets(object):
                 v_list = []
                 for item in v:
                     # avoid touching the basic types.
-                    if isinstance(item, (basestring, bool, int, long, float)):
+                    if isinstance(item, (bool, float) + six.string_types + six.integer_types):
                         v_list.append(v)
                     else:
                         v_list.append(str(item))
