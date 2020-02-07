@@ -1,5 +1,4 @@
 # Licensed to the StackStorm, Inc ('StackStorm') under one or more
-
 # contributor license agreements.  See the NOTICE file distributed with
 # this work for additional information regarding copyright ownership.
 # The ASF licenses this file to You under the Apache License, Version 2.0
@@ -85,7 +84,7 @@ class ServiceNotificationsSensor(Sensor):
 
         try:
             data = json.loads(request.data)
-        except ValueError as e:
+        except ValueError:
             self._log.debug('Failed to parse body as JSON')
             return ''
 
