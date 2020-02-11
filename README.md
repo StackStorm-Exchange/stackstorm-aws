@@ -298,3 +298,6 @@ This trigger is emitted when a single message is received from a queue.
 }
 ```
 
+### Troubleshooting
+
+If there are connection errors in `st2sensorcontainer.log` such as: ``2020-02-06 22:04:05,202 140016844996688 INFO connectionpool [-] Starting new HTTP connection (1): 169.254.169.254``. It's likely a result of turning on the sensor without copying the `aws.yaml` over to `/opt/stackstorm/configs/aws.yaml`
