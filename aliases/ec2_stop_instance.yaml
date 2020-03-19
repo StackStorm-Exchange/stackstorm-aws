@@ -14,6 +14,8 @@ result:
       color: "#00ad52" # aka Slack 'good'
       footer: "AWS Pack"
   format: |
-       {% for ec2 in execution.result.result[0].StoppingInstances -%}
-        • {{ ec2.InstanceId }}  - {{ ec2.CurrentState }}
+       {% for line in execution.result.result -%}
+           {% for ec2 in line.StoppingInstances -%}
+           • {{ ec2.InstanceId }}  - {{ ec2.CurrentState.Name }}
+           {% endfor %}
        {%+ endfor %}
