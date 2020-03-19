@@ -4,7 +4,7 @@ pack: "aws"
 description: "stop instance"
 action_ref: "aws.ec2_stop_instances"
 formats:
-  - "aws ec2 stop {{instance_ids}}"
+  - "aws ec2 stop {{InstanceIds}}"
 ack:
   enabled: true
   append_url: true
@@ -15,5 +15,5 @@ result:
       footer: "AWS Pack"
   format: |
        {% for ec2 in execution.result.result -%}
-        • {{ ec2.id }}  - {{ ec2.state }}
+        • {{ ec2.StoppingInstances.InstanceId }}  - {{ ec2.StoppingInstances.CurrentState }}
        {%+ endfor %}
