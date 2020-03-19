@@ -4,7 +4,9 @@ pack: "aws"
 description: "start instance"
 action_ref: "aws.ec2_start_instances"
 formats:
-  - "aws ec2 start {{InstanceIds}}"
+  - display: "aws ec2 start <InstanceIds>"
+    representation: 
+      - "aws ec2 start {{InstanceIds}}"
 ack:
   enabled: false
   append_url: false

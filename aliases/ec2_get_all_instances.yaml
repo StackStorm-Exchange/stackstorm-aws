@@ -4,7 +4,9 @@ pack: "aws"
 description: "get all instances"
 action_ref: "aws.ec2_get_all_instances"
 formats:
-  - "aws ec2 get"
+  - display: "aws ec2 get"
+    representation: 
+     - "aws ec2 get"
 ack:
   enabled: false
   append_url: false
