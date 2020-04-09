@@ -237,7 +237,7 @@ class AWSSQSSensor(PollingSensor):
 
             try:
                 aws_region = queue.netloc.split('.')[1]
-            except IndexError:
+            except IndexError as e:
                 six.reraise(type(e), type(e)(
                     "Queue URL must contain the AWS region, "
                     "eg: https://sqs.<aws_region>.amazonaws.com/..."),
