@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.2.4
+## 1.3.0
 - `sqs_sensor` supports multiaccount integration.
 
 ## 1.2.3
