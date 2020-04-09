@@ -168,7 +168,7 @@ class AWSSQSSensor(PollingSensor):
                 if account_id == self.account_id:
                     self._setup_session()
                 else:
-                    self._setup_multiaccount_session(account_id, self.cross_roles)
+                    self._setup_multiaccount_session(account_id)
 
     def _setup_session(self):
         ''' Setup Boto3 session '''
