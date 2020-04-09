@@ -6,6 +6,10 @@ entry_point: run.py
 name: route53domains_resend_contact_reachability_email
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: resend_contact_reachability_email
     immutable: true

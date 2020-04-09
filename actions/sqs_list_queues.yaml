@@ -6,6 +6,10 @@ entry_point: run.py
 name: sqs_list_queues
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: list_queues
     immutable: true

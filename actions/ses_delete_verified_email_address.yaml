@@ -6,6 +6,10 @@ entry_point: run.py
 name: ses_delete_verified_email_address
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: delete_verified_email_address
     immutable: true

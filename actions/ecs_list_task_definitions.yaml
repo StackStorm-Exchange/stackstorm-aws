@@ -6,6 +6,10 @@ entry_point: run.py
 name: ecs_list_task_definitions
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: list_task_definitions
     immutable: true

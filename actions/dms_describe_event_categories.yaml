@@ -6,6 +6,10 @@ entry_point: run.py
 name: dms_describe_event_categories
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_event_categories
     immutable: true

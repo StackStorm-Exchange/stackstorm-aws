@@ -6,6 +6,10 @@ entry_point: run.py
 name: autoscaling_record_lifecycle_action_heartbeat
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: record_lifecycle_action_heartbeat
     immutable: true

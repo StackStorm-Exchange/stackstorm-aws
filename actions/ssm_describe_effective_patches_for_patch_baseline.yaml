@@ -6,6 +6,10 @@ entry_point: run.py
 name: ssm_describe_effective_patches_for_patch_baseline
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_effective_patches_for_patch_baseline
     immutable: true

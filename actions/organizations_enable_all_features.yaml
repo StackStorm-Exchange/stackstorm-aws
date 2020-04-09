@@ -6,6 +6,10 @@ entry_point: run.py
 name: organizations_enable_all_features
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: enable_all_features
     immutable: true

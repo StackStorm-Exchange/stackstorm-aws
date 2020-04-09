@@ -6,6 +6,10 @@ entry_point: run.py
 name: ds_delete_trust
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: delete_trust
     immutable: true

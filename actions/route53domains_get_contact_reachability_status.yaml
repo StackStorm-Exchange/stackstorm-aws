@@ -6,6 +6,10 @@ entry_point: run.py
 name: route53domains_get_contact_reachability_status
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_contact_reachability_status
     immutable: true

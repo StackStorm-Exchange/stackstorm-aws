@@ -6,6 +6,10 @@ entry_point: run.py
 name: ec2_replace_iam_instance_profile_association
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: replace_iam_instance_profile_association
     immutable: true

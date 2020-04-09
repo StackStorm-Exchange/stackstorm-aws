@@ -65,7 +65,7 @@ class BaseAction(Action):
                                aws_secret_access_key=self.credentials['aws_secret_access_key'])
 
         self.account_id = self.session.client('sts').get_caller_identity().get('Account')
-        self.cross_roles_arns = {
+        self.cross_roles = {
             arn.split(':')[4]: arn for arn in self.config.get('actions', {}).get('roles', [])
         }
 
@@ -78,14 +78,14 @@ class BaseAction(Action):
 
         try:
             assumed_role = self.session.client('sts').assume_role(
-                RoleArn=self.cross_roles_arns[account_id],
+                RoleArn=self.cross_roles[account_id],
                 RoleSessionName='StackStormEvents'
             )
         except ClientError:
             self.logger.error("Failed to assume role as account %s when using the AWS session "
                               "client. Check the roles configured for the AWS pack and ensure "
                               "that the '%s' is still valid.",
-                              account_id, self.cross_roles_arns[account_id])
+                              account_id, self.cross_roles[account_id])
             raise
         except KeyError:
             self.logger.error("Could not find the role referring %s account in the config file. "

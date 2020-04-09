@@ -6,6 +6,10 @@ entry_point: run.py
 name: storagegateway_list_volume_initiators
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: list_volume_initiators
     immutable: true

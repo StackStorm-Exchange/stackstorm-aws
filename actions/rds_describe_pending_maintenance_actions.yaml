@@ -6,6 +6,10 @@ entry_point: run.py
 name: rds_describe_pending_maintenance_actions
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_pending_maintenance_actions
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: cognito-idp_delete_user
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: delete_user
     immutable: true

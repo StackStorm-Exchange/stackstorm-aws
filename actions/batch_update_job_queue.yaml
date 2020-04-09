@@ -6,6 +6,10 @@ entry_point: run.py
 name: batch_update_job_queue
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: update_job_queue
     immutable: true

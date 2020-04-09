@@ -6,6 +6,10 @@ entry_point: run.py
 name: greengrass_update_connectivity_info
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: update_connectivity_info
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: ec2_create_egress_only_internet_gateway
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: create_egress_only_internet_gateway
     immutable: true

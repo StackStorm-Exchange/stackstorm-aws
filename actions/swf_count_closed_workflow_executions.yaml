@@ -6,6 +6,10 @@ entry_point: run.py
 name: swf_count_closed_workflow_executions
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: count_closed_workflow_executions
     immutable: true

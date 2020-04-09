@@ -6,6 +6,10 @@ entry_point: run.py
 name: cognito-idp_admin_confirm_sign_up
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: admin_confirm_sign_up
     immutable: true

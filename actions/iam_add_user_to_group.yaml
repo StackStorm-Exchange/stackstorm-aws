@@ -6,6 +6,10 @@ entry_point: run.py
 name: iam_add_user_to_group
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: add_user_to_group
     immutable: true

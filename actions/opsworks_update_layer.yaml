@@ -6,6 +6,10 @@ entry_point: run.py
 name: opsworks_update_layer
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: update_layer
     immutable: true

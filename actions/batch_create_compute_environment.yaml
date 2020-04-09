@@ -6,6 +6,10 @@ entry_point: run.py
 name: batch_create_compute_environment
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: create_compute_environment
     immutable: true

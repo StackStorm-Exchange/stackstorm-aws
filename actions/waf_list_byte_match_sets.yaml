@@ -6,6 +6,10 @@ entry_point: run.py
 name: waf_list_byte_match_sets
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: list_byte_match_sets
     immutable: true

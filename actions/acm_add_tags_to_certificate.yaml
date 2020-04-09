@@ -6,6 +6,10 @@ entry_point: run.py
 name: acm_add_tags_to_certificate
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: add_tags_to_certificate
     immutable: true

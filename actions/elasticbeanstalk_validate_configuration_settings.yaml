@@ -6,6 +6,10 @@ entry_point: run.py
 name: elasticbeanstalk_validate_configuration_settings
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: validate_configuration_settings
     immutable: true

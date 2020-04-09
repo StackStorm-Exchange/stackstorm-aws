@@ -6,6 +6,10 @@ entry_point: run.py
 name: servicecatalog_associate_principal_with_portfolio
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: associate_principal_with_portfolio
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: directconnect_delete_interconnect
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: delete_interconnect
     immutable: true

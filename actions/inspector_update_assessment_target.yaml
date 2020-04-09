@@ -6,6 +6,10 @@ entry_point: run.py
 name: inspector_update_assessment_target
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: update_assessment_target
     immutable: true

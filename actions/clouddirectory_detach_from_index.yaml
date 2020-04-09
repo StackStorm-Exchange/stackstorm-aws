@@ -6,6 +6,10 @@ entry_point: run.py
 name: clouddirectory_detach_from_index
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: detach_from_index
     immutable: true

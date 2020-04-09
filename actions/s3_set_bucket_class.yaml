@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: s3_set_bucket_class
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: set_bucket_class
     immutable: true

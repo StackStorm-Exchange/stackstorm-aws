@@ -6,6 +6,10 @@ entry_point: run.py
 name: opsworks_describe_stack_provisioning_parameters
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_stack_provisioning_parameters
     immutable: true

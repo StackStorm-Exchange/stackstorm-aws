@@ -6,6 +6,10 @@ entry_point: run.py
 name: greengrass_get_service_role_for_account
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_service_role_for_account
     immutable: true

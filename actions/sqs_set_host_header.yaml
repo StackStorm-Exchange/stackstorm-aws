@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: sqs_set_host_header
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: set_host_header
     immutable: true

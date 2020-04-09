@@ -6,6 +6,10 @@ entry_point: run.py
 name: gamelift_start_game_session_placement
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: start_game_session_placement
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: logs_delete_log_group
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: delete_log_group
     immutable: true

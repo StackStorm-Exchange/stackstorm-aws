@@ -6,6 +6,10 @@ entry_point: run.py
 name: ssm_describe_patch_group_state
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_patch_group_state
     immutable: true

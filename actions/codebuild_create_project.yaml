@@ -6,6 +6,10 @@ entry_point: run.py
 name: codebuild_create_project
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: create_project
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: ec2_cancel_import_task
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: cancel_import_task
     immutable: true

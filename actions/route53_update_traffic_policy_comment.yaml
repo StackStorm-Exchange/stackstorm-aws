@@ -6,6 +6,10 @@ entry_point: run.py
 name: route53_update_traffic_policy_comment
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: update_traffic_policy_comment
     immutable: true

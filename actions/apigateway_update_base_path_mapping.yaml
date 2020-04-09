@@ -6,6 +6,10 @@ entry_point: run.py
 name: apigateway_update_base_path_mapping
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: update_base_path_mapping
     immutable: true

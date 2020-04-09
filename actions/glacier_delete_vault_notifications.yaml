@@ -6,6 +6,10 @@ entry_point: run.py
 name: glacier_delete_vault_notifications
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: delete_vault_notifications
     immutable: true

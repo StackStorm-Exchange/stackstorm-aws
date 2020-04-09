@@ -6,6 +6,10 @@ entry_point: run.py
 name: sms_start_on_demand_replication_run
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: start_on_demand_replication_run
     immutable: true

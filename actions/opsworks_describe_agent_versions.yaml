@@ -6,6 +6,10 @@ entry_point: run.py
 name: opsworks_describe_agent_versions
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_agent_versions
     immutable: true

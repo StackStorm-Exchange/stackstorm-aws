@@ -6,6 +6,10 @@ entry_point: run.py
 name: ds_list_ip_routes
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: list_ip_routes
     immutable: true

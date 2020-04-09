@@ -6,6 +6,10 @@ entry_point: run.py
 name: lightsail_is_vpc_peered
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: is_vpc_peered
     immutable: true

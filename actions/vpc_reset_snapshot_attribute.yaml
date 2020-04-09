@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: vpc_reset_snapshot_attribute
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: reset_snapshot_attribute
     immutable: true

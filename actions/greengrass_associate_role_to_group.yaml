@@ -6,6 +6,10 @@ entry_point: run.py
 name: greengrass_associate_role_to_group
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: associate_role_to_group
     immutable: true

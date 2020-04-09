@@ -2,7 +2,7 @@
 ST2 AWS pack action runner script
 '''
 
-from lib import action
+from actions.lib import action
 
 
 class ActionManager(action.BaseAction):

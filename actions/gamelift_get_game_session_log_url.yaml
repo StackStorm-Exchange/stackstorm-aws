@@ -6,6 +6,10 @@ entry_point: run.py
 name: gamelift_get_game_session_log_url
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_game_session_log_url
     immutable: true

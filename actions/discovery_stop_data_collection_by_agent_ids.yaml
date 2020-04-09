@@ -6,6 +6,10 @@ entry_point: run.py
 name: discovery_stop_data_collection_by_agent_ids
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: stop_data_collection_by_agent_ids
     immutable: true

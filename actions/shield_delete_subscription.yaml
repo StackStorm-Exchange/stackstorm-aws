@@ -6,6 +6,10 @@ entry_point: run.py
 name: shield_delete_subscription
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: delete_subscription
     immutable: true

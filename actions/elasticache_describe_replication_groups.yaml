@@ -6,6 +6,10 @@ entry_point: run.py
 name: elasticache_describe_replication_groups
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_replication_groups
     immutable: true

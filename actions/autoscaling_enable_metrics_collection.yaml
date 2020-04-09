@@ -6,6 +6,10 @@ entry_point: run.py
 name: autoscaling_enable_metrics_collection
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: enable_metrics_collection
     immutable: true

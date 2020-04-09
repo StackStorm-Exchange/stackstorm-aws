@@ -6,6 +6,10 @@ entry_point: run.py
 name: opsworks_register_rds_db_instance
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: register_rds_db_instance
     immutable: true

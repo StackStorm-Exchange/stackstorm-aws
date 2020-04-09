@@ -6,6 +6,10 @@ entry_point: run.py
 name: datapipeline_report_task_progress
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: report_task_progress
     immutable: true

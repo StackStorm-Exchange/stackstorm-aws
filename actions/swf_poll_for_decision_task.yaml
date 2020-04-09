@@ -6,6 +6,10 @@ entry_point: run.py
 name: swf_poll_for_decision_task
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: poll_for_decision_task
     immutable: true

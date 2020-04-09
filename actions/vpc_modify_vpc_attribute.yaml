@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: vpc_modify_vpc_attribute
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: modify_vpc_attribute
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: elasticache_describe_cache_clusters
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_cache_clusters
     immutable: true

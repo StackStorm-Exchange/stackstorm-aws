@@ -6,6 +6,10 @@ entry_point: run.py
 name: autoscaling_create_or_update_tags
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: create_or_update_tags
     immutable: true

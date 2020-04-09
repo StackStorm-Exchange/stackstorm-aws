@@ -6,6 +6,10 @@ entry_point: run.py
 name: emr_set_visible_to_all_users
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: set_visible_to_all_users
     immutable: true

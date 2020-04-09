@@ -6,6 +6,10 @@ entry_point: run.py
 name: ssm_update_association
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: update_association
     immutable: true
