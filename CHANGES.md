@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.1
+- Actions support multiaccount integration.
+
 ## 1.3.0
 - `sqs_sensor` supports multiaccount integration.
 
