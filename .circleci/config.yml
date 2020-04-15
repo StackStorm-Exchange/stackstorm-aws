@@ -22,6 +22,7 @@ jobs:
       - run:
           name: Download dependencies
           command: |
+            echo "Cloning ${CI_BRANCH:-master} branch from git://github.com/stackstorm-exchange/ci.git into ~/ci"
             git clone -b ${CI_BRANCH:-master} git://github.com/stackstorm-exchange/ci.git ~/ci
             ~/ci/.circle/dependencies
       - run:
@@ -72,6 +73,7 @@ jobs:
           # doesn't declare support for Python 3
           shell: /bin/bash
           command: |
+            echo "Cloning ${CI_BRANCH:-master} branch from git://github.com/stackstorm-exchange/ci.git into ~/ci"
             git clone -b ${CI_BRANCH:-master} git://github.com/stackstorm-exchange/ci.git ~/ci
             ~/ci/.circle/dependencies ; ~/ci/.circle/exit_on_py3_checks $?
       - run:
