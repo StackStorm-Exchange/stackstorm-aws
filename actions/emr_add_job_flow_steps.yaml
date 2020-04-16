@@ -6,6 +6,10 @@ entry_point: run.py
 name: emr_add_job_flow_steps
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: add_job_flow_steps
     immutable: true

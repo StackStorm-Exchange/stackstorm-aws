@@ -6,6 +6,10 @@ entry_point: run.py
 name: iot_transfer_certificate
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: transfer_certificate
     immutable: true

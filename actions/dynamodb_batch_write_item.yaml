@@ -6,6 +6,10 @@ entry_point: run.py
 name: dynamodb_batch_write_item
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: batch_write_item
     immutable: true

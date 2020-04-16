@@ -6,6 +6,10 @@ entry_point: run.py
 name: swf_respond_activity_task_completed
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: respond_activity_task_completed
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: waf-regional_get_size_constraint_set
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_size_constraint_set
     immutable: true

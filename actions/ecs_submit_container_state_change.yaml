@@ -6,6 +6,10 @@ entry_point: run.py
 name: ecs_submit_container_state_change
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: submit_container_state_change
     immutable: true

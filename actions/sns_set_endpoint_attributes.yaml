@@ -6,6 +6,10 @@ entry_point: run.py
 name: sns_set_endpoint_attributes
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: set_endpoint_attributes
     immutable: true

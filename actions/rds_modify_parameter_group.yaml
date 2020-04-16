@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: rds_modify_parameter_group
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: modify_parameter_group
     immutable: true

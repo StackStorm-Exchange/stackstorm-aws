@@ -6,6 +6,10 @@ entry_point: run.py
 name: config_get_compliance_details_by_config_rule
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_compliance_details_by_config_rule
     immutable: true

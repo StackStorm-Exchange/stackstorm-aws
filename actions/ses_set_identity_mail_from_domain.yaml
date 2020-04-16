@@ -6,6 +6,10 @@ entry_point: run.py
 name: ses_set_identity_mail_from_domain
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: set_identity_mail_from_domain
     immutable: true

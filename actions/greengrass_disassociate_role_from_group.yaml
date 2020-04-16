@@ -6,6 +6,10 @@ entry_point: run.py
 name: greengrass_disassociate_role_from_group
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: disassociate_role_from_group
     immutable: true

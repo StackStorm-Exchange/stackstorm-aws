@@ -6,6 +6,10 @@ entry_point: run.py
 name: datapipeline_deactivate_pipeline
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: deactivate_pipeline
     immutable: true

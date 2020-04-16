@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: vpc_delete_vpn_connection
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: delete_vpn_connection
     immutable: true

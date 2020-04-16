@@ -6,6 +6,10 @@ entry_point: run.py
 name: apigateway_test_invoke_authorizer
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: test_invoke_authorizer
     immutable: true

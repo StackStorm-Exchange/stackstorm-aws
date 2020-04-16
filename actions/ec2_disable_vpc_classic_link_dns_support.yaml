@@ -6,6 +6,10 @@ entry_point: run.py
 name: ec2_disable_vpc_classic_link_dns_support
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: disable_vpc_classic_link_dns_support
     immutable: true

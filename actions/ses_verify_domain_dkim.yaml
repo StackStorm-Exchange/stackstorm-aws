@@ -6,6 +6,10 @@ entry_point: run.py
 name: ses_verify_domain_dkim
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: verify_domain_dkim
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: marketplacecommerceanalytics_start_support_data_export
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: start_support_data_export
     immutable: true

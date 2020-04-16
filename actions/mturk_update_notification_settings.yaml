@@ -6,6 +6,10 @@ entry_point: run.py
 name: mturk_update_notification_settings
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: update_notification_settings
     immutable: true

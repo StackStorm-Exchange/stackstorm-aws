@@ -6,6 +6,10 @@ entry_point: run.py
 name: elastictranscoder_read_preset
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: read_preset
     immutable: true

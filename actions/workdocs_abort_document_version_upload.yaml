@@ -6,6 +6,10 @@ entry_point: run.py
 name: workdocs_abort_document_version_upload
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: abort_document_version_upload
     immutable: true

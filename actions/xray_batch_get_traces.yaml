@@ -6,6 +6,10 @@ entry_point: run.py
 name: xray_batch_get_traces
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: batch_get_traces
     immutable: true

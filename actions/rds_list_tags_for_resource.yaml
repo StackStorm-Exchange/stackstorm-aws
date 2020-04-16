@@ -6,6 +6,10 @@ entry_point: run.py
 name: rds_list_tags_for_resource
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: list_tags_for_resource
     immutable: true

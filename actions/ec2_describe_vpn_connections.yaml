@@ -6,6 +6,10 @@ entry_point: run.py
 name: ec2_describe_vpn_connections
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_vpn_connections
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: storagegateway_retrieve_tape_recovery_point
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: retrieve_tape_recovery_point
     immutable: true

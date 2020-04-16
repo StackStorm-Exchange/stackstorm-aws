@@ -6,6 +6,10 @@ entry_point: run.py
 name: mturk_send_test_event_notification
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: send_test_event_notification
     immutable: true

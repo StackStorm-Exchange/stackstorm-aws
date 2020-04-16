@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: vpc_disassociate_route_table
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: disassociate_route_table
     immutable: true

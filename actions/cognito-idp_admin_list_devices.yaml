@@ -6,6 +6,10 @@ entry_point: run.py
 name: cognito-idp_admin_list_devices
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: admin_list_devices
     immutable: true

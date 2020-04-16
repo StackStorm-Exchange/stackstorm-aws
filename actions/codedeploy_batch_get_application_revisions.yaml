@@ -6,6 +6,10 @@ entry_point: run.py
 name: codedeploy_batch_get_application_revisions
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: batch_get_application_revisions
     immutable: true

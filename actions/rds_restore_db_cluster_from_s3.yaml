@@ -6,6 +6,10 @@ entry_point: run.py
 name: rds_restore_db_cluster_from_s3
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: restore_db_cluster_from_s3
     immutable: true

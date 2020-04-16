@@ -6,6 +6,10 @@ entry_point: run.py
 name: redshift_purchase_reserved_node_offering
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: purchase_reserved_node_offering
     immutable: true

@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: cf_set_stack_policy
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: set_stack_policy
     immutable: true

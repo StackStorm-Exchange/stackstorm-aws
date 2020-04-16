@@ -6,6 +6,10 @@ entry_point: run.py
 name: apigateway_get_authorizers
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_authorizers
     immutable: true

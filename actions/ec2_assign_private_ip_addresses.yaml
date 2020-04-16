@@ -6,6 +6,10 @@ entry_point: run.py
 name: ec2_assign_private_ip_addresses
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: assign_private_ip_addresses
     immutable: true

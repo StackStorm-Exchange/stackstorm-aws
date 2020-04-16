@@ -6,6 +6,10 @@ entry_point: run.py
 name: elasticache_purchase_reserved_cache_nodes_offering
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: purchase_reserved_cache_nodes_offering
     immutable: true

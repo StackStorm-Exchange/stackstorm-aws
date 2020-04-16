@@ -6,6 +6,10 @@ entry_point: run.py
 name: s3_delete_bucket_replication
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: delete_bucket_replication
     immutable: true

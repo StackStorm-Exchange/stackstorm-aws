@@ -6,6 +6,10 @@ entry_point: run.py
 name: pinpoint_update_application_settings
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: update_application_settings
     immutable: true

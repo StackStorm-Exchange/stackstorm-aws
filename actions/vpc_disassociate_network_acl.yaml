@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: vpc_disassociate_network_acl
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: disassociate_network_acl
     immutable: true

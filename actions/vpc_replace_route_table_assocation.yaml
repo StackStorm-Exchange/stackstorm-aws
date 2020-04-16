@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: vpc_replace_route_table_assocation
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: replace_route_table_assocation
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: redshift_rotate_encryption_key
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: rotate_encryption_key
     immutable: true

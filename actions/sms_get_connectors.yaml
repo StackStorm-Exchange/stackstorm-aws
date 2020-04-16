@@ -6,6 +6,10 @@ entry_point: run.py
 name: sms_get_connectors
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_connectors
     immutable: true

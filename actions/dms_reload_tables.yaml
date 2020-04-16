@@ -6,6 +6,10 @@ entry_point: run.py
 name: dms_reload_tables
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: reload_tables
     immutable: true

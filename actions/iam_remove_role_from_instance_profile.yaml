@@ -6,6 +6,10 @@ entry_point: run.py
 name: iam_remove_role_from_instance_profile
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: remove_role_from_instance_profile
     immutable: true

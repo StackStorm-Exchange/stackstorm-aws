@@ -6,6 +6,10 @@ entry_point: run.py
 name: codedeploy_continue_deployment
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: continue_deployment
     immutable: true

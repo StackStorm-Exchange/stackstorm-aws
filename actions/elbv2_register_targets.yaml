@@ -6,6 +6,10 @@ entry_point: run.py
 name: elbv2_register_targets
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: register_targets
     immutable: true

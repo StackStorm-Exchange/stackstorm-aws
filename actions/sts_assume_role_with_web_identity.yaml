@@ -6,6 +6,10 @@ entry_point: run.py
 name: sts_assume_role_with_web_identity
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: assume_role_with_web_identity
     immutable: true

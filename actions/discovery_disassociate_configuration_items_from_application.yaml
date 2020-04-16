@@ -6,6 +6,10 @@ entry_point: run.py
 name: discovery_disassociate_configuration_items_from_application
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: disassociate_configuration_items_from_application
     immutable: true

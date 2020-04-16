@@ -6,6 +6,10 @@ entry_point: run.py
 name: pinpoint_create_segment
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: create_segment
     immutable: true

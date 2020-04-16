@@ -6,6 +6,10 @@ entry_point: run.py
 name: ssm_get_maintenance_window
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_maintenance_window
     immutable: true

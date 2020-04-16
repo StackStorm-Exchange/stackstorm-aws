@@ -5,6 +5,10 @@
   enabled: true
   entry_point: "workflows/create_vm.yaml"
   parameters:
+    account_id:
+      type: string
+    region:
+      type: string
     ImageId:
       type: "string"
       description: "AWS image id to create instance from"

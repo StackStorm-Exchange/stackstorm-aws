@@ -6,6 +6,10 @@ entry_point: run.py
 name: devicefarm_get_suite
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_suite
     immutable: true

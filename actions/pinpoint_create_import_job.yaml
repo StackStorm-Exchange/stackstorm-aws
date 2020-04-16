@@ -6,6 +6,10 @@ entry_point: run.py
 name: pinpoint_create_import_job
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: create_import_job
     immutable: true

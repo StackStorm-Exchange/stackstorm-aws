@@ -6,6 +6,10 @@ entry_point: run.py
 name: inspector_list_rules_packages
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: list_rules_packages
     immutable: true

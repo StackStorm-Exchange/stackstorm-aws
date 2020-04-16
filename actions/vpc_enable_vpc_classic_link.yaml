@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: vpc_enable_vpc_classic_link
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: enable_vpc_classic_link
     immutable: true

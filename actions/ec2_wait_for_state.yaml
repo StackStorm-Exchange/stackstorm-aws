@@ -3,6 +3,10 @@ enabled: true
 entry_point: ec2_wait_for_state.py
 name: ec2_wait_for_state
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   instance_id:
     required: true
     type: string

@@ -6,6 +6,10 @@ entry_point: run.py
 name: polly_synthesize_speech
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: synthesize_speech
     immutable: true

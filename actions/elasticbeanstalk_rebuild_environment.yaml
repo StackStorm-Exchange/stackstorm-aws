@@ -6,6 +6,10 @@ entry_point: run.py
 name: elasticbeanstalk_rebuild_environment
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: rebuild_environment
     immutable: true

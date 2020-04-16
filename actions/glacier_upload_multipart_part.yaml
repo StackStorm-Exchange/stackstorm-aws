@@ -6,6 +6,10 @@ entry_point: run.py
 name: glacier_upload_multipart_part
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: upload_multipart_part
     immutable: true

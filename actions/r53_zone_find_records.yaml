@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: r53_zone_find_records
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: find_records
     immutable: true

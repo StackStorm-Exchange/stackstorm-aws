@@ -6,6 +6,10 @@ entry_point: run.py
 name: application-autoscaling_deregister_scalable_target
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: deregister_scalable_target
     immutable: true

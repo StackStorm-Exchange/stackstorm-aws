@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: cf_encode_bool
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: encode_bool
     immutable: true

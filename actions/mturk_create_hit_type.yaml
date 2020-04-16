@@ -6,6 +6,10 @@ entry_point: run.py
 name: mturk_create_hit_type
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: create_hit_type
     immutable: true

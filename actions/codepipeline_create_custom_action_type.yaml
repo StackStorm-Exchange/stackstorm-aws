@@ -6,6 +6,10 @@ entry_point: run.py
 name: codepipeline_create_custom_action_type
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: create_custom_action_type
     immutable: true

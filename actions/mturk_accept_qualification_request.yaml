@@ -6,6 +6,10 @@ entry_point: run.py
 name: mturk_accept_qualification_request
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: accept_qualification_request
     immutable: true

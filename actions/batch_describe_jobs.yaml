@@ -6,6 +6,10 @@ entry_point: run.py
 name: batch_describe_jobs
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_jobs
     immutable: true

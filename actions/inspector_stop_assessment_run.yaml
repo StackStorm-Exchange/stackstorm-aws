@@ -6,6 +6,10 @@ entry_point: run.py
 name: inspector_stop_assessment_run
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: stop_assessment_run
     immutable: true

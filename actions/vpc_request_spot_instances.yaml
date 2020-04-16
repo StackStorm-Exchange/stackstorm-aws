@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: vpc_request_spot_instances
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: request_spot_instances
     immutable: true

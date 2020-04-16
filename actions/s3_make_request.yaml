@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: s3_make_request
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: make_request
     immutable: true

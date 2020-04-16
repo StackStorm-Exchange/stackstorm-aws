@@ -6,6 +6,10 @@ entry_point: run.py
 name: elasticbeanstalk_compose_environments
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: compose_environments
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: codedeploy_skip_wait_time_for_instance_termination
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: skip_wait_time_for_instance_termination
     immutable: true

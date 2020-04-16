@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: vpc_get_all_vpc_peering_connections
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_all_vpc_peering_connections
     immutable: true

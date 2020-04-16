@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: r53_zone_add_a
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: add_a
     immutable: true

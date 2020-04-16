@@ -6,6 +6,10 @@ entry_point: run.py
 name: redshift_create_hsm_configuration
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: create_hsm_configuration
     immutable: true

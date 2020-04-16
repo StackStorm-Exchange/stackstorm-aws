@@ -6,6 +6,10 @@ entry_point: run.py
 name: cognito-sync_set_identity_pool_configuration
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: set_identity_pool_configuration
     immutable: true

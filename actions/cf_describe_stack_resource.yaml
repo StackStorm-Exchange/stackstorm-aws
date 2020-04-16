@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: cf_describe_stack_resource
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_stack_resource
     immutable: true

@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: r53_change_rrsets
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: change_rrsets
     immutable: true

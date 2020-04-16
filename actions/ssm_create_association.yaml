@@ -6,6 +6,10 @@ entry_point: run.py
 name: ssm_create_association
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: create_association
     immutable: true

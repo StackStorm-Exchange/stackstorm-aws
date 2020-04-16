@@ -6,6 +6,10 @@ entry_point: run.py
 name: lex-runtime_post_text
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: post_text
     immutable: true

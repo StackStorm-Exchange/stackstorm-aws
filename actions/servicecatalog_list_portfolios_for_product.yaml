@@ -6,6 +6,10 @@ entry_point: run.py
 name: servicecatalog_list_portfolios_for_product
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: list_portfolios_for_product
     immutable: true

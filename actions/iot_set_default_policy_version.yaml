@@ -6,6 +6,10 @@ entry_point: run.py
 name: iot_set_default_policy_version
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: set_default_policy_version
     immutable: true

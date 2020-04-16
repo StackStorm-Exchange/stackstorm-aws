@@ -6,6 +6,10 @@ entry_point: run.py
 name: sns_list_subscriptions_by_topic
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: list_subscriptions_by_topic
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: workdocs_get_current_user
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_current_user
     immutable: true

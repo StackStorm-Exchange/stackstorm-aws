@@ -6,6 +6,10 @@ entry_point: run.py
 name: clouddirectory_get_typed_link_facet_information
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_typed_link_facet_information
     immutable: true

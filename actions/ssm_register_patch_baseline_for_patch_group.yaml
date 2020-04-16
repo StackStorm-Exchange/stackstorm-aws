@@ -6,6 +6,10 @@ entry_point: run.py
 name: ssm_register_patch_baseline_for_patch_group
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: register_patch_baseline_for_patch_group
     immutable: true

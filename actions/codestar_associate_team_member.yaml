@@ -6,6 +6,10 @@ entry_point: run.py
 name: codestar_associate_team_member
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: associate_team_member
     immutable: true

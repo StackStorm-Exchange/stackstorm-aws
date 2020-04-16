@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: vpc_modify_reserved_instances
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: modify_reserved_instances
     immutable: true
