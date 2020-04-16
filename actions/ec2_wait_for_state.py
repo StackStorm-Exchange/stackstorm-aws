@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from actions.lib import action
+from lib import action
 
 
 class WaitManager(action.BaseAction):
