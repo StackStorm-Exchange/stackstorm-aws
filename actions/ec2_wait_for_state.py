@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from actions.lib import action
+from actions.lib import action  # pylint: disable=import-error
 
 
 class WaitManager(action.BaseAction):

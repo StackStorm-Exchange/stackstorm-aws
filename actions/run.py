@@ -2,7 +2,7 @@
 ST2 AWS pack action runner script
 '''
 
-from actions.lib import action
+from actions.lib import action  # pylint: disable=import-error
 
 
 class ActionManager(action.BaseAction):
