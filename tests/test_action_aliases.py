@@ -12,9 +12,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 
-import mock
-
 from st2tests.base import BaseActionAliasTestCase
+
 
 class EC2Get(BaseActionAliasTestCase):
     action_alias_name = "ec2_get_all_instances"
@@ -73,5 +72,3 @@ class EC2Stop(BaseActionAliasTestCase):
         self.assertCommandMatchesExactlyOneFormatString(
             format_strings=format_strings,
             command=command)
-
-
