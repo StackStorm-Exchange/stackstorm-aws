@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: s3_build_post_form_args
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   acl:
     type: string
   action:

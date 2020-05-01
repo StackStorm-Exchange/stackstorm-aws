@@ -6,6 +6,10 @@ entry_point: run.py
 name: ssm_start_automation_execution
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: start_automation_execution
     immutable: true

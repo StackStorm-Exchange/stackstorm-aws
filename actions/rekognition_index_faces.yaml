@@ -6,6 +6,10 @@ entry_point: run.py
 name: rekognition_index_faces
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: index_faces
     immutable: true

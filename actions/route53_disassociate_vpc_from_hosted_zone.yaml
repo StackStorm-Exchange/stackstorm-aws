@@ -6,6 +6,10 @@ entry_point: run.py
 name: route53_disassociate_vpc_from_hosted_zone
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: disassociate_vpc_from_hosted_zone
     immutable: true

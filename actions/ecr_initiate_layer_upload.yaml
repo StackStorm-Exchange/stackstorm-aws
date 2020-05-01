@@ -6,6 +6,10 @@ entry_point: run.py
 name: ecr_initiate_layer_upload
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: initiate_layer_upload
     immutable: true

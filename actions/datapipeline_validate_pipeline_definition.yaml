@@ -6,6 +6,10 @@ entry_point: run.py
 name: datapipeline_validate_pipeline_definition
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: validate_pipeline_definition
     immutable: true

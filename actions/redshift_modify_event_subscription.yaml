@@ -6,6 +6,10 @@ entry_point: run.py
 name: redshift_modify_event_subscription
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: modify_event_subscription
     immutable: true

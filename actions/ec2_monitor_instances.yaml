@@ -6,6 +6,10 @@ entry_point: run.py
 name: ec2_monitor_instances
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: monitor_instances
     immutable: true

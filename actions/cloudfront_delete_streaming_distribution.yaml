@@ -6,6 +6,10 @@ entry_point: run.py
 name: cloudfront_delete_streaming_distribution
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: delete_streaming_distribution
     immutable: true

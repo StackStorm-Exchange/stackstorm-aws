@@ -6,6 +6,10 @@ entry_point: run.py
 name: cur_describe_report_definitions
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_report_definitions
     immutable: true

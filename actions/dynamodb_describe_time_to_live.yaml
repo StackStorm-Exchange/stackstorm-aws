@@ -6,6 +6,10 @@ entry_point: run.py
 name: dynamodb_describe_time_to_live
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_time_to_live
     immutable: true

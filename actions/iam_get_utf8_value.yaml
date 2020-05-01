@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: iam_get_utf8_value
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_utf8_value
     immutable: true

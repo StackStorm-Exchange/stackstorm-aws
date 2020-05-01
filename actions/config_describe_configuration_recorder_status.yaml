@@ -6,6 +6,10 @@ entry_point: run.py
 name: config_describe_configuration_recorder_status
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_configuration_recorder_status
     immutable: true

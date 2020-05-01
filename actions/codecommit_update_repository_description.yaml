@@ -6,6 +6,10 @@ entry_point: run.py
 name: codecommit_update_repository_description
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: update_repository_description
     immutable: true

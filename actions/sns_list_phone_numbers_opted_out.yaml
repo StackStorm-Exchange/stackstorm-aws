@@ -6,6 +6,10 @@ entry_point: run.py
 name: sns_list_phone_numbers_opted_out
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: list_phone_numbers_opted_out
     immutable: true

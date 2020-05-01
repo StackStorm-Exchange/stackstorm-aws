@@ -6,6 +6,10 @@ entry_point: run.py
 name: elb_detach_load_balancer_from_subnets
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: detach_load_balancer_from_subnets
     immutable: true

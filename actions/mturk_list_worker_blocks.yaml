@@ -6,6 +6,10 @@ entry_point: run.py
 name: mturk_list_worker_blocks
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: list_worker_blocks
     immutable: true

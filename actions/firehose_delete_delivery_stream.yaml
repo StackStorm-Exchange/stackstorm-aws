@@ -6,6 +6,10 @@ entry_point: run.py
 name: firehose_delete_delivery_stream
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: delete_delivery_stream
     immutable: true

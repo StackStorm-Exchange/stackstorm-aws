@@ -1,0 +1,20 @@
+---
+aws_access_key_id: "access_key_id"
+aws_secret_access_key: "secret_key"
+region: "us-west-1"
+st2_user_data: ""
+
+service_notifications_sensor:
+  host: "localhost"
+  port: 12345
+  path: "/my-path"
+
+sqs_sensor:
+  roles:
+    - "arn:aws:iam::345678901223:role/rolename1"
+  input_queues:
+    - "input_queue"
+    - "https://sqs.us-east-1.amazonaws.com/345678901223/queue_name_2"
+
+sqs_other:
+  max_number_of_messages: 1

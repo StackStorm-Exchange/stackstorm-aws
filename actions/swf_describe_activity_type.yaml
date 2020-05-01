@@ -6,6 +6,10 @@ entry_point: run.py
 name: swf_describe_activity_type
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_activity_type
     immutable: true

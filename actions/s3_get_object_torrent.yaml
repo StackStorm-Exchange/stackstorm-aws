@@ -6,6 +6,10 @@ entry_point: run.py
 name: s3_get_object_torrent
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_object_torrent
     immutable: true

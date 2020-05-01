@@ -6,6 +6,10 @@ entry_point: run.py
 name: organizations_list_accounts
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: list_accounts
     immutable: true

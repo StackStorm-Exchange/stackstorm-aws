@@ -6,6 +6,10 @@ entry_point: run.py
 name: kinesisanalytics_describe_application
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_application
     immutable: true

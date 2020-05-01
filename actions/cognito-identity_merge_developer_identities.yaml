@@ -6,6 +6,10 @@ entry_point: run.py
 name: cognito-identity_merge_developer_identities
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: merge_developer_identities
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: autoscaling_exit_standby
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: exit_standby
     immutable: true

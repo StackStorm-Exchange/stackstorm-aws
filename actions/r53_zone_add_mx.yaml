@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: r53_zone_add_mx
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: add_mx
     immutable: true

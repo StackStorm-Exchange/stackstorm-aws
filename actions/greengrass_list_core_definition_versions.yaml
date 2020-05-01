@@ -6,6 +6,10 @@ entry_point: run.py
 name: greengrass_list_core_definition_versions
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: list_core_definition_versions
     immutable: true

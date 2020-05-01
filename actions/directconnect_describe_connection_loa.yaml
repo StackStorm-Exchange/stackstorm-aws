@@ -6,6 +6,10 @@ entry_point: run.py
 name: directconnect_describe_connection_loa
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_connection_loa
     immutable: true

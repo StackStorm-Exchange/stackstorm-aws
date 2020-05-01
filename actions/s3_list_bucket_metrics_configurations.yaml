@@ -6,6 +6,10 @@ entry_point: run.py
 name: s3_list_bucket_metrics_configurations
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: list_bucket_metrics_configurations
     immutable: true

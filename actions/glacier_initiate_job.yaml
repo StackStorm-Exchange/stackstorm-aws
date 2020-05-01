@@ -6,6 +6,10 @@ entry_point: run.py
 name: glacier_initiate_job
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: initiate_job
     immutable: true

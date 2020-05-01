@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: s3_build_post_policy
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: build_post_policy
     immutable: true

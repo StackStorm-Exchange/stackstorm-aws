@@ -6,6 +6,10 @@ entry_point: run.py
 name: snowball_cancel_job
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: cancel_job
     immutable: true

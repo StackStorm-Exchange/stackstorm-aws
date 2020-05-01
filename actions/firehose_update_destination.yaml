@@ -6,6 +6,10 @@ entry_point: run.py
 name: firehose_update_destination
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: update_destination
     immutable: true

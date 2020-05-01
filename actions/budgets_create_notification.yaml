@@ -6,6 +6,10 @@ entry_point: run.py
 name: budgets_create_notification
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: create_notification
     immutable: true

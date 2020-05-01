@@ -6,6 +6,10 @@ entry_point: run.py
 name: iam_detach_user_policy
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: detach_user_policy
     immutable: true

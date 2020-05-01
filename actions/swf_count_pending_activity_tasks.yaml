@@ -6,6 +6,10 @@ entry_point: run.py
 name: swf_count_pending_activity_tasks
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: count_pending_activity_tasks
     immutable: true

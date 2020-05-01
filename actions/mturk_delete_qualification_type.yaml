@@ -6,6 +6,10 @@ entry_point: run.py
 name: mturk_delete_qualification_type
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: delete_qualification_type
     immutable: true

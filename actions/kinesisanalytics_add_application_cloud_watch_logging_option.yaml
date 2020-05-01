@@ -6,6 +6,10 @@ entry_point: run.py
 name: kinesisanalytics_add_application_cloud_watch_logging_option
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: add_application_cloud_watch_logging_option
     immutable: true

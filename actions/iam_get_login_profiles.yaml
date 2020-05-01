@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: iam_get_login_profiles
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_login_profiles
     immutable: true

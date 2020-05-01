@@ -6,6 +6,10 @@ entry_point: run.py
 name: opsworks_unassign_volume
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: unassign_volume
     immutable: true

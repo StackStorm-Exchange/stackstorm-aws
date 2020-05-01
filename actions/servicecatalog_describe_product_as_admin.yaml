@@ -6,6 +6,10 @@ entry_point: run.py
 name: servicecatalog_describe_product_as_admin
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_product_as_admin
     immutable: true

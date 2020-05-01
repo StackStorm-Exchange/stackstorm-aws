@@ -4,7 +4,11 @@
   description: "Set the hostname on a VM and update cloud.cfg"
   enabled: true
   entry_point: ""
-  parameters: 
+  parameters:
+    account_id:
+      type: string
+    region:
+      type: string
     hostname:
       type: "string"
       description: "The hostname to set"

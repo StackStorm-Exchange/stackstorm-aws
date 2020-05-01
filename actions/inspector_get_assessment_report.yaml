@@ -6,6 +6,10 @@ entry_point: run.py
 name: inspector_get_assessment_report
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_assessment_report
     immutable: true

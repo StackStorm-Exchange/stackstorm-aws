@@ -6,6 +6,10 @@ entry_point: run.py
 name: autoscaling_set_instance_protection
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: set_instance_protection
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: machinelearning_describe_data_sources
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_data_sources
     immutable: true

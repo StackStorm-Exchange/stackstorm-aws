@@ -6,6 +6,10 @@ entry_point: run.py
 name: sns_check_if_phone_number_is_opted_out
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: check_if_phone_number_is_opted_out
     immutable: true

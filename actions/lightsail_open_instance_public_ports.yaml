@@ -6,6 +6,10 @@ entry_point: run.py
 name: lightsail_open_instance_public_ports
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: open_instance_public_ports
     immutable: true

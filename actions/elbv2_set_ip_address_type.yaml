@@ -6,6 +6,10 @@ entry_point: run.py
 name: elbv2_set_ip_address_type
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: set_ip_address_type
     immutable: true

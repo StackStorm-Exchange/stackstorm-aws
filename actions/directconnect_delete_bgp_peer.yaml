@@ -6,6 +6,10 @@ entry_point: run.py
 name: directconnect_delete_bgp_peer
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: delete_bgp_peer
     immutable: true

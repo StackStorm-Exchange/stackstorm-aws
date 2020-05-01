@@ -6,6 +6,10 @@ entry_point: run.py
 name: ec2_authorize_security_group_ingress
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: authorize_security_group_ingress
     immutable: true

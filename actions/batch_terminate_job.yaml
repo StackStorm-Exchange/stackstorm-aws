@@ -6,6 +6,10 @@ entry_point: run.py
 name: batch_terminate_job
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: terminate_job
     immutable: true

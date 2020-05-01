@@ -6,6 +6,10 @@ entry_point: run.py
 name: cognito-identity_get_open_id_token
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_open_id_token
     immutable: true

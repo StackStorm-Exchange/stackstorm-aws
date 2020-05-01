@@ -6,6 +6,10 @@ entry_point: run.py
 name: iot_attach_thing_principal
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: attach_thing_principal
     immutable: true

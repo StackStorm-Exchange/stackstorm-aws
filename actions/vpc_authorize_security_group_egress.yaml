@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: vpc_authorize_security_group_egress
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: authorize_security_group_egress
     immutable: true

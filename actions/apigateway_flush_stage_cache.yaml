@@ -6,6 +6,10 @@ entry_point: run.py
 name: apigateway_flush_stage_cache
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: flush_stage_cache
     immutable: true

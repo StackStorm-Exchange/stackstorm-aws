@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: sqs_server_name
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: server_name
     immutable: true

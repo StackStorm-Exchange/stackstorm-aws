@@ -6,6 +6,10 @@ entry_point: run.py
 name: dms_modify_replication_subnet_group
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: modify_replication_subnet_group
     immutable: true

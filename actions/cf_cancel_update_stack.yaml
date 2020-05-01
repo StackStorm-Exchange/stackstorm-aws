@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: cf_cancel_update_stack
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: cancel_update_stack
     immutable: true

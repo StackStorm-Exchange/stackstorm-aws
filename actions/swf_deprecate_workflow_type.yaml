@@ -6,6 +6,10 @@ entry_point: run.py
 name: swf_deprecate_workflow_type
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: deprecate_workflow_type
     immutable: true

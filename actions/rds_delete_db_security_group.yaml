@@ -6,6 +6,10 @@ entry_point: run.py
 name: rds_delete_db_security_group
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: delete_db_security_group
     immutable: true

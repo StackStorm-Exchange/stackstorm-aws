@@ -6,6 +6,10 @@ entry_point: run.py
 name: rds_download_db_log_file_portion
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: download_db_log_file_portion
     immutable: true

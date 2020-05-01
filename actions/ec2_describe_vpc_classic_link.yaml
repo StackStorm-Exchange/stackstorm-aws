@@ -6,6 +6,10 @@ entry_point: run.py
 name: ec2_describe_vpc_classic_link
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_vpc_classic_link
     immutable: true

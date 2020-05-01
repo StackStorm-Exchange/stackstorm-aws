@@ -6,6 +6,10 @@ entry_point: run.py
 name: glacier_complete_vault_lock
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: complete_vault_lock
     immutable: true

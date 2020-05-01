@@ -6,6 +6,10 @@ entry_point: run.py
 name: support_refresh_trusted_advisor_check
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: refresh_trusted_advisor_check
     immutable: true

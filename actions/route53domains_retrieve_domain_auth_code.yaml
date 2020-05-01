@@ -6,6 +6,10 @@ entry_point: run.py
 name: route53domains_retrieve_domain_auth_code
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: retrieve_domain_auth_code
     immutable: true

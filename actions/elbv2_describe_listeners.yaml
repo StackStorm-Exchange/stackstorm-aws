@@ -6,6 +6,10 @@ entry_point: run.py
 name: elbv2_describe_listeners
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: describe_listeners
     immutable: true

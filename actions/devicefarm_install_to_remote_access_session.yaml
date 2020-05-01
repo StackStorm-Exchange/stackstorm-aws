@@ -6,6 +6,10 @@ entry_point: run.py
 name: devicefarm_install_to_remote_access_session
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: install_to_remote_access_session
     immutable: true

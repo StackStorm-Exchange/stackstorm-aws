@@ -6,6 +6,10 @@ entry_point: run.py
 name: route53domains_get_operation_detail
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_operation_detail
     immutable: true

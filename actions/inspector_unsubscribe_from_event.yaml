@@ -6,6 +6,10 @@ entry_point: run.py
 name: inspector_unsubscribe_from_event
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: unsubscribe_from_event
     immutable: true

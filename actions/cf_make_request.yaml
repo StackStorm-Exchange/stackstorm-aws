@@ -3,6 +3,10 @@ enabled: true
 entry_point: run.py
 name: cf_make_request
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     required: true
     type: string

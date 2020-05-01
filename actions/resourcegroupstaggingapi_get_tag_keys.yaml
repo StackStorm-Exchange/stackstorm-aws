@@ -6,6 +6,10 @@ entry_point: run.py
 name: resourcegroupstaggingapi_get_tag_keys
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: get_tag_keys
     immutable: true

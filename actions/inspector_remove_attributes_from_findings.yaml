@@ -6,6 +6,10 @@ entry_point: run.py
 name: inspector_remove_attributes_from_findings
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: remove_attributes_from_findings
     immutable: true

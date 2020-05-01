@@ -23,6 +23,14 @@
     type: "boolean"
     description: "Set to True to log every boto method / function invocation"
     default: false
+  actions:
+    type: object
+    properties:
+      roles:
+        type: "array"
+        description: "ARNs of the roles which allow effecting actions on resources on that account"
+        items:
+          type: "string"
   service_notifications_sensor:
     type: object
     properties:
@@ -41,10 +49,15 @@
     type: object
     properties:
       input_queues:
-        description: "Names of queue to fetch messages from Amazon SQS"
+        description: "Names or URLs of queues to fetch messages from Amazon SQS"
         type: "array"
         items:
           type: "string"
+        roles:
+          type: "array"
+          description: "ARNs of the roles which allow queues to be fetched for messages"
+          items:
+            type: "string"
   sqs_other:
     type: object
     properties:

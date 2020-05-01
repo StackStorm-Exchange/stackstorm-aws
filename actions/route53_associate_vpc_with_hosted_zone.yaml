@@ -6,6 +6,10 @@ entry_point: run.py
 name: route53_associate_vpc_with_hosted_zone
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: associate_vpc_with_hosted_zone
     immutable: true

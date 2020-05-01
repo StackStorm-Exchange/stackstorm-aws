@@ -6,6 +6,10 @@ entry_point: run.py
 name: cognito-identity_create_identity_pool
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: create_identity_pool
     immutable: true

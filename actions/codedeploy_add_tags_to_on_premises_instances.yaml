@@ -6,6 +6,10 @@ entry_point: run.py
 name: codedeploy_add_tags_to_on_premises_instances
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: add_tags_to_on_premises_instances
     immutable: true

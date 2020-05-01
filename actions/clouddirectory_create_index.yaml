@@ -6,6 +6,10 @@ entry_point: run.py
 name: clouddirectory_create_index
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: create_index
     immutable: true

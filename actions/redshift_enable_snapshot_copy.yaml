@@ -6,6 +6,10 @@ entry_point: run.py
 name: redshift_enable_snapshot_copy
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: enable_snapshot_copy
     immutable: true

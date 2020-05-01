@@ -6,6 +6,10 @@ entry_point: run.py
 name: rds_remove_role_from_db_cluster
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: remove_role_from_db_cluster
     immutable: true

@@ -6,6 +6,10 @@ entry_point: run.py
 name: organizations_remove_account_from_organization
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: remove_account_from_organization
     immutable: true

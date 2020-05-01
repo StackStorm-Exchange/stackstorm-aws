@@ -6,6 +6,10 @@ entry_point: run.py
 name: kinesis_increase_stream_retention_period
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: increase_stream_retention_period
     immutable: true

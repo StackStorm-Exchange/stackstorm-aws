@@ -6,6 +6,10 @@ entry_point: run.py
 name: ec2_confirm_product_instance
 runner_type: python-script
 parameters:
+  account_id:
+    type: string
+  region:
+    type: string
   action:
     default: confirm_product_instance
     immutable: true
