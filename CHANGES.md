@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.2
+- Fix aliases 'ec2_start_instance' and 'ec2_stop_instance'
+
+## 1.3.1
+- Actions support multiaccount integration.
+
+## 1.3.0
+- `sqs_sensor` supports multiaccount integration.
+
 ## 1.2.3
 - Support Python 3 everywhere
 
