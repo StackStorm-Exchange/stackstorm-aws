@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.2
+- Solved the bug regarding `aws_session_token` parameter for `boto3` cross account authentication in `actions.py`.
+
 ## 1.3.1
 - Actions support multiaccount integration.
 
