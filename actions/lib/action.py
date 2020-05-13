@@ -129,6 +129,8 @@ class BaseAction(Action):
     def get_boto3_session(self, resource):
         region = self.credentials['region']
         del self.credentials['region']
+        if 'security_token' in self.credentials:
+            self.credentials['aws_session_token'] = self.credentials.pop('security_token')
         return boto3.client(resource, region_name=region, **self.credentials)
 
     def split_tags(self, tags):
