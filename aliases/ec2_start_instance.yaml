@@ -4,7 +4,9 @@ pack: "aws"
 description: "start instance"
 action_ref: "aws.ec2_start_instances"
 formats:
-  - "aws ec2 start {{instance_ids}}"
+  - display: "aws ec2 start <InstanceIds>"
+    representation: 
+      - "aws ec2 start {{InstanceIds}}"
 ack:
   enabled: false
   append_url: false
@@ -15,6 +17,8 @@ result:
       color: "#00ad52" # aka Slack 'good'
       footer: "AWS Pack"
   format: |
-       {% for ec2 in execution.result.result -%}
-        • {{ ec2.id }}  - {{ ec2.state }}
+       {% for line in execution.result.result -%}
+           {% for ec2 in line.StartingInstances -%}
+           • {{ ec2.InstanceId }}  - {{ ec2.CurrentState.Name }}
+           {% endfor %}
        {%+ endfor %}

@@ -4,7 +4,9 @@ pack: "aws"
 description: "stop instance"
 action_ref: "aws.ec2_stop_instances"
 formats:
-  - "aws ec2 stop {{instance_ids}}"
+  - display: "aws ec2 stop <InstanceIds>"
+    representation: 
+      - "aws ec2 stop {{InstanceIds}}"
 ack:
   enabled: true
   append_url: true
@@ -14,6 +16,8 @@ result:
       color: "#00ad52" # aka Slack 'good'
       footer: "AWS Pack"
   format: |
-       {% for ec2 in execution.result.result -%}
-        • {{ ec2.id }}  - {{ ec2.state }}
+       {% for line in execution.result.result -%}
+           {% for ec2 in line.StoppingInstances -%}
+           • {{ ec2.InstanceId }}  - {{ ec2.CurrentState.Name }}
+           {% endfor %}
        {%+ endfor %}
