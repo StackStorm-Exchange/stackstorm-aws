@@ -1,7 +1,10 @@
 # Changelog
 
-## 1.3.2
+## 1.3.3
 - Fix aliases 'ec2_start_instance' and 'ec2_stop_instance'
+
+## 1.3.2
+- Solved the bug regarding `aws_session_token` parameter for `boto3` cross account authentication in `actions.py`.
 
 ## 1.3.1
 - Actions support multiaccount integration.
