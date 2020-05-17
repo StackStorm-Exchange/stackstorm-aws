@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.4
+- Change `queue` parameter type in sensor payload from `urllib.parse.ParseResult` to `str`.
+
 ## 1.3.3
 - Fix aliases 'ec2_start_instance' and 'ec2_stop_instance'
 
