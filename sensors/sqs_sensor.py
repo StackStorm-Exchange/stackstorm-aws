@@ -84,7 +84,7 @@ class AWSSQSSensor(PollingSensor):
 
             for msg in msgs:
                 if msg:
-                    payload = {"queue": queue,
+                    payload = {"queue": six.moves.urllib.parse.urlunparse(queue),
                                "account_id": account_id,
                                "region": region,
                                "body": json.loads(msg.body)}

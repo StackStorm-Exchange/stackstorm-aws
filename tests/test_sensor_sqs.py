@@ -1,5 +1,4 @@
 import mock
-import six
 import yaml
 
 from boto3.session import Session
@@ -213,9 +212,8 @@ class SQSSensorTestCase(BaseSensorTestCase):
 
         # get message from queue 'hoge', 'fuga' then 'puyo'
         self.assertEqual([x['payload']['queue'] for x in contexts],
-                         [six.moves.urllib.parse.urlparse(queue) for queue in
-                          ['hoge', 'fuga', 'puyo',
-                          'https://sqs.us-west-2.amazonaws.com/123456789098/queue_name_3']])
+                         ['hoge', 'fuga', 'puyo',
+                          'https://sqs.us-west-2.amazonaws.com/123456789098/queue_name_3'])
 
     @mock.patch.object(Session, 'client', mock.Mock(return_value=MockStsClient()))
     @mock.patch.object(Session, 'resource',
@@ -238,9 +236,8 @@ class SQSSensorTestCase(BaseSensorTestCase):
         self.assertNotEqual(contexts, [])
         self.assertTriggerDispatched(trigger='aws.sqs_new_message')
         self.assertEqual([x['payload']['queue'] for x in contexts],
-                         [six.moves.urllib.parse.urlparse(queue) for queue in
-                          ['foo', 'bar',
-                          'https://sqs.us-west-2.amazonaws.com/123456789098/queue_name_3']])
+                         ['foo', 'bar',
+                          'https://sqs.us-west-2.amazonaws.com/123456789098/queue_name_3'])
 
     @mock.patch.object(Session, 'client', mock.Mock(return_value=MockStsClient()))
     @mock.patch.object(Session, 'resource',
