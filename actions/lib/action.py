@@ -178,10 +178,13 @@ class BaseAction(Action):
     def do_method(self, module_path, cls, action, **kwargs):
         module = importlib.import_module(module_path)
 
-        if 'account_id' in kwargs:
-            self.assume_role(kwargs.pop('account_id'))
-        if 'region' in kwargs:
-            self.credentials['region'] = kwargs.pop('region')
+        account_id = kwargs.pop('account_id', None)
+        if account_id:
+            self.assume_role(account_id)
+
+        region = kwargs.pop('region', None)
+        if region:
+            self.credentials['region'] = region
 
         # hack to connect to correct region
         if cls == 'EC2Connection':
