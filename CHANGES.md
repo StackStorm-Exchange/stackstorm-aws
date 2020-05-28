@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.5
+- Fix python3 problems when account_id or region empty
+
 ## 1.3.4
 - Change `queue` parameter type in sensor payload from `urllib.parse.ParseResult` to `str`.
 
