@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.0
+
+* Drop Python 2.7 support
+
 ## 1.3.5
 - Fix python3 problems when account_id or region empty
 
