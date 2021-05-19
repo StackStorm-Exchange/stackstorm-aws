@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.1
+- Fix issue when configured value for aws_access_key_id is `None` in SQS Sensor.
+
 ## 2.0.0
 
 * Drop Python 2.7 support
