@@ -172,7 +172,7 @@ class AWSSQSSensor(PollingSensor):
 
     def _setup_session(self):
         ''' Setup Boto3 session '''
-        if self.access_key_id.lower() == "none":
+        if self.access_key_id == "None":
             session = Session(aws_access_key_id=None, aws_secret_access_key=None)
         else:
             session = Session(aws_access_key_id=self.access_key_id,
