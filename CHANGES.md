@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1
+- Deleted duplicate `headers` parameter in `actions/apigateway_test_invoke_authorizer.yaml` and
+  `actions/apigateway_test_invoke_method.yaml`
+
 ## 2.0.0
 
 * Drop Python 2.7 support
