@@ -63,8 +63,8 @@ class BaseAction(Action):
 
         self.session = Session(aws_access_key_id=self.credentials['aws_access_key_id'],
                                aws_secret_access_key=self.credentials['aws_secret_access_key'])
-
-        self.account_id = self.session.client('sts').get_caller_identity().get('Account')  # pylint: disable=no-member
+        # pylint: disable=no-member
+        self.account_id = self.session.client('sts').get_caller_identity().get('Account')
         self.cross_roles = {
             arn.split(':')[4]: arn for arn in self.config.get('actions', {}).get('roles', [])
         }
