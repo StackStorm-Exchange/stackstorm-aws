@@ -176,6 +176,7 @@ class AWSSQSSensor(PollingSensor):
                           aws_secret_access_key=self.secret_access_key)
 
         if not self.account_id:
+            # pylint: disable=no-member
             self.account_id = session.client('sts').get_caller_identity().get('Account')
             self.credentials[self.account_id] = (self.access_key_id, self.secret_access_key, None)
 
