@@ -63,7 +63,7 @@ class BaseAction(Action):
 
         self.session = Session(aws_access_key_id=self.credentials['aws_access_key_id'],
                                aws_secret_access_key=self.credentials['aws_secret_access_key'])
-
+        # pylint: disable=no-member
         self.account_id = self.session.client('sts').get_caller_identity().get('Account')
         self.cross_roles = {
             arn.split(':')[4]: arn for arn in self.config.get('actions', {}).get('roles', [])
@@ -77,7 +77,7 @@ class BaseAction(Action):
             return
 
         try:
-            assumed_role = self.session.client('sts').assume_role(
+            assumed_role = self.session.client('sts').assume_role(  # pylint: disable=no-member
                 RoleArn=self.cross_roles[account_id],
                 RoleSessionName='StackStormEvents'
             )

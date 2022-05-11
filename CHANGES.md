@@ -1,7 +1,11 @@
 # Changelog
 
-## 2.0.1
+## 2.0.2
 - Fix issue when configured value for aws_access_key_id is `None` in SQS Sensor.
+
+## 2.0.1
+- Deleted duplicate `headers` parameter in `actions/apigateway_test_invoke_authorizer.yaml` and
+  `actions/apigateway_test_invoke_method.yaml`
 
 ## 2.0.0
 

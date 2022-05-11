@@ -17,8 +17,6 @@ parameters:
   cls:
     default: apigateway
     type: string
-  headers:
-    type: string
   module_path:
     default: boto3
     immutable: true
