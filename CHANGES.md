@@ -1,41 +1,56 @@
 # Changelog
 
+## 2.0.2
+
+- Fixed bug in SQS sensor that sets "None" to aws key/secret vs allowing it to use the instance role.
+
 ## 2.0.1
+
 - Deleted duplicate `headers` parameter in `actions/apigateway_test_invoke_authorizer.yaml` and
   `actions/apigateway_test_invoke_method.yaml`
 
 ## 2.0.0
 
-* Drop Python 2.7 support
+- Drop Python 2.7 support
 
 ## 1.3.5
+
 - Fix python3 problems when account_id or region empty
 
 ## 1.3.4
+
 - Change `queue` parameter type in sensor payload from `urllib.parse.ParseResult` to `str`.
 
 ## 1.3.3
+
 - Fix aliases 'ec2_start_instance' and 'ec2_stop_instance'
 
 ## 1.3.2
+
 - Solved the bug regarding `aws_session_token` parameter for `boto3` cross account authentication in `actions.py`.
 
 ## 1.3.1
+
 - Actions support multiaccount integration.
 
 ## 1.3.0
+
 - `sqs_sensor` supports multiaccount integration.
 
 ## 1.2.3
+
 - Support Python 3 everywhere
 
 ## 1.2.2
+
 - Fix `sqs_sensor` to parse payload as dictionary (so that it actually works)
 
 ## 1.2.1
+
 - Update `kwargs['user_data`] to `kwargs['UserData']` per the aws.ec2_run_instances action.
 
 ## 1.2.0
+
 - Update `st2_user_data` to take raw data as input as an alternative to file path.
 
 ## 1.1.1
@@ -76,16 +91,17 @@
 - Updated action `runner_type` from `run-python` to `python-script`
 
 ## v0.9.3
-* Adding aliases for ec2 actions (list/start/stop) machines
+
+- Adding aliases for ec2 actions (list/start/stop) machines
 
 ## v0.9.2
 
-* Fix all the boto3 actions (autoscaling, etc.) so they work. Previously they didn't work because
+- Fix all the boto3 actions (autoscaling, etc.) so they work. Previously they didn't work because
   credentials weren't correctly passed in. #26
 
 ## v0.9.1
 
-* Corrected incomplete error handling and validation of configuration (#22).
+- Corrected incomplete error handling and validation of configuration (#22).
 
 ## v0.6.0
 
@@ -97,20 +113,20 @@ If you previously accessed the result of the ec2_run_instances action in the act
 
 ## v0.3.0
 
-* Added CloudFormation, VPC, IAM, RDS, SQS, S3
+- Added CloudFormation, VPC, IAM, RDS, SQS, S3
 
 ## v0.2.0
 
-* Added Route53
+- Added Route53
 
 ## v0.1.0
 
-* Initial release
+- Initial release
 
-## v0.3.0
+## v0.3.1
 
-* Add aws.sqs_sensor which can monitor given sqs queue and trigger aws.sqs_new_message
+- Add aws.sqs_sensor which can monitor given sqs queue and trigger aws.sqs_new_message
 
 ## v0.4.0
 
-* Add support for handling multiple input_queues to aws.sqs_sensor
+- Add support for handling multiple input_queues to aws.sqs_sensor
