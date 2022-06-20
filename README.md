@@ -280,7 +280,7 @@ region:
 sqs_sensor:
   input_queues:
     - first_queue
-    - second_queue
+    - second_queue (can be url or queue name)
 sqs_other:
   max_number_of_messages: 1
 ```
