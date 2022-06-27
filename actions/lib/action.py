@@ -221,6 +221,19 @@ class BaseAction(Action):
             method_fqdn = '%s.%s.%s' % (module_path, cls, action)
             self.logger.debug('Calling method "%s" with kwargs: %s' % (method_fqdn, str(kwargs)))
 
+        if 'Filters' in kwargs.keys():
+            boto3_compliant_filters = []
+            for specified_filter in kwargs['Filters']:
+                keyval = specified_filter.split('=')
+                vals = []
+                for entry in boto3_compliant_filters:
+                    if entry['Name'] == keyval[0]:
+                        vals = entry['Values']
+                        boto3_compliant_filters.remove(entry)
+                vals.append(keyval[1])
+                boto3_compliant_filters.append({'Name': keyval[0], 'Values': vals})
+            kwargs['Filters'] = boto3_compliant_filters
+
         resultset = getattr(obj, action)(**kwargs)
         formatted = self.resultsets.formatter(resultset)
         return formatted if isinstance(formatted, list) else [formatted]
@@ -232,5 +245,17 @@ class BaseAction(Action):
             function_fqdn = '%s.%s' % (module_path, action)
             self.logger.debug('Calling function "%s" with kwargs: %s' % (function_fqdn,
                                                                          str(kwargs)))
+        if 'Filters' in kwargs.keys():
+            boto3_compliant_filters = []
+            for specified_filter in kwargs['Filters']:
+                keyval = specified_filter.split('=')
+                vals = []
+                for entry in boto3_compliant_filters:
+                    if entry['Name'] == keyval[0]:
+                        vals = entry['Values']
+                        boto3_compliant_filters.remove(entry)
+                vals.append(keyval[1])
+                boto3_compliant_filters.append({'Name': keyval[0], 'Values': vals})
+            kwargs['Filters'] = boto3_compliant_filters
 
         return getattr(module, action)(**kwargs)
