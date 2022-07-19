@@ -73,9 +73,6 @@ class BaseAction(Action):
 
     def assume_role(self, account_id):
         ''' Assumes role and setup Boto3 session for the cross-account capability'''
-        if account_id == self.account_id:
-            return
-
         try:
             assumed_role = self.session.client('sts').assume_role(  # pylint: disable=no-member
                 RoleArn=self.cross_roles[account_id],
